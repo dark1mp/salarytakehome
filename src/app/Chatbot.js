@@ -1,11 +1,12 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import Image from 'next/image';
 
 const BOT_AVATAR = "/globe.svg";
 const USER_AVATAR = "/window.svg";
 
 const INITIAL_MESSAGES = [
-  { from: "bot", text: "Hi! I'm your tax assistant. Ask me anything about using this calculator. I don't collect or store any personal data." }
+  { from: "bot", text: "Hi! I&apos;m your tax assistant. Ask me anything about using this calculator. I don&apos;t collect or store any personal data." }
 ];
 
 export default function Chatbot({ context }) {
@@ -41,20 +42,20 @@ export default function Chatbot({ context }) {
         setError(data.reply || "API error");
         setMessages((msgs) => [
           ...msgs,
-          { from: "bot", text: data.reply || "Sorry, I couldn't get a response right now." }
+          { from: "bot", text: data.reply || "Sorry, I couldn&apos;t get a response right now." }
         ]);
       } else {
         const data = await res.json();
         setMessages((msgs) => [
           ...msgs,
-          { from: "bot", text: data.reply || "Sorry, I couldn't get a response right now." }
+          { from: "bot", text: data.reply || "Sorry, I couldn&apos;t get a response right now." }
         ]);
       }
     } catch (err) {
       setError("Network or server error. Check your API key and server logs.");
       setMessages((msgs) => [
         ...msgs,
-        { from: "bot", text: "Sorry, I couldn't get a response right now." }
+        { from: "bot", text: "Sorry, I couldn&apos;t get a response right now." }
       ]);
       console.error("Chatbot fetch error:", err);
     }
@@ -93,14 +94,14 @@ export default function Chatbot({ context }) {
               <div className="flex-1 overflow-y-auto px-4 py-2 space-y-2 bg-blue-50">
                 {messages.map((msg, i) => (
                   <div key={i} className={`flex ${msg.from === "user" ? "justify-end" : "justify-start"} items-end`}>
-                    {msg.from === "bot" && <img src={BOT_AVATAR} alt="Bot" className="w-7 h-7 rounded-full mr-2 border border-blue-200 bg-white" />}
+                    {msg.from === "bot" && <Image src={BOT_AVATAR} alt="Bot" width={28} height={28} className="w-7 h-7 rounded-full mr-2 border border-blue-200 bg-white" />}
                     <div className={`rounded-xl px-3 py-2 max-w-[80%] text-sm shadow ${msg.from === "user" ? "bg-blue-600 text-white" : "bg-white text-gray-800"}`}>{msg.text}</div>
-                    {msg.from === "user" && <img src={USER_AVATAR} alt="You" className="w-7 h-7 rounded-full ml-2 border border-gray-200 bg-white" />}
+                    {msg.from === "user" && <Image src={USER_AVATAR} alt="You" width={28} height={28} className="w-7 h-7 rounded-full ml-2 border border-gray-200 bg-white" />}
                   </div>
                 ))}
                 {typing && (
                   <div className="flex justify-start items-end">
-                    <img src={BOT_AVATAR} alt="Bot" className="w-7 h-7 rounded-full mr-2 border border-blue-200 bg-white" />
+                    <Image src={BOT_AVATAR} alt="Bot" width={28} height={28} className="w-7 h-7 rounded-full mr-2 border border-blue-200 bg-white" />
                     <div className="rounded-xl px-3 py-2 max-w-[80%] text-sm bg-white text-gray-400 shadow animate-pulse">Typing…</div>
                   </div>
                 )}

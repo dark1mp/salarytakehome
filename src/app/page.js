@@ -590,6 +590,12 @@ export default function TaxCalculator() {
         </div>
       </div>
       <Chatbot context={{ formData, results }} />
+      <footer className="mt-16 border-t pt-8 pb-6 text-center text-gray-500 text-sm">
+        <div>© 2025 SalaryTakeHome.co.uk. All rights reserved.</div>
+        <div className="mt-2">
+          Privacy: This site does not collect or store any personal data. All calculations are done anonymously in your browser.
+        </div>
+      </footer>
     </div>
   );
 }
