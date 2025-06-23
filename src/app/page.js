@@ -301,7 +301,7 @@ export default function TaxCalculator() {
                     onChange={(e) => updateFormData('scottish', e.target.checked)}
                     className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
-                  <span className="text-sm font-medium text-gray-700">I'm a Scottish taxpayer</span>
+                  <span className="text-sm font-medium text-gray-700">I&apos;m a Scottish taxpayer</span>
                 </label>
               </div>
             </div>
