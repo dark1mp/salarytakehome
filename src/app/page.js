@@ -570,7 +570,7 @@ export default function TaxCalculator() {
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">How it works</h3>
             <p className="text-gray-600 text-sm">Disclaimer: Information provided on this site is for illustrative purposes only.<br/><br/>
-            Do not make any major financial decisions without consulting a qualified specialist.</p>
+            Don&apos;t make any major financial decisions without consulting a qualified specialist.</p>
           </div>
           
           <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
