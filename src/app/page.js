@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Calculator, PoundSterling, Users, Building, Award, Settings, ChevronRight, Info, CheckCircle } from 'lucide-react';
 import Chatbot from "./Chatbot";
 
@@ -119,7 +119,7 @@ export default function TaxCalculator() {
   const [results, setResults] = useState(null);
   const [showAdvanced, setShowAdvanced] = useState(false);
 
-  const calculateTax = () => {
+  const calculateTax = useCallback(() => {
     if (!formData.income) return;
 
     let gross = parseFloat(formData.income.replace(/,/g, '')) || 0;
@@ -196,7 +196,7 @@ export default function TaxCalculator() {
       takeHome: takeHome / divisor,
       pension: pensionDeduct / divisor
     });
-  };
+  }, [formData]);
 
   useEffect(() => {
     calculateTax();
