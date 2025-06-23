@@ -200,7 +200,7 @@ export default function TaxCalculator() {
 
   useEffect(() => {
     calculateTax();
-  }, [formData]);
+  }, [formData, calculateTax]);
 
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-GB', {
