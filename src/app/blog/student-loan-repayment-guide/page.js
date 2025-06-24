@@ -76,7 +76,7 @@ export default function StudentLoanGuide() {
                 <p>• Repayments are 9% of income above the threshold</p>
                 <p>• Repayments are taken automatically through PAYE or self-assessment</p>
                 <p>• The debt is written off after 25-30 years (depending on your plan)</p>
-                <p>• Interest is charged daily but doesn't affect monthly repayments</p>
+                <p>• Interest is charged daily but doesn&apos;t affect monthly repayments</p>
               </div>
             </div>
 
@@ -173,7 +173,7 @@ export default function StudentLoanGuide() {
                 <li>• Higher threshold means later repayments but larger amounts</li>
                 <li>• Higher interest rates (up to 9.25%)</li>
                 <li>• Longer write-off period (30 years)</li>
-                <li>• Most graduates won't fully repay before write-off</li>
+                <li>• Most graduates won&apos;t fully repay before write-off</li>
               </ul>
             </div>
           </div>
@@ -266,7 +266,7 @@ export default function StudentLoanGuide() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Arguments AGAINST Early Repayment:</h4>
                     <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• Most graduates won't repay in full</li>
+                      <li>• Most graduates won&apos;t repay in full</li>
                       <li>• Better returns from investments</li>
                       <li>• Repayments stop if you lose your job</li>
                       <li>• Debt is written off after 25-40 years</li>
@@ -278,10 +278,10 @@ export default function StudentLoanGuide() {
               <div className="bg-green-50 rounded-xl p-6 border border-green-200">
                 <h3 className="text-lg font-semibold text-green-800 mb-3">Our Recommendation</h3>
                 <p className="text-green-700 mb-3">
-                  For most graduates, it's better to focus on other financial priorities:
+                  For most graduates, it&apos;s better to focus on other financial priorities:
                 </p>
                 <ul className="text-green-700 space-y-2">
-                  <li>• Build an emergency fund (3-6 months' expenses)</li>
+                  <li>• Build an emergency fund (3-6 months&apos; expenses)</li>
                   <li>• Save for a house deposit</li>
                   <li>• Contribute to your pension</li>
                   <li>• Invest in ISAs or other investments</li>
@@ -310,7 +310,7 @@ export default function StudentLoanGuide() {
                 </div>
                 
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">What You'll Need</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">What You&apos;ll Need</h3>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Your National Insurance number</li>
                     <li>• Your student loan reference number</li>
@@ -324,7 +324,7 @@ export default function StudentLoanGuide() {
           <div className="glass-medium rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Calculate Your Student Loan Repayments</h2>
             <p className="text-gray-600 mb-6">
-              Use our free calculator to see exactly how much you'll repay each month
+              Use our free calculator to see exactly how much you&apos;ll repay each month
             </p>
             <Link 
               href="/"

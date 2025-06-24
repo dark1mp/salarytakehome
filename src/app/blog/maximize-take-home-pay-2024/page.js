@@ -124,8 +124,8 @@ export default function MaximizeTakeHomePay() {
                   Save 32-42% on bikes and cycling equipment through salary sacrifice.
                 </p>
                 <div className="bg-green-50 rounded-lg p-3">
-                  <p className="text-green-800 text-sm">
-                    <strong>Example:</strong> A £1,000 bike costs only £580-£680 after tax savings.
+                  <p className="text-green-700 text-sm">
+                    A £1,000 bike costs only £580-£680 after tax savings.
                   </p>
                 </div>
               </div>
@@ -180,7 +180,7 @@ export default function MaximizeTakeHomePay() {
               <div className="bg-white rounded-xl p-4 border border-gray-200">
                 <h3 className="font-semibold text-gray-900 mb-2">Professional Memberships</h3>
                 <p className="text-gray-700 text-sm">
-                  Many professional subscriptions are tax-deductible if they're required for your job.
+                  Many professional subscriptions are tax-deductible if they&apos;re required for your job.
                 </p>
               </div>
               
@@ -331,7 +331,7 @@ export default function MaximizeTakeHomePay() {
             
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <p className="text-gray-700 mb-4">
-                Ensure your tax code is correct and claim any allowances you're entitled to.
+                Ensure your tax code is correct and claim any allowances you&apos;re entitled to.
               </p>
               
               <div className="space-y-3">
@@ -339,7 +339,7 @@ export default function MaximizeTakeHomePay() {
                   <h4 className="font-semibold text-blue-800 mb-1">Check for:</h4>
                   <ul className="text-blue-700 text-sm space-y-1">
                     <li>• Marriage allowance (£1,260/year)</li>
-                    <li>• Blind person's allowance (£2,870/year)</li>
+                    <li>• Blind person&apos;s allowance (£2,870/year)</li>
                     <li>• Job expenses and professional fees</li>
                     <li>• Working from home allowance</li>
                   </ul>

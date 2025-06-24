@@ -153,7 +153,7 @@ export default function PensionContributionsGuide() {
             
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <p className="text-gray-700 mb-4">
-                If you haven't used your full annual allowance in the previous three tax years, you can carry forward the unused amount.
+                If you haven&apos;t used your full annual allowance in the previous three tax years, you can carry forward the unused amount.
               </p>
               
               <div className="grid md:grid-cols-2 gap-6">
@@ -162,7 +162,7 @@ export default function PensionContributionsGuide() {
                   <ul className="text-sm text-gray-700 space-y-2">
                     <li>• You must have been a member of a pension scheme</li>
                     <li>• You can carry forward unused allowance from the previous 3 years</li>
-                    <li>• You must use current year's allowance first</li>
+                    <li>• You must use current year&apos;s allowance first</li>
                     <li>• You must have sufficient earnings to cover the contribution</li>
                   </ul>
                 </div>
