@@ -47,6 +47,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Search Console Verification - Replace with your actual verification code */}
+        {/* <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> */}
+      </head>
       <body className={`${inter.className} antialiased`}>
         <script
           type="application/ld+json"
