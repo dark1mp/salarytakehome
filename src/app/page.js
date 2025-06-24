@@ -507,6 +507,9 @@ export default function TaxCalculator() {
                     <div className="text-sm opacity-90 mb-1">Take-home pay</div>
                     <div className="text-3xl font-bold">{formatCurrency(results.takeHome)}</div>
                     <div className="text-sm opacity-90 mt-1">per {formData.period.replace('ly', '')}</div>
+                    {formData.period === 'yearly' && (
+                      <div className="text-sm opacity-90 mt-1">{formatCurrency(results.takeHome / 12)} <span className="font-normal">per month</span></div>
+                    )}
                   </div>
 
                   {/* Breakdown */}
