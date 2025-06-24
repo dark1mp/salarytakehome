@@ -873,15 +873,30 @@ function TaxCalculatorContent() {
           </div>
         </div>
 
-        {/* Optimized FAQ Button */}
-        <div className="flex justify-end mt-8">
+        {/* Optimized Navigation */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-8">
+          {/* Blog Link */}
           <a 
-            href="/faq" 
-            className="group relative overflow-hidden bg-gradient-to-r from-[#1566a0] to-[#1e90c6] hover:from-[#1e90c6] hover:to-[#1566a0] text-white px-8 py-4 rounded-2xl shadow-large hover:shadow-xl font-bold transition-all duration-200 hover-scale focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+            href="/blog" 
+            className="group relative overflow-hidden bg-gradient-to-r from-emerald-500 to-green-600 hover:from-green-600 hover:to-emerald-500 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl font-semibold transition-all duration-200 hover-scale focus:outline-none focus:ring-4 focus:ring-emerald-300/50"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
-            <div className="relative z-10 flex items-center gap-3">
-              <Info className="w-5 h-5" />
+            <div className="relative z-10 flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              Tax Tips & Guides
+            </div>
+          </a>
+          
+          {/* FAQ Link */}
+          <a 
+            href="/faq" 
+            className="group relative overflow-hidden bg-gradient-to-r from-[#1566a0] to-[#1e90c6] hover:from-[#1e90c6] hover:to-[#1566a0] text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl font-semibold transition-all duration-200 hover-scale focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+            <div className="relative z-10 flex items-center gap-2">
+              <Info className="w-4 h-4" />
               FAQ & Tax Help
             </div>
           </a>
