@@ -48,6 +48,55 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "UK Tax Calculator",
+              "description": "Free UK tax calculator to calculate your take-home pay, income tax, National Insurance, and student loan repayments for 2024/25.",
+              "url": "https://salarytakehome.co.uk",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": "Web Browser",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+              },
+              "author": {
+                "@type": "Organization",
+                "name": "SalaryTakeHome.co.uk"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "SalaryTakeHome.co.uk",
+                "url": "https://salarytakehome.co.uk"
+              },
+              "mainEntity": {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How do I calculate my UK take-home pay?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Use our free UK tax calculator to input your salary, tax code, pension contributions, and other details to get your accurate take-home pay calculation."
+                    }
+                  },
+                  {
+                    "@type": "Question", 
+                    "name": "What tax rates apply in the UK for 2024/25?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "UK tax rates for 2024/25: 0% on first £12,570 (Personal Allowance), 20% on £12,571-£50,270, 40% on £50,271-£125,140, and 45% above £125,140."
+                    }
+                  }
+                ]
+              }
+            })
+          }}
+        />
         {children}
         <Analytics />
         <SpeedInsights />

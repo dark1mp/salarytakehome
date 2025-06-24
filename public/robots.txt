@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
-Sitemap: https://salarytakehome.co.uk/sitemap.xml 
+
+# Sitemap
+Sitemap: https://salarytakehome.co.uk/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/ 
