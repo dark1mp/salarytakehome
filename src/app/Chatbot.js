@@ -70,24 +70,36 @@ export default function Chatbot({ context }) {
 
   return (
     <>
-      {/* Floating Button */}
+      {/* Optimized Floating Button */}
       {!open && (
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end group">
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end group animate-float">
           <button
-            className="bg-[#1566a0] hover:bg-blue-800 text-white rounded-full shadow-lg w-16 h-16 flex items-center justify-center text-3xl focus:outline-none border-4 border-white"
+            className="relative overflow-hidden bg-gradient-to-br from-[#1566a0] to-[#1e90c6] hover:from-[#1e90c6] hover:to-[#1566a0] text-white rounded-full shadow-large w-16 h-16 flex items-center justify-center focus:outline-none border-4 border-white/20 backdrop-blur-light transition-all duration-200 hover-scale group"
             aria-label="Open chatbot"
             onClick={() => setOpen(true)}
+            style={{
+              background: 'linear-gradient(135deg, #1566a0 0%, #1e90c6 100%)',
+              boxShadow: '0 10px 25px -5px rgba(21, 102, 160, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1)'
+            }}
           >
-            <Calculator className="w-8 h-8 text-white" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/15 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+            <Calculator className="w-8 h-8 text-white relative z-10 hover-scale transition-transform duration-200" />
+            {/* Simplified pulse rings */}
+            <div className="absolute inset-0 rounded-full border border-white/20 animate-pulse"></div>
           </button>
-          {/* Floating label always visible and clickable */}
+          
+          {/* Optimized Floating label */}
           <button
-            className="mt-2 bg-white text-[#1566a0] px-3 py-1 rounded-full shadow text-xs font-semibold border border-blue-100 focus:outline-none focus:ring-2 focus:ring-[#1566a0]"
+            className="mt-3 relative overflow-hidden bg-white/95 backdrop-blur-light text-[#1566a0] px-4 py-2 rounded-2xl shadow-medium text-sm font-bold border border-blue-100/50 focus:outline-none focus:ring-2 focus:ring-[#1566a0] transition-all duration-200 hover-scale group"
             onClick={() => setOpen(true)}
             aria-label="Open chatbot via label"
             tabIndex={0}
+            style={{
+              boxShadow: '0 4px 12px -2px rgba(21, 102, 160, 0.15)'
+            }}
           >
-            Chat with AI
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50/0 via-blue-50/30 to-blue-50/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-400"></div>
+            <span className="relative z-10">Chat with AI</span>
           </button>
         </div>
       )}

@@ -4,32 +4,33 @@ body {
   background: #f8fafc;
 }
 
+/* Optimized animations with hardware acceleration */
 @keyframes fadeInSlide {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translate3d(0, 24px, 0);
   }
   to {
     opacity: 1;
-    transform: none;
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes shimmer {
   0% {
-    background-position: -200px 0;
+    transform: translateX(-100%);
   }
   100% {
-    background-position: calc(200px + 100%) 0;
+    transform: translateX(100%);
   }
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translate3d(0, -6px, 0);
   }
 }
 
@@ -44,53 +45,82 @@ body {
   }
 }
 
+/* Optimized animations with will-change for performance */
 .animate-fade-in-slide {
-  animation: fadeInSlide 0.6s cubic-bezier(0.4,0,0.2,1) forwards;
+  animation: fadeInSlide 0.4s cubic-bezier(0.4,0,0.2,1) forwards;
+  will-change: transform, opacity;
 }
 
 .animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   animation: shimmer 2s infinite;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  background-size: 200px 100%;
+  will-change: transform;
 }
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-sparkle {
   animation: sparkle 1.5s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
-/* Enhanced glassmorphism */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+/* Lightweight glassmorphism - reduced blur for performance */
+.glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-medium {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Smooth focus states */
+/* Smooth focus states with reduced effects */
 button:focus {
   outline: 2px solid #1566a0;
   outline-offset: 2px;
 }
 
-/* Enhanced hover effects */
-button:hover {
-  filter: brightness(0.97) saturate(1.1);
-  transform: scale(1.02);
-  transition: all 0.15s cubic-bezier(0.4,0,0.2,1);
+/* Optimized hover effects */
+.hover-lift {
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
 }
 
-/* Progress bar animations */
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.hover-scale {
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Efficient progress bar animations */
 .progress-bar {
   transform-origin: left;
-  animation: progressFill 1.2s ease-out forwards;
+  animation: progressFill 0.8s ease-out forwards;
+  will-change: transform;
 }
 
 @keyframes progressFill {
@@ -102,21 +132,75 @@ button:hover {
   }
 }
 
-/* Beautiful scrollbar */
+/* Optimized scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #1566a0, #1e90c6);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #1e90c6, #1566a0);
+}
+
+/* Reduced form focus effects for performance */
+input:focus, select:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgba(21, 102, 160, 0.15), 0 0 0 2px rgba(21, 102, 160, 0.1);
+  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Optimized shadow utilities */
+.shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-medium {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-large {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Improved button transitions with reduced complexity */
+button, a {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Performance-optimized backdrop blur */
+.backdrop-blur-light {
+  backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-medium {
+  backdrop-filter: blur(12px);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-slide,
+  .animate-float,
+  .animate-sparkle,
+  .animate-shimmer,
+  .progress-bar {
+    animation: none;
+  }
+  
+  .hover-lift:hover,
+  .hover-scale:hover {
+    transform: none;
+  }
+  
+  * {
+    transition-duration: 0.01ms !important;
+  }
 }

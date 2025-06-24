@@ -1,8 +1,11 @@
 "use client";
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, lazy, Suspense, useMemo } from 'react';
 import { Calculator, PoundSterling, Users, Building, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus } from 'lucide-react';
-import Chatbot from "./Chatbot";
 import { useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
+
+// Lazy load the Chatbot component
+const Chatbot = lazy(() => import('./Chatbot'));
 
 const TAX_YEARS = ["2021/22", "2022/23", "2023/24", "2024/25", "2025/26"];
 
@@ -101,23 +104,44 @@ const STUDENT_LOAN = {
   postgrad: { threshold: 21000, rate: 0.06 }
 };
 
-const CountUp = ({ end, duration = 1000, prefix = "£" }) => {
+// Optimized CountUp component with memoization
+const CountUp = React.memo(({ end, duration = 800, prefix = "£" }) => {
   const [count, setCount] = useState(0);
   
   useEffect(() => {
+    if (end === 0) {
+      setCount(0);
+      return;
+    }
+    
     let startTime;
+    let animationFrame;
+    
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       setCount(Math.floor(progress * end));
-      if (progress < 1) requestAnimationFrame(animate);
+      
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
     };
-    requestAnimationFrame(animate);
+    
+    animationFrame = requestAnimationFrame(animate);
+    
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
   }, [end, duration]);
   
   return <span>{prefix}{count.toLocaleString()}</span>;
-};
+});
 
+CountUp.displayName = 'CountUp';
+
+// Tax efficiency calculation utility function
 const getTaxEfficiency = (takeHome, gross) => {
   const taxRate = ((gross - takeHome) / gross) * 100;
   if (taxRate < 20) return { level: 'excellent', color: 'from-emerald-500 to-green-500', icon: TrendingUp, text: 'Excellent efficiency' };
@@ -147,6 +171,14 @@ export default function TaxCalculator() {
   const [copied, setCopied] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  // Memoized tax efficiency calculation
+  const taxEfficiency = useMemo(() => {
+    if (!results) return null;
+    const annualTakeHome = results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : 52);
+    const annualGross = results.gross * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : 52);
+    return getTaxEfficiency(annualTakeHome, annualGross);
+  }, [results, formData.period]);
 
   const calculateTax = useCallback(() => {
     if (!formData.income) return;
@@ -288,7 +320,14 @@ export default function TaxCalculator() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Header */}
       <div className="w-full bg-[#1566a0] bg-gradient-to-r from-[#1566a0] to-[#1e90c6] shadow-lg flex flex-wrap items-center px-4 md:px-8 py-4 md:py-6 gap-4 md:gap-8">
-        <img src="/opengraph-image.png" alt="SalaryTakeHome Logo" className="h-12 md:h-16 w-auto rounded-lg shadow-md flex-shrink-0" />
+        <Image 
+          src="/opengraph-image.png" 
+          alt="SalaryTakeHome Logo" 
+          width={64} 
+          height={64} 
+          className="h-12 md:h-16 w-auto rounded-lg shadow-md flex-shrink-0" 
+          priority
+        />
         <div className="flex-1 min-w-0">
           <h1 className="text-xl md:text-3xl font-bold text-white whitespace-normal break-words">UK Tax Calculator</h1>
           <p className="text-white text-sm md:text-lg whitespace-normal break-words">Calculate your income tax and take-home pay</p>
@@ -299,252 +338,281 @@ export default function TaxCalculator() {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Form */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Your Situation */}
-            <div className="bg-white rounded-2xl shadow-sm border p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Users className="w-5 h-5 text-blue-600" />
-                Your Situation
-              </h2>
-              
-              <div className="grid md:grid-cols-2 gap-4 mb-6">
-                <button
-                  onClick={() => updateFormData('situation', 'employed')}
-                  className={`p-4 rounded-xl border-2 transition-all text-left ${
-                    formData.situation === 'employed' 
-                      ? 'border-blue-500 bg-blue-50 text-blue-900' 
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
-                  aria-label="Select employed situation"
-                  tabIndex={0}
-                >
-                  <div className="flex items-center gap-3">
-                    <Building className="w-5 h-5" />
-                    <div>
-                      <div className="font-medium">Employed</div>
-                      <div className="text-sm text-gray-600">I work for a company</div>
+            {/* Enhanced Your Situation Card */}
+            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-purple-50/15"></div>
+              <div className="relative z-10">
+                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <Users className="w-5 h-5 text-white" />
+                  </div>
+                  Your Situation
+                </h2>
+                
+                <div className="grid md:grid-cols-2 gap-4 mb-6">
+                  <button
+                    onClick={() => updateFormData('situation', 'employed')}
+                    className={`group relative overflow-hidden p-6 rounded-2xl border-2 transition-all duration-200 text-left hover-scale ${
+                      formData.situation === 'employed' 
+                        ? 'border-blue-400 bg-gradient-to-br from-blue-50 to-blue-100 text-blue-900 shadow-medium' 
+                        : 'border-gray-200/50 hover:border-blue-200 bg-white/70 hover:bg-white/90'
+                    }`}
+                    aria-label="Select employed situation"
+                    tabIndex={0}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                    <div className="relative z-10 flex items-center gap-4">
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 ${
+                        formData.situation === 'employed' 
+                          ? 'bg-blue-500 text-white' 
+                          : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-600'
+                      }`}>
+                        <Building className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg">Employed</div>
+                        <div className="text-sm text-gray-600">I work for a company</div>
+                      </div>
+                    </div>
+                  </button>
+                  
+                  <button
+                    onClick={() => updateFormData('situation', 'self-employed')}
+                    className={`group relative overflow-hidden p-6 rounded-2xl border-2 transition-all duration-200 text-left hover-scale ${
+                      formData.situation === 'self-employed' 
+                        ? 'border-blue-400 bg-gradient-to-br from-blue-50 to-blue-100 text-blue-900 shadow-medium' 
+                        : 'border-gray-200/50 hover:border-blue-200 bg-white/70 hover:bg-white/90'
+                    }`}
+                    aria-label="Select self-employed situation"
+                    tabIndex={0}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                    <div className="relative z-10 flex items-center gap-4">
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 ${
+                        formData.situation === 'self-employed' 
+                          ? 'bg-blue-500 text-white' 
+                          : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-600'
+                      }`}>
+                        <Award className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg">Self-employed</div>
+                        <div className="text-sm text-gray-600">I run my own business</div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <label className="flex items-center gap-3 cursor-pointer group">
+                    <input
+                      type="checkbox"
+                      checked={formData.scottish}
+                      onChange={(e) => updateFormData('scottish', e.target.checked)}
+                      className="w-5 h-5 text-blue-600 border-gray-300 rounded-lg focus:ring-blue-500 focus:ring-2 transition-all duration-200"
+                    />
+                    <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-700 transition-colors duration-200">I&apos;m a Scottish taxpayer</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            {/* Enhanced Income Card */}
+            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-emerald-50/15"></div>
+              <div className="relative z-10">
+                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                    <PoundSterling className="w-5 h-5 text-white" />
+                  </div>
+                  Your Income
+                </h2>
+                
+                <div className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-bold text-gray-700 mb-3">
+                      {formData.situation === 'employed' ? 'Annual salary' : 'Annual income'}
+                    </label>
+                    <div className="relative">
+                      <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold text-lg">£</span>
+                      <input
+                        type="text"
+                        value={formData.income}
+                        onChange={(e) => handleNumberInput('income', e.target.value)}
+                        placeholder="50,000"
+                        className="w-full pl-10 pr-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 text-lg font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
+                      />
                     </div>
                   </div>
+
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-3">Period</label>
+                      <select
+                        value={formData.period}
+                        onChange={(e) => updateFormData('period', e.target.value)}
+                        className="w-full px-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
+                      >
+                        <option value="yearly">Yearly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="weekly">Weekly</option>
+                      </select>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-3">Tax year</label>
+                      <select
+                        value={formData.taxYear}
+                        onChange={(e) => updateFormData('taxYear', e.target.value)}
+                        className="w-full px-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
+                      >
+                        {TAX_YEARS.map(year => (
+                          <option key={year} value={year}>{year}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-3">Bonus (optional)</label>
+                      <div className="relative">
+                        <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">£</span>
+                        <input
+                          type="text"
+                          value={formData.bonus}
+                          onChange={(e) => handleNumberInput('bonus', e.target.value)}
+                          placeholder="5,000"
+                          className="w-full pl-10 pr-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Enhanced Advanced Options Card */}
+            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50/20 via-transparent to-pink-50/15"></div>
+              <div className="relative z-10">
+                <button
+                  onClick={() => setShowAdvanced(!showAdvanced)}
+                  className="w-full flex items-center justify-between text-left group"
+                >
+                  <h2 className="text-xl font-bold text-gray-900 flex items-center gap-3 group-hover:text-blue-700 transition-colors duration-200">
+                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center hover-scale transition-transform duration-200">
+                      <Settings className="w-5 h-5 text-white" />
+                    </div>
+                    Advanced Options
+                  </h2>
+                  <ChevronRight className={`w-6 h-6 text-gray-400 transition-all duration-200 group-hover:text-blue-500 ${showAdvanced ? 'rotate-90' : ''}`} />
                 </button>
                 
-                <button
-                  onClick={() => updateFormData('situation', 'self-employed')}
-                  className={`p-4 rounded-xl border-2 transition-all text-left ${
-                    formData.situation === 'self-employed' 
-                      ? 'border-blue-500 bg-blue-50 text-blue-900' 
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
-                  aria-label="Select self-employed situation"
-                  tabIndex={0}
-                >
-                  <div className="flex items-center gap-3">
-                    <Award className="w-5 h-5" />
+                {showAdvanced && (
+                  <div className="mt-8 space-y-6 animate-fade-in-slide">
+                    {/* Student Loan */}
                     <div>
-                      <div className="font-medium">Self-employed</div>
-                      <div className="text-sm text-gray-600">I run my own business</div>
+                      <label className="block text-sm font-bold text-gray-700 mb-3">Student loan plan</label>
+                      <select
+                        value={formData.studentLoan}
+                        onChange={(e) => updateFormData('studentLoan', e.target.value)}
+                        className="w-full px-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
+                      >
+                        <option value="">No student loan</option>
+                        <option value="plan1">Plan 1</option>
+                        <option value="plan2">Plan 2</option>
+                        <option value="plan4">Plan 4 (Scotland)</option>
+                        <option value="postgrad">Postgraduate loan</option>
+                      </select>
                     </div>
-                  </div>
-                </button>
-              </div>
 
-              <div className="flex items-center gap-4">
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={formData.scottish}
-                    onChange={(e) => updateFormData('scottish', e.target.checked)}
-                    className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                  />
-                  <span className="text-sm font-medium text-gray-700">I&apos;m a Scottish taxpayer</span>
-                </label>
-              </div>
-            </div>
-
-            {/* Income */}
-            <div className="bg-white rounded-2xl shadow-sm border p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <PoundSterling className="w-5 h-5 text-green-600" />
-                Your Income
-              </h2>
-              
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {formData.situation === 'employed' ? 'Annual salary' : 'Annual income'}
-                  </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">£</span>
-                    <input
-                      type="text"
-                      value={formData.income}
-                      onChange={(e) => handleNumberInput('income', e.target.value)}
-                      placeholder="50,000"
-                      className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Period</label>
-                    <select
-                      value={formData.period}
-                      onChange={(e) => updateFormData('period', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="yearly">Yearly</option>
-                      <option value="monthly">Monthly</option>
-                      <option value="weekly">Weekly</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Tax year</label>
-                    <select
-                      value={formData.taxYear}
-                      onChange={(e) => updateFormData('taxYear', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      {TAX_YEARS.map(year => (
-                        <option key={year} value={year}>{year}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Bonus (optional)</label>
-                    <div className="relative">
-                      <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">£</span>
+                    {/* Pension */}
+                    <div>
+                      <label className="block text-sm font-bold text-gray-700 mb-3">Pension contributions</label>
+                      <div className="flex gap-3 mb-4">
+                        <button
+                          onClick={() => updateFormData('pension', { ...formData.pension, type: 'percentage' })}
+                          className={`px-6 py-3 rounded-2xl border-2 transition-all duration-200 font-semibold hover-scale ${
+                            formData.pension.type === 'percentage' 
+                              ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white border-blue-500 shadow-medium' 
+                              : 'bg-white/80 text-gray-700 border-gray-200/50 hover:border-blue-200 hover:bg-white/95'
+                          }`}
+                        >
+                          Percentage
+                        </button>
+                        <button
+                          onClick={() => updateFormData('pension', { ...formData.pension, type: 'amount' })}
+                          className={`px-6 py-3 rounded-2xl border-2 transition-all duration-200 font-semibold hover-scale ${
+                            formData.pension.type === 'amount' 
+                              ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white border-blue-500 shadow-medium' 
+                              : 'bg-white/80 text-gray-700 border-gray-200/50 hover:border-blue-200 hover:bg-white/95'
+                          }`}
+                        >
+                          Amount
+                        </button>
+                      </div>
                       <input
                         type="text"
-                        value={formData.bonus}
-                        onChange={(e) => handleNumberInput('bonus', e.target.value)}
-                        placeholder="5,000"
-                        className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        value={formData.pension.value}
+                        onChange={(e) => {
+                          if (formData.pension.type === 'percentage') {
+                            updateFormData('pension', { ...formData.pension, value: e.target.value });
+                          } else {
+                            const formatted = formatNumberInput(e.target.value);
+                            updateFormData('pension', { ...formData.pension, value: formatted });
+                          }
+                        }}
+                        placeholder={formData.pension.type === 'percentage' ? '5%' : '200'}
+                        className="w-full px-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
                       />
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Advanced Options */}
-            <div className="bg-white rounded-2xl shadow-sm border p-6">
-              <button
-                onClick={() => setShowAdvanced(!showAdvanced)}
-                className="w-full flex items-center justify-between text-left"
-              >
-                <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                  <Settings className="w-5 h-5 text-gray-600" />
-                  Advanced Options
-                </h2>
-                <ChevronRight className={`w-5 h-5 text-gray-400 transition-transform ${showAdvanced ? 'rotate-90' : ''}`} />
-              </button>
-              
-              {showAdvanced && (
-                <div className="mt-6 space-y-6">
-                  {/* Student Loan */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Student loan plan</label>
-                    <select
-                      value={formData.studentLoan}
-                      onChange={(e) => updateFormData('studentLoan', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="">No student loan</option>
-                      <option value="plan1">Plan 1</option>
-                      <option value="plan2">Plan 2</option>
-                      <option value="plan4">Plan 4 (Scotland)</option>
-                      <option value="postgrad">Postgraduate loan</option>
-                    </select>
-                  </div>
+                    {/* Additional fields */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-bold text-gray-700 mb-3">Salary sacrifice</label>
+                        <div className="relative">
+                          <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">£</span>
+                          <input
+                            type="text"
+                            value={formData.salarySacrifice}
+                            onChange={(e) => handleNumberInput('salarySacrifice', e.target.value)}
+                            placeholder="1,000"
+                            className="w-full pl-10 pr-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
+                          />
+                        </div>
+                      </div>
 
-                  {/* Pension */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Pension contributions</label>
-                    <div className="flex gap-2 mb-2">
-                      <button
-                        onClick={() => updateFormData('pension', { ...formData.pension, type: 'percentage' })}
-                        className={`px-4 py-2 rounded-lg border transition-colors ${
-                          formData.pension.type === 'percentage' 
-                            ? 'bg-blue-500 text-white border-blue-500' 
-                            : 'bg-white text-gray-700 border-gray-300 hover:border-gray-400'
-                        }`}
-                      >
-                        Percentage
-                      </button>
-                      <button
-                        onClick={() => updateFormData('pension', { ...formData.pension, type: 'amount' })}
-                        className={`px-4 py-2 rounded-lg border transition-colors ${
-                          formData.pension.type === 'amount' 
-                            ? 'bg-blue-500 text-white border-blue-500' 
-                            : 'bg-white text-gray-700 border-gray-300 hover:border-gray-400'
-                        }`}
-                      >
-                        Amount
-                      </button>
-                    </div>
-                    <input
-                      type="text"
-                      value={formData.pension.value}
-                      onChange={(e) => {
-                        if (formData.pension.type === 'percentage') {
-                          updateFormData('pension', { ...formData.pension, value: e.target.value });
-                        } else {
-                          const formatted = formatNumberInput(e.target.value);
-                          updateFormData('pension', { ...formData.pension, value: formatted });
-                        }
-                      }}
-                      placeholder={formData.pension.type === 'percentage' ? '5%' : '200'}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-
-                  {/* Additional fields */}
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Salary sacrifice</label>
-                      <div className="relative">
-                        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">£</span>
-                        <input
-                          type="text"
-                          value={formData.salarySacrifice}
-                          onChange={(e) => handleNumberInput('salarySacrifice', e.target.value)}
-                          placeholder="1,000"
-                          className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
+                      <div>
+                        <label className="block text-sm font-bold text-gray-700 mb-3">Childcare vouchers</label>
+                        <div className="relative">
+                          <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">£</span>
+                          <input
+                            type="text"
+                            value={formData.childcare}
+                            onChange={(e) => handleNumberInput('childcare', e.target.value)}
+                            placeholder="500"
+                            className="w-full pl-10 pr-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
+                          />
+                        </div>
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Childcare vouchers</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-3">Taxable benefits</label>
                       <div className="relative">
-                        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">£</span>
+                        <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">£</span>
                         <input
                           type="text"
-                          value={formData.childcare}
-                          onChange={(e) => handleNumberInput('childcare', e.target.value)}
-                          placeholder="500"
-                          className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          value={formData.taxableBenefits}
+                          onChange={(e) => handleNumberInput('taxableBenefits', e.target.value)}
+                          placeholder="2,000"
+                          className="w-full pl-10 pr-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
                         />
                       </div>
                     </div>
                   </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Taxable benefits</label>
-                    <div className="relative">
-                      <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">£</span>
-                      <input
-                        type="text"
-                        value={formData.taxableBenefits}
-                        onChange={(e) => handleNumberInput('taxableBenefits', e.target.value)}
-                        placeholder="2,000"
-                        className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </div>
 
@@ -553,37 +621,35 @@ export default function TaxCalculator() {
             <div className="sticky top-8">
               {results ? (
                 <div
-                  className={`relative overflow-hidden bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-8 transition-all duration-700 ease-out animate-fade-in-slide`}
+                  className={`relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8 transition-all duration-500 ease-out animate-fade-in-slide`}
                   key={formData.income + formData.period + formData.taxYear + formData.bonus + formData.situation}
                   style={{
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%)',
-                    backdropFilter: 'blur(20px)',
-                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.2)'
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)'
                   }}
                 >
-                  {/* Animated background gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-green-50/30 animate-pulse"></div>
+                  {/* Simplified background gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20"></div>
                   
                   <div className="relative z-10">
                     <div className="flex items-center justify-between mb-8">
                       <h3 className="text-xl font-bold text-gray-900">Your Results</h3>
                       {(() => {
-                        const efficiency = getTaxEfficiency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : 52), results.gross * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : 52));
-                        const IconComponent = efficiency.icon;
+                        const efficiency = taxEfficiency;
+                        const IconComponent = efficiency?.icon;
                         return (
                           <div className="flex items-center gap-2 text-sm">
                             <IconComponent className="w-4 h-4" />
-                            <span className="font-medium">{efficiency.text}</span>
+                            <span className="font-medium">{efficiency?.text}</span>
                           </div>
                         );
                       })()}
                     </div>
                     
-                    {/* Enhanced Take Home Pay Card */}
+                    {/* Optimized Take Home Pay Card */}
                     {(() => {
-                      const efficiency = getTaxEfficiency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : 52), results.gross * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : 52));
+                      const efficiency = taxEfficiency;
                       return (
-                        <div className={`bg-gradient-to-r ${efficiency.color} rounded-2xl p-8 text-white mb-8 relative overflow-hidden shadow-xl`}>
+                        <div className={`bg-gradient-to-r ${efficiency?.color} rounded-2xl p-8 text-white mb-8 relative overflow-hidden shadow-medium`}>
                           <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
                           <div className="relative z-10">
                             <div className="text-sm opacity-90 mb-2 font-medium">Take-home pay</div>
@@ -597,15 +663,16 @@ export default function TaxCalculator() {
                                 <span className="font-normal ml-1">per month</span>
                               </div>
                             )}
+                          
+                          {/* Simplified sparkles */}
+                          <div className="absolute top-4 right-4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
+                          <div className="absolute bottom-6 right-8 w-1 h-1 bg-white/40 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
                           </div>
-                          {/* Animated sparkles */}
-                          <div className="absolute top-4 right-4 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
-                          <div className="absolute bottom-6 right-8 w-1 h-1 bg-white/40 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
                         </div>
                       );
                     })()}
 
-                    {/* Enhanced Breakdown with Progress Bars */}
+                    {/* Optimized Breakdown with Progress Bars */}
                     <div className="space-y-6">
                       <div className="flex justify-between items-center py-3 border-b border-gray-100">
                         <span className="text-gray-700 font-medium">Gross income</span>
@@ -630,7 +697,7 @@ export default function TaxCalculator() {
                             </div>
                             <div className="w-full bg-gray-100 rounded-full h-2">
                               <div 
-                                className="bg-gradient-to-r from-red-400 to-red-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                                className="bg-gradient-to-r from-red-400 to-red-500 h-2 rounded-full transition-all duration-800 ease-out progress-bar"
                                 style={{ width: `${Math.min((results.tax / results.gross) * 100, 100)}%` }}
                               ></div>
                             </div>
@@ -647,7 +714,7 @@ export default function TaxCalculator() {
                             </div>
                             <div className="w-full bg-gray-100 rounded-full h-2">
                               <div 
-                                className="bg-gradient-to-r from-orange-400 to-orange-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                                className="bg-gradient-to-r from-orange-400 to-orange-500 h-2 rounded-full transition-all duration-800 ease-out progress-bar"
                                 style={{ width: `${Math.min((results.ni / results.gross) * 100, 100)}%`, animationDelay: '0.2s' }}
                               ></div>
                             </div>
@@ -664,7 +731,7 @@ export default function TaxCalculator() {
                             </div>
                             <div className="w-full bg-gray-100 rounded-full h-2">
                               <div 
-                                className="bg-gradient-to-r from-purple-400 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                                className="bg-gradient-to-r from-purple-400 to-purple-500 h-2 rounded-full transition-all duration-800 ease-out progress-bar"
                                 style={{ width: `${Math.min((results.studentLoan / results.gross) * 100, 100)}%`, animationDelay: '0.4s' }}
                               ></div>
                             </div>
@@ -681,7 +748,7 @@ export default function TaxCalculator() {
                             </div>
                             <div className="w-full bg-gray-100 rounded-full h-2">
                               <div 
-                                className="bg-gradient-to-r from-blue-400 to-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                                className="bg-gradient-to-r from-blue-400 to-blue-500 h-2 rounded-full transition-all duration-800 ease-out progress-bar"
                                 style={{ width: `${Math.min((results.pension / results.gross) * 100, 100)}%`, animationDelay: '0.6s' }}
                               ></div>
                             </div>
@@ -690,7 +757,7 @@ export default function TaxCalculator() {
                       </div>
                     </div>
 
-                    {/* Enhanced Social Sharing */}
+                    {/* Optimized Social Sharing */}
                     <div className="mt-8 pt-6 border-t border-gray-100">
                       <div className="flex items-center justify-between">
                         <div className="flex gap-3 items-center">
@@ -699,7 +766,7 @@ export default function TaxCalculator() {
                             href={`https://twitter.com/intent/tweet?text=My%20UK%20take-home%20pay%20is%20${encodeURIComponent(formatCurrency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : formData.period === 'weekly' ? 52 : 1)))}%2Fyear%20on%20a%20${encodeURIComponent(formatCurrency(parseFloat(formData.income.replace(/,/g, ''))))}%20salary!%20Calculate%20yours%20at%20https://salarytakehome.co.uk`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center hover:bg-blue-50 text-black w-10 h-10 transition duration-200 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
+                            className="flex items-center justify-center hover:bg-blue-50 text-black w-10 h-10 transition duration-200 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
                             aria-label="Share on X"
                             title="Share on X"
                           >
@@ -712,7 +779,7 @@ export default function TaxCalculator() {
                             href={`https://www.linkedin.com/sharing/share-offsite/?url=https://salarytakehome.co.uk&summary=My%20UK%20take-home%20pay%20is%20${encodeURIComponent(formatCurrency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : formData.period === 'weekly' ? 52 : 1)))}%2Fyear%20on%20a%20${encodeURIComponent(formatCurrency(parseFloat(formData.income.replace(/,/g, ''))))}%20salary!`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center hover:bg-blue-50 text-[#0077b5] w-10 h-10 transition duration-200 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
+                            className="flex items-center justify-center hover:bg-blue-50 text-[#0077b5] w-10 h-10 transition duration-200 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
                             aria-label="Share on LinkedIn"
                             title="Share on LinkedIn"
                           >
@@ -723,7 +790,7 @@ export default function TaxCalculator() {
                             href={`https://www.facebook.com/sharer/sharer.php?u=https://salarytakehome.co.uk&quote=My%20UK%20take-home%20pay%20is%20${encodeURIComponent(formatCurrency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : formData.period === 'weekly' ? 52 : 1)))}%2Fyear%20on%20a%20${encodeURIComponent(formatCurrency(parseFloat(formData.income.replace(/,/g, ''))))}%20salary!`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center hover:bg-blue-50 text-[#4267B2] w-10 h-10 transition duration-200 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
+                            className="flex items-center justify-center hover:bg-blue-50 text-[#4267B2] w-10 h-10 transition duration-200 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
                             aria-label="Share on Facebook"
                             title="Share on Facebook"
                           >
@@ -734,7 +801,7 @@ export default function TaxCalculator() {
                           
                           <button
                             onClick={handleCopyLink}
-                            className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-400 relative"
+                            className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-400 relative hover-scale"
                             aria-label="Share results"
                             type="button"
                           >
@@ -751,11 +818,16 @@ export default function TaxCalculator() {
                   </div>
                 </div>
               ) : (
-                <div className="bg-white rounded-2xl shadow-lg border p-6">
-                  <div className="text-center py-8">
-                    <Calculator className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-                    <h3 className="text-lg font-medium text-gray-900 mb-2">Enter your income</h3>
-                    <p className="text-gray-600">Fill in your details to see your tax calculation</p>
+                <div className="relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-8" style={{
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)'
+                }}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/15 via-transparent to-purple-50/15"></div>
+                  <div className="relative z-10 text-center py-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-medium">
+                      <Calculator className="w-8 h-8 text-gray-500" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Enter your income</h3>
+                    <p className="text-gray-600 leading-relaxed">Fill in your details to see your tax calculation with beautiful visualizations</p>
                   </div>
                 </div>
               )}
@@ -763,37 +835,63 @@ export default function TaxCalculator() {
           </div>
         </div>
 
-        {/* Information Cards */}
+        {/* Optimized Information Cards */}
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <Info className="w-5 h-5 text-blue-600" />
+          <div className="relative group overflow-hidden bg-gradient-to-br from-blue-50/90 to-blue-100/70 backdrop-blur-light rounded-3xl p-8 border border-blue-200/30 hover:border-blue-300/50 transition-all duration-200 hover-scale shadow-medium">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+            <div className="relative z-10">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-medium hover-scale transition-transform duration-200">
+                <Info className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-900 mb-3 text-lg">How it works</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">Disclaimer: Information provided on this site is for illustrative purposes only.<br/><br/>
+              Don&apos;t make any major financial decisions without consulting a qualified specialist.</p>
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">How it works</h3>
-            <p className="text-gray-600 text-sm">Disclaimer: Information provided on this site is for illustrative purposes only.<br/><br/>
-            Don&apos;t make any major financial decisions without consulting a qualified specialist.</p>
           </div>
           
-          <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <CheckCircle className="w-5 h-5 text-green-600" />
+          <div className="relative group overflow-hidden bg-gradient-to-br from-emerald-50/90 to-green-100/70 backdrop-blur-light rounded-3xl p-8 border border-emerald-200/30 hover:border-emerald-300/50 transition-all duration-200 hover-scale shadow-medium">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+            <div className="relative z-10">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-medium hover-scale transition-transform duration-200">
+                <CheckCircle className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-900 mb-3 text-lg">Free to use</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">Calculate your tax liability and take-home pay completely free, with no hidden costs.</p>
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Free to use</h3>
-            <p className="text-gray-600 text-sm">Calculate your tax liability and take-home pay completely free, with no hidden costs.</p>
           </div>
           
-          <div className="bg-purple-50 rounded-2xl p-6 border border-purple-100">
-            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <Award className="w-5 h-5 text-purple-600" />
+          <div className="relative group overflow-hidden bg-gradient-to-br from-purple-50/90 to-purple-100/70 backdrop-blur-light rounded-3xl p-8 border border-purple-200/30 hover:border-purple-300/50 transition-all duration-200 hover-scale shadow-medium">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+            <div className="relative z-10">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-medium hover-scale transition-transform duration-200">
+                <Award className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-900 mb-3 text-lg">Expert support</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">Get help from our AI assistant or browse our comprehensive FAQ section.</p>
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Expert support</h3>
           </div>
         </div>
-        <div className="flex justify-end mt-4">
-          <a href="/faq" className="bg-[#1566a0] hover:bg-blue-800 text-white px-6 py-3 rounded-full shadow font-semibold transition">FAQ &amp; Tax Help</a>
+
+        {/* Optimized FAQ Button */}
+        <div className="flex justify-end mt-8">
+          <a 
+            href="/faq" 
+            className="group relative overflow-hidden bg-gradient-to-r from-[#1566a0] to-[#1e90c6] hover:from-[#1e90c6] hover:to-[#1566a0] text-white px-8 py-4 rounded-2xl shadow-large hover:shadow-xl font-bold transition-all duration-200 hover-scale focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+            <div className="relative z-10 flex items-center gap-3">
+              <Info className="w-5 h-5" />
+              FAQ & Tax Help
+            </div>
+          </a>
         </div>
       </div>
-      <Chatbot context={{ formData, results }} />
+      
+      {/* Lazy loaded Chatbot with fallback */}
+      <Suspense fallback={null}>
+        <Chatbot context={{ formData, results }} />
+      </Suspense>
+      
       <footer className="mt-16 border-t pt-8 pb-6 text-center text-gray-500 text-sm">
         <div>© 2025 SalaryTakeHome.co.uk. All rights reserved.</div>
         <div className="mt-2">
