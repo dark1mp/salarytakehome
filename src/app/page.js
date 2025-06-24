@@ -232,17 +232,11 @@ export default function TaxCalculator() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-              <Calculator className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">UK Tax Calculator</h1>
-              <p className="text-gray-600">Calculate your income tax and take-home pay</p>
-            </div>
-          </div>
+      <div className="w-full bg-[#1566a0] flex items-center px-6 py-4">
+        <img src="/opengraph-image.png" alt="SalaryTakeHome Logo" className="h-16 w-auto mr-6 rounded-lg shadow" />
+        <div>
+          <h1 className="text-2xl md:text-3xl font-bold text-white">UK Tax Calculator</h1>
+          <p className="text-white text-base md:text-lg">Calculate your income tax and take-home pay</p>
         </div>
       </div>
 
