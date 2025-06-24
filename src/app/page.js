@@ -150,7 +150,8 @@ const getTaxEfficiency = (takeHome, gross) => {
   return { level: 'high', color: 'from-red-500 to-pink-500', icon: TrendingDown, text: 'High tax burden' };
 };
 
-export default function TaxCalculator() {
+// Tax Calculator component that uses useSearchParams
+function TaxCalculatorContent() {
   const [formData, setFormData] = useState({
     income: '',
     period: 'yearly',
@@ -899,5 +900,23 @@ export default function TaxCalculator() {
         </div>
       </footer>
     </div>
+  );
+}
+
+// Main component wrapped in Suspense
+export default function TaxCalculator() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
+            <Calculator className="w-8 h-8 text-white" />
+          </div>
+          <p className="text-gray-600">Loading calculator...</p>
+        </div>
+      </div>
+    }>
+      <TaxCalculatorContent />
+    </Suspense>
   );
 }
