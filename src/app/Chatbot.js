@@ -93,9 +93,9 @@ export default function Chatbot({ context }) {
       )}
       {/* Chat Modal */}
       {open && (
-        <div className="fixed bottom-6 right-6 z-50 flex items-end justify-end pointer-events-none">
-          <div className="relative w-full max-w-sm pointer-events-auto">
-            <div className="bg-gradient-to-br from-[#e6f2fa] via-white to-[#d1f5e0] rounded-3xl shadow-2xl flex flex-col h-[520px] border border-[#1566a0]/30">
+        <div className="fixed bottom-6 right-6 z-50 flex items-end justify-end pointer-events-none w-full sm:w-auto">
+          <div className="relative w-full max-w-sm pointer-events-auto sm:max-w-sm sm:w-auto">
+            <div className="bg-gradient-to-br from-[#e6f2fa] via-white to-[#d1f5e0] rounded-3xl shadow-2xl flex flex-col h-[60vh] sm:h-[520px] border border-[#1566a0]/30 w-full sm:w-[380px] mx-auto sm:mx-0">
               <div className="px-4 py-3 border-b flex items-center justify-between rounded-t-3xl" style={{ background: '#1566a0' }}>
                 <div className="flex items-center gap-2 text-white font-bold text-lg">
                   <Calculator className="w-6 h-6 text-white" />
