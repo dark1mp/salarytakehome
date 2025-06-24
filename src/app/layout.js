@@ -48,8 +48,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google Search Console Verification - Replace with your actual verification code */}
-        {/* <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> */}
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="gGV6Fq6Jfgi-EnGmo1-8uHyNwX6HvBu8LBDy6ZG03OI" />
       </head>
       <body className={`${inter.className} antialiased`}>
         <script
