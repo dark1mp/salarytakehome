@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://salarytakehome.co.uk/sitemap.xml 

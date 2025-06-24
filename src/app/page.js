@@ -591,6 +591,9 @@ export default function TaxCalculator() {
             <h3 className="font-semibold text-gray-900 mb-2">Expert support</h3>
           </div>
         </div>
+        <div className="flex justify-end mt-4">
+          <a href="/faq" className="bg-[#1566a0] hover:bg-blue-800 text-white px-6 py-3 rounded-full shadow font-semibold transition">FAQ &amp; Tax Help</a>
+        </div>
       </div>
       <Chatbot context={{ formData, results }} />
       <footer className="mt-16 border-t pt-8 pb-6 text-center text-gray-500 text-sm">
