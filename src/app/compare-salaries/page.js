@@ -41,7 +41,7 @@ export default function CompareSalaries() {
       const tax = Math.min(taxable, 37700) * 0.2 + Math.max(0, Math.min(taxable - 37700, 125140 - 37700 - (annual - personalAllowance))) * 0.4 + Math.max(0, taxable - 125140) * 0.45;
       const niThreshold = 12570;
       const niIncome = Math.max(0, annual - niThreshold);
-      const ni = Math.min(niIncome, 50270 - niThreshold) * 0.12 + Math.max(0, niIncome - (50270 - niThreshold)) * 0.02;
+      const ni = Math.min(niIncome, 50270 - niThreshold) * 0.08 + Math.max(0, niIncome - (50270 - niThreshold)) * 0.02;
       return { gross: annual, tax, ni, takeHome: annual - tax - ni };
     };
 

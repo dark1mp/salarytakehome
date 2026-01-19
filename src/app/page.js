@@ -100,7 +100,7 @@ const NI_BANDS = {
   "2022/23": { primaryThreshold: 9880, upperEarnings: 50270, rate: 0.1325, upperRate: 0.0325 },
   "2023/24": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
   "2024/25": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
-  "2025/26": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 }
+  "2025/26": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 }
 };
 
 const STUDENT_LOAN = {
