@@ -9,6 +9,9 @@ const nextConfig = {
   // Enable compression
   compress: true,
   
+  // Turbopack config (Next.js 16+)
+  turbopack: {},
+  
   // Bundle analyzer in development
   webpack: (config, { dev, isServer }) => {
     // Optimize bundle size
