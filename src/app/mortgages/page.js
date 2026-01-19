@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useMemo, useCallback } from 'react';
 import { Home, Calculator, TrendingUp, Info } from 'lucide-react';
+import LayoutWrapper from '../components/LayoutWrapper';
 
 export default function MortgageCalculator() {
   const [formData, setFormData] = useState({
@@ -116,7 +117,8 @@ export default function MortgageCalculator() {
   }, [formData]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <LayoutWrapper>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="max-w-6xl mx-auto px-8 py-12">
           {/* Header */}
           <div className="mb-8">
@@ -299,6 +301,7 @@ export default function MortgageCalculator() {
             </div>
           </div>
         </div>
-    </div>
+      </div>
+    </LayoutWrapper>
   );
 }
