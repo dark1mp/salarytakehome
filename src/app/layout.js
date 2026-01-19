@@ -3,6 +3,7 @@ import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import LayoutWrapper from './components/LayoutWrapper';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,6 +53,14 @@ export default function RootLayout({ children }) {
       <head>
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="google3b93564eda4debf4.html" />
+
+        {/* Google AdSense */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3447670244921264"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={`${inter.className} antialiased`}>
         <script
