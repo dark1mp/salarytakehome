@@ -68,7 +68,7 @@ export default function Sidebar() {
             />
           </div>
           <div className="flex flex-col">
-            <div className="text-xs uppercase tracking-widest text-white/80 font-medium mb-0.5">THE SALARY</div>
+            <div className="text-xs uppercase tracking-widest text-white/80 font-medium mb-0.5">SALARY TAKE HOME</div>
             <div className="text-2xl font-bold text-white tracking-tight">CALCULATOR</div>
           </div>
         </Link>
