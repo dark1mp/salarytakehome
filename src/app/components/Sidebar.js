@@ -1,8 +1,9 @@
 "use client";
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, Globe, HelpCircle, ExternalLink } from 'lucide-react';
+import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, Globe, HelpCircle, ExternalLink, Menu, X } from 'lucide-react';
 
 const menuItems = [
   { href: '/', label: 'TAKE HOME PAY', icon: Home },
@@ -21,12 +22,41 @@ const menuItems = [
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <aside className="fixed left-0 top-0 h-full w-72 bg-gradient-to-b from-[#1566a0] via-[#1566a0] to-[#1e90c6] flex flex-col shadow-2xl z-40 border-r border-blue-800/20">
+    <>
+      {/* Mobile Hamburger Button */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="md:hidden fixed top-4 left-4 z-50 w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+      >
+        {isMobileMenuOpen ? (
+          <X className="w-6 h-6 text-white" />
+        ) : (
+          <Menu className="w-6 h-6 text-white" />
+        )}
+      </button>
+
+      {/* Backdrop Overlay (Mobile Only) */}
+      {isMobileMenuOpen && (
+        <div
+          className="md:hidden fixed inset-0 bg-black/50 z-30 transition-opacity duration-300"
+          onClick={closeMobileMenu}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Sidebar */}
+      <aside className={`fixed left-0 top-0 h-full w-72 bg-gradient-to-b from-[#1566a0] via-[#1566a0] to-[#1e90c6] flex flex-col shadow-2xl z-40 border-r border-blue-800/20 transition-transform duration-300 ease-in-out ${
+        isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+      } md:translate-x-0`}>
       {/* Logo Section - Inspired by GOV.UK but with site branding */}
       <div className="p-6 border-b border-white/10">
-        <Link href="/" className="flex items-center gap-4 group hover:opacity-90 transition-opacity">
+        <Link href="/" onClick={closeMobileMenu} className="flex items-center gap-4 group hover:opacity-90 transition-opacity">
           <div className="w-14 h-14 bg-white/95 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
             <Image 
               src="/opengraph-image.png" 
@@ -55,6 +85,7 @@ export default function Sidebar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  onClick={closeMobileMenu}
                   className={`group flex items-center justify-between px-4 py-3.5 rounded-xl text-sm uppercase tracking-wide transition-all duration-200 relative overflow-hidden ${
                     isActive
                       ? 'bg-white/20 text-white font-semibold shadow-lg backdrop-blur-sm'
