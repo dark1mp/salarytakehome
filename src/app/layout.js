@@ -2,10 +2,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import LayoutWrapper from './components/LayoutWrapper';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL('https://salarytakehome.co.uk'),
   title: "UK Tax Calculator - Calculate Your Take-Home Pay | SalaryTakeHome.co.uk",
   description: "Free UK tax calculator for 2024/25. Calculate income tax, National Insurance, and student loan deductions. Get your exact take-home pay instantly.",
   keywords: "UK tax calculator, take home pay, salary calculator, income tax, National Insurance, student loan, pension calculator",

@@ -1,11 +1,7 @@
-import React from "react";
+"use client";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
-
-export const metadata = {
-  title: "UK Tax Blog - Tips, Updates & Guides | SalaryTakeHome.co.uk",
-  description: "Expert insights on UK tax, National Insurance, student loans, and salary optimization. Stay updated with the latest tax changes and money-saving tips.",
-  keywords: "UK tax blog, tax tips, National Insurance updates, salary optimization, tax planning, HMRC changes",
-};
+import LayoutWrapper from '../components/LayoutWrapper';
 
 const blogPosts = [
   {
@@ -67,9 +63,24 @@ const blogPosts = [
 const categories = ["All", "Tax Updates", "Money Tips", "Student Loans", "Tax Planning", "Self-Employment", "Pensions"];
 
 export default function Blog() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  // Filter posts based on selected category
+  const filteredPosts = useMemo(() => {
+    if (selectedCategory === "All") {
+      return blogPosts;
+    }
+    return blogPosts.filter(post => post.category === selectedCategory);
+  }, [selectedCategory]);
+
+  const featuredPosts = useMemo(() => {
+    return filteredPosts.filter(post => post.featured);
+  }, [filteredPosts]);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      <div className="max-w-6xl mx-auto px-4 py-12">
+    <LayoutWrapper>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
@@ -88,7 +99,14 @@ export default function Blog() {
           {categories.map((category) => (
             <button
               key={category}
-              className="px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-white/20 hover:bg-white/80 transition-all duration-200 text-gray-700 hover:text-blue-600 font-medium"
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-full backdrop-blur-sm border transition-all duration-200 font-medium ${
+                selectedCategory === category
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-blue-500 shadow-lg'
+                  : 'bg-white/60 border-white/20 hover:bg-white/80 text-gray-700 hover:text-blue-600'
+              }`}
+              aria-label={`Filter by ${category}`}
+              aria-pressed={selectedCategory === category}
             >
               {category}
             </button>
@@ -96,10 +114,11 @@ export default function Blog() {
         </div>
 
         {/* Featured Posts */}
+        {featuredPosts.length > 0 && (
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Articles</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {blogPosts.filter(post => post.featured).map((post) => (
+            {featuredPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                 <article className="glass-medium rounded-2xl p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center gap-3 mb-4">
@@ -131,12 +150,20 @@ export default function Blog() {
             ))}
           </div>
         </div>
+        )}
 
         {/* All Posts */}
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">All Articles</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+            {selectedCategory === "All" ? "All Articles" : `${selectedCategory} Articles`}
+          </h2>
+          {filteredPosts.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-gray-600 text-lg">No articles found in this category.</p>
+            </div>
+          ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map((post) => (
+            {filteredPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                 <article className="glass-light rounded-xl p-6 h-full hover:shadow-lg transition-all duration-200 hover:bg-white/80">
                   <div className="flex items-center gap-3 mb-3">
@@ -162,6 +189,7 @@ export default function Blog() {
               </Link>
             ))}
           </div>
+          )}
         </div>
 
         {/* Call to Action */}
@@ -179,7 +207,8 @@ export default function Blog() {
             Start Calculating →
           </Link>
         </div>
+        </div>
       </div>
-    </div>
+    </LayoutWrapper>
   );
 } 

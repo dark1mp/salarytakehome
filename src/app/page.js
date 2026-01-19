@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback, lazy, Suspense, useMemo } from
 import { Calculator, PoundSterling, Users, Building, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
+import ErrorBoundary from './ErrorBoundary';
 
 // Lazy load the Chatbot component
 const Chatbot = lazy(() => import('./Chatbot'));
@@ -57,31 +58,36 @@ const TAX_BANDS = {
   },
   "2024/25": {
     personalAllowance: 12570,
+    personalAllowanceReductionThreshold: 100000, // Allowance reduces from this point
+    personalAllowanceReductionRate: 0.5, // £1 reduction per £2 earned over threshold
     bands: [
-      { threshold: 50270, rate: 0.2 },
-      { threshold: 125140, rate: 0.4 },
-      { threshold: Infinity, rate: 0.45 }
+      { threshold: 50270, rate: 0.2 }, // £12,570 + £37,700 = £50,270 (20% on first £37,700 of taxable income)
+      { threshold: 125140, rate: 0.4 }, // 40% from £50,271 to £125,140
+      { threshold: Infinity, rate: 0.45 } // 45% above £125,140
     ],
     scottishBands: [
-      { threshold: 2162, rate: 0.19 },
-      { threshold: 13118, rate: 0.20 },
-      { threshold: 31392, rate: 0.21 },
-      { threshold: 75000, rate: 0.42 },
-      { threshold: 125140, rate: 0.45 },
-      { threshold: Infinity, rate: 0.48 }
+      // Scottish bands are calculated as amounts OVER the personal allowance
+      { threshold: 15397, rate: 0.19 }, // £12,570 + £2,827 = £15,397 (19% on first £2,827 over PA)
+      { threshold: 27491, rate: 0.20 }, // £12,570 + £14,921 = £27,491 (20% from £2,827 to £14,921)
+      { threshold: 43662, rate: 0.21 }, // £12,570 + £31,092 = £43,662 (21% from £14,921 to £31,092)
+      { threshold: 75000, rate: 0.42 }, // £12,570 + £62,430 = £75,000 (42% from £31,092 to £62,430)
+      { threshold: 125140, rate: 0.45 }, // 45% from £62,430 to £125,140
+      { threshold: Infinity, rate: 0.48 } // 48% above £125,140
     ]
   },
   "2025/26": {
     personalAllowance: 12570,
+    personalAllowanceReductionThreshold: 100000,
+    personalAllowanceReductionRate: 0.5,
     bands: [
       { threshold: 50270, rate: 0.2 },
       { threshold: 125140, rate: 0.4 },
       { threshold: Infinity, rate: 0.45 }
     ],
     scottishBands: [
-      { threshold: 2162, rate: 0.19 },
-      { threshold: 13118, rate: 0.20 },
-      { threshold: 31392, rate: 0.21 },
+      { threshold: 15397, rate: 0.19 },
+      { threshold: 27491, rate: 0.20 },
+      { threshold: 43662, rate: 0.21 },
       { threshold: 75000, rate: 0.42 },
       { threshold: 125140, rate: 0.45 },
       { threshold: Infinity, rate: 0.48 }
@@ -98,10 +104,11 @@ const NI_BANDS = {
 };
 
 const STUDENT_LOAN = {
-  plan1: { threshold: 22015, rate: 0.09 },
-  plan2: { threshold: 27295, rate: 0.09 },
-  plan4: { threshold: 27660, rate: 0.09 },
-  postgrad: { threshold: 21000, rate: 0.06 }
+  plan1: { threshold: 26065, rate: 0.09 }, // Pre-2012 (England, Wales, Northern Ireland) - 2024/25 threshold
+  plan2: { threshold: 28470, rate: 0.09 }, // Post-2012 (England, Wales) - 2024/25 threshold
+  plan4: { threshold: 32745, rate: 0.09 }, // Scotland - 2024/25 threshold
+  plan5: { threshold: 25000, rate: 0.09 }, // Post-2023 (England, Wales, Northern Ireland) - from Aug 2023, repayments start Apr 2026
+  postgrad: { threshold: 21000, rate: 0.06 } // Postgraduate loan - 2024/25 threshold
 };
 
 // Optimized CountUp component with memoization
@@ -170,8 +177,50 @@ function TaxCalculatorContent() {
   const [results, setResults] = useState(null);
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  // Helper function to format numbers (moved up for URL parsing)
+  const formatNumberInput = (value) => {
+    if (!value) return '';
+    // Remove non-digits and format with commas
+    const numericValue = value.toString().replace(/[^\d]/g, '');
+    return numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
+  // Initialize form data from URL parameters (only once on mount)
+  useEffect(() => {
+    const income = searchParams.get('income') || '';
+    const period = searchParams.get('period') || '';
+    const taxYear = searchParams.get('taxYear') || '';
+    const situation = searchParams.get('situation') || '';
+    const scottish = searchParams.get('scottish') === '1';
+    const studentLoan = searchParams.get('studentLoan') || '';
+    const pensionType = searchParams.get('pensionType') || '';
+    const pensionValue = searchParams.get('pensionValue') || '';
+    const bonus = searchParams.get('bonus') || '';
+    const salarySacrifice = searchParams.get('salarySacrifice') || '';
+    const childcare = searchParams.get('childcare') || '';
+
+    // Only update if there are actual URL parameters to avoid overwriting user input
+    if (income || bonus || studentLoan || pensionValue || salarySacrifice || childcare || scottish || situation) {
+      setFormData(prev => ({
+        ...prev,
+        ...(income && { income: formatNumberInput(income) }),
+        ...(period && { period }),
+        ...(taxYear && { taxYear }),
+        ...(situation && { situation }),
+        scottish,
+        ...(studentLoan && { studentLoan }),
+        ...(pensionType || pensionValue) && { pension: { type: pensionType || prev.pension.type, value: pensionValue } },
+        ...(bonus && { bonus: formatNumberInput(bonus) }),
+        ...(salarySacrifice && { salarySacrifice: formatNumberInput(salarySacrifice) }),
+        ...(childcare && { childcare: formatNumberInput(childcare) }),
+      }));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Memoized tax efficiency calculation
   const taxEfficiency = useMemo(() => {
@@ -182,9 +231,24 @@ function TaxCalculatorContent() {
   }, [results, formData.period]);
 
   const calculateTax = useCallback(() => {
-    if (!formData.income) return;
+    if (!formData.income) {
+      setResults(null);
+      setIsLoading(false);
+      return;
+    }
 
-    let gross = parseFloat(formData.income.replace(/,/g, '')) || 0;
+    // Validate income is a positive number
+    const incomeValue = parseFloat(formData.income.replace(/,/g, '')) || 0;
+    if (incomeValue <= 0) {
+      setResults(null);
+      setIsLoading(false);
+      return;
+    }
+
+    setIsLoading(true);
+    // Use setTimeout to allow UI to update before calculation
+    setTimeout(() => {
+      let gross = incomeValue;
     let bonus = parseFloat(formData.bonus.replace(/,/g, '')) || 0;
     let benefits = parseFloat(formData.taxableBenefits.replace(/,/g, '')) || 0;
     let childcare = parseFloat(formData.childcare.replace(/,/g, '')) || 0;
@@ -192,7 +256,7 @@ function TaxCalculatorContent() {
     
     gross += bonus + benefits - childcare - salarySac;
 
-    // Pension calculation
+    // Pension calculation (for NI and adjusted net income)
     let pensionDeduct = 0;
     if (formData.pension.value) {
       if (formData.pension.type === 'percentage') {
@@ -202,24 +266,56 @@ function TaxCalculatorContent() {
         pensionDeduct = parseFloat(formData.pension.value.replace(/,/g, '')) || 0;
       }
     }
-    gross -= pensionDeduct;
+
+    // Calculate adjusted net income (gross - pension contributions)
+    // This is used for personal allowance reduction calculation
+    const adjustedNetIncome = gross - pensionDeduct;
+
+    // Calculate personal allowance (with reduction for high earners)
+    // From April 2010: £1 reduction per £2 earned over £100,000
+    const taxYearData = TAX_BANDS[formData.taxYear];
+    let personalAllowance = taxYearData.personalAllowance;
+    
+    if (taxYearData.personalAllowanceReductionThreshold && adjustedNetIncome > taxYearData.personalAllowanceReductionThreshold) {
+      const excess = adjustedNetIncome - taxYearData.personalAllowanceReductionThreshold;
+      // Reduce by £1 for every £2 over the threshold
+      const reduction = excess * taxYearData.personalAllowanceReductionRate;
+      personalAllowance = Math.max(0, personalAllowance - reduction);
+    }
 
     // Tax calculation
-    let pa = TAX_BANDS[formData.taxYear].personalAllowance;
-    let taxable = Math.max(0, gross - pa);
+    // Tax bands represent total income thresholds
+    // Tax is calculated on total income above personal allowance
     let tax = 0;
-    
     let bands = formData.scottish ? TAX_BANDS[formData.taxYear].scottishBands : TAX_BANDS[formData.taxYear].bands;
-    let prev = 0;
+    
+    // Calculate tax by applying bands to total income
+    // Tax only applies to income above personal allowance
+    let prevThreshold = personalAllowance; // Tax starts after personal allowance
     
     for (let i = 0; i < bands.length; i++) {
       let band = bands[i];
-      let bandAmount = Math.min(taxable, band.threshold - prev);
-      if (bandAmount > 0) tax += bandAmount * band.rate;
-      taxable -= bandAmount;
-      prev = band.threshold;
-      if (taxable <= 0) break;
+      
+      if (gross <= prevThreshold) break; // No more income to tax
+      
+      // Calculate income in this band (portion of total income in this range, but only above personal allowance)
+      let bandStart = prevThreshold;
+      let bandEnd = band.threshold;
+      
+      // Only tax income above personal allowance
+      let taxableStart = Math.max(bandStart, personalAllowance);
+      let taxableEnd = Math.min(gross, bandEnd);
+      let incomeInBand = Math.max(0, taxableEnd - taxableStart);
+      
+      if (incomeInBand > 0) {
+        tax += incomeInBand * band.rate;
+      }
+      
+      prevThreshold = bandEnd;
+      if (gross <= bandEnd) break;
     }
+    
+    let taxable = Math.max(0, gross - personalAllowance);
 
     // National Insurance
     let ni = 0;
@@ -250,14 +346,16 @@ function TaxCalculatorContent() {
     if (formData.period === "weekly") divisor = 52;
     if (formData.period === "daily") divisor = 260;
 
-    setResults({
-      gross: gross / divisor,
-      tax: tax / divisor,
-      ni: ni / divisor,
-      studentLoan: sl / divisor,
-      takeHome: takeHome / divisor,
-      pension: pensionDeduct / divisor
-    });
+      setResults({
+        gross: gross / divisor,
+        tax: tax / divisor,
+        ni: ni / divisor,
+        studentLoan: sl / divisor,
+        takeHome: takeHome / divisor,
+        pension: pensionDeduct / divisor
+      });
+      setIsLoading(false);
+    }, 100);
   }, [formData]);
 
   useEffect(() => {
@@ -278,12 +376,6 @@ function TaxCalculatorContent() {
       ...prev,
       [field]: value
     }));
-  };
-
-  const formatNumberInput = (value) => {
-    // Remove non-digits and format with commas
-    const numericValue = value.replace(/[^\d]/g, '');
-    return numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
 
   const handleNumberInput = (field, value) => {
@@ -319,8 +411,16 @@ function TaxCalculatorContent() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-72 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white"
+      >
+        Skip to main content
+      </a>
+
       {/* Header */}
-      <div className="w-full bg-[#1566a0] bg-gradient-to-r from-[#1566a0] to-[#1e90c6] shadow-lg flex flex-wrap items-center px-4 md:px-8 py-4 md:py-6 gap-4 md:gap-8">
+      <header className="w-full bg-[#1566a0] bg-gradient-to-r from-[#1566a0] to-[#1e90c6] shadow-lg flex flex-wrap items-center px-4 md:px-8 py-4 md:py-6 gap-4 md:gap-8">
         <Image 
           src="/opengraph-image.png" 
           alt="SalaryTakeHome Logo" 
@@ -333,9 +433,9 @@ function TaxCalculatorContent() {
           <h1 className="text-xl md:text-3xl font-bold text-white whitespace-normal break-words">UK Tax Calculator</h1>
           <p className="text-white text-sm md:text-lg whitespace-normal break-words">Calculate your income tax and take-home pay</p>
         </div>
-      </div>
+      </header>
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <main id="main-content" className="max-w-6xl mx-auto px-4 md:px-8 py-8">
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Form */}
           <div className="lg:col-span-2 space-y-6">
@@ -442,6 +542,8 @@ function TaxCalculatorContent() {
                         onChange={(e) => handleNumberInput('income', e.target.value)}
                         placeholder="50,000"
                         className="w-full pl-10 pr-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 text-lg font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
+                        aria-label={formData.situation === 'employed' ? 'Annual salary' : 'Annual income'}
+                        aria-required="true"
                       />
                     </div>
                   </div>
@@ -519,9 +621,10 @@ function TaxCalculatorContent() {
                         className="w-full px-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
                       >
                         <option value="">No student loan</option>
-                        <option value="plan1">Plan 1</option>
-                        <option value="plan2">Plan 2</option>
+                        <option value="plan1">Plan 1 (Pre-2012)</option>
+                        <option value="plan2">Plan 2 (Post-2012 to 2023)</option>
                         <option value="plan4">Plan 4 (Scotland)</option>
+                        <option value="plan5">Plan 5 (Post-2023)</option>
                         <option value="postgrad">Postgraduate loan</option>
                       </select>
                     </div>
@@ -620,7 +723,20 @@ function TaxCalculatorContent() {
           {/* Results */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              {results ? (
+              {isLoading ? (
+                <div className="relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8">
+                  <div className="animate-pulse space-y-6">
+                    <div className="h-6 bg-gray-200 rounded w-1/3"></div>
+                    <div className="h-32 bg-gradient-to-r from-gray-200 to-gray-300 rounded-2xl"></div>
+                    <div className="space-y-4">
+                      <div className="h-4 bg-gray-200 rounded w-full"></div>
+                      <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                      <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+                      <div className="h-4 bg-gray-200 rounded w-3/6"></div>
+                    </div>
+                  </div>
+                </div>
+              ) : results ? (
                 <div
                   className={`relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8 transition-all duration-500 ease-out animate-fade-in-slide`}
                   key={formData.income + formData.period + formData.taxYear + formData.bonus + formData.situation}
@@ -901,7 +1017,7 @@ function TaxCalculatorContent() {
             </div>
           </a>
         </div>
-      </div>
+      </main>
       
       {/* Lazy loaded Chatbot with fallback */}
       <Suspense fallback={null}>
@@ -918,20 +1034,26 @@ function TaxCalculatorContent() {
   );
 }
 
-// Main component wrapped in Suspense
+// Main component wrapped in Suspense and ErrorBoundary
+import LayoutWrapper from './components/LayoutWrapper';
+
 export default function TaxCalculator() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
-            <Calculator className="w-8 h-8 text-white" />
+    <ErrorBoundary>
+      <LayoutWrapper>
+        <Suspense fallback={
+          <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
+                <Calculator className="w-8 h-8 text-white" />
+              </div>
+              <p className="text-gray-600">Loading calculator...</p>
+            </div>
           </div>
-          <p className="text-gray-600">Loading calculator...</p>
-        </div>
-      </div>
-    }>
-      <TaxCalculatorContent />
-    </Suspense>
+        }>
+          <TaxCalculatorContent />
+        </Suspense>
+      </LayoutWrapper>
+    </ErrorBoundary>
   );
 }
