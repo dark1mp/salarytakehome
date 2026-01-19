@@ -8,7 +8,7 @@ import ErrorBoundary from './ErrorBoundary';
 // Lazy load the Chatbot component
 const Chatbot = lazy(() => import('./Chatbot'));
 
-const TAX_YEARS = ["2021/22", "2022/23", "2023/24", "2024/25", "2025/26"];
+const TAX_YEARS = ["2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
 
 const TAX_BANDS = {
   "2021/22": {
@@ -100,7 +100,7 @@ const NI_BANDS = {
   "2022/23": { primaryThreshold: 9880, upperEarnings: 50270, rate: 0.1325, upperRate: 0.0325 },
   "2023/24": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
   "2024/25": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
-  "2025/26": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 }
+  "2025/26": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 }
 };
 
 const STUDENT_LOAN = {
@@ -162,7 +162,7 @@ function TaxCalculatorContent() {
   const [formData, setFormData] = useState({
     income: '',
     period: 'yearly',
-    taxYear: '2024/25',
+    taxYear: '2025/26',
     situation: 'employed', // employed, self-employed
     scottish: false,
     studentLoan: '',

@@ -41,7 +41,7 @@ export default function TwoJobs() {
     // NI calculations
     const niThreshold = 12570;
     const niUpperThreshold = 50270;
-    const niRate = 0.12;
+    const niRate = 0.08;
     const niUpperRate = 0.02;
 
     // NI for Job 1

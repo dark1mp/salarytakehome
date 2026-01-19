@@ -34,7 +34,7 @@ export default function ProRataFurlough() {
       const taxable = Math.max(0, proRataSalary - personalAllowance);
       const tax = Math.min(taxable, 37700) * 0.2 + Math.max(0, taxable - 37700) * 0.4;
       const niThreshold = 12570;
-      const ni = Math.max(0, proRataSalary - niThreshold) * 0.12;
+      const ni = Math.max(0, proRataSalary - niThreshold) * 0.08;
       const takeHome = proRataSalary - tax - ni;
 
       return {
@@ -59,7 +59,7 @@ export default function ProRataFurlough() {
       const taxable = Math.max(0, cappedAnnual - personalAllowance);
       const tax = Math.min(taxable, 37700) * 0.2 + Math.max(0, taxable - 37700) * 0.4;
       const niThreshold = 12570;
-      const ni = Math.max(0, cappedAnnual - niThreshold) * 0.12;
+      const ni = Math.max(0, cappedAnnual - niThreshold) * 0.08;
       const takeHome = cappedAnnual - tax - ni;
 
       return {
