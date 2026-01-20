@@ -167,7 +167,7 @@ const validateTaxCode = (code) => {
 
   // UK tax code regex pattern
   // Supports: Standard (1257L), Flat (BR/D0/D1/NT/0T), K codes, Scottish (S prefix), Welsh (C prefix), Emergency (W1/M1/X suffix)
-  const taxCodeRegex = /^([SC]?)((\d{1,4}[LMNTY]?)|BR|D0|D1|NT|0T|K\d{1,4})(\s?(W1|M1|X))?$/;
+  const taxCodeRegex = /^([SC]?)((\d{1,4}[LMNTY]?)|BR|D0|D1|NT|0T|K\d{1,4}[LMNTY]?)(\s?(W1|M1|X))?$/;
 
   const isValid = taxCodeRegex.test(trimmed);
 
@@ -265,9 +265,10 @@ const parseTaxCode = (taxCode, taxYear) => {
   }
 
   // Handle K codes (negative allowance)
-  const kCodeMatch = codeWithoutPrefix.match(/^K(\d{1,4})$/);
+  const kCodeMatch = codeWithoutPrefix.match(/^K(\d{1,4})([LMNTY]?)$/);
   if (kCodeMatch) {
     const kValue = parseInt(kCodeMatch[1], 10);
+    const suffix = kCodeMatch[2] || '';
     return {
       type: 'k-code',
       personalAllowance: -(kValue * 10), // Negative allowance adds to taxable income
@@ -275,7 +276,7 @@ const parseTaxCode = (taxCode, taxYear) => {
       isScottish,
       isWelsh,
       flatRate: null,
-      suffix: 'K',
+      suffix: suffix || 'K',
       kValue: kValue * 10
     };
   }
