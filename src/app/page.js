@@ -1142,7 +1142,9 @@ function TaxCalculatorContent() {
         </div>
 
         {/* Optimized Information Cards */}
-        <div className="mt-10 grid md:grid-cols-3 gap-6">
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 mt-10">
+          <div className="flex-1 max-w-6xl">
+            <div className="grid md:grid-cols-1 gap-6">
           <div className="relative group overflow-hidden bg-gradient-to-br from-blue-50/90 to-blue-100/70 backdrop-blur-light rounded-3xl p-6 border border-blue-200/30 hover:border-blue-300/50 transition-all duration-200 hover-scale shadow-medium">
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             <div className="relative z-10">
@@ -1176,6 +1178,15 @@ function TaxCalculatorContent() {
               <p className="text-gray-700 text-sm leading-relaxed">Get help from our AI assistant or browse our comprehensive FAQ section.</p>
             </div>
           </div>
+            </div>
+          </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8 h-[600px]">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
         </div>
 
         {/* Beautiful Navigation Buttons - Back at bottom with original layout */}
