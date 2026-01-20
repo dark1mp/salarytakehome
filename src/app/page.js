@@ -521,7 +521,7 @@ function TaxCalculatorContent() {
       sl = slIncome * slPlan.rate;
     }
 
-    let takeHome = gross - tax - ni - sl;
+    let takeHome = gross - tax - ni - sl - pensionDeduct;
 
     let divisor = 1;
     if (formData.period === "monthly") divisor = 12;
