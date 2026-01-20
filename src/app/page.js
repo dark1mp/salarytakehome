@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useCallback, lazy, Suspense, useMemo } from 'react';
-import { Calculator, PoundSterling, Users, Building, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import { Calculator, PoundSterling, Users, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import ErrorBoundary from './ErrorBoundary';
@@ -157,13 +157,166 @@ const getTaxEfficiency = (takeHome, gross) => {
   return { level: 'high', color: 'from-red-500 to-pink-500', icon: TrendingDown, text: 'High tax burden' };
 };
 
+// Validates UK tax codes
+const validateTaxCode = (code) => {
+  if (!code || code.trim() === '') {
+    return { valid: true, normalized: '' }; // Empty is valid - use default
+  }
+
+  const trimmed = code.trim().toUpperCase();
+
+  // UK tax code regex pattern
+  // Supports: Standard (1257L), Flat (BR/D0/D1/NT/0T), K codes, Scottish (S prefix), Welsh (C prefix), Emergency (W1/M1/X suffix)
+  const taxCodeRegex = /^([SC]?)((\d{1,4}[LMNTY]?)|BR|D0|D1|NT|0T|K\d{1,4}[LMNTY]?)(\s?(W1|M1|X))?$/;
+
+  const isValid = taxCodeRegex.test(trimmed);
+
+  return {
+    valid: isValid,
+    normalized: isValid ? trimmed : code
+  };
+};
+
+// Parses UK tax code and returns tax treatment instructions
+const parseTaxCode = (taxCode, taxYear) => {
+  // Default: use standard personal allowance with high-earner reduction
+  if (!taxCode || taxCode.trim() === '') {
+    return {
+      type: 'default',
+      personalAllowance: null, // Will use TAX_BANDS default
+      applyHighEarnerReduction: true,
+      isScottish: false,
+      isWelsh: false,
+      flatRate: null,
+      suffix: null
+    };
+  }
+
+  const code = taxCode.trim().toUpperCase();
+
+  // Remove emergency tax code suffixes (W1, M1, X) - they don't affect annual calculations
+  const cleanCode = code.replace(/\s?(W1|M1|X)$/, '');
+  const isEmergency = cleanCode !== code;
+
+  // Check for Scottish (S) or Welsh (C) prefix
+  const isScottish = cleanCode.startsWith('S');
+  const isWelsh = cleanCode.startsWith('C');
+  const codeWithoutPrefix = cleanCode.replace(/^[SC]/, '');
+
+  // Handle special flat-rate codes
+  if (codeWithoutPrefix === 'BR') {
+    return {
+      type: 'flat-rate',
+      personalAllowance: 0,
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: 0.20, // 20% on all income
+      suffix: 'BR'
+    };
+  }
+
+  if (codeWithoutPrefix === 'D0') {
+    return {
+      type: 'flat-rate',
+      personalAllowance: 0,
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: 0.40, // 40% on all income
+      suffix: 'D0'
+    };
+  }
+
+  if (codeWithoutPrefix === 'D1') {
+    return {
+      type: 'flat-rate',
+      personalAllowance: 0,
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: 0.45, // 45% on all income
+      suffix: 'D1'
+    };
+  }
+
+  if (codeWithoutPrefix === 'NT') {
+    return {
+      type: 'no-tax',
+      personalAllowance: Infinity, // Effectively no tax
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: null,
+      suffix: 'NT'
+    };
+  }
+
+  if (codeWithoutPrefix === '0T') {
+    return {
+      type: 'zero-allowance',
+      personalAllowance: 0,
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: null,
+      suffix: '0T'
+    };
+  }
+
+  // Handle K codes (negative allowance)
+  const kCodeMatch = codeWithoutPrefix.match(/^K(\d{1,4})([LMNTY]?)$/);
+  if (kCodeMatch) {
+    const kValue = parseInt(kCodeMatch[1], 10);
+    const suffix = kCodeMatch[2] || '';
+    return {
+      type: 'k-code',
+      personalAllowance: -(kValue * 10), // Negative allowance adds to taxable income
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: null,
+      suffix: suffix || 'K',
+      kValue: kValue * 10
+    };
+  }
+
+  // Handle standard numeric codes (e.g., 1257L, 1100T, 1257M, 1257N, etc.)
+  const standardCodeMatch = codeWithoutPrefix.match(/^(\d{1,4})([LMNTY]?)$/);
+  if (standardCodeMatch) {
+    const digits = parseInt(standardCodeMatch[1], 10);
+    const suffix = standardCodeMatch[2] || '';
+
+    return {
+      type: 'standard',
+      personalAllowance: digits * 10,
+      applyHighEarnerReduction: false, // Tax code already set by HMRC, don't adjust
+      isScottish,
+      isWelsh,
+      flatRate: null,
+      suffix
+    };
+  }
+
+  // If we can't parse it, fall back to default
+  console.warn(`Unable to parse tax code: ${taxCode}, using default`);
+  return {
+    type: 'default',
+    personalAllowance: null,
+    applyHighEarnerReduction: true,
+    isScottish: false,
+    isWelsh: false,
+    flatRate: null,
+    suffix: null
+  };
+};
+
 // Tax Calculator component that uses useSearchParams
 function TaxCalculatorContent() {
   const [formData, setFormData] = useState({
     income: '',
     period: 'yearly',
     taxYear: '2025/26',
-    situation: 'employed', // employed, self-employed
     scottish: false,
     studentLoan: '',
     pension: { type: 'percentage', value: '' },
@@ -178,6 +331,7 @@ function TaxCalculatorContent() {
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [copied, setCopied] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [taxCodeError, setTaxCodeError] = useState('');
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -194,7 +348,6 @@ function TaxCalculatorContent() {
     const income = searchParams.get('income') || '';
     const period = searchParams.get('period') || '';
     const taxYear = searchParams.get('taxYear') || '';
-    const situation = searchParams.get('situation') || '';
     const scottish = searchParams.get('scottish') === '1';
     const studentLoan = searchParams.get('studentLoan') || '';
     const pensionType = searchParams.get('pensionType') || '';
@@ -204,13 +357,12 @@ function TaxCalculatorContent() {
     const childcare = searchParams.get('childcare') || '';
 
     // Only update if there are actual URL parameters to avoid overwriting user input
-    if (income || bonus || studentLoan || pensionValue || salarySacrifice || childcare || scottish || situation) {
+    if (income || bonus || studentLoan || pensionValue || salarySacrifice || childcare || scottish) {
       setFormData(prev => ({
         ...prev,
         ...(income && { income: formatNumberInput(income) }),
         ...(period && { period }),
         ...(taxYear && { taxYear }),
-        ...(situation && { situation }),
         scottish,
         ...(studentLoan && { studentLoan }),
         ...(pensionType || pensionValue) && { pension: { type: pensionType || prev.pension.type, value: pensionValue } },
@@ -274,11 +426,26 @@ function TaxCalculatorContent() {
     // Calculate personal allowance (with reduction for high earners)
     // From April 2010: £1 reduction per £2 earned over £100,000
     const taxYearData = TAX_BANDS[formData.taxYear];
-    let personalAllowance = taxYearData.personalAllowance;
-    
-    if (taxYearData.personalAllowanceReductionThreshold && adjustedNetIncome > taxYearData.personalAllowanceReductionThreshold) {
+    const taxCodeInfo = parseTaxCode(formData.taxCode, formData.taxYear);
+    let personalAllowance;
+
+    // Handle different tax code types
+    if (taxCodeInfo.type === 'no-tax') {
+      // NT code: no tax at all
+      personalAllowance = Infinity;
+    } else if (taxCodeInfo.personalAllowance !== null) {
+      // Tax code specifies exact allowance (can be negative for K codes)
+      personalAllowance = taxCodeInfo.personalAllowance;
+    } else {
+      // Default: use standard allowance
+      personalAllowance = taxYearData.personalAllowance;
+    }
+
+    // Apply high-earner reduction ONLY if tax code allows it
+    if (taxCodeInfo.applyHighEarnerReduction &&
+        taxYearData.personalAllowanceReductionThreshold &&
+        adjustedNetIncome > taxYearData.personalAllowanceReductionThreshold) {
       const excess = adjustedNetIncome - taxYearData.personalAllowanceReductionThreshold;
-      // Reduce by £1 for every £2 over the threshold
       const reduction = excess * taxYearData.personalAllowanceReductionRate;
       personalAllowance = Math.max(0, personalAllowance - reduction);
     }
@@ -287,32 +454,46 @@ function TaxCalculatorContent() {
     // Tax bands represent total income thresholds
     // Tax is calculated on total income above personal allowance
     let tax = 0;
-    let bands = formData.scottish ? TAX_BANDS[formData.taxYear].scottishBands : TAX_BANDS[formData.taxYear].bands;
-    
-    // Calculate tax by applying bands to total income
-    // Tax only applies to income above personal allowance
-    let prevThreshold = personalAllowance; // Tax starts after personal allowance
-    
-    for (let i = 0; i < bands.length; i++) {
-      let band = bands[i];
-      
-      if (gross <= prevThreshold) break; // No more income to tax
-      
-      // Calculate income in this band (portion of total income in this range, but only above personal allowance)
-      let bandStart = prevThreshold;
-      let bandEnd = band.threshold;
-      
-      // Only tax income above personal allowance
-      let taxableStart = Math.max(bandStart, personalAllowance);
-      let taxableEnd = Math.min(gross, bandEnd);
-      let incomeInBand = Math.max(0, taxableEnd - taxableStart);
-      
-      if (incomeInBand > 0) {
-        tax += incomeInBand * band.rate;
+
+    // Determine which bands to use based on tax code (Scottish prefix overrides checkbox)
+    let useScottish = taxCodeInfo.isScottish || (formData.scottish && !taxCodeInfo.isWelsh);
+    let bands = useScottish ? TAX_BANDS[formData.taxYear].scottishBands : TAX_BANDS[formData.taxYear].bands;
+
+    // Calculate taxable income (gross minus personal allowance)
+    // For K codes, personal allowance is negative, so this adds to gross
+    let taxableIncome = Math.max(0, gross - personalAllowance);
+
+    // Handle flat-rate tax codes
+    if (taxCodeInfo.type === 'flat-rate' && taxCodeInfo.flatRate !== null) {
+      // Flat rate codes apply the same rate to ALL income
+      tax = gross * taxCodeInfo.flatRate;
+    } else if (taxCodeInfo.type === 'no-tax') {
+      // NT code: no tax
+      tax = 0;
+    } else {
+      // Progressive tax bands (standard calculation)
+      // Tax bands in the data are defined as gross income thresholds (include standard PA of £12,570)
+      // We need to convert them to taxable income thresholds by subtracting the standard PA
+      const standardPA = taxYearData.personalAllowance; // £12,570
+      let prevThreshold = 0;
+
+      for (let i = 0; i < bands.length; i++) {
+        let band = bands[i];
+
+        if (taxableIncome <= prevThreshold) break;
+
+        // Convert gross income threshold to taxable income threshold
+        let bandStart = prevThreshold;
+        let bandEnd = band.threshold - standardPA; // Subtract standard PA to get taxable income threshold
+        let incomeInBand = Math.max(0, Math.min(taxableIncome, bandEnd) - bandStart);
+
+        if (incomeInBand > 0) {
+          tax += incomeInBand * band.rate;
+        }
+
+        prevThreshold = bandEnd;
+        if (taxableIncome <= bandEnd) break;
       }
-      
-      prevThreshold = bandEnd;
-      if (gross <= bandEnd) break;
     }
     
     let taxable = Math.max(0, gross - personalAllowance);
@@ -383,6 +564,22 @@ function TaxCalculatorContent() {
     updateFormData(field, formatted);
   };
 
+  const handleTaxCodeChange = (value) => {
+    updateFormData('taxCode', value);
+
+    // Validate on blur or when user types
+    const validation = validateTaxCode(value);
+    if (!validation.valid && value.trim() !== '') {
+      setTaxCodeError("This doesn't look like a valid tax code — check your payslip or leave blank.");
+    } else {
+      setTaxCodeError('');
+      // Update with normalized version if valid
+      if (validation.valid && value.trim() !== '') {
+        updateFormData('taxCode', validation.normalized);
+      }
+    }
+  };
+
   // Helper to build shareable URL
   const getShareUrl = () => {
     const params = new URLSearchParams({
@@ -390,7 +587,6 @@ function TaxCalculatorContent() {
       period: formData.period,
       taxYear: formData.taxYear,
       bonus: formData.bonus,
-      situation: formData.situation,
       scottish: formData.scottish ? '1' : '',
       studentLoan: formData.studentLoan || '',
       pensionType: formData.pension?.type || '',
@@ -439,7 +635,7 @@ function TaxCalculatorContent() {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Form */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Enhanced Your Situation Card */}
+            {/* Tax Code and Scottish Taxpayer Card */}
             <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-8">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-purple-50/15"></div>
               <div className="relative z-10">
@@ -447,73 +643,55 @@ function TaxCalculatorContent() {
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                     <Users className="w-5 h-5 text-white" />
                   </div>
-                  Your Situation
+                  Your Details
                 </h2>
-                
-                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <button
-                    onClick={() => updateFormData('situation', 'employed')}
-                    className={`group relative overflow-hidden p-6 rounded-2xl border-2 transition-all duration-200 text-left hover-scale ${
-                      formData.situation === 'employed' 
-                        ? 'border-blue-400 bg-gradient-to-br from-blue-50 to-blue-100 text-blue-900 shadow-medium' 
-                        : 'border-gray-200/50 hover:border-blue-200 bg-white/70 hover:bg-white/90'
-                    }`}
-                    aria-label="Select employed situation"
-                    tabIndex={0}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                    <div className="relative z-10 flex items-center gap-4">
-                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 ${
-                        formData.situation === 'employed' 
-                          ? 'bg-blue-500 text-white' 
-                          : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-600'
-                      }`}>
-                        <Building className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-lg">Employed</div>
-                        <div className="text-sm text-gray-600">I work for a company</div>
-                      </div>
-                    </div>
-                  </button>
-                  
-                  <button
-                    onClick={() => updateFormData('situation', 'self-employed')}
-                    className={`group relative overflow-hidden p-6 rounded-2xl border-2 transition-all duration-200 text-left hover-scale ${
-                      formData.situation === 'self-employed' 
-                        ? 'border-blue-400 bg-gradient-to-br from-blue-50 to-blue-100 text-blue-900 shadow-medium' 
-                        : 'border-gray-200/50 hover:border-blue-200 bg-white/70 hover:bg-white/90'
-                    }`}
-                    aria-label="Select self-employed situation"
-                    tabIndex={0}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                    <div className="relative z-10 flex items-center gap-4">
-                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 ${
-                        formData.situation === 'self-employed' 
-                          ? 'bg-blue-500 text-white' 
-                          : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-600'
-                      }`}>
-                        <Award className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-lg">Self-employed</div>
-                        <div className="text-sm text-gray-600">I run my own business</div>
-                      </div>
-                    </div>
-                  </button>
-                </div>
 
-                <div className="flex items-center gap-4">
-                  <label className="flex items-center gap-3 cursor-pointer group">
+                <div className="space-y-6">
+                  {/* Tax Code Input */}
+                  <div>
+                    <label className="block text-sm font-bold text-gray-700 mb-3">
+                      Your tax code (optional)
+                    </label>
                     <input
-                      type="checkbox"
-                      checked={formData.scottish}
-                      onChange={(e) => updateFormData('scottish', e.target.checked)}
-                      className="w-5 h-5 text-blue-600 border-gray-300 rounded-lg focus:ring-blue-500 focus:ring-2 transition-all duration-200"
+                      type="text"
+                      value={formData.taxCode}
+                      onChange={(e) => handleTaxCodeChange(e.target.value)}
+                      onBlur={(e) => handleTaxCodeChange(e.target.value)}
+                      placeholder="e.g., 1257L"
+                      className={`w-full px-4 py-4 border-2 rounded-2xl focus:ring-2 focus:ring-blue-500 text-lg font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95 ${
+                        taxCodeError
+                          ? 'border-red-300 focus:border-red-400'
+                          : 'border-gray-200/50 focus:border-blue-400'
+                      }`}
+                      aria-label="Tax code"
+                      aria-invalid={!!taxCodeError}
+                      aria-describedby={taxCodeError ? "tax-code-error" : undefined}
                     />
-                    <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-700 transition-colors duration-200">I&apos;m a Scottish taxpayer</span>
-                  </label>
+                    {taxCodeError && (
+                      <p id="tax-code-error" className="mt-2 text-sm text-red-600 flex items-center gap-2">
+                        <Info className="w-4 h-4" />
+                        {taxCodeError}
+                      </p>
+                    )}
+                    <p className="mt-2 text-xs text-gray-500">
+                      Find this on your payslip. Leave blank to use the standard allowance.
+                    </p>
+                  </div>
+
+                  {/* Scottish Taxpayer Checkbox */}
+                  <div className="flex items-center gap-4">
+                    <label className="flex items-center gap-3 cursor-pointer group">
+                      <input
+                        type="checkbox"
+                        checked={formData.scottish}
+                        onChange={(e) => updateFormData('scottish', e.target.checked)}
+                        className="w-5 h-5 text-blue-600 border-gray-300 rounded-lg focus:ring-blue-500 focus:ring-2 transition-all duration-200"
+                      />
+                      <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-700 transition-colors duration-200">
+                        I&apos;m a Scottish taxpayer
+                      </span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -532,7 +710,7 @@ function TaxCalculatorContent() {
                 <div className="space-y-6">
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-3">
-                      {formData.situation === 'employed' ? 'Annual salary' : 'Annual income'}
+                      Annual salary
                     </label>
                     <div className="relative">
                       <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold text-lg">£</span>
@@ -542,7 +720,7 @@ function TaxCalculatorContent() {
                         onChange={(e) => handleNumberInput('income', e.target.value)}
                         placeholder="50,000"
                         className="w-full pl-10 pr-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 text-lg font-semibold bg-white/80 transition-all duration-200 hover:bg-white/95"
-                        aria-label={formData.situation === 'employed' ? 'Annual salary' : 'Annual income'}
+                        aria-label="Annual salary"
                         aria-required="true"
                       />
                     </div>
@@ -739,7 +917,7 @@ function TaxCalculatorContent() {
               ) : results ? (
                 <div
                   className={`relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8 transition-all duration-500 ease-out animate-fade-in-slide`}
-                  key={formData.income + formData.period + formData.taxYear + formData.bonus + formData.situation}
+                  key={formData.income + formData.period + formData.taxYear + formData.bonus + formData.taxCode}
                   style={{
                     background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)'
                   }}
