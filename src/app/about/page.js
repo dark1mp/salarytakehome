@@ -6,12 +6,13 @@ export default function About() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <div className="max-w-6xl mx-auto px-8 py-10">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-          <HelpCircle className="w-12 h-12 text-[#1566a0]" />
-          About
-        </h1>
-        <div className="bg-white/90 rounded-3xl shadow-medium border border-white/30 p-6 space-y-6">
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
+          <div className="flex-1 max-w-6xl">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+              <HelpCircle className="w-12 h-12 text-[#1566a0]" />
+              About
+            </h1>
+            <div className="bg-white/90 rounded-3xl shadow-medium border border-white/30 p-6 space-y-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">About UK Tax Calculator</h2>
             <p className="text-gray-700 leading-relaxed">
@@ -39,8 +40,16 @@ export default function About() {
               </div>
             </div>
           </div>
+            </div>
+          </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8 h-[600px]">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
         </div>
-      </div>
       </div>
     </LayoutWrapper>
   );

@@ -14,12 +14,13 @@ export default function Links() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <div className="max-w-6xl mx-auto px-8 py-10">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-          <ExternalLink className="w-12 h-12 text-[#1566a0]" />
-          Useful Links
-        </h1>
-        <div className="grid md:grid-cols-2 gap-6 mt-8">
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
+          <div className="flex-1 max-w-6xl">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+              <ExternalLink className="w-12 h-12 text-[#1566a0]" />
+              Useful Links
+            </h1>
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
           {usefulLinks.map((link, index) => (
             <a
               key={index}
@@ -35,8 +36,16 @@ export default function Links() {
               <p className="text-gray-600 text-sm">{link.description}</p>
             </a>
           ))}
+            </div>
+          </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8 h-[600px]">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
         </div>
-      </div>
       </div>
     </LayoutWrapper>
   );

@@ -46,18 +46,19 @@ export default function HourlyWage() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="max-w-6xl mx-auto px-8 py-10">
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
-                <Clock className="w-6 h-6 text-white" />
-              </div>
-              Hourly Wage Calculator
-            </h1>
-            <p className="text-xl text-gray-600">Convert your annual salary to hourly, daily, weekly, and monthly rates</p>
-          </div>
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
+          <div className="flex-1 max-w-6xl">
+            <div className="mb-8">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                Hourly Wage Calculator
+              </h1>
+              <p className="text-xl text-gray-600">Convert your annual salary to hourly, daily, weekly, and monthly rates</p>
+            </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
             {/* Form */}
             <div className="space-y-5">
               <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
@@ -165,7 +166,15 @@ export default function HourlyWage() {
                 )}
               </div>
             </div>
+            </div>
           </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8 h-[600px]">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
         </div>
       </div>
     </LayoutWrapper>

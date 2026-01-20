@@ -220,13 +220,14 @@ export default function CountryComparison() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="max-w-6xl mx-auto px-8 py-10">
-          {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
+          <div className="flex-1 max-w-6xl">
+            {/* Header */}
+            <div className="mb-8">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
+                  <Globe className="w-6 h-6 text-white" />
+                </div>
               Compare UK Salary with Other Countries
             </h1>
             <p className="text-xl text-gray-600">
@@ -387,7 +388,15 @@ export default function CountryComparison() {
                 )}
               </div>
             </div>
+            </div>
           </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8 h-[600px]">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
         </div>
       </div>
     </LayoutWrapper>

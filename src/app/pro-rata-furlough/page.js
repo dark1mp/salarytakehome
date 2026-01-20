@@ -88,13 +88,14 @@ export default function ProRataFurlough() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="max-w-6xl mx-auto px-8 py-10">
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
-                <Calculator className="w-6 h-6 text-white" />
-              </div>
-              Pro-Rata / Furlough Calculator
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
+          <div className="flex-1 max-w-6xl">
+            <div className="mb-8">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
+                  <Calculator className="w-6 h-6 text-white" />
+                </div>
+                Pro-Rata / Furlough Calculator
             </h1>
             <p className="text-xl text-gray-600">Calculate pro-rata salaries and furlough payments</p>
           </div>
@@ -239,7 +240,15 @@ export default function ProRataFurlough() {
                 )}
               </div>
             </div>
+            </div>
           </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8 h-[600px]">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
         </div>
       </div>
     </LayoutWrapper>

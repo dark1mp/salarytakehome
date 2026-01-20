@@ -631,8 +631,10 @@ function TaxCalculatorContent() {
         </div>
       </header>
 
-      <main id="main-content" className="max-w-6xl mx-auto px-4 md:px-8 py-8">
-        <div className="grid lg:grid-cols-3 gap-6">
+      <main id="main-content">
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 py-8">
+          <div className="flex-1 max-w-6xl">
+            <div className="grid lg:grid-cols-3 gap-6">
           {/* Main Form */}
           <div className="lg:col-span-2 space-y-5">
             {/* Tax Code and Scottish Taxpayer Card */}
@@ -1128,6 +1130,15 @@ function TaxCalculatorContent() {
               )}
             </div>
           </div>
+            </div>
+          </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8 h-[600px]">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
         </div>
 
         {/* Optimized Information Cards */}

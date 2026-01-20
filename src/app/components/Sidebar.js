@@ -59,10 +59,10 @@ export default function Sidebar() {
       <div className="p-6 border-b border-white/10">
         <Link href="/" onClick={closeMobileMenu} className="flex items-center gap-4 group hover:opacity-90 transition-opacity">
           <div className="w-14 h-14 bg-white/95 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-            <Image 
-              src="/opengraph-image.png" 
-              alt="SalaryTakeHome Logo" 
-              width={48} 
+            <Image
+              src="/opengraph-image.png"
+              alt="SalaryTakeHome Logo"
+              width={48}
               height={48}
               className="rounded-lg"
               priority
@@ -97,26 +97,26 @@ export default function Sidebar() {
                   {isActive && (
                     <div className="absolute left-0 top-0 bottom-0 w-1 bg-white rounded-r-full"></div>
                   )}
-                  
+
                   {/* Hover gradient effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <div className="relative z-10 flex items-center gap-3">
                     <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 ${
-                      isActive 
-                        ? 'bg-white/20 text-white' 
+                      isActive
+                        ? 'bg-white/20 text-white'
                         : 'bg-white/10 text-white/80 group-hover:bg-white/20 group-hover:text-white'
                     }`}>
                       <Icon className="w-4 h-4" />
                     </div>
                     <span className="font-medium">{item.label}</span>
                   </div>
-                  
+
                   {item.hasArrow && (
-                    <svg 
+                    <svg
                       className={`w-4 h-4 relative z-10 transition-transform duration-200 ${isActive ? 'translate-x-0' : 'translate-x-1 group-hover:translate-x-0'}`}
-                      fill="none" 
-                      stroke="currentColor" 
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
