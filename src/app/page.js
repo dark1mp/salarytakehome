@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useCallback, lazy, Suspense, useMemo } from 'react';
-import { Calculator, PoundSterling, Users, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import { Calculator, PoundSterling, Users, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus, Home } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import ErrorBoundary from './ErrorBoundary';
@@ -635,6 +635,17 @@ function TaxCalculatorContent() {
       <main id="main-content">
         <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 py-8">
           <div className="flex-1 max-w-6xl">
+            <div className="mb-8">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
+                  <Home className="w-6 h-6 text-white" />
+                </div>
+                Take Home Pay Calculator
+              </h1>
+              <p className="text-base text-gray-600">
+                Take home pay (also called net pay) is the amount of money you receive after all mandatory deductions taken from your salary. In the UK, this typically includes income tax, National Insurance, and may also include pension contributions and student loan repayments.
+              </p>
+            </div>
             <div className="grid lg:grid-cols-3 gap-6">
           {/* Main Form */}
           <div className="lg:col-span-2 space-y-5">
@@ -1149,12 +1160,25 @@ function TaxCalculatorContent() {
           <div className="relative group overflow-hidden bg-gradient-to-br from-blue-50/90 to-blue-100/70 backdrop-blur-light rounded-3xl p-6 border border-blue-200/30 hover:border-blue-300/50 transition-all duration-200 hover-scale shadow-medium">
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             <div className="relative z-10">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-medium hover-scale transition-transform duration-200">
-                <Info className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-medium hover-scale transition-transform duration-200 flex-shrink-0">
+                  <Info className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-bold text-gray-900 text-xl">How This UK Salary Calculator Works</h3>
               </div>
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">How it works</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">Disclaimer: Information provided on this site is for illustrative purposes only.<br/><br/>
-              Don&apos;t make any major financial decisions without consulting a qualified specialist.</p>
+              <p className="text-gray-700 text-base leading-relaxed mb-4">
+                This calculator estimates your take home pay by applying current UK tax rules to your gross salary. It uses the following steps:
+              </p>
+              <ol className="text-gray-700 text-base leading-relaxed space-y-2 list-decimal list-inside mb-4">
+                <li>Apply the UK Personal Allowance</li>
+                <li>Calculate income tax based on tax bands</li>
+                <li>Deduct National Insurance contributions</li>
+                <li>Subtract pension contributions (if selected)</li>
+                <li>Subtract student loan repayments (if applicable)</li>
+              </ol>
+              <p className="text-gray-700 text-base leading-relaxed">
+                Your results are shown as annual and monthly figures.
+              </p>
             </div>
           </div>
           
