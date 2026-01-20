@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, Globe, HelpCircle, ExternalLink, Menu, X } from 'lucide-react';
+import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, Globe, HelpCircle, ExternalLink, Menu, X, Shield } from 'lucide-react';
 
 const menuItems = [
   { href: '/', label: 'TAKE HOME PAY', icon: Home },
@@ -18,6 +18,7 @@ const menuItems = [
   { href: '/blog', label: 'BLOG', icon: FileText },
   { href: '/about', label: 'ABOUT', icon: HelpCircle, hasArrow: true },
   { href: '/links', label: 'LINKS', icon: ExternalLink },
+  { href: '/privacy-policy', label: 'PRIVACY POLICY', icon: Shield },
 ];
 
 export default function Sidebar() {
