@@ -472,17 +472,19 @@ function TaxCalculatorContent() {
       tax = 0;
     } else {
       // Progressive tax bands (standard calculation)
-      // Apply tax bands to the taxable income
-      let prevThreshold = 0; // Tax bands start from 0
+      // Tax bands in the data are defined as gross income thresholds (include standard PA of £12,570)
+      // We need to convert them to taxable income thresholds by subtracting the standard PA
+      const standardPA = taxYearData.personalAllowance; // £12,570
+      let prevThreshold = 0;
 
       for (let i = 0; i < bands.length; i++) {
         let band = bands[i];
 
-        if (taxableIncome <= prevThreshold) break; // No more income to tax
+        if (taxableIncome <= prevThreshold) break;
 
-        // Calculate income in this band
+        // Convert gross income threshold to taxable income threshold
         let bandStart = prevThreshold;
-        let bandEnd = band.threshold;
+        let bandEnd = band.threshold - standardPA; // Subtract standard PA to get taxable income threshold
         let incomeInBand = Math.max(0, Math.min(taxableIncome, bandEnd) - bandStart);
 
         if (incomeInBand > 0) {
