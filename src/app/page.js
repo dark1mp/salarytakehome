@@ -177,6 +177,139 @@ const validateTaxCode = (code) => {
   };
 };
 
+// Parses UK tax code and returns tax treatment instructions
+const parseTaxCode = (taxCode, taxYear) => {
+  // Default: use standard personal allowance with high-earner reduction
+  if (!taxCode || taxCode.trim() === '') {
+    return {
+      type: 'default',
+      personalAllowance: null, // Will use TAX_BANDS default
+      applyHighEarnerReduction: true,
+      isScottish: false,
+      isWelsh: false,
+      flatRate: null,
+      suffix: null
+    };
+  }
+
+  const code = taxCode.trim().toUpperCase();
+
+  // Remove emergency tax code suffixes (W1, M1, X) - they don't affect annual calculations
+  const cleanCode = code.replace(/\s?(W1|M1|X)$/, '');
+  const isEmergency = cleanCode !== code;
+
+  // Check for Scottish (S) or Welsh (C) prefix
+  const isScottish = cleanCode.startsWith('S');
+  const isWelsh = cleanCode.startsWith('C');
+  const codeWithoutPrefix = cleanCode.replace(/^[SC]/, '');
+
+  // Handle special flat-rate codes
+  if (codeWithoutPrefix === 'BR') {
+    return {
+      type: 'flat-rate',
+      personalAllowance: 0,
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: 0.20, // 20% on all income
+      suffix: 'BR'
+    };
+  }
+
+  if (codeWithoutPrefix === 'D0') {
+    return {
+      type: 'flat-rate',
+      personalAllowance: 0,
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: 0.40, // 40% on all income
+      suffix: 'D0'
+    };
+  }
+
+  if (codeWithoutPrefix === 'D1') {
+    return {
+      type: 'flat-rate',
+      personalAllowance: 0,
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: 0.45, // 45% on all income
+      suffix: 'D1'
+    };
+  }
+
+  if (codeWithoutPrefix === 'NT') {
+    return {
+      type: 'no-tax',
+      personalAllowance: Infinity, // Effectively no tax
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: null,
+      suffix: 'NT'
+    };
+  }
+
+  if (codeWithoutPrefix === '0T') {
+    return {
+      type: 'zero-allowance',
+      personalAllowance: 0,
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: null,
+      suffix: '0T'
+    };
+  }
+
+  // Handle K codes (negative allowance)
+  const kCodeMatch = codeWithoutPrefix.match(/^K(\d{1,4})$/);
+  if (kCodeMatch) {
+    const kValue = parseInt(kCodeMatch[1], 10);
+    return {
+      type: 'k-code',
+      personalAllowance: -(kValue * 10), // Negative allowance adds to taxable income
+      applyHighEarnerReduction: false,
+      isScottish,
+      isWelsh,
+      flatRate: null,
+      suffix: 'K',
+      kValue: kValue * 10
+    };
+  }
+
+  // Handle standard numeric codes (e.g., 1257L, 1100T, 1257M, 1257N, etc.)
+  const standardCodeMatch = codeWithoutPrefix.match(/^(\d{1,4})([LMNTY]?)$/);
+  if (standardCodeMatch) {
+    const digits = parseInt(standardCodeMatch[1], 10);
+    const suffix = standardCodeMatch[2] || '';
+
+    return {
+      type: 'standard',
+      personalAllowance: digits * 10,
+      applyHighEarnerReduction: false, // Tax code already set by HMRC, don't adjust
+      isScottish,
+      isWelsh,
+      flatRate: null,
+      suffix
+    };
+  }
+
+  // If we can't parse it, fall back to default
+  console.warn(`Unable to parse tax code: ${taxCode}, using default`);
+  return {
+    type: 'default',
+    personalAllowance: null,
+    applyHighEarnerReduction: true,
+    isScottish: false,
+    isWelsh: false,
+    flatRate: null,
+    suffix: null
+  };
+};
+
 // Tax Calculator component that uses useSearchParams
 function TaxCalculatorContent() {
   const [formData, setFormData] = useState({
@@ -292,11 +425,26 @@ function TaxCalculatorContent() {
     // Calculate personal allowance (with reduction for high earners)
     // From April 2010: £1 reduction per £2 earned over £100,000
     const taxYearData = TAX_BANDS[formData.taxYear];
-    let personalAllowance = taxYearData.personalAllowance;
-    
-    if (taxYearData.personalAllowanceReductionThreshold && adjustedNetIncome > taxYearData.personalAllowanceReductionThreshold) {
+    const taxCodeInfo = parseTaxCode(formData.taxCode, formData.taxYear);
+    let personalAllowance;
+
+    // Handle different tax code types
+    if (taxCodeInfo.type === 'no-tax') {
+      // NT code: no tax at all
+      personalAllowance = Infinity;
+    } else if (taxCodeInfo.personalAllowance !== null) {
+      // Tax code specifies exact allowance (can be negative for K codes)
+      personalAllowance = taxCodeInfo.personalAllowance;
+    } else {
+      // Default: use standard allowance
+      personalAllowance = taxYearData.personalAllowance;
+    }
+
+    // Apply high-earner reduction ONLY if tax code allows it
+    if (taxCodeInfo.applyHighEarnerReduction &&
+        taxYearData.personalAllowanceReductionThreshold &&
+        adjustedNetIncome > taxYearData.personalAllowanceReductionThreshold) {
       const excess = adjustedNetIncome - taxYearData.personalAllowanceReductionThreshold;
-      // Reduce by £1 for every £2 over the threshold
       const reduction = excess * taxYearData.personalAllowanceReductionRate;
       personalAllowance = Math.max(0, personalAllowance - reduction);
     }
@@ -305,32 +453,48 @@ function TaxCalculatorContent() {
     // Tax bands represent total income thresholds
     // Tax is calculated on total income above personal allowance
     let tax = 0;
-    let bands = formData.scottish ? TAX_BANDS[formData.taxYear].scottishBands : TAX_BANDS[formData.taxYear].bands;
-    
-    // Calculate tax by applying bands to total income
-    // Tax only applies to income above personal allowance
-    let prevThreshold = personalAllowance; // Tax starts after personal allowance
-    
-    for (let i = 0; i < bands.length; i++) {
-      let band = bands[i];
-      
-      if (gross <= prevThreshold) break; // No more income to tax
-      
-      // Calculate income in this band (portion of total income in this range, but only above personal allowance)
-      let bandStart = prevThreshold;
-      let bandEnd = band.threshold;
-      
-      // Only tax income above personal allowance
-      let taxableStart = Math.max(bandStart, personalAllowance);
-      let taxableEnd = Math.min(gross, bandEnd);
-      let incomeInBand = Math.max(0, taxableEnd - taxableStart);
-      
-      if (incomeInBand > 0) {
-        tax += incomeInBand * band.rate;
+
+    // Determine which bands to use based on tax code (Scottish prefix overrides checkbox)
+    let useScottish = taxCodeInfo.isScottish || (formData.scottish && !taxCodeInfo.isWelsh);
+    let bands = useScottish ? TAX_BANDS[formData.taxYear].scottishBands : TAX_BANDS[formData.taxYear].bands;
+
+    // Calculate taxable income (used for flat-rate and other calculations)
+    let taxableIncome = Math.max(0, gross - personalAllowance);
+
+    // Handle flat-rate tax codes
+    if (taxCodeInfo.type === 'flat-rate' && taxCodeInfo.flatRate !== null) {
+      // Flat rate codes apply the same rate to ALL income
+      tax = gross * taxCodeInfo.flatRate;
+    } else if (taxCodeInfo.type === 'no-tax') {
+      // NT code: no tax
+      tax = 0;
+    } else {
+      // Progressive tax bands (standard calculation)
+      // Calculate tax by applying bands to total income
+      // Tax only applies to income above personal allowance
+      let prevThreshold = personalAllowance; // Tax starts after personal allowance
+
+      for (let i = 0; i < bands.length; i++) {
+        let band = bands[i];
+
+        if (gross <= prevThreshold) break; // No more income to tax
+
+        // Calculate income in this band (portion of total income in this range, but only above personal allowance)
+        let bandStart = prevThreshold;
+        let bandEnd = band.threshold;
+
+        // Only tax income above personal allowance
+        let taxableStart = Math.max(bandStart, personalAllowance);
+        let taxableEnd = Math.min(gross, bandEnd);
+        let incomeInBand = Math.max(0, taxableEnd - taxableStart);
+
+        if (incomeInBand > 0) {
+          tax += incomeInBand * band.rate;
+        }
+
+        prevThreshold = bandEnd;
+        if (gross <= bandEnd) break;
       }
-      
-      prevThreshold = bandEnd;
-      if (gross <= bandEnd) break;
     }
     
     let taxable = Math.max(0, gross - personalAllowance);
