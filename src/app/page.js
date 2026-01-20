@@ -459,7 +459,8 @@ function TaxCalculatorContent() {
     let useScottish = taxCodeInfo.isScottish || (formData.scottish && !taxCodeInfo.isWelsh);
     let bands = useScottish ? TAX_BANDS[formData.taxYear].scottishBands : TAX_BANDS[formData.taxYear].bands;
 
-    // Calculate taxable income (used for flat-rate and other calculations)
+    // Calculate taxable income (gross minus personal allowance)
+    // For K codes, personal allowance is negative, so this adds to gross
     let taxableIncome = Math.max(0, gross - personalAllowance);
 
     // Handle flat-rate tax codes
@@ -471,30 +472,25 @@ function TaxCalculatorContent() {
       tax = 0;
     } else {
       // Progressive tax bands (standard calculation)
-      // Calculate tax by applying bands to total income
-      // Tax only applies to income above personal allowance
-      let prevThreshold = personalAllowance; // Tax starts after personal allowance
+      // Apply tax bands to the taxable income
+      let prevThreshold = 0; // Tax bands start from 0
 
       for (let i = 0; i < bands.length; i++) {
         let band = bands[i];
 
-        if (gross <= prevThreshold) break; // No more income to tax
+        if (taxableIncome <= prevThreshold) break; // No more income to tax
 
-        // Calculate income in this band (portion of total income in this range, but only above personal allowance)
+        // Calculate income in this band
         let bandStart = prevThreshold;
         let bandEnd = band.threshold;
-
-        // Only tax income above personal allowance
-        let taxableStart = Math.max(bandStart, personalAllowance);
-        let taxableEnd = Math.min(gross, bandEnd);
-        let incomeInBand = Math.max(0, taxableEnd - taxableStart);
+        let incomeInBand = Math.max(0, Math.min(taxableIncome, bandEnd) - bandStart);
 
         if (incomeInBand > 0) {
           tax += incomeInBand * band.rate;
         }
 
         prevThreshold = bandEnd;
-        if (gross <= bandEnd) break;
+        if (taxableIncome <= bandEnd) break;
       }
     }
     
