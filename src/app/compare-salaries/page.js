@@ -85,7 +85,7 @@ export default function CompareSalaries() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="max-w-6xl mx-auto px-8 py-12">
+        <div className="max-w-6xl mx-auto px-8 py-10">
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
               <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
@@ -96,9 +96,9 @@ export default function CompareSalaries() {
             <p className="text-xl text-gray-600">Compare two salary offers to see which gives you more take-home pay</p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-6">
             {/* Salary 1 */}
-            <div className="space-y-6">
+            <div className="space-y-5">
               <h2 className="text-2xl font-bold text-gray-900">Salary 1</h2>
               <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">Amount</label>
@@ -129,7 +129,7 @@ export default function CompareSalaries() {
             </div>
 
             {/* Salary 2 */}
-            <div className="space-y-6">
+            <div className="space-y-5">
               <h2 className="text-2xl font-bold text-gray-900">Salary 2</h2>
               <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">Amount</label>
@@ -150,10 +150,10 @@ export default function CompareSalaries() {
             <div className="lg:col-span-1">
               <div className="sticky top-8">
                 {results ? (
-                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8">
+                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-6">Comparison</h3>
                     
-                    <div className={`rounded-2xl p-8 text-white mb-6 shadow-medium ${
+                    <div className={`rounded-2xl p-6 text-white mb-6 shadow-medium ${
                       results.difference > 0 ? 'bg-gradient-to-r from-green-500 to-emerald-600' : 'bg-gradient-to-r from-blue-500 to-indigo-600'
                     }`}>
                       <div className="text-sm opacity-90 mb-2">Take-Home Difference</div>
@@ -198,7 +198,7 @@ export default function CompareSalaries() {
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-8 text-center">
+                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-6 text-center">
                     <Scale className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Enter Both Salaries</h3>
                     <p className="text-gray-600">See which one gives you more take-home pay</p>

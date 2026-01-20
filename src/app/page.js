@@ -632,21 +632,21 @@ function TaxCalculatorContent() {
       </header>
 
       <main id="main-content" className="max-w-6xl mx-auto px-4 md:px-8 py-8">
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6">
           {/* Main Form */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-5">
             {/* Tax Code and Scottish Taxpayer Card */}
-            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-8">
+            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-purple-50/15"></div>
               <div className="relative z-10">
-                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <h2 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                     <Users className="w-5 h-5 text-white" />
                   </div>
                   Your Details
                 </h2>
 
-                <div className="space-y-6">
+                <div className="space-y-5">
                   {/* Tax Code Input */}
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-3">
@@ -697,17 +697,17 @@ function TaxCalculatorContent() {
             </div>
 
             {/* Enhanced Income Card */}
-            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-8">
+            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
               <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-emerald-50/15"></div>
               <div className="relative z-10">
-                <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <h2 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
                     <PoundSterling className="w-5 h-5 text-white" />
                   </div>
                   Your Income
                 </h2>
                 
-                <div className="space-y-6">
+                <div className="space-y-5">
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-3">
                       Annual salary
@@ -772,7 +772,7 @@ function TaxCalculatorContent() {
             </div>
 
             {/* Enhanced Advanced Options Card */}
-            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-8">
+            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-50/20 via-transparent to-pink-50/15"></div>
               <div className="relative z-10">
                 <button
@@ -789,7 +789,7 @@ function TaxCalculatorContent() {
                 </button>
                 
                 {showAdvanced && (
-                  <div className="mt-8 space-y-6 animate-fade-in-slide">
+                  <div className="mt-8 space-y-5 animate-fade-in-slide">
                     {/* Student Loan */}
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-3">Student loan plan</label>
@@ -902,8 +902,8 @@ function TaxCalculatorContent() {
           <div className="lg:col-span-1">
             <div className="sticky top-8">
               {isLoading ? (
-                <div className="relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8">
-                  <div className="animate-pulse space-y-6">
+                <div className="relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6">
+                  <div className="animate-pulse space-y-5">
                     <div className="h-6 bg-gray-200 rounded w-1/3"></div>
                     <div className="h-32 bg-gradient-to-r from-gray-200 to-gray-300 rounded-2xl"></div>
                     <div className="space-y-4">
@@ -916,7 +916,7 @@ function TaxCalculatorContent() {
                 </div>
               ) : results ? (
                 <div
-                  className={`relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8 transition-all duration-500 ease-out animate-fade-in-slide`}
+                  className={`relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6 transition-all duration-500 ease-out animate-fade-in-slide`}
                   key={formData.income + formData.period + formData.taxYear + formData.bonus + formData.taxCode}
                   style={{
                     background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)'
@@ -944,7 +944,7 @@ function TaxCalculatorContent() {
                     {(() => {
                       const efficiency = taxEfficiency;
                       return (
-                        <div className={`bg-gradient-to-r ${efficiency?.color} rounded-2xl p-8 text-white mb-8 relative overflow-hidden shadow-medium`}>
+                        <div className={`bg-gradient-to-r ${efficiency?.color} rounded-2xl p-6 text-white mb-6 relative overflow-hidden shadow-medium`}>
                           <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
                           <div className="relative z-10">
                             <div className="text-sm opacity-90 mb-2 font-medium">Take-home pay</div>
@@ -968,7 +968,7 @@ function TaxCalculatorContent() {
                     })()}
 
                     {/* Optimized Breakdown with Progress Bars */}
-                    <div className="space-y-6">
+                    <div className="space-y-5">
                       <div className="flex justify-between items-center py-3 border-b border-gray-100">
                         <span className="text-gray-700 font-medium">Gross income</span>
                         <span className="font-bold text-lg text-gray-900">
@@ -1113,7 +1113,7 @@ function TaxCalculatorContent() {
                   </div>
                 </div>
               ) : (
-                <div className="relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-8" style={{
+                <div className="relative overflow-hidden bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-6" style={{
                   background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)'
                 }}>
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50/15 via-transparent to-purple-50/15"></div>
@@ -1131,8 +1131,8 @@ function TaxCalculatorContent() {
         </div>
 
         {/* Optimized Information Cards */}
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          <div className="relative group overflow-hidden bg-gradient-to-br from-blue-50/90 to-blue-100/70 backdrop-blur-light rounded-3xl p-8 border border-blue-200/30 hover:border-blue-300/50 transition-all duration-200 hover-scale shadow-medium">
+        <div className="mt-10 grid md:grid-cols-3 gap-6">
+          <div className="relative group overflow-hidden bg-gradient-to-br from-blue-50/90 to-blue-100/70 backdrop-blur-light rounded-3xl p-6 border border-blue-200/30 hover:border-blue-300/50 transition-all duration-200 hover-scale shadow-medium">
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             <div className="relative z-10">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-medium hover-scale transition-transform duration-200">
@@ -1144,7 +1144,7 @@ function TaxCalculatorContent() {
             </div>
           </div>
           
-          <div className="relative group overflow-hidden bg-gradient-to-br from-emerald-50/90 to-green-100/70 backdrop-blur-light rounded-3xl p-8 border border-emerald-200/30 hover:border-emerald-300/50 transition-all duration-200 hover-scale shadow-medium">
+          <div className="relative group overflow-hidden bg-gradient-to-br from-emerald-50/90 to-green-100/70 backdrop-blur-light rounded-3xl p-6 border border-emerald-200/30 hover:border-emerald-300/50 transition-all duration-200 hover-scale shadow-medium">
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             <div className="relative z-10">
               <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-medium hover-scale transition-transform duration-200">
@@ -1155,7 +1155,7 @@ function TaxCalculatorContent() {
             </div>
           </div>
           
-          <div className="relative group overflow-hidden bg-gradient-to-br from-purple-50/90 to-purple-100/70 backdrop-blur-light rounded-3xl p-8 border border-purple-200/30 hover:border-purple-300/50 transition-all duration-200 hover-scale shadow-medium">
+          <div className="relative group overflow-hidden bg-gradient-to-br from-purple-50/90 to-purple-100/70 backdrop-blur-light rounded-3xl p-6 border border-purple-200/30 hover:border-purple-300/50 transition-all duration-200 hover-scale shadow-medium">
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             <div className="relative z-10">
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-medium hover-scale transition-transform duration-200">
@@ -1202,7 +1202,7 @@ function TaxCalculatorContent() {
         <Chatbot context={{ formData, results }} />
       </Suspense>
       
-      <footer className="mt-16 border-t pt-8 pb-6 text-center text-gray-500 text-sm">
+      <footer className="mt-12 border-t pt-8 pb-6 text-center text-gray-500 text-sm">
         <div>© 2025 SalaryTakeHome.co.uk. All rights reserved.</div>
         <div className="mt-2">
           Privacy: This site does not collect or store any personal data. All calculations are done anonymously in your browser.

@@ -6,12 +6,12 @@ export default function About() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <div className="max-w-6xl mx-auto px-8 py-12">
+      <div className="max-w-6xl mx-auto px-8 py-10">
         <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
           <HelpCircle className="w-12 h-12 text-[#1566a0]" />
           About
         </h1>
-        <div className="bg-white/90 rounded-3xl shadow-medium border border-white/30 p-8 space-y-6">
+        <div className="bg-white/90 rounded-3xl shadow-medium border border-white/30 p-6 space-y-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">About UK Tax Calculator</h2>
             <p className="text-gray-700 leading-relaxed">

@@ -46,7 +46,7 @@ export default function HourlyWage() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="max-w-6xl mx-auto px-8 py-12">
+        <div className="max-w-6xl mx-auto px-8 py-10">
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
               <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
@@ -57,9 +57,9 @@ export default function HourlyWage() {
             <p className="text-xl text-gray-600">Convert your annual salary to hourly, daily, weekly, and monthly rates</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6">
             {/* Form */}
-            <div className="space-y-6">
+            <div className="space-y-5">
               <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">Annual Salary</label>
                 <div className="relative">
@@ -117,10 +117,10 @@ export default function HourlyWage() {
             <div className="lg:col-span-1">
               <div className="sticky top-8">
                 {results ? (
-                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8">
+                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Hourly Rates</h3>
                     
-                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 text-white mb-6 shadow-medium">
+                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-6 text-white mb-5 shadow-medium">
                       <div className="text-sm opacity-90 mb-2">Hourly Rate</div>
                       <div className="text-4xl font-bold">{formatCurrency(results.hourlyRate)}</div>
                       <div className="text-sm opacity-90 mt-2">per hour</div>
@@ -157,7 +157,7 @@ export default function HourlyWage() {
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-8 text-center">
+                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-6 text-center">
                     <Clock className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Enter Your Details</h3>
                     <p className="text-gray-600">Fill in your salary and hours to see your hourly rate</p>

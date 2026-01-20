@@ -220,7 +220,7 @@ export default function CountryComparison() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="max-w-6xl mx-auto px-8 py-12">
+        <div className="max-w-6xl mx-auto px-8 py-10">
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
@@ -248,9 +248,9 @@ export default function CountryComparison() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6">
             {/* Input Section */}
-            <div className="space-y-6">
+            <div className="space-y-5">
               <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">
                   Your UK Annual Salary
@@ -301,11 +301,11 @@ export default function CountryComparison() {
             <div className="lg:col-span-1">
               <div className="sticky top-8">
                 {comparison ? (
-                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8">
+                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-6">Comparison Results</h3>
                     
                     {/* Main Comparison */}
-                    <div className={`rounded-2xl p-8 text-white mb-6 shadow-medium ${
+                    <div className={`rounded-2xl p-6 text-white mb-6 shadow-medium ${
                       comparison.differencePercent > 0 
                         ? 'bg-gradient-to-r from-green-500 to-emerald-600' 
                         : 'bg-gradient-to-r from-red-500 to-pink-600'
@@ -379,7 +379,7 @@ export default function CountryComparison() {
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-8 text-center">
+                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-6 text-center">
                     <Globe className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Enter Your UK Salary</h3>
                     <p className="text-gray-600">See how your salary compares internationally</p>

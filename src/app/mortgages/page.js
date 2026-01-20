@@ -119,7 +119,7 @@ export default function MortgageCalculator() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="max-w-6xl mx-auto px-8 py-12">
+        <div className="max-w-6xl mx-auto px-8 py-10">
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
@@ -133,9 +133,9 @@ export default function MortgageCalculator() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6">
             {/* Form Section */}
-            <div className="space-y-6">
+            <div className="space-y-5">
               {/* Property Value */}
               <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">
@@ -242,11 +242,11 @@ export default function MortgageCalculator() {
             <div className="lg:col-span-1">
               <div className="sticky top-8">
                 {results ? (
-                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-8">
+                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Results</h3>
                     
                     {/* Monthly Payment */}
-                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 text-white mb-6 shadow-medium">
+                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-6 text-white mb-6 shadow-medium">
                       <div className="text-sm opacity-90 mb-2">Monthly Payment</div>
                       <div className="text-4xl font-bold mb-2">{formatCurrency(results.monthlyPayment)}</div>
                       <div className="text-sm opacity-90">{results.repaymentType === 'repayment' ? 'Repayment Mortgage' : 'Interest-Only Mortgage'}</div>
@@ -291,7 +291,7 @@ export default function MortgageCalculator() {
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-8 text-center">
+                  <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/30 p-6 text-center">
                     <Calculator className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Enter Your Details</h3>
                     <p className="text-gray-600">Fill in your mortgage details to see your monthly repayments</p>

@@ -14,7 +14,7 @@ export default function Links() {
   return (
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <div className="max-w-6xl mx-auto px-8 py-12">
+      <div className="max-w-6xl mx-auto px-8 py-10">
         <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
           <ExternalLink className="w-12 h-12 text-[#1566a0]" />
           Useful Links
