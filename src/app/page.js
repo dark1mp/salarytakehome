@@ -459,9 +459,10 @@ function TaxCalculatorContent() {
     let useScottish = taxCodeInfo.isScottish || (formData.scottish && !taxCodeInfo.isWelsh);
     let bands = useScottish ? TAX_BANDS[formData.taxYear].scottishBands : TAX_BANDS[formData.taxYear].bands;
 
-    // Calculate taxable income (gross minus personal allowance)
+    // Calculate taxable income (gross minus pension minus personal allowance)
+    // Pension contributions reduce taxable income before tax is calculated
     // For K codes, personal allowance is negative, so this adds to gross
-    let taxableIncome = Math.max(0, gross - personalAllowance);
+    let taxableIncome = Math.max(0, gross - pensionDeduct - personalAllowance);
 
     // Handle flat-rate tax codes
     if (taxCodeInfo.type === 'flat-rate' && taxCodeInfo.flatRate !== null) {
