@@ -1,4 +1,4 @@
-"use client";
+https://github.com/dark1mp/salarytakehome/pull/new/fix/metadata-and-eslint-fixes"use client";
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import LayoutWrapper from '../components/LayoutWrapper';

@@ -1163,7 +1163,7 @@ function TaxCalculatorContent() {
                 </div>
                 <h3 className="font-bold text-gray-900 text-2xl">How This UK Salary Calculator Works</h3>
               </div>
-              <p className="text-gray-700 text-base leading-relaxed mb-6 font-medium">
+              <p className="text-gray-700 text-base leading-relaxed mb-6">
                 This calculator estimates your take home pay by applying current UK tax rules to your gross salary. It uses the following steps:
               </p>
               <ol className="text-gray-700 text-base leading-relaxed space-y-3 mb-6 list-decimal list-outside ml-6">
@@ -1173,7 +1173,7 @@ function TaxCalculatorContent() {
                 <li className="pl-2">Subtract pension contributions (if selected)</li>
                 <li className="pl-2">Subtract student loan repayments (if applicable)</li>
               </ol>
-              <p className="text-gray-700 text-base leading-relaxed font-medium">
+              <p className="text-gray-700 text-base leading-relaxed">
                 Your results are shown as annual and monthly figures.
               </p>
             </div>
