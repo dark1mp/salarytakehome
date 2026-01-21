@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from 'react';
-import { Clock, TrendingUp, Info } from 'lucide-react';
+import { Clock, TrendingUp, Info, HelpCircle, Lightbulb } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
 
 export default function HourlyWage() {
@@ -55,7 +55,12 @@ export default function HourlyWage() {
                 </div>
                 Hourly Wage Calculator
               </h1>
-              <p className="text-xl text-gray-600">Convert your annual salary to hourly, daily, weekly, and monthly rates</p>
+              <p className="text-base text-gray-700">
+                Use this hourly wage calculator to quickly work out your hourly rate from an annual salary, weekly pay, or monthly income.
+              </p>
+              <p className="text-base text-gray-700 mt-3">
+                Whether you're comparing job offers, checking your pay against the UK minimum wage, or budgeting your earnings, this tool helps you calculate your hourly pay accurately based on your working hours.
+              </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-6">
@@ -176,7 +181,191 @@ export default function HourlyWage() {
             </div>
           </aside>
         </div>
+
+        {/* UK Minimum Wage Information Card */}
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 mt-6">
+          <div className="flex-1 max-w-6xl">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <Info className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">UK Minimum Wage Information</h3>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  As of January 2026 in the United Kingdom, the National Minimum Wage (NMW) and National Living Wage (NLW) rates that employers must pay (set by the UK government and usually updated every April) are as follows:
+                </p>
+
+                <h4 className="font-bold text-gray-900 text-lg mb-4">Current statutory minimum hourly rates (effective from 1 April 2026):</h4>
+
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="border-b-2 border-gray-200">
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Age / Status</th>
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Hourly rate (from 1 Apr 2026)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">21 and over (National Living Wage)</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">£12.71</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">18-20</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">£10.85</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">16-17</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">£8.00</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Apprentice†</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">£8.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p className="text-gray-700 text-sm leading-relaxed mb-6 italic">
+                  †Apprentice rate applies if under 19 or in the first year of their apprenticeship. Older apprentices after first year get the age-based rate.
+                </p>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  These are legal minimum pay rates; most workers must be paid at least these amounts per hour.
+                </p>
+
+                <h4 className="font-bold text-gray-900 text-lg mb-4">What this means in practice</h4>
+
+                <ul className="list-disc list-outside ml-6 space-y-2 mb-6 text-gray-700 text-base leading-relaxed">
+                  <li className="pl-2">If you're 21 or older, the legal minimum hourly wage you must be paid is £12.71.</li>
+                  <li className="pl-2">For younger workers and apprentices, the rates are lower to reflect different labour market considerations.</li>
+                </ul>
+
+                <h4 className="font-bold text-gray-900 text-lg mb-4">Note</h4>
+
+                <p className="text-gray-700 text-base leading-relaxed">
+                  There's also something called the "Real Living Wage" (set independently by the <a href="https://www.livingwage.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Living Wage Foundation</a>) which is higher than the statutory rates — for example, around £13.45 nationwide and £14.80 in London — but this is voluntary for employers to pay.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
+        </div>
+
+        {/* Why knowing your hourly wage matters Card */}
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 mt-4">
+          <div className="flex-1 max-w-6xl">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <Lightbulb className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">Why knowing your hourly wage matters</h3>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-4">Knowing your hourly pay can help you:</p>
+
+                <ul className="list-disc list-outside ml-6 space-y-2 mb-6 text-gray-700 text-base leading-relaxed">
+                  <li className="pl-2">Compare job offers fairly</li>
+                  <li className="pl-2">Check if you are paid minimum wage</li>
+                  <li className="pl-2">Understand the value of overtime</li>
+                  <li className="pl-2">Budget more accurately</li>
+                  <li className="pl-2">Negotiate pay or freelance rates</li>
+                  <li className="pl-2">Decide whether extra hours are worth it</li>
+                </ul>
+
+                <p className="text-gray-700 text-base leading-relaxed">
+                  Even salaried workers benefit from knowing their real hourly rate.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
+        </div>
+
+        {/* Hourly wage FAQs Card */}
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 mt-4">
+          <div className="flex-1 max-w-6xl">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <HelpCircle className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">Hourly wage FAQs</h3>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">How do I calculate my hourly wage in the UK?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Divide your annual salary by 52 weeks, then divide by your weekly working hours. Alternatively, use this hourly wage calculator to get an instant result.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Does this hourly wage calculator include tax?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      No. This calculator shows gross hourly pay before tax and National Insurance. For net pay, use a <a href="/" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a>.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">How many hours is full-time work in the UK?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Full-time work in the UK is typically 35 to 40 hours per week, with 37.5 hours being very common.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Is holiday pay included in hourly wages?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      For hourly workers, holiday pay is usually calculated based on average earnings. It may be paid when you take leave or added to your hourly rate, depending on your contract.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Can unpaid overtime reduce my hourly wage?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Yes. If you regularly work unpaid overtime, your effective hourly rate may fall below what you expect — and in some cases below minimum wage.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8 h-[600px]">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
+        </div>
       </div>
+
+      <footer className="mt-12 border-t pt-8 pb-6 text-center text-gray-500 text-sm">
+        <div>© 2025 SalaryTakeHome.co.uk. All rights reserved.</div>
+        <div className="mt-2">
+          Privacy: This site does not collect or store any personal data. All calculations are done anonymously in your browser.
+        </div>
+      </footer>
     </LayoutWrapper>
   );
 }
