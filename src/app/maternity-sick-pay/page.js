@@ -11,7 +11,7 @@ export default function MaternitySickPay() {
   });
 
   // UK Statutory Rates 2024/25
-  // Statutory Maternity Pay: 90% of average weekly earnings for first 6 weeks, then £184.03/week for up to 33 weeks
+  // Statutory Maternity Pay: 90% of average weekly earnings for first 6 weeks, then £187.18/week or 90% of earnings (whichever is lower) for up to 33 weeks
   // Statutory Sick Pay: £116.75/week for up to 28 weeks
   
   const formatNumber = (value) => {
@@ -24,9 +24,13 @@ export default function MaternitySickPay() {
     if (avgWeeklyEarnings <= 0) return null;
 
     if (formData.type === 'maternity') {
-      // 90% of earnings for first 6 weeks, then £184.03/week for remaining 33 weeks (39 weeks total)
-      const firstSixWeeks = Math.min(avgWeeklyEarnings * 0.9, 184.03) * 6;
-      const remainingWeeks = 184.03 * 33;
+      // First 6 weeks: 90% of average weekly earnings (no cap)
+      // Next 33 weeks: £187.18 or 90% of average weekly earnings, whichever is lower
+      const weeklyRate90Percent = avgWeeklyEarnings * 0.9;
+      const statutoryRate = 187.18;
+      const firstSixWeeks = weeklyRate90Percent * 6;
+      const remaining33WeeksRate = Math.min(statutoryRate, weeklyRate90Percent);
+      const remainingWeeks = remaining33WeeksRate * 33;
       const totalPay = firstSixWeeks + remainingWeeks;
       const weeklyAverage = totalPay / 39;
       
@@ -37,7 +41,7 @@ export default function MaternitySickPay() {
         remainingWeeks: remainingWeeks,
         totalPay,
         weeklyAverage,
-        rate: avgWeeklyEarnings * 0.9 > 184.03 ? '90% of earnings' : '£184.03/week'
+        rate: remaining33WeeksRate === statutoryRate ? '£187.18/week' : '90% of earnings'
       };
     } else {
       // Statutory Sick Pay: £116.75/week for up to 28 weeks
@@ -86,8 +90,8 @@ export default function MaternitySickPay() {
             <div className="flex items-start gap-3">
               <AlertCircle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-800">
-                <strong className="font-bold text-yellow-900">Eligibility Note:</strong> Statutory Maternity Pay requires 26 weeks continuous employment and average weekly earnings above the lower earnings limit (£123/week for 2024/25). 
-                Statutory Sick Pay requires average weekly earnings of at least £123/week. Check gov.uk for full eligibility criteria.
+                <strong className="font-bold text-yellow-900">Eligibility Note:</strong> Statutory Maternity Pay requires 26 weeks continuous employment and average weekly earnings of at least £125/week. 
+                Statutory Sick Pay requires average weekly earnings of at least £125/week. Check gov.uk for full eligibility criteria.
               </div>
             </div>
           </div>
@@ -144,7 +148,7 @@ export default function MaternitySickPay() {
                     <Info className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                     <div className="text-sm text-gray-700">
                       Statutory Sick Pay is fixed at <strong>£116.75 per week</strong> (2024/25 rate) for up to 28 weeks, 
-                      provided your average weekly earnings are at least £123/week.
+                      provided your average weekly earnings are at least £125/week.
                     </div>
                   </div>
                 </div>
