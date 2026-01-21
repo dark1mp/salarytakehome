@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useCallback, useMemo, Suspense } from 'react';
-import { Calculator, PoundSterling, Users, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus, Home } from 'lucide-react';
+import { Calculator, PoundSterling, Users, Building, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus, Home, AlertTriangle } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import ErrorBoundary from './ErrorBoundary';
@@ -1154,73 +1154,73 @@ function TaxCalculatorContent() {
         <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 mt-10">
           <div className="flex-1 max-w-6xl">
             <div className="grid md:grid-cols-1 gap-6">
-          <div className="relative group overflow-hidden bg-gradient-to-br from-blue-50/90 to-blue-100/70 backdrop-blur-light rounded-3xl p-6 border border-blue-200/30 hover:border-blue-300/50 transition-all duration-200 hover-scale shadow-medium">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+          {/* How This UK Salary Calculator Works Card */}
+          <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-medium hover-scale transition-transform duration-200 flex-shrink-0">
-                  <Info className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                  <Info className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-bold text-gray-900 text-xl">How This UK Salary Calculator Works</h3>
+                <h3 className="font-bold text-gray-900 text-2xl">How This UK Salary Calculator Works</h3>
               </div>
-              <p className="text-gray-700 text-base leading-relaxed mb-4">
+              <p className="text-gray-700 text-base leading-relaxed mb-6 font-medium">
                 This calculator estimates your take home pay by applying current UK tax rules to your gross salary. It uses the following steps:
               </p>
-              <ol className="text-gray-700 text-base leading-relaxed space-y-2 list-decimal list-inside mb-4">
-                <li>Apply the UK Personal Allowance</li>
-                <li>Calculate income tax based on tax bands</li>
-                <li>Deduct National Insurance contributions</li>
-                <li>Subtract pension contributions (if selected)</li>
-                <li>Subtract student loan repayments (if applicable)</li>
+              <ol className="text-gray-700 text-base leading-relaxed space-y-3 mb-6 list-decimal list-outside ml-6">
+                <li className="pl-2">Apply the UK Personal Allowance</li>
+                <li className="pl-2">Calculate income tax based on tax bands</li>
+                <li className="pl-2">Deduct National Insurance contributions</li>
+                <li className="pl-2">Subtract pension contributions (if selected)</li>
+                <li className="pl-2">Subtract student loan repayments (if applicable)</li>
               </ol>
-              <p className="text-gray-700 text-base leading-relaxed">
+              <p className="text-gray-700 text-base leading-relaxed font-medium">
                 Your results are shown as annual and monthly figures.
               </p>
             </div>
           </div>
           
-          <div className="relative group overflow-hidden bg-gradient-to-br from-emerald-50/90 to-green-100/70 backdrop-blur-light rounded-3xl p-6 border border-emerald-200/30 hover:border-emerald-300/50 transition-all duration-200 hover-scale shadow-medium">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+          {/* Take Home Pay FAQs Card */}
+          <div className="relative group overflow-hidden bg-white rounded-2xl border border-emerald-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center shadow-medium hover-scale transition-transform duration-200 flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                  <CheckCircle className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-bold text-gray-900 text-xl">Take Home Pay FAQs</h3>
+                <h3 className="font-bold text-gray-900 text-2xl">Take Home Pay FAQs</h3>
               </div>
 
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-bold text-gray-900 text-base mb-1">Is take home pay the same as net pay?</h4>
-                  <p className="text-gray-700 text-sm leading-relaxed">Yes, take home pay and net pay generally mean the same thing in the UK.</p>
+              <div className="space-y-5">
+                <div className="pb-5 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50/50 -mx-2 px-2 py-2 rounded-lg transition-colors">
+                  <h4 className="font-bold text-gray-900 text-lg mb-2">Is take home pay the same as net pay?</h4>
+                  <p className="text-gray-700 text-base leading-relaxed">Yes, take home pay and net pay generally mean the same thing in the UK.</p>
                 </div>
 
-                <div>
-                  <h4 className="font-bold text-gray-900 text-base mb-1">How accurate is this calculator?</h4>
-                  <p className="text-gray-700 text-sm leading-relaxed">This calculator provides an estimate based on current tax rule. Actual take home pay may vary slightly depending on your employer and circumstances.</p>
+                <div className="pb-5 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50/50 -mx-2 px-2 py-2 rounded-lg transition-colors">
+                  <h4 className="font-bold text-gray-900 text-lg mb-2">How accurate is this calculator?</h4>
+                  <p className="text-gray-700 text-base leading-relaxed">This calculator provides an estimate based on current tax rules. Actual take home pay may vary slightly depending on your employer and circumstances.</p>
                 </div>
 
-                <div>
-                  <h4 className="font-bold text-gray-900 text-base mb-1">Does this include pension contributions?</h4>
-                  <p className="text-gray-700 text-sm leading-relaxed">Yes, you can include pension contributions and choose a contribution percentage.</p>
+                <div className="pb-5 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50/50 -mx-2 px-2 py-2 rounded-lg transition-colors">
+                  <h4 className="font-bold text-gray-900 text-lg mb-2">Does this include pension contributions?</h4>
+                  <p className="text-gray-700 text-base leading-relaxed">Yes, you can include pension contributions and choose a contribution percentage.</p>
                 </div>
 
-                <div>
-                  <h4 className="font-bold text-gray-900 text-base mb-1">Is this calculator updated every year?</h4>
-                  <p className="text-gray-700 text-sm leading-relaxed">Yes, this calculator is updated for the latest UK tax year.</p>
+                <div className="pb-5 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50/50 -mx-2 px-2 py-2 rounded-lg transition-colors">
+                  <h4 className="font-bold text-gray-900 text-lg mb-2">Is this calculator updated every year?</h4>
+                  <p className="text-gray-700 text-base leading-relaxed">Yes, this calculator is updated for the latest UK tax year.</p>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="relative group overflow-hidden bg-gradient-to-br from-purple-50/90 to-purple-100/70 backdrop-blur-light rounded-3xl p-6 border border-purple-200/30 hover:border-purple-300/50 transition-all duration-200 hover-scale shadow-medium">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+          {/* Expert Support Card */}
+          <div className="relative group overflow-hidden bg-white rounded-2xl border border-purple-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
             <div className="relative z-10">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-medium hover-scale transition-transform duration-200">
-                <Award className="w-6 h-6 text-white" />
+              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-medium">
+                <Award className="w-7 h-7 text-white" />
               </div>
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">Expert support</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">Browse our comprehensive FAQ section for answers to common tax questions.</p>
+              <h3 className="font-bold text-gray-900 mb-3 text-2xl">Expert Support</h3>
+              <p className="text-gray-700 text-base leading-relaxed">Browse our comprehensive FAQ section for answers to common tax questions.</p>
             </div>
           </div>
             </div>
@@ -1234,33 +1234,37 @@ function TaxCalculatorContent() {
           </aside>
         </div>
 
-        {/* Beautiful Navigation Buttons - Back at bottom with original layout */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-8">
-          {/* Blog Link */}
-          <a 
-            href="/blog" 
-            className="group relative overflow-hidden bg-gradient-to-r from-emerald-500 to-green-600 hover:from-green-600 hover:to-emerald-500 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl font-semibold transition-all duration-200 hover-scale focus:outline-none focus:ring-4 focus:ring-emerald-300/50"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
-            <div className="relative z-10 flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-              Tax Tips & Guides
+        {/* Beautiful Navigation Buttons - Aligned with cards section */}
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 mt-8">
+          <div className="flex-1 max-w-6xl">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+              {/* Blog Link */}
+              <a 
+                href="/blog" 
+                className="group relative overflow-hidden bg-gradient-to-r from-emerald-500 to-green-600 hover:from-green-600 hover:to-emerald-500 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl font-semibold transition-all duration-200 hover-scale focus:outline-none focus:ring-4 focus:ring-emerald-300/50"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+                <div className="relative z-10 flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  Tax Tips & Guides
+                </div>
+              </a>
+              
+              {/* FAQ Link */}
+              <a 
+                href="/faq" 
+                className="group relative overflow-hidden bg-gradient-to-r from-[#1566a0] to-[#1e90c6] hover:from-[#1e90c6] hover:to-[#1566a0] text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl font-semibold transition-all duration-200 hover-scale focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+                <div className="relative z-10 flex items-center gap-2">
+                  <Info className="w-4 h-4" />
+                  FAQ & Tax Help
+                </div>
+              </a>
             </div>
-          </a>
-          
-          {/* FAQ Link */}
-          <a 
-            href="/faq" 
-            className="group relative overflow-hidden bg-gradient-to-r from-[#1566a0] to-[#1e90c6] hover:from-[#1e90c6] hover:to-[#1566a0] text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl font-semibold transition-all duration-200 hover-scale focus:outline-none focus:ring-4 focus:ring-blue-300/50"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
-            <div className="relative z-10 flex items-center gap-2">
-              <Info className="w-4 h-4" />
-              FAQ & Tax Help
-            </div>
-          </a>
+          </div>
         </div>
       </main>
       
