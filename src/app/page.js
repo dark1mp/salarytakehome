@@ -1,12 +1,9 @@
 "use client";
-import React, { useState, useEffect, useCallback, lazy, Suspense, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, Suspense } from 'react';
 import { Calculator, PoundSterling, Users, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus, Home } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import ErrorBoundary from './ErrorBoundary';
-
-// Lazy load the Chatbot component
-const Chatbot = lazy(() => import('./Chatbot'));
 
 const TAX_YEARS = ["2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
 
@@ -1200,7 +1197,7 @@ function TaxCalculatorContent() {
                 <Award className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-bold text-gray-900 mb-3 text-lg">Expert support</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">Get help from our AI assistant or browse our comprehensive FAQ section.</p>
+              <p className="text-gray-700 text-sm leading-relaxed">Browse our comprehensive FAQ section for answers to common tax questions.</p>
             </div>
           </div>
             </div>
@@ -1243,11 +1240,6 @@ function TaxCalculatorContent() {
           </a>
         </div>
       </main>
-      
-      {/* Lazy loaded Chatbot with fallback */}
-      <Suspense fallback={null}>
-        <Chatbot context={{ formData, results }} />
-      </Suspense>
       
       <footer className="mt-12 border-t pt-8 pb-6 text-center text-gray-500 text-sm">
         <div>© 2025 SalaryTakeHome.co.uk. All rights reserved.</div>
