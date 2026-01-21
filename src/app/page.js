@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useCallback, useMemo, Suspense } from 'react';
-import { Calculator, PoundSterling, Users, Building, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus, Home, AlertTriangle } from 'lucide-react';
+import { Calculator, PoundSterling, Users, Building, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus, Home, AlertTriangle, HelpCircle } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import ErrorBoundary from './ErrorBoundary';
@@ -1159,7 +1159,7 @@ function TaxCalculatorContent() {
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
-                  <Info className="w-7 h-7 text-white" />
+                  <Calculator className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-2xl">How This UK Salary Calculator Works</h3>
               </div>
@@ -1184,7 +1184,7 @@ function TaxCalculatorContent() {
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
-                  <CheckCircle className="w-7 h-7 text-white" />
+                  <HelpCircle className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-2xl">Take Home Pay FAQs</h3>
               </div>
@@ -1213,14 +1213,18 @@ function TaxCalculatorContent() {
             </div>
           </div>
           
-          {/* Expert Support Card */}
+          {/* Disclaimer Card */}
           <div className="relative group overflow-hidden bg-white rounded-2xl border border-purple-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
             <div className="relative z-10">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-medium">
-                <Award className="w-7 h-7 text-white" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                  <AlertTriangle className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="font-bold text-gray-900 text-2xl">Disclaimer</h3>
               </div>
-              <h3 className="font-bold text-gray-900 mb-3 text-2xl">Expert Support</h3>
-              <p className="text-gray-700 text-base leading-relaxed">Browse our comprehensive FAQ section for answers to common tax questions.</p>
+              <p className="text-gray-700 text-base leading-relaxed">
+                This calculator provides an estimated tax breakdown based on standard assumptions and is intended for general information purposes only. Results may vary depending on individual circumstances and tax codes, and should not be relied upon as financial advice. For accurate and official information, please refer to your tax code or contact HMRC directly.
+              </p>
             </div>
           </div>
             </div>
