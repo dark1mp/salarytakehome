@@ -1235,7 +1235,7 @@ function TaxCalculatorContent() {
         </div>
 
         {/* Beautiful Navigation Buttons - Aligned with cards section */}
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8 mt-8">
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 mt-8">
           <div className="flex-1 max-w-6xl">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               {/* Blog Link */}
@@ -1265,6 +1265,10 @@ function TaxCalculatorContent() {
               </a>
             </div>
           </div>
+
+          {/* Ad Space - Hidden but maintains same flex layout as cards section */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+          </aside>
         </div>
       </main>
       
