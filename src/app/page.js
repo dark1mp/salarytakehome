@@ -1182,11 +1182,34 @@ function TaxCalculatorContent() {
           <div className="relative group overflow-hidden bg-gradient-to-br from-emerald-50/90 to-green-100/70 backdrop-blur-light rounded-3xl p-6 border border-emerald-200/30 hover:border-emerald-300/50 transition-all duration-200 hover-scale shadow-medium">
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             <div className="relative z-10">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-medium hover-scale transition-transform duration-200">
-                <CheckCircle className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center shadow-medium hover-scale transition-transform duration-200 flex-shrink-0">
+                  <CheckCircle className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-bold text-gray-900 text-xl">Take Home Pay FAQs</h3>
               </div>
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">Free to use</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">Calculate your tax liability and take-home pay completely free, with no hidden costs.</p>
+
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-bold text-gray-900 text-base mb-1">Is take home pay the same as net pay?</h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">Yes, take home pay and net pay generally mean the same thing in the UK.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-gray-900 text-base mb-1">How accurate is this calculator?</h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">This calculator provides an estimate based on current tax rule. Actual take home pay may vary slightly depending on your employer and circumstances.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-gray-900 text-base mb-1">Does this include pension contributions?</h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">Yes, you can include pension contributions and choose a contribution percentage.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-gray-900 text-base mb-1">Is this calculator updated every year?</h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">Yes, this calculator is updated for the latest UK tax year.</p>
+                </div>
+              </div>
             </div>
           </div>
           
