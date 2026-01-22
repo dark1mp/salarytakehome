@@ -16,7 +16,7 @@ const menuItems = [
   { href: '/debts', label: 'DEBTS', icon: FileText },
   { href: '/country-comparison', label: 'COMPARE COUNTRIES', icon: Globe },
   { href: '/blog', label: 'BLOG', icon: FileText },
-  { href: '/about', label: 'ABOUT', icon: HelpCircle, hasArrow: true },
+  { href: '/about', label: 'ABOUT', icon: HelpCircle },
   { href: '/links', label: 'USEFUL LINKS', icon: ExternalLink },
   { href: '/privacy-policy', label: 'PRIVACY POLICY', icon: Shield },
 ];
