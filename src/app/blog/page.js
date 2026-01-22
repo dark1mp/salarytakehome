@@ -5,6 +5,15 @@ import LayoutWrapper from '../components/LayoutWrapper';
 
 const blogPosts = [
   {
+    slug: "uk-tax-changes-2025-26",
+    title: "UK Tax Changes 2025/26: What You Need to Know",
+    excerpt: "Complete guide to the latest tax rates, thresholds, and changes affecting your take-home pay this tax year.",
+    date: "2025-04-06",
+    readTime: "8 min read",
+    category: "Tax Updates",
+    featured: true
+  },
+  {
     slug: "uk-tax-changes-2024-25",
     title: "UK Tax Changes 2024/25: What You Need to Know",
     excerpt: "Complete guide to the latest tax rates, thresholds, and changes affecting your take-home pay this tax year.",
