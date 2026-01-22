@@ -604,7 +604,7 @@ function TaxCalculatorContent() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 scale-[0.8] md:scale-100 origin-top-left">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Skip to main content link for accessibility */}
       <a
         href="#main-content"
@@ -1294,7 +1294,7 @@ export default function TaxCalculator() {
     <ErrorBoundary>
       <LayoutWrapper>
         <Suspense fallback={
-          <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center scale-[0.8] md:scale-100 origin-top-left">
+          <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
                 <Calculator className="w-8 h-8 text-white" />
