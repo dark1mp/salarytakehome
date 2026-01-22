@@ -353,7 +353,6 @@ export default function TwoJobs() {
                         className="w-full pl-10 pr-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 text-lg font-semibold bg-white/80 transition-all duration-200"
                       />
                     </div>
-                    <p className="text-xs text-gray-500 mt-2">Uses personal allowance (1257L)</p>
                   </div>
                 </div>
 
@@ -372,7 +371,6 @@ export default function TwoJobs() {
                         className="w-full pl-10 pr-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 text-lg font-semibold bg-white/80 transition-all duration-200"
                       />
                     </div>
-                    <p className="text-xs text-gray-500 mt-2">Taxed at 20% (BR code)</p>
                   </div>
                 </div>
               </div>
