@@ -118,7 +118,7 @@ export default function SickPay() {
 
   return (
     <LayoutWrapper>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 scale-[0.8] md:scale-100 origin-top-left">
         <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
           <div className="flex-1 max-w-6xl">
             {/* Header */}
@@ -147,23 +147,29 @@ export default function SickPay() {
                   <div className="grid grid-cols-2 gap-3">
                     <button
                       onClick={() => setFormData({ ...formData, useNewRules: false })}
-                      className={`px-6 py-4 rounded-2xl border-2 transition-all duration-200 font-semibold ${
+                      className={`px-6 py-4 rounded-2xl border-2 transition-all duration-200 ${
                         !formData.useNewRules
                           ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white border-blue-500 shadow-medium'
                           : 'bg-white/80 text-gray-700 border-gray-200/50 hover:border-blue-200'
                       }`}
                     >
-                      2025/26 (Current)
+                      <div className="flex flex-col items-center gap-1">
+                        <span className="text-xl font-bold">2025/26</span>
+                        <span className="text-sm font-normal">(Current)</span>
+                      </div>
                     </button>
                     <button
                       onClick={() => setFormData({ ...formData, useNewRules: true })}
-                      className={`px-6 py-4 rounded-2xl border-2 transition-all duration-200 font-semibold ${
+                      className={`px-6 py-4 rounded-2xl border-2 transition-all duration-200 ${
                         formData.useNewRules
                           ? 'bg-gradient-to-r from-green-500 to-green-600 text-white border-green-500 shadow-medium'
                           : 'bg-white/80 text-gray-700 border-gray-200/50 hover:border-green-200'
                       }`}
                     >
-                      2026/27 (New Rules)
+                      <div className="flex flex-col items-center gap-1">
+                        <span className="text-xl font-bold">2026/27</span>
+                        <span className="text-sm font-normal">(New Rules)</span>
+                      </div>
                     </button>
                   </div>
                   <p className="text-xs text-gray-500 mt-2">
