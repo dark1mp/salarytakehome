@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from 'react';
-import { Briefcase, TrendingUp, Info } from 'lucide-react';
+import { Briefcase, TrendingUp, Info, HelpCircle } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
 
 const TAX_BANDS = {
@@ -472,7 +472,116 @@ export default function TwoJobs() {
             </div>
           </aside>
         </div>
+
+        {/* Two Jobs FAQs Card */}
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 mt-6">
+          <div className="flex-1 max-w-6xl">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <HelpCircle className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">Two Jobs Tax FAQs</h3>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Does having two jobs mean I pay more tax in the UK?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      No. Income tax in the UK is based on your total earnings across all jobs, not the number of jobs you have. If you earn £80,000 from one job or £40,000 from two jobs, your total income tax bill is the same once HMRC reconciles your PAYE records.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Why does it feel like I pay more tax when I have two jobs?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      This usually happens because your personal allowance is only applied once, your second job may use a BR or D0 tax code, and PAYE deductions during the year are estimates. HMRC corrects this automatically after the tax year ends and any overpaid tax is refunded.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Do I pay more National Insurance if I have two jobs?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Often, yes. National Insurance is calculated separately for each job. With two jobs, you pay NI above the threshold in both jobs and may never reach the lower 2% NI rate that applies to higher earnings in a single job.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Is two £40k jobs worse than one £80k job?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      From a take-home pay perspective, usually yes. Income tax is the same overall, but National Insurance is typically higher with two jobs. In most cases, two £40k jobs result in £700–£900 less net income per year compared to one £80k job.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Can I split my personal allowance between two jobs?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Yes. You can ask HMRC to divide your personal allowance between jobs so tax deductions are more even during the year. This does not change your total tax bill but can improve monthly cash flow.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Will HMRC refund tax if I overpay with two jobs?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Yes. If you've paid too much tax, HMRC issues a P800 tax calculation and you'll receive a refund automatically or can claim it online.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Does having two jobs push me into a higher tax band?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Only if your total income crosses a tax threshold. It's the combined income, not the second job alone, that matters.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Is tax calculated differently if one job is part-time?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      No. Part-time and full-time jobs are treated the same for tax purposes. HMRC looks only at total earnings, tax codes applied, and NI per employment.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">What tax code should I have if I have two jobs?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Usually one job gets your personal allowance and the second job uses BR, D0, or D1. If your tax code looks wrong, you can update it through HMRC Online Services.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Does this change if I'm self-employed as well?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Yes. If you have one PAYE job and self-employment income, PAYE tax is deducted at source and self-employed tax and NI are calculated via Self Assessment. Your total income still determines your tax bands.
+                    </p>
+                  </div>
+
+                  <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">What's the best way to reduce tax if I have two jobs?</h4>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Legal ways include pension contributions, adjusting tax codes, claiming allowable expenses, and using personal allowance efficiently.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8 h-[600px]">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
+        </div>
       </div>
+
+      <footer className="mt-12 border-t pt-8 pb-6 text-center text-gray-500 text-sm">
+        <div>© 2025 SalaryTakeHome.co.uk. All rights reserved.</div>
+        <div className="mt-2">
+          Privacy: This site does not collect or store any personal data. All calculations are done anonymously in your browser.
+        </div>
+      </footer>
     </LayoutWrapper>
   );
 }
