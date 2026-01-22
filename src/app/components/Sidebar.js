@@ -3,12 +3,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, Globe, HelpCircle, ExternalLink, Menu, X, Shield } from 'lucide-react';
+import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, Globe, HelpCircle, ExternalLink, Menu, X, Shield, HeartPulse } from 'lucide-react';
 
 const menuItems = [
   { href: '/', label: 'TAKE HOME PAY', icon: Home },
   { href: '/hourly-wage', label: 'HOURLY WAGE', icon: Clock },
   { href: '/maternity-sick-pay', label: 'MATERNITY / SICK PAY', icon: Heart },
+  { href: '/sick-pay', label: 'SICK PAY', icon: HeartPulse },
   { href: '/two-jobs', label: 'TWO JOBS', icon: Briefcase },
   { href: '/pro-rata-furlough', label: 'PRO-RATA / FURLOUGH', icon: Calculator },
   { href: '/compare-salaries', label: 'COMPARE TWO SALARIES', icon: Scale },
