@@ -50,6 +50,14 @@ export default function About() {
             </div>
           </aside>
         </div>
+
+        {/* Footer */}
+        <footer className="mt-12 border-t pt-8 pb-6 text-center text-gray-500 text-sm max-w-6xl mx-auto px-8">
+          <div>© 2025 SalaryTakeHome.co.uk. All rights reserved.</div>
+          <div className="mt-2">
+            Privacy: This site does not collect or store any personal data. All calculations are done anonymously in your browser.
+          </div>
+        </footer>
       </div>
     </LayoutWrapper>
   );
