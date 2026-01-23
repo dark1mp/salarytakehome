@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Pro-Rata & Furlough Calculator - Part-Time Salary Calculator | SalaryTakeHome.co.uk",
-  description: "Calculate pro-rata salary for part-time work and furlough pay. Convert full-time salaries to part-time equivalents and see your adjusted pay.",
-  keywords: "pro rata calculator, furlough calculator, part time salary calculator, furlough pay, pro rata salary UK",
+  title: "Pro-Rata Salary Calculator - Part-Time Salary Calculator | SalaryTakeHome.co.uk",
+  description: "Calculate your pro-rata salary for part-time work. Convert full-time salaries to part-time equivalents based on your working hours.",
+  keywords: "pro rata calculator, part time salary calculator, pro rata salary UK, part time pay calculator, FTE salary",
   openGraph: {
-    title: "Pro-Rata & Furlough Calculator - Part-Time Salary Calculator",
-    description: "Calculate pro-rata salary for part-time work and furlough pay. Convert full-time to part-time equivalents.",
+    title: "Pro-Rata Salary Calculator - Part-Time Salary Calculator",
+    description: "Calculate your pro-rata salary for part-time work. Convert full-time to part-time salary equivalents.",
     url: "https://salarytakehome.co.uk/pro-rata-furlough",
     siteName: "SalaryTakeHome",
     images: [{
@@ -18,8 +18,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pro-Rata & Furlough Calculator - Part-Time Salary Calculator",
-    description: "Calculate pro-rata salary for part-time work and furlough pay.",
+    title: "Pro-Rata Salary Calculator - Part-Time Salary Calculator",
+    description: "Calculate your pro-rata salary for part-time work.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

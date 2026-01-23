@@ -11,7 +11,7 @@ const menuItems = [
   { href: '/maternity-sick-pay', label: 'MATERNITY PAY', icon: Heart },
   { href: '/sick-pay', label: 'SICK PAY', icon: HeartPulse },
   { href: '/two-jobs', label: 'TWO JOBS', icon: Briefcase },
-  { href: '/pro-rata-furlough', label: 'PRO-RATA / FURLOUGH', icon: Calculator },
+  { href: '/pro-rata-furlough', label: 'PRO-RATA', icon: Calculator },
   { href: '/compare-salaries', label: 'COMPARE TWO SALARIES', icon: Scale },
   { href: '/mortgages', label: 'MORTGAGES', icon: DollarSign },
   { href: '/debts', label: 'DEBTS', icon: FileText },
