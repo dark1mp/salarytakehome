@@ -1,10 +1,10 @@
 export const metadata = {
   title: "Debt Repayment Calculator - Plan Your Debt Payoff | SalaryTakeHome.co.uk",
-  description: "Calculate how long it will take to pay off your debts. Compare avalanche vs snowball methods and create a personalized debt repayment plan.",
-  keywords: "debt calculator UK, debt repayment calculator, debt payoff plan, avalanche method, snowball method",
+  description: "Free UK debt repayment calculator. Calculate how long it will take to pay off your credit card debt, personal loans, or overdraft. See total interest costs and create a clear repayment plan.",
+  keywords: "debt calculator UK, debt repayment calculator, debt payoff plan, credit card debt calculator, loan repayment calculator, interest calculator",
   openGraph: {
     title: "Debt Repayment Calculator - Plan Your Debt Payoff",
-    description: "Calculate how long it will take to pay off your debts. Compare avalanche vs snowball methods.",
+    description: "Free UK debt repayment calculator. Calculate how long it will take to pay off your debts and see total interest costs.",
     url: "https://salarytakehome.co.uk/debts",
     siteName: "SalaryTakeHome",
     images: [{
@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Debt Repayment Calculator - Plan Your Debt Payoff",
-    description: "Calculate how long it will take to pay off your debts. Compare repayment methods.",
+    description: "Free UK debt repayment calculator. Calculate how long it will take to pay off your debts and see total interest costs.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

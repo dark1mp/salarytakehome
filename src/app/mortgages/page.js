@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo, useCallback } from 'react';
-import { Home, Calculator, TrendingUp, Info } from 'lucide-react';
+import { Home, Calculator, TrendingUp, Info, Lightbulb, HelpCircle, Shield } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
 
 export default function MortgageCalculator() {
@@ -301,6 +301,189 @@ export default function MortgageCalculator() {
               </div>
             </div>
             </div>
+
+            {/* Info Cards Section */}
+            <div className="mt-16 space-y-8">
+              {/* How This Mortgage Calculator Works */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Calculator className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">How This Mortgage Calculator Works</h3>
+                  </div>
+                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                      Our UK mortgage calculator helps you estimate your monthly mortgage payments based on the property value,
+                      deposit amount, interest rate, and loan term. The calculator uses standard UK mortgage formulas to provide
+                      accurate estimates for both repayment and interest-only mortgages.
+                    </p>
+                    <p>
+                      For <strong>repayment mortgages</strong>, your monthly payment covers both the interest and a portion of the
+                      capital (loan amount), meaning you'll own the property outright at the end of the term. For <strong>interest-only
+                      mortgages</strong>, you only pay the interest each month, and the full loan amount must be repaid at the end
+                      of the term through other means.
+                    </p>
+                    <p>
+                      The calculator also shows your Loan-to-Value (LTV) ratio, which is the percentage of the property value you're
+                      borrowing. A lower LTV typically means better mortgage rates and more lender options. Most UK lenders offer
+                      mortgages up to 95% LTV for first-time buyers and 90% for others.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Why Understanding Your Mortgage Matters */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-amber-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Lightbulb className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">Why Understanding Your Mortgage Matters</h3>
+                  </div>
+                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                      A mortgage is typically the largest financial commitment most people make in their lifetime. Understanding
+                      your monthly payments helps you budget effectively and ensures you don't overstretch yourself financially.
+                    </p>
+                    <p>
+                      The difference between mortgage types can significantly impact your finances. While interest-only mortgages
+                      have lower monthly payments, you'll need a solid plan to repay the capital at the end of the term. Repayment
+                      mortgages provide peace of mind as you gradually build equity in your home.
+                    </p>
+                    <p>
+                      Even small differences in interest rates can have a huge impact over the life of a mortgage. For example,
+                      on a £300,000 mortgage over 25 years, a 1% difference in interest rate can mean paying tens of thousands
+                      of pounds more in interest. That's why it's crucial to shop around for the best rates.
+                    </p>
+                    <p>
+                      Understanding your LTV is also important when remortgaging. As you pay down your mortgage and your property
+                      value increases, your LTV decreases, which can give you access to better rates and save you money.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mortgage Calculator FAQs */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-emerald-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <HelpCircle className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">Mortgage Calculator FAQs</h3>
+                  </div>
+                  <div className="space-y-6">
+                    <div className="pb-6 border-b border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2">What's the difference between repayment and interest-only mortgages?</h4>
+                      <p className="text-gray-700">
+                        With a repayment mortgage, your monthly payments cover both the interest and part of the capital, so you'll own
+                        the property outright at the end of the term. With an interest-only mortgage, you only pay the interest, and
+                        you'll need to repay the full loan amount at the end through savings, investments, or selling the property.
+                      </p>
+                    </div>
+                    <div className="pb-6 border-b border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2">How accurate is this mortgage calculator?</h4>
+                      <p className="text-gray-700">
+                        This calculator provides accurate estimates based on the information you enter. However, actual mortgage offers
+                        may vary depending on your credit score, income, employment status, and the lender's specific criteria. Always
+                        get a formal mortgage quote from a lender or broker.
+                      </p>
+                    </div>
+                    <div className="pb-6 border-b border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2">What is Loan-to-Value (LTV)?</h4>
+                      <p className="text-gray-700">
+                        LTV is the percentage of the property value you're borrowing. For example, if you're buying a £300,000 property
+                        with a £30,000 deposit, you'll borrow £270,000, giving you an LTV of 90%. Lower LTVs typically get better
+                        interest rates.
+                      </p>
+                    </div>
+                    <div className="pb-6 border-b border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2">What other costs should I consider when buying a property?</h4>
+                      <p className="text-gray-700">
+                        Beyond the deposit and monthly payments, you'll need to budget for stamp duty (unless you're a first-time buyer
+                        buying under the threshold), solicitor fees, survey costs, mortgage arrangement fees, buildings insurance, and
+                        potentially ground rent and service charges for leasehold properties.
+                      </p>
+                    </div>
+                    <div className="pb-6 border-b border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2">Can I get a mortgage with a 5% deposit?</h4>
+                      <p className="text-gray-700">
+                        Yes, 95% LTV mortgages (5% deposit) are available in the UK, particularly for first-time buyers. However,
+                        you'll typically face higher interest rates compared to mortgages with larger deposits. Government schemes
+                        like the Mortgage Guarantee Scheme can help with 95% LTV mortgages.
+                      </p>
+                    </div>
+                    <div className="pb-6 border-b border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2">What mortgage term should I choose?</h4>
+                      <p className="text-gray-700">
+                        The most common mortgage terms in the UK are 25-30 years. Shorter terms mean higher monthly payments but less
+                        interest paid overall. Longer terms reduce monthly payments but increase the total interest. Choose a term
+                        that balances affordability with your long-term financial goals.
+                      </p>
+                    </div>
+                    <div className="pb-6 border-b border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2">Should I fix my mortgage rate?</h4>
+                      <p className="text-gray-700">
+                        Fixed-rate mortgages give you certainty over your monthly payments for a set period (typically 2, 3, 5, or 10 years),
+                        protecting you from interest rate rises. Variable and tracker mortgages can be cheaper but leave you exposed to
+                        rate changes. Consider your risk tolerance and financial situation when choosing.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">How much can I afford to borrow?</h4>
+                      <p className="text-gray-700">
+                        UK lenders typically lend 4-4.5 times your annual income, though this varies based on your circumstances. They'll
+                        assess your affordability by looking at your income, outgoings, credit history, and other financial commitments.
+                        Some lenders may lend more for higher earners or those with excellent credit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Disclaimer */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-purple-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Shield className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">Disclaimer</h3>
+                  </div>
+                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                      This mortgage calculator is provided for informational and educational purposes only. The results are estimates
+                      based on the information you provide and should not be considered financial advice.
+                    </p>
+                    <p>
+                      Actual mortgage offers will depend on your individual circumstances, including your credit score, income,
+                      employment status, existing debts, and the lender's specific criteria. Interest rates, fees, and terms vary
+                      between lenders and products.
+                    </p>
+                    <p>
+                      We strongly recommend speaking with a qualified mortgage advisor or broker before making any property purchase
+                      decisions. They can assess your specific situation and help you find the best mortgage deal for your needs.
+                    </p>
+                    <p>
+                      This calculator does not account for additional costs such as mortgage arrangement fees, early repayment charges,
+                      buildings insurance, or changes to interest rates over time. Always read the full terms and conditions of any
+                      mortgage offer carefully.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <footer className="mt-12 border-t pt-8 pb-6 text-center text-gray-500 text-sm">
+              <div>© 2025 SalaryTakeHome.co.uk. All rights reserved.</div>
+              <div className="mt-2">
+                Privacy: This site does not collect or store any personal data. All calculations are done anonymously in your browser.
+              </div>
+            </footer>
           </div>
 
           {/* Ad Space */}

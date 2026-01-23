@@ -82,10 +82,6 @@ export default function About() {
                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                       <span className="font-medium">Debt Calculator</span>
                     </Link>
-                    <Link href="/country-comparison" className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                      <span className="font-medium">Compare Countries</span>
-                    </Link>
                   </div>
                 </div>
               </div>

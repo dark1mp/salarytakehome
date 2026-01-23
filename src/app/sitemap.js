@@ -57,12 +57,6 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/country-comparison`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/maternity-sick-pay`,
       lastModified: currentDate,
       changeFrequency: 'monthly',

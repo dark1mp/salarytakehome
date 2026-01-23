@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, Globe, HelpCircle, ExternalLink, Menu, X, Shield, HeartPulse } from 'lucide-react';
+import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, HelpCircle, ExternalLink, Menu, X, Shield, HeartPulse } from 'lucide-react';
 
 const menuItems = [
   { href: '/', label: 'TAKE HOME PAY', icon: Home },
@@ -14,8 +14,7 @@ const menuItems = [
   { href: '/pro-rata-furlough', label: 'PRO-RATA', icon: Calculator },
   { href: '/compare-salaries', label: 'COMPARE TWO SALARIES', icon: Scale },
   { href: '/mortgages', label: 'MORTGAGES', icon: DollarSign },
-  { href: '/debts', label: 'DEBTS', icon: FileText },
-  { href: '/country-comparison', label: 'COMPARE COUNTRIES', icon: Globe },
+  { href: '/debts', label: 'DEBT REPAYMENT', icon: FileText },
   { href: '/blog', label: 'BLOG', icon: FileText },
   { href: '/about', label: 'ABOUT', icon: HelpCircle },
   { href: '/links', label: 'USEFUL LINKS', icon: ExternalLink },
