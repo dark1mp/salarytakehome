@@ -63,6 +63,12 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/sick-pay`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/pro-rata-furlough`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
@@ -79,6 +85,12 @@ export default function sitemap() {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
   ]
 
@@ -116,6 +128,12 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/blog/uk-tax-changes-2024-25`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/salary-sacrifice-changes-2029`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.6,
