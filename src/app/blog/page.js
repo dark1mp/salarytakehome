@@ -8,7 +8,7 @@ const blogPosts = [
     slug: "salary-sacrifice-changes-2029",
     title: "Salary Sacrifice Pension Changes from April 2029: What You Need to Know",
     excerpt: "From April 2029, only the first £2,000 of pension contributions through salary sacrifice will be exempt from National Insurance. Find out what this means for you.",
-    date: "2025-01-23",
+    date: "2025-11-26",
     readTime: "7 min read",
     category: "Tax Updates",
     featured: true

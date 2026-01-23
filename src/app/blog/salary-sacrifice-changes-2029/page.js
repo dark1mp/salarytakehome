@@ -9,7 +9,7 @@ export const metadata = {
     title: "Salary Sacrifice Pension Changes from April 2029",
     description: "Major changes to salary sacrifice for pensions coming in April 2029. Find out how the £2,000 NIC exemption limit will affect your pension savings.",
     type: "article",
-    publishedTime: "2025-01-23T00:00:00.000Z",
+    publishedTime: "2025-11-26T00:00:00.000Z",
     authors: ["SalaryTakeHome"],
   },
   twitter: {
@@ -32,8 +32,8 @@ export default function SalarySacrificeChanges2029() {
             <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium rounded-full">
               Tax Updates
             </span>
-            <time className="text-gray-500 text-sm" dateTime="2025-01-23">
-              January 23, 2025
+            <time className="text-gray-500 text-sm" dateTime="2025-11-26">
+              November 26, 2025
             </time>
             <span className="text-gray-500 text-sm">7 min read</span>
           </div>
@@ -351,7 +351,7 @@ export default function SalarySacrificeChanges2029() {
               >
                 GOV.UK guidance
               </a>{" "}
-              published January 2025.
+              published 26 November 2025.
             </p>
           </div>
 
