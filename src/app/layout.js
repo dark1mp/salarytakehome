@@ -54,6 +54,9 @@ export default function RootLayout({ children }) {
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="google3b93564eda4debf4.html" />
 
+        {/* Microsoft Bing Verification */}
+        <meta name="msvalidate.01" content="BCD133B3A883D7A788E231EC0986C415" />
+
         {/* Google AdSense Account */}
         <meta name="google-adsense-account" content="ca-pub-3447670244921264" />
 
