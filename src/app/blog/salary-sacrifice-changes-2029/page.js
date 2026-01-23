@@ -30,7 +30,7 @@ export default function SalarySacrificeChanges2029() {
           </Link>
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium rounded-full">
-              Tax Updates
+              Pensions
             </span>
             <time className="text-gray-500 text-sm" dateTime="2025-11-26">
               November 26, 2025
