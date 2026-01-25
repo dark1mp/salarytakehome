@@ -8,7 +8,7 @@ const blogPosts = [
     slug: "100k-tax-trap",
     title: "The £100k Tax Trap: Britain's Hidden 60% Tax Rate That's Punishing Middle-Class Professionals",
     excerpt: "An investigation into how half a million more workers will face punitive tax rates by 2029. Discover the hidden 60% effective tax rate affecting nearly 2 million professionals earning between £100,000 and £125,140.",
-    date: "2025-01-15",
+    date: "2026-01-25",
     readTime: "20 min read",
     category: "Tax Planning",
     featured: true

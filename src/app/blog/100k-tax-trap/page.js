@@ -9,7 +9,7 @@ export const metadata = {
     title: "The £100k Tax Trap: Britain's Hidden 60% Tax Rate",
     description: "An investigation into how half a million more workers will face punitive tax rates by 2029.",
     type: "article",
-    publishedTime: "2025-01-15T00:00:00.000Z",
+    publishedTime: "2026-01-25T00:00:00.000Z",
     authors: ["SalaryTakeHome"],
   },
   twitter: {
@@ -32,8 +32,8 @@ export default function TaxTrap100k() {
             <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium rounded-full">
               Tax Planning
             </span>
-            <time className="text-gray-500 text-sm" dateTime="2025-01-15">
-              January 15, 2025
+            <time className="text-gray-500 text-sm" dateTime="2026-01-25">
+              January 25, 2026
             </time>
             <span className="text-gray-500 text-sm">20 min read</span>
           </div>
@@ -455,8 +455,8 @@ export default function TaxTrap100k() {
             "@type": "Article",
             "headline": "The £100k Tax Trap: Britain's Hidden 60% Tax Rate That's Punishing Middle-Class Professionals",
             "description": "An investigation into how half a million more workers will face punitive tax rates by 2029. Discover the hidden 60% effective tax rate affecting nearly 2 million professionals.",
-            "datePublished": "2025-01-15T00:00:00.000Z",
-            "dateModified": "2025-01-15T00:00:00.000Z",
+            "datePublished": "2026-01-25T00:00:00.000Z",
+            "dateModified": "2026-01-25T00:00:00.000Z",
             "author": {
               "@type": "Organization",
               "name": "SalaryTakeHome"
