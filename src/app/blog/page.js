@@ -5,6 +5,15 @@ import LayoutWrapper from '../components/LayoutWrapper';
 
 const blogPosts = [
   {
+    slug: "cash-isa-limit-2027",
+    title: "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027",
+    excerpt: "Your tax-free savings allowance is about to change. From April 2027, under-65s can only deposit £12,000 per year into cash ISAs. Here's what it means for your money and how to prepare.",
+    date: "2026-01-25",
+    readTime: "18 min read",
+    category: "Savings & ISAs",
+    featured: true
+  },
+  {
     slug: "100k-tax-trap",
     title: "The £100k Tax Trap: Britain's Hidden 60% Tax Rate That's Punishing Middle-Class Professionals",
     excerpt: "An investigation into how half a million more workers will face punitive tax rates by 2029. Discover the hidden 60% effective tax rate affecting nearly 2 million professionals earning between £100,000 and £125,140.",
@@ -87,7 +96,7 @@ const blogPosts = [
   }
 ];
 
-const categories = ["All", "Tax Updates", "Money Tips", "Student Loans", "Tax Planning", "Self-Employment", "Pensions"];
+const categories = ["All", "Tax Updates", "Money Tips", "Student Loans", "Tax Planning", "Self-Employment", "Pensions", "Savings & ISAs"];
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
