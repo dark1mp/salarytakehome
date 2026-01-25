@@ -5,6 +5,15 @@ import LayoutWrapper from '../components/LayoutWrapper';
 
 const blogPosts = [
   {
+    slug: "student-loan-refund",
+    title: "Are You Owed Money? The Student Loan Refund Thousands of UK Graduates Are Missing",
+    excerpt: "Over 1 million student loan overpayments happened last year. Here's how to check if you're one of them—and get your money back.",
+    date: "2026-01-25",
+    readTime: "16 min read",
+    category: "Student Loans",
+    featured: true
+  },
+  {
     slug: "cash-isa-limit-2027",
     title: "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027",
     excerpt: "Your tax-free savings allowance is about to change. From April 2027, under-65s can only deposit £12,000 per year into cash ISAs. Here's what it means for your money and how to prepare.",
