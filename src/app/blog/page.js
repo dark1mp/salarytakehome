@@ -5,6 +5,15 @@ import LayoutWrapper from '../components/LayoutWrapper';
 
 const blogPosts = [
   {
+    slug: "100k-tax-trap",
+    title: "The £100k Tax Trap: Britain's Hidden 60% Tax Rate That's Punishing Middle-Class Professionals",
+    excerpt: "An investigation into how half a million more workers will face punitive tax rates by 2029. Discover the hidden 60% effective tax rate affecting nearly 2 million professionals earning between £100,000 and £125,140.",
+    date: "2025-01-15",
+    readTime: "20 min read",
+    category: "Tax Planning",
+    featured: true
+  },
+  {
     slug: "salary-sacrifice-changes-2029",
     title: "Salary Sacrifice Pension Changes from April 2029: What You Need to Know",
     excerpt: "From April 2029, only the first £2,000 of pension contributions through salary sacrifice will be exempt from National Insurance. Find out what this means for you.",
