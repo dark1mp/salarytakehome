@@ -488,7 +488,7 @@ export default function StudentLoanRefund() {
               Understanding your student loan repayments is just one part of managing your finances. Knowing exactly how much you're actually taking home each month after tax, National Insurance, and other deductions helps you budget effectively and spot when something doesn't look right—whether that's student loan overpayments or anything else.
             </p>
             <Link 
-              href="/"
+              href="/take-home-pay-calculator"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Try Take Home Pay Calculator →

@@ -440,7 +440,7 @@ export default function TaxTrap100k() {
               Want to see exactly how much you'd take home at different salary levels? Check out how crossing that £100k threshold affects your actual monthly income with a salary calculator that breaks down the real numbers.
             </p>
             <Link 
-              href="/"
+              href="/take-home-pay-calculator"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Try Take Home Pay Calculator →

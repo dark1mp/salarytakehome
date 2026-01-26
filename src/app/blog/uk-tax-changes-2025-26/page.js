@@ -342,7 +342,7 @@ export default function UKTaxChanges2025() {
               Use our free UK tax calculator to see exactly how these changes affect your take-home pay for 2025/26.
             </p>
             <Link
-              href="/"
+              href="/take-home-pay-calculator"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-md hover:shadow-lg"
             >
               Try Calculator →

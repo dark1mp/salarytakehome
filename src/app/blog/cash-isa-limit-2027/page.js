@@ -475,7 +475,7 @@ export default function CashISALimit2027() {
               Want to see exactly how much tax you'll pay on your take-home salary and what that means for your savings strategy? Understanding your actual monthly income after tax helps you plan how much you can realistically put into ISAs each year.
             </p>
             <Link 
-              href="/"
+              href="/take-home-pay-calculator"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Try Take Home Pay Calculator →

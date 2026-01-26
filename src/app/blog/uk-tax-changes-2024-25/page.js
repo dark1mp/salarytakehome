@@ -209,7 +209,7 @@ export default function UKTaxChanges2024() {
               Use our free calculator to see exactly how these changes affect your salary
             </p>
             <Link 
-              href="/"
+              href="/take-home-pay-calculator"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Start Calculating →

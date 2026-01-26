@@ -128,7 +128,7 @@ export default function Blog() {
         <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
+          <Link href="/take-home-pay-calculator" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
             ← Back to Calculator
           </Link>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -246,7 +246,7 @@ export default function Blog() {
             Put your knowledge into practice with our free UK tax calculator
           </p>
           <Link 
-            href="/"
+            href="/take-home-pay-calculator"
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
           >
             Start Calculating →

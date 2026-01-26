@@ -316,7 +316,7 @@ export default function SelfEmployedTaxGuide() {
               Use our free calculator to estimate your tax liability and take-home profit
             </p>
             <Link 
-              href="/"
+              href="/take-home-pay-calculator"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Start Calculating →

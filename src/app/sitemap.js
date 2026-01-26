@@ -1,24 +1,23 @@
 export default function sitemap() {
   const baseUrl = 'https://salarytakehome.co.uk'
-  const currentDate = new Date()
-  
+
   // Main pages
   const mainPages = [
     {
       url: baseUrl,
-      lastModified: currentDate,
+      lastModified: new Date('2026-01-26'), // Landing page creation date
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: currentDate,
+      lastModified: new Date('2026-01-25'), // Most recent blog post date
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
@@ -27,118 +26,150 @@ export default function sitemap() {
   // Calculator pages
   const calculatorPages = [
     {
+      url: `${baseUrl}/take-home-pay-calculator`, // NEW ENTRY
+      lastModified: new Date('2026-01-26'),
+      changeFrequency: 'monthly',
+      priority: 1.0, // Highest priority calculator
+    },
+    {
       url: `${baseUrl}/hourly-wage`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/compare-salaries`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/two-jobs`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/mortgages`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/debts`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/maternity-sick-pay`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/sick-pay`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/pro-rata-furlough`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/links`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
       priority: 0.4,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: currentDate,
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
   ]
 
-  // Blog posts with their specific URLs and metadata
+  // Blog posts with their specific URLs and actual publication dates
   const blogPosts = [
+    // NEW - Missing posts
     {
-      url: `${baseUrl}/blog/maximize-take-home-pay-2024`,
-      lastModified: currentDate,
+      url: `${baseUrl}/blog/student-loan-refund`,
+      lastModified: new Date('2026-01-25'),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/blog/pension-contributions-tax-relief`,
-      lastModified: currentDate,
+      url: `${baseUrl}/blog/cash-isa-limit-2027`,
+      lastModified: new Date('2026-01-25'),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/blog/salary-sacrifice-complete-guide`,
-      lastModified: currentDate,
+      url: `${baseUrl}/blog/100k-tax-trap`,
+      lastModified: new Date('2026-01-25'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    // Existing posts with corrected dates
+    {
+      url: `${baseUrl}/blog/salary-sacrifice-changes-2029`,
+      lastModified: new Date('2025-11-26'), // Actual publication date
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/blog/self-employed-tax-calculator-guide`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/student-loan-repayment-guide`,
-      lastModified: currentDate,
+      url: `${baseUrl}/blog/uk-tax-changes-2025-26`,
+      lastModified: new Date('2025-04-06'),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/blog/uk-tax-changes-2024-25`,
-      lastModified: currentDate,
+      lastModified: new Date('2024-04-06'),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/blog/salary-sacrifice-changes-2029`,
-      lastModified: currentDate,
+      url: `${baseUrl}/blog/maximize-take-home-pay-2024`,
+      lastModified: new Date('2024-03-15'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/student-loan-repayment-guide`,
+      lastModified: new Date('2024-03-01'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/salary-sacrifice-complete-guide`,
+      lastModified: new Date('2024-02-20'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/self-employed-tax-calculator-guide`,
+      lastModified: new Date('2024-02-05'),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/pension-contributions-tax-relief`,
+      lastModified: new Date('2024-01-15'),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
   ]
 
   return [...mainPages, ...calculatorPages, ...blogPosts]
-} 
+}

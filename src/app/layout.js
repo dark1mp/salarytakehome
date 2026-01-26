@@ -9,9 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL('https://salarytakehome.co.uk'),
-  title: "UK Tax Calculator - Calculate Your Take-Home Pay | SalaryTakeHome.co.uk",
-  description: "Free UK tax calculator for 2024/25. Calculate income tax, National Insurance, and student loan deductions. Get your exact take-home pay instantly.",
-  keywords: "UK tax calculator, take home pay, salary calculator, income tax, National Insurance, student loan, pension calculator",
+  title: "UK Tax & Salary Calculators 2025/26 | SalaryTakeHome.co.uk",
+  description: "Free UK tax calculators for take-home pay, mortgages, sick pay, student loans, and pensions. Calculate your finances with accurate 2025/26 tax rates. No registration required.",
+  keywords: "UK tax calculator, take home pay, salary calculator, income tax, National Insurance, student loan, pension calculator, mortgage calculator, sick pay",
   authors: [{ name: "SalaryTakeHome" }],
   creator: "SalaryTakeHome",
   publisher: "SalaryTakeHome",
