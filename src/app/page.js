@@ -21,6 +21,13 @@ const calculators = [
         featured: true
       },
       {
+        name: "Pay Rise Calculator",
+        description: "See exactly how much of your pay rise you'll actually take home after tax and deductions.",
+        href: "/pay-rise",
+        icon: TrendingUp,
+        gradient: "from-emerald-500 to-emerald-600"
+      },
+      {
         name: "Hourly Wage Calculator",
         description: "Convert your annual salary to hourly, daily, weekly, or monthly rates based on your working hours.",
         href: "/hourly-wage",
@@ -199,6 +206,7 @@ export default function HomePage() {
                 <h3 className="text-base font-bold mb-2">Calculators</h3>
                 <ul className="space-y-1 text-sm text-gray-300">
                   <li><Link href="/take-home-pay-calculator" className="hover:text-white transition-colors">Take Home Pay</Link></li>
+                  <li><Link href="/pay-rise" className="hover:text-white transition-colors">Pay Rise</Link></li>
                   <li><Link href="/hourly-wage" className="hover:text-white transition-colors">Hourly Wage</Link></li>
                   <li><Link href="/compare-salaries" className="hover:text-white transition-colors">Compare Salaries</Link></li>
                   <li><Link href="/two-jobs" className="hover:text-white transition-colors">Two Jobs</Link></li>

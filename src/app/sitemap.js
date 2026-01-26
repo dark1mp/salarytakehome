@@ -32,6 +32,12 @@ export default function sitemap() {
       priority: 1.0, // Highest priority calculator
     },
     {
+      url: `${baseUrl}/pay-rise`,
+      lastModified: new Date('2026-01-26'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/hourly-wage`,
       lastModified: new Date('2025-01-01'),
       changeFrequency: 'monthly',
