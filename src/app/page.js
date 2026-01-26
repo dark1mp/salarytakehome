@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {
   Calculator, Clock, GitCompare, Users, Heart, Baby,
   Home as HomeIcon, CreditCard, TrendingUp, BookOpen,
-  ArrowRight, CheckCircle
+  ArrowRight
 } from 'lucide-react';
 import LayoutWrapper from './components/LayoutWrapper';
 
@@ -90,15 +90,6 @@ const calculators = [
   }
 ];
 
-const features = [
-  "100% Free - No registration required",
-  "Privacy-focused - All calculations done in your browser",
-  "Up-to-date with 2025/26 UK tax rates",
-  "Accurate calculations for tax, NI, student loans",
-  "Mobile-friendly design",
-  "Share results with URL links"
-];
-
 const recentBlogPosts = [
   {
     title: "The £100k Tax Trap: Britain's Hidden 60% Tax Rate",
@@ -142,20 +133,6 @@ export default function HomePage() {
                 Calculate Your Take-Home Pay
                 <ArrowRight className="w-5 h-5" />
               </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Features Bar */}
-        <div className="bg-white border-b border-gray-200 py-6">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">{feature}</span>
-                </div>
-              ))}
             </div>
           </div>
         </div>
