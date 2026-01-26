@@ -190,24 +190,66 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Footer CTA */}
-        <div className="bg-gradient-to-br from-[#1566a0] to-[#1e90c6] text-white py-16">
-          <div className="max-w-4xl mx-auto px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Calculate Your Take-Home Pay?
-            </h2>
-            <p className="text-xl text-blue-50 mb-8">
-              Get accurate results in seconds with our free calculator
-            </p>
-            <Link
-              href="/take-home-pay-calculator"
-              className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
-            >
-              Start Calculating
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+        {/* Footer */}
+        <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="grid md:grid-cols-4 gap-8 mb-8">
+              {/* Calculators Column */}
+              <div>
+                <h3 className="text-lg font-bold mb-4">Calculators</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li><Link href="/take-home-pay-calculator" className="hover:text-white transition-colors">Take Home Pay</Link></li>
+                  <li><Link href="/hourly-wage" className="hover:text-white transition-colors">Hourly Wage</Link></li>
+                  <li><Link href="/compare-salaries" className="hover:text-white transition-colors">Compare Salaries</Link></li>
+                  <li><Link href="/two-jobs" className="hover:text-white transition-colors">Two Jobs</Link></li>
+                  <li><Link href="/pro-rata-furlough" className="hover:text-white transition-colors">Pro-Rata</Link></li>
+                </ul>
+              </div>
+
+              {/* Benefits Column */}
+              <div>
+                <h3 className="text-lg font-bold mb-4">Benefits</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li><Link href="/sick-pay" className="hover:text-white transition-colors">Sick Pay</Link></li>
+                  <li><Link href="/maternity-sick-pay" className="hover:text-white transition-colors">Maternity Pay</Link></li>
+                  <li><Link href="/mortgages" className="hover:text-white transition-colors">Mortgages</Link></li>
+                  <li><Link href="/debts" className="hover:text-white transition-colors">Debt Repayment</Link></li>
+                </ul>
+              </div>
+
+              {/* Resources Column */}
+              <div>
+                <h3 className="text-lg font-bold mb-4">Resources</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+                  <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
+                  <li><Link href="/links" className="hover:text-white transition-colors">Useful Links</Link></li>
+                  <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
+                </ul>
+              </div>
+
+              {/* Legal Column */}
+              <div>
+                <h3 className="text-lg font-bold mb-4">Legal</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="border-t border-gray-700 pt-8">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p className="text-sm text-gray-400">
+                  © {new Date().getFullYear()} SalaryTakeHome.co.uk. All rights reserved.
+                </p>
+                <p className="text-xs text-gray-500">
+                  UK tax rates for 2025/26 tax year
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        </footer>
 
       </div>
     </LayoutWrapper>
