@@ -191,13 +191,13 @@ export default function HomePage() {
         </div>
 
         {/* Footer */}
-        <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12">
+        <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-6">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div className="grid md:grid-cols-4 gap-6 mb-4">
               {/* Calculators Column */}
               <div>
-                <h3 className="text-lg font-bold mb-4">Calculators</h3>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <h3 className="text-base font-bold mb-2">Calculators</h3>
+                <ul className="space-y-1 text-sm text-gray-300">
                   <li><Link href="/take-home-pay-calculator" className="hover:text-white transition-colors">Take Home Pay</Link></li>
                   <li><Link href="/hourly-wage" className="hover:text-white transition-colors">Hourly Wage</Link></li>
                   <li><Link href="/compare-salaries" className="hover:text-white transition-colors">Compare Salaries</Link></li>
@@ -208,8 +208,8 @@ export default function HomePage() {
 
               {/* Benefits Column */}
               <div>
-                <h3 className="text-lg font-bold mb-4">Benefits</h3>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <h3 className="text-base font-bold mb-2">Benefits</h3>
+                <ul className="space-y-1 text-sm text-gray-300">
                   <li><Link href="/sick-pay" className="hover:text-white transition-colors">Sick Pay</Link></li>
                   <li><Link href="/maternity-sick-pay" className="hover:text-white transition-colors">Maternity Pay</Link></li>
                   <li><Link href="/mortgages" className="hover:text-white transition-colors">Mortgages</Link></li>
@@ -219,8 +219,8 @@ export default function HomePage() {
 
               {/* Resources Column */}
               <div>
-                <h3 className="text-lg font-bold mb-4">Resources</h3>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <h3 className="text-base font-bold mb-2">Resources</h3>
+                <ul className="space-y-1 text-sm text-gray-300">
                   <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
                   <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
                   <li><Link href="/links" className="hover:text-white transition-colors">Useful Links</Link></li>
@@ -230,17 +230,17 @@ export default function HomePage() {
 
               {/* Legal Column */}
               <div>
-                <h3 className="text-lg font-bold mb-4">Legal</h3>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <h3 className="text-base font-bold mb-2">Legal</h3>
+                <ul className="space-y-1 text-sm text-gray-300">
                   <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
                 </ul>
               </div>
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-gray-700 pt-8">
-              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-sm text-gray-400">
+            <div className="border-t border-gray-700 pt-4 mt-2">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-2">
+                <p className="text-xs text-gray-400">
                   © {new Date().getFullYear()} SalaryTakeHome.co.uk. All rights reserved.
                 </p>
                 <p className="text-xs text-gray-500">
