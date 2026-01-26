@@ -1153,6 +1153,137 @@ function TaxCalculatorContent() {
         {/* Optimized Information Cards */}
         <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 mt-10">
           <div className="flex-1 max-w-6xl">
+            {/* Topic Information Cards */}
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Understanding Your Deductions</h2>
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+
+              {/* Income Tax Card */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-red-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <PoundSterling className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">Income Tax</h3>
+                  </div>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                    UK income tax is charged on earnings above your Personal Allowance (£12,570 for 2025/26). Tax rates range from 20% (basic rate) to 45% (additional rate). Scottish taxpayers have different rates and bands.
+                  </p>
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>
+                    <div className="flex flex-wrap gap-2">
+                      <a href="/blog/100k-tax-trap" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />£100k Tax Trap
+                      </a>
+                      <a href="/blog/uk-tax-changes-2025-26" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />2025/26 Tax Changes
+                      </a>
+                    </div>
+                    <div className="pt-2 border-t border-gray-100 mt-3">
+                      <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clipRule="evenodd"/><path fillRule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clipRule="evenodd"/></svg>
+                        GOV.UK - Income Tax Rates
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* National Insurance Card */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-orange-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">National Insurance</h3>
+                  </div>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                    National Insurance contributions fund state benefits including the State Pension and NHS. For 2025/26, employees pay 8% on earnings between £12,570 and £50,270, then 2% above that threshold.
+                  </p>
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>
+                    <div className="flex flex-wrap gap-2">
+                      <a href="/blog/maximize-take-home-pay-2024" className="inline-flex items-center gap-1 text-sm text-orange-600 hover:text-orange-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />Maximise Take-Home Pay
+                      </a>
+                    </div>
+                    <div className="pt-2 border-t border-gray-100 mt-3">
+                      <a href="https://www.gov.uk/national-insurance" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clipRule="evenodd"/><path fillRule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clipRule="evenodd"/></svg>
+                        GOV.UK - National Insurance
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Pensions Card */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">Pension Contributions</h3>
+                  </div>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                    Workplace pension contributions reduce your taxable income, providing tax relief at your marginal rate. Auto-enrolment requires minimum 5% employee and 3% employer contributions. Salary sacrifice pensions offer additional NI savings.
+                  </p>
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>
+                    <div className="flex flex-wrap gap-2">
+                      <a href="/blog/pension-contributions-tax-relief" className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />Pension Tax Relief
+                      </a>
+                      <a href="/blog/salary-sacrifice-complete-guide" className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />Salary Sacrifice Guide
+                      </a>
+                    </div>
+                    <div className="pt-2 border-t border-gray-100 mt-3">
+                      <a href="https://www.gov.uk/workplace-pensions" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clipRule="evenodd"/><path fillRule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clipRule="evenodd"/></svg>
+                        GOV.UK - Workplace Pensions
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Student Loans Card */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-purple-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Building className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">Student Loans</h3>
+                  </div>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                    Student loan repayments are deducted at 9% of earnings above your plan threshold. Plan 1 threshold is £26,065, Plan 2 is £28,470, and Plan 5 (post-2023) is £25,000. Postgraduate loans are repaid at 6% above £21,000.
+                  </p>
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>
+                    <div className="flex flex-wrap gap-2">
+                      <a href="/blog/student-loan-repayment-guide" className="inline-flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />Repayment Guide
+                      </a>
+                      <a href="/blog/student-loan-refund" className="inline-flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />Getting a Refund
+                      </a>
+                    </div>
+                    <div className="pt-2 border-t border-gray-100 mt-3">
+                      <a href="https://www.gov.uk/repaying-your-student-loan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clipRule="evenodd"/><path fillRule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clipRule="evenodd"/></svg>
+                        GOV.UK - Repaying Student Loans
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
             <div className="grid md:grid-cols-1 gap-6">
           {/* How This UK Salary Calculator Works Card */}
           <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
