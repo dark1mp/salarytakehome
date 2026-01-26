@@ -116,27 +116,6 @@ export default function HomePage() {
     <LayoutWrapper>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
 
-        {/* Hero Section */}
-        <div className="bg-gradient-to-br from-[#1566a0] to-[#1e90c6] text-white py-16 md:py-24">
-          <div className="max-w-6xl mx-auto px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                UK Tax & Salary Calculators
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-50">
-                Free, accurate, privacy-focused financial planning tools for 2025/26
-              </p>
-              <Link
-                href="/take-home-pay-calculator"
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
-              >
-                Calculate Your Take-Home Pay
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-
         {/* Calculators Grid */}
         <div className="max-w-7xl mx-auto px-8 py-16">
           {calculators.map((category) => (
