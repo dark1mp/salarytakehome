@@ -40,6 +40,13 @@ const calculators = [
         href: "/two-jobs",
         icon: Users,
         gradient: "from-orange-500 to-orange-600"
+      },
+      {
+        name: "Pro-Rata Calculator",
+        description: "Calculate part-time salary and tax when working reduced hours or furlough.",
+        href: "/pro-rata-furlough",
+        icon: TrendingUp,
+        gradient: "from-indigo-500 to-indigo-600"
       }
     ]
   },
@@ -59,13 +66,6 @@ const calculators = [
         href: "/maternity-sick-pay",
         icon: Baby,
         gradient: "from-pink-500 to-pink-600"
-      },
-      {
-        name: "Pro-Rata Calculator",
-        description: "Calculate part-time salary and tax when working reduced hours or furlough.",
-        href: "/pro-rata-furlough",
-        icon: TrendingUp,
-        gradient: "from-indigo-500 to-indigo-600"
       }
     ]
   },
