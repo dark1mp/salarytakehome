@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, HelpCircle, ExternalLink, Menu, X, Shield, HeartPulse } from 'lucide-react';
 
 const menuItems = [
-  { href: '/', label: 'TAKE HOME PAY', icon: Home },
+  { href: '/take-home-pay-calculator', label: 'TAKE HOME PAY', icon: Home },
   { href: '/hourly-wage', label: 'HOURLY WAGE', icon: Clock },
   { href: '/maternity-sick-pay', label: 'MATERNITY PAY', icon: Heart },
   { href: '/sick-pay', label: 'SICK PAY', icon: HeartPulse },
