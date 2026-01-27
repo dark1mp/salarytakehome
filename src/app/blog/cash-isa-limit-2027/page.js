@@ -17,6 +17,9 @@ export const metadata = {
     title: "The £12,000 Cash ISA Limit: What You Need to Know",
     description: "Your tax-free savings allowance is about to change. Here's what it means for your money.",
   },
+  alternates: {
+    canonical: "https://salarytakehome.co.uk/blog/cash-isa-limit-2027",
+  },
 };
 
 export default function CashISALimit2027() {

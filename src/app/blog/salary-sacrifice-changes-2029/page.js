@@ -17,6 +17,9 @@ export const metadata = {
     title: "Salary Sacrifice Pension Changes from April 2029",
     description: "Major changes to salary sacrifice for pensions coming in April 2029. Only £2,000 will be NIC-exempt.",
   },
+  alternates: {
+    canonical: "https://salarytakehome.co.uk/blog/salary-sacrifice-changes-2029",
+  },
 };
 
 export default function SalarySacrificeChanges2029() {

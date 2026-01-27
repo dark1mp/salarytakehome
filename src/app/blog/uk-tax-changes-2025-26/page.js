@@ -17,6 +17,9 @@ export const metadata = {
     title: "UK Tax Changes 2025/26: Complete Guide",
     description: "Latest tax rates, thresholds, and changes affecting your take-home pay this tax year.",
   },
+  alternates: {
+    canonical: "https://salarytakehome.co.uk/blog/uk-tax-changes-2025-26",
+  },
 };
 
 export default function UKTaxChanges2025() {

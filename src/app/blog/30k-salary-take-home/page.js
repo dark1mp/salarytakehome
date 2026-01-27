@@ -17,6 +17,9 @@ export const metadata = {
     title: "£30,000 Salary Take-Home Pay 2025/26",
     description: "How much do you take home from a £30k salary? Full breakdown inside.",
   },
+  alternates: {
+    canonical: "https://salarytakehome.co.uk/blog/30k-salary-take-home",
+  },
 };
 
 export default function Salary30k() {

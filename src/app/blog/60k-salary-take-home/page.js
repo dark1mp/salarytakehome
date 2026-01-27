@@ -17,6 +17,9 @@ export const metadata = {
     title: "£60,000 Salary Take-Home Pay 2025/26",
     description: "How much do you take home from a £60k salary? Full breakdown including higher rate tax.",
   },
+  alternates: {
+    canonical: "https://salarytakehome.co.uk/blog/60k-salary-take-home",
+  },
 };
 
 export default function Salary60k() {

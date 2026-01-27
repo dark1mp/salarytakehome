@@ -17,6 +17,9 @@ export const metadata = {
     title: "Are You Owed Money? The Student Loan Refund Thousands Are Missing",
     description: "Over 1 million student loan overpayments happened last year. Here's how to check if you're owed money.",
   },
+  alternates: {
+    canonical: "https://salarytakehome.co.uk/blog/student-loan-refund",
+  },
 };
 
 export default function StudentLoanRefund() {

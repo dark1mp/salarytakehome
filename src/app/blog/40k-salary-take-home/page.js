@@ -17,6 +17,9 @@ export const metadata = {
     title: "£40,000 Salary Take-Home Pay 2025/26",
     description: "How much do you take home from a £40k salary? Full breakdown inside.",
   },
+  alternates: {
+    canonical: "https://salarytakehome.co.uk/blog/40k-salary-take-home",
+  },
 };
 
 export default function Salary40k() {

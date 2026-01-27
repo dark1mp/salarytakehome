@@ -12,6 +12,9 @@ export const metadata = {
     publishedTime: "2024-03-15T00:00:00.000Z",
     authors: ["SalaryTakeHome"],
   },
+  alternates: {
+    canonical: "https://salarytakehome.co.uk/blog/maximize-take-home-pay-2024",
+  },
 };
 
 export default function MaximizeTakeHomePay() {

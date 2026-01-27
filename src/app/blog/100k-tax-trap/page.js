@@ -17,6 +17,9 @@ export const metadata = {
     title: "The £100k Tax Trap: Britain's Hidden 60% Tax Rate",
     description: "How half a million more workers will face punitive tax rates by 2029.",
   },
+  alternates: {
+    canonical: "https://salarytakehome.co.uk/blog/100k-tax-trap",
+  },
 };
 
 export default function TaxTrap100k() {
