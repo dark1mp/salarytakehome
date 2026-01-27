@@ -18,7 +18,7 @@ export const metadata = {
   robots: "index, follow",
   openGraph: {
     title: "UK Tax Calculator - Calculate Your Take-Home Pay",
-    description: "Free UK tax calculator for 2024/25. Calculate income tax, National Insurance, and student loan deductions instantly.",
+    description: "Free UK tax calculator for 2025/26. Calculate income tax, National Insurance, and student loan deductions instantly.",
     url: "https://salarytakehome.co.uk",
     siteName: "SalaryTakeHome",
     images: [
@@ -35,7 +35,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "UK Tax Calculator - Calculate Your Take-Home Pay",
-    description: "Free UK tax calculator for 2024/25. Calculate your exact take-home pay instantly.",
+    description: "Free UK tax calculator for 2025/26. Calculate your exact take-home pay instantly.",
     images: ["/opengraph-image.png"],
   },
   alternates: {
@@ -91,7 +91,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebApplication",
               "name": "UK Tax Calculator",
-              "description": "Free UK tax calculator to calculate your take-home pay, income tax, National Insurance, and student loan repayments for 2024/25.",
+              "description": "Free UK tax calculator to calculate your take-home pay, income tax, National Insurance, and student loan repayments for 2025/26.",
               "url": "https://salarytakehome.co.uk",
               "applicationCategory": "FinanceApplication",
               "operatingSystem": "Web Browser",
@@ -122,10 +122,10 @@ export default function RootLayout({ children }) {
                   },
                   {
                     "@type": "Question", 
-                    "name": "What tax rates apply in the UK for 2024/25?",
+                    "name": "What tax rates apply in the UK for 2025/26?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "UK tax rates for 2024/25: 0% on first £12,570 (Personal Allowance), 20% on £12,571-£50,270, 40% on £50,271-£125,140, and 45% above £125,140."
+                      "text": "UK tax rates for 2025/26: 0% on first £12,570 (Personal Allowance), 20% on £12,571-£50,270, 40% on £50,271-£125,140, and 45% above £125,140."
                     }
                   }
                 ]

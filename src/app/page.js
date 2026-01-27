@@ -241,6 +241,7 @@ export default function HomePage() {
                 <h3 className="text-base font-bold mb-2">Legal</h3>
                 <ul className="space-y-1 text-sm text-gray-300">
                   <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                  <li><Link href="/sitemap-page" className="hover:text-white transition-colors">Sitemap</Link></li>
                 </ul>
               </div>
             </div>

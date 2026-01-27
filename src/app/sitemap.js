@@ -103,11 +103,42 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/sitemap-page`,
+      lastModified: new Date('2026-01-27'),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
   ]
 
   // Blog posts with their specific URLs and actual publication dates
   const blogPosts = [
-    // NEW - Missing posts
+    // Salary guide posts
+    {
+      url: `${baseUrl}/blog/30k-salary-take-home`,
+      lastModified: new Date('2026-01-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/40k-salary-take-home`,
+      lastModified: new Date('2026-01-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/50k-salary-take-home`,
+      lastModified: new Date('2026-01-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/60k-salary-take-home`,
+      lastModified: new Date('2026-01-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    // Other posts
     {
       url: `${baseUrl}/blog/student-loan-refund`,
       lastModified: new Date('2026-01-25'),

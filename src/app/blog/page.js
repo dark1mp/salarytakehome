@@ -5,6 +5,42 @@ import LayoutWrapper from '../components/LayoutWrapper';
 
 const blogPosts = [
   {
+    slug: "30k-salary-take-home",
+    title: "£30,000 Salary Take-Home Pay in 2025/26",
+    excerpt: "Complete breakdown of what you'll actually receive from a £30k salary after income tax and National Insurance.",
+    date: "2026-01-27",
+    readTime: "5 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
+    slug: "40k-salary-take-home",
+    title: "£40,000 Salary Take-Home Pay in 2025/26",
+    excerpt: "See exactly how much you'll take home from a £40k salary, including tax, NI, and student loan deductions.",
+    date: "2026-01-27",
+    readTime: "5 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
+    slug: "50k-salary-take-home",
+    title: "£50,000 Salary Take-Home Pay in 2025/26",
+    excerpt: "Detailed breakdown of a £50k salary after tax - and why you're closer to the higher rate threshold than you think.",
+    date: "2026-01-27",
+    readTime: "5 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
+    slug: "60k-salary-take-home",
+    title: "£60,000 Salary Take-Home Pay in 2025/26",
+    excerpt: "What you'll actually take home from a £60k salary, including the impact of the 40% higher rate tax band.",
+    date: "2026-01-27",
+    readTime: "5 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
     slug: "student-loan-refund",
     title: "Are You Owed Money? The Student Loan Refund Thousands of UK Graduates Are Missing",
     excerpt: "Over 1 million student loan overpayments happened last year. Here's how to check if you're one of them—and get your money back.",
@@ -105,7 +141,7 @@ const blogPosts = [
   }
 ];
 
-const categories = ["All", "Tax Updates", "Money Tips", "Student Loans", "Tax Planning", "Self-Employment", "Pensions", "Savings & ISAs"];
+const categories = ["All", "Salary Guide", "Tax Updates", "Money Tips", "Student Loans", "Tax Planning", "Self-Employment", "Pensions", "Savings & ISAs"];
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
