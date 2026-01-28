@@ -31,23 +31,6 @@ const nextConfig = {
     return config;
   },
   
-  // Redirect www to non-www
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.salarytakehome.co.uk',
-          },
-        ],
-        destination: 'https://salarytakehome.co.uk/:path*',
-        permanent: true,
-      },
-    ];
-  },
-
   // Headers for caching
   async headers() {
     return [
