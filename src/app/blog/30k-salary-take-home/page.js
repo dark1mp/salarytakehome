@@ -291,24 +291,65 @@ export default function Salary30k() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "£30,000 Salary Take-Home Pay in 2025/26",
-            "description": "Complete breakdown of what you'll actually receive from a £30k salary after income tax and National Insurance.",
-            "datePublished": "2026-01-27T00:00:00.000Z",
-            "dateModified": "2026-01-27T00:00:00.000Z",
-            "author": {
-              "@type": "Organization",
-              "name": "SalaryTakeHome"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/30k-salary-take-home"
-            }
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://salarytakehome.co.uk"},
+                  {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://salarytakehome.co.uk/blog"},
+                  {"@type": "ListItem", "position": 3, "name": "£30,000 Salary Take-Home Pay"}
+                ]
+              },
+              {
+                "@type": "Article",
+                "headline": "£30,000 Salary Take-Home Pay in 2025/26",
+                "description": "Complete breakdown of what you'll actually receive from a £30k salary after income tax and National Insurance.",
+                "datePublished": "2026-01-27T00:00:00.000Z",
+                "dateModified": "2026-01-27T00:00:00.000Z",
+                "author": {
+                  "@type": "Organization",
+                  "name": "SalaryTakeHome"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "SalaryTakeHome",
+                  "url": "https://salarytakehome.co.uk"
+                },
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://salarytakehome.co.uk/blog/30k-salary-take-home"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How much is £30,000 after tax in the UK?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "On a £30,000 salary in 2025/26, you'll take home approximately £25,120 per year or £2,093 per month after income tax and National Insurance deductions."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What tax band is £30k salary in?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "A £30,000 salary falls entirely within the basic rate tax band (20%). You're well below the higher rate threshold of £50,270."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How much National Insurance do I pay on £30k?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "On a £30,000 salary, you pay approximately £1,394 per year in National Insurance (8% on earnings between £12,570 and £50,270)."
+                    }
+                  }
+                ]
+              }
+            ]
           })
         }} />
       </article>

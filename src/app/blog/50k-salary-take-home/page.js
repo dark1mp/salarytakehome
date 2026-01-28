@@ -316,24 +316,65 @@ export default function Salary50k() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "£50,000 Salary Take-Home Pay in 2025/26",
-            "description": "Complete breakdown of what you'll actually receive from a £50k salary after income tax and National Insurance.",
-            "datePublished": "2026-01-27T00:00:00.000Z",
-            "dateModified": "2026-01-27T00:00:00.000Z",
-            "author": {
-              "@type": "Organization",
-              "name": "SalaryTakeHome"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/50k-salary-take-home"
-            }
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://salarytakehome.co.uk"},
+                  {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://salarytakehome.co.uk/blog"},
+                  {"@type": "ListItem", "position": 3, "name": "£50,000 Salary Take-Home Pay"}
+                ]
+              },
+              {
+                "@type": "Article",
+                "headline": "£50,000 Salary Take-Home Pay in 2025/26",
+                "description": "Complete breakdown of what you'll actually receive from a £50k salary after income tax and National Insurance.",
+                "datePublished": "2026-01-27T00:00:00.000Z",
+                "dateModified": "2026-01-27T00:00:00.000Z",
+                "author": {
+                  "@type": "Organization",
+                  "name": "SalaryTakeHome"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "SalaryTakeHome",
+                  "url": "https://salarytakehome.co.uk"
+                },
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://salarytakehome.co.uk/blog/50k-salary-take-home"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How much is £50,000 after tax in the UK?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "On a £50,000 salary in 2025/26, you'll take home approximately £39,520 per year or £3,293 per month after income tax and National Insurance deductions."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does £50k put me in the higher tax bracket?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Almost - but not quite. At £50,000, you're just £270 below the higher rate threshold of £50,270. Any pay rise over £270 will see you paying 40% tax on the excess."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do I lose child benefit on £50k salary?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Partial clawback starts at £50,000. At exactly £50k, you'll repay 0% of child benefit. Between £50,000 and £60,000, you lose 1% for every £100 earned over £50k."
+                    }
+                  }
+                ]
+              }
+            ]
           })
         }} />
       </article>

@@ -309,24 +309,65 @@ export default function Salary40k() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "£40,000 Salary Take-Home Pay in 2025/26",
-            "description": "Complete breakdown of what you'll actually receive from a £40k salary after income tax and National Insurance.",
-            "datePublished": "2026-01-27T00:00:00.000Z",
-            "dateModified": "2026-01-27T00:00:00.000Z",
-            "author": {
-              "@type": "Organization",
-              "name": "SalaryTakeHome"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/40k-salary-take-home"
-            }
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://salarytakehome.co.uk"},
+                  {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://salarytakehome.co.uk/blog"},
+                  {"@type": "ListItem", "position": 3, "name": "£40,000 Salary Take-Home Pay"}
+                ]
+              },
+              {
+                "@type": "Article",
+                "headline": "£40,000 Salary Take-Home Pay in 2025/26",
+                "description": "Complete breakdown of what you'll actually receive from a £40k salary after income tax and National Insurance.",
+                "datePublished": "2026-01-27T00:00:00.000Z",
+                "dateModified": "2026-01-27T00:00:00.000Z",
+                "author": {
+                  "@type": "Organization",
+                  "name": "SalaryTakeHome"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "SalaryTakeHome",
+                  "url": "https://salarytakehome.co.uk"
+                },
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://salarytakehome.co.uk/blog/40k-salary-take-home"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How much is £40,000 after tax in the UK?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "On a £40,000 salary in 2025/26, you'll take home approximately £32,320 per year or £2,693 per month after income tax and National Insurance deductions."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is £40k a good salary in the UK?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, £40,000 is above the UK average salary. You're earning more than about 65% of UK workers and are comfortably in the basic rate tax band."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How close is £40k to the higher tax rate?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "At £40,000, you're £10,270 below the higher rate threshold of £50,270. You'd need a significant pay rise before paying 40% tax on any income."
+                    }
+                  }
+                ]
+              }
+            ]
           })
         }} />
       </article>
