@@ -18,7 +18,7 @@ export const metadata = {
     description: "How much do you take home from a £40k salary? Full breakdown inside.",
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog/40k-salary-take-home",
+    canonical: "https://www.salarytakehome.co.uk/blog/40k-salary-take-home",
   },
 };
 
@@ -313,8 +313,8 @@ export default function Salary40k() {
               {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                  {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://salarytakehome.co.uk"},
-                  {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://salarytakehome.co.uk/blog"},
+                  {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.salarytakehome.co.uk"},
+                  {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.salarytakehome.co.uk/blog"},
                   {"@type": "ListItem", "position": 3, "name": "£40,000 Salary Take-Home Pay"}
                 ]
               },
@@ -331,11 +331,11 @@ export default function Salary40k() {
                 "publisher": {
                   "@type": "Organization",
                   "name": "SalaryTakeHome",
-                  "url": "https://salarytakehome.co.uk"
+                  "url": "https://www.salarytakehome.co.uk"
                 },
                 "mainEntityOfPage": {
                   "@type": "WebPage",
-                  "@id": "https://salarytakehome.co.uk/blog/40k-salary-take-home"
+                  "@id": "https://www.salarytakehome.co.uk/blog/40k-salary-take-home"
                 }
               },
               {

@@ -8,7 +8,7 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL('https://salarytakehome.co.uk'),
+  metadataBase: new URL('https://www.salarytakehome.co.uk'),
   title: "UK Tax & Salary Calculators 2025/26 | SalaryTakeHome.co.uk",
   description: "Free UK tax calculators for take-home pay, mortgages, sick pay, student loans, and pensions. Calculate your finances with accurate 2025/26 tax rates. No registration required.",
   keywords: "UK tax calculator, take home pay, salary calculator, income tax, National Insurance, student loan, pension calculator, mortgage calculator, sick pay",
@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "UK Tax Calculator - Calculate Your Take-Home Pay",
     description: "Free UK tax calculator for 2025/26. Calculate income tax, National Insurance, and student loan deductions instantly.",
-    url: "https://salarytakehome.co.uk",
+    url: "https://www.salarytakehome.co.uk",
     siteName: "SalaryTakeHome",
     images: [
       {
@@ -39,7 +39,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk",
+    canonical: "https://www.salarytakehome.co.uk",
   },
   other: {
     "msapplication-TileColor": "#1566a0",
@@ -92,7 +92,7 @@ export default function RootLayout({ children }) {
               "@type": "WebApplication",
               "name": "UK Tax Calculator",
               "description": "Free UK tax calculator to calculate your take-home pay, income tax, National Insurance, and student loan repayments for 2025/26.",
-              "url": "https://salarytakehome.co.uk",
+              "url": "https://www.salarytakehome.co.uk",
               "applicationCategory": "FinanceApplication",
               "operatingSystem": "Web Browser",
               "offers": {
@@ -107,7 +107,7 @@ export default function RootLayout({ children }) {
               "publisher": {
                 "@type": "Organization",
                 "name": "SalaryTakeHome.co.uk",
-                "url": "https://salarytakehome.co.uk"
+                "url": "https://www.salarytakehome.co.uk"
               },
               "mainEntity": {
                 "@type": "FAQPage",

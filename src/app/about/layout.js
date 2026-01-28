@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "About Us - UK's Most Accurate Salary Calculator",
     description: "Learn about SalaryTakeHome.co.uk, the UK's most accurate and comprehensive tax calculator.",
-    url: "https://salarytakehome.co.uk/about",
+    url: "https://www.salarytakehome.co.uk/about",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/about",
+    canonical: "https://www.salarytakehome.co.uk/about",
   },
 };
 

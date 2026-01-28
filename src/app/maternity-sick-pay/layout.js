@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Maternity Pay Calculator - UK Statutory Maternity Pay Calculator",
     description: "Calculate UK statutory maternity pay (SMP). See your entitlement and weekly payment amounts for 2024/25.",
-    url: "https://salarytakehome.co.uk/maternity-sick-pay",
+    url: "https://www.salarytakehome.co.uk/maternity-sick-pay",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/maternity-sick-pay",
+    canonical: "https://www.salarytakehome.co.uk/maternity-sick-pay",
   },
 };
 

@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://salarytakehome.co.uk'
+  const baseUrl = 'https://www.salarytakehome.co.uk'
 
   // Main pages
   const mainPages = [

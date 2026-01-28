@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Mortgage Affordability Calculator - UK Mortgage Calculator",
     description: "Calculate how much you can borrow for a UK mortgage based on your salary and expenses.",
-    url: "https://salarytakehome.co.uk/mortgages",
+    url: "https://www.salarytakehome.co.uk/mortgages",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/mortgages",
+    canonical: "https://www.salarytakehome.co.uk/mortgages",
   },
 };
 

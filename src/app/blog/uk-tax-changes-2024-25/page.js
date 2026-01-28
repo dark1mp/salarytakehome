@@ -18,7 +18,7 @@ export const metadata = {
     description: "Latest tax rates, thresholds, and changes affecting your take-home pay this tax year.",
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog/uk-tax-changes-2024-25",
+    canonical: "https://www.salarytakehome.co.uk/blog/uk-tax-changes-2024-25",
   },
 };
 
@@ -236,11 +236,11 @@ export default function UKTaxChanges2024() {
             "publisher": {
               "@type": "Organization",
               "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
+              "url": "https://www.salarytakehome.co.uk"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/uk-tax-changes-2024-25"
+              "@id": "https://www.salarytakehome.co.uk/blog/uk-tax-changes-2024-25"
             }
           })
         }} />

@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Two Jobs Tax Calculator - Calculate Tax on Multiple Jobs",
     description: "Calculate your combined tax when working two jobs in the UK. See how PAYE tax codes split across employments.",
-    url: "https://salarytakehome.co.uk/two-jobs",
+    url: "https://www.salarytakehome.co.uk/two-jobs",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/two-jobs",
+    canonical: "https://www.salarytakehome.co.uk/two-jobs",
   },
 };
 

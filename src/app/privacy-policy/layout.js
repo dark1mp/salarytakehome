@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Privacy Policy - SalaryTakeHome.co.uk",
     description: "Learn how we protect your data and privacy at SalaryTakeHome.co.uk.",
-    url: "https://salarytakehome.co.uk/privacy-policy",
+    url: "https://www.salarytakehome.co.uk/privacy-policy",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -22,7 +22,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/privacy-policy",
+    canonical: "https://www.salarytakehome.co.uk/privacy-policy",
   },
 };
 

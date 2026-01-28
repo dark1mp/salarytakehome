@@ -13,7 +13,7 @@ export const metadata = {
     authors: ["SalaryTakeHome"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog/salary-sacrifice-complete-guide",
+    canonical: "https://www.salarytakehome.co.uk/blog/salary-sacrifice-complete-guide",
   },
 };
 
@@ -280,11 +280,11 @@ export default function SalarySacrificeGuide() {
             "publisher": {
               "@type": "Organization",
               "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
+              "url": "https://www.salarytakehome.co.uk"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/salary-sacrifice-complete-guide"
+              "@id": "https://www.salarytakehome.co.uk/blog/salary-sacrifice-complete-guide"
             }
           })
         }} />

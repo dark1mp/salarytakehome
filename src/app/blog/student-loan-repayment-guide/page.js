@@ -13,7 +13,7 @@ export const metadata = {
     authors: ["SalaryTakeHome"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog/student-loan-repayment-guide",
+    canonical: "https://www.salarytakehome.co.uk/blog/student-loan-repayment-guide",
   },
 };
 
@@ -354,11 +354,11 @@ export default function StudentLoanGuide() {
             "publisher": {
               "@type": "Organization",
               "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
+              "url": "https://www.salarytakehome.co.uk"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/student-loan-repayment-guide"
+              "@id": "https://www.salarytakehome.co.uk/blog/student-loan-repayment-guide"
             }
           })
         }} />

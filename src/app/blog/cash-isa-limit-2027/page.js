@@ -18,7 +18,7 @@ export const metadata = {
     description: "Your tax-free savings allowance is about to change. Here's what it means for your money.",
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog/cash-isa-limit-2027",
+    canonical: "https://www.salarytakehome.co.uk/blog/cash-isa-limit-2027",
   },
 };
 
@@ -502,11 +502,11 @@ export default function CashISALimit2027() {
             "publisher": {
               "@type": "Organization",
               "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
+              "url": "https://www.salarytakehome.co.uk"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/cash-isa-limit-2027"
+              "@id": "https://www.salarytakehome.co.uk/blog/cash-isa-limit-2027"
             }
           })
         }} />

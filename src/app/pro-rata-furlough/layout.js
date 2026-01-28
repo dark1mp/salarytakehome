@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Pro-Rata Salary Calculator - Part-Time Salary Calculator",
     description: "Calculate your pro-rata salary for part-time work. Convert full-time to part-time salary equivalents.",
-    url: "https://salarytakehome.co.uk/pro-rata-furlough",
+    url: "https://www.salarytakehome.co.uk/pro-rata-furlough",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/pro-rata-furlough",
+    canonical: "https://www.salarytakehome.co.uk/pro-rata-furlough",
   },
 };
 

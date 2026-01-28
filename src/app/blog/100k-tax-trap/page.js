@@ -18,7 +18,7 @@ export const metadata = {
     description: "How half a million more workers will face punitive tax rates by 2029.",
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog/100k-tax-trap",
+    canonical: "https://www.salarytakehome.co.uk/blog/100k-tax-trap",
   },
 };
 
@@ -467,11 +467,11 @@ export default function TaxTrap100k() {
             "publisher": {
               "@type": "Organization",
               "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
+              "url": "https://www.salarytakehome.co.uk"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/100k-tax-trap"
+              "@id": "https://www.salarytakehome.co.uk/blog/100k-tax-trap"
             }
           })
         }} />

@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Useful Links - UK Tax & Salary Resources",
     description: "Curated collection of official UK government resources for tax, National Insurance, pensions, and salary information.",
-    url: "https://salarytakehome.co.uk/links",
+    url: "https://www.salarytakehome.co.uk/links",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/links",
+    canonical: "https://www.salarytakehome.co.uk/links",
   },
 };
 

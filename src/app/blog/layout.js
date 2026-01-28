@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Blog - UK Tax Tips & Salary Advice",
     description: "Expert guides on UK tax, salary optimization, pension contributions, and maximizing your take-home pay.",
-    url: "https://salarytakehome.co.uk/blog",
+    url: "https://www.salarytakehome.co.uk/blog",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog",
+    canonical: "https://www.salarytakehome.co.uk/blog",
   },
 };
 

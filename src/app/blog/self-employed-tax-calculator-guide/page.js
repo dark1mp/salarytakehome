@@ -13,7 +13,7 @@ export const metadata = {
     authors: ["SalaryTakeHome"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog/self-employed-tax-calculator-guide",
+    canonical: "https://www.salarytakehome.co.uk/blog/self-employed-tax-calculator-guide",
   },
 };
 
@@ -343,11 +343,11 @@ export default function SelfEmployedTaxGuide() {
             "publisher": {
               "@type": "Organization",
               "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
+              "url": "https://www.salarytakehome.co.uk"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/self-employed-tax-calculator-guide"
+              "@id": "https://www.salarytakehome.co.uk/blog/self-employed-tax-calculator-guide"
             }
           })
         }} />

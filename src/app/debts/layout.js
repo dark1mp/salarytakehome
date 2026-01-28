@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Debt Repayment Calculator - Plan Your Debt Payoff",
     description: "Free UK debt repayment calculator. Calculate how long it will take to pay off your debts and see total interest costs.",
-    url: "https://salarytakehome.co.uk/debts",
+    url: "https://www.salarytakehome.co.uk/debts",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/debts",
+    canonical: "https://www.salarytakehome.co.uk/debts",
   },
 };
 

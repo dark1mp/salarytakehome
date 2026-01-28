@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
                   <Mail className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                   <div className="text-sm text-gray-700">
                     <strong>Email:</strong> <a href="mailto:contact@salarytakehome.co.uk" className="text-blue-600 hover:underline">contact@salarytakehome.co.uk</a><br/>
-                    <strong>Website:</strong> <Link href="/" className="text-blue-600 hover:underline">https://salarytakehome.co.uk</Link>
+                    <strong>Website:</strong> <Link href="/" className="text-blue-600 hover:underline">https://www.salarytakehome.co.uk</Link>
                   </div>
                 </div>
               </div>
@@ -360,7 +360,7 @@ export default function PrivacyPolicy() {
                   <strong>Email:</strong> <a href="mailto:contact@salarytakehome.co.uk" className="text-blue-600 hover:underline">contact@salarytakehome.co.uk</a>
                 </p>
                 <p className="text-gray-700 text-base leading-relaxed">
-                  <strong>Website:</strong> <Link href="/" className="text-blue-600 hover:underline">https://salarytakehome.co.uk</Link>
+                  <strong>Website:</strong> <Link href="/" className="text-blue-600 hover:underline">https://www.salarytakehome.co.uk</Link>
                 </p>
               </div>
             </div>

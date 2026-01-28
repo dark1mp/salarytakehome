@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Statutory Sick Pay Calculator - Calculate UK SSP Entitlement",
     description: "Free UK Statutory Sick Pay calculator. Calculate your SSP entitlement and preview the new rules from April 2026.",
-    url: "https://salarytakehome.co.uk/sick-pay",
+    url: "https://www.salarytakehome.co.uk/sick-pay",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/sick-pay",
+    canonical: "https://www.salarytakehome.co.uk/sick-pay",
   },
 };
 

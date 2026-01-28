@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Compare Salaries - Side-by-Side UK Salary Comparison",
     description: "Compare two UK salaries side-by-side. See take-home pay, tax, National Insurance, and net income differences.",
-    url: "https://salarytakehome.co.uk/compare-salaries",
+    url: "https://www.salarytakehome.co.uk/compare-salaries",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/compare-salaries",
+    canonical: "https://www.salarytakehome.co.uk/compare-salaries",
   },
 };
 

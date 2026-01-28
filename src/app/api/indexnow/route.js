@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 const INDEXNOW_KEY = 'a1b2c3d4e5f6g7h8i9j0salarytakehome';
-const SITE_HOST = 'salarytakehome.co.uk';
+const SITE_HOST = 'www.salarytakehome.co.uk';
 
 /**
  * IndexNow API endpoint for instant Bing/search engine indexing

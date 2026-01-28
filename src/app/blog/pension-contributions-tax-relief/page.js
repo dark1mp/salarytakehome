@@ -13,7 +13,7 @@ export const metadata = {
     authors: ["SalaryTakeHome"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog/pension-contributions-tax-relief",
+    canonical: "https://www.salarytakehome.co.uk/blog/pension-contributions-tax-relief",
   },
 };
 
@@ -365,11 +365,11 @@ export default function PensionContributionsGuide() {
             "publisher": {
               "@type": "Organization",
               "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
+              "url": "https://www.salarytakehome.co.uk"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/pension-contributions-tax-relief"
+              "@id": "https://www.salarytakehome.co.uk/blog/pension-contributions-tax-relief"
             }
           })
         }} />

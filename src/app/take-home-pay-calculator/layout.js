@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "UK Take Home Pay Calculator 2025/26 | Income Tax & NI Calculator",
     description: "Free UK take-home pay calculator for 2025/26. Calculate income tax, National Insurance, student loans, and pension deductions.",
-    url: "https://salarytakehome.co.uk/take-home-pay-calculator",
+    url: "https://www.salarytakehome.co.uk/take-home-pay-calculator",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/take-home-pay-calculator",
+    canonical: "https://www.salarytakehome.co.uk/take-home-pay-calculator",
   },
 };
 

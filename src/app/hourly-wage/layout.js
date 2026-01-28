@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Hourly Wage Calculator - Convert Annual Salary to Hourly Rate",
     description: "Free hourly wage calculator. Convert your annual salary to hourly, daily, weekly, or monthly rates.",
-    url: "https://salarytakehome.co.uk/hourly-wage",
+    url: "https://www.salarytakehome.co.uk/hourly-wage",
     siteName: "SalaryTakeHome",
     images: [{
       url: "/opengraph-image.png",
@@ -23,7 +23,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/hourly-wage",
+    canonical: "https://www.salarytakehome.co.uk/hourly-wage",
   },
 };
 

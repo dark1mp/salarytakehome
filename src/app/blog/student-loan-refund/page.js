@@ -18,7 +18,7 @@ export const metadata = {
     description: "Over 1 million student loan overpayments happened last year. Here's how to check if you're owed money.",
   },
   alternates: {
-    canonical: "https://salarytakehome.co.uk/blog/student-loan-refund",
+    canonical: "https://www.salarytakehome.co.uk/blog/student-loan-refund",
   },
 };
 
@@ -515,11 +515,11 @@ export default function StudentLoanRefund() {
             "publisher": {
               "@type": "Organization",
               "name": "SalaryTakeHome",
-              "url": "https://salarytakehome.co.uk"
+              "url": "https://www.salarytakehome.co.uk"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://salarytakehome.co.uk/blog/student-loan-refund"
+              "@id": "https://www.salarytakehome.co.uk/blog/student-loan-refund"
             }
           })
         }} />

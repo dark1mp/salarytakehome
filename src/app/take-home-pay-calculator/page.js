@@ -1069,7 +1069,7 @@ function TaxCalculatorContent() {
                         <div className="flex gap-3 items-center">
                           {/* Social Icons */}
                           <a
-                            href={`https://twitter.com/intent/tweet?text=My%20UK%20take-home%20pay%20is%20${encodeURIComponent(formatCurrency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : formData.period === 'weekly' ? 52 : 1)))}%2Fyear%20on%20a%20${encodeURIComponent(formatCurrency(parseFloat(formData.income.replace(/,/g, ''))))}%20salary!%20Calculate%20yours%20at%20https://salarytakehome.co.uk`}
+                            href={`https://twitter.com/intent/tweet?text=My%20UK%20take-home%20pay%20is%20${encodeURIComponent(formatCurrency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : formData.period === 'weekly' ? 52 : 1)))}%2Fyear%20on%20a%20${encodeURIComponent(formatCurrency(parseFloat(formData.income.replace(/,/g, ''))))}%20salary!%20Calculate%20yours%20at%20https://www.salarytakehome.co.uk`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center hover:bg-blue-50 text-black w-10 h-10 transition duration-200 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
@@ -1082,7 +1082,7 @@ function TaxCalculatorContent() {
                           </a>
                           
                           <a
-                            href={`https://www.linkedin.com/sharing/share-offsite/?url=https://salarytakehome.co.uk&summary=My%20UK%20take-home%20pay%20is%20${encodeURIComponent(formatCurrency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : formData.period === 'weekly' ? 52 : 1)))}%2Fyear%20on%20a%20${encodeURIComponent(formatCurrency(parseFloat(formData.income.replace(/,/g, ''))))}%20salary!`}
+                            href={`https://www.linkedin.com/sharing/share-offsite/?url=https://www.salarytakehome.co.uk&summary=My%20UK%20take-home%20pay%20is%20${encodeURIComponent(formatCurrency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : formData.period === 'weekly' ? 52 : 1)))}%2Fyear%20on%20a%20${encodeURIComponent(formatCurrency(parseFloat(formData.income.replace(/,/g, ''))))}%20salary!`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center hover:bg-blue-50 text-[#0077b5] w-10 h-10 transition duration-200 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
@@ -1093,7 +1093,7 @@ function TaxCalculatorContent() {
                           </a>
                           
                           <a
-                            href={`https://www.facebook.com/sharer/sharer.php?u=https://salarytakehome.co.uk&quote=My%20UK%20take-home%20pay%20is%20${encodeURIComponent(formatCurrency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : formData.period === 'weekly' ? 52 : 1)))}%2Fyear%20on%20a%20${encodeURIComponent(formatCurrency(parseFloat(formData.income.replace(/,/g, ''))))}%20salary!`}
+                            href={`https://www.facebook.com/sharer/sharer.php?u=https://www.salarytakehome.co.uk&quote=My%20UK%20take-home%20pay%20is%20${encodeURIComponent(formatCurrency(results.takeHome * (formData.period === 'yearly' ? 1 : formData.period === 'monthly' ? 12 : formData.period === 'weekly' ? 52 : 1)))}%2Fyear%20on%20a%20${encodeURIComponent(formatCurrency(parseFloat(formData.income.replace(/,/g, ''))))}%20salary!`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center hover:bg-blue-50 text-[#4267B2] w-10 h-10 transition duration-200 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
