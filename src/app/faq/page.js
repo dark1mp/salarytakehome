@@ -5,6 +5,9 @@ export const metadata = {
   title: "FAQ – UK Tax Calculator | SalaryTakeHome.co.uk",
   description: "Comprehensive FAQ about UK tax, National Insurance, student loans, pension contributions, and take-home pay calculations for 2024/25.",
   keywords: "UK tax FAQ, income tax questions, National Insurance FAQ, student loan repayment, pension contributions",
+  alternates: {
+    canonical: "https://www.salarytakehome.co.uk/faq",
+  },
 };
 
 const faqCategories = [
