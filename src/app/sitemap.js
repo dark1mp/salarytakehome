@@ -140,6 +140,12 @@ export default function sitemap() {
     },
     // Other posts
     {
+      url: `${baseUrl}/blog/pay-rise-negotiation-guide`,
+      lastModified: new Date('2026-01-29'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/student-loan-refund`,
       lastModified: new Date('2026-01-25'),
       changeFrequency: 'monthly',

@@ -5,6 +5,15 @@ import LayoutWrapper from '../components/LayoutWrapper';
 
 const blogPosts = [
   {
+    slug: "pay-rise-negotiation-guide",
+    title: "How to Negotiate a Pay Rise in 2026: The Complete UK Guide",
+    excerpt: "Learn proven strategies to negotiate a higher salary in the UK, including when to ask, how much to request, and what you'll actually take home after tax.",
+    date: "2026-01-29",
+    readTime: "15 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
     slug: "30k-salary-take-home",
     title: "£30,000 Salary Take-Home Pay in 2025/26",
     excerpt: "Complete breakdown of what you'll actually receive from a £30k salary after income tax and National Insurance.",
