@@ -10,7 +10,12 @@ import {
   Calculator,
   Percent,
   Building,
-  Award
+  Award,
+  HelpCircle,
+  AlertTriangle,
+  Lightbulb,
+  GraduationCap,
+  Wallet
 } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
 
@@ -415,8 +420,110 @@ export default function PayRiseCalculator() {
     };
   }, [formData, calculateTakeHome]);
 
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.salarytakehome.co.uk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pay Rise Calculator",
+            "item": "https://www.salarytakehome.co.uk/pay-rise"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much of my pay rise will I take home?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The amount you take home depends on your marginal tax rate. Basic rate taxpayers (20% tax + 8% NI) keep around 68% of their raise. Higher rate taxpayers (40% tax + 2% NI) keep around 58%. Additional rate taxpayers (45% tax + 2% NI) keep around 53%. Those earning over £100,000 may face an effective 60% rate due to personal allowance reduction."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a pay rise push me into a higher tax bracket?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only the portion of your income above each threshold is taxed at the higher rate. For example, if you move into the higher rate band (£50,271+), only the income above £50,270 is taxed at 40% - your income below that threshold remains taxed at 20%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is tax calculated on a salary increase?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your pay rise is taxed at your marginal rate - the highest tax band your income falls into. The UK uses progressive tax bands: 20% basic rate (£12,571-£50,270), 40% higher rate (£50,271-£125,140), and 45% additional rate (over £125,140). National Insurance is also deducted at 8% up to £50,270 and 2% above."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the effective tax rate on a pay rise?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The effective tax rate on your pay rise combines income tax, National Insurance, and any other deductions like student loans or pension contributions. Use our calculator to see your exact effective rate - it shows what percentage of your raise goes to taxes versus what you actually keep."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I put my pay rise into a pension?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It can be tax-efficient, especially for higher earners. Pension contributions get tax relief at your marginal rate (20%, 40%, or 45%). If you use salary sacrifice, you also save National Insurance. This is particularly valuable for those earning £100k+ to avoid the 60% tax trap where you lose your Personal Allowance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the £100k tax trap?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When you earn between £100,000 and £125,140, you lose £1 of Personal Allowance for every £2 earned over £100k. This creates an effective 60% tax rate on income in this band (40% income tax + 20% from losing allowance). A £5,000 pay rise from £100k to £105k could leave you with only £2,000 extra take-home pay."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it better to negotiate gross or net salary?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Always negotiate in gross (before tax) figures. This is the standard in the UK and makes comparisons easier. Use a pay rise calculator to understand what the gross figure means for your actual take-home pay after tax, National Insurance, and other deductions."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Pay Rise Calculator UK",
+        "url": "https://www.salarytakehome.co.uk/pay-rise",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP"
+        },
+        "description": "Free UK pay rise calculator. Calculate how much extra money you'll take home after a salary increase."
+      }
+    ]
+  };
+
   return (
     <LayoutWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         {/* Main Content */}
         <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 py-10">
@@ -865,51 +972,296 @@ export default function PayRiseCalculator() {
 
             {/* Information Cards */}
             <div className="space-y-6">
-              {/* How This Calculator Works */}
-              <div className="bg-white rounded-2xl border border-blue-100 shadow-medium p-6 md:p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
-                    <Calculator className="w-6 h-6 text-white" />
+
+              {/* Section Header */}
+              <h2 className="text-2xl font-bold text-gray-900">Understanding Your Pay Rise</h2>
+
+              {/* Grid of Topic Cards */}
+              <div className="grid md:grid-cols-2 gap-6">
+
+                {/* UK Tax Brackets Card */}
+                <div className="bg-white rounded-2xl border border-red-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <PoundSterling className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">UK Tax Brackets 2025/26</h3>
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">How This Pay Rise Calculator Works</h3>
+                  <p className="text-gray-700 text-sm mb-4">
+                    Your pay rise is taxed at your <strong>marginal rate</strong> - the highest band your income reaches:
+                  </p>
+                  <div className="bg-gray-50 rounded-xl p-4 mb-4">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="text-left text-gray-500">
+                          <th className="pb-2">Band</th>
+                          <th className="pb-2">Income</th>
+                          <th className="pb-2">Rate</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-gray-700">
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2 font-medium">Personal Allowance</td>
+                          <td>Up to £12,570</td>
+                          <td className="text-green-600 font-semibold">0%</td>
+                        </tr>
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2 font-medium">Basic Rate</td>
+                          <td>£12,571 - £50,270</td>
+                          <td className="text-amber-600 font-semibold">20%</td>
+                        </tr>
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2 font-medium">Higher Rate</td>
+                          <td>£50,271 - £125,140</td>
+                          <td className="text-orange-600 font-semibold">40%</td>
+                        </tr>
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2 font-medium">Additional Rate</td>
+                          <td>Over £125,140</td>
+                          <td className="text-red-600 font-semibold">45%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="pt-2 border-t border-gray-100">
+                    <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700">
+                      <ChevronRight className="w-3 h-3" />
+                      GOV.UK - Income Tax Rates
+                    </a>
+                  </div>
                 </div>
-                <ol className="list-decimal list-outside ml-6 space-y-3 text-gray-700">
-                  <li>Calculates your current take-home pay after all deductions</li>
-                  <li>Applies your pay rise (percentage or fixed amount)</li>
-                  <li>Recalculates take-home pay with the new salary</li>
-                  <li>Shows exactly how much extra money you&apos;ll receive</li>
-                  <li>Displays the effective tax rate on your raise</li>
-                </ol>
+
+                {/* National Insurance Card */}
+                <div className="bg-white rounded-2xl border border-orange-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">National Insurance on Your Raise</h3>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4">
+                    NI is deducted <strong>on top of income tax</strong>, increasing your effective tax rate on a pay rise:
+                  </p>
+                  <div className="bg-gray-50 rounded-xl p-4 mb-4">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="text-left text-gray-500">
+                          <th className="pb-2">Earnings</th>
+                          <th className="pb-2">NI Rate</th>
+                          <th className="pb-2">Combined*</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-gray-700">
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2">£12,570 - £50,270</td>
+                          <td className="font-semibold">8%</td>
+                          <td className="text-amber-600 font-semibold">28%</td>
+                        </tr>
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2">£50,271 - £125,140</td>
+                          <td className="font-semibold">2%</td>
+                          <td className="text-orange-600 font-semibold">42%</td>
+                        </tr>
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2">Over £125,140</td>
+                          <td className="font-semibold">2%</td>
+                          <td className="text-red-600 font-semibold">47%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p className="text-xs text-gray-500 mt-2">*Tax + NI combined rate</p>
+                  </div>
+                  <div className="pt-2 border-t border-gray-100">
+                    <a href="https://www.gov.uk/national-insurance" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700">
+                      <ChevronRight className="w-3 h-3" />
+                      GOV.UK - National Insurance
+                    </a>
+                  </div>
+                </div>
+
+                {/* £100k Tax Trap Card */}
+                <div className="bg-white rounded-2xl border border-red-200 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-rose-700 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <AlertTriangle className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">The £100k Tax Trap</h3>
+                  </div>
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-4">
+                    <p className="text-red-800 text-sm font-medium mb-2">
+                      Earning between £100,000 and £125,140? Your effective tax rate is <strong>60%</strong>!
+                    </p>
+                    <p className="text-red-700 text-sm">
+                      For every £2 you earn over £100k, you lose £1 of your Personal Allowance - creating a hidden 60% tax rate on pay rises in this band.
+                    </p>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4">
+                    <strong>Example:</strong> A £5,000 pay rise from £100k to £105k could leave you with only £2,000 extra take-home pay.
+                  </p>
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>
+                    <a href="/blog/100k-tax-trap" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
+                      <ChevronRight className="w-4 h-4" />How to Avoid the £100k Tax Trap
+                    </a>
+                  </div>
+                </div>
+
+                {/* Pension & Salary Sacrifice Card */}
+                <div className="bg-white rounded-2xl border border-blue-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Wallet className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">Pension & Salary Sacrifice Tips</h3>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4">
+                    Smart pension contributions can help you <strong>keep more of your pay rise</strong>:
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-700 mb-4">
+                    <li className="flex items-start gap-2">
+                      <Lightbulb className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Tax relief:</strong> Pension contributions reduce your taxable income, giving relief at your marginal rate</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Lightbulb className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Salary sacrifice:</strong> Also saves National Insurance (8% or 2%)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Lightbulb className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>£100k earners:</strong> Contribute enough to stay below £100k and keep your full Personal Allowance</span>
+                    </li>
+                  </ul>
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>
+                    <div className="flex flex-wrap gap-2">
+                      <a href="/blog/pension-contributions-tax-relief" className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />Pension Tax Relief
+                      </a>
+                      <a href="/blog/salary-sacrifice-complete-guide" className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />Salary Sacrifice Guide
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Student Loan Impact Card */}
+                <div className="bg-white rounded-2xl border border-purple-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <GraduationCap className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">Student Loan & Your Pay Rise</h3>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4">
+                    Student loans add <strong>another 9%</strong> deduction on income above your threshold:
+                  </p>
+                  <div className="bg-gray-50 rounded-xl p-4 mb-4">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="text-left text-gray-500">
+                          <th className="pb-2">Plan</th>
+                          <th className="pb-2">Threshold</th>
+                          <th className="pb-2">Rate</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-gray-700">
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2 font-medium">Plan 1</td>
+                          <td>£26,065</td>
+                          <td className="font-semibold">9%</td>
+                        </tr>
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2 font-medium">Plan 2</td>
+                          <td>£28,470</td>
+                          <td className="font-semibold">9%</td>
+                        </tr>
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2 font-medium">Plan 5</td>
+                          <td>£25,000</td>
+                          <td className="font-semibold">9%</td>
+                        </tr>
+                        <tr className="border-t border-gray-200">
+                          <td className="py-2 font-medium">Postgrad</td>
+                          <td>£21,000</td>
+                          <td className="font-semibold">6%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-3">
+                    <strong>Total deduction example:</strong> A higher-rate taxpayer with Plan 2 loan pays 40% tax + 2% NI + 9% student loan = <span className="text-red-600 font-bold">51%</span> on their pay rise above £50,270.
+                  </p>
+                  <div className="space-y-2">
+                    <a href="/blog/student-loan-repayment-guide" className="inline-flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700 font-medium">
+                      <ChevronRight className="w-4 h-4" />Student Loan Repayment Guide
+                    </a>
+                  </div>
+                </div>
+
+                {/* How This Calculator Works Card */}
+                <div className="bg-white rounded-2xl border border-emerald-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Calculator className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">How This Calculator Works</h3>
+                  </div>
+                  <ol className="list-decimal list-outside ml-6 space-y-2 text-gray-700 text-sm">
+                    <li>Calculates your current take-home pay after all deductions</li>
+                    <li>Applies your pay rise (percentage or fixed amount)</li>
+                    <li>Recalculates take-home pay with the new salary</li>
+                    <li>Shows exactly how much extra money you&apos;ll receive</li>
+                    <li>Displays the effective tax rate on your raise</li>
+                  </ol>
+                </div>
               </div>
 
-              {/* Why You Don't Keep 100% */}
-              <div className="bg-white rounded-2xl border border-amber-100 shadow-medium p-6 md:p-8">
+              {/* FAQ Section */}
+              <div className="bg-white rounded-2xl border border-teal-100 shadow-medium p-6 md:p-8 hover:shadow-lg transition-all duration-200">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
-                    <Info className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <HelpCircle className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Why You Don&apos;t Keep 100% of Your Pay Rise</h3>
+                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Pay Rise FAQs</h3>
                 </div>
-                <div className="space-y-4 text-gray-700">
-                  <p>
-                    When you receive a pay rise, the additional income is taxed at your <strong>marginal tax rate</strong> - the highest rate you pay. This means:
-                  </p>
-                  <ul className="list-disc list-outside ml-6 space-y-2">
-                    <li><strong>Basic rate taxpayers</strong> keep around 68% of their raise (after 20% tax + 8% NI)</li>
-                    <li><strong>Higher rate taxpayers</strong> keep around 58% of their raise (after 40% tax + 2% NI)</li>
-                    <li><strong>Additional rate taxpayers</strong> keep around 53% of their raise (after 45% tax + 2% NI)</li>
-                    <li><strong>£100k+ earners</strong> may face an effective 60% rate due to personal allowance reduction</li>
-                  </ul>
-                  <p>
-                    Student loan repayments and pension contributions can reduce your take-home even further.
-                  </p>
+                <div className="space-y-5">
+                  <div className="pb-5 border-b border-gray-200">
+                    <h4 className="font-bold text-gray-900 text-base mb-2">How much of my pay rise will I actually take home?</h4>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      It depends on your marginal tax rate. Basic rate taxpayers keep around 68% (after 20% tax + 8% NI). Higher rate taxpayers keep around 58% (40% + 2%). Those earning £100k-£125k may only keep 40% due to Personal Allowance reduction.
+                    </p>
+                  </div>
+                  <div className="pb-5 border-b border-gray-200">
+                    <h4 className="font-bold text-gray-900 text-base mb-2">Will a pay rise push me into a higher tax bracket?</h4>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      Only the portion above each threshold is taxed at the higher rate. If your salary goes from £48k to £52k, only the £1,730 above £50,270 is taxed at 40% - the rest stays at 20%. You&apos;ll always take home more with a pay rise.
+                    </p>
+                  </div>
+                  <div className="pb-5 border-b border-gray-200">
+                    <h4 className="font-bold text-gray-900 text-base mb-2">Should I put my pay rise into a pension?</h4>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      It can be tax-efficient, especially for higher earners. Pension contributions get tax relief at your marginal rate (20%, 40%, or 45%). If you use salary sacrifice, you also save National Insurance. This is particularly valuable for those earning £100k+ to avoid the 60% tax trap.
+                    </p>
+                  </div>
+                  <div className="pb-5 border-b border-gray-200">
+                    <h4 className="font-bold text-gray-900 text-base mb-2">When will I see my pay rise in my payslip?</h4>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      This depends on your employer&apos;s payroll schedule. Most employers process pay rises from the start of the next pay period after it&apos;s approved. Your tax code usually adjusts automatically through PAYE.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-base mb-2">Is it better to negotiate gross or net salary?</h4>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      Always negotiate in gross (before tax) figures. This is the standard in the UK and makes comparisons easier. Use this calculator to understand what the gross figure means for your actual take-home pay.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Disclaimer */}
-              <div className="bg-white rounded-2xl border border-purple-100 shadow-medium p-6 md:p-8">
+              <div className="bg-white rounded-2xl border border-gray-200 shadow-medium p-6 md:p-8">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Building className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h3>
