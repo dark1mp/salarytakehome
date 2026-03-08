@@ -3,6 +3,7 @@ import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import LayoutWrapper from './components/LayoutWrapper';
+import CookieConsent from './components/CookieConsent';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -134,6 +135,7 @@ export default function RootLayout({ children }) {
           }}
         />
         {children}
+        <CookieConsent />
         <Analytics />
         <SpeedInsights />
       </body>

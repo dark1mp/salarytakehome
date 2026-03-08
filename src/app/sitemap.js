@@ -104,6 +104,18 @@ export default function sitemap() {
       priority: 0.3,
     },
     {
+      url: `${baseUrl}/terms`,
+      lastModified: new Date('2026-03-08'),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date('2026-03-08'),
+      changeFrequency: 'yearly',
+      priority: 0.4,
+    },
+    {
       url: `${baseUrl}/sitemap-page`,
       lastModified: new Date('2026-01-27'),
       changeFrequency: 'monthly',

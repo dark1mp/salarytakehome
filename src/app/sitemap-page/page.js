@@ -53,6 +53,7 @@ export default function SitemapPage() {
       links: [
         { href: "/faq", label: "Frequently Asked Questions", icon: HelpCircle },
         { href: "/about", label: "About Us", icon: FileText },
+        { href: "/contact", label: "Contact Us", icon: FileText },
         { href: "/links", label: "Useful Links", icon: ExternalLink },
       ]
     },
@@ -60,6 +61,7 @@ export default function SitemapPage() {
       title: "Legal",
       links: [
         { href: "/privacy-policy", label: "Privacy Policy", icon: Shield },
+        { href: "/terms", label: "Terms of Service", icon: Shield },
       ]
     },
   ];
