@@ -366,6 +366,30 @@ export default function SalarySacrificeChanges2029() {
             ← Back to All Articles
           </Link>
         </div>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Salary Sacrifice Pension Changes from April 2029: What You Need to Know",
+            "description": "From April 2029, salary sacrifice for pensions will change. Only the first £2,000 of employee pension contributions through salary sacrifice will be exempt from National Insurance.",
+            "datePublished": "2025-11-26T00:00:00.000Z",
+            "dateModified": "2025-11-26T00:00:00.000Z",
+            "author": {
+              "@type": "Organization",
+              "name": "SalaryTakeHome"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "SalaryTakeHome",
+              "url": "https://www.salarytakehome.co.uk"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.salarytakehome.co.uk/blog/salary-sacrifice-changes-2029"
+            }
+          })
+        }} />
       </article>
     </div>
   );

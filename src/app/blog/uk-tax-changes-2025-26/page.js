@@ -412,6 +412,30 @@ export default function UKTaxChanges2025() {
             ← Back to All Articles
           </Link>
         </div>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "UK Tax Changes 2025/26: Complete Guide to New Rates & Thresholds",
+            "description": "Comprehensive guide to UK tax changes for 2025/26 including income tax rates, National Insurance updates, and how they affect your take-home pay.",
+            "datePublished": "2025-04-06T00:00:00.000Z",
+            "dateModified": "2025-04-06T00:00:00.000Z",
+            "author": {
+              "@type": "Organization",
+              "name": "SalaryTakeHome"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "SalaryTakeHome",
+              "url": "https://www.salarytakehome.co.uk"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.salarytakehome.co.uk/blog/uk-tax-changes-2025-26"
+            }
+          })
+        }} />
       </article>
     </div>
   );

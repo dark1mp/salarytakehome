@@ -52,6 +52,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Favicon & Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="google3b93564eda4debf4.html" />
 
