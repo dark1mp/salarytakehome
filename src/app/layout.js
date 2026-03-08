@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   metadataBase: new URL('https://www.salarytakehome.co.uk'),
   title: "UK Tax & Salary Calculators 2025/26 | SalaryTakeHome.co.uk",
-  description: "Free UK tax calculators for take-home pay, mortgages, sick pay, student loans, and pensions. Calculate your finances with accurate 2025/26 tax rates. No registration required.",
+  description: "Free UK tax calculators for take-home pay, mortgages, student loans, and pensions. Calculate your salary with accurate 2025/26 tax rates.",
   keywords: "UK tax calculator, take home pay, salary calculator, income tax, National Insurance, student loan, pension calculator, mortgage calculator, sick pay",
   authors: [{ name: "SalaryTakeHome" }],
   creator: "SalaryTakeHome",
