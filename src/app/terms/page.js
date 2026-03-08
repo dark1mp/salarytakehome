@@ -5,6 +5,26 @@ import LayoutWrapper from '../components/LayoutWrapper';
 export const metadata = {
   title: "Terms of Service | SalaryTakeHome.co.uk",
   description: "Terms of Service for SalaryTakeHome.co.uk - Free UK tax calculators. Read our terms and conditions for using our salary and tax calculation tools.",
+  openGraph: {
+    title: "Terms of Service | SalaryTakeHome.co.uk",
+    description: "Terms of Service for SalaryTakeHome.co.uk - Free UK tax calculators. Read our terms and conditions.",
+    url: "https://www.salarytakehome.co.uk/terms",
+    siteName: "SalaryTakeHome",
+    images: [{
+      url: "/opengraph-image.png",
+      width: 1200,
+      height: 630,
+      alt: "SalaryTakeHome Calculator",
+    }],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | SalaryTakeHome.co.uk",
+    description: "Terms of Service for SalaryTakeHome.co.uk - Free UK tax calculators.",
+    images: ["/opengraph-image.png"],
+  },
   alternates: {
     canonical: "https://www.salarytakehome.co.uk/terms",
   },

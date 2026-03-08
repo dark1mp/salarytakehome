@@ -5,6 +5,26 @@ import LayoutWrapper from '../components/LayoutWrapper';
 export const metadata = {
   title: "Contact Us | SalaryTakeHome.co.uk",
   description: "Get in touch with the SalaryTakeHome.co.uk team. Contact us about our UK tax calculators, report issues, or ask questions about our tools.",
+  openGraph: {
+    title: "Contact Us | SalaryTakeHome.co.uk",
+    description: "Get in touch with the SalaryTakeHome.co.uk team about our UK tax calculators.",
+    url: "https://www.salarytakehome.co.uk/contact",
+    siteName: "SalaryTakeHome",
+    images: [{
+      url: "/opengraph-image.png",
+      width: 1200,
+      height: 630,
+      alt: "SalaryTakeHome Calculator",
+    }],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | SalaryTakeHome.co.uk",
+    description: "Get in touch with the SalaryTakeHome.co.uk team about our UK tax calculators.",
+    images: ["/opengraph-image.png"],
+  },
   alternates: {
     canonical: "https://www.salarytakehome.co.uk/contact",
   },

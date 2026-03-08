@@ -35,7 +35,7 @@ export default function About() {
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Info className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">What We Offer</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">What We Offer</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
@@ -105,7 +105,7 @@ export default function About() {
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Lightbulb className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Why Choose SalaryTakeHome?</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Why Choose SalaryTakeHome?</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-4">Here's what makes us different:</p>
@@ -141,7 +141,7 @@ export default function About() {
                   <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Users className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Who We Help</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Who We Help</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-4">Our calculators are used by thousands of people every day, including:</p>
@@ -176,61 +176,61 @@ export default function About() {
                   <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Frequently Asked Questions</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Frequently Asked Questions</h2>
                 </div>
 
                 <div className="space-y-6">
                   <div className="pb-6 border-b border-gray-200">
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">How accurate are the calculations?</h4>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">How accurate are the calculations?</h3>
                     <p className="text-gray-700 text-base leading-relaxed">
                       Our calculations are based on official HMRC tax rates and thresholds. While we strive for accuracy, the results are estimates and may differ slightly from your actual payslip due to employer-specific deductions, benefits in kind, or other factors.
                     </p>
                   </div>
 
                   <div className="pb-6 border-b border-gray-200">
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Is my data stored or shared?</h4>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Is my data stored or shared?</h3>
                     <p className="text-gray-700 text-base leading-relaxed">
                       No. All calculations are performed locally in your browser. We don't send your salary information to our servers or store any personal data. Your privacy is our priority.
                     </p>
                   </div>
 
                   <div className="pb-6 border-b border-gray-200">
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">How often are tax rates updated?</h4>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">How often are tax rates updated?</h3>
                     <p className="text-gray-700 text-base leading-relaxed">
                       We update our calculators each April when the new tax year begins, and whenever there are mid-year changes announced by the government. We also update statutory rates (like maternity pay and sick pay) when they change.
                     </p>
                   </div>
 
                   <div className="pb-6 border-b border-gray-200">
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Can I use this for Scottish tax rates?</h4>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Can I use this for Scottish tax rates?</h3>
                     <p className="text-gray-700 text-base leading-relaxed">
                       Yes! Our main take-home pay calculator includes an option to select Scottish tax rates, which have different income tax bands and rates compared to the rest of the UK.
                     </p>
                   </div>
 
                   <div className="pb-6 border-b border-gray-200">
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Do you support all student loan plans?</h4>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Do you support all student loan plans?</h3>
                     <p className="text-gray-700 text-base leading-relaxed">
                       Yes, we support all UK student loan repayment plans: Plan 1, Plan 2, Plan 4 (Scotland), Plan 5, and Postgraduate loans. You can select your plan in the calculator to see accurate deductions.
                     </p>
                   </div>
 
                   <div className="pb-6 border-b border-gray-200">
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Is this site really free?</h4>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Is this site really free?</h3>
                     <p className="text-gray-700 text-base leading-relaxed">
                       Yes, completely free! We're supported by advertising, which allows us to keep all features available to everyone without charge.
                     </p>
                   </div>
 
                   <div className="pb-6 border-b border-gray-200">
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Can I calculate pension contributions?</h4>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Can I calculate pension contributions?</h3>
                     <p className="text-gray-700 text-base leading-relaxed">
                       Yes, our take-home pay calculator includes options for pension contributions, including workplace pensions and salary sacrifice arrangements. You can see how different contribution levels affect your take-home pay.
                     </p>
                   </div>
 
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">What if I have two jobs?</h4>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">What if I have two jobs?</h3>
                     <p className="text-gray-700 text-base leading-relaxed">
                       We have a dedicated <Link href="/two-jobs" className="text-blue-600 hover:text-blue-800 underline font-semibold">Two Jobs Tax Calculator</Link> that shows how tax works when you have multiple employments, including how your personal allowance is typically allocated to your main job.
                     </p>
@@ -257,7 +257,7 @@ export default function About() {
                   <div className="w-14 h-14 bg-gradient-to-br from-rose-500 to-red-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Shield className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Important Disclaimer</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Important Disclaimer</h2>
                 </div>
 
                 <div className="bg-rose-50 rounded-xl p-6 border border-rose-200">

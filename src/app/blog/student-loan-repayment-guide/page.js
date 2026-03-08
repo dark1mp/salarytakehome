@@ -12,6 +12,12 @@ export const metadata = {
     type: "article",
     publishedTime: "2024-03-01T00:00:00.000Z",
     authors: ["SalaryTakeHome"],
+    images: [{
+      url: "/opengraph-image.png",
+      width: 1200,
+      height: 630,
+      alt: "SalaryTakeHome Calculator",
+    }],
   },
   alternates: {
     canonical: "https://www.salarytakehome.co.uk/blog/student-loan-repayment-guide",

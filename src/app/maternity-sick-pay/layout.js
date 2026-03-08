@@ -1,10 +1,10 @@
 export const metadata = {
   title: "Maternity Pay Calculator - UK Statutory Maternity Pay Calculator | SalaryTakeHome.co.uk",
-  description: "Calculate UK statutory maternity pay (SMP). See your entitlement and weekly payment amounts for 2024/25 tax year.",
+  description: "Calculate UK statutory maternity pay (SMP). See your entitlement and weekly payment amounts for 2025/26 tax year.",
   keywords: "maternity pay calculator, statutory maternity pay, SMP calculator, maternity pay UK, pregnancy pay",
   openGraph: {
     title: "Maternity Pay Calculator - UK Statutory Maternity Pay Calculator",
-    description: "Calculate UK statutory maternity pay (SMP). See your entitlement and weekly payment amounts for 2024/25.",
+    description: "Calculate UK statutory maternity pay (SMP). See your entitlement and weekly payment amounts for 2025/26.",
     url: "https://www.salarytakehome.co.uk/maternity-sick-pay",
     siteName: "SalaryTakeHome",
     images: [{
@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Maternity Pay Calculator - UK Statutory Maternity Pay Calculator",
-    description: "Calculate UK statutory maternity pay (SMP) and see your entitlement for 2024/25.",
+    description: "Calculate UK statutory maternity pay (SMP) and see your entitlement for 2025/26.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

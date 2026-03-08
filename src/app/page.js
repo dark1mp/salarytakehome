@@ -125,6 +125,7 @@ export default function HomePage() {
 
         {/* Calculators Grid */}
         <div className="max-w-7xl mx-auto px-8 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-12">UK Tax & Salary Calculators 2025/26</h1>
           {calculators.map((category) => (
             <div key={category.category} className="mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">{category.category}</h2>

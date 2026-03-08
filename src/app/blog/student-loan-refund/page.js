@@ -12,6 +12,12 @@ export const metadata = {
     type: "article",
     publishedTime: "2026-01-25T00:00:00.000Z",
     authors: ["SalaryTakeHome"],
+    images: [{
+      url: "/opengraph-image.png",
+      width: 1200,
+      height: 630,
+      alt: "SalaryTakeHome Calculator",
+    }],
   },
   twitter: {
     card: "summary_large_image",

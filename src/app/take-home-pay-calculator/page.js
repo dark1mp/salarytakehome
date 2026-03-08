@@ -624,7 +624,7 @@ function TaxCalculatorContent() {
           priority
         />
         <div className="flex-1 min-w-0">
-          <h1 className="text-xl md:text-3xl font-bold text-white whitespace-normal break-words">UK Tax Calculator</h1>
+          <span className="text-xl md:text-3xl font-bold text-white whitespace-normal break-words">UK Tax Calculator</span>
           <p className="text-white text-sm md:text-lg whitespace-normal break-words">Calculate your income tax and take-home pay</p>
         </div>
       </header>

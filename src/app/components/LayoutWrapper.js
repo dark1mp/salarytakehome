@@ -7,7 +7,9 @@ export default function LayoutWrapper({ children }) {
     <>
       <Sidebar />
       <div className="ml-0 md:ml-[230px]">
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
       </div>
     </>

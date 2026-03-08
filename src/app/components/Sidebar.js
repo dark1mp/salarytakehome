@@ -79,7 +79,7 @@ export default function Sidebar() {
       </div>
 
       {/* Navigation Menu */}
-      <nav className="flex-1 overflow-y-auto py-5 px-3 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
+      <nav aria-label="Main navigation" className="flex-1 overflow-y-auto py-5 px-3 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
         <ul className="space-y-1.5">
           {menuItems.map((item) => {
             const Icon = item.icon;
@@ -136,7 +136,7 @@ export default function Sidebar() {
       <div className="p-4 border-t border-white/10 bg-black/10 backdrop-blur-sm">
         <div className="text-center">
           <div className="text-[10px] text-white/70 font-medium mb-1.5">UK Tax Calculator</div>
-          <div className="text-[8px] text-white/50 uppercase tracking-wider">© 2025 SalaryTakeHome.co.uk</div>
+          <div className="text-[8px] text-white/50 uppercase tracking-wider">© {new Date().getFullYear()} SalaryTakeHome.co.uk</div>
           <div className="mt-2.5 pt-2.5 border-t border-white/10">
             <div className="flex items-center justify-center gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></div>
