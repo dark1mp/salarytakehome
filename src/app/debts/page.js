@@ -389,6 +389,26 @@ export default function Debts() {
           </aside>
         </div>
 
+        {/* Related Reading */}
+        <div className="max-w-[1400px] mx-auto px-8 mt-6 mb-8">
+          <div className="max-w-6xl">
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
+            <div className="grid md:grid-cols-3 gap-3">
+              <a href="/blog/maximize-take-home-pay-2024" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Money Tips</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How to Maximise Your Take Home Pay</p>
+              </a>
+              <a href="/blog/30k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£30k Salary Take Home Pay Breakdown</p>
+              </a>
+              <a href="/blog/student-loan-repayment-guide" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Student Loans</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Student Loan Repayment Guide</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </LayoutWrapper>
   );

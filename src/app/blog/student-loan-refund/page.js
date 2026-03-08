@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "Are You Owed Money? The Student Loan Refund Thousands of UK Graduates Are Missing",
@@ -523,6 +524,12 @@ export default function StudentLoanRefund() {
             }
           })
         }} />
+        <RelatedArticles articles={[
+          { href: "/blog/student-loan-repayment-guide", title: "Student Loan Repayment Guide", category: "Student Loans", description: "Everything you need to know about student loan repayments." },
+          { href: "/blog/30k-salary-take-home", title: "£30k Salary Take Home Pay", category: "Salary Guide", description: "See how student loans affect a £30k salary." },
+          { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
+          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Latest tax rates and thresholds for this year." },
+        ]} />
       </article>
     </div>
   );

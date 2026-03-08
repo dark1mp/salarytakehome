@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "Pension Contributions and Tax Relief: Maximize Your Retirement Savings",
@@ -373,6 +374,12 @@ export default function PensionContributionsGuide() {
             }
           })
         }} />
+        <RelatedArticles articles={[
+          { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Save on tax and NI through salary sacrifice." },
+          { href: "/blog/salary-sacrifice-changes-2029", title: "Salary Sacrifice Changes from 2029", category: "Pensions", description: "Upcoming changes to salary sacrifice rules." },
+          { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "Use pension contributions to avoid the 60% trap." },
+          { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "More ways to keep more of your earnings." },
+        ]} />
       </article>
     </div>
   );

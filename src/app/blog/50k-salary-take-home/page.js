@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "£50,000 Salary Take-Home Pay 2025/26 | After Tax Calculator",
@@ -377,6 +378,12 @@ export default function Salary50k() {
             ]
           })
         }} />
+        <RelatedArticles articles={[
+          { href: "/blog/40k-salary-take-home", title: "£40k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £40,000 salary." },
+          { href: "/blog/60k-salary-take-home", title: "£60k Salary Take Home Pay", category: "Salary Guide", description: "Breakdown of a £60k salary after tax and NI." },
+          { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "How higher earners face a hidden 60% effective tax rate." },
+          { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Save tax and NI through salary sacrifice arrangements." },
+        ]} />
       </article>
     </div>
   );

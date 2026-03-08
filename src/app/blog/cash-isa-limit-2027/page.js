@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027",
@@ -510,6 +511,12 @@ export default function CashISALimit2027() {
             }
           })
         }} />
+        <RelatedArticles articles={[
+          { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
+          { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "Another tax-efficient way to save." },
+          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Latest tax rates and thresholds." },
+          { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Save on tax and NI through salary sacrifice." },
+        ]} />
       </article>
     </div>
   );

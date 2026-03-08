@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "Salary Sacrifice Pension Changes from April 2029: What You Need to Know",
@@ -390,6 +391,12 @@ export default function SalarySacrificeChanges2029() {
             }
           })
         }} />
+        <RelatedArticles articles={[
+          { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Full guide to current salary sacrifice rules." },
+          { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "How pension contributions reduce your tax." },
+          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Current year tax rates and thresholds." },
+          { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
+        ]} />
       </article>
     </div>
   );

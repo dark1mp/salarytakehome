@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "Salary Sacrifice: Complete Guide to Tax-Free Benefits",
@@ -288,6 +289,12 @@ export default function SalarySacrificeGuide() {
             }
           })
         }} />
+        <RelatedArticles articles={[
+          { href: "/blog/salary-sacrifice-changes-2029", title: "Salary Sacrifice Changes from 2029", category: "Pensions", description: "Important upcoming changes to salary sacrifice." },
+          { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "How pension contributions reduce your tax." },
+          { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "Use salary sacrifice to avoid the 60% trap." },
+          { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "More ways to keep more of your earnings." },
+        ]} />
       </article>
     </div>
   );

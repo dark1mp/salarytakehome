@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "Self-Employed Tax Calculator: How to Estimate Your Tax Bill",
@@ -351,6 +352,12 @@ export default function SelfEmployedTaxGuide() {
             }
           })
         }} />
+        <RelatedArticles articles={[
+          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Latest tax rates affecting the self-employed." },
+          { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "Tax relief on pension contributions." },
+          { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
+          { href: "/blog/student-loan-repayment-guide", title: "Student Loan Repayment Guide", category: "Student Loans", description: "How student loans work for the self-employed." },
+        ]} />
       </article>
     </div>
   );

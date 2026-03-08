@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "Student Loan Repayment Calculator Guide: Plans 1, 2 & 5 Explained",
@@ -362,6 +363,12 @@ export default function StudentLoanGuide() {
             }
           })
         }} />
+        <RelatedArticles articles={[
+          { href: "/blog/student-loan-refund", title: "Student Loan Refund Guide", category: "Student Loans", description: "Check if you've overpaid your student loan." },
+          { href: "/blog/40k-salary-take-home", title: "£40k Salary Take Home Pay", category: "Salary Guide", description: "See how student loans affect a £40k salary." },
+          { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
+          { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "Another way to reduce your tax bill." },
+        ]} />
       </article>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "UK Tax Changes 2025/26: Complete Guide to New Rates & Thresholds",
@@ -436,6 +437,12 @@ export default function UKTaxChanges2025() {
             }
           })
         }} />
+        <RelatedArticles articles={[
+          { href: "/blog/uk-tax-changes-2024-25", title: "UK Tax Changes 2024/25", category: "Tax Updates", description: "Compare with last year's rates." },
+          { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "How frozen thresholds affect high earners." },
+          { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "Reduce your tax bill with pension contributions." },
+          { href: "/blog/salary-sacrifice-changes-2029", title: "Salary Sacrifice Changes from 2029", category: "Pensions", description: "Upcoming changes to salary sacrifice rules." },
+        ]} />
       </article>
     </div>
   );

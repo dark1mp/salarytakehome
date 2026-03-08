@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import RelatedArticles from "../../components/RelatedArticles";
 
 export const metadata = {
   title: "How to Negotiate a Pay Rise in 2026: The Complete UK Guide",
@@ -537,6 +538,12 @@ export default function PayRiseNegotiationGuide() {
             </ul>
           </div>
         </div>
+        <RelatedArticles articles={[
+          { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "Watch out for the hidden 60% tax rate above £100k." },
+          { href: "/blog/50k-salary-take-home", title: "£50k Salary Take Home Pay", category: "Salary Guide", description: "What a £50k salary looks like after tax." },
+          { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Maximise your pay rise with salary sacrifice." },
+          { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "More strategies to keep more of your earnings." },
+        ]} />
       </article>
     </div>
   );
