@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "postbuild": "node scripts/submit-indexnow.mjs",
     "start": "next start",
     "lint": "next lint"
   },
