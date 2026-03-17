@@ -5,30 +5,16 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
   },
-  
+
   // Enable compression
   compress: true,
-  
+
   // Turbopack config (Next.js 16+)
   turbopack: {},
-  
-  // Bundle analyzer in development
-  webpack: (config, { dev, isServer }) => {
-    // Optimize bundle size
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    
-    return config;
+
+  // Inline CSS to eliminate render-blocking stylesheet requests
+  experimental: {
+    inlineCss: true,
   },
   
   // Redirect non-www to www

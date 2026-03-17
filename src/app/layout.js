@@ -52,6 +52,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Preconnect to third-party origins for faster loading */}
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+        <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net" />
+
         {/* Favicon & Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -66,13 +72,13 @@ export default function RootLayout({ children }) {
         {/* Google AdSense Account */}
         <meta name="google-adsense-account" content="ca-pub-3447670244921264" />
 
-        {/* Google Analytics */}
+        {/* Google Analytics - deferred to reduce main thread blocking */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-LFKMMNJBFJ"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -89,8 +95,8 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
         />
 
-        {/* Microsoft Clarity */}
-        <Script id="microsoft-clarity" strategy="afterInteractive">
+        {/* Microsoft Clarity - deferred to reduce main thread blocking */}
+        <Script id="microsoft-clarity" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
