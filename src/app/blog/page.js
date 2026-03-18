@@ -5,6 +5,15 @@ import LayoutWrapper from '../components/LayoutWrapper';
 
 const blogPosts = [
   {
+    slug: "supermarket-pay-rises-2026",
+    title: "Supermarket Pay Rises 2026: How Tesco, Aldi, M&S, Lidl, Sainsbury's & Morrisons Compare",
+    excerpt: "Every major UK supermarket has announced new pay rates for 2026. Compare hourly rates from Aldi to Morrisons and see what you'll actually take home after tax.",
+    date: "2026-03-18",
+    readTime: "8 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
     slug: "pay-rise-negotiation-guide",
     title: "How to Negotiate a Pay Rise in 2026: The Complete UK Guide",
     excerpt: "Learn proven strategies to negotiate a higher salary in the UK, including when to ask, how much to request, and what you'll actually take home after tax.",
