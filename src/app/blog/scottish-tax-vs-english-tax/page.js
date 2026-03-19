@@ -6,7 +6,7 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 export const metadata = {
   title: "Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?",
   description: "Scotland has 6 income tax bands compared to England's 3. See exactly how much more or less you'd pay depending on your salary, and at what point Scottish taxpayers start paying more.",
-  keywords: "Scottish tax rates 2025/26, Scotland vs England tax, Scottish income tax, Scottish tax bands, rUK tax comparison, Scottish taxpayer, S tax code",
+  keywords: "Scottish tax rates 2025/26, Scotland vs England tax, Scottish income tax, Scottish tax bands, rest of UK tax comparison, Scottish taxpayer, S tax code",
   openGraph: {
     title: "Scottish Tax vs English Tax 2025/26: Who Pays More?",
     description: "Scotland has 6 tax bands compared to England's 3. Here's exactly how much more (or less) you'd pay depending on your salary.",
@@ -73,7 +73,7 @@ export default function ScottishTaxVsEnglishTax() {
 
             {/* Side-by-Side Comparison Table */}
             <div className="glass-light rounded-2xl p-8 mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Side-by-Side: Scottish vs rUK Tax Bands 2025/26</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Side-by-Side: Scottish vs Rest of UK Tax Bands 2025/26</h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
                   <thead>
@@ -81,8 +81,8 @@ export default function ScottishTaxVsEnglishTax() {
                       <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Band</th>
                       <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Scotland Rate</th>
                       <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Scotland Threshold</th>
-                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">rUK Rate</th>
-                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">rUK Threshold</th>
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Rest of UK Rate</th>
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Rest of UK Threshold</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -140,7 +140,7 @@ export default function ScottishTaxVsEnglishTax() {
               </div>
               <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
                 <p className="text-sm text-blue-800">
-                  <strong>Key difference:</strong> Scotland&apos;s 19% starter rate saves lower earners a small amount, but the higher rates (42%, 45%, 48%) kick in much earlier and are steeper than rUK equivalents. Source: <a href="https://www.mygov.scot/scottish-income-tax/current-income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">mygov.scot</a>.
+                  <strong>Key difference:</strong> Scotland&apos;s 19% starter rate saves lower earners a small amount, but the higher rates (42%, 45%, 48%) kick in much earlier and are steeper than rest of the UK equivalents. Source: <a href="https://www.mygov.scot/scottish-income-tax/current-income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">mygov.scot</a>.
                 </p>
               </div>
             </div>
@@ -149,7 +149,7 @@ export default function ScottishTaxVsEnglishTax() {
             <div className="glass-light rounded-2xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">The Crossover Point: Where Scottish Tax Overtakes English Tax</h2>
               <p className="text-gray-700 mb-4">
-                Thanks to Scotland&apos;s 19% starter rate (1% lower than the rUK basic rate), Scottish taxpayers earning below approximately <strong>&pound;30,318</strong> actually pay slightly <em>less</em> income tax than they would in England &mdash; up to about &pound;28 per year less.
+                Thanks to Scotland&apos;s 19% starter rate (1% lower than the rest of the UK basic rate), Scottish taxpayers earning below approximately <strong>&pound;30,318</strong> actually pay slightly <em>less</em> income tax than they would in England &mdash; up to about &pound;28 per year less.
               </p>
               <p className="text-gray-700 mb-4">
                 Above &pound;30,318, the combination of the 21% intermediate rate and the earlier jump to 42% means Scottish taxpayers start paying <em>more</em>. The gap widens significantly at higher salaries, reaching thousands of pounds per year for higher earners.
@@ -205,7 +205,7 @@ export default function ScottishTaxVsEnglishTax() {
                     </span>
                   </div>
                   <p className="text-gray-600 text-sm">
-                    Scotland&apos;s 42% higher rate kicks in at &pound;43,663 vs &pound;50,271 in rUK.
+                    Scotland&apos;s 42% higher rate kicks in at &pound;43,663 vs &pound;50,271 in the rest of the UK.
                   </p>
                 </div>
 
@@ -259,7 +259,7 @@ export default function ScottishTaxVsEnglishTax() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
                   <h3 className="font-semibold text-gray-800 mb-2">Personal Allowance</h3>
-                  <p className="text-gray-600 text-sm">&pound;12,570 &mdash; identical in Scotland and rUK. Tapers above &pound;100k in both systems.</p>
+                  <p className="text-gray-600 text-sm">&pound;12,570 &mdash; identical in Scotland and the rest of the UK. Tapers above &pound;100k in both systems.</p>
                 </div>
                 <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
                   <h3 className="font-semibold text-gray-800 mb-2">National Insurance</h3>
@@ -283,7 +283,7 @@ export default function ScottishTaxVsEnglishTax() {
                 Your tax rate is determined by where you <strong>live</strong>, not where you work. If you live in Scotland but commute to England for work, you pay Scottish rates. If you live in England but work remotely for a Scottish company, you pay English rates.
               </p>
               <p className="text-gray-700 mb-4">
-                The easiest way to check is your tax code. Scottish taxpayers have a tax code starting with the letter <strong>S</strong> (for example, S1257L). If your tax code doesn&apos;t start with S, you&apos;re on rUK rates. For more details, see <a href="https://www.gov.uk/scottish-income-tax" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK&apos;s Scottish Income Tax page</a>.
+                The easiest way to check is your tax code. Scottish taxpayers have a tax code starting with the letter <strong>S</strong> (for example, S1257L). If your tax code doesn&apos;t start with S, you&apos;re on rest of UK rates. For more details, see <a href="https://www.gov.uk/scottish-income-tax" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK&apos;s Scottish Income Tax page</a>.
               </p>
               <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
                 <h3 className="font-semibold text-blue-800 mb-2">What if my tax code is wrong?</h3>
