@@ -110,7 +110,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 
 ## Blog
 
-17 blog posts across categories: Salary Guide, Tax Planning, Pensions, Student Loans, Savings & ISAs.
+20 blog posts across categories: Salary Guide, Tax Planning, Pensions, Student Loans, Savings & ISAs. Includes "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension) which target high-intent search queries.
 
 ### Adding a New Blog Post
 
@@ -119,9 +119,10 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 3. Add the post to the blog index in `src/app/blog/page.js`
 4. Add the URL to `src/app/sitemap.js` (update blog lastModified date too)
 5. Cross-link to relevant calculators (hourly-wage, take-home-pay-calculator, pay-rise)
-6. Include structured data: Article schema + FAQPage (if applicable). BreadcrumbList schema is handled by the Breadcrumbs component automatically.
-7. Add RelatedArticles component at the bottom
-8. After deploy, IndexNow submission happens automatically via postbuild script
+6. Add external links to official sources (.gov.uk, HMRC, SLC etc.) for E-E-A-T credibility
+7. Include structured data: Article schema + FAQPage (if applicable). BreadcrumbList schema is handled by the Breadcrumbs component automatically.
+8. Add RelatedArticles component at the bottom
+9. After deploy, IndexNow submission happens automatically via postbuild script
 
 ## SEO Checklist
 
@@ -182,5 +183,5 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - No hreflang tags (should add `en-gb`)
 - FAQ schema only on FAQ page (could be added to calculator pages for more rich results)
 - No table of contents on long blog posts
-- No "vs" comparison content (e.g. salary sacrifice vs personal pension)
+- More "vs" comparison content opportunities (e.g. PAYE vs self-employed, full-time vs part-time tax)
 - When adding new blog posts, update Related Reading sections on relevant calculator pages

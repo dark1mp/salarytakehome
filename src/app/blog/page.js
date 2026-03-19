@@ -5,6 +5,33 @@ import LayoutWrapper from '../components/LayoutWrapper';
 
 const blogPosts = [
   {
+    slug: "scottish-tax-vs-english-tax",
+    title: "Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?",
+    excerpt: "Scotland has 6 tax bands compared to England's 3. Here's exactly how much more (or less) you'd pay depending on your salary.",
+    date: "2026-03-19",
+    readTime: "12 min read",
+    category: "Tax Planning",
+    featured: true
+  },
+  {
+    slug: "plan-1-vs-plan-2-student-loan",
+    title: "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2025/26",
+    excerpt: "Not sure which plan you're on or how they compare? Here's everything about repayment thresholds, interest rates, and how much you'll actually repay.",
+    date: "2026-03-19",
+    readTime: "10 min read",
+    category: "Student Loans",
+    featured: true
+  },
+  {
+    slug: "salary-sacrifice-vs-personal-pension",
+    title: "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2025/26?",
+    excerpt: "Both get you tax relief on pension contributions — but salary sacrifice saves you National Insurance too. Here's exactly how much more you could save.",
+    date: "2026-03-19",
+    readTime: "12 min read",
+    category: "Pensions",
+    featured: true
+  },
+  {
     slug: "supermarket-pay-rises-2026",
     title: "Supermarket Pay Rises 2026: How Tesco, Aldi, M&S, Lidl, Sainsbury's & Morrisons Compare",
     excerpt: "Every major UK supermarket has announced new pay rates for 2026. Compare hourly rates from Aldi to Morrisons and see what you'll actually take home after tax.",

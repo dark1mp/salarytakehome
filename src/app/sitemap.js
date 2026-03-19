@@ -11,7 +11,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-03-18'), // Most recent blog post date
+      lastModified: new Date('2026-03-19'), // Most recent blog post date
       changeFrequency: 'weekly',
       priority: 0.8,
     },
@@ -125,6 +125,24 @@ export default function sitemap() {
 
   // Blog posts with their specific URLs and actual publication dates
   const blogPosts = [
+    {
+      url: `${baseUrl}/blog/scottish-tax-vs-english-tax`,
+      lastModified: new Date('2026-03-19'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/plan-1-vs-plan-2-student-loan`,
+      lastModified: new Date('2026-03-19'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/salary-sacrifice-vs-personal-pension`,
+      lastModified: new Date('2026-03-19'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/blog/supermarket-pay-rises-2026`,
       lastModified: new Date('2026-03-18'),
