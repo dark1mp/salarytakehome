@@ -425,23 +425,6 @@ export default function PayRiseCalculator() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.salarytakehome.co.uk"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Pay Rise Calculator",
-            "item": "https://www.salarytakehome.co.uk/pay-rise"
-          }
-        ]
-      },
-      {
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -519,7 +502,7 @@ export default function PayRiseCalculator() {
   };
 
   return (
-    <LayoutWrapper>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Pay Rise Calculator" }]}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -539,6 +522,10 @@ export default function PayRiseCalculator() {
               </h1>
               <p className="text-lg md:text-xl text-gray-600">
                 See exactly how much extra money hits your bank account after a pay rise
+              </p>
+              <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                Last updated: January 2026 · Reflects 2025/26 tax year
               </p>
             </div>
 

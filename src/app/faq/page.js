@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import LayoutWrapper from "../components/LayoutWrapper";
 
 export const metadata = {
   title: "FAQ – UK Tax Calculator | SalaryTakeHome.co.uk",
@@ -108,13 +109,11 @@ const faqCategories = [
 
 export default function FAQ() {
   return (
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "FAQ" }]}>
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <Link href="/take-home-pay-calculator" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
-            ← Back to Calculator
-          </Link>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions
           </h1>
@@ -178,5 +177,6 @@ export default function FAQ() {
         }} />
       </div>
     </div>
+    </LayoutWrapper>
   );
 } 

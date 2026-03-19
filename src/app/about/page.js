@@ -1,11 +1,11 @@
 "use client";
 import Link from 'next/link';
-import { HelpCircle, Info, Lightbulb, Shield, Users } from 'lucide-react';
+import { HelpCircle, Info, Lightbulb, Shield, Users, CheckCircle } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
 
 export default function About() {
   return (
-    <LayoutWrapper>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "About" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="max-w-[1400px] mx-auto px-8 pt-10 pb-2">
           <div className="max-w-6xl">
@@ -120,6 +120,57 @@ export default function About() {
                   <li className="pl-2"><strong>Scottish Tax Support</strong> - Full support for Scottish income tax rates</li>
                   <li className="pl-2"><strong>Student Loan Plans</strong> - All UK student loan plans supported (Plan 1, 2, 4, 5, and Postgraduate)</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Ad Space */}
+          <aside className="hidden lg:block w-40 flex-shrink-0">
+            <div className="sticky top-8">
+              {/* Google AdSense code here */}
+            </div>
+          </aside>
+        </div>
+
+        {/* Our Approach Card */}
+        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 mt-4">
+          <div className="flex-1 max-w-6xl">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <CheckCircle className="w-7 h-7 text-white" />
+                  </div>
+                  <h2 className="font-bold text-gray-900 text-2xl">Our Approach</h2>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">How We Keep Things Accurate</h3>
+                    <ul className="list-disc list-outside ml-6 space-y-2 text-gray-700 text-base leading-relaxed">
+                      <li className="pl-2">All calculators use official HMRC tax rates, thresholds, and rules</li>
+                      <li className="pl-2">Updated every April for the new tax year, and whenever mid-year changes are announced</li>
+                      <li className="pl-2">Calculations run entirely in your browser — we cross-reference results against HMRC&apos;s own PAYE tools</li>
+                      <li className="pl-2">Our blog content is researched using official government sources, employer announcements, and verified news reports</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Why We Built This</h3>
+                    <p className="text-gray-700 text-base leading-relaxed">
+                      Tax shouldn&apos;t be confusing. We built SalaryTakeHome because existing calculators were either outdated, locked behind paywalls, or buried in jargon. Every UK worker deserves to understand exactly where their money goes — for free.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Editorial Standards</h3>
+                    <ul className="list-disc list-outside ml-6 space-y-2 text-gray-700 text-base leading-relaxed">
+                      <li className="pl-2">We only publish information we can verify against official sources (HMRC, GOV.UK, employer press releases)</li>
+                      <li className="pl-2">Calculators are tested against known HMRC examples each tax year</li>
+                      <li className="pl-2">We clearly label estimates and always recommend consulting a qualified advisor for major financial decisions</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

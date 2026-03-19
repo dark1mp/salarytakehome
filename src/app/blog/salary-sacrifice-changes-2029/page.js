@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
+import LayoutWrapper from "../../components/LayoutWrapper";
 
 export const metadata = {
   title: "Salary Sacrifice Pension Changes from April 2029: What You Need to Know",
@@ -31,13 +32,11 @@ export const metadata = {
 
 export default function SalarySacrificeChanges2029() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
-            ← Back to Blog
-          </Link>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Salary Sacrifice Pension Changes from April 2029: What You Need to Know" }]}>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <article className="max-w-4xl mx-auto px-4 py-12">
+          {/* Header */}
+          <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium rounded-full">
               Pensions
@@ -367,13 +366,6 @@ export default function SalarySacrificeChanges2029() {
 
         </div>
 
-        {/* Back to Blog Link */}
-        <div className="mt-12 pt-8 border-t">
-          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
-            ← Back to All Articles
-          </Link>
-        </div>
-
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -403,7 +395,8 @@ export default function SalarySacrificeChanges2029() {
           { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Current year tax rates and thresholds." },
           { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
         ]} />
-      </article>
-    </div>
+        </article>
+      </div>
+    </LayoutWrapper>
   );
 }

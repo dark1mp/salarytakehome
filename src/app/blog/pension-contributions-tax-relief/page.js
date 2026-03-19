@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
+import LayoutWrapper from "../../components/LayoutWrapper";
 
 export const metadata = {
   title: "Pension Contributions and Tax Relief: Maximize Your Retirement Savings",
@@ -26,12 +27,10 @@ export const metadata = {
 
 export default function PensionContributionsGuide() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
-            ← Back to Blog
-          </Link>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Pension Contributions and Tax Relief: Maximize Your Retirement Savings" }]}>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <article className="max-w-4xl mx-auto px-4 py-12">
+          <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-gradient-to-r from-yellow-600 to-orange-600 text-white text-sm font-medium rounded-full">
               Pensions
@@ -386,7 +385,8 @@ export default function PensionContributionsGuide() {
           { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "Use pension contributions to avoid the 60% trap." },
           { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "More ways to keep more of your earnings." },
         ]} />
-      </article>
-    </div>
+        </article>
+      </div>
+    </LayoutWrapper>
   );
 } 

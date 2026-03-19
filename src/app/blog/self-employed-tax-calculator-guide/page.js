@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
+import LayoutWrapper from "../../components/LayoutWrapper";
 
 export const metadata = {
   title: "Self-Employed Tax Calculator: How to Estimate Your Tax Bill",
@@ -26,12 +27,10 @@ export const metadata = {
 
 export default function SelfEmployedTaxGuide() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
-            ← Back to Blog
-          </Link>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Self-Employed Tax Calculator: How to Estimate Your Tax Bill" }]}>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <article className="max-w-4xl mx-auto px-4 py-12">
+          <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-gradient-to-r from-orange-600 to-red-600 text-white text-sm font-medium rounded-full">
               Self-Employment
@@ -364,7 +363,8 @@ export default function SelfEmployedTaxGuide() {
           { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
           { href: "/blog/student-loan-repayment-guide", title: "Student Loan Repayment Guide", category: "Student Loans", description: "How student loans work for the self-employed." },
         ]} />
-      </article>
-    </div>
+        </article>
+      </div>
+    </LayoutWrapper>
   );
 } 

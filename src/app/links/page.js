@@ -9,10 +9,14 @@ export default function Links() {
     { name: 'Gov.uk Tax', url: 'https://www.gov.uk/browse/tax', description: 'UK government tax information' },
     { name: 'Student Loans Company', url: 'https://www.gov.uk/repaying-your-student-loan', description: 'Student loan repayment information' },
     { name: 'Money Advice Service', url: 'https://www.moneyadviceservice.org.uk', description: 'Free money advice' },
+    { name: 'Citizens Advice', url: 'https://www.citizensadvice.org.uk', description: 'Free advice on debt, benefits, employment rights, and housing' },
+    { name: 'StepChange', url: 'https://www.stepchange.org', description: 'Free debt advice charity — help with budgeting, debt solutions, and financial recovery' },
+    { name: 'NEST Pensions', url: 'https://www.nestpensions.org.uk', description: 'The UK\'s default workplace auto-enrolment pension scheme' },
+    { name: 'Pension Wise', url: 'https://www.moneyhelper.org.uk/en/pensions-and-retirement/pension-wise', description: 'Free government guidance on pension options for over 50s' },
   ];
 
   return (
-    <LayoutWrapper>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Links" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
           <div className="flex-1 max-w-6xl">

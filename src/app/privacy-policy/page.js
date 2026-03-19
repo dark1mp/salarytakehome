@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function PrivacyPolicy() {
   return (
-    <LayoutWrapper>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Privacy Policy" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
           <div className="flex-1 max-w-6xl">

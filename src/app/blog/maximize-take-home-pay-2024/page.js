@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
+import LayoutWrapper from "../../components/LayoutWrapper";
 
 export const metadata = {
   title: "10 Legal Ways to Maximize Your Take-Home Pay in 2024",
@@ -26,13 +27,11 @@ export const metadata = {
 
 export default function MaximizeTakeHomePay() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
-            ← Back to Blog
-          </Link>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "10 Legal Ways to Maximize Your Take-Home Pay in 2024" }]}>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <article className="max-w-4xl mx-auto px-4 py-12">
+          {/* Header */}
+          <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-gradient-to-r from-emerald-600 to-green-600 text-white text-sm font-medium rounded-full">
               Money Tips
@@ -409,7 +408,8 @@ export default function MaximizeTakeHomePay() {
           { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "How to avoid the hidden 60% effective tax rate." },
           { href: "/blog/pay-rise-negotiation-guide", title: "How to Negotiate a Pay Rise", category: "Money Tips", description: "Expert tips to negotiate a higher salary." },
         ]} />
-      </article>
-    </div>
+        </article>
+      </div>
+    </LayoutWrapper>
   );
 } 

@@ -61,16 +61,14 @@ export default function Sidebar() {
       {/* Logo Section - Inspired by GOV.UK but with site branding */}
       <div className="p-5 border-b border-white/10">
         <Link href="/" onClick={closeMobileMenu} className="flex items-center gap-3 group hover:opacity-90 transition-opacity">
-          <div className="w-[45px] h-[45px] bg-white/95 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-            <Image
-              src="/opengraph-image.png"
-              alt="SalaryTakeHome Logo"
-              width={38}
-              height={38}
-              className="rounded-lg"
-              priority
-            />
-          </div>
+          <Image
+            src="/opengraph-image.png"
+            alt="SalaryTakeHome Logo"
+            width={45}
+            height={45}
+            className="rounded-xl shadow-lg group-hover:shadow-xl transition-shadow"
+            priority
+          />
           <div className="flex flex-col">
             <div className="text-[10px] uppercase tracking-widest text-white/80 font-medium mb-0.5">SALARY TAKE HOME</div>
             <div className="text-xl font-bold text-white tracking-tight">CALCULATOR</div>

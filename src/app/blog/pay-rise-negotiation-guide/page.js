@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
+import LayoutWrapper from "../../components/LayoutWrapper";
 
 export const metadata = {
   title: "How to Negotiate a Pay Rise in 2026: The Complete UK Guide",
@@ -53,7 +54,8 @@ export default function PayRiseNegotiationGuide() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "How to Negotiate a Pay Rise in 2026: The Complete UK Guide" }]}>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -61,9 +63,6 @@ export default function PayRiseNegotiationGuide() {
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
-            &larr; Back to Blog
-          </Link>
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <span className="px-3 py-1 bg-gradient-to-r from-emerald-600 to-green-600 text-white text-sm font-medium rounded-full">
               Salary Guide
@@ -552,5 +551,6 @@ export default function PayRiseNegotiationGuide() {
         ]} />
       </article>
     </div>
+    </LayoutWrapper>
   );
 }

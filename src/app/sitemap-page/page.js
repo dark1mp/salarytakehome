@@ -67,7 +67,7 @@ export default function SitemapPage() {
   ];
 
   return (
-    <LayoutWrapper>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Sitemap" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="max-w-4xl mx-auto px-8 py-16">
           {/* Header */}

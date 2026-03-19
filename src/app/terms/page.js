@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function TermsOfService() {
   return (
-    <LayoutWrapper>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Terms" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="max-w-[1400px] mx-auto px-8 pt-10 pb-2">
           <div className="max-w-4xl">

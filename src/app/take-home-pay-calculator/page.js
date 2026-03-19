@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback, useMemo, Suspense } from 'react';
 import { Calculator, PoundSterling, Users, Building, Award, Settings, ChevronRight, Info, CheckCircle, Copy, Share2, TrendingUp, TrendingDown, Minus, Home, AlertTriangle, HelpCircle } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import Image from 'next/image';
+
 import ErrorBoundary from '../ErrorBoundary';
 
 const TAX_YEARS = ["2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
@@ -613,22 +613,6 @@ function TaxCalculatorContent() {
         Skip to main content
       </a>
 
-      {/* Header */}
-      <header className="w-full bg-[#1566a0] bg-gradient-to-r from-[#1566a0] to-[#1e90c6] shadow-lg flex flex-wrap items-center px-4 md:px-8 py-4 md:py-6 gap-4 md:gap-8">
-        <Image 
-          src="/opengraph-image.png" 
-          alt="SalaryTakeHome Logo" 
-          width={64} 
-          height={64} 
-          className="h-12 md:h-16 w-auto rounded-lg shadow-md flex-shrink-0" 
-          priority
-        />
-        <div className="flex-1 min-w-0">
-          <span className="text-xl md:text-3xl font-bold text-white whitespace-normal break-words">UK Tax Calculator</span>
-          <p className="text-white text-sm md:text-lg whitespace-normal break-words">Calculate your income tax and take-home pay</p>
-        </div>
-      </header>
-
       <main id="main-content">
         <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 py-8">
           <div className="flex-1 max-w-6xl">
@@ -641,6 +625,10 @@ function TaxCalculatorContent() {
               </h1>
               <p className="text-base text-gray-600">
                 Take home pay (also called net pay) is the amount of money you receive after all mandatory deductions taken from your salary. In the UK, this typically includes income tax, National Insurance, and may also include pension contributions and student loan repayments.
+              </p>
+              <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                Last updated: January 2026 · Reflects 2025/26 tax year
               </p>
             </div>
             <div className="grid lg:grid-cols-3 gap-6">
@@ -1406,7 +1394,32 @@ function TaxCalculatorContent() {
           </aside>
         </div>
       </main>
-      
+
+        {/* Related Reading */}
+        <div className="max-w-[1400px] mx-auto px-8 mt-6 mb-8">
+          <div className="max-w-6xl">
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+              <a href="/blog/30k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£30k Salary Take Home Pay Breakdown</p>
+              </a>
+              <a href="/blog/50k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£50k Salary Take Home Pay Breakdown</p>
+              </a>
+              <a href="/blog/100k-tax-trap" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-red-600">Tax Planning</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">The £100k Tax Trap Explained</p>
+              </a>
+              <a href="/blog/uk-tax-changes-2025-26" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Tax Planning</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2025/26</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
     </div>
   );
 }
@@ -1417,7 +1430,7 @@ import LayoutWrapper from '../components/LayoutWrapper';
 export default function TaxCalculator() {
   return (
     <ErrorBoundary>
-      <LayoutWrapper>
+      <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Take Home Pay Calculator" }]}>
         <Suspense fallback={
           <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
             <div className="text-center">

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
+import LayoutWrapper from "../../components/LayoutWrapper";
 
 export const metadata = {
   title: "£60,000 Salary Take-Home Pay 2025/26 | After Tax Calculator",
@@ -31,13 +32,11 @@ export const metadata = {
 
 export default function Salary60k() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "£60,000 Salary Take-Home Pay in 2025/26" }]}>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
-            &larr; Back to Blog
-          </Link>
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white text-sm font-medium rounded-full">
               Salary Guide
@@ -379,14 +378,6 @@ export default function Salary60k() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.salarytakehome.co.uk"},
-                  {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.salarytakehome.co.uk/blog"},
-                  {"@type": "ListItem", "position": 3, "name": "£60,000 Salary Take-Home Pay"}
-                ]
-              },
-              {
                 "@type": "Article",
                 "headline": "£60,000 Salary Take-Home Pay in 2025/26",
                 "description": "Complete breakdown of what you'll actually receive from a £60k salary after income tax and National Insurance, including higher rate tax calculations.",
@@ -446,5 +437,6 @@ export default function Salary60k() {
         ]} />
       </article>
     </div>
+    </LayoutWrapper>
   );
 }
