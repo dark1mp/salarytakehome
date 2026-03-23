@@ -771,6 +771,17 @@ export default function PayRiseCalculator() {
               </div>
             </div>
 
+            {/* Mobile In-Content Ad */}
+            <div className="my-4 min-h-[250px] flex items-center justify-center">
+              <ins className="adsbygoogle"
+                style={{display: 'block'}}
+                data-ad-client="ca-pub-3447670244921264"
+                data-ad-slot="auto"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              />
+            </div>
+
             {/* Results Section */}
             {results ? (
               <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6 md:p-8 mb-8">
