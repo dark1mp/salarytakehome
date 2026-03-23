@@ -18,6 +18,7 @@ import {
   Wallet
 } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
+import AdUnit from '../components/AdUnit';
 
 // Tax constants (same as take-home-pay-calculator)
 const TAX_YEARS = ["2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
@@ -771,16 +772,8 @@ export default function PayRiseCalculator() {
               </div>
             </div>
 
-            {/* Mobile In-Content Ad */}
-            <div className="my-4 min-h-[250px] flex items-center justify-center">
-              <ins className="adsbygoogle"
-                style={{display: 'block'}}
-                data-ad-client="ca-pub-3447670244921264"
-                data-ad-slot="auto"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              />
-            </div>
+            {/* In-Content Ad */}
+            <AdUnit />
 
             {/* Results Section */}
             {results ? (
