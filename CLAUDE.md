@@ -14,7 +14,7 @@ UK tax and salary calculator website. Helps users calculate take-home pay, compa
 - **Styling:** Tailwind CSS 4.1.9 via PostCSS
 - **Icons:** lucide-react
 - **Analytics:** Google Analytics, Microsoft Clarity, Vercel Analytics + Speed Insights
-- **Ads:** Google AdSense (ca-pub-3447670244921264)
+- **Ads:** Google AdSense (ca-pub-3447670244921264) — auto ads site-wide + manual ad unit on pay-rise page
 - **Hosting:** Vercel
 - **Build tool:** Turbopack (Next.js 16+)
 
@@ -130,7 +130,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - Structured data: WebApplication (root), Article (blog posts), FAQPage (where relevant)
 - Sitemap: dynamic at `/sitemap.js` — must be updated when adding/removing pages
 - Robots.txt: blocks `/api/`, `/_next/`, `/admin/`
-- IndexNow: auto-submits all sitemap URLs post-build to Bing, Yandex, Seznam, Naver
+- IndexNow: auto-submits all sitemap URLs post-build to Bing, Yandex, Seznam, Naver. Can also be triggered manually: `node scripts/submit-indexnow.mjs`
 - Google: does NOT support IndexNow. Google sitemap ping endpoint is deprecated (returns 404). Use Google Search Console for manual URL submission, or rely on Google crawling the sitemap `<lastmod>` dates.
 - Breadcrumbs: every page has visual breadcrumbs + BreadcrumbList JSON-LD schema via the Breadcrumbs component
 - **Last Updated badge:** all 10 calculator pages show "Last updated: January 2026 · Reflects 2025/26 tax year" below the h1 description. Update this when tax data changes.
@@ -144,7 +144,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **Primary colour:** #1566a0 (blue)
 - **Gradients:** blue-to-indigo for headers/CTAs (`from-blue-600 to-indigo-700`)
 - **Cards:** white background, rounded-2xl, shadow-lg, hover lift effects
-- **Layout:** sidebar navigation on desktop, hamburger menu on mobile
+- **Layout:** sidebar navigation on desktop, hamburger menu on mobile (bottom-left, `fixed bottom-6 left-4` — positioned low to avoid AdSense banner overlap)
 - **Font:** Inter (Google Fonts)
 - **Responsive:** mobile-first, Tailwind breakpoints
 
