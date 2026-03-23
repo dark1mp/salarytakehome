@@ -37,6 +37,7 @@ src/app/
 ├── sitemap.js                   # Dynamic XML sitemap (add new pages here!)
 ├── not-found.js                 # Custom 404 page
 ├── components/
+│   ├── AdUnit.js                # Reusable AdSense ad component (slot 7756198179). Drop <AdUnit /> anywhere.
 │   ├── Breadcrumbs.js           # Reusable breadcrumbs + BreadcrumbList JSON-LD schema
 │   ├── CookieConsent.js
 │   ├── Footer.js                # 4-column footer with all nav links
@@ -144,7 +145,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **Primary colour:** #1566a0 (blue)
 - **Gradients:** blue-to-indigo for headers/CTAs (`from-blue-600 to-indigo-700`)
 - **Cards:** white background, rounded-2xl, shadow-lg, hover lift effects
-- **Layout:** sidebar navigation on desktop, hamburger menu on mobile (bottom-left, `fixed bottom-6 left-4` — positioned low to avoid AdSense banner overlap)
+- **Layout:** sidebar navigation on desktop, hamburger menu on mobile (`fixed bottom-20 left-4` — positioned above AdSense anchor ads)
 - **Font:** Inter (Google Fonts)
 - **Responsive:** mobile-first, Tailwind breakpoints
 
