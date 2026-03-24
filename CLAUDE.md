@@ -176,6 +176,8 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **About page includes editorial standards** — "How We Keep Things Accurate", "Why We Built This", and "Editorial Standards" sections establish trust for YMYL content.
 - **Take-home pay calculator has no banner** — the blue header banner with logo was removed; the page starts directly with the h1. Don't re-add it.
 - **Responsive grid pattern** — use `lg:grid-cols-3` (not `md:` or `sm:`) for 3-column grids inside blog content, because the 230px sidebar eats into available width.
+- **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver to detect if an ad fills. If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it.
+- **Manual ad placements** — only the `/pay-rise` page has a manual `<AdUnit />`. Blog pages and other calculators rely on auto ads only. Add `<AdUnit />` to more pages for better desktop ad fill rates.
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
@@ -186,3 +188,5 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - No table of contents on long blog posts
 - More "vs" comparison content opportunities (e.g. PAYE vs self-employed, full-time vs part-time tax)
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
+- Blog pages have no manual `<AdUnit />` placements — should add them for better ad revenue
+- Only `/pay-rise` has a manual ad unit — other calculators could benefit from one too
