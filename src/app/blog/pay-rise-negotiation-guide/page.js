@@ -54,7 +54,7 @@ export default function PayRiseNegotiationGuide() {
   };
 
   return (
-    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "How to Negotiate a Pay Rise in 2026: The Complete UK Guide" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "How to Negotiate a Pay Rise in 2026: The Complete UK Guide" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <script
         type="application/ld+json"

@@ -27,7 +27,7 @@ export const metadata = {
 
 export default function StudentLoanGuide() {
   return (
-    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Student Loan Repayment Calculator Guide: Plans 1, 2 & 5 Explained" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Student Loan Repayment Calculator Guide: Plans 1, 2 & 5 Explained" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         <article className="max-w-4xl mx-auto px-4 py-12">
           {/* Header */}

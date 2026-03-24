@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function Plan1VsPlan2StudentLoan() {
   return (
-    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Plan 1 vs Plan 2 Student Loan" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Plan 1 vs Plan 2 Student Loan" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}

@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function UKTaxChanges2024() {
   return (
-    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "UK Tax Changes 2024/25: What You Need to Know" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "UK Tax Changes 2024/25: What You Need to Know" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         <article className="max-w-4xl mx-auto px-4 py-12">
           {/* Header */}

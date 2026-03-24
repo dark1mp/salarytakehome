@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function Salary40k() {
   return (
-    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "£40,000 Salary Take-Home Pay in 2025/26" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "£40,000 Salary Take-Home Pay in 2025/26" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}

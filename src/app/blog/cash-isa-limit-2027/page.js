@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function CashISALimit2027() {
   return (
-    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}

@@ -179,6 +179,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver to detect if an ad fills. If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it.
 - **Manual ad placements** — only the `/pay-rise` page has a manual `<AdUnit />`. Blog pages and other calculators rely on auto ads only. Add `<AdUnit />` to more pages for better desktop ad fill rates.
 - **Side rail ad space** — LayoutWrapper uses `2xl:max-w-[1100px]` on the inner content div to leave ~200px+ on the right at 1536px+ viewports for AdSense side rail ads. Below `2xl`, content is full width. Don't remove this max-width.
+- **Narrow layout for blogs** — LayoutWrapper accepts a `narrow` prop (used on all blog pages) which applies `2xl:max-w-[900px]` instead, leaving ~400px for side rail ads. The space is always present on 2xl+ screens whether an ad fills or not.
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)

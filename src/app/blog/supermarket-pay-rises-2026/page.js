@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function SupermarketPayRises2026() {
   return (
-    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Supermarket Pay Rises 2026: How Tesco, Aldi, M&S, Lidl, Sainsbury's & Morrisons Compare" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Supermarket Pay Rises 2026: How Tesco, Aldi, M&S, Lidl, Sainsbury's & Morrisons Compare" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}
