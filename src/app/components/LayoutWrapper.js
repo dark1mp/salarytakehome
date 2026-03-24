@@ -8,11 +8,13 @@ export default function LayoutWrapper({ children, breadcrumbs }) {
     <>
       <Sidebar />
       <div className="ml-0 md:ml-[230px]">
-        {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <div className="2xl:max-w-[1100px] px-4">
+          {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </div>
       </div>
     </>
   );
