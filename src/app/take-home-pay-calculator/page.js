@@ -904,7 +904,7 @@ function TaxCalculatorContent() {
             </div>
 
             {/* Ad Unit */}
-            <AdUnit showScrollHint />
+            <AdUnit />
           </div>
 
           {/* Results */}
