@@ -7,6 +7,18 @@ export default function AdUnit({ className = "" }) {
   const pushed = useRef(false);
   const [adFilled, setAdFilled] = useState(false);
 
+  const checkAdFilled = () => {
+    const insEl = adRef.current;
+    if (!insEl) return;
+    // AdSense sets data-ad-status="filled" when an ad renders
+    const status = insEl.getAttribute('data-ad-status');
+    if (status === 'filled') {
+      setAdFilled(true);
+    } else if (status === 'unfilled') {
+      setAdFilled(false);
+    }
+  };
+
   useEffect(() => {
     if (adRef.current && !pushed.current) {
       try {
@@ -17,34 +29,20 @@ export default function AdUnit({ className = "" }) {
       }
     }
 
-    // Observe the ad container for size changes to detect when an ad fills
-    const observer = new MutationObserver(() => {
-      if (containerRef.current) {
-        const insEl = containerRef.current.querySelector('ins.adsbygoogle');
-        if (insEl && insEl.offsetHeight > 0) {
-          setAdFilled(true);
-        }
-      }
-    });
+    // Observe the ins element for data-ad-status changes
+    const observer = new MutationObserver(checkAdFilled);
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current, {
+    if (adRef.current) {
+      observer.observe(adRef.current, {
+        attributes: true,
+        attributeFilter: ['data-ad-status'],
         childList: true,
         subtree: true,
-        attributes: true,
-        attributeFilter: ['style', 'data-ad-status'],
       });
     }
 
-    // Also check after a delay in case mutation fires before layout
-    const timer = setTimeout(() => {
-      if (containerRef.current) {
-        const insEl = containerRef.current.querySelector('ins.adsbygoogle');
-        if (insEl && insEl.offsetHeight > 0) {
-          setAdFilled(true);
-        }
-      }
-    }, 2000);
+    // Fallback check after a delay
+    const timer = setTimeout(checkAdFilled, 3000);
 
     return () => {
       observer.disconnect();
@@ -58,6 +56,9 @@ export default function AdUnit({ className = "" }) {
       className={`overflow-hidden transition-all duration-300 ${adFilled ? 'my-4' : 'my-0'} ${className}`}
       style={{ maxHeight: adFilled ? '1000px' : '0' }}
     >
+      {adFilled && (
+        <p className="lg:hidden text-center text-sm text-gray-400 mb-2">↓ Scroll down to see results</p>
+      )}
       <ins className="adsbygoogle"
         ref={adRef}
         style={{ display: 'block' }}

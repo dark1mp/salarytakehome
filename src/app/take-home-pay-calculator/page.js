@@ -4,6 +4,7 @@ import { Calculator, PoundSterling, Users, Building, Award, Settings, ChevronRig
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import ErrorBoundary from '../ErrorBoundary';
+import AdUnit from '../components/AdUnit';
 
 const TAX_YEARS = ["2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
 
@@ -895,6 +896,9 @@ function TaxCalculatorContent() {
                 )}
               </div>
             </div>
+
+            {/* Ad Unit */}
+            <AdUnit />
           </div>
 
           {/* Results */}
