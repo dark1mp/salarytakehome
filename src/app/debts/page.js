@@ -201,13 +201,6 @@ export default function Debts() {
             </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Info Cards Section */}
@@ -391,13 +384,6 @@ export default function Debts() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">
-              {/* Ad Space */}
-            </div>
-          </aside>
         </div>
 
         {/* Related Reading */}

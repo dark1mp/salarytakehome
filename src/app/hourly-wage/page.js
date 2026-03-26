@@ -184,13 +184,6 @@ export default function HourlyWage() {
             </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* UK Minimum Wage Information Card */}
@@ -263,13 +256,6 @@ export default function HourlyWage() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Why knowing your hourly wage matters Card */}
@@ -301,13 +287,6 @@ export default function HourlyWage() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Hourly wage FAQs Card */}
@@ -361,13 +340,6 @@ export default function HourlyWage() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Related Reading */}

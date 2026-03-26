@@ -327,13 +327,6 @@ export default function SickPay() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Eligibility Information Card */}
@@ -386,13 +379,6 @@ export default function SickPay() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Why SSP Matters Card */}
@@ -424,13 +410,6 @@ export default function SickPay() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* FAQ Section */}
@@ -519,13 +498,6 @@ export default function SickPay() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
       </div>
 

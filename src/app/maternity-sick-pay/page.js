@@ -161,13 +161,6 @@ export default function MaternitySickPay() {
             </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Understanding Maternity Pay Card */}
@@ -208,13 +201,6 @@ export default function MaternitySickPay() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Why Maternity Pay Matters Card */}
@@ -246,13 +232,6 @@ export default function MaternitySickPay() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* FAQ Section */}
@@ -341,13 +320,6 @@ export default function MaternitySickPay() {
               </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
       </div>
 

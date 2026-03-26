@@ -178,13 +178,6 @@ export default function ProRata() {
             </div>
             </div>
           </div>
-
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Understanding Pro-Rata Salary Card */}
@@ -218,9 +211,6 @@ export default function ProRata() {
               </div>
             </div>
           </div>
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">{/* Ad Space */}</div>
-          </aside>
         </div>
 
         {/* Why Pro-Rata Matters Card */}
@@ -282,9 +272,6 @@ export default function ProRata() {
               </div>
             </div>
           </div>
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">{/* Ad Space */}</div>
-          </aside>
         </div>
 
         {/* FAQ Section */}
@@ -359,9 +346,6 @@ export default function ProRata() {
               </div>
             </div>
           </div>
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8">{/* Ad Space */}</div>
-          </aside>
         </div>
 
         {/* Related Reading */}
