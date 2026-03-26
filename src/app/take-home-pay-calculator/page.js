@@ -1140,12 +1140,6 @@ function TaxCalculatorContent() {
             </div>
           </div>
 
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Optimized Information Cards */}
@@ -1359,12 +1353,6 @@ function TaxCalculatorContent() {
             </div>
           </div>
 
-          {/* Ad Space */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-            <div className="sticky top-8 h-[600px]">
-              {/* Google AdSense code here */}
-            </div>
-          </aside>
         </div>
 
         {/* Beautiful Navigation Buttons - Aligned with cards section */}
@@ -1399,9 +1387,6 @@ function TaxCalculatorContent() {
             </div>
           </div>
 
-          {/* Ad Space - Hidden but maintains same flex layout as cards section */}
-          <aside className="hidden lg:block w-40 flex-shrink-0">
-          </aside>
         </div>
       </main>
 
