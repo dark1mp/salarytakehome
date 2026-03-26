@@ -122,8 +122,8 @@ export default function CompareSalaries() {
           </div>
 
           {/* Input Card */}
-          <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 mb-6">
-            <div className="grid lg:grid-cols-2 gap-6 mb-6">
+          <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6 mb-6 lg:scale-[0.92] lg:origin-top xl:scale-100">
+            <div className="grid lg:grid-cols-2 gap-4 lg:gap-3 mb-6">
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-3">Salary 1 (Annual)</label>
                 <div className="relative">

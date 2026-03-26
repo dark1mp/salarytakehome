@@ -138,11 +138,11 @@ export default function MortgageCalculator() {
               </p>
           </div>
 
-          <div className="grid xl:grid-cols-2 gap-6">
+          <div className="grid xl:grid-cols-2 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top xl:scale-100">
             {/* Form Section */}
             <div className="space-y-5">
               {/* Property Value */}
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">
                   Property Value
                 </label>
@@ -159,7 +159,7 @@ export default function MortgageCalculator() {
               </div>
 
               {/* Deposit */}
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">
                   Deposit
                 </label>
@@ -181,7 +181,7 @@ export default function MortgageCalculator() {
               </div>
 
               {/* Interest Rate */}
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">
                   Annual Interest Rate (%)
                 </label>
@@ -198,7 +198,7 @@ export default function MortgageCalculator() {
               </div>
 
               {/* Loan Term */}
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">
                   Loan Term (Years)
                 </label>
@@ -214,7 +214,7 @@ export default function MortgageCalculator() {
               </div>
 
               {/* Repayment Type */}
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">
                   Repayment Type
                 </label>

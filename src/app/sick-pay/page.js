@@ -142,11 +142,11 @@ export default function SickPay() {
             </div>
 
             {/* Two-column grid: Form and Results */}
-            <div className="grid xl:grid-cols-2 gap-6">
+            <div className="grid xl:grid-cols-2 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top xl:scale-100">
               {/* Left Column: Form Inputs */}
               <div className="space-y-5">
                 {/* Tax Year Toggle */}
-                <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+                <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                   <label className="block text-sm font-bold text-gray-700 mb-3">Select Tax Year Rules</label>
                   <div className="grid grid-cols-2 gap-3">
                     <button
@@ -184,7 +184,7 @@ export default function SickPay() {
                 </div>
 
                 {/* Average Weekly Earnings */}
-                <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+                <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                   <label className="block text-sm font-bold text-gray-700 mb-3">Average Weekly Earnings</label>
                   <div className="relative">
                     <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold text-lg">£</span>
@@ -200,7 +200,7 @@ export default function SickPay() {
                 </div>
 
                 {/* Number of Sick Days */}
-                <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+                <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                   <label className="block text-sm font-bold text-gray-700 mb-3">Number of Sick Days</label>
                   <input
                     type="number"
@@ -214,7 +214,7 @@ export default function SickPay() {
                 </div>
 
                 {/* Qualifying Days Per Week */}
-                <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+                <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                   <label className="block text-sm font-bold text-gray-700 mb-3">Qualifying Days Per Week</label>
                   <select
                     value={formData.qualifyingDaysPerWeek}

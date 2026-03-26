@@ -337,15 +337,15 @@ export default function TwoJobs() {
               </p>
             </div>
 
-          <div className="grid xl:grid-cols-3 gap-6">
+          <div className="grid xl:grid-cols-3 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top xl:scale-100">
             {/* Left Column - Job 1 and Job 2 Forms */}
             <div className="xl:col-span-2 space-y-6">
               {/* Job Forms Grid */}
-              <div className="grid lg:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-4 lg:gap-3">
                 {/* Job 1 Form */}
                 <div className="space-y-5">
                   <h2 className="text-2xl font-bold text-gray-900">Job 1 (Primary)</h2>
-                  <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+                  <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                     <label className="block text-sm font-bold text-gray-700 mb-3">Annual Salary</label>
                     <div className="relative">
                       <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold text-lg">£</span>
@@ -363,7 +363,7 @@ export default function TwoJobs() {
                 {/* Job 2 Form */}
                 <div className="space-y-5">
                   <h2 className="text-2xl font-bold text-gray-900">Job 2 (Secondary)</h2>
-                  <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+                  <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                     <label className="block text-sm font-bold text-gray-700 mb-3">Annual Salary</label>
                     <div className="relative">
                       <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold text-lg">£</span>

@@ -67,10 +67,10 @@ export default function HourlyWage() {
               </p>
             </div>
 
-            <div className="grid xl:grid-cols-2 gap-6">
+            <div className="grid xl:grid-cols-2 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top xl:scale-100">
             {/* Form */}
             <div className="space-y-5">
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">Annual Salary</label>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold text-lg">£</span>
@@ -84,7 +84,7 @@ export default function HourlyWage() {
                 </div>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">Hours Per Week</label>
                 <input
                   type="number"
@@ -96,7 +96,7 @@ export default function HourlyWage() {
                 />
               </div>
 
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">Weeks Worked Per Year</label>
                 <select
                   value={formData.weeksPerYear}
@@ -110,7 +110,7 @@ export default function HourlyWage() {
                 </select>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <label className="block text-sm font-bold text-gray-700 mb-3">Unpaid Leave (weeks)</label>
                 <input
                   type="number"

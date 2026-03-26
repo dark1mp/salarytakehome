@@ -632,11 +632,11 @@ function TaxCalculatorContent() {
                 Last updated: January 2026 · Reflects 2025/26 tax year
               </p>
             </div>
-            <div className="grid lg:grid-cols-3 gap-6">
+            <div className="grid lg:grid-cols-3 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top xl:scale-100">
           {/* Main Form */}
           <div className="lg:col-span-2 space-y-5">
             {/* Tax Code and Scottish Taxpayer Card */}
-            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-purple-50/15"></div>
               <div className="relative z-10">
                 <h2 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-3">
@@ -697,7 +697,7 @@ function TaxCalculatorContent() {
             </div>
 
             {/* Enhanced Income Card */}
-            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
               <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-emerald-50/15"></div>
               <div className="relative z-10">
                 <h2 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-3">
@@ -772,7 +772,7 @@ function TaxCalculatorContent() {
             </div>
 
             {/* Enhanced Advanced Options Card */}
-            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+            <div className="relative overflow-hidden bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-50/20 via-transparent to-pink-50/15"></div>
               <div className="relative z-10">
                 <button

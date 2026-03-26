@@ -531,10 +531,10 @@ export default function PayRiseCalculator() {
             </div>
 
             {/* Input Cards */}
-            <div className="grid lg:grid-cols-2 gap-6 mb-8">
+            <div className="grid lg:grid-cols-2 gap-4 lg:gap-3 mb-8 lg:scale-[0.92] lg:origin-top xl:scale-100">
 
               {/* Current Salary Card */}
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                     <PoundSterling className="w-5 h-5 text-white" />
@@ -558,7 +558,7 @@ export default function PayRiseCalculator() {
               </div>
 
               {/* Pay Rise Card */}
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center">
                     <TrendingUp className="w-5 h-5 text-white" />
@@ -625,7 +625,7 @@ export default function PayRiseCalculator() {
               </div>
 
               {/* Tax Settings Card */}
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
                     <Calculator className="w-5 h-5 text-white" />
@@ -678,7 +678,7 @@ export default function PayRiseCalculator() {
               </div>
 
               {/* Advanced Options Card */}
-              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
                 {/* Mobile: Collapsible header */}
                 <button
                   onClick={() => setShowAdvanced(!showAdvanced)}
