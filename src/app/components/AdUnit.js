@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from 'react';
 
-export default function AdUnit({ className = "" }) {
+export default function AdUnit({ className = "", slot = "7756198179", hideOnMobile = false }) {
   const adRef = useRef(null);
   const containerRef = useRef(null);
   const pushed = useRef(false);
@@ -53,7 +53,7 @@ export default function AdUnit({ className = "" }) {
   return (
     <div
       ref={containerRef}
-      className={`overflow-hidden transition-all duration-300 ${adFilled ? 'my-4' : 'my-0'} ${className}`}
+      className={`overflow-hidden transition-all duration-300 ${adFilled ? 'my-4' : 'my-0'} ${hideOnMobile ? 'hidden lg:block' : ''} ${className}`}
       style={{ maxHeight: adFilled ? '1000px' : '0' }}
     >
       {adFilled && (
@@ -63,7 +63,7 @@ export default function AdUnit({ className = "" }) {
         ref={adRef}
         style={{ display: 'block' }}
         data-ad-client="ca-pub-3447670244921264"
-        data-ad-slot="7756198179"
+        data-ad-slot={slot}
         data-ad-format="auto"
         data-full-width-responsive="true"
       />

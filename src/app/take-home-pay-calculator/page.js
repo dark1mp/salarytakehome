@@ -617,6 +617,7 @@ function TaxCalculatorContent() {
       <main id="main-content">
         <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 py-8">
           <div className="flex-1 max-w-6xl">
+            <AdUnit slot="1586479879" hideOnMobile />
             <div className="mb-8">
               <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">

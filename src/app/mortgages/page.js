@@ -2,6 +2,7 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import { Home, Calculator, TrendingUp, Info, Lightbulb, HelpCircle, Shield } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
+import AdUnit from '../components/AdUnit';
 
 export default function MortgageCalculator() {
   const [formData, setFormData] = useState({
@@ -121,6 +122,7 @@ export default function MortgageCalculator() {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
           <div className="flex-1 max-w-6xl">
+            <AdUnit slot="1586479879" hideOnMobile />
             {/* Header */}
             <div className="mb-8">
               <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
