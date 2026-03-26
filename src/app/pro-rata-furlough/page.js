@@ -61,6 +61,11 @@ export default function ProRata() {
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Pro Rata Calculator" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
+          <div className="hidden 2xl:block w-[160px] flex-shrink-0 order-last">
+            <div className="sticky top-8">
+              <AdUnit slot="4603525459" hideOnMobile />
+            </div>
+          </div>
           <div className="flex-1 max-w-6xl">
             <AdUnit slot="1586479879" hideOnMobile />
             <div className="mb-8">
