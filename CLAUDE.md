@@ -37,7 +37,7 @@ src/app/
 ├── sitemap.js                   # Dynamic XML sitemap (add new pages here!)
 ├── not-found.js                 # Custom 404 page
 ├── components/
-│   ├── AdUnit.js                # Reusable AdSense ad component. Accepts `slot` and `hideOnMobile` props. Default slot: 7756198179 (in-content), top-of-page slot: 1586479879.
+│   ├── AdUnit.js                # Reusable AdSense ad component. Accepts `slot` and `hideOnMobile` props. Slots: 7756198179 (in-content), 1586479879 (top-of-page), 4603525459 (sidebar vertical).
 │   ├── Breadcrumbs.js           # Reusable breadcrumbs + BreadcrumbList JSON-LD schema
 │   ├── CookieConsent.js
 │   ├── Footer.js                # 4-column footer with all nav links
@@ -179,8 +179,9 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **Calculator form+results layout** — all calculators with a side results panel use `xl:grid-cols-3` (not `lg:`) with `xl:col-span-2` for the form and `xl:col-span-1` for results. This ensures the results panel doesn't overflow on iPad landscape (1024px). Results stack below the form until 1280px+.
 - **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver watching `data-ad-status` (set by AdSense to `"filled"` or `"unfilled"`). If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it. Don't use `offsetHeight` to detect ad fill — it gives false positives.
 - **AdUnit mobile scroll hint** — when an ad fills on mobile (`lg:hidden`), a "↓ Scroll down to see results" message appears above the ad so users know results are below.
-- **Manual ad placements** — All 10 calculator pages have a desktop-only top ad unit (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1. `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. Blog pages rely on auto ads only.
-- **Side rail ad space** — LayoutWrapper uses `2xl:max-w-[1100px]` on the inner content div to leave ~200px+ on the right at 1536px+ viewports for AdSense side rail ads. Below `2xl`, content is full width. Don't remove this max-width.
+- **Manual ad placements** — All 10 calculator pages have: (1) a desktop-only top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, and (2) a sticky right sidebar ad (`<AdUnit slot="4603525459" hideOnMobile />`) visible at 2xl+ (160px wide, `order-last`). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. Blog pages rely on auto ads only.
+- **Calculator pages use `fullWidth`** — Calculator pages pass `fullWidth` to LayoutWrapper, which removes the `2xl:max-w` constraint since they have their own manual sidebar ad. They also don't use `max-w-[1400px]` or `max-w-6xl` on inner containers — content fills naturally to the sidebar ad.
+- **Side rail ad space (non-calculator pages)** — LayoutWrapper uses `2xl:max-w-[1100px]` on the inner content div to leave ~200px+ on the right at 1536px+ viewports for AdSense auto side rail ads. Below `2xl`, content is full width. Don't remove this max-width from non-calculator pages.
 - **Narrow layout for blogs** — LayoutWrapper accepts a `narrow` prop (used on all blog pages) which applies `2xl:max-w-[900px]` instead, leaving ~400px for side rail ads. The space is always present on 2xl+ screens whether an ad fills or not.
 
 ## Known Gaps / TODO
