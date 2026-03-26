@@ -176,8 +176,9 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **About page includes editorial standards** — "How We Keep Things Accurate", "Why We Built This", and "Editorial Standards" sections establish trust for YMYL content.
 - **Take-home pay calculator has no banner** — the blue header banner with logo was removed; the page starts directly with the h1. Don't re-add it.
 - **Responsive grid pattern** — use `lg:grid-cols-3` (not `md:` or `sm:`) for 3-column grids inside blog content, because the 230px sidebar eats into available width.
-- **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver to detect if an ad fills. If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it.
-- **Manual ad placements** — only the `/pay-rise` page has a manual `<AdUnit />`. Blog pages and other calculators rely on auto ads only. Add `<AdUnit />` to more pages for better desktop ad fill rates.
+- **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver watching `data-ad-status` (set by AdSense to `"filled"` or `"unfilled"`). If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it. Don't use `offsetHeight` to detect ad fill — it gives false positives.
+- **AdUnit mobile scroll hint** — when an ad fills on mobile (`lg:hidden`), a "↓ Scroll down to see results" message appears above the ad so users know results are below.
+- **Manual ad placements** — `/pay-rise` and `/take-home-pay-calculator` have manual `<AdUnit />` (placed after Advanced Options). Blog pages and other calculators rely on auto ads only. Add `<AdUnit />` to more pages for better desktop ad fill rates.
 - **Side rail ad space** — LayoutWrapper uses `2xl:max-w-[1100px]` on the inner content div to leave ~200px+ on the right at 1536px+ viewports for AdSense side rail ads. Below `2xl`, content is full width. Don't remove this max-width.
 - **Narrow layout for blogs** — LayoutWrapper accepts a `narrow` prop (used on all blog pages) which applies `2xl:max-w-[900px]` instead, leaving ~400px for side rail ads. The space is always present on 2xl+ screens whether an ad fills or not.
 
@@ -191,4 +192,4 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - More "vs" comparison content opportunities (e.g. PAYE vs self-employed, full-time vs part-time tax)
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
 - Blog pages have no manual `<AdUnit />` placements — should add them for better ad revenue
-- Only `/pay-rise` has a manual ad unit — other calculators could benefit from one too
+- Only `/pay-rise` and `/take-home-pay-calculator` have manual ad units — other calculators could benefit from one too
