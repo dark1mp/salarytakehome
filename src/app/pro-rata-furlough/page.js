@@ -60,13 +60,13 @@ export default function ProRata() {
   return (
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Pro Rata Calculator" }]} fullWidth>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="flex gap-6 mx-auto px-8 py-10">
-          <div className="hidden 2xl:block w-[160px] flex-shrink-0 order-last">
+        <div className="relative mx-auto px-8 py-10">
+          <div className="hidden xl:block absolute right-8 top-8 w-[160px]">
             <div className="sticky top-8">
               <AdUnit slot="4603525459" hideOnMobile />
             </div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             <AdUnit slot="1586479879" hideOnMobile />
             <div className="mb-8">
               <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
@@ -84,7 +84,7 @@ export default function ProRata() {
               </p>
           </div>
 
-          <div className="grid xl:grid-cols-2 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top xl:scale-100">
+          <div className="grid xl:grid-cols-2 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top 2xl:scale-100">
             {/* Form */}
             <div className="space-y-5">
               <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">

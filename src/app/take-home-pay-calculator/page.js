@@ -615,13 +615,13 @@ function TaxCalculatorContent() {
       </a>
 
       <main id="main-content">
-        <div className="flex gap-6 mx-auto px-4 md:px-8 py-8">
-          <div className="hidden 2xl:block w-[160px] flex-shrink-0 order-last">
+        <div className="relative mx-auto px-4 md:px-8 py-8">
+          <div className="hidden xl:block absolute right-8 top-8 w-[160px]">
             <div className="sticky top-8">
               <AdUnit slot="4603525459" hideOnMobile />
             </div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             <AdUnit slot="1586479879" hideOnMobile />
             <div className="mb-8">
               <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
@@ -638,7 +638,7 @@ function TaxCalculatorContent() {
                 Last updated: January 2026 · Reflects 2025/26 tax year
               </p>
             </div>
-            <div className="grid lg:grid-cols-3 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top xl:scale-100">
+            <div className="grid lg:grid-cols-3 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top 2xl:scale-100">
           {/* Main Form */}
           <div className="lg:col-span-2 space-y-5">
             {/* Tax Code and Scottish Taxpayer Card */}
