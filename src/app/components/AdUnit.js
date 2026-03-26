@@ -57,7 +57,7 @@ export default function AdUnit({ className = "" }) {
       style={{ maxHeight: adFilled ? '1000px' : '0' }}
     >
       {adFilled && (
-        <p className="md:hidden text-center text-sm text-gray-400 mb-2">↓ Scroll down to see results</p>
+        <p className="lg:hidden text-center text-sm text-gray-400 mb-2">↓ Scroll down to see results</p>
       )}
       <ins className="adsbygoogle"
         ref={adRef}
