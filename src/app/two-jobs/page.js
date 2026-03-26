@@ -337,9 +337,9 @@ export default function TwoJobs() {
               </p>
             </div>
 
-          <div className="grid lg:grid-cols-3 gap-6">
+          <div className="grid xl:grid-cols-3 gap-6">
             {/* Left Column - Job 1 and Job 2 Forms */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="xl:col-span-2 space-y-6">
               {/* Job Forms Grid */}
               <div className="grid lg:grid-cols-2 gap-6">
                 {/* Job 1 Form */}
@@ -393,7 +393,7 @@ export default function TwoJobs() {
             </div>
 
             {/* Right Column - Results */}
-            <div className="lg:col-span-1">
+            <div className="xl:col-span-1">
               <div className="sticky top-8">
                 {results ? (
                   <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6">

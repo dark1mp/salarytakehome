@@ -142,7 +142,7 @@ export default function SickPay() {
             </div>
 
             {/* Two-column grid: Form and Results */}
-            <div className="grid lg:grid-cols-2 gap-6">
+            <div className="grid xl:grid-cols-2 gap-6">
               {/* Left Column: Form Inputs */}
               <div className="space-y-5">
                 {/* Tax Year Toggle */}
@@ -234,7 +234,7 @@ export default function SickPay() {
               </div>
 
               {/* Right Column: Results Display */}
-              <div className="lg:col-span-1">
+              <div className="xl:col-span-1">
                 <div className="sticky top-8">
                   {results ? (
                     results.isEligible ? (

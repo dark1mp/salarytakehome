@@ -138,7 +138,7 @@ export default function MortgageCalculator() {
               </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid xl:grid-cols-2 gap-6">
             {/* Form Section */}
             <div className="space-y-5">
               {/* Property Value */}
@@ -244,7 +244,7 @@ export default function MortgageCalculator() {
             </div>
 
             {/* Results Section */}
-            <div className="lg:col-span-1">
+            <div className="xl:col-span-1">
               <div className="sticky top-8">
                 {results ? (
                   <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6">

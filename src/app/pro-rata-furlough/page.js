@@ -77,7 +77,7 @@ export default function ProRata() {
               </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid xl:grid-cols-2 gap-6">
             {/* Form */}
             <div className="space-y-5">
               <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
@@ -111,7 +111,7 @@ export default function ProRata() {
             </div>
 
             {/* Results */}
-            <div className="lg:col-span-1">
+            <div className="xl:col-span-1">
               <div className="sticky top-8">
                 {results ? (
                   <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6">
