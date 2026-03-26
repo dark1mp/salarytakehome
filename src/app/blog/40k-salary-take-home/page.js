@@ -189,7 +189,7 @@ export default function Salary40k() {
               If you have a student loan, your take-home pay will be lower. Here&apos;s how much you&apos;d repay on each plan:
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 1 (Pre-2012)</h3>
                 <p className="text-purple-700 text-sm">Threshold: £26,065</p>
@@ -249,7 +249,7 @@ export default function Salary40k() {
             <p className="text-gray-700 mb-4 leading-relaxed">
               At £40k, you&apos;re in the basic rate band. Every extra pound you earn is taxed at 28% (20% income tax + 8% NI), so you keep 72p.
             </p>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-green-50 rounded-xl p-4 border border-green-200">
                 <p className="text-green-700 text-sm">£2,000 pay rise</p>
                 <p className="text-green-900 font-semibold">Extra £1,440/year in your pocket</p>

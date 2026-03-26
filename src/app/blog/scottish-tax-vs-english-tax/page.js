@@ -169,7 +169,7 @@ export default function ScottishTaxVsEnglishTax() {
                 Here&apos;s how much more (or less) a Scottish taxpayer pays in income tax compared to someone in England, Wales, or Northern Ireland at the same gross salary. National Insurance is the same in both cases.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-2 gap-4">
                 {/* £25,000 */}
                 <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
                   <div className="flex items-center justify-between mb-2">
@@ -256,7 +256,7 @@ export default function ScottishTaxVsEnglishTax() {
               <p className="text-gray-700 mb-4">
                 Income tax bands are the <em>only</em> thing that differs between Scotland and the rest of the UK. Everything else is set by Westminster and applies UK-wide:
               </p>
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-2 gap-4">
                 <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
                   <h3 className="font-semibold text-gray-800 mb-2">Personal Allowance</h3>
                   <p className="text-gray-600 text-sm">&pound;12,570 &mdash; identical in Scotland and the rest of the UK. Tapers above &pound;100k in both systems.</p>

@@ -74,7 +74,7 @@ export default function SalarySacrificeVsPersonalPension() {
           {/* Quick Comparison Box */}
           <div className="rounded-2xl p-8 mb-8 bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Comparison</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-5 border border-amber-200">
                 <h3 className="font-semibold text-amber-800 mb-3">Salary Sacrifice</h3>
                 <ul className="text-amber-700 space-y-2 text-sm">
@@ -104,7 +104,7 @@ export default function SalarySacrificeVsPersonalPension() {
           {/* How Each Method Works */}
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">How Each Method Works</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Salary Sacrifice</h3>
                 <ol className="text-gray-700 space-y-3 text-sm">
@@ -271,7 +271,7 @@ export default function SalarySacrificeVsPersonalPension() {
           {/* Which Should You Choose? */}
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Which Should You Choose?</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-green-50 rounded-xl p-6 border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-3">Choose Salary Sacrifice If:</h3>
                 <ul className="text-green-700 space-y-2 text-sm">

@@ -243,7 +243,7 @@ export default function Blog() {
         {featuredPosts.length > 0 && (
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Articles</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {featuredPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                 <article className="glass-medium rounded-2xl p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:scale-105">
@@ -288,7 +288,7 @@ export default function Blog() {
               <p className="text-gray-600 text-lg">No articles found in this category.</p>
             </div>
           ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {filteredPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                 <article className="glass-light rounded-xl p-6 h-full hover:shadow-lg transition-all duration-200 hover:bg-white/80">

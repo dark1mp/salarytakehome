@@ -54,7 +54,7 @@ export default function Contact() {
           <div className="max-w-4xl">
 
             {/* Contact Methods Grid */}
-            <div className="grid md:grid-cols-2 gap-4 mb-4">
+            <div className="grid lg:grid-cols-2 gap-4 mb-4">
 
               {/* Email Card */}
               <div className="bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
@@ -104,7 +104,7 @@ export default function Contact() {
               <p className="text-gray-700 text-base leading-relaxed mb-4">
                 You might find the answer to your question in these resources:
               </p>
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-2 gap-4">
                 <Link href="/faq" className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group">
                   <HelpCircle className="w-5 h-5 text-blue-500 flex-shrink-0" />
                   <div>

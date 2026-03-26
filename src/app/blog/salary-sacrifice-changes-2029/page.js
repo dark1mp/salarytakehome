@@ -58,7 +58,7 @@ export default function SalarySacrificeChanges2029() {
         <div className="prose prose-lg max-w-none">
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Changes at a Glance</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-amber-50 rounded-xl p-4 border border-amber-200">
                 <h3 className="font-semibold text-amber-800 mb-2">What's Changing</h3>
                 <ul className="text-amber-700 text-sm space-y-1">

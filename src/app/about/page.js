@@ -42,7 +42,7 @@ export default function About() {
                   Our suite of free calculators covers all aspects of UK tax and financial planning:
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4">
                   <div className="space-y-3">
                     <Link href="/take-home-pay-calculator" className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors">
                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>

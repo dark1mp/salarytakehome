@@ -68,7 +68,7 @@ export default function SalarySacrificeGuide() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">How Salary Sacrifice Works</h2>
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Before Salary Sacrifice</h3>
                   <div className="bg-gray-50 rounded-lg p-3">
@@ -111,7 +111,7 @@ export default function SalarySacrificeGuide() {
                 <p className="text-gray-700 mb-3">
                   The most common and valuable salary sacrifice scheme. Your employer reduces your salary and pays the difference into your pension.
                 </p>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4">
                   <div className="bg-blue-50 rounded-lg p-3">
                     <h4 className="font-semibold text-blue-800 mb-1">Tax Savings:</h4>
                     <ul className="text-blue-700 text-sm space-y-1">
@@ -134,7 +134,7 @@ export default function SalarySacrificeGuide() {
                 <p className="text-gray-700 mb-3">
                   Save 32-42% on bikes and cycling equipment through salary sacrifice over 12-18 months.
                 </p>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4">
                   <div className="bg-green-50 rounded-lg p-3">
                     <h4 className="font-semibold text-green-800 mb-1">What&apos;s Included:</h4>
                     <ul className="text-green-700 text-sm space-y-1">
@@ -158,7 +158,7 @@ export default function SalarySacrificeGuide() {
                 <p className="text-gray-700 mb-3">
                   Access electric vehicles through salary sacrifice with very low Benefit-in-Kind tax rates.
                 </p>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4">
                   <div className="bg-emerald-50 rounded-lg p-3">
                     <h4 className="font-semibold text-emerald-800 mb-1">Benefits:</h4>
                     <ul className="text-emerald-700 text-sm space-y-1">
@@ -195,7 +195,7 @@ export default function SalarySacrificeGuide() {
                 <p className="text-gray-700 mb-3">
                   Access laptops, phones, and other equipment through salary sacrifice schemes.
                 </p>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4">
                   <div className="bg-blue-50 rounded-lg p-3">
                     <h4 className="font-semibold text-blue-800 mb-1">Available Items:</h4>
                     <ul className="text-blue-700 text-sm space-y-1">

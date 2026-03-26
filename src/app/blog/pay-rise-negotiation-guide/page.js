@@ -386,7 +386,7 @@ export default function PayRiseNegotiationGuide() {
               If a salary increase isn&apos;t possible, these alternatives can be just as valuable:
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-white rounded-xl p-5 border border-gray-200">
                 <h3 className="font-semibold text-gray-900 mb-2">Pension Contributions</h3>
                 <p className="text-gray-600 text-sm mb-2">
@@ -440,7 +440,7 @@ export default function PayRiseNegotiationGuide() {
           {/* Key Takeaways */}
           <div className="glass-medium rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Takeaways</h2>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-white rounded-xl p-4">
                 <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mb-3">
                   <span className="text-emerald-600 font-bold">1</span>

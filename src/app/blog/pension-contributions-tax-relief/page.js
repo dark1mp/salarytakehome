@@ -140,7 +140,7 @@ export default function PensionContributionsGuide() {
               <p className="text-gray-700 mb-4">
                 High earners may have their annual allowance reduced. For every £2 of income above £260,000, your allowance reduces by £1.
               </p>
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-2 gap-4">
                 <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
                   <h4 className="font-semibold text-amber-800 mb-2">Income £260,000-£360,000:</h4>
                   <p className="text-amber-700 text-sm">
@@ -165,7 +165,7 @@ export default function PensionContributionsGuide() {
                 If you haven&apos;t used your full annual allowance in the previous three tax years, you can carry forward the unused amount.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Rules:</h3>
                   <ul className="text-sm text-gray-700 space-y-2">
@@ -197,7 +197,7 @@ export default function PensionContributionsGuide() {
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">1. Workplace Pensions</h3>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Defined Contribution:</h4>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -257,7 +257,7 @@ export default function PensionContributionsGuide() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Salary Sacrifice vs Personal Contributions</h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Salary Sacrifice</h3>
                 <div className="bg-green-50 rounded-lg p-4 border border-green-200">

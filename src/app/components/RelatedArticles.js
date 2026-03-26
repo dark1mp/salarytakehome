@@ -7,7 +7,7 @@ export default function RelatedArticles({ articles }) {
   return (
     <div className="mt-12 pt-8 border-t border-gray-200">
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid lg:grid-cols-2 gap-4">
         {articles.map((article) => (
           <Link
             key={article.href}

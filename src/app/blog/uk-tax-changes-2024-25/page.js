@@ -58,7 +58,7 @@ export default function UKTaxChanges2024() {
         <div className="prose prose-lg max-w-none">
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Changes Summary</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-green-50 rounded-xl p-4 border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-2">✅ Good News</h3>
                 <ul className="text-green-700 text-sm space-y-1">
@@ -128,7 +128,7 @@ export default function UKTaxChanges2024() {
             <div className="mb-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Employee Rates (Class 1)</h3>
               <div className="bg-white rounded-xl p-4 border border-gray-200">
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">2024/25 Rates</h4>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -188,7 +188,7 @@ export default function UKTaxChanges2024() {
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
                 <h3 className="font-semibold text-blue-900 mb-3">💰 Salary Examples</h3>
-                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div className="grid lg:grid-cols-2 gap-4 text-sm">
                   <div>
                     <p className="font-medium text-blue-800">£30,000 salary:</p>
                     <p className="text-blue-700">Take-home pay: ~£24,422 per year</p>

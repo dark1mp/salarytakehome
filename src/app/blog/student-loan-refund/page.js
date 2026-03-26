@@ -184,7 +184,7 @@ export default function StudentLoanRefund() {
             <p className="text-gray-700 mb-4 leading-relaxed">
               The refund amounts vary massively depending on why you overpaid and for how long.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid lg:grid-cols-2 gap-6 mb-6">
               <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
                 <h3 className="font-semibold text-blue-800 mb-2">Early repayments</h3>
                 <p className="text-blue-700 text-sm">

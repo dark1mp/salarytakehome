@@ -124,7 +124,7 @@ export default function TaxTrap100k() {
             <p className="text-gray-700 mb-4 leading-relaxed">
               The scale of this problem is staggering. According to HMRC data obtained through Freedom of Information requests, around 1.8 million people fell into this trap in 2024-25. That number is projected to hit 2.29 million by 2028-29—an increase of nearly half a million workers in just four years.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid lg:grid-cols-2 gap-6 mb-6">
               <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
                 <h3 className="font-semibold text-blue-800 mb-2 text-lg">2024-25</h3>
                 <p className="text-blue-700 text-3xl font-bold mb-2">1.8 million</p>
@@ -197,7 +197,7 @@ export default function TaxTrap100k() {
             <p className="text-gray-700 mb-4 leading-relaxed">
               Here's perhaps the most frustrating part: the £100,000 limit applies per parent, not per household.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid lg:grid-cols-2 gap-6 mb-6">
               <div className="bg-green-50 rounded-xl p-6 border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-3">✅ Keeps All Benefits</h3>
                 <p className="text-green-700 text-sm">

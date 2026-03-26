@@ -209,7 +209,7 @@ export default function Plan1VsPlan2StudentLoan() {
               for full details on how interest is applied.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-green-50 rounded-xl p-5 border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-3">Plan 1 Interest</h3>
                 <ul className="text-green-700 text-sm space-y-2">
@@ -272,7 +272,7 @@ export default function Plan1VsPlan2StudentLoan() {
               Whether overpaying makes sense depends heavily on which plan you&apos;re on and how much you owe.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-6">
+            <div className="grid lg:grid-cols-2 gap-4 mb-6">
               <div className="bg-green-50 rounded-xl p-5 border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-3">Plan 1: Maybe Worth It</h3>
                 <p className="text-green-700 text-sm leading-relaxed">
@@ -305,7 +305,7 @@ export default function Plan1VsPlan2StudentLoan() {
               While Plan 1 and Plan 2 are the most common, two other plans exist that are worth knowing about:
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
                 <h3 className="font-semibold text-gray-800 mb-3">Plan 4 (Scotland)</h3>
                 <ul className="text-gray-700 text-sm space-y-2">

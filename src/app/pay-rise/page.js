@@ -531,7 +531,7 @@ export default function PayRiseCalculator() {
             </div>
 
             {/* Input Cards */}
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="grid lg:grid-cols-2 gap-6 mb-8">
 
               {/* Current Salary Card */}
               <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6">
@@ -968,7 +968,7 @@ export default function PayRiseCalculator() {
               <h2 className="text-2xl font-bold text-gray-900">Understanding Your Pay Rise</h2>
 
               {/* Grid of Topic Cards */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
 
                 {/* UK Tax Brackets Card */}
                 <div className="bg-white rounded-2xl border border-red-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">

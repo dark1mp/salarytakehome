@@ -189,7 +189,7 @@ export default function Salary50k() {
               If you have a student loan, your take-home pay will be lower. Here&apos;s how much you&apos;d repay on each plan:
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 1 (Pre-2012)</h3>
                 <p className="text-purple-700 text-sm">Threshold: £26,065</p>
@@ -223,7 +223,7 @@ export default function Salary50k() {
             <p className="text-gray-700 mb-4 leading-relaxed">
               At £50k, you&apos;re at a tax cliff edge. Here&apos;s what pay rises actually net you:
             </p>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-amber-50 rounded-xl p-4 border border-amber-200">
                 <p className="text-amber-700 text-sm">£5,000 pay rise (to £55k)</p>
                 <p className="text-amber-900 font-semibold">Extra £2,900/year in your pocket</p>

@@ -849,7 +849,7 @@ function TaxCalculatorContent() {
                     </div>
 
                     {/* Additional fields */}
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid lg:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-bold text-gray-700 mb-3">Salary sacrifice</label>
                         <div className="relative">
@@ -1147,7 +1147,7 @@ function TaxCalculatorContent() {
           <div className="flex-1 max-w-6xl">
             {/* Topic Information Cards */}
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Understanding Your Deductions</h2>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid lg:grid-cols-2 gap-6 mb-6">
 
               {/* Income Tax Card */}
               <div className="relative group overflow-hidden bg-white rounded-2xl border border-red-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
@@ -1403,7 +1403,7 @@ function TaxCalculatorContent() {
         <div className="max-w-[1400px] mx-auto px-8 mt-6 mb-8">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-3">
               <a href="/blog/30k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£30k Salary Take Home Pay Breakdown</p>

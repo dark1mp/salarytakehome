@@ -123,7 +123,7 @@ export default function CompareSalaries() {
 
           {/* Input Card */}
           <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 mb-6">
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid lg:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-3">Salary 1 (Annual)</label>
                 <div className="relative">
@@ -200,7 +200,7 @@ export default function CompareSalaries() {
               </div>
 
               {/* Side by Side Comparison */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 {/* Salary 1 */}
                 <div className="bg-blue-50 rounded-2xl p-6 border-2 border-blue-200">
                   <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Salary 1</h4>
@@ -336,7 +336,7 @@ export default function CompareSalaries() {
                     </div>
                     <h3 className="font-bold text-gray-900 text-2xl">Why Comparing Salaries Matters</h3>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid lg:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Making Better Decisions</h4>
                       <ul className="space-y-2 text-gray-700">

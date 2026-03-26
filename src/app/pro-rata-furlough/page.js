@@ -228,7 +228,7 @@ export default function ProRata() {
                   </div>
                   <h3 className="font-bold text-gray-900 text-2xl">Why Knowing Your Pro-Rata Salary Matters</h3>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid lg:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">For Part-Time Workers</h4>
                     <ul className="space-y-2 text-gray-700">

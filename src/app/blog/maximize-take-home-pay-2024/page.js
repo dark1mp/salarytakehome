@@ -56,7 +56,7 @@ export default function MaximizeTakeHomePay() {
             <p className="text-lg text-gray-700 mb-4">
               The average UK worker could save £1,000-£3,000 per year through legal tax optimization strategies. Here are the most effective methods:
             </p>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-green-50 rounded-xl p-4 border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-2">Immediate Savings</h3>
                 <ul className="text-green-700 text-sm space-y-1">
@@ -161,7 +161,7 @@ export default function MaximizeTakeHomePay() {
                 For every £8 you pay into your childcare account, the government adds £2, up to £2,000 per child per year.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Eligibility:</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
@@ -212,7 +212,7 @@ export default function MaximizeTakeHomePay() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">5. Health & Wellbeing Benefits</h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Private Medical Insurance</h3>
                 <p className="text-gray-700 mb-3">
@@ -268,7 +268,7 @@ export default function MaximizeTakeHomePay() {
                 Many employers offer laptops, phones, and other equipment through salary sacrifice schemes.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-2 gap-4">
                 <div className="bg-blue-50 rounded-lg p-3">
                   <h4 className="font-semibold text-blue-800 mb-1">Benefits:</h4>
                   <ul className="text-blue-700 text-sm space-y-1">
@@ -314,7 +314,7 @@ export default function MaximizeTakeHomePay() {
                 While not directly increasing take-home pay, ISAs provide tax-free growth on your savings and investments.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-2 gap-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Cash ISA:</h4>
                   <ul className="text-sm text-gray-700 space-y-1">

@@ -85,7 +85,7 @@ export default function SitemapPage() {
                 <h2 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                   {section.title}
                 </h2>
-                <ul className="grid md:grid-cols-2 gap-3">
+                <ul className="grid lg:grid-cols-2 gap-3">
                   {section.links.map((link) => (
                     <li key={link.href}>
                       <Link

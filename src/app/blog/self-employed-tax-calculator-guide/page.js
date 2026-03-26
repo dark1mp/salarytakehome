@@ -123,7 +123,7 @@ export default function SelfEmployedTaxGuide() {
 
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Step 3: National Insurance</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Class 2 National Insurance</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
@@ -185,7 +185,7 @@ export default function SelfEmployedTaxGuide() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Allowable Expenses</h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">✅ Deductible Expenses</h3>
                 <ul className="text-sm text-gray-700 space-y-2">
@@ -221,7 +221,7 @@ export default function SelfEmployedTaxGuide() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Home Office Expenses</h2>
             
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Simplified Expenses</h3>
                   <div className="bg-green-50 rounded-lg p-4 border border-green-200">
@@ -263,7 +263,7 @@ export default function SelfEmployedTaxGuide() {
             <div className="space-y-4">
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Self Assessment Deadlines</h3>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Paper Returns:</h4>
                     <p className="text-red-600 font-semibold">31 October (following tax year)</p>

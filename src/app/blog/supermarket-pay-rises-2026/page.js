@@ -168,7 +168,7 @@ export default function SupermarketPayRises2026() {
             <p className="text-gray-700 mb-4 leading-relaxed">
               The discounter has invested £42 million in colleague pay for 2026 alone, and this marks yet another increase in what has been a sustained push to be the sector&apos;s pay leader.
             </p>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-green-50 rounded-xl p-4 border border-green-200">
                 <p className="text-green-600 text-sm">Starting Rate</p>
                 <p className="text-green-800 text-xl font-bold">£13.50/hr</p>
@@ -191,7 +191,7 @@ export default function SupermarketPayRises2026() {
             <p className="text-gray-700 mb-4 leading-relaxed">
               This is Lidl&apos;s seventh pay rise since 2023, backed by a £29 million investment. The discounter has also doubled paid paternity leave from two to four weeks at full pay.
             </p>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
                 <p className="text-blue-600 text-sm">Starting Rate</p>
                 <p className="text-blue-800 text-xl font-bold">£13.45/hr</p>
@@ -273,7 +273,7 @@ export default function SupermarketPayRises2026() {
             <p className="text-gray-700 mb-4 leading-relaxed">
               From 1 April 2026, the National Living Wage rises by <strong>4.1%</strong> to <strong>£12.71 per hour</strong> for workers aged 21 and over, up from £12.21. This is the legal minimum that employers must pay.
             </p>
-            <div className="grid md:grid-cols-2 gap-4 mb-4">
+            <div className="grid lg:grid-cols-2 gap-4 mb-4">
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <p className="text-purple-600 text-sm">National Living Wage (21+)</p>
                 <p className="text-purple-800 text-xl font-bold">£12.71/hr</p>

@@ -112,7 +112,7 @@ export default function StudentLoanGuide() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Plan 1: Pre-2012 Students</h2>
             
             <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Details</h3>
                   <ul className="text-sm text-gray-700 space-y-2">
@@ -151,7 +151,7 @@ export default function StudentLoanGuide() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Plan 2: 2012-2023 Students</h2>
             
             <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Details</h3>
                   <ul className="text-sm text-gray-700 space-y-2">
@@ -191,7 +191,7 @@ export default function StudentLoanGuide() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Plan 5: Post-2023 Students</h2>
             
             <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Details</h3>
                   <ul className="text-sm text-gray-700 space-y-2">
@@ -231,7 +231,7 @@ export default function StudentLoanGuide() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Postgraduate Loans</h2>
             
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Details</h3>
                   <ul className="text-sm text-gray-700 space-y-2">
@@ -262,7 +262,7 @@ export default function StudentLoanGuide() {
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Consider These Factors</h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid lg:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Arguments FOR Early Repayment:</h4>
                     <ul className="text-sm text-gray-700 space-y-1">

@@ -24,7 +24,7 @@ export default function Links() {
               <ExternalLink className="w-12 h-12 text-[#1566a0]" />
               Useful Links
             </h1>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
+            <div className="grid lg:grid-cols-2 gap-6 mt-8">
           {usefulLinks.map((link, index) => (
             <a
               key={index}

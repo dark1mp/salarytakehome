@@ -129,7 +129,7 @@ export default function HomePage() {
           {calculators.map((category) => (
             <div key={category.category} className="mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">{category.category}</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
                 {category.tools.map((tool) => (
                   <Link
                     key={tool.href}
