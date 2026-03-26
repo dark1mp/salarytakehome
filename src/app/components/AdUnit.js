@@ -57,7 +57,7 @@ export default function AdUnit({ className = "", slot = "7756198179", hideOnMobi
       style={{ maxHeight: adFilled ? '1000px' : '0' }}
     >
       {adFilled && (
-        <p className={`${showScrollHint ? '' : 'lg:hidden'} text-center text-sm lg:text-[20px] text-gray-400 mb-2`}>↓ Scroll down to see results ↓</p>
+        <p className={`${showScrollHint ? '' : 'lg:hidden'} text-center text-sm lg:text-[20px] text-gray-900 mb-2`}>↓ Scroll down to see results ↓</p>
       )}
       <ins className="adsbygoogle"
         ref={adRef}
