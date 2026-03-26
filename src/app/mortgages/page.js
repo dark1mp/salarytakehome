@@ -493,7 +493,7 @@ export default function MortgageCalculator() {
         </div>
 
         {/* Related Reading */}
-        <div className="mx-auto px-8 mt-6 mb-8">
+        <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px]">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid md:grid-cols-3 gap-3">

@@ -189,7 +189,7 @@ export default function HourlyWage() {
 
         {/* UK Minimum Wage Information Card */}
         <div className="flex gap-6 mx-auto px-8 mt-6">
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -261,7 +261,7 @@ export default function HourlyWage() {
 
         {/* Why knowing your hourly wage matters Card */}
         <div className="flex gap-6 mx-auto px-8 mt-4">
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -292,7 +292,7 @@ export default function HourlyWage() {
 
         {/* Hourly wage FAQs Card */}
         <div className="flex gap-6 mx-auto px-8 mt-4">
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -344,7 +344,7 @@ export default function HourlyWage() {
         </div>
 
         {/* Related Reading */}
-        <div className="mx-auto px-8 mt-6 mb-8">
+        <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px]">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid md:grid-cols-3 gap-3">

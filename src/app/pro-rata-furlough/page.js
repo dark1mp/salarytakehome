@@ -183,7 +183,7 @@ export default function ProRata() {
 
         {/* Understanding Pro-Rata Salary Card */}
         <div className="flex gap-6 mx-auto px-8 mt-4">
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
@@ -216,7 +216,7 @@ export default function ProRata() {
 
         {/* Why Pro-Rata Matters Card */}
         <div className="flex gap-6 mx-auto px-8 mt-4">
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             <div className="relative group overflow-hidden bg-white rounded-2xl border border-amber-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
@@ -277,7 +277,7 @@ export default function ProRata() {
 
         {/* FAQ Section */}
         <div className="flex gap-6 mx-auto px-8 mt-4">
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -350,7 +350,7 @@ export default function ProRata() {
         </div>
 
         {/* Related Reading */}
-        <div className="mx-auto px-8 mt-6 mb-8">
+        <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px]">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid md:grid-cols-3 gap-3">

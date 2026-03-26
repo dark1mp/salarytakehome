@@ -1145,7 +1145,7 @@ function TaxCalculatorContent() {
 
         {/* Optimized Information Cards */}
         <div className="flex gap-6 mx-auto px-4 md:px-8 mt-10">
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             {/* Topic Information Cards */}
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Understanding Your Deductions</h2>
             <div className="grid lg:grid-cols-2 gap-6 mb-6">
@@ -1358,7 +1358,7 @@ function TaxCalculatorContent() {
 
         {/* Beautiful Navigation Buttons - Aligned with cards section */}
         <div className="flex gap-6 mx-auto px-4 md:px-8 mt-8">
-          <div className="flex-1">
+          <div className="flex-1 xl:pr-[192px]">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               {/* Blog Link */}
               <a 
@@ -1392,7 +1392,7 @@ function TaxCalculatorContent() {
       </main>
 
         {/* Related Reading */}
-        <div className="mx-auto px-8 mt-6 mb-8">
+        <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px]">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-3">
