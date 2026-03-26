@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from 'react';
 
-export default function AdUnit({ className = "", slot = "7756198179", hideOnMobile = false }) {
+export default function AdUnit({ className = "", slot = "7756198179", hideOnMobile = false, showScrollHint = false }) {
   const adRef = useRef(null);
   const containerRef = useRef(null);
   const pushed = useRef(false);
@@ -57,7 +57,7 @@ export default function AdUnit({ className = "", slot = "7756198179", hideOnMobi
       style={{ maxHeight: adFilled ? '1000px' : '0' }}
     >
       {adFilled && (
-        <p className="lg:hidden text-center text-sm text-gray-400 mb-2">↓ Scroll down to see results</p>
+        <p className={`${showScrollHint ? '' : 'lg:hidden'} text-center text-sm text-gray-400 mb-2`}>↓ Scroll down to see results</p>
       )}
       <ins className="adsbygoogle"
         ref={adRef}

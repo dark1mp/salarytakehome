@@ -779,7 +779,7 @@ export default function PayRiseCalculator() {
             </div>
 
             {/* In-Content Ad */}
-            <AdUnit />
+            <AdUnit showScrollHint />
 
             {/* Results Section */}
             {results ? (
