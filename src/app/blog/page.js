@@ -2,6 +2,7 @@
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import LayoutWrapper from '../components/LayoutWrapper';
+import AdUnit from '../components/AdUnit';
 
 const blogPosts = [
   {
@@ -212,6 +213,7 @@ export default function Blog() {
           <Link href="/take-home-pay-calculator" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors">
             ← Back to Calculator
           </Link>
+          <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             UK Tax Blog & Guides
           </h1>

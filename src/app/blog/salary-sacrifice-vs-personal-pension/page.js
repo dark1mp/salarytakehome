@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
 import LayoutWrapper from "../../components/LayoutWrapper";
+import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
   title: "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2025/26?",
@@ -46,6 +47,7 @@ export default function SalarySacrificeVsPersonalPension() {
             </time>
             <span className="text-gray-500 text-sm">12 min read</span>
           </div>
+          <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2025/26?
           </h1>

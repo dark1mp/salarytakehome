@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
 import LayoutWrapper from "../../components/LayoutWrapper";
+import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
   title: "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027",
@@ -46,6 +47,7 @@ export default function CashISALimit2027() {
             </time>
             <span className="text-gray-500 text-sm">18 min read</span>
           </div>
+          <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             The £12,000 Cash ISA Limit: What You Need to Know Before April 2027
           </h1>

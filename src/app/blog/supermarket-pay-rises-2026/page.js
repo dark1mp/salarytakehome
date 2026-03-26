@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
 import LayoutWrapper from "../../components/LayoutWrapper";
+import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
   title: "Supermarket Pay Rises 2026: Tesco, Aldi, M&S, Lidl, Sainsbury's & Morrisons Compared",
@@ -46,6 +47,7 @@ export default function SupermarketPayRises2026() {
             </time>
             <span className="text-gray-500 text-sm">8 min read</span>
           </div>
+          <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Supermarket Pay Rises 2026: How Tesco, Aldi, M&amp;S, Lidl, Sainsbury&apos;s &amp; Morrisons Compare
           </h1>

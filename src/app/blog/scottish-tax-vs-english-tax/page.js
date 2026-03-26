@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
 import LayoutWrapper from "../../components/LayoutWrapper";
+import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
   title: "Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?",
@@ -46,6 +47,7 @@ export default function ScottishTaxVsEnglishTax() {
               </time>
               <span className="text-gray-500 text-sm">12 min read</span>
             </div>
+            <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?
             </h1>

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import RelatedArticles from "../../components/RelatedArticles";
 import LayoutWrapper from "../../components/LayoutWrapper";
+import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
   title: "The £100k Tax Trap: Britain's Hidden 60% Tax Rate That's Punishing Middle-Class Professionals",
@@ -46,6 +47,7 @@ export default function TaxTrap100k() {
             </time>
             <span className="text-gray-500 text-sm">20 min read</span>
           </div>
+          <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             The £100k Tax Trap: Britain's Hidden 60% Tax Rate That's Punishing Middle-Class Professionals
           </h1>

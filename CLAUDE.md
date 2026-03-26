@@ -116,14 +116,15 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 ### Adding a New Blog Post
 
 1. Create `src/app/blog/[slug]/page.js`
-2. Wrap content in `<LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Post Title" }]}>` — this provides sidebar, footer, and breadcrumbs automatically
-3. Add the post to the blog index in `src/app/blog/page.js`
-4. Add the URL to `src/app/sitemap.js` (update blog lastModified date too)
-5. Cross-link to relevant calculators (hourly-wage, take-home-pay-calculator, pay-rise)
-6. Add external links to official sources (.gov.uk, HMRC, SLC etc.) for E-E-A-T credibility
-7. Include structured data: Article schema + FAQPage (if applicable). BreadcrumbList schema is handled by the Breadcrumbs component automatically.
-8. Add RelatedArticles component at the bottom
-9. After deploy, IndexNow submission happens automatically via postbuild script
+2. Wrap content in `<LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Post Title" }]} narrow>` — this provides sidebar, footer, breadcrumbs, and narrow layout for side rail ads
+3. Add `import AdUnit from "../../components/AdUnit";` and place `<AdUnit slot="1586479879" hideOnMobile />` above the h1
+4. Add the post to the blog index in `src/app/blog/page.js`
+5. Add the URL to `src/app/sitemap.js` (update blog lastModified date too)
+6. Cross-link to relevant calculators (hourly-wage, take-home-pay-calculator, pay-rise)
+7. Add external links to official sources (.gov.uk, HMRC, SLC etc.) for E-E-A-T credibility
+8. Include structured data: Article schema + FAQPage (if applicable). BreadcrumbList schema is handled by the Breadcrumbs component automatically.
+9. Add RelatedArticles component at the bottom
+10. After deploy, IndexNow submission happens automatically via postbuild script
 
 ## SEO Checklist
 
@@ -179,7 +180,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **Calculator form+results layout** — all calculators with a side results panel use `xl:grid-cols-3` (not `lg:`) with `xl:col-span-2` for the form and `xl:col-span-1` for results. This ensures the results panel doesn't overflow on iPad landscape (1024px). Results stack below the form until 1280px+.
 - **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver watching `data-ad-status` (set by AdSense to `"filled"` or `"unfilled"`). If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it. Don't use `offsetHeight` to detect ad fill — it gives false positives.
 - **AdUnit mobile scroll hint** — when an ad fills on mobile (`lg:hidden`), a "↓ Scroll down to see results" message appears above the ad so users know results are below.
-- **Manual ad placements** — All 10 calculator pages have: (1) a desktop-only top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, and (2) a sticky right sidebar ad (`<AdUnit slot="4603525459" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. Blog pages rely on auto ads only.
+- **Manual ad placements** — All 10 calculator pages have: (1) a desktop-only top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, and (2) a sticky right sidebar ad (`<AdUnit slot="4603525459" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. All blog pages (index + 20 posts) have a desktop-only top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, plus auto ads.
 - **Sidebar ad positioning** — The sidebar ad uses `absolute right-8 top-8 w-[160px]` with `sticky top-8` inside. The content div uses `xl:pr-[192px]` to reserve space so cards don't overlap. The outer container uses `relative` (not `flex`). Card scaling (`lg:scale-[0.92]`) extends to `2xl` to fit on 13" MacBook screens (1440px).
 - **Calculator pages use `fullWidth`** — Calculator pages pass `fullWidth` to LayoutWrapper, which removes the `2xl:max-w` constraint since they have their own manual sidebar ad. They also don't use `max-w-[1400px]` or `max-w-6xl` on inner containers.
 - **Side rail ad space (non-calculator pages)** — LayoutWrapper uses `2xl:max-w-[1100px]` on the inner content div to leave ~200px+ on the right at 1536px+ viewports for AdSense auto side rail ads. Below `2xl`, content is full width. Don't remove this max-width from non-calculator pages.
@@ -194,5 +195,5 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - No table of contents on long blog posts
 - More "vs" comparison content opportunities (e.g. PAYE vs self-employed, full-time vs part-time tax)
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
-- Blog pages have no manual `<AdUnit />` placements — should add them for better ad revenue
+- Blog pages only have a top ad unit — could add in-content or sidebar ads for better ad revenue
 - `/pay-rise` and `/take-home-pay-calculator` have two ad units (top + in-content) — other calculators only have the top ad unit and could benefit from an in-content one too
