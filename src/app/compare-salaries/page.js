@@ -110,6 +110,7 @@ export default function CompareSalaries() {
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">
             <div className="sticky top-8">
               <AdUnit slot="4603525459" hideOnMobile />
+              <AdUnit slot="9534353704" hideOnMobile />
             </div>
           </div>
           <div className="flex-1 xl:pr-[192px]">
