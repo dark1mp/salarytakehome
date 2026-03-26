@@ -118,15 +118,15 @@ export default function MortgageCalculator() {
   }, [formData]);
 
   return (
-    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Mortgage Calculator" }]}>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Mortgage Calculator" }]} fullWidth>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
+        <div className="flex gap-6 mx-auto px-8 py-10">
           <div className="hidden 2xl:block w-[160px] flex-shrink-0 order-last">
             <div className="sticky top-8">
               <AdUnit slot="4603525459" hideOnMobile />
             </div>
           </div>
-          <div className="flex-1 max-w-6xl">
+          <div className="flex-1">
             <AdUnit slot="1586479879" hideOnMobile />
             {/* Header */}
             <div className="mb-8">
@@ -499,7 +499,7 @@ export default function MortgageCalculator() {
         </div>
 
         {/* Related Reading */}
-        <div className="max-w-[1400px] mx-auto px-8 mt-6 mb-8">
+        <div className="mx-auto px-8 mt-6 mb-8">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid md:grid-cols-3 gap-3">

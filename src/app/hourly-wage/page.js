@@ -45,15 +45,15 @@ export default function HourlyWage() {
   };
 
   return (
-    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Hourly Wage Calculator" }]}>
+    <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Hourly Wage Calculator" }]} fullWidth>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 py-10">
+        <div className="flex gap-6 mx-auto px-8 py-10">
           <div className="hidden 2xl:block w-[160px] flex-shrink-0 order-last">
             <div className="sticky top-8">
               <AdUnit slot="4603525459" hideOnMobile />
             </div>
           </div>
-          <div className="flex-1 max-w-6xl">
+          <div className="flex-1">
             <AdUnit slot="1586479879" hideOnMobile />
             <div className="mb-8">
               <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
@@ -194,8 +194,8 @@ export default function HourlyWage() {
         </div>
 
         {/* UK Minimum Wage Information Card */}
-        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 mt-6">
-          <div className="flex-1 max-w-6xl">
+        <div className="flex gap-6 mx-auto px-8 mt-6">
+          <div className="flex-1">
             <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -273,8 +273,8 @@ export default function HourlyWage() {
         </div>
 
         {/* Why knowing your hourly wage matters Card */}
-        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 mt-4">
-          <div className="flex-1 max-w-6xl">
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1">
             <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -311,8 +311,8 @@ export default function HourlyWage() {
         </div>
 
         {/* Hourly wage FAQs Card */}
-        <div className="flex gap-6 max-w-[1400px] mx-auto px-8 mt-4">
-          <div className="flex-1 max-w-6xl">
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1">
             <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -371,7 +371,7 @@ export default function HourlyWage() {
         </div>
 
         {/* Related Reading */}
-        <div className="max-w-[1400px] mx-auto px-8 mt-6 mb-8">
+        <div className="mx-auto px-8 mt-6 mb-8">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid md:grid-cols-3 gap-3">

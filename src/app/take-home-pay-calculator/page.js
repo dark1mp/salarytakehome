@@ -615,13 +615,13 @@ function TaxCalculatorContent() {
       </a>
 
       <main id="main-content">
-        <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 py-8">
+        <div className="flex gap-6 mx-auto px-4 md:px-8 py-8">
           <div className="hidden 2xl:block w-[160px] flex-shrink-0 order-last">
             <div className="sticky top-8">
               <AdUnit slot="4603525459" hideOnMobile />
             </div>
           </div>
-          <div className="flex-1 max-w-6xl">
+          <div className="flex-1">
             <AdUnit slot="1586479879" hideOnMobile />
             <div className="mb-8">
               <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
@@ -1149,8 +1149,8 @@ function TaxCalculatorContent() {
         </div>
 
         {/* Optimized Information Cards */}
-        <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 mt-10">
-          <div className="flex-1 max-w-6xl">
+        <div className="flex gap-6 mx-auto px-4 md:px-8 mt-10">
+          <div className="flex-1">
             {/* Topic Information Cards */}
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Understanding Your Deductions</h2>
             <div className="grid lg:grid-cols-2 gap-6 mb-6">
@@ -1368,8 +1368,8 @@ function TaxCalculatorContent() {
         </div>
 
         {/* Beautiful Navigation Buttons - Aligned with cards section */}
-        <div className="flex gap-6 max-w-[1400px] mx-auto px-4 md:px-8 mt-8">
-          <div className="flex-1 max-w-6xl">
+        <div className="flex gap-6 mx-auto px-4 md:px-8 mt-8">
+          <div className="flex-1">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               {/* Blog Link */}
               <a 
@@ -1406,7 +1406,7 @@ function TaxCalculatorContent() {
       </main>
 
         {/* Related Reading */}
-        <div className="max-w-[1400px] mx-auto px-8 mt-6 mb-8">
+        <div className="mx-auto px-8 mt-6 mb-8">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-3">
@@ -1440,7 +1440,7 @@ import LayoutWrapper from '../components/LayoutWrapper';
 export default function TaxCalculator() {
   return (
     <ErrorBoundary>
-      <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Take Home Pay Calculator" }]}>
+      <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Take Home Pay Calculator" }]} fullWidth>
         <Suspense fallback={
           <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
             <div className="text-center">
