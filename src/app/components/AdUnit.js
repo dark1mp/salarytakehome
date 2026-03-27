@@ -53,7 +53,7 @@ export default function AdUnit({ className = "", slot = "7756198179", hideOnMobi
   return (
     <div
       ref={containerRef}
-      className={`overflow-hidden transition-all duration-300 ${adFilled ? 'my-4' : 'my-0'} ${hideOnMobile ? 'hidden lg:block' : ''} ${className}`}
+      className={`overflow-hidden transition-all duration-300 ${adFilled ? 'my-4' : 'my-0'} ${hideOnMobile ? 'hidden md:block' : ''} ${className}`}
       style={{ maxHeight: adFilled ? '1000px' : '0' }}
     >
       {adFilled && (
