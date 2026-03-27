@@ -105,6 +105,57 @@ export default function CompareSalaries() {
 
   return (
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Compare Salaries" }]} fullWidth>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [{
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I compare two salaries after tax in the UK?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To compare salaries fairly, calculate the take-home pay for each after income tax, National Insurance, student loans, and pension contributions. A £5,000 gross salary difference may only be £2,900-£3,400 after deductions, depending on which tax bands the salaries fall in."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does living in Scotland affect my take-home pay compared to England?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Scotland has five income tax bands (19%-47%) compared to England's three (20%-45%). On a £40,000 salary, you would take home roughly the same in both countries, but above £43,663 Scottish taxpayers pay more due to the 42% higher rate kicking in earlier than England's 40% rate at £50,271."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do pension contributions affect a salary comparison?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pension contributions reduce your taxable income, so they lower your income tax. A 5% pension contribution on a £40,000 salary saves £400 in tax for a basic rate taxpayer and £800 for a higher rate taxpayer, making the net cost of pension saving less than the gross amount."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do student loan repayments affect my salary?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Student loan repayments are 9% of earnings above the threshold (Plan 1: £26,065, Plan 2: £28,470, Plan 4: £32,745, Plan 5: £25,000). Postgraduate loans are 6% above £21,000. On a £35,000 salary with Plan 2, you repay £588 per year, reducing monthly take-home pay by about £49."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is a £5,000 pay rise worth changing jobs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A £5,000 gross pay rise typically adds £2,900-£3,400 to your annual take-home pay after tax and NI, depending on your current salary. At the basic rate, you keep about 68% of the increase. At the higher rate, you keep about 58%. Use our calculator to compare the exact take-home figures for both salaries."
+                }
+              }
+            ]
+          }]
+        }) }}
+      />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="relative mx-auto px-8 py-10">
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">

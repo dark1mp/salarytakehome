@@ -59,6 +59,42 @@ export default function ProRata() {
 
   return (
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Pro Rata Calculator" }]} fullWidth>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [{
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How do I calculate a pro-rata salary?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "To calculate a pro-rata salary, divide the full-time salary by the full-time hours, then multiply by your actual working hours. For example, if the full-time salary is £30,000 for 37.5 hours per week, working 3 days (22.5 hours) gives a pro-rata salary of £18,000 per year." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What does pro-rata mean for part-time workers?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Pro-rata means 'in proportion'. For part-time workers, it means your salary, holiday entitlement, and benefits are calculated proportionally based on the hours you work compared to a full-time equivalent. If you work 60% of full-time hours, you receive 60% of the full-time salary." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How is tax calculated on a part-time pro-rata salary?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Tax on a pro-rata salary is calculated the same way as any other salary. You receive the full £12,570 personal allowance regardless of whether you work full-time or part-time. This means part-time workers on lower pro-rata salaries may pay proportionally less tax than their full-time equivalent." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How is pro-rata holiday entitlement calculated?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Full-time workers in the UK are entitled to 28 days of paid holiday (including bank holidays). Part-time workers receive a pro-rata share. If you work 3 days per week, your entitlement is 3/5 × 28 = 16.8 days per year. Employers may round this up to 17 days." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does working 3 days a week change my tax band?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Working 3 days a week at a pro-rata salary puts you in a lower tax band than the full-time equivalent. For example, a full-time £50,000 salary falls into the higher rate band, but the 3-day pro-rata equivalent of £30,000 stays entirely within the basic rate band, meaning you pay a lower effective tax rate." }
+                }
+              ]
+            }]
+          }) }}
+        />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="relative mx-auto px-8 py-10">
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">

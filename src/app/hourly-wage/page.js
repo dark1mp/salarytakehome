@@ -46,6 +46,57 @@ export default function HourlyWage() {
 
   return (
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Hourly Wage Calculator" }]} fullWidth>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [{
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I convert my hourly wage to an annual salary?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Multiply hourly rate by hours per week, then by 52 weeks. E.g. £15/hour × 37.5 hours × 52 weeks = £29,250 per year. Standard full-time is 37.5 hours per week in the UK."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the National Living Wage in 2025/26?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The National Living Wage for workers aged 21 and over is £12.21 per hour from April 2025. This equates to approximately £23,809.50 per year for a full-time worker on a 37.5-hour week."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many working hours are there in a year?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A standard full-time working year in the UK is 1,950 hours (37.5 hours per week × 52 weeks). Some employers use 40 hours per week (2,080 hours per year). After deducting 28 days of statutory holiday, the actual working hours are around 1,740-1,850."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much tax will I pay on my hourly wage?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tax depends on your total annual earnings. If your hourly wage equates to less than £12,570 per year, you pay no income tax. Between £12,570 and £50,270 you pay 20%, between £50,270 and £125,140 you pay 40%, and above £125,140 you pay 45%."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between gross and net hourly pay?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Gross hourly pay is your rate before any deductions. Net hourly pay is what you actually receive after income tax, National Insurance, student loan repayments, and pension contributions are deducted. A £20 gross hourly wage typically works out to around £15-16 net for a basic rate taxpayer."
+                }
+              }
+            ]
+          }]
+        }) }}
+      />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="relative mx-auto px-8 py-10">
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">

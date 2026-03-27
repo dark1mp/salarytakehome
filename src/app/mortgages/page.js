@@ -119,6 +119,42 @@ export default function MortgageCalculator() {
 
   return (
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Mortgage Calculator" }]} fullWidth>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [{
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How much can I borrow for a mortgage on my salary?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Most UK lenders offer 4 to 4.5 times your annual salary. On a £40,000 salary, you could typically borrow £160,000-£180,000. Some lenders offer up to 5.5 times salary for higher earners or certain professionals. Your deposit size, credit history, and existing debts also affect how much you can borrow." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the difference between a fixed and variable rate mortgage?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "A fixed rate mortgage locks your interest rate for a set period (typically 2-5 years), giving predictable monthly payments. A variable rate mortgage can change with the Bank of England base rate or your lender's standard variable rate (SVR). Fixed rates offer stability; variable rates may be cheaper initially but carry the risk of rate increases." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does deposit size affect my mortgage repayments?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "A larger deposit reduces the amount you borrow and usually secures a lower interest rate. With a 10% deposit (90% LTV), you might pay 5.5% interest. With a 25% deposit (75% LTV), you might pay 4.5%. On a £200,000 property, increasing your deposit from 10% to 25% could save over £150 per month." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is a mortgage affordability check?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Lenders assess whether you can afford mortgage repayments by examining your income, regular outgoings, existing debts, and living costs. They also stress-test your ability to pay if interest rates rise by 3% or more. Having large debts, multiple credit commitments, or irregular income may reduce how much you can borrow." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do interest rates affect my monthly mortgage payments?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "A 1% increase in interest rate on a £200,000 repayment mortgage over 25 years adds approximately £100-£110 to your monthly payment. At 4% interest, you pay around £1,056 per month. At 5%, this rises to approximately £1,170. Over the full term, a 1% difference costs over £30,000 in additional interest." }
+                }
+              ]
+            }]
+          }) }}
+        />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="relative mx-auto px-8 py-10">
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">

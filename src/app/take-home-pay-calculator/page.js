@@ -1427,6 +1427,57 @@ export default function TaxCalculator() {
   return (
     <ErrorBoundary>
       <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Take Home Pay Calculator" }]} fullWidth>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [{
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How much tax do I pay on a £30,000 salary in the UK?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "On a £30,000 salary in 2025/26, you pay £3,486 in income tax (20% on earnings above the £12,570 personal allowance) and £1,394.40 in National Insurance (8% on earnings between £12,570 and £50,270). Your total take-home pay is approximately £25,119.60 per year or £2,093.30 per month."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the personal allowance for the 2025/26 tax year?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The personal allowance for 2025/26 is £12,570. This is the amount you can earn before paying any income tax. If you earn over £100,000, your personal allowance is reduced by £1 for every £2 earned above £100,000, meaning it reaches zero at £125,140."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does National Insurance affect my take-home pay?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In 2025/26, you pay 8% National Insurance on earnings between £12,570 and £50,270, and 2% on earnings above £50,270. For example, on a £40,000 salary, you pay £2,194.40 in NI contributions, reducing your monthly take-home pay by about £182.87."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I pay more tax in Scotland than England?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scotland has different income tax rates with five bands: starter (19%), basic (20%), intermediate (21%), higher (42%), and top (47%). Lower earners may pay slightly less tax in Scotland, while higher earners generally pay more. For example, someone earning £50,000 pays around £600 more in Scotland than in England."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the £100,000 tax trap?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When you earn over £100,000, your £12,570 personal allowance is reduced by £1 for every £2 earned above £100,000. This creates an effective 60% tax rate on income between £100,000 and £125,140. For every additional £100 earned in this range, you lose £50 of personal allowance plus pay 40% tax on the £100, keeping only about £40."
+                  }
+                }
+              ]
+            }]
+          }) }}
+        />
         <Suspense fallback={
           <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
             <div className="text-center">

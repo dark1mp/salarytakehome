@@ -55,6 +55,42 @@ export default function MaternitySickPay() {
 
   return (
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Maternity Pay Calculator" }]} fullWidth>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [{
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How much is Statutory Maternity Pay (SMP) in 2025/26?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Statutory Maternity Pay is paid for 39 weeks. The first 6 weeks are paid at 90% of your average weekly earnings with no cap. The remaining 33 weeks are paid at £184.03 per week or 90% of average earnings, whichever is lower. You must earn at least £123 per week to qualify." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does Statutory Maternity Pay last?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "SMP is paid for up to 39 weeks. You can start your maternity leave up to 11 weeks before your due date. The earliest SMP can start is the 11th week before the expected week of childbirth. The last 13 weeks of the 52-week maternity leave entitlement are unpaid." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I pay tax on maternity pay?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Yes, Statutory Maternity Pay is taxable income subject to income tax and National Insurance. The first 6 weeks at 90% of earnings may push you into a higher tax band for that period. The remaining 33 weeks at £184.03 per week (£9,572.76 annually equivalent) typically falls within the personal allowance." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What are the eligibility requirements for SMP?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "To qualify for SMP you must have worked for your employer continuously for at least 26 weeks by the 15th week before your due date, earn at least £123 per week on average, and give your employer at least 28 days notice. If you don't qualify, you may be eligible for Maternity Allowance from the government instead." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "When should I start my maternity leave?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "You can start maternity leave any time from 11 weeks before your due date. Many women start 1-2 weeks before their due date. If your baby arrives early, your maternity leave starts automatically. Consider the financial impact: earlier leave means using more of your 39 paid weeks before the birth." }
+                }
+              ]
+            }]
+          }) }}
+        />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="relative mx-auto px-8 py-10">
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">

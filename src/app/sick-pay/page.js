@@ -119,6 +119,42 @@ export default function SickPay() {
 
   return (
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Sick Pay Calculator" }]} fullWidth>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [{
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How much is Statutory Sick Pay (SSP) in 2025/26?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Statutory Sick Pay is £116.75 per week in the 2025/26 tax year. It is paid by your employer for up to 28 weeks. To qualify, you must earn at least £123 per week (the Lower Earnings Limit) and have been off sick for at least 4 consecutive days including non-working days." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long can I receive Statutory Sick Pay?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "You can receive SSP for up to 28 weeks (approximately 6.5 months). SSP is not paid for the first 3 qualifying days of sickness (known as waiting days). If you are still unwell after 28 weeks, you may be able to claim Employment and Support Allowance (ESA) instead." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I pay tax on Statutory Sick Pay?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Yes, SSP is treated as earnings and is subject to income tax and National Insurance contributions, just like your regular wages. Your employer deducts tax through PAYE as normal. However, because SSP is relatively low at £116.75 per week, many recipients stay within their personal allowance." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "When does Statutory Sick Pay start?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "SSP starts from the 4th qualifying day of your sickness absence. The first 3 days are called waiting days and are unpaid under SSP rules. Qualifying days are the days you would normally work. Some employers offer enhanced sick pay schemes that start from day one." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can my employer pay more than Statutory Sick Pay?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Yes, many employers offer contractual or occupational sick pay schemes that pay more than SSP. Some pay full salary for a set period, then reduced pay. Your employment contract or staff handbook will detail your employer's sick pay policy. Contractual sick pay must be at least equal to SSP." }
+                }
+              ]
+            }]
+          }) }}
+        />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="relative mx-auto px-8 py-10">
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">

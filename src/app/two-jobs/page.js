@@ -321,6 +321,57 @@ export default function TwoJobs() {
 
   return (
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Two Jobs Calculator" }]} fullWidth>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [{
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How is tax calculated when I have two jobs in the UK?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Your personal allowance (£12,570) is usually applied to your main job via your tax code (typically 1257L). Your second job is taxed from the first pound earned, usually on a BR (basic rate) tax code at 20%. If your combined income exceeds £50,270, some earnings are taxed at 40%."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I get a personal allowance on both jobs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, you only receive one personal allowance of £12,570 across all employment. HMRC assigns it to your primary job via a 1257L tax code. Your second job typically receives a BR code, meaning all earnings are taxed at 20%. You can ask HMRC to split your allowance between jobs if you prefer."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What tax code should I use for my second job?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most second jobs use a BR (basic rate) tax code, which taxes all earnings at 20%. If your combined income might exceed £50,270, HMRC may issue a D0 code (40%) for the second job. You can contact HMRC to request a different split of your personal allowance between jobs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will I pay more National Insurance with two jobs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You pay National Insurance separately on each job. The 8% NI rate applies to earnings between £12,570 and £50,270 per job. This means if you earn £20,000 from each job, you pay NI on £7,430 from each, rather than on £27,430 from a single £40,000 job. In some cases, this can mean paying slightly less NI with two jobs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I split my personal allowance between two jobs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, you can ask HMRC to split your £12,570 personal allowance between two jobs. For example, if you earn similar amounts from each, you could request £6,285 of allowance on each job. Contact HMRC by phone or through your Personal Tax Account to request a tax code adjustment."
+                }
+              }
+            ]
+          }]
+        }) }}
+      />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="relative mx-auto px-8 py-10">
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">

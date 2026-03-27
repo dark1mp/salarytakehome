@@ -72,6 +72,42 @@ export default function Debts() {
 
   return (
     <LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Debt Calculator" }]} fullWidth>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [{
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is the difference between snowball and avalanche debt repayment?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "The snowball method pays off the smallest debt first for quick psychological wins, then rolls that payment into the next smallest. The avalanche method targets the highest interest rate debt first, saving more money overall. Mathematically, avalanche is cheaper, but snowball can be more motivating for staying on track." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long will it take to pay off my debt?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Repayment time depends on your total debt, interest rates, and monthly payments. For example, a £5,000 credit card debt at 20% APR with £150 monthly payments takes about 44 months to clear, costing around £1,500 in interest. Increasing payments to £250 per month reduces this to 24 months and £840 in interest." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Should I pay off my highest interest debt first?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Generally yes. Paying off the highest interest debt first (the avalanche method) minimises the total interest you pay. If you have a credit card at 20% APR and a personal loan at 6%, prioritising the credit card saves significantly more money over time, even if the loan balance is larger." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do minimum payments affect the total cost of debt?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Minimum payments are designed to keep debt manageable but can dramatically extend repayment time and increase total cost. A £3,000 credit card debt at 19.9% APR with only minimum payments (typically 2.5% of balance or £5, whichever is higher) could take over 25 years to repay and cost more than £4,000 in interest alone." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does debt consolidation save money?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Debt consolidation can save money if you secure a lower interest rate than your existing debts. Combining multiple debts at 20-30% APR into a single loan at 6-8% significantly reduces interest costs. However, extending the repayment term can increase total interest paid even at a lower rate. Always compare the total cost, not just monthly payments." }
+                }
+              ]
+            }]
+          }) }}
+        />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="relative mx-auto px-8 py-10">
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">
