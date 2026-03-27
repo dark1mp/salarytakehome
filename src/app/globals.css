@@ -8,12 +8,22 @@ body {
   background: #f8fafc;
 }
 
-/* Safari < 16.2 fallback — Tailwind v4 outputs "linear-gradient(in oklab, ...)"
-   which older Safari cannot parse, causing the sidebar gradient to disappear.
-   White text on a transparent sidebar is invisible. */
+/* Tailwind v4 oklab fallbacks — Tailwind v4 outputs "linear-gradient(in oklab, ...)"
+   and "oklab()" colors which older browsers cannot parse. Without these fallbacks
+   the sidebar gradient disappears and white text becomes invisible.
+   Gradient: Safari < 16.2, Firefox < 127, Chrome/Edge < 111
+   Colors:   Firefox < 113, Chrome/Edge < 111 */
 @supports not (background: linear-gradient(in oklab, red, blue)) {
   aside[class*="bg-gradient"] {
     background: linear-gradient(to bottom, #1566a0, #1566a0 50%, #1e90c6) !important;
+  }
+}
+@supports not (color: oklab(1 0 0)) {
+  aside[class*="bg-gradient"],
+  aside[class*="bg-gradient"] a,
+  aside[class*="bg-gradient"] span,
+  aside[class*="bg-gradient"] div {
+    color: #fff !important;
   }
 }
 
