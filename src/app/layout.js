@@ -50,8 +50,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ colorScheme: 'light only' }}>
       <head>
+        {/* Force light mode — prevents Safari dark mode from hiding sidebar text */}
+        <meta name="color-scheme" content="light only" />
+
         {/* Preconnect to third-party origins for faster loading */}
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
