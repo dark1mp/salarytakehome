@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from 'react';
-import { Briefcase, TrendingUp, Info, HelpCircle, FileText, Calculator } from 'lucide-react';
+import { Briefcase, TrendingUp, Info, HelpCircle, FileText, Calculator, ClipboardList, AlertTriangle } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
 import AdUnit from '../components/AdUnit';
 
@@ -673,6 +673,146 @@ export default function TwoJobs() {
 
                 <p className="text-gray-600 text-sm">
                   *NI is actually lower with two jobs because each job gets its own &pound;12,570 threshold. Read more: <a href="/blog/two-jobs-tax-explained" className="text-blue-600 hover:text-blue-800 underline font-semibold">Two Jobs Tax Explained</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Declaring a Second Job to HMRC Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-6">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-green-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <ClipboardList className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">Declaring a Second Job to HMRC</h3>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  When you start a second job, your new employer will ask you to complete a Starter Checklist (which replaced the P46). The statement you choose determines your initial tax code. Here&apos;s what typically happens:
+                </p>
+
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full text-sm border-collapse">
+                    <thead>
+                      <tr className="bg-green-50">
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-green-200">Scenario</th>
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-green-200">Starter Checklist Statement</th>
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-green-200">Likely Tax Code</th>
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-green-200">What It Means</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 text-gray-800">First job uses your full allowance</td>
+                        <td className="p-3 text-gray-800">Statement B</td>
+                        <td className="p-3 font-semibold text-gray-900">BR</td>
+                        <td className="p-3 text-gray-700">All earnings taxed at 20%</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 bg-gray-50">
+                        <td className="p-3 text-gray-800">First job only uses part of allowance</td>
+                        <td className="p-3 text-gray-800">Statement A</td>
+                        <td className="p-3 font-semibold text-gray-900">Split code (e.g. 600L)</td>
+                        <td className="p-3 text-gray-700">Remaining allowance applied here</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 text-gray-800">Combined income over &pound;50,270</td>
+                        <td className="p-3 text-gray-800">Statement B</td>
+                        <td className="p-3 font-semibold text-gray-900">D0</td>
+                        <td className="p-3 text-gray-700">All earnings taxed at 40%</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 bg-gray-50">
+                        <td className="p-3 text-gray-800">No P45 and unsure</td>
+                        <td className="p-3 text-gray-800">Statement C</td>
+                        <td className="p-3 font-semibold text-gray-900">Emergency (e.g. 1257L M1)</td>
+                        <td className="p-3 text-gray-700">Temporary — HMRC will correct it</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-4">
+                  <strong>Tip:</strong> You can move your personal allowance to whichever job you prefer by contacting HMRC or using your <a href="https://www.gov.uk/check-income-tax-current-year" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Personal Tax Account on GOV.UK</a>. This doesn&apos;t change your total tax — it just adjusts how much is deducted from each payslip during the year.
+                </p>
+
+                <p className="text-gray-600 text-sm">
+                  Learn more about how PAYE works across multiple employers: <a href="/blog/two-jobs-tax-explained" className="text-blue-600 hover:text-blue-800 underline font-semibold">Two Jobs Tax Explained</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* When Two Jobs Cost You More Tax Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-6">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-amber-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <AlertTriangle className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">When Two Jobs Cost You More Tax</h3>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  Having two jobs doesn&apos;t automatically mean more tax, but there are income thresholds where your combined earnings can trigger higher effective tax rates. Watch out for these traps:
+                </p>
+
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full text-sm border-collapse">
+                    <thead>
+                      <tr className="bg-amber-50">
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-amber-200">Combined Income</th>
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-amber-200">Example (Job 1 + Job 2)</th>
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-amber-200">Tax Trap</th>
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-amber-200">Effective Rate on Extra &pound;1</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 text-gray-800">Over &pound;50,270</td>
+                        <td className="p-3 text-gray-800">&pound;35k + &pound;20k</td>
+                        <td className="p-3 text-gray-700">Higher rate band — earnings above &pound;50,270 taxed at 40% + 2% NI</td>
+                        <td className="p-3 font-semibold text-amber-700">42%</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 bg-gray-50">
+                        <td className="p-3 text-gray-800">Over &pound;50,000</td>
+                        <td className="p-3 text-gray-800">&pound;40k + &pound;15k</td>
+                        <td className="p-3 text-gray-700">High Income Child Benefit Charge — lose 1% of Child Benefit per &pound;200 over &pound;50k</td>
+                        <td className="p-3 font-semibold text-amber-700">Up to 55%+</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 text-gray-800">Over &pound;100,000</td>
+                        <td className="p-3 text-gray-800">&pound;70k + &pound;35k</td>
+                        <td className="p-3 text-gray-700">Personal allowance tapered — lose &pound;1 of allowance per &pound;2 over &pound;100k</td>
+                        <td className="p-3 font-semibold text-red-700">60%</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 bg-gray-50">
+                        <td className="p-3 text-gray-800">Over &pound;125,140</td>
+                        <td className="p-3 text-gray-800">&pound;80k + &pound;50k</td>
+                        <td className="p-3 text-gray-700">No personal allowance — all income taxed, plus NI on each job separately</td>
+                        <td className="p-3 font-semibold text-red-700">47%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-4">
+                  <p className="text-amber-900 text-base leading-relaxed">
+                    <strong>The &pound;100k trap is the biggest surprise.</strong> If one job pays &pound;70k and your second pays &pound;35k, you&apos;d lose your entire personal allowance — costing an extra &pound;5,028 in tax compared to earning &pound;100k from one source. This is because the taper applies to combined income, but many people don&apos;t realise their second job pushes them over the threshold.
+                  </p>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-4">
+                  <strong>How to mitigate it:</strong> Consider pension salary sacrifice on one or both jobs to reduce your combined adjusted net income below these thresholds. Even small pension contributions can save thousands in marginal tax.
+                </p>
+
+                <p className="text-gray-600 text-sm">
+                  Read more about the &pound;100k trap: <a href="/blog/100k-tax-trap" className="text-blue-600 hover:text-blue-800 underline font-semibold">The &pound;100k Tax Trap Explained</a> · See also: <a href="/blog/two-jobs-tax-explained" className="text-blue-600 hover:text-blue-800 underline font-semibold">Two Jobs Tax Explained</a>
                 </p>
               </div>
             </div>

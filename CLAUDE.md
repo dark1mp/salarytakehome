@@ -113,6 +113,21 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 
 28 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay). Every calculator now has at least one dedicated blog post linking back to it.
 
+### Topic Cluster Blog Posts (March 2026)
+
+These 8 posts were added to give every calculator a dedicated supporting blog post:
+
+| Blog Post | Route | Supports Calculator |
+|---|---|---|
+| UK Minimum Wage 2025/26 | `/blog/uk-minimum-wage-2025-26` | /hourly-wage |
+| How to Compare Job Offers | `/blog/how-to-compare-job-offers` | /compare-salaries |
+| Two Jobs Tax Explained | `/blog/two-jobs-tax-explained` | /two-jobs |
+| Pro-Rata Salary Explained | `/blog/pro-rata-salary-explained` | /pro-rata-furlough |
+| SSP Changes 2026 | `/blog/ssp-changes-2026` | /sick-pay |
+| Maternity Pay Guide | `/blog/maternity-pay-guide` | /maternity-sick-pay |
+| First-Time Buyer Mortgage Guide | `/blog/first-time-buyer-mortgage-guide` | /mortgages |
+| How to Pay Off Debt Faster | `/blog/how-to-pay-off-debt-faster` | /debts |
+
 ### Adding a New Blog Post
 
 1. Create `src/app/blog/[slug]/page.js`
@@ -129,7 +144,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 ## SEO Checklist
 
 - Every page needs: title, description, canonical URL, Open Graph tags, Twitter card
-- Structured data: WebApplication (root), Article (blog posts), FAQPage (where relevant)
+- Structured data: WebApplication (all 10 calculators), Article (blog posts), FAQPage (all 10 calculators — 7 questions each)
 - Sitemap: dynamic at `/sitemap.js` — must be updated when adding/removing pages
 - Robots.txt: blocks `/api/`, `/_next/`, `/admin/`
 - IndexNow: auto-submits all sitemap URLs post-build to Bing, Yandex, Seznam, Naver. Can also be triggered manually: `node scripts/submit-indexnow.mjs`
@@ -191,7 +206,8 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **Embedded blog links in educational sections** — All calculator pages have contextual blog links embedded within their educational content cards (not just in the Related Reading footer). This creates deeper internal linking and topical authority.
 - **External .gov.uk authority links** — All calculator pages link to relevant GOV.UK pages (income tax rates, NI, SSP, maternity pay, etc.) within their educational sections for E-E-A-T credibility.
 - **Topic cluster SEO pattern** — Each calculator acts as a "hub" page with 1-2 dedicated blog posts as "spokes". Blog posts link to the calculator with CTAs, and calculator educational cards embed links back to the blog posts. This mirrors the pattern that made `/pay-rise` the best-performing page on Bing. When adding a new calculator, always create at least one supporting blog post.
-- **Educational card pattern** — Calculator educational cards follow a consistent structure: icon with gradient background → heading → descriptive text with data tables → embedded blog/gov.uk links. Cards use coloured left borders and distinct icon colour themes (blue, purple, teal, amber, red, etc.) to visually differentiate topics. New cards should include at least one data table and one internal link.
+- **Educational card pattern** — Calculator educational cards follow a consistent structure: icon with gradient background → heading → descriptive text with data tables → embedded blog/gov.uk links. Cards use coloured left borders and distinct icon colour themes (blue, purple, teal, amber, red, etc.) to visually differentiate topics. New cards should include at least one data table and one internal link. All 10 calculators now have 4+ educational cards each.
+- **Minimum 4 educational cards per calculator** — Every calculator page should have at least 4 educational content cards plus the FAQ card. This was standardised in March 2026 to match the depth that made `/pay-rise` the top Bing performer.
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
@@ -203,5 +219,5 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
 - Blog pages only have a top ad unit — could add in-content or sidebar ads for better ad revenue
 - `/pay-rise` and `/take-home-pay-calculator` have two ad units (top + in-content) — other calculators only have the top ad unit and could benefit from an in-content one too
-- Educational content depth varies — `/pay-rise` has ~3,500 words of educational content; most other calculators have ~1,800-2,500 words. Expanding educational sections on lower-content calculators could improve Bing rankings
+- Educational content depth varies — `/pay-rise` has ~3,500 words of educational content; other calculators now have ~2,500-3,000 words after adding cards in March 2026, but could still be expanded further to match pay-rise's depth
 - `llms.txt` and `llms-full.txt` need updating to reflect the 8 new blog posts added in March 2026
