@@ -186,6 +186,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **Side rail ad space (non-calculator pages)** — LayoutWrapper uses `2xl:max-w-[1100px]` on the inner content div to leave ~200px+ on the right at 1536px+ viewports for AdSense auto side rail ads. Below `2xl`, content is full width. Don't remove this max-width from non-calculator pages.
 - **Narrow layout for blogs** — LayoutWrapper accepts a `narrow` prop (used on all blog pages) which applies `2xl:max-w-[900px]` instead, leaving ~400px for side rail ads. The space is always present on 2xl+ screens whether an ad fills or not.
 - **llms.txt** — `public/llms.txt` and `public/llms-full.txt` provide site metadata for AI crawlers. Update these when adding new calculators, blog posts, or changing tax year data.
+- **FAQ schema on all calculators** — All 10 calculator pages have FAQPage JSON-LD schema with 5 unique questions each. `/pay-rise` was the first; the other 9 were added later. When adding new calculators, include FAQPage schema following the same `@graph` pattern.
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
