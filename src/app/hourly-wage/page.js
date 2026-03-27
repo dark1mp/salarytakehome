@@ -92,8 +92,37 @@ export default function HourlyWage() {
                   "@type": "Answer",
                   "text": "Gross hourly pay is your rate before any deductions. Net hourly pay is what you actually receive after income tax, National Insurance, student loan repayments, and pension contributions are deducted. A £20 gross hourly wage typically works out to around £15-16 net for a basic rate taxpayer."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Real Living Wage vs the National Living Wage?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The National Living Wage (£12.21/hour from April 2025 for ages 21+) is the legal minimum set by the UK government. The Real Living Wage (£12.60 nationwide, £13.85 in London) is a voluntary higher rate set by the Living Wage Foundation based on actual living costs. Over 14,000 UK employers choose to pay the Real Living Wage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I check if my employer is paying me the correct hourly rate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Divide your gross pay on your payslip by the total hours worked that pay period. Compare this to the National Minimum Wage for your age group. If you believe you're being underpaid, contact HMRC's National Minimum Wage helpline on 0800 917 2368 or use the ACAS helpline. Employers can be fined for paying below the minimum wage."
+                }
               }
             ]
+          },
+          {
+            "@type": "WebApplication",
+            "name": "Hourly Wage Calculator UK",
+            "url": "https://www.salarytakehome.co.uk/hourly-wage",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "GBP"
+            },
+            "description": "Free UK hourly wage calculator. Convert your annual salary to an hourly rate based on your working hours."
           }]
         }) }}
       />
@@ -305,6 +334,10 @@ export default function HourlyWage() {
                 <p className="text-gray-700 text-base leading-relaxed">
                   There's also something called the "Real Living Wage" (set independently by the <a href="https://www.livingwage.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Living Wage Foundation</a>) which is higher than the statutory rates — for example, around £13.45 nationwide and £14.80 in London — but this is voluntary for employers to pay.
                 </p>
+
+                <p className="text-gray-700 text-base leading-relaxed mt-4">
+                  For official minimum wage rates, visit <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK National Minimum Wage Rates</a>. To understand how your hourly wage translates to take-home pay after tax, see our <a href="/blog/maximize-take-home-pay-2024" className="text-blue-600 hover:text-blue-800 underline font-semibold">guide to maximising your take-home pay</a>.
+                </p>
               </div>
             </div>
           </div>
@@ -334,8 +367,110 @@ export default function HourlyWage() {
                 </ul>
 
                 <p className="text-gray-700 text-base leading-relaxed">
-                  Even salaried workers benefit from knowing their real hourly rate.
+                  Even salaried workers benefit from knowing their real hourly rate. If you're considering a pay rise, our <a href="/blog/pay-rise-negotiation-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">pay rise negotiation guide</a> can help you make a stronger case using your hourly rate as evidence.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Understanding Your Tax on Hourly Pay Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-purple-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <TrendingUp className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">Understanding Your Tax on Hourly Pay</h3>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  Your hourly rate determines your annual salary, which determines your tax band. Here&apos;s how common hourly rates translate to take-home pay for a standard 37.5-hour working week:
+                </p>
+
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="border-b-2 border-gray-200">
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Hourly Rate</th>
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Annual Salary</th>
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Tax Band</th>
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Take-Home/Hour</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">£12.21</td>
+                        <td className="py-3 px-4 text-gray-700 text-base">£23,810</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">Basic (20%)</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">~£10.93</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">£15.00</td>
+                        <td className="py-3 px-4 text-gray-700 text-base">£29,250</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">Basic (20%)</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">~£12.65</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">£20.00</td>
+                        <td className="py-3 px-4 text-gray-700 text-base">£39,000</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">Basic (20%)</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">~£15.44</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">£26.00</td>
+                        <td className="py-3 px-4 text-gray-700 text-base">£50,700</td>
+                        <td className="py-3 px-4 text-amber-600 font-semibold text-base">Higher (40%)</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">~£18.49</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">£35.00</td>
+                        <td className="py-3 px-4 text-gray-700 text-base">£68,250</td>
+                        <td className="py-3 px-4 text-orange-600 font-semibold text-base">Higher (40%)</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">~£22.82</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Take-home rates assume standard 1257L tax code, no pension, no student loan. For a detailed breakdown, read our <a href="/blog/uk-minimum-wage-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">guide to UK minimum wage rates</a> or use the <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a> for your exact figures.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Overtime & Your Effective Hourly Rate Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-orange-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <Clock className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">Overtime &amp; Your Effective Hourly Rate</h3>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-4">
+                  If you regularly work unpaid overtime, your effective hourly rate could be significantly lower than your contract states. This matters because:
+                </p>
+
+                <ul className="list-disc list-outside ml-6 space-y-2 mb-6 text-gray-700 text-base leading-relaxed">
+                  <li className="pl-2"><strong>Unpaid overtime reduces your true rate</strong> — working 45 hours on a 37.5-hour contract at £30,000 means your real hourly rate is £12.82, not £15.38</li>
+                  <li className="pl-2"><strong>It could push you below minimum wage</strong> — if unpaid overtime drops your effective rate below £12.21/hour, your employer may be breaking the law</li>
+                  <li className="pl-2"><strong>Overtime at flat rate is taxed the same</strong> — extra hours at your normal rate are added to your annual salary and taxed accordingly</li>
+                  <li className="pl-2"><strong>Time-and-a-half isn&apos;t always better</strong> — if overtime pushes you into the higher tax band (above £50,270), you keep only 58p per extra £1 earned</li>
+                </ul>
+
+                <div className="bg-orange-50 rounded-xl p-4 border border-orange-200">
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    <strong>Tip:</strong> Calculate your true hourly rate by dividing your actual annual pay by total hours worked (including unpaid overtime). Compare this to the <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">current minimum wage rates</a> to check you&apos;re being paid fairly. Read more in our <a href="/blog/uk-minimum-wage-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK minimum wage guide</a>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -364,7 +499,7 @@ export default function HourlyWage() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">Does this hourly wage calculator include tax?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      No. This calculator shows gross hourly pay before tax and National Insurance. For net pay, use a <a href="/" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a>.
+                      No. This calculator shows gross hourly pay before tax and National Insurance. For net pay, use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a>. You can also read our <a href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK tax changes guide for 2025/26</a> to understand the latest rates.
                     </p>
                   </div>
 
@@ -407,9 +542,9 @@ export default function HourlyWage() {
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How to Maximise Your Take Home Pay</p>
               </a>
-              <a href="/blog/30k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+              <a href="/blog/uk-minimum-wage-2025-26" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£30k Salary Take Home Pay Breakdown</p>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Minimum Wage 2025/26: Rates & Take-Home Pay</p>
               </a>
             </div>
           </div>

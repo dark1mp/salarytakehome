@@ -151,8 +151,37 @@ export default function CompareSalaries() {
                   "@type": "Answer",
                   "text": "A £5,000 gross pay rise typically adds £2,900-£3,400 to your annual take-home pay after tax and NI, depending on your current salary. At the basic rate, you keep about 68% of the increase. At the higher rate, you keep about 58%. Use our calculator to compare the exact take-home figures for both salaries."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "How does the £100,000 tax trap affect salary comparisons?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If one salary is below £100,000 and the other is above, the comparison becomes more complex. Above £100,000, your personal allowance is reduced by £1 for every £2 earned, creating an effective 60% tax rate between £100,000 and £125,140. A £110,000 salary only gives you about £4,500 more take-home pay than a £100,000 salary."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should I factor in benefits when comparing two salary offers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Benefits like employer pension contributions, private healthcare, company car, and annual bonus can add 10-30% to the total value of a compensation package. A £45,000 salary with a 10% employer pension match and private healthcare could be worth more than a £50,000 salary with only the minimum 3% pension contribution."
+                }
               }
             ]
+          },
+          {
+            "@type": "WebApplication",
+            "name": "Compare Salaries Calculator UK",
+            "url": "https://www.salarytakehome.co.uk/compare-salaries",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "GBP"
+            },
+            "description": "Free UK salary comparison calculator. Compare two salary offers side-by-side to see which gives you more take-home pay."
           }]
         }) }}
       />
@@ -374,7 +403,7 @@ export default function CompareSalaries() {
                     <li className="pl-2">Displays the exact difference in pounds and percentage</li>
                   </ol>
                   <p className="text-gray-700 text-base leading-relaxed">
-                    The comparison uses the same student loan plan for both salaries to give you an accurate like-for-like comparison.
+                    The comparison uses the same student loan plan for both salaries to give you an accurate like-for-like comparison. For the latest tax band information, visit <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Income Tax Rates</a>.
                   </p>
                 </div>
               </div>
@@ -424,6 +453,130 @@ export default function CompareSalaries() {
                       </ul>
                     </div>
                   </div>
+                  <p className="text-gray-700 text-base leading-relaxed mt-6">
+                    Understanding your <a href="/blog/100k-tax-trap" className="text-blue-600 hover:text-blue-800 underline font-semibold">effective tax rate at different salary levels</a> is key to making good career decisions. If you're negotiating a raise, our <a href="/blog/pay-rise-negotiation-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">pay rise negotiation guide</a> can help you understand what a salary increase is really worth. For details on <a href="https://www.gov.uk/national-insurance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">National Insurance contributions</a>, visit GOV.UK.
+                  </p>
+                </div>
+              </div>
+
+              {/* UK Tax Brackets Card */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-indigo-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Scale className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">UK Tax Brackets &amp; Your Salary Comparison</h3>
+                  </div>
+                  <p className="text-gray-700 text-base leading-relaxed mb-6">
+                    Understanding which tax bracket each salary falls into is essential for comparing offers. Here is what you keep from every extra pound earned in each band for 2025/26:
+                  </p>
+                  <div className="overflow-x-auto mb-4">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b-2 border-gray-200">
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Salary Band</th>
+                          <th className="text-right py-3 px-4 font-semibold text-gray-900">Tax Rate</th>
+                          <th className="text-right py-3 px-4 font-semibold text-gray-900">NI Rate</th>
+                          <th className="text-right py-3 px-4 font-semibold text-gray-900">You Keep Per £1</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">Up to £12,570</td>
+                          <td className="py-3 px-4 text-right text-gray-900">0%</td>
+                          <td className="py-3 px-4 text-right text-gray-900">0%</td>
+                          <td className="py-3 px-4 text-right text-green-600 font-bold">£1.00</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">£12,571 – £50,270</td>
+                          <td className="py-3 px-4 text-right text-gray-900">20%</td>
+                          <td className="py-3 px-4 text-right text-gray-900">8%</td>
+                          <td className="py-3 px-4 text-right text-green-600 font-bold">£0.72</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">£50,271 – £125,140</td>
+                          <td className="py-3 px-4 text-right text-gray-900">40%</td>
+                          <td className="py-3 px-4 text-right text-gray-900">2%</td>
+                          <td className="py-3 px-4 text-right text-amber-600 font-bold">£0.58</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50 bg-red-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">£100,001 – £125,140*</td>
+                          <td className="py-3 px-4 text-right text-gray-900">60%†</td>
+                          <td className="py-3 px-4 text-right text-gray-900">2%</td>
+                          <td className="py-3 px-4 text-right text-red-600 font-bold">£0.38</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">Over £125,140</td>
+                          <td className="py-3 px-4 text-right text-gray-900">45%</td>
+                          <td className="py-3 px-4 text-right text-gray-900">2%</td>
+                          <td className="py-3 px-4 text-right text-amber-600 font-bold">£0.53</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-xs text-gray-500 mb-4">
+                    *£100k–£125,140 has an effective 60% rate due to personal allowance tapering — you lose £1 of personal allowance for every £2 earned above £100,000.
+                  </p>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    Learn more about the <a href="/blog/100k-tax-trap" className="text-blue-600 hover:text-blue-800 underline font-semibold">£100k tax trap</a> and how to <a href="/blog/how-to-compare-job-offers" className="text-blue-600 hover:text-blue-800 underline font-semibold">compare job offers beyond salary</a>.
+                  </p>
+                </div>
+              </div>
+
+              {/* Hidden Value of Benefits Card */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-teal-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <TrendingUp className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">The Hidden Value of Benefits</h3>
+                  </div>
+                  <p className="text-gray-700 text-base leading-relaxed mb-6">
+                    Salary is only part of the picture. Benefits can add 10-30% to the total value of a compensation package. Here is what common workplace benefits are typically worth:
+                  </p>
+                  <div className="overflow-x-auto mb-4">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b-2 border-gray-200">
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Benefit</th>
+                          <th className="text-right py-3 px-4 font-semibold text-gray-900">Typical Annual Value</th>
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">How to Compare</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">Employer pension (5% match)</td>
+                          <td className="py-3 px-4 text-right text-gray-900">£2,000–£3,000</td>
+                          <td className="py-3 px-4 text-gray-600">Check % match above minimum 3%</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">Private healthcare</td>
+                          <td className="py-3 px-4 text-right text-gray-900">£500–£2,000</td>
+                          <td className="py-3 px-4 text-gray-600">Compare excess and coverage</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">Annual bonus</td>
+                          <td className="py-3 px-4 text-right text-gray-900">5–20% of salary</td>
+                          <td className="py-3 px-4 text-gray-600">Factor in likelihood of payout</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">Extra holidays (5 days)</td>
+                          <td className="py-3 px-4 text-right text-gray-900">£800–£1,500</td>
+                          <td className="py-3 px-4 text-gray-600">Calculate at your daily rate</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="py-3 px-4 text-gray-700 font-medium">Company car/allowance</td>
+                          <td className="py-3 px-4 text-right text-gray-900">£3,000–£6,000</td>
+                          <td className="py-3 px-4 text-gray-600">Consider BIK tax implications</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    Read our guide on <a href="/blog/how-to-compare-job-offers" className="text-blue-600 hover:text-blue-800 underline font-semibold">how to compare job offers</a> for a step-by-step approach, or learn how <a href="/blog/salary-sacrifice-complete-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">salary sacrifice</a> can maximise the tax efficiency of your benefits.
+                  </p>
                 </div>
               </div>
 
@@ -440,12 +593,12 @@ export default function CompareSalaries() {
                   <div className="space-y-5">
                     <div className="pb-5 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50/50 -mx-2 px-2 py-2 rounded-lg transition-colors">
                       <h4 className="font-bold text-gray-900 text-lg mb-2">Why might a higher salary result in less take-home pay?</h4>
-                      <p className="text-gray-700 text-base leading-relaxed">If a salary increase pushes you into a higher tax bracket, you'll pay more tax and National Insurance on the additional income. Combined with student loan repayments, the net increase may be smaller than expected.</p>
+                      <p className="text-gray-700 text-base leading-relaxed">If a salary increase pushes you into a higher tax bracket, you'll pay more tax and National Insurance on the additional income. Combined with <a href="/blog/student-loan-repayment-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">student loan repayments</a>, the net increase may be smaller than expected. Read about the <a href="/blog/100k-tax-trap" className="text-blue-600 hover:text-blue-800 underline font-semibold">£100k tax trap</a> if your salaries are near that threshold.</p>
                     </div>
 
                     <div className="pb-5 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50/50 -mx-2 px-2 py-2 rounded-lg transition-colors">
                       <h4 className="font-bold text-gray-900 text-lg mb-2">Should I always choose the higher gross salary?</h4>
-                      <p className="text-gray-700 text-base leading-relaxed">Not necessarily. Consider other factors like pension contributions, benefits, commute costs, work-life balance, and career progression opportunities. A slightly lower salary with better benefits might be worth more overall.</p>
+                      <p className="text-gray-700 text-base leading-relaxed">Not necessarily. Consider other factors like <a href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">pension contributions</a>, benefits, commute costs, work-life balance, and career progression opportunities. A slightly lower salary with better benefits — especially <a href="/blog/salary-sacrifice-complete-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">salary sacrifice arrangements</a> — might be worth more overall.</p>
                     </div>
 
                     <div className="pb-5 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50/50 -mx-2 px-2 py-2 rounded-lg transition-colors">
@@ -497,9 +650,9 @@ export default function CompareSalaries() {
                 <span className="text-xs font-semibold text-blue-600">Tax Planning</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">The £100k Tax Trap Explained</p>
               </a>
-              <a href="/blog/50k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+              <a href="/blog/how-to-compare-job-offers" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£50k Salary Take Home Pay Breakdown</p>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How to Compare Job Offers: Total Compensation</p>
               </a>
             </div>
           </div>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from 'react';
-import { Briefcase, TrendingUp, Info, HelpCircle } from 'lucide-react';
+import { Briefcase, TrendingUp, Info, HelpCircle, FileText, Calculator } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
 import AdUnit from '../components/AdUnit';
 
@@ -367,8 +367,36 @@ export default function TwoJobs() {
                   "@type": "Answer",
                   "text": "Yes, you can ask HMRC to split your £12,570 personal allowance between two jobs. For example, if you earn similar amounts from each, you could request £6,285 of allowance on each job. Contact HMRC by phone or through your Personal Tax Account to request a tax code adjustment."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "How do student loans work with two jobs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Student loan repayments are only deducted from jobs where you earn above the repayment threshold. If neither job exceeds the threshold individually but your combined income does, you may need to make repayments through Self Assessment. HMRC will reconcile this after the tax year ends."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should I tell HMRC I have two jobs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "HMRC is usually notified automatically through your employers' PAYE submissions. However, you should check your tax codes are correct using your Personal Tax Account at GOV.UK. If your codes are wrong, you could overpay or underpay tax throughout the year."
+                }
               }
             ]
+          }, {
+            "@type": "WebApplication",
+            "name": "Two Jobs Tax Calculator UK",
+            "url": "https://www.salarytakehome.co.uk/two-jobs",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "GBP"
+            },
+            "description": "Free UK two jobs tax calculator. Calculate your combined take-home pay, tax, and National Insurance when working two jobs."
           }]
         }) }}
       />
@@ -529,6 +557,128 @@ export default function TwoJobs() {
           </div>
         </div>
 
+        {/* How Tax Codes Work With Two Jobs Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-6">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <FileText className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">How Tax Codes Work With Two Jobs</h3>
+                </div>
+
+                <p className="text-gray-700 mb-4">Your tax code tells each employer how much tax-free pay to give you. With two jobs, HMRC assigns different codes to ensure your personal allowance is only used once.</p>
+
+                <div className="overflow-x-auto mb-4">
+                  <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                    <thead>
+                      <tr className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+                        <th className="px-4 py-3 text-left font-semibold text-sm">Scenario</th>
+                        <th className="px-4 py-3 text-center font-semibold text-sm">Job 1 Code</th>
+                        <th className="px-4 py-3 text-center font-semibold text-sm">Job 2 Code</th>
+                        <th className="px-4 py-3 text-left font-semibold text-sm">Effect</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      <tr className="hover:bg-blue-50/50">
+                        <td className="px-4 py-3 text-sm font-medium text-gray-900">Standard setup</td>
+                        <td className="px-4 py-3 text-center text-sm font-mono font-bold text-blue-700">1257L</td>
+                        <td className="px-4 py-3 text-center text-sm font-mono font-bold text-blue-700">BR</td>
+                        <td className="px-4 py-3 text-sm text-gray-700">Full allowance on job 1, 20% flat on job 2</td>
+                      </tr>
+                      <tr className="hover:bg-blue-50/50 bg-gray-50/50">
+                        <td className="px-4 py-3 text-sm font-medium text-gray-900">Combined over &pound;50,270</td>
+                        <td className="px-4 py-3 text-center text-sm font-mono font-bold text-blue-700">1257L</td>
+                        <td className="px-4 py-3 text-center text-sm font-mono font-bold text-blue-700">D0</td>
+                        <td className="px-4 py-3 text-sm text-gray-700">Full allowance on job 1, 40% flat on job 2</td>
+                      </tr>
+                      <tr className="hover:bg-blue-50/50">
+                        <td className="px-4 py-3 text-sm font-medium text-gray-900">Split allowance</td>
+                        <td className="px-4 py-3 text-center text-sm font-mono font-bold text-blue-700">625L</td>
+                        <td className="px-4 py-3 text-center text-sm font-mono font-bold text-blue-700">625L</td>
+                        <td className="px-4 py-3 text-sm text-gray-700">Half allowance on each job</td>
+                      </tr>
+                      <tr className="hover:bg-blue-50/50 bg-gray-50/50">
+                        <td className="px-4 py-3 text-sm font-medium text-gray-900">Scottish taxpayer</td>
+                        <td className="px-4 py-3 text-center text-sm font-mono font-bold text-blue-700">S1257L</td>
+                        <td className="px-4 py-3 text-center text-sm font-mono font-bold text-blue-700">SBR</td>
+                        <td className="px-4 py-3 text-sm text-gray-700">Scottish rates apply to both</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p className="text-gray-600 text-sm">
+                  Read our full guide: <a href="/blog/two-jobs-tax-explained" className="text-blue-600 hover:text-blue-800 underline font-semibold">Two Jobs Tax Explained</a> | Check your codes on <a href="https://www.gov.uk/tax-codes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* NI Differences: One Job vs Two Jobs Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-red-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <Calculator className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">NI Differences: One Job vs Two Jobs</h3>
+                </div>
+
+                <p className="text-gray-700 mb-4">National Insurance is calculated separately per job. This means the NI threshold applies independently to each employment, which can change your total take-home pay.</p>
+
+                <div className="overflow-x-auto mb-4">
+                  <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                    <thead>
+                      <tr className="bg-gradient-to-r from-red-500 to-rose-600 text-white">
+                        <th className="px-4 py-3 text-left font-semibold text-sm">Item</th>
+                        <th className="px-4 py-3 text-right font-semibold text-sm">One &pound;60k Job</th>
+                        <th className="px-4 py-3 text-right font-semibold text-sm">Two &pound;30k Jobs</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      <tr className="hover:bg-red-50/50">
+                        <td className="px-4 py-3 text-sm font-medium text-gray-900">Gross Income</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono text-gray-900">&pound;60,000</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono text-gray-900">&pound;60,000</td>
+                      </tr>
+                      <tr className="hover:bg-red-50/50 bg-gray-50/50">
+                        <td className="px-4 py-3 text-sm font-medium text-gray-900">Income Tax</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono text-gray-900">&pound;9,432</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono text-gray-900">&pound;9,432</td>
+                      </tr>
+                      <tr className="hover:bg-red-50/50">
+                        <td className="px-4 py-3 text-sm font-medium text-gray-900">National Insurance</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono text-gray-900">&pound;4,194</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono text-green-700">&pound;2,794*</td>
+                      </tr>
+                      <tr className="hover:bg-red-50/50 bg-gray-50/50">
+                        <td className="px-4 py-3 text-sm font-medium text-gray-900">Total Deductions</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono text-gray-900">&pound;13,626</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono text-gray-900">&pound;12,226</td>
+                      </tr>
+                      <tr className="bg-red-50 font-bold">
+                        <td className="px-4 py-3 text-sm font-bold text-gray-900">Take-Home</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono font-bold text-gray-900">&pound;46,374</td>
+                        <td className="px-4 py-3 text-right text-sm font-mono font-bold text-green-700">&pound;47,774</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p className="text-gray-600 text-sm">
+                  *NI is actually lower with two jobs because each job gets its own &pound;12,570 threshold. Read more: <a href="/blog/two-jobs-tax-explained" className="text-blue-600 hover:text-blue-800 underline font-semibold">Two Jobs Tax Explained</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Two Jobs FAQs Card */}
         <div className="flex gap-6 mx-auto px-8 mt-6">
           <div className="flex-1 xl:pr-[192px]">
@@ -545,7 +695,7 @@ export default function TwoJobs() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">Does having two jobs mean I pay more tax in the UK?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      No. Income tax in the UK is based on your total earnings across all jobs, not the number of jobs you have. If you earn £80,000 from one job or £40,000 from two jobs, your total income tax bill is the same once HMRC reconciles your PAYE records.
+                      No. Income tax in the UK is based on your total earnings across all jobs, not the number of jobs you have. If you earn £80,000 from one job or £40,000 from two jobs, your total income tax bill is the same once HMRC reconciles your PAYE records. See the <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK income tax rates</a> for current thresholds.
                     </p>
                   </div>
 
@@ -580,7 +730,7 @@ export default function TwoJobs() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">Will HMRC refund tax if I overpay with two jobs?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      Yes. If you've paid too much tax, HMRC issues a P800 tax calculation and you'll receive a refund automatically or can claim it online.
+                      Yes. If you've paid too much tax, HMRC issues a <a href="https://www.gov.uk/tax-overpayments-and-underpayments" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">P800 tax calculation</a> and you'll receive a refund automatically or can claim it online.
                     </p>
                   </div>
 
@@ -615,7 +765,7 @@ export default function TwoJobs() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">What's the best way to reduce tax if I have two jobs?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      Legal ways include pension contributions, adjusting tax codes, claiming allowable expenses, and using personal allowance efficiently.
+                      Legal ways include <a href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">pension contributions</a>, adjusting tax codes, claiming allowable expenses, and using your personal allowance efficiently. <a href="/blog/salary-sacrifice-complete-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">Salary sacrifice</a> on your main job can also reduce your overall tax bill. Read our guide on <a href="/blog/maximize-take-home-pay-2024" className="text-blue-600 hover:text-blue-800 underline font-semibold">maximising take-home pay</a> for more tips.
                     </p>
                   </div>
                 </div>
@@ -637,9 +787,9 @@ export default function TwoJobs() {
                 <span className="text-xs font-semibold text-blue-600">Pensions</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Salary Sacrifice Complete Guide</p>
               </a>
-              <a href="/blog/uk-tax-changes-2025-26" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
-                <span className="text-xs font-semibold text-blue-600">Tax Updates</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2025/26</p>
+              <a href="/blog/two-jobs-tax-explained" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Tax Planning</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Two Jobs Tax Explained: PAYE With Multiple Employers</p>
               </a>
             </div>
           </div>

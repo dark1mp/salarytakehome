@@ -103,8 +103,30 @@ export default function Debts() {
                   "@type": "Question",
                   "name": "Does debt consolidation save money?",
                   "acceptedAnswer": { "@type": "Answer", "text": "Debt consolidation can save money if you secure a lower interest rate than your existing debts. Combining multiple debts at 20-30% APR into a single loan at 6-8% significantly reduces interest costs. However, extending the repayment term can increase total interest paid even at a lower rate. Always compare the total cost, not just monthly payments." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What free debt advice services are available in the UK?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Several UK organisations offer free, confidential debt advice: StepChange (0800 138 1111), Citizens Advice, National Debtline (0808 808 4000), and MoneyHelper. These services can help you create a budget, negotiate with creditors, and explore options like Debt Management Plans (DMPs), Individual Voluntary Arrangements (IVAs), or bankruptcy if needed." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does debt affect my credit score?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "High levels of debt relative to your credit limits (known as credit utilisation) can lower your credit score. Missing payments, defaults, and CCJs have a significant negative impact. Regularly making payments on time and keeping credit utilisation below 30% helps maintain a good score. Paying off debt completely improves your score over time." }
                 }
               ]
+            }, {
+              "@type": "WebApplication",
+              "name": "Debt Repayment Calculator UK",
+              "url": "https://www.salarytakehome.co.uk/debts",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+              },
+              "description": "Free UK debt repayment calculator. Calculate how long it will take to pay off your debt and how much interest you will pay."
             }]
           }) }}
         />
@@ -269,6 +291,9 @@ export default function Debts() {
                       pay, and your total repayment amount. This information helps you make informed decisions about whether
                       to increase your monthly payments or consolidate debts at a lower interest rate.
                     </p>
+                    <p>
+                      For free debt advice, visit <a href="https://www.gov.uk/debt-advice" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Debt Advice</a> or contact <a href="https://www.stepchange.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">StepChange</a>. Use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a> to understand how much income you have available for debt repayments, and read our <a href="/blog/maximize-take-home-pay-2024" className="text-blue-600 hover:text-blue-800 underline font-semibold">guide to maximising take-home pay</a> to free up more money for clearing your debts faster.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -308,6 +333,144 @@ export default function Debts() {
                 </div>
               </div>
 
+              {/* Interest Rates by Debt Type */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-red-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <AlertCircle className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">Interest Rates by Debt Type</h3>
+                  </div>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Not all debt is created equal. The interest rate you&apos;re paying has a huge impact on how quickly your debt grows and how much it really costs you. Here&apos;s what typical APRs look like across common UK debt types:
+                  </p>
+                  <div className="overflow-x-auto mb-4">
+                    <table className="w-full text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="text-left p-3 font-semibold text-gray-900 border-b border-gray-200">Debt Type</th>
+                          <th className="text-right p-3 font-semibold text-gray-900 border-b border-gray-200">Typical APR</th>
+                          <th className="text-right p-3 font-semibold text-gray-900 border-b border-gray-200">Monthly Interest on £5,000</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-100">
+                          <td className="p-3 text-gray-700">Credit card</td>
+                          <td className="p-3 text-right text-red-600 font-medium">18-25%</td>
+                          <td className="p-3 text-right text-gray-700">£75-£104</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="p-3 text-gray-700">Store card</td>
+                          <td className="p-3 text-right text-red-600 font-medium">25-40%</td>
+                          <td className="p-3 text-right text-gray-700">£104-£167</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="p-3 text-gray-700">Overdraft</td>
+                          <td className="p-3 text-right text-red-600 font-medium">35-40%</td>
+                          <td className="p-3 text-right text-gray-700">£146-£167</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="p-3 text-gray-700">Personal loan</td>
+                          <td className="p-3 text-right text-amber-600 font-medium">5-15%</td>
+                          <td className="p-3 text-right text-gray-700">£21-£63</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="p-3 text-gray-700">Car finance (PCP)</td>
+                          <td className="p-3 text-right text-amber-600 font-medium">6-12%</td>
+                          <td className="p-3 text-right text-gray-700">£25-£50</td>
+                        </tr>
+                        <tr>
+                          <td className="p-3 text-gray-700">Payday loan</td>
+                          <td className="p-3 text-right text-red-700 font-bold">1,000%+</td>
+                          <td className="p-3 text-right text-red-700 font-bold">£400+</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="bg-red-50 rounded-xl p-4 border border-red-200 mb-4">
+                    <p className="text-red-800 text-sm">
+                      <strong>Warning:</strong> Payday loans carry extremely high interest rates and can quickly spiral out of control. If you&apos;re relying on payday loans, seek free debt advice from <a href="https://www.stepchange.org/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-900 underline font-semibold">StepChange</a> or <a href="https://www.citizensadvice.org.uk/debt-and-money/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-900 underline font-semibold">Citizens Advice</a> as soon as possible.
+                    </p>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Always prioritise paying off the highest APR debts first to minimise the total cost. Read our <a href="/blog/how-to-pay-off-debt-faster" className="text-blue-600 hover:text-blue-800 underline font-semibold">guide to paying off debt faster</a> for step-by-step strategies.
+                  </p>
+                </div>
+              </div>
+
+              {/* Snowball vs Avalanche: Worked Example */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-indigo-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Calculator className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">Snowball vs Avalanche: Worked Example</h3>
+                  </div>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Imagine you have 3 debts and a total budget of £300 per month to put toward repayment:
+                  </p>
+                  <div className="grid lg:grid-cols-3 gap-3 mb-4">
+                    <div className="bg-indigo-50 rounded-lg p-3 text-center">
+                      <div className="text-sm text-indigo-600 font-medium">Credit card</div>
+                      <div className="text-lg font-bold text-gray-900">£3,000</div>
+                      <div className="text-xs text-indigo-500">22% APR</div>
+                    </div>
+                    <div className="bg-indigo-50 rounded-lg p-3 text-center">
+                      <div className="text-sm text-indigo-600 font-medium">Overdraft</div>
+                      <div className="text-lg font-bold text-gray-900">£1,500</div>
+                      <div className="text-xs text-indigo-500">35% APR</div>
+                    </div>
+                    <div className="bg-indigo-50 rounded-lg p-3 text-center">
+                      <div className="text-sm text-indigo-600 font-medium">Personal loan</div>
+                      <div className="text-lg font-bold text-gray-900">£5,000</div>
+                      <div className="text-xs text-indigo-500">8% APR</div>
+                    </div>
+                  </div>
+                  <div className="overflow-x-auto mb-4">
+                    <table className="w-full text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="text-left p-3 font-semibold text-gray-900 border-b border-gray-200">Method</th>
+                          <th className="text-left p-3 font-semibold text-gray-900 border-b border-gray-200">Payoff Order</th>
+                          <th className="text-right p-3 font-semibold text-gray-900 border-b border-gray-200">Total Interest</th>
+                          <th className="text-right p-3 font-semibold text-gray-900 border-b border-gray-200">Months to Clear</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-100 bg-green-50">
+                          <td className="p-3 font-medium text-green-800">Avalanche</td>
+                          <td className="p-3 text-gray-700">Overdraft → Credit card → Loan</td>
+                          <td className="p-3 text-right font-medium text-green-700">~£1,450</td>
+                          <td className="p-3 text-right text-gray-700">~38 months</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 bg-blue-50">
+                          <td className="p-3 font-medium text-blue-800">Snowball</td>
+                          <td className="p-3 text-gray-700">Overdraft → Credit card → Loan</td>
+                          <td className="p-3 text-right font-medium text-blue-700">~£1,520</td>
+                          <td className="p-3 text-right text-gray-700">~38 months</td>
+                        </tr>
+                        <tr className="bg-red-50">
+                          <td className="p-3 font-medium text-red-800">Minimum only</td>
+                          <td className="p-3 text-gray-700">All at minimum</td>
+                          <td className="p-3 text-right font-medium text-red-700">~£3,200+</td>
+                          <td className="p-3 text-right text-red-700">60+ months</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="bg-indigo-50 rounded-xl p-4 border border-indigo-200 mb-4">
+                    <p className="text-indigo-800 text-sm">
+                      <strong>Note:</strong> Both strategies pay debts in the same order here because the smallest balance (overdraft) also has the highest APR. When that&apos;s not the case, the interest savings from the avalanche method are more pronounced.
+                    </p>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Read the full comparison with more examples in our <a href="/blog/how-to-pay-off-debt-faster" className="text-blue-600 hover:text-blue-800 underline font-semibold">guide to paying off debt faster</a>, or visit <a href="https://www.gov.uk/debt-advice" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Debt Advice</a> for free, impartial support.
+                  </p>
+                </div>
+              </div>
+
               {/* Debt Repayment FAQs */}
               <div className="relative group overflow-hidden bg-white rounded-2xl border border-emerald-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
                 <div className="relative z-10">
@@ -340,6 +503,7 @@ export default function Debts() {
                         Generally, paying off high-interest debt (like credit cards) should be a priority over saving, because
                         the interest you're paying on debt is usually much higher than interest you'd earn on savings. However,
                         it's wise to keep a small emergency fund (£500-£1,000) to avoid taking on more debt for unexpected expenses.
+                        Read about <a href="/blog/cash-isa-limit-2027" className="text-blue-600 hover:text-blue-800 underline font-semibold">ISA savings options</a> for when you're ready to start saving after clearing high-interest debts.
                       </p>
                     </div>
                     <div className="pb-6 border-b border-gray-200">
@@ -432,9 +596,9 @@ export default function Debts() {
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How to Maximise Your Take Home Pay</p>
               </a>
-              <a href="/blog/30k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
-                <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£30k Salary Take Home Pay Breakdown</p>
+              <a href="/blog/how-to-pay-off-debt-faster" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Money Tips</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How to Pay Off Debt Faster: Snowball vs Avalanche</p>
               </a>
               <a href="/blog/student-loan-repayment-guide" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Student Loans</span>

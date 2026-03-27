@@ -90,8 +90,30 @@ export default function ProRata() {
                   "@type": "Question",
                   "name": "Does working 3 days a week change my tax band?",
                   "acceptedAnswer": { "@type": "Answer", "text": "Working 3 days a week at a pro-rata salary puts you in a lower tax band than the full-time equivalent. For example, a full-time £50,000 salary falls into the higher rate band, but the 3-day pro-rata equivalent of £30,000 stays entirely within the basic rate band, meaning you pay a lower effective tax rate." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are part-time workers entitled to the same hourly rate as full-time workers?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Yes. Under the Part-Time Workers (Prevention of Less Favourable Treatment) Regulations 2000, part-time workers must receive the same hourly rate as comparable full-time workers. They are also entitled to the same pro-rata benefits including holiday, sick pay, and pension contributions." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does going part-time affect my pension contributions?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Your pension contributions are calculated on your actual pro-rata salary, not the full-time equivalent. If the full-time salary is £40,000 and you work 3 days (pro-rata £24,000), both your contributions and employer contributions are based on £24,000. However, you still receive tax relief on pension contributions at your marginal rate." }
                 }
               ]
+            }, {
+              "@type": "WebApplication",
+              "name": "Pro-Rata Salary Calculator UK",
+              "url": "https://www.salarytakehome.co.uk/pro-rata-furlough",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+              },
+              "description": "Free UK pro-rata salary calculator. Calculate your part-time salary based on full-time equivalent and working hours."
             }]
           }) }}
         />
@@ -242,7 +264,7 @@ export default function ProRata() {
                     </p>
                   </div>
                   <p>
-                    Pro-rata calculations are commonly used for part-time workers, job sharers, and those transitioning between full-time and part-time roles. Understanding your pro-rata salary helps you compare job offers accurately and understand your true earning potential.
+                    Pro-rata calculations are commonly used for part-time workers, job sharers, and those transitioning between full-time and part-time roles. Understanding your pro-rata salary helps you compare job offers accurately and understand your true earning potential. For official guidance on part-time workers' rights, visit <a href="https://www.gov.uk/part-time-worker-rights" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Part-Time Worker Rights</a>.
                   </p>
                 </div>
               </div>
@@ -306,6 +328,161 @@ export default function ProRata() {
                     </ul>
                   </div>
                 </div>
+                  <p className="text-gray-700 text-base leading-relaxed mt-6">
+                    To understand how your pro-rata salary translates to take-home pay, use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a>. You might also want to read about <a href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">pension contributions and tax relief</a> to maximise the value of your part-time salary, or check the <a href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">latest UK tax changes for 2025/26</a>.
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Pro-Rata Tax Advantages Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-purple-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <Calculator className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">Pro-Rata Tax Advantages</h3>
+                </div>
+                <div className="space-y-4 text-gray-700">
+                  <p>
+                    Part-time workers keep the full <strong>£12,570 personal allowance</strong>, which means a larger proportion of your income is tax-free compared to your full-time equivalent. Working fewer hours can keep you in a lower tax band, significantly reducing your effective tax rate.
+                  </p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-purple-50">
+                          <th className="text-left p-3 border-b border-purple-200 font-semibold text-gray-900">FTE Salary</th>
+                          <th className="text-left p-3 border-b border-purple-200 font-semibold text-gray-900">Working Pattern</th>
+                          <th className="text-left p-3 border-b border-purple-200 font-semibold text-gray-900">Pro-Rata Salary</th>
+                          <th className="text-left p-3 border-b border-purple-200 font-semibold text-gray-900">Tax Band</th>
+                          <th className="text-left p-3 border-b border-purple-200 font-semibold text-gray-900">Effective Tax Rate</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-100">
+                          <td className="p-3 text-gray-700">£40,000</td>
+                          <td className="p-3 text-gray-700">3 days (22.5h)</td>
+                          <td className="p-3 font-semibold text-gray-900">£24,000</td>
+                          <td className="p-3 text-gray-700">Basic (20%)</td>
+                          <td className="p-3 font-semibold text-green-600">~18%</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 bg-gray-50/50">
+                          <td className="p-3 text-gray-700">£40,000</td>
+                          <td className="p-3 text-gray-700">4 days (30h)</td>
+                          <td className="p-3 font-semibold text-gray-900">£32,000</td>
+                          <td className="p-3 text-gray-700">Basic (20%)</td>
+                          <td className="p-3 font-semibold text-green-600">~22%</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="p-3 text-gray-700">£50,000</td>
+                          <td className="p-3 text-gray-700">3 days (22.5h)</td>
+                          <td className="p-3 font-semibold text-gray-900">£30,000</td>
+                          <td className="p-3 text-gray-700">Basic (20%)</td>
+                          <td className="p-3 font-semibold text-green-600">~22%</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 bg-gray-50/50">
+                          <td className="p-3 text-gray-700">£50,000</td>
+                          <td className="p-3 text-gray-700">4 days (30h)</td>
+                          <td className="p-3 font-semibold text-gray-900">£40,000</td>
+                          <td className="p-3 text-gray-700">Basic (20%)</td>
+                          <td className="p-3 font-semibold text-green-600">~25%</td>
+                        </tr>
+                        <tr>
+                          <td className="p-3 text-gray-700">£60,000</td>
+                          <td className="p-3 text-gray-700">3 days (22.5h)</td>
+                          <td className="p-3 font-semibold text-gray-900">£36,000</td>
+                          <td className="p-3 text-gray-700">Basic (20%)</td>
+                          <td className="p-3 font-semibold text-green-600">~24%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
+                    <p className="text-sm text-gray-700">
+                      <strong>Note:</strong> A full-time £60,000 salary falls into the higher (40%) tax band, but the 3-day pro-rata equivalent of £36,000 stays entirely within the basic rate band — saving you thousands in tax each year.
+                    </p>
+                  </div>
+                  <p>
+                    Read more in our <a href="/blog/pro-rata-salary-explained" className="text-blue-600 hover:text-blue-800 underline font-semibold">pro-rata salary guide</a>, or use the <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a> to see your exact figures.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Pro-Rata Holiday & Benefits Entitlement Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-teal-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <Lightbulb className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">Pro-Rata Holiday & Benefits Entitlement</h3>
+                </div>
+                <div className="space-y-4 text-gray-700">
+                  <p>
+                    Full-time workers in the UK are entitled to a minimum of <strong>28 days</strong> paid holiday per year (including bank holidays). Part-time workers receive a pro-rata share based on the days or hours they work.
+                  </p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-teal-50">
+                          <th className="text-left p-3 border-b border-teal-200 font-semibold text-gray-900">Working Pattern</th>
+                          <th className="text-left p-3 border-b border-teal-200 font-semibold text-gray-900">Days/Week</th>
+                          <th className="text-left p-3 border-b border-teal-200 font-semibold text-gray-900">Statutory Holiday (Days)</th>
+                          <th className="text-left p-3 border-b border-teal-200 font-semibold text-gray-900">Statutory Holiday (Hours)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-100">
+                          <td className="p-3 text-gray-700">Full-time</td>
+                          <td className="p-3 text-gray-700">5</td>
+                          <td className="p-3 font-semibold text-gray-900">28 days</td>
+                          <td className="p-3 text-gray-700">224 hours</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 bg-gray-50/50">
+                          <td className="p-3 text-gray-700">4 days/week</td>
+                          <td className="p-3 text-gray-700">4</td>
+                          <td className="p-3 font-semibold text-gray-900">22.4 days</td>
+                          <td className="p-3 text-gray-700">179.2 hours</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="p-3 text-gray-700">3 days/week</td>
+                          <td className="p-3 text-gray-700">3</td>
+                          <td className="p-3 font-semibold text-gray-900">16.8 days</td>
+                          <td className="p-3 text-gray-700">134.4 hours</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 bg-gray-50/50">
+                          <td className="p-3 text-gray-700">2.5 days/week</td>
+                          <td className="p-3 text-gray-700">2.5</td>
+                          <td className="p-3 font-semibold text-gray-900">14 days</td>
+                          <td className="p-3 text-gray-700">112 hours</td>
+                        </tr>
+                        <tr>
+                          <td className="p-3 text-gray-700">2 days/week</td>
+                          <td className="p-3 text-gray-700">2</td>
+                          <td className="p-3 font-semibold text-gray-900">11.2 days</td>
+                          <td className="p-3 text-gray-700">89.6 hours</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p>
+                    Bank holidays can be handled differently by employers. Some include them in the 28-day total, while others give part-time workers a pro-rata number of bank holidays on top of their base entitlement. Check your contract to see which method your employer uses.
+                  </p>
+                  <p>
+                    For more detail, read our <a href="/blog/pro-rata-salary-explained" className="text-blue-600 hover:text-blue-800 underline font-semibold">complete pro-rata salary guide</a> or check the official <a href="https://www.gov.uk/holiday-entitlement-rights" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK holiday entitlement rights</a>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -327,7 +504,7 @@ export default function ProRata() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">What does pro-rata salary mean?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      Pro-rata salary means your pay is proportional to the hours you work compared to a full-time equivalent. If a full-time role pays £40,000 for 37.5 hours per week and you work 30 hours, your pro-rata salary would be £32,000 (30/37.5 × £40,000).
+                      Pro-rata salary means your pay is proportional to the hours you work compared to a full-time equivalent. If a full-time role pays £40,000 for 37.5 hours per week and you work 30 hours, your pro-rata salary would be £32,000 (30/37.5 × £40,000). See what a <a href="/blog/40k-salary-take-home" className="text-blue-600 hover:text-blue-800 underline font-semibold">£40k salary looks like after tax</a> to understand the full picture.
                     </p>
                   </div>
 
@@ -362,7 +539,7 @@ export default function ProRata() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">Does pro-rata affect my pension contributions?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      Yes, pension contributions are typically based on your actual pro-rata salary, not the full-time equivalent. Both your contributions and your employer's contributions will be calculated on your reduced salary.
+                      Yes, pension contributions are typically based on your actual pro-rata salary, not the full-time equivalent. Both your contributions and your employer's contributions will be calculated on your reduced salary. Learn more about <a href="/blog/salary-sacrifice-complete-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">salary sacrifice</a> as a tax-efficient way to boost your pension.
                     </p>
                   </div>
 
@@ -394,9 +571,9 @@ export default function ProRata() {
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How to Maximise Your Take Home Pay</p>
               </a>
-              <a href="/blog/40k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+              <a href="/blog/pro-rata-salary-explained" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£40k Salary Take Home Pay Breakdown</p>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Pro-Rata Salary Explained: Pay, Holiday & Pension</p>
               </a>
               <a href="/blog/uk-tax-changes-2025-26" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Tax Updates</span>

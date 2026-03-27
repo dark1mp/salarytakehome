@@ -111,7 +111,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 
 ## Blog
 
-20 blog posts across categories: Salary Guide, Tax Planning, Pensions, Student Loans, Savings & ISAs. Includes "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension) which target high-intent search queries.
+28 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay). Every calculator now has at least one dedicated blog post linking back to it.
 
 ### Adding a New Blog Post
 
@@ -180,22 +180,28 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **Calculator form+results layout** — all calculators with a side results panel use `xl:grid-cols-3` (not `lg:`) with `xl:col-span-2` for the form and `xl:col-span-1` for results. This ensures the results panel doesn't overflow on iPad landscape (1024px). Results stack below the form until 1280px+.
 - **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver watching `data-ad-status` (set by AdSense to `"filled"` or `"unfilled"`). If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it. Don't use `offsetHeight` to detect ad fill — it gives false positives.
 - **AdUnit mobile scroll hint** — when an ad fills on mobile (`lg:hidden`), a "↓ Scroll down to see results" message appears above the ad so users know results are below.
-- **Manual ad placements** — All 10 calculator pages have: (1) a desktop-only top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, and (2) two stacked sticky right sidebar ads (`<AdUnit slot="4603525459" hideOnMobile />` + `<AdUnit slot="9534353704" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. All blog pages (index + 20 posts) have a desktop-only top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, plus auto ads.
+- **Manual ad placements** — All 10 calculator pages have: (1) a desktop-only top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, and (2) two stacked sticky right sidebar ads (`<AdUnit slot="4603525459" hideOnMobile />` + `<AdUnit slot="9534353704" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. All blog pages (index + 28 posts) have a desktop-only top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, plus auto ads.
 - **Sidebar ad positioning** — The sidebar ad uses `absolute right-8 top-8 w-[160px]` with `sticky top-8` inside. The content div uses `xl:pr-[192px]` to reserve space so cards don't overlap. The outer container uses `relative` (not `flex`). Card scaling (`lg:scale-[0.92]`) extends to `2xl` to fit on 13" MacBook screens (1440px).
 - **Calculator pages use `fullWidth`** — Calculator pages pass `fullWidth` to LayoutWrapper, which removes the `2xl:max-w` constraint since they have their own manual sidebar ad. They also don't use `max-w-[1400px]` or `max-w-6xl` on inner containers.
 - **Side rail ad space (non-calculator pages)** — LayoutWrapper uses `2xl:max-w-[1100px]` on the inner content div to leave ~200px+ on the right at 1536px+ viewports for AdSense auto side rail ads. Below `2xl`, content is full width. Don't remove this max-width from non-calculator pages.
 - **Narrow layout for blogs** — LayoutWrapper accepts a `narrow` prop (used on all blog pages) which applies `2xl:max-w-[900px]` instead, leaving ~400px for side rail ads. The space is always present on 2xl+ screens whether an ad fills or not.
 - **llms.txt** — `public/llms.txt` and `public/llms-full.txt` provide site metadata for AI crawlers. Update these when adding new calculators, blog posts, or changing tax year data.
-- **FAQ schema on all calculators** — All 10 calculator pages have FAQPage JSON-LD schema with 5 unique questions each. `/pay-rise` was the first; the other 9 were added later. When adding new calculators, include FAQPage schema following the same `@graph` pattern.
+- **FAQ schema on all calculators** — All 10 calculator pages have FAQPage JSON-LD schema with 7 unique questions each (pay-rise has 7). When adding new calculators, include FAQPage schema following the same `@graph` pattern with at least 7 questions.
+- **WebApplication schema on all calculators** — All 10 calculator pages include a `WebApplication` JSON-LD schema in the `@graph` array alongside the FAQPage. This signals to search engines the page is an interactive tool.
+- **Embedded blog links in educational sections** — All calculator pages have contextual blog links embedded within their educational content cards (not just in the Related Reading footer). This creates deeper internal linking and topical authority.
+- **External .gov.uk authority links** — All calculator pages link to relevant GOV.UK pages (income tax rates, NI, SSP, maternity pay, etc.) within their educational sections for E-E-A-T credibility.
+- **Topic cluster SEO pattern** — Each calculator acts as a "hub" page with 1-2 dedicated blog posts as "spokes". Blog posts link to the calculator with CTAs, and calculator educational cards embed links back to the blog posts. This mirrors the pattern that made `/pay-rise` the best-performing page on Bing. When adding a new calculator, always create at least one supporting blog post.
+- **Educational card pattern** — Calculator educational cards follow a consistent structure: icon with gradient background → heading → descriptive text with data tables → embedded blog/gov.uk links. Cards use coloured left borders and distinct icon colour themes (blue, purple, teal, amber, red, etc.) to visually differentiate topics. New cards should include at least one data table and one internal link.
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
 - Tax data is duplicated across calculator files (could be centralised)
 - No RSS feed
 - No hreflang tags (should add `en-gb`)
-- FAQ schema only on FAQ page (could be added to calculator pages for more rich results)
 - No table of contents on long blog posts
 - More "vs" comparison content opportunities (e.g. PAYE vs self-employed, full-time vs part-time tax)
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
 - Blog pages only have a top ad unit — could add in-content or sidebar ads for better ad revenue
 - `/pay-rise` and `/take-home-pay-calculator` have two ad units (top + in-content) — other calculators only have the top ad unit and could benefit from an in-content one too
+- Educational content depth varies — `/pay-rise` has ~3,500 words of educational content; most other calculators have ~1,800-2,500 words. Expanding educational sections on lower-content calculators could improve Bing rankings
+- `llms.txt` and `llms-full.txt` need updating to reflect the 8 new blog posts added in March 2026

@@ -6,6 +6,78 @@ import AdUnit from '../components/AdUnit';
 
 const blogPosts = [
   {
+    slug: "first-time-buyer-mortgage-guide",
+    title: "First-Time Buyer Mortgage Guide 2026: Deposits, Schemes & Steps",
+    excerpt: "Complete first-time buyer mortgage guide for the UK. Learn about deposits, government schemes, stamp duty relief, affordability checks, and how to get your first mortgage.",
+    date: "2026-03-27",
+    readTime: "12 min read",
+    category: "Money Tips",
+    featured: true
+  },
+  {
+    slug: "how-to-pay-off-debt-faster",
+    title: "How to Pay Off Debt Faster: Snowball vs Avalanche Strategy UK",
+    excerpt: "Learn the best strategies to pay off debt faster in the UK. Compare snowball vs avalanche methods, balance transfers, and consolidation with worked examples.",
+    date: "2026-03-27",
+    readTime: "10 min read",
+    category: "Money Tips",
+    featured: true
+  },
+  {
+    slug: "maternity-pay-guide",
+    title: "Maternity Pay Guide 2026: SMP, Maternity Allowance & Shared Parental Leave",
+    excerpt: "Complete guide to maternity pay in the UK. Understand SMP eligibility, rates, how it compares to Maternity Allowance, and how to plan your finances.",
+    date: "2026-03-27",
+    readTime: "11 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
+    slug: "ssp-changes-2026",
+    title: "SSP Changes 2026: What the New Sick Pay Rules Mean for You",
+    excerpt: "Major changes to Statutory Sick Pay are coming. Find out about the removal of waiting days, lower earnings limit changes, and what it means for your pay.",
+    date: "2026-03-27",
+    readTime: "10 min read",
+    category: "Tax Updates",
+    featured: true
+  },
+  {
+    slug: "uk-minimum-wage-2025-26",
+    title: "UK Minimum Wage 2025/26: Hourly Rates, Take-Home Pay & Your Rights",
+    excerpt: "Complete guide to UK minimum wage and National Living Wage rates for 2025/26. See what you'll actually take home after tax at every age band.",
+    date: "2026-03-27",
+    readTime: "9 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
+    slug: "two-jobs-tax-explained",
+    title: "Two Jobs Tax Explained: How PAYE Works With Multiple Employers in the UK",
+    excerpt: "Understand how tax works when you have two jobs in the UK. Learn about tax codes, NI on multiple jobs, HMRC reconciliation, and how to avoid overpaying tax.",
+    date: "2026-03-27",
+    readTime: "12 min read",
+    category: "Tax Planning",
+    featured: true
+  },
+  {
+    slug: "pro-rata-salary-explained",
+    title: "Pro-Rata Salary Explained: Part-Time Pay, Holiday & Pension in the UK",
+    excerpt: "Understand how pro-rata salary works for part-time workers in the UK. Learn to calculate your pay, holiday entitlement, pension, and tax implications.",
+    date: "2026-03-27",
+    readTime: "10 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
+    slug: "how-to-compare-job-offers",
+    title: "How to Compare Job Offers: Salary, Benefits & Total Compensation UK",
+    excerpt: "Learn how to compare job offers beyond just salary. Understand pension match, healthcare, holidays, and total compensation to make the best career decision.",
+    date: "2026-03-27",
+    readTime: "10 min read",
+    category: "Salary Guide",
+    featured: true
+  },
+  {
     slug: "scottish-tax-vs-english-tax",
     title: "Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?",
     excerpt: "Scotland has 6 tax bands compared to England's 3. Here's exactly how much more (or less) you'd pay depending on your salary.",

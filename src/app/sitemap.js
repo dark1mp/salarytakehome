@@ -11,7 +11,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-03-19'), // Most recent blog post date
+      lastModified: new Date('2026-03-27'), // Most recent blog post date
       changeFrequency: 'weekly',
       priority: 0.8,
     },
@@ -125,6 +125,54 @@ export default function sitemap() {
 
   // Blog posts with their specific URLs and actual publication dates
   const blogPosts = [
+    {
+      url: `${baseUrl}/blog/first-time-buyer-mortgage-guide`,
+      lastModified: new Date('2026-03-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-pay-off-debt-faster`,
+      lastModified: new Date('2026-03-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/maternity-pay-guide`,
+      lastModified: new Date('2026-03-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/ssp-changes-2026`,
+      lastModified: new Date('2026-03-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/uk-minimum-wage-2025-26`,
+      lastModified: new Date('2026-03-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/two-jobs-tax-explained`,
+      lastModified: new Date('2026-03-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/pro-rata-salary-explained`,
+      lastModified: new Date('2026-03-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-compare-job-offers`,
+      lastModified: new Date('2026-03-27'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/blog/scottish-tax-vs-english-tax`,
       lastModified: new Date('2026-03-19'),

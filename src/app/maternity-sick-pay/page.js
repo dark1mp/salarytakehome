@@ -86,8 +86,36 @@ export default function MaternitySickPay() {
                   "@type": "Question",
                   "name": "When should I start my maternity leave?",
                   "acceptedAnswer": { "@type": "Answer", "text": "You can start maternity leave any time from 11 weeks before your due date. Many women start 1-2 weeks before their due date. If your baby arrives early, your maternity leave starts automatically. Consider the financial impact: earlier leave means using more of your 39 paid weeks before the birth." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I share my maternity leave with my partner?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, through Shared Parental Leave (SPL) you can share up to 50 weeks of leave and 37 weeks of pay with your partner. You must give at least 8 weeks notice and both employers must be notified. SPL pay is £184.03 per week or 90% of your average earnings, whichever is lower."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does my employer have to keep my job open during maternity leave?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. You have the right to return to the same job if you take 26 weeks or less of ordinary maternity leave. If you take more than 26 weeks (additional maternity leave), you're entitled to return to the same job or a suitable alternative on the same terms and conditions. Your employer cannot make you redundant because of your pregnancy."
+                  }
                 }
               ]
+            }, {
+              "@type": "WebApplication",
+              "name": "Maternity Pay Calculator UK",
+              "url": "https://www.salarytakehome.co.uk/maternity-sick-pay",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+              },
+              "description": "Free UK Statutory Maternity Pay calculator. Calculate your SMP entitlement including the first 6 weeks at 90% and remaining 33 weeks."
             }]
           }) }}
         />
@@ -235,6 +263,12 @@ export default function MaternitySickPay() {
                     <strong>Important:</strong> SMP is the minimum your employer must pay. Many employers offer enhanced maternity pay as part of their benefits package. Check your employment contract or speak to HR to see if you're entitled to more. SMP is subject to tax and National Insurance deductions.
                   </p>
                 </div>
+
+                <div className="mt-6">
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    <strong>Official Resources:</strong> For full eligibility criteria and guidance, visit <a href="https://www.gov.uk/maternity-pay-leave" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Maternity Pay and Leave</a>. To understand how maternity pay affects your overall finances, use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a> or read about <a href="/blog/maximize-take-home-pay-2024" className="text-blue-600 hover:text-blue-800 underline font-semibold">maximising your take-home pay</a>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -266,6 +300,153 @@ export default function MaternitySickPay() {
                 <p className="text-gray-700 text-base leading-relaxed">
                   Knowing your SMP entitlement in advance allows you to make informed decisions about your maternity leave and helps you prepare financially for welcoming your new baby.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* SMP at Different Salary Levels Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-pink-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <Heart className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">SMP at Different Salary Levels</h3>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  The total SMP you receive depends on your salary. The first 6 weeks are paid at 90% of your average weekly earnings, while the remaining 33 weeks are at the flat rate of &pound;184.03/week (or 90% if lower).
+                </p>
+
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full text-sm border-collapse">
+                    <thead>
+                      <tr className="bg-pink-50">
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-gray-200">Annual Salary</th>
+                        <th className="text-right p-3 font-semibold text-gray-900 border-b border-gray-200">Weekly Pay</th>
+                        <th className="text-right p-3 font-semibold text-gray-900 border-b border-gray-200">First 6 Weeks (per week)</th>
+                        <th className="text-right p-3 font-semibold text-gray-900 border-b border-gray-200">Weeks 7-39 (per week)</th>
+                        <th className="text-right p-3 font-semibold text-gray-900 border-b border-gray-200">Total SMP</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 text-gray-700">&pound;20,000</td>
+                        <td className="p-3 text-right text-gray-700">&pound;384.62</td>
+                        <td className="p-3 text-right text-gray-700">&pound;346.15</td>
+                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;8,149.89</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 text-gray-700">&pound;25,000</td>
+                        <td className="p-3 text-right text-gray-700">&pound;480.77</td>
+                        <td className="p-3 text-right text-gray-700">&pound;432.69</td>
+                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;8,669.13</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 text-gray-700">&pound;30,000</td>
+                        <td className="p-3 text-right text-gray-700">&pound;576.92</td>
+                        <td className="p-3 text-right text-gray-700">&pound;519.23</td>
+                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;9,188.37</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 text-gray-700">&pound;40,000</td>
+                        <td className="p-3 text-right text-gray-700">&pound;769.23</td>
+                        <td className="p-3 text-right text-gray-700">&pound;692.31</td>
+                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;10,226.85</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 text-gray-700">&pound;50,000</td>
+                        <td className="p-3 text-right text-gray-700">&pound;961.54</td>
+                        <td className="p-3 text-right text-gray-700">&pound;865.38</td>
+                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;11,265.27</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="mt-4">
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    Want to understand more about how maternity pay works at your salary level? Read our <a href="/blog/maternity-pay-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">complete maternity pay guide</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* SMP vs Maternity Allowance Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-violet-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <Info className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">SMP vs Maternity Allowance</h3>
+                </div>
+
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  If you don&apos;t qualify for Statutory Maternity Pay, you may be eligible for Maternity Allowance instead. Here&apos;s how the two compare:
+                </p>
+
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full text-sm border-collapse">
+                    <thead>
+                      <tr className="bg-violet-50">
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-gray-200">Feature</th>
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-gray-200">SMP</th>
+                        <th className="text-left p-3 font-semibold text-gray-900 border-b border-gray-200">Maternity Allowance</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 font-medium text-gray-900">Eligibility</td>
+                        <td className="p-3 text-gray-700">26 weeks service + &pound;123/wk</td>
+                        <td className="p-3 text-gray-700">26 of 66 weeks employed</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 font-medium text-gray-900">First 6 weeks</td>
+                        <td className="p-3 text-gray-700">90% of earnings</td>
+                        <td className="p-3 text-gray-700">&pound;184.03/wk or 90% (lower)</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 font-medium text-gray-900">Weeks 7-39</td>
+                        <td className="p-3 text-gray-700">&pound;184.03/wk or 90% (lower)</td>
+                        <td className="p-3 text-gray-700">Same rate throughout</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 font-medium text-gray-900">Paid by</td>
+                        <td className="p-3 text-gray-700">Employer</td>
+                        <td className="p-3 text-gray-700">DWP</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 font-medium text-gray-900">Taxable?</td>
+                        <td className="p-3 text-gray-700">Yes</td>
+                        <td className="p-3 text-gray-700">No</td>
+                      </tr>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-3 font-medium text-gray-900">Duration</td>
+                        <td className="p-3 text-gray-700">39 weeks</td>
+                        <td className="p-3 text-gray-700">39 weeks</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="mt-4">
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    Learn more in our <a href="/blog/maternity-pay-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">maternity pay guide</a> or check eligibility on <a href="https://www.gov.uk/maternity-allowance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Maternity Allowance</a>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -315,7 +496,7 @@ export default function MaternitySickPay() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">What if I don't qualify for SMP?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      If you don't qualify for SMP (for example, if you're self-employed or your earnings are too low), you may be eligible for Maternity Allowance instead. This is paid by the government at up to £184.03 per week for up to 39 weeks.
+                      If you don't qualify for SMP (for example, if you're self-employed or your earnings are too low), you may be eligible for <a href="https://www.gov.uk/maternity-allowance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Maternity Allowance</a> instead. This is paid by the government at up to £184.03 per week for up to 39 weeks.
                     </p>
                   </div>
 
@@ -373,9 +554,9 @@ export default function MaternitySickPay() {
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Salary Sacrifice: Complete Guide</p>
               </a>
-              <a href="/blog/40k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+              <a href="/blog/maternity-pay-guide" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£40k Salary Take Home Pay Breakdown</p>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Maternity Pay Guide: SMP & Maternity Allowance</p>
               </a>
             </div>
           </div>

@@ -150,8 +150,30 @@ export default function SickPay() {
                   "@type": "Question",
                   "name": "Can my employer pay more than Statutory Sick Pay?",
                   "acceptedAnswer": { "@type": "Answer", "text": "Yes, many employers offer contractual or occupational sick pay schemes that pay more than SSP. Some pay full salary for a set period, then reduced pay. Your employment contract or staff handbook will detail your employer's sick pay policy. Contractual sick pay must be at least equal to SSP." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What happens to my sick pay if I earn below the Lower Earnings Limit?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Under current rules (2025/26), if you earn less than £125 per week on average, you don't qualify for SSP. Instead, you may be able to claim Employment and Support Allowance (ESA) or Universal Credit. From April 2026, the earnings limit will be removed so all employees will qualify for SSP regardless of income." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I claim SSP if I am pregnant?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can receive SSP during pregnancy if you're off sick for a pregnancy-related illness and meet the eligibility criteria. However, once your maternity leave begins (or from the 4th week before your due date if you're off sick at that point), SSP stops and you switch to Statutory Maternity Pay (SMP) instead." }
                 }
               ]
+            }, {
+              "@type": "WebApplication",
+              "name": "Statutory Sick Pay Calculator UK",
+              "url": "https://www.salarytakehome.co.uk/sick-pay",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+              },
+              "description": "Free UK Statutory Sick Pay calculator. Calculate your SSP entitlement for 2025/26 and preview the new 2026/27 rules."
             }]
           }) }}
         />
@@ -410,7 +432,7 @@ export default function SickPay() {
                     <strong>Official Resources:</strong> For full eligibility criteria and official guidance, visit{' '}
                     <a href="https://www.gov.uk/statutory-sick-pay" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">
                       GOV.UK Statutory Sick Pay
-                    </a>
+                    </a>. To understand how SSP fits into your overall income, use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a> or read about the <a href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">latest UK tax changes for 2025/26</a>.
                   </p>
                 </div>
               </div>
@@ -443,6 +465,126 @@ export default function SickPay() {
 
                 <p className="text-gray-700 text-base leading-relaxed">
                   The April 2026 changes will significantly improve support for low-income workers, ensuring that being sick doesn't mean zero income for anyone in employment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* SSP vs Employer Sick Pay Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-blue-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <HeartPulse className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">SSP vs Employer Sick Pay</h3>
+                </div>
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  Many employers offer sick pay schemes that are more generous than SSP. Here&apos;s how statutory and typical employer schemes compare:
+                </p>
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="border-b-2 border-gray-200">
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Feature</th>
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">SSP</th>
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">NHS</th>
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Typical Private</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Rate</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">£116.75/wk</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">Full pay</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">Varies</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Full pay duration</td>
+                        <td className="py-3 px-4 text-red-600 font-semibold text-base">None</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">1-6 months</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">1-13 weeks</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Waiting days</td>
+                        <td className="py-3 px-4 text-orange-600 font-semibold text-base">3 days</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">Usually 0</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">0-3 days</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Max duration</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">28 weeks</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">12 months</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">4-26 weeks</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Check your employment contract for your employer&apos;s sick pay policy. When comparing job offers, employer sick pay can be a significant benefit worth considering. Read our <a href="/blog/ssp-changes-2026" className="text-blue-600 hover:text-blue-800 underline font-semibold">guide to SSP changes in 2026</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* New SSP Rules 2026 Card */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-amber-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <AlertCircle className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-2xl">New SSP Rules 2026: What Changes</h3>
+                </div>
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  From April 2026, Statutory Sick Pay is getting a major overhaul. Here&apos;s a side-by-side comparison of the old and new rules:
+                </p>
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="border-b-2 border-gray-200">
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Feature</th>
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">Current (2025/26)</th>
+                        <th className="text-left py-3 px-4 font-bold text-gray-900 text-base">From April 2026</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Waiting period</td>
+                        <td className="py-3 px-4 text-red-600 font-semibold text-base">3 days unpaid</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">Paid from day 1</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Earnings limit</td>
+                        <td className="py-3 px-4 text-red-600 font-semibold text-base">Must earn £125+/wk</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">No minimum</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Weekly rate</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">Flat £116.75</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">80% of pay (max £123.25)</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Low earners</td>
+                        <td className="py-3 px-4 text-red-600 font-semibold text-base">Not eligible</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold text-base">80% of earnings</td>
+                      </tr>
+                      <tr className="border-b border-gray-100 hover:bg-gray-50">
+                        <td className="py-3 px-4 text-gray-700 text-base">Max duration</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">28 weeks</td>
+                        <td className="py-3 px-4 text-gray-900 font-semibold text-base">28 weeks</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Toggle between current and new rules using the calculator above to see how the changes affect your entitlement. For the full breakdown, read our <a href="/blog/ssp-changes-2026" className="text-blue-600 hover:text-blue-800 underline font-semibold">complete guide to SSP changes in 2026</a>.
                 </p>
               </div>
             </div>
@@ -500,7 +642,7 @@ export default function SickPay() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">Is SSP taxable?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      Yes, Statutory Sick Pay is treated as earnings and is subject to Income Tax and National Insurance contributions in the usual way. Your employer will deduct these before paying you.
+                      Yes, Statutory Sick Pay is treated as earnings and is subject to Income Tax and National Insurance contributions in the usual way. Your employer will deduct these before paying you. See <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">current income tax rates</a> on GOV.UK.
                     </p>
                   </div>
 
@@ -551,9 +693,9 @@ export default function SickPay() {
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Salary Sacrifice: Complete Guide</p>
               </a>
-              <a href="/blog/30k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
-                <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£30k Salary Take Home Pay Breakdown</p>
+              <a href="/blog/ssp-changes-2026" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Tax Updates</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">SSP Changes 2026: New Sick Pay Rules</p>
               </a>
             </div>
           </div>

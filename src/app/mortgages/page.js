@@ -150,8 +150,30 @@ export default function MortgageCalculator() {
                   "@type": "Question",
                   "name": "How do interest rates affect my monthly mortgage payments?",
                   "acceptedAnswer": { "@type": "Answer", "text": "A 1% increase in interest rate on a £200,000 repayment mortgage over 25 years adds approximately £100-£110 to your monthly payment. At 4% interest, you pay around £1,056 per month. At 5%, this rises to approximately £1,170. Over the full term, a 1% difference costs over £30,000 in additional interest." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is stamp duty and how much will I pay?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Stamp Duty Land Tax (SDLT) is a tax on property purchases in England and Northern Ireland. First-time buyers pay no stamp duty on properties up to £425,000. For other buyers, the first £250,000 is tax-free, then 5% applies up to £925,000, 10% up to £1.5 million, and 12% above that. Scotland and Wales have their own equivalents (LBTT and LTT)." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I overpay my mortgage to save money?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Most mortgage lenders allow you to overpay by up to 10% of your outstanding balance per year without early repayment charges. Overpaying reduces your total interest and shortens the mortgage term. For example, overpaying £200 per month on a £200,000 mortgage at 5% could save over £30,000 in interest and pay off the mortgage 7 years early." }
                 }
               ]
+            }, {
+              "@type": "WebApplication",
+              "name": "UK Mortgage Calculator",
+              "url": "https://www.salarytakehome.co.uk/mortgages",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+              },
+              "description": "Free UK mortgage calculator. Calculate your monthly repayments for repayment and interest-only mortgages based on property value, deposit, and interest rate."
             }]
           }) }}
         />
@@ -378,6 +400,9 @@ export default function MortgageCalculator() {
                       borrowing. A lower LTV typically means better mortgage rates and more lender options. Most UK lenders offer
                       mortgages up to 95% LTV for first-time buyers and 90% for others.
                     </p>
+                    <p>
+                      For official guidance on buying a home, visit <a href="https://www.gov.uk/government/collections/stamp-duty-land-tax" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Stamp Duty</a> and <a href="https://www.gov.uk/affordable-home-ownership-schemes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">government home ownership schemes</a>. Use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a> to understand how much of your salary is available for mortgage payments, and read our <a href="/blog/maximize-take-home-pay-2024" className="text-blue-600 hover:text-blue-800 underline font-semibold">guide to maximising take-home pay</a> to boost your affordability.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -409,6 +434,123 @@ export default function MortgageCalculator() {
                     <p>
                       Understanding your LTV is also important when remortgaging. As you pay down your mortgage and your property
                       value increases, your LTV decreases, which can give you access to better rates and save you money.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* UK Mortgage Rates by LTV */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-green-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <TrendingUp className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">UK Mortgage Rates by LTV</h3>
+                  </div>
+                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                      Your loan-to-value (LTV) ratio is one of the biggest factors that determines your mortgage interest rate. A lower LTV means less risk for the lender, which typically translates to a cheaper rate for you. Here's how typical rates compare across different deposit sizes.
+                    </p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="border-b-2 border-gray-200">
+                            <th className="text-left py-3 px-4 font-semibold text-gray-900">LTV</th>
+                            <th className="text-right py-3 px-4 font-semibold text-gray-900">Typical 2-Year Fixed</th>
+                            <th className="text-right py-3 px-4 font-semibold text-gray-900">Typical 5-Year Fixed</th>
+                            <th className="text-right py-3 px-4 font-semibold text-gray-900">Monthly Payment (£250k, 25yr)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-3 px-4 font-medium text-gray-900">60%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~4.2%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~4.0%</td>
+                            <td className="py-3 px-4 text-right font-semibold text-green-700">~£1,357</td>
+                          </tr>
+                          <tr className="border-b border-gray-100 bg-gray-50/50">
+                            <td className="py-3 px-4 font-medium text-gray-900">75%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~4.5%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~4.3%</td>
+                            <td className="py-3 px-4 text-right font-semibold text-green-700">~£1,389</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-3 px-4 font-medium text-gray-900">85%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~4.9%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~4.7%</td>
+                            <td className="py-3 px-4 text-right font-semibold text-green-700">~£1,433</td>
+                          </tr>
+                          <tr className="border-b border-gray-100 bg-gray-50/50">
+                            <td className="py-3 px-4 font-medium text-gray-900">90%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~5.3%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~5.1%</td>
+                            <td className="py-3 px-4 text-right font-semibold text-green-700">~£1,477</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-medium text-gray-900">95%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~5.8%</td>
+                            <td className="py-3 px-4 text-right text-gray-700">~5.5%</td>
+                            <td className="py-3 px-4 text-right font-semibold text-green-700">~£1,533</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p className="text-sm text-gray-500">
+                      Rates are indicative only and change regularly. Compare actual rates from lenders. Read our <a href="/blog/first-time-buyer-mortgage-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">first-time buyer mortgage guide</a> for more details on how LTV affects your mortgage options.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* First-Time Buyer Schemes */}
+              <div className="relative group overflow-hidden bg-white rounded-2xl border border-sky-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Home className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-2xl">First-Time Buyer Schemes</h3>
+                  </div>
+                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                      The UK government offers several schemes to help first-time buyers get on the property ladder. These can make a real difference to your deposit, borrowing power, and overall costs.
+                    </p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="border-b-2 border-gray-200">
+                            <th className="text-left py-3 px-4 font-semibold text-gray-900">Scheme</th>
+                            <th className="text-left py-3 px-4 font-semibold text-gray-900">How It Works</th>
+                            <th className="text-left py-3 px-4 font-semibold text-gray-900">Key Benefit</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-3 px-4 font-medium text-gray-900">Lifetime ISA</td>
+                            <td className="py-3 px-4 text-gray-700">Save up to £4,000/yr, govt adds 25%</td>
+                            <td className="py-3 px-4 text-sky-700 font-semibold">Up to £1,000 free per year</td>
+                          </tr>
+                          <tr className="border-b border-gray-100 bg-gray-50/50">
+                            <td className="py-3 px-4 font-medium text-gray-900">Shared Ownership</td>
+                            <td className="py-3 px-4 text-gray-700">Buy 25-75% of property, rent the rest</td>
+                            <td className="py-3 px-4 text-sky-700 font-semibold">Lower deposit needed</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-3 px-4 font-medium text-gray-900">First Homes</td>
+                            <td className="py-3 px-4 text-gray-700">30% discount on new-build homes</td>
+                            <td className="py-3 px-4 text-sky-700 font-semibold">Permanently discounted price</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-medium text-gray-900">Stamp Duty Relief</td>
+                            <td className="py-3 px-4 text-gray-700">No stamp duty on first £425,000</td>
+                            <td className="py-3 px-4 text-sky-700 font-semibold">Save up to £6,250</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p className="text-sm text-gray-500">
+                      For full eligibility details, visit <a href="https://www.gov.uk/affordable-home-ownership-schemes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK affordable home ownership schemes</a>. See our <a href="/blog/first-time-buyer-mortgage-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">first-time buyer mortgage guide</a> for a complete walkthrough of the home-buying process.
                     </p>
                   </div>
                 </div>
@@ -537,9 +679,9 @@ export default function MortgageCalculator() {
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How to Maximise Your Take Home Pay</p>
               </a>
-              <a href="/blog/50k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
-                <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£50k Salary Take Home Pay Breakdown</p>
+              <a href="/blog/first-time-buyer-mortgage-guide" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Money Tips</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">First-Time Buyer Mortgage Guide 2026</p>
               </a>
               <a href="/blog/cash-isa-limit-2027" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Savings</span>

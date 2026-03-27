@@ -1473,8 +1473,37 @@ export default function TaxCalculator() {
                     "@type": "Answer",
                     "text": "When you earn over £100,000, your £12,570 personal allowance is reduced by £1 for every £2 earned above £100,000. This creates an effective 60% tax rate on income between £100,000 and £125,140. For every additional £100 earned in this range, you lose £50 of personal allowance plus pay 40% tax on the £100, keeping only about £40."
                   }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do pension contributions reduce my tax bill?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pension contributions are deducted from your gross salary before tax is calculated, reducing your taxable income. A 5% pension contribution on a £40,000 salary saves £400 in tax for a basic rate taxpayer. Higher rate taxpayers save even more — a £2,000 contribution at 40% saves £800 in tax. Salary sacrifice pension contributions also reduce National Insurance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much National Insurance was cut in 2025/26?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The employee National Insurance rate dropped from 10% to 8% in the 2025/26 tax year. On a £35,000 salary, this saves approximately £449.40 per year compared to 2024/25 rates. The NI threshold remains at £12,570, aligning with the personal allowance for income tax."
+                  }
                 }
               ]
+            },
+            {
+              "@type": "WebApplication",
+              "name": "Take Home Pay Calculator UK",
+              "url": "https://www.salarytakehome.co.uk/take-home-pay-calculator",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+              },
+              "description": "Free UK take home pay calculator. Calculate your net salary after income tax, National Insurance, student loans, and pension contributions for 2025/26."
             }]
           }) }}
         />
