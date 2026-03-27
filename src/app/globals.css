@@ -8,16 +8,24 @@ body {
   background: #f8fafc;
 }
 
-/* Tailwind v4 oklab fallbacks — Tailwind v4 outputs "linear-gradient(in oklab, ...)"
-   and "oklab()" colors which older browsers cannot parse. Without these fallbacks
-   the sidebar gradient disappears and white text becomes invisible.
-   Gradient: Safari < 16.2, Firefox < 127, Chrome/Edge < 111
-   Colors:   Firefox < 113, Chrome/Edge < 111 */
+/* Tailwind v4 oklab fallbacks — Tailwind v4 sets --tw-gradient-position to
+   "to <dir> in oklab" which older browsers cannot parse, breaking ALL gradients.
+   This strips "in oklab" by overriding the variable with plain directions.
+   Affects: Safari < 16.2, Firefox < 127, Chrome/Edge < 111 */
 @supports not (background: linear-gradient(in oklab, red, blue)) {
-  aside[class*="bg-gradient"] {
-    background: linear-gradient(to bottom, #1566a0, #1566a0 50%, #1e90c6) !important;
-  }
+  .bg-gradient-to-t { --tw-gradient-position: to top !important; }
+  .bg-gradient-to-b { --tw-gradient-position: to bottom !important; }
+  .bg-gradient-to-l { --tw-gradient-position: to left !important; }
+  .bg-gradient-to-r { --tw-gradient-position: to right !important; }
+  .bg-gradient-to-tl { --tw-gradient-position: to top left !important; }
+  .bg-gradient-to-tr { --tw-gradient-position: to top right !important; }
+  .bg-gradient-to-bl { --tw-gradient-position: to bottom left !important; }
+  .bg-gradient-to-br { --tw-gradient-position: to bottom right !important; }
 }
+
+/* Fallback for oklab() color function — older browsers can't parse Tailwind v4's
+   oklab() text/bg colors. Forces white text in sidebar.
+   Affects: Firefox < 113, Chrome/Edge < 111 */
 @supports not (color: oklab(1 0 0)) {
   aside[class*="bg-gradient"],
   aside[class*="bg-gradient"] a,
