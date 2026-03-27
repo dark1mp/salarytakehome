@@ -1,0 +1,52 @@
+# SalaryTakeHome.co.uk
+
+> Free UK tax and salary calculators using official HMRC 2025/26 tax rates. All calculations run client-side in the browser — no data is stored or transmitted.
+
+## About
+
+SalaryTakeHome.co.uk provides accurate, up-to-date UK tax calculators for employees, job seekers, and anyone who wants to understand their pay. Tax data is updated each April when new HMRC rates take effect. The site covers income tax, National Insurance, student loan repayments, pension contributions, Scottish tax rates, and more.
+
+## Calculators
+
+- [Take-Home Pay Calculator](https://www.salarytakehome.co.uk/take-home-pay-calculator): Calculate your exact take-home pay after income tax, National Insurance, student loans, and pension deductions. Supports tax years 2021/22 through 2025/26, Scottish tax rates, and all student loan plan types.
+- [Pay Rise Calculator](https://www.salarytakehome.co.uk/pay-rise): See how a pay rise affects your take-home pay after tax. Compare before and after deductions.
+- [Hourly Wage Calculator](https://www.salarytakehome.co.uk/hourly-wage): Convert an hourly wage to annual salary and calculate take-home pay with full tax breakdown.
+- [Compare Salaries](https://www.salarytakehome.co.uk/compare-salaries): Compare two salaries side by side with full tax, NI, and student loan breakdowns.
+- [Two Jobs Calculator](https://www.salarytakehome.co.uk/two-jobs): Calculate combined take-home pay when working two jobs, with correct tax code handling.
+- [Pro-Rata Calculator](https://www.salarytakehome.co.uk/pro-rata-furlough): Calculate part-time or pro-rata salary and take-home pay.
+- [Sick Pay Calculator](https://www.salarytakehome.co.uk/sick-pay): Calculate Statutory Sick Pay (SSP) entitlement and duration.
+- [Maternity Pay Calculator](https://www.salarytakehome.co.uk/maternity-sick-pay): Calculate Statutory Maternity Pay (SMP) week by week.
+- [Mortgage Calculator](https://www.salarytakehome.co.uk/mortgages): Calculate monthly mortgage repayments with interest rate comparisons.
+- [Debt Repayment Calculator](https://www.salarytakehome.co.uk/debts): Plan debt repayment with avalanche and snowball method comparisons.
+
+## UK Tax Reference (2025/26)
+
+- Personal Allowance: £12,570
+- Basic rate (20%): £12,571 to £50,270
+- Higher rate (40%): £50,271 to £125,140
+- Additional rate (45%): over £125,140
+- National Insurance: 8% on earnings between £12,570 and £50,270, 2% above £50,270
+- Scottish rates: Starter (19%), Basic (20%), Intermediate (21%), Higher (42%), Advanced (45%), Top (46%)
+- Student Loan Plan 1 threshold: £24,990 (9%)
+- Student Loan Plan 2 threshold: £27,295 (9%)
+- Student Loan Plan 4 threshold: £31,395 (9%)
+- Student Loan Plan 5 threshold: £25,000 (9%)
+- Postgraduate Loan threshold: £21,000 (6%)
+
+## Blog
+
+- [Scottish Tax vs English Tax](https://www.salarytakehome.co.uk/blog/scottish-tax-vs-english-tax): Detailed comparison of Scottish and English/Welsh tax bands and rates.
+- [Plan 1 vs Plan 2 Student Loan](https://www.salarytakehome.co.uk/blog/plan-1-vs-plan-2-student-loan): Differences between student loan repayment plans explained.
+- [Salary Sacrifice vs Personal Pension](https://www.salarytakehome.co.uk/blog/salary-sacrifice-vs-personal-pension): Which pension contribution method saves you more tax.
+- [£100K Tax Trap Explained](https://www.salarytakehome.co.uk/blog/100k-tax-trap): How earning over £100,000 creates a 60% effective tax rate.
+- [Take-Home Pay on £30K](https://www.salarytakehome.co.uk/blog/30k-salary-take-home): Full breakdown of take-home pay on a £30,000 salary.
+- [Take-Home Pay on £40K](https://www.salarytakehome.co.uk/blog/40k-salary-take-home): Full breakdown of take-home pay on a £40,000 salary.
+- [Take-Home Pay on £50K](https://www.salarytakehome.co.uk/blog/50k-salary-take-home): Full breakdown of take-home pay on a £50,000 salary.
+- [Take-Home Pay on £60K](https://www.salarytakehome.co.uk/blog/60k-salary-take-home): Full breakdown of take-home pay on a £60,000 salary.
+- [UK Tax Changes 2025/26](https://www.salarytakehome.co.uk/blog/uk-tax-changes-2025-26): Summary of all tax changes for the 2025/26 tax year.
+- [Student Loan Repayment Guide](https://www.salarytakehome.co.uk/blog/student-loan-repayment-guide): Complete guide to UK student loan repayment thresholds and rates.
+- [Salary Sacrifice Complete Guide](https://www.salarytakehome.co.uk/blog/salary-sacrifice-complete-guide): How salary sacrifice works and its tax benefits.
+- [Pension Contributions & Tax Relief](https://www.salarytakehome.co.uk/blog/pension-contributions-tax-relief): Guide to pension tax relief and contribution limits.
+- [Pay Rise Negotiation Guide](https://www.salarytakehome.co.uk/blog/pay-rise-negotiation-guide): How to negotiate a pay rise and understand its tax impact.
+- [Student Loan Refund Guide](https://www.salarytakehome.co.uk/blog/student-loan-refund): How to claim back student loan overpayments.
+- [Cash ISA Limit Changes](https://www.salarytakehome.co.uk/blog/cash-isa-limit-2027): Upcoming changes to ISA contribution limits.

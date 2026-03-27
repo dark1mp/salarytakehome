@@ -185,6 +185,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 - **Calculator pages use `fullWidth`** — Calculator pages pass `fullWidth` to LayoutWrapper, which removes the `2xl:max-w` constraint since they have their own manual sidebar ad. They also don't use `max-w-[1400px]` or `max-w-6xl` on inner containers.
 - **Side rail ad space (non-calculator pages)** — LayoutWrapper uses `2xl:max-w-[1100px]` on the inner content div to leave ~200px+ on the right at 1536px+ viewports for AdSense auto side rail ads. Below `2xl`, content is full width. Don't remove this max-width from non-calculator pages.
 - **Narrow layout for blogs** — LayoutWrapper accepts a `narrow` prop (used on all blog pages) which applies `2xl:max-w-[900px]` instead, leaving ~400px for side rail ads. The space is always present on 2xl+ screens whether an ad fills or not.
+- **llms.txt** — `public/llms.txt` and `public/llms-full.txt` provide site metadata for AI crawlers. Update these when adding new calculators, blog posts, or changing tax year data.
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)

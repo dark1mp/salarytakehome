@@ -1,0 +1,176 @@
+# SalaryTakeHome.co.uk — Complete Reference
+
+> Free UK tax and salary calculators using official HMRC 2025/26 tax rates. All calculations run client-side — no data is stored or transmitted.
+
+## About
+
+SalaryTakeHome.co.uk provides accurate UK tax calculators for employees, job seekers, and anyone who wants to understand their pay. Tax data is sourced from HMRC and updated each April when new rates take effect. The site has been providing UK tax calculations since 2024 and covers income tax, National Insurance, student loan repayments, pension contributions, Scottish tax rates, and more.
+
+All calculations are performed entirely in the browser. No personal or financial data is ever sent to a server or stored.
+
+---
+
+## Calculators
+
+### Take-Home Pay Calculator
+URL: https://www.salarytakehome.co.uk/take-home-pay-calculator
+
+The primary calculator. Enter your gross annual salary and get a full breakdown of:
+- Income tax (England/Wales/NI or Scottish rates)
+- National Insurance contributions
+- Student loan repayments (Plans 1, 2, 4, 5, and Postgraduate)
+- Pension contributions (percentage or fixed amount)
+- Custom tax codes
+- Monthly, weekly, daily, and hourly net pay
+
+Supports tax years: 2025/26, 2024/25, 2023/24, 2022/23, 2021/22.
+
+### Pay Rise Calculator
+URL: https://www.salarytakehome.co.uk/pay-rise
+
+Enter your current salary and proposed new salary to see:
+- Before and after take-home pay comparison
+- How much of your pay rise you actually keep after tax
+- Marginal tax rate on the pay rise
+- Impact on student loan repayments and pension
+
+### Hourly Wage Calculator
+URL: https://www.salarytakehome.co.uk/hourly-wage
+
+Convert an hourly rate to annual salary based on hours per week and weeks per year, then calculate full tax breakdown including take-home pay.
+
+### Compare Salaries Calculator
+URL: https://www.salarytakehome.co.uk/compare-salaries
+
+Enter two salaries and compare them side by side. Shows the difference in gross pay, tax, NI, student loans, and take-home pay.
+
+### Two Jobs Calculator
+URL: https://www.salarytakehome.co.uk/two-jobs
+
+For people working two jobs simultaneously. Calculates combined tax liability correctly, accounting for how tax codes and NI thresholds work across multiple employments.
+
+### Pro-Rata Calculator
+URL: https://www.salarytakehome.co.uk/pro-rata-furlough
+
+Calculate part-time salary from a full-time equivalent. Enter the FTE salary and your working days/hours to get the pro-rata amount and take-home pay.
+
+### Sick Pay Calculator
+URL: https://www.salarytakehome.co.uk/sick-pay
+
+Calculate Statutory Sick Pay (SSP) entitlement. SSP for 2025/26 is £116.75 per week, payable for up to 28 weeks after 3 waiting days.
+
+### Maternity Pay Calculator
+URL: https://www.salarytakehome.co.uk/maternity-sick-pay
+
+Calculate Statutory Maternity Pay (SMP) week by week. First 6 weeks at 90% of average weekly earnings, then up to 33 weeks at £184.03 per week (2025/26 rate) or 90% of AWE if lower.
+
+### Mortgage Calculator
+URL: https://www.salarytakehome.co.uk/mortgages
+
+Calculate monthly mortgage repayments for repayment or interest-only mortgages. Compare different interest rates and terms.
+
+### Debt Repayment Calculator
+URL: https://www.salarytakehome.co.uk/debts
+
+Plan debt repayment using avalanche (highest interest first) or snowball (smallest balance first) methods. See total interest paid and time to become debt-free.
+
+---
+
+## UK Tax Rates 2025/26 (England, Wales, Northern Ireland)
+
+| Band | Taxable income | Rate |
+|------|---------------|------|
+| Personal Allowance | Up to £12,570 | 0% |
+| Basic rate | £12,571 – £50,270 | 20% |
+| Higher rate | £50,271 – £125,140 | 40% |
+| Additional rate | Over £125,140 | 45% |
+
+The Personal Allowance reduces by £1 for every £2 earned above £100,000, reaching zero at £125,140. This creates an effective 60% marginal tax rate between £100,000 and £125,140.
+
+## Scottish Tax Rates 2025/26
+
+| Band | Taxable income | Rate |
+|------|---------------|------|
+| Personal Allowance | Up to £12,570 | 0% |
+| Starter rate | £12,571 – £14,876 | 19% |
+| Basic rate | £14,877 – £26,561 | 20% |
+| Intermediate rate | £26,562 – £43,662 | 21% |
+| Higher rate | £43,663 – £75,000 | 42% |
+| Advanced rate | £75,001 – £125,140 | 45% |
+| Top rate | Over £125,140 | 46% |
+
+## National Insurance 2025/26
+
+| Earnings | Employee rate |
+|----------|-------------|
+| Up to £12,570 per year | 0% |
+| £12,570 – £50,270 | 8% |
+| Over £50,270 | 2% |
+
+Employer NI: 15% on earnings above £5,000 (secondary threshold).
+
+## Student Loan Thresholds 2025/26
+
+| Plan | Annual threshold | Rate |
+|------|-----------------|------|
+| Plan 1 (pre-2012 England/Wales, all NI/Scotland pre-2024) | £24,990 | 9% |
+| Plan 2 (post-2012 England/Wales) | £27,295 | 9% |
+| Plan 4 (Scotland post-1998) | £31,395 | 9% |
+| Plan 5 (England/Wales from 2023) | £25,000 | 9% |
+| Postgraduate Loan | £21,000 | 6% |
+
+---
+
+## Example Take-Home Pay Calculations (2025/26, England/Wales, no student loan, no pension)
+
+**£25,000 salary:** ~£21,434 take-home (£1,786/month)
+**£30,000 salary:** ~£24,434 take-home (£2,036/month)
+**£35,000 salary:** ~£27,434 take-home (£2,286/month)
+**£40,000 salary:** ~£30,434 take-home (£2,536/month)
+**£50,000 salary:** ~£36,434 take-home (£3,036/month)
+**£60,000 salary:** ~£42,834 take-home (£3,570/month)
+**£75,000 salary:** ~£52,134 take-home (£4,345/month)
+**£100,000 salary:** ~£66,534 take-home (£5,545/month)
+
+---
+
+## Blog Topics
+
+### Salary Guides
+- Take-home pay breakdowns for £30K, £40K, £50K, and £60K salaries
+- Each guide includes monthly, weekly, and daily net pay plus impact of student loans and pensions
+
+### Tax Planning
+- The £100K tax trap: how the Personal Allowance taper creates a 60% effective rate
+- UK tax changes for 2025/26 and 2024/25
+- Salary sacrifice vs personal pension contributions
+- Complete guide to salary sacrifice and pension tax relief
+
+### Student Loans
+- Plan 1 vs Plan 2 comparison
+- Student loan repayment thresholds and how repayments are calculated
+- How to claim back student loan overpayments
+
+### Regional Comparisons
+- Scottish tax vs English tax: band-by-band comparison showing who pays more at each salary level
+
+### Savings
+- Cash ISA limit changes and contribution strategies
+
+---
+
+## Data Sources
+
+All tax rates, thresholds, and allowances are sourced from:
+- HMRC (https://www.gov.uk/government/organisations/hm-revenue-customs)
+- GOV.UK income tax rates (https://www.gov.uk/income-tax-rates)
+- GOV.UK National Insurance rates (https://www.gov.uk/national-insurance-rates-letters)
+- Student Loans Company (https://www.gov.uk/repaying-your-student-loan)
+- Revenue Scotland (https://www.revenue.scot/income-tax)
+
+Data is reviewed and updated at the start of each tax year (April) and when mid-year changes are announced.
+
+## Contact
+
+Website: https://www.salarytakehome.co.uk
+Contact page: https://www.salarytakehome.co.uk/contact
