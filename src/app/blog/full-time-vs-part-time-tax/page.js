@@ -275,6 +275,8 @@ export default function FullTimeVsPartTimeTax() {
               </div>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* The Tax-Free Allowance Advantage */}
             <div className="glass-light rounded-2xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">The Tax-Free Allowance Advantage</h2>
@@ -380,6 +382,8 @@ export default function FullTimeVsPartTimeTax() {
                 </p>
               </div>
             </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
             {/* Pro-Rata Benefits */}
             <div className="glass-light rounded-2xl p-8 mb-8">

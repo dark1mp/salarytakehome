@@ -156,6 +156,8 @@ export default function MaximizeTakeHomePay() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">3. Tax-Free Childcare (Save up to £2,000/year per child)</h2>
             
@@ -241,6 +243,8 @@ export default function MaximizeTakeHomePay() {
               </div>
             </div>
           </div>
+
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">6. Travel & Transport</h2>

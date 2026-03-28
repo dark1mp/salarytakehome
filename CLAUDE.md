@@ -37,7 +37,7 @@ src/app/
 ├── sitemap.js                   # Dynamic XML sitemap (add new pages here!)
 ├── not-found.js                 # Custom 404 page
 ├── components/
-│   ├── AdUnit.js                # Reusable AdSense ad component. Accepts `slot` and `hideOnMobile` props. Slots: 7756198179 (in-content), 1586479879 (top-of-page), 4603525459 (sidebar vertical 1), 9534353704 (sidebar vertical 2).
+│   ├── AdUnit.js                # Reusable AdSense ad component. Accepts `slot`, `hideOnMobile`, `layout`, and `format` props. Slots: 7756198179 (in-content), 1586479879 (top-of-page), 4603525459 (sidebar vertical 1), 9534353704 (sidebar vertical 2), 3520564956 (in-article blog ads). For in-article ads use: `layout="in-article" format="fluid"`.
 │   ├── Breadcrumbs.js           # Reusable breadcrumbs + BreadcrumbList JSON-LD schema
 │   ├── CookieConsent.js
 │   ├── Footer.js                # 4-column footer with all nav links
@@ -135,15 +135,16 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 1. Create `src/app/blog/[slug]/page.js`
 2. Wrap content in `<LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Post Title" }]} narrow>` — this provides sidebar, footer, breadcrumbs, and narrow layout for side rail ads
 3. Add `import AdUnit from "../../components/AdUnit";` and place `<AdUnit slot="1586479879" hideOnMobile />` above the h1
-4. Add the "Last updated" badge below the category/date/readtime row: `<p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>`
-5. **Add the post to `src/app/blog/posts.js`** — this is the single source of truth. The blog index, RSS feed (`/feed.xml`), and sitemap (`/sitemap.js`) all import from this file automatically. Fields: slug, title, description, date, readTime, category, featured, priority.
-6. **Update `public/llms.txt` and `public/llms-full.txt`** — these are the only manual files that still need separate updates (they use markdown format for AI crawlers).
-7. Cross-link to relevant calculators (hourly-wage, take-home-pay-calculator, pay-rise)
-8. Cross-link to related blog posts within body text (not just RelatedArticles) for topical authority
-9. Add external links to official sources (.gov.uk, HMRC, SLC etc.) for E-E-A-T credibility
-10. Include structured data: Article schema + FAQPage (if applicable) with `dateModified`. BreadcrumbList schema is handled by the Breadcrumbs component automatically.
-11. Add RelatedArticles component at the bottom
-12. After deploy, IndexNow submission happens automatically via postbuild script
+4. Add in-article ads between content sections: `<AdUnit slot="3520564956" layout="in-article" format="fluid" />`. Long posts (10+ min): 2 ads (after 2nd and 4th/5th section). Short posts (under 10 min): 1 ad (after 2nd section). Always keep at least 2 content sections between ads.
+5. Add the "Last updated" badge below the category/date/readtime row: `<p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>`
+6. **Add the post to `src/app/blog/posts.js`** — this is the single source of truth. The blog index, RSS feed (`/feed.xml`), and sitemap (`/sitemap.js`) all import from this file automatically. Fields: slug, title, description, date, readTime, category, featured, priority.
+7. **Update `public/llms.txt` and `public/llms-full.txt`** — these are the only manual files that still need separate updates (they use markdown format for AI crawlers).
+8. Cross-link to relevant calculators (hourly-wage, take-home-pay-calculator, pay-rise)
+9. Cross-link to related blog posts within body text (not just RelatedArticles) for topical authority
+10. Add external links to official sources (.gov.uk, HMRC, SLC etc.) for E-E-A-T credibility
+11. Include structured data: Article schema + FAQPage (if applicable) with `dateModified`. BreadcrumbList schema is handled by the Breadcrumbs component automatically.
+12. Add RelatedArticles component at the bottom
+13. After deploy, IndexNow submission happens automatically via postbuild script
 
 ## SEO Checklist
 
@@ -200,7 +201,7 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver watching `data-ad-status` (set by AdSense to `"filled"` or `"unfilled"`). If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it. Don't use `offsetHeight` to detect ad fill — it gives false positives.
 - **AdUnit mobile scroll hint** — when an ad fills on mobile (`lg:hidden`), a "↓ Scroll down to see results" message appears above the ad so users know results are below.
 - **`hideOnMobile` breakpoint is `md` (768px)** — `hideOnMobile` applies `hidden md:block`, so ads show on iPad portrait (768px) and above. This was changed from `lg` (1024px) in March 2026 to capture iPad impressions. Sidebar ads are unaffected because their parent container uses `hidden xl:block`.
-- **Manual ad placements** — All 10 calculator pages have: (1) a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1 (visible on iPad+), and (2) two stacked sticky right sidebar ads (`<AdUnit slot="4603525459" hideOnMobile />` + `<AdUnit slot="9534353704" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. All blog pages (index + 31 posts) have a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, plus auto ads.
+- **Manual ad placements** — All 10 calculator pages have: (1) a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1 (visible on iPad+), and (2) two stacked sticky right sidebar ads (`<AdUnit slot="4603525459" hideOnMobile />` + `<AdUnit slot="9534353704" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. All blog pages (index + 31 posts) have a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1. All 31 blog posts also have in-article ads (`<AdUnit slot="3520564956" layout="in-article" format="fluid" />`) placed between content sections — 2 ads on long posts (10+ min), 1 ad on short posts (under 10 min), with at least 2 content sections between ads.
 - **Sidebar ads stay at xl+ (1280px)** — We deliberately chose not to show sidebar ads on iPad landscape (1024px) because with the 230px nav sidebar + 192px ad column, only ~602px remains for content. Auto ads handle iPad instead.
 - **Sidebar ad positioning** — The sidebar ad uses `absolute right-8 top-8 w-[160px]` with `sticky top-8` inside. The content div uses `xl:pr-[192px]` to reserve space so cards don't overlap. The outer container uses `relative` (not `flex`). Card scaling (`lg:scale-[0.92]`) extends to `2xl` to fit on 13" MacBook screens (1440px).
 - **Calculator pages use `fullWidth`** — Calculator pages pass `fullWidth` to LayoutWrapper, which removes the `2xl:max-w` constraint since they have their own manual sidebar ad. They also don't use `max-w-[1400px]` or `max-w-6xl` on inner containers.
@@ -228,6 +229,5 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - No hreflang tags (should add `en-gb`)
 - No table of contents on long blog posts
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
-- Blog pages only have a top ad unit — could add in-content or sidebar ads for better ad revenue
 - `/pay-rise` and `/take-home-pay-calculator` have two ad units (top + in-content) — other calculators only have the top ad unit and could benefit from an in-content one too
 - Educational content depth varies — `/pay-rise` has ~3,500 words of educational content; other calculators now have ~2,500-3,000 words after adding cards in March 2026, but could still be expanded further to match pay-rise's depth

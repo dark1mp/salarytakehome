@@ -186,6 +186,8 @@ export default function HowToPayOffDebtFaster() {
               </p>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* Worked Example */}
             <div className="glass-light rounded-2xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Worked Example: Avalanche vs Snowball</h2>
@@ -313,6 +315,8 @@ export default function HowToPayOffDebtFaster() {
                 For impartial guidance on consolidation and other debt solutions, visit <a href="https://www.gov.uk/debt-advice" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Debt Advice</a>.
               </p>
             </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
             {/* 5 Tips to Accelerate */}
             <div className="glass-light rounded-2xl p-8 mb-8">

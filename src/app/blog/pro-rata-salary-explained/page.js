@@ -201,6 +201,8 @@ export default function ProRataSalaryExplained() {
             </p>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Pro-Rata Holiday Entitlement */}
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Pro-Rata Holiday Entitlement</h2>
@@ -298,6 +300,8 @@ export default function ProRataSalaryExplained() {
               Compare these to the full-time rates: someone earning £60,000 full-time would enter the 40% higher rate band, but working 3 days keeps the pro-rata salary of £36,000 entirely within the basic rate band. Read more about how this affects your pay in our <Link href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK tax changes 2025/26</Link> guide.
             </p>
           </div>
+
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
           {/* Pro-Rata Pension Contributions */}
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">

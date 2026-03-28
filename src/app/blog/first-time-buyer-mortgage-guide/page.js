@@ -199,6 +199,8 @@ export default function FirstTimeBuyerMortgageGuide() {
               </p>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* Government Schemes */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Government Schemes for First-Time Buyers</h2>
@@ -304,6 +306,8 @@ export default function FirstTimeBuyerMortgageGuide() {
                 Scotland uses Land and Buildings Transaction Tax (LBTT) and Wales uses Land Transaction Tax (LTT) with their own rates and thresholds. For the latest rates, check <a href="https://www.gov.uk/stamp-duty-land-tax" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK stamp duty land tax</a>.
               </p>
             </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
             {/* Step by Step */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">

@@ -8,7 +8,7 @@ export default function LayoutWrapper({ children, breadcrumbs, narrow = false, f
     <>
       <Sidebar />
       <div className="ml-0 md:ml-[230px]">
-        <div className={`${fullWidth ? '' : narrow ? '2xl:max-w-[900px]' : '2xl:max-w-[1100px]'} px-4`}>
+        <div className={`${fullWidth ? '' : narrow ? '2xl:max-w-[900px] 2xl:mx-auto' : '2xl:max-w-[1100px] 2xl:mx-auto'} px-4`}>
           {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
           <main>
             {children}

@@ -120,6 +120,8 @@ export default function SSPChanges2026() {
               </p>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* What's Changing */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">What&apos;s Changing from April 2026</h2>
@@ -241,6 +243,8 @@ export default function SSPChanges2026() {
                 The cap at &pound;123.25 means that anyone earning more than approximately &pound;154/week will receive the maximum rate. For most full-time workers, the weekly SSP amount will be higher than the current flat rate of &pound;116.75.
               </p>
             </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
             {/* What This Means for Employers */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">

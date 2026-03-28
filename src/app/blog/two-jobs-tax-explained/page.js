@@ -145,6 +145,8 @@ export default function TwoJobsTaxExplained() {
               </p>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* Why National Insurance Is Different */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Why National Insurance Is Different</h2>
@@ -241,6 +243,8 @@ export default function TwoJobsTaxExplained() {
                 In this case, having two jobs actually saves &pound;206 per year because of the NI threshold reset. The income tax is identical &mdash; only the NI calculation differs. Use our <Link href="/two-jobs" className="text-blue-600 hover:text-blue-800 underline font-semibold">Two Jobs Calculator</Link> to run your own numbers.
               </p>
             </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
             {/* How to Check Your Tax Codes */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">

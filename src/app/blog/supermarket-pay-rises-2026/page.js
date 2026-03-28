@@ -159,6 +159,8 @@ export default function SupermarketPayRises2026() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Aldi */}
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
             <div className="flex items-center gap-3 mb-4">

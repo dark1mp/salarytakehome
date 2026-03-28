@@ -162,6 +162,8 @@ export default function PayRiseNegotiationGuide() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* How Much to Ask For */}
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">How Much Should You Ask For?</h2>
@@ -309,6 +311,8 @@ export default function PayRiseNegotiationGuide() {
               </div>
             </div>
           </div>
+
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
           {/* Tax Impact Section */}
           <div className="glass-light rounded-2xl p-8 mb-8">

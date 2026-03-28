@@ -152,6 +152,8 @@ export default function PAYEVsSelfEmployed() {
               </div>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* Income Tax Comparison */}
             <div className="glass-light rounded-2xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-purple-500 pl-4">Income Tax: Same Bands, Different Starting Points</h2>
@@ -336,6 +338,8 @@ export default function PAYEVsSelfEmployed() {
                 </p>
               </div>
             </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
             {/* Expenses Section */}
             <div className="glass-light rounded-2xl p-8 mb-8">

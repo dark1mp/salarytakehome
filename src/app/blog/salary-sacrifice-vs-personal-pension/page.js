@@ -104,6 +104,8 @@ export default function SalarySacrificeVsPersonalPension() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* How Each Method Works */}
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">How Each Method Works</h2>
@@ -214,6 +216,8 @@ export default function SalarySacrificeVsPersonalPension() {
               </p>
             </div>
           </div>
+
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
           {/* April 2029 Changes */}
           <div className="glass-light rounded-2xl p-8 mb-8">

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from 'react';
 
-export default function AdUnit({ className = "", slot = "7756198179", hideOnMobile = false, showScrollHint = false }) {
+export default function AdUnit({ className = "", slot = "7756198179", hideOnMobile = false, showScrollHint = false, layout, format }) {
   const adRef = useRef(null);
   const containerRef = useRef(null);
   const pushed = useRef(false);
@@ -61,11 +61,12 @@ export default function AdUnit({ className = "", slot = "7756198179", hideOnMobi
       )}
       <ins className="adsbygoogle"
         ref={adRef}
-        style={{ display: 'block' }}
+        style={{ display: 'block', textAlign: layout === 'in-article' ? 'center' : undefined }}
         data-ad-client="ca-pub-3447670244921264"
         data-ad-slot={slot}
-        data-ad-format="auto"
-        data-full-width-responsive="true"
+        {...(layout ? { 'data-ad-layout': layout } : {})}
+        data-ad-format={format || 'auto'}
+        {...(!layout ? { 'data-full-width-responsive': 'true' } : {})}
       />
     </div>
   );

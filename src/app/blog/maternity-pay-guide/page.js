@@ -143,6 +143,8 @@ export default function MaternityPayGuide() {
               </div>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* SMP at Different Salary Levels */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">SMP at Different Salary Levels</h2>
@@ -261,6 +263,8 @@ export default function MaternityPayGuide() {
                 One important distinction: Maternity Allowance is <strong>not taxable</strong>, whereas SMP is. This can make MA slightly more favourable for some lower earners in practice. For full details on eligibility and how to claim, visit <a href="https://www.gov.uk/maternity-allowance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Maternity Allowance</a>.
               </p>
             </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
             {/* Shared Parental Leave */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">

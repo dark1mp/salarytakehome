@@ -116,6 +116,8 @@ export default function CashISALimit2027() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Why Is This Happening? */}
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Is This Happening?</h2>
@@ -235,6 +237,8 @@ export default function CashISALimit2027() {
               The message is clear: if you want tax-free treatment under the new rules, they want you actually investing, not just finding creative ways to park cash with a different label on it.
             </p>
           </div>
+
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
           {/* What About the Current Tax Year? */}
           <div className="glass-light rounded-2xl p-8 mb-8">

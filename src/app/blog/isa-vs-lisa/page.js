@@ -101,6 +101,8 @@ export default function ISAvsLISA() {
               </div>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* Side-by-Side Comparison Table */}
             <div className="glass-light rounded-2xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Side-by-Side: Cash ISA vs Lifetime ISA</h2>
@@ -259,6 +261,8 @@ export default function ISAvsLISA() {
                 </p>
               </div>
             </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
             {/* First-Time Buyer Rules */}
             <div className="glass-light rounded-2xl p-8 mb-8">

@@ -105,6 +105,8 @@ export default function SalarySacrificeGuide() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Available Salary Sacrifice Schemes</h2>
             
@@ -259,6 +261,8 @@ export default function SalarySacrificeGuide() {
               </div>
             </div>
           </div>
+
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
           <div className="glass-medium rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Calculate Your Salary Sacrifice Savings</h2>

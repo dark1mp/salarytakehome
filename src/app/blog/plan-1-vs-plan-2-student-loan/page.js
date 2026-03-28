@@ -147,6 +147,8 @@ export default function Plan1VsPlan2StudentLoan() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Monthly Repayment Examples */}
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Monthly Repayment Examples</h2>
@@ -267,6 +269,8 @@ export default function Plan1VsPlan2StudentLoan() {
               <a href="https://www.gov.uk/student-finance/repaying-your-loan" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK&apos;s student loan repayment page</a>.
             </p>
           </div>
+
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
           {/* Should You Overpay? */}
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">

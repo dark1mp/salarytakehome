@@ -137,6 +137,8 @@ export default function Salary50k() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Tax Band Warning */}
           <div className="bg-amber-50 rounded-2xl p-8 mb-8 border border-amber-200">
             <h2 className="text-2xl font-bold text-amber-900 mb-4">Important: You&apos;re at the Higher Rate Threshold</h2>

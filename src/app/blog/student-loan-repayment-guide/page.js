@@ -111,6 +111,8 @@ export default function StudentLoanGuide() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Plan 1: Pre-2012 Students</h2>
             
@@ -229,6 +231,8 @@ export default function StudentLoanGuide() {
               </ul>
             </div>
           </div>
+
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Postgraduate Loans</h2>

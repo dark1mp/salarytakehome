@@ -252,6 +252,8 @@ export default function HowToCompareJobOffers() {
             </p>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Step 3 */}
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Step 3: Calculate the Total Package</h2>
@@ -355,6 +357,8 @@ export default function HowToCompareJobOffers() {
               </li>
             </ul>
           </div>
+
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
 
           {/* Real-World Example */}
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
