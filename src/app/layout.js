@@ -41,6 +41,9 @@ export const metadata = {
   },
   alternates: {
     canonical: "https://www.salarytakehome.co.uk",
+    types: {
+      'application/rss+xml': 'https://www.salarytakehome.co.uk/feed.xml',
+    },
   },
   other: {
     "msapplication-TileColor": "#1566a0",

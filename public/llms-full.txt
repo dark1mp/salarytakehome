@@ -153,9 +153,23 @@ Employer NI: 15% on earnings above £5,000 (secondary threshold).
 
 ### Regional Comparisons
 - Scottish tax vs English tax: band-by-band comparison showing who pays more at each salary level
+- PAYE vs self-employed tax: NI differences, expenses, payment dates, worked examples
+- Full-time vs part-time tax: how working hours affect tax bands, NI, and pro-rata benefits
+- Cash ISA vs Lifetime ISA: 25% bonus, withdrawal penalties, eligibility, and which to choose
 
 ### Savings
 - Cash ISA limit changes and contribution strategies
+
+### Calculator Support Guides (Topic Cluster Posts)
+- UK Minimum Wage 2025/26: hourly rates, take-home pay and rights at every age band
+- How to Compare Job Offers: salary, benefits and total compensation in the UK
+- Two Jobs Tax Explained: how PAYE works with multiple employers
+- Pro-Rata Salary Explained: part-time pay, holiday and pension calculations
+- SSP Changes 2026: removal of waiting days, lower earnings limit changes
+- Maternity Pay Guide: SMP eligibility, rates, Maternity Allowance and Shared Parental Leave
+- First-Time Buyer Mortgage Guide: deposits, government schemes, stamp duty relief
+- How to Pay Off Debt Faster: snowball vs avalanche strategies for UK debt repayment
+- Supermarket Pay Rises 2026: hourly rate comparison across Tesco, Aldi, Lidl, Sainsbury's, M&S, Morrisons
 
 ---
 

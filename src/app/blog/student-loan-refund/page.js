@@ -47,6 +47,7 @@ export default function StudentLoanRefund() {
             </time>
             <span className="text-gray-500 text-sm">16 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Are You Owed Money? The Student Loan Refund Thousands of UK Graduates Are Missing
@@ -81,7 +82,7 @@ export default function StudentLoanRefund() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Student Loan Overpayments Happen</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Student loan repayments in the UK work through the PAYE system. Your employer automatically deducts them from your salary, just like tax and National Insurance. It's meant to be simple and automatic.
+              Student loan repayments in the UK work through the PAYE system. Your employer automatically deducts them from your salary, just like tax and National Insurance. It's meant to be simple and automatic. (For a full overview of how repayments work across all plans, see our <Link href="/blog/student-loan-repayment-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">student loan repayment guide</Link>.)
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
               The problem is that your loan repayments are calculated based on your <em>annual</em> income, but they're collected based on your <em>monthly</em> earnings.
@@ -149,7 +150,7 @@ export default function StudentLoanRefund() {
 
             <h3 className="text-xl font-bold text-gray-900 mb-4 mt-6">3. You're on the Wrong Repayment Plan</h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              This is less common but still affects thousands of people. If your employer has you registered on the wrong loan plan, you could be repaying at the wrong rate or wrong threshold.
+              This is less common but still affects thousands of people. If your employer has you registered on the wrong loan plan, you could be repaying at the wrong rate or wrong threshold. The <Link href="/blog/plan-1-vs-plan-2-student-loan" className="text-blue-600 hover:text-blue-800 underline font-semibold">differences between Plan 1 and Plan 2</Link> are significant.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
               For example, if you started uni in 2015 and should be on Plan 2, but your employer mistakenly has you on Plan 1, you'll be repaying at a lower threshold than you should be. That means you're paying when you shouldn't.

@@ -42,6 +42,7 @@ export default function MaximizeTakeHomePay() {
             </time>
             <span className="text-gray-500 text-sm">12 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             10 Legal Ways to Maximize Your Take-Home Pay in 2024
@@ -86,7 +87,7 @@ export default function MaximizeTakeHomePay() {
             <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">How it works:</h3>
               <p className="text-gray-700 mb-4">
-                Pension contributions receive tax relief at your marginal rate. For every £100 you contribute, the government adds £20 (basic rate), £40 (higher rate), or £45 (additional rate).
+                <Link href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">Pension contributions</Link> receive tax relief at your marginal rate. For every £100 you contribute, the government adds £20 (basic rate), £40 (higher rate), or £45 (additional rate).
               </p>
               
               <div className="grid md:grid-cols-3 gap-4 mb-4">
@@ -114,8 +115,8 @@ export default function MaximizeTakeHomePay() {
           </div>
 
           <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Salary Sacrifice Schemes (Save £500-£2,000/year)</h2>
-            
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">2. <Link href="/blog/salary-sacrifice-complete-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">Salary Sacrifice Schemes</Link> (Save £500-£2,000/year)</h2>
+
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Pension Salary Sacrifice</h3>
@@ -168,7 +169,7 @@ export default function MaximizeTakeHomePay() {
                   <h4 className="font-semibold text-gray-900 mb-2">Eligibility:</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>• Working parents with children under 12</li>
-                    <li>• Each parent earning £100-£100,000 per year</li>
+                    <li>• Each parent earning £100-£100,000 per year (beware <Link href="/blog/100k-tax-trap" className="text-blue-600 hover:text-blue-800 underline font-semibold">the £100k tax trap</Link>)</li>
                     <li>• Not claiming Universal Credit</li>
                   </ul>
                 </div>

@@ -56,8 +56,10 @@ src/app/
 ├── mortgages/
 ├── debts/
 ├── blog/                        # Blog listing + individual posts
-│   ├── page.js                  # Blog index
+│   ├── posts.js                 # Shared blog post data (single source of truth)
+│   ├── page.js                  # Blog index (imports from posts.js)
 │   └── [slug]/page.js           # Individual blog posts
+├── feed.xml/route.js            # RSS feed (imports from posts.js)
 ├── about/
 ├── contact/
 ├── faq/
@@ -111,7 +113,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 
 ## Blog
 
-28 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay). Every calculator now has at least one dedicated blog post linking back to it.
+31 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes 6 "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension, ISA vs LISA, PAYE vs self-employed, full-time vs part-time tax) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay). Every calculator now has at least one dedicated blog post linking back to it.
 
 ### Topic Cluster Blog Posts (March 2026)
 
@@ -133,13 +135,15 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 1. Create `src/app/blog/[slug]/page.js`
 2. Wrap content in `<LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Post Title" }]} narrow>` — this provides sidebar, footer, breadcrumbs, and narrow layout for side rail ads
 3. Add `import AdUnit from "../../components/AdUnit";` and place `<AdUnit slot="1586479879" hideOnMobile />` above the h1
-4. Add the post to the blog index in `src/app/blog/page.js`
-5. Add the URL to `src/app/sitemap.js` (update blog lastModified date too)
-6. Cross-link to relevant calculators (hourly-wage, take-home-pay-calculator, pay-rise)
-7. Add external links to official sources (.gov.uk, HMRC, SLC etc.) for E-E-A-T credibility
-8. Include structured data: Article schema + FAQPage (if applicable). BreadcrumbList schema is handled by the Breadcrumbs component automatically.
-9. Add RelatedArticles component at the bottom
-10. After deploy, IndexNow submission happens automatically via postbuild script
+4. Add the "Last updated" badge below the category/date/readtime row: `<p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>`
+5. **Add the post to `src/app/blog/posts.js`** — this is the single source of truth. The blog index, RSS feed (`/feed.xml`), and sitemap (`/sitemap.js`) all import from this file automatically. Fields: slug, title, description, date, readTime, category, featured, priority.
+6. **Update `public/llms.txt` and `public/llms-full.txt`** — these are the only manual files that still need separate updates (they use markdown format for AI crawlers).
+7. Cross-link to relevant calculators (hourly-wage, take-home-pay-calculator, pay-rise)
+8. Cross-link to related blog posts within body text (not just RelatedArticles) for topical authority
+9. Add external links to official sources (.gov.uk, HMRC, SLC etc.) for E-E-A-T credibility
+10. Include structured data: Article schema + FAQPage (if applicable) with `dateModified`. BreadcrumbList schema is handled by the Breadcrumbs component automatically.
+11. Add RelatedArticles component at the bottom
+12. After deploy, IndexNow submission happens automatically via postbuild script
 
 ## SEO Checklist
 
@@ -196,7 +200,7 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver watching `data-ad-status` (set by AdSense to `"filled"` or `"unfilled"`). If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it. Don't use `offsetHeight` to detect ad fill — it gives false positives.
 - **AdUnit mobile scroll hint** — when an ad fills on mobile (`lg:hidden`), a "↓ Scroll down to see results" message appears above the ad so users know results are below.
 - **`hideOnMobile` breakpoint is `md` (768px)** — `hideOnMobile` applies `hidden md:block`, so ads show on iPad portrait (768px) and above. This was changed from `lg` (1024px) in March 2026 to capture iPad impressions. Sidebar ads are unaffected because their parent container uses `hidden xl:block`.
-- **Manual ad placements** — All 10 calculator pages have: (1) a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1 (visible on iPad+), and (2) two stacked sticky right sidebar ads (`<AdUnit slot="4603525459" hideOnMobile />` + `<AdUnit slot="9534353704" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. All blog pages (index + 28 posts) have a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, plus auto ads.
+- **Manual ad placements** — All 10 calculator pages have: (1) a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1 (visible on iPad+), and (2) two stacked sticky right sidebar ads (`<AdUnit slot="4603525459" hideOnMobile />` + `<AdUnit slot="9534353704" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. All blog pages (index + 31 posts) have a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1, plus auto ads.
 - **Sidebar ads stay at xl+ (1280px)** — We deliberately chose not to show sidebar ads on iPad landscape (1024px) because with the 230px nav sidebar + 192px ad column, only ~602px remains for content. Auto ads handle iPad instead.
 - **Sidebar ad positioning** — The sidebar ad uses `absolute right-8 top-8 w-[160px]` with `sticky top-8` inside. The content div uses `xl:pr-[192px]` to reserve space so cards don't overlap. The outer container uses `relative` (not `flex`). Card scaling (`lg:scale-[0.92]`) extends to `2xl` to fit on 13" MacBook screens (1440px).
 - **Calculator pages use `fullWidth`** — Calculator pages pass `fullWidth` to LayoutWrapper, which removes the `2xl:max-w` constraint since they have their own manual sidebar ad. They also don't use `max-w-[1400px]` or `max-w-6xl` on inner containers.
@@ -213,16 +217,17 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - **Minimum 4 educational cards per calculator** — Every calculator page should have at least 4 educational content cards plus the FAQ card. This was standardised in March 2026 to match the depth that made `/pay-rise` the top Bing performer.
 - **Force light color-scheme** — `globals.css` sets `color-scheme: light only` on `html`, and `layout.js` has a `<meta name="color-scheme" content="light only">` tag. Tailwind CSS v4's preflight defaults to `color-scheme: light dark`, which lets browsers apply dark mode overrides. Don't remove these unless dark mode support is added.
 - **Tailwind v4 oklab browser fallbacks** — `globals.css` contains `@supports not` blocks that fix Tailwind CSS v4's use of `oklab` color space. Tailwind v4 outputs `--tw-gradient-position: to <dir> in oklab` and `oklab()` color functions which older browsers can't parse, causing gradients to disappear entirely (invisible sidebar, blank card icons, missing calculator elements). The fallbacks override `--tw-gradient-position` for all 8 directions to strip `in oklab`, and force white text in the sidebar for very old browsers. Affected browsers: Safari < 16.2, Firefox < 127, Chrome/Edge < 111. Don't remove these fallbacks — they're critical for cross-browser compatibility.
+- **Blog post data is centralised in `src/app/blog/posts.js`** — This is the single source of truth for all blog post metadata (slug, title, description, date, readTime, category, featured, priority). The blog index (`page.js`), RSS feed (`feed.xml/route.js`), and sitemap (`sitemap.js`) all import from this file. When adding a new post, add it to `posts.js` and it will automatically appear in all three. The only files that still need manual updates are `public/llms.txt` and `public/llms-full.txt` (different markdown format for AI crawlers).
+- **RSS feed** — Available at `/feed.xml` via a Next.js route handler. Auto-discovers via `<link rel="alternate" type="application/rss+xml">` in the root layout. The feed imports from `posts.js` so it stays in sync automatically.
+- **"Last updated" badge on blog posts** — All blog posts show a green badge below the category/date/readtime row: "Last updated: March 2026 · Reflects 2025/26 tax year". Update the text when tax data changes. Badge uses `text-green-700 bg-green-50 border-green-200 rounded-full`.
+- **Blog post cross-links** — Blog posts link to each other within body text (not just via RelatedArticles at the bottom). This builds topical authority. When adding new posts, add 2-3 inline links to related existing posts, and update existing posts to link back.
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
 - Tax data is duplicated across calculator files (could be centralised)
-- No RSS feed
 - No hreflang tags (should add `en-gb`)
 - No table of contents on long blog posts
-- More "vs" comparison content opportunities (e.g. PAYE vs self-employed, full-time vs part-time tax)
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
 - Blog pages only have a top ad unit — could add in-content or sidebar ads for better ad revenue
 - `/pay-rise` and `/take-home-pay-calculator` have two ad units (top + in-content) — other calculators only have the top ad unit and could benefit from an in-content one too
 - Educational content depth varies — `/pay-rise` has ~3,500 words of educational content; other calculators now have ~2,500-3,000 words after adding cards in March 2026, but could still be expanded further to match pay-rise's depth
-- `llms.txt` and `llms-full.txt` need updating to reflect the 8 new blog posts added in March 2026

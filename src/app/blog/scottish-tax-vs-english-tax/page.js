@@ -47,6 +47,7 @@ export default function ScottishTaxVsEnglishTax() {
               </time>
               <span className="text-gray-500 text-sm">12 min read</span>
             </div>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?
@@ -233,7 +234,7 @@ export default function ScottishTaxVsEnglishTax() {
                     </span>
                   </div>
                   <p className="text-gray-600 text-sm">
-                    The 60% effective marginal rate trap (&pound;100k&ndash;&pound;125,140) applies equally in both systems, narrowing the gap slightly.
+                    The 60% effective marginal rate from <Link href="/blog/100k-tax-trap" className="text-blue-600 hover:text-blue-800 underline font-semibold">the &pound;100k tax trap</Link> (&pound;100k&ndash;&pound;125,140) applies equally in both systems, narrowing the gap slightly.
                   </p>
                 </div>
 
@@ -273,7 +274,7 @@ export default function ScottishTaxVsEnglishTax() {
                 </div>
                 <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
                   <h3 className="font-semibold text-gray-800 mb-2">Pension Tax Relief</h3>
-                  <p className="text-gray-600 text-sm">Relief at your marginal rate. Scottish taxpayers at 21% get 21% relief; at 42% they get 42% relief.</p>
+                  <p className="text-gray-600 text-sm">Relief at your marginal rate. Scottish taxpayers at 21% get 21% relief; at 42% they get 42% relief. See our guide to <Link href="/blog/salary-sacrifice-vs-personal-pension" className="text-blue-600 hover:text-blue-800 underline font-semibold">salary sacrifice vs personal pension</Link> for the most tax-efficient way to contribute.</p>
                 </div>
               </div>
             </div>

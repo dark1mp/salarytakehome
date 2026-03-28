@@ -41,6 +41,7 @@ export default function PensionContributionsGuide() {
             </time>
             <span className="text-gray-500 text-sm">11 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Pension Contributions and Tax Relief: Maximize Your Retirement Savings
@@ -258,10 +259,12 @@ export default function PensionContributionsGuide() {
 
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Salary Sacrifice vs Personal Contributions</h2>
-            
+            <p className="text-gray-700 mb-4">
+              Choosing between these two methods matters for your bottom line. For a detailed breakdown of costs at different salary levels, see our <Link href="/blog/salary-sacrifice-vs-personal-pension" className="text-blue-600 hover:text-blue-800 underline font-semibold">salary sacrifice vs personal pension comparison</Link>.
+            </p>
             <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Salary Sacrifice</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3"><Link href="/blog/salary-sacrifice-complete-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">Salary Sacrifice</Link></h3>
                 <div className="bg-green-50 rounded-lg p-4 border border-green-200">
                   <h4 className="font-semibold text-green-800 mb-2">Advantages:</h4>
                   <ul className="text-green-700 text-sm space-y-1">

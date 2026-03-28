@@ -47,6 +47,7 @@ export default function SalarySacrificeVsPersonalPension() {
             </time>
             <span className="text-gray-500 text-sm">12 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2025/26?
@@ -63,10 +64,10 @@ export default function SalarySacrificeVsPersonalPension() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Two Routes to the Same Goal</h2>
             <p className="text-gray-700 mb-4">
-              There are two main ways to contribute to a <a href="https://www.gov.uk/workplace-pensions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">workplace</a> or private pension in the UK: <strong>salary sacrifice</strong> and <strong>personal pension contributions</strong> (also known as relief at source).
+              There are two main ways to contribute to a <a href="https://www.gov.uk/workplace-pensions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">workplace</a> or private pension in the UK: <strong><Link href="/blog/salary-sacrifice-complete-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">salary sacrifice</Link></strong> and <strong>personal pension contributions</strong> (also known as relief at source).
             </p>
             <p className="text-gray-700 mb-4">
-              With salary sacrifice, your employer deducts the contribution from your gross salary before calculating tax and National Insurance. With a personal pension, you pay from your net (after-tax) pay and your pension provider claims <a href="https://www.gov.uk/tax-on-your-private-pension/pension-tax-relief" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">tax relief</a> back from HMRC on your behalf.
+              With salary sacrifice, your employer deducts the contribution from your gross salary before calculating tax and National Insurance. With a personal pension, you pay from your net (after-tax) pay and your pension provider claims <Link href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">tax relief</Link> back from HMRC on your behalf.
             </p>
             <p className="text-gray-700">
               The end goal is the same &mdash; money goes into your pension pot with tax relief. But the tax treatment is different, and that difference can put hundreds of pounds more into your pocket each year.

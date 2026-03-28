@@ -47,6 +47,7 @@ export default function TwoJobsTaxExplained() {
               </time>
               <span className="text-gray-500 text-sm">12 min read</span>
             </div>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Two Jobs Tax Explained: How PAYE Works With Multiple Employers in the UK
@@ -91,7 +92,7 @@ export default function TwoJobsTaxExplained() {
                 During the year, PAYE deductions on each payslip are estimates. Your primary employer uses tax code 1257L (which includes your personal allowance), while your second employer typically uses a BR code (basic rate, 20% on everything). This means you may temporarily overpay or underpay tax month to month, but HMRC corrects the total after the tax year ends.
               </p>
               <p className="text-gray-700">
-                See the current income tax rates on <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK</a>.
+                See the current income tax rates on <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK</a>, or read our <Link href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK tax changes 2025/26 guide</Link> for a full summary of this year&apos;s rates and thresholds.
               </p>
             </div>
 

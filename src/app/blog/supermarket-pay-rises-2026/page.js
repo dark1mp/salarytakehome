@@ -47,6 +47,7 @@ export default function SupermarketPayRises2026() {
             </time>
             <span className="text-gray-500 text-sm">8 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Supermarket Pay Rises 2026: How Tesco, Aldi, M&amp;S, Lidl, Sainsbury&apos;s &amp; Morrisons Compare
@@ -273,7 +274,7 @@ export default function SupermarketPayRises2026() {
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">The National Living Wage in 2026</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              From 1 April 2026, the National Living Wage rises by <strong>4.1%</strong> to <strong>£12.71 per hour</strong> for workers aged 21 and over, up from £12.21. This is the legal minimum that employers must pay.
+              From 1 April 2026, the National Living Wage rises by <strong>4.1%</strong> to <strong>£12.71 per hour</strong> for workers aged 21 and over, up from £12.21. This is the legal minimum that employers must pay. For a full breakdown of all UK minimum wage bands by age group, see our <Link href="/blog/uk-minimum-wage-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK minimum wage 2025/26 guide</Link>.
             </p>
             <div className="grid lg:grid-cols-2 gap-4 mb-4">
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">

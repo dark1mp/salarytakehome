@@ -47,6 +47,7 @@ export default function Salary40k() {
             </time>
             <span className="text-gray-500 text-sm">5 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             £40,000 Salary Take-Home Pay in 2025/26

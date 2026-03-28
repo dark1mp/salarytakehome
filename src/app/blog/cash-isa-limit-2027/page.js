@@ -47,6 +47,7 @@ export default function CashISALimit2027() {
             </time>
             <span className="text-gray-500 text-sm">18 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             The £12,000 Cash ISA Limit: What You Need to Know Before April 2027
@@ -400,6 +401,7 @@ export default function CashISALimit2027() {
                 <li>• Stocks and shares ISAs (investment risk)</li>
                 <li>• Innovative finance ISAs (peer-to-peer lending, higher risk)</li>
                 <li>• Regular taxable savings accounts (interest taxed at 22%, 42%, or 47% above your personal savings allowance)</li>
+                <li>• <Link href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">Pension contributions</Link> (tax relief at your marginal rate, but locked until age 57+)</li>
               </ul>
             </div>
             <p className="text-gray-700 mb-4 leading-relaxed">

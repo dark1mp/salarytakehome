@@ -41,6 +41,7 @@ export default function SalarySacrificeGuide() {
             </time>
             <span className="text-gray-500 text-sm">15 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Salary Sacrifice: Complete Guide to Tax-Free Benefits
@@ -54,7 +55,7 @@ export default function SalarySacrificeGuide() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💡 What is Salary Sacrifice?</h2>
             <p className="text-lg text-gray-700 mb-4">
-              Salary sacrifice is a tax-efficient way to receive benefits by giving up part of your salary in exchange for non-cash benefits. This reduces both your income tax and National Insurance contributions.
+              Salary sacrifice is a tax-efficient way to receive benefits by giving up part of your salary in exchange for non-cash benefits. This reduces both your income tax and National Insurance contributions. If you&apos;re specifically deciding between salary sacrifice and a personal pension, see our <Link href="/blog/salary-sacrifice-vs-personal-pension" className="text-blue-600 hover:text-blue-800 underline font-semibold">salary sacrifice vs personal pension comparison</Link>.
             </p>
             <div className="bg-green-50 rounded-xl p-6 border border-green-200">
               <h3 className="font-semibold text-green-800 mb-3">Key Benefits:</h3>
@@ -111,7 +112,7 @@ export default function SalarySacrificeGuide() {
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">1. Pension Contributions</h3>
                 <p className="text-gray-700 mb-3">
-                  The most common and valuable salary sacrifice scheme. Your employer reduces your salary and pays the difference into your pension.
+                  The most common and valuable salary sacrifice scheme. Your employer reduces your salary and pays the difference into your pension. For full details on allowances and relief rates, see our <Link href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">pension contributions and tax relief guide</Link>.
                 </p>
                 <div className="grid lg:grid-cols-2 gap-4">
                   <div className="bg-blue-50 rounded-lg p-3">
@@ -232,6 +233,7 @@ export default function SalarySacrificeGuide() {
                   <li>• May impact other benefits based on salary</li>
                   <li>• Some schemes have minimum contract periods</li>
                   <li>• Not all employers offer these schemes</li>
+                  <li>• <Link href="/blog/salary-sacrifice-changes-2029" className="text-blue-600 hover:text-blue-800 underline font-semibold">From April 2029</Link>, NI savings on pension salary sacrifice will be capped at &pound;2,000/year</li>
                 </ul>
               </div>
 

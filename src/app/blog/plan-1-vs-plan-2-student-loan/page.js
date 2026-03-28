@@ -47,6 +47,7 @@ export default function Plan1VsPlan2StudentLoan() {
             </time>
             <span className="text-gray-500 text-sm">10 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2025/26
@@ -86,7 +87,7 @@ export default function Plan1VsPlan2StudentLoan() {
               Your student loan plan determines how much you repay each month and what interest you&apos;re charged. The two most common plans in England and Wales are <strong>Plan 1</strong> (for those who started university before September 2012) and <strong>Plan 2</strong> (for those who started between September 2012 and July 2023).
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Both plans take 9% of your income above a set threshold, but the thresholds, interest rates, and write-off periods are very different. These differences can mean thousands of pounds more or less in total repayments over your working life. For the latest official guidance, see{" "}
+              Both plans take 9% of your income above a set threshold, but the thresholds, interest rates, and write-off periods are very different. These differences can mean thousands of pounds more or less in total repayments over your working life. For a broader overview of all plans, see our <Link href="/blog/student-loan-repayment-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">student loan repayment guide</Link>, or check the latest official guidance on{" "}
               <a href="https://www.gov.uk/repaying-your-student-loan" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK</a>.
             </p>
           </div>

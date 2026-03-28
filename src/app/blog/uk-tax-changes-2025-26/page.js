@@ -47,6 +47,7 @@ export default function UKTaxChanges2025() {
             </time>
             <span className="text-gray-500 text-sm">8 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             UK Tax Changes 2025/26: What You Need to Know
@@ -121,7 +122,7 @@ export default function UKTaxChanges2025() {
 
             <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
               <p className="text-sm text-blue-800">
-                <strong>Note:</strong> The personal allowance reduces by £1 for every £2 earned over £100,000, resulting in an effective 60% marginal tax rate between £100,000 and £125,140.
+                <strong>Note:</strong> The personal allowance reduces by £1 for every £2 earned over £100,000, resulting in an effective 60% marginal tax rate between £100,000 and £125,140. Learn more about <Link href="/blog/100k-tax-trap" className="text-blue-600 hover:text-blue-800 underline font-semibold">the £100k tax trap</Link> and how to avoid it.
               </p>
             </div>
           </div>
@@ -395,7 +396,7 @@ export default function UKTaxChanges2025() {
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Are Scottish tax rates different?</h3>
                 <p className="text-gray-600">
-                  Yes, Scotland has different income tax rates and bands. Scottish taxpayers should check the Scottish government website for specific rates.
+                  Yes, Scotland has different income tax rates and bands with 6 bands ranging from 19% to 48%. See our full <Link href="/blog/scottish-tax-vs-english-tax" className="text-blue-600 hover:text-blue-800 underline font-semibold">Scottish tax vs English tax comparison</Link> for a detailed breakdown.
                 </p>
               </div>
             </div>

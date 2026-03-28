@@ -47,6 +47,7 @@ export default function TaxTrap100k() {
             </time>
             <span className="text-gray-500 text-sm">20 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             The £100k Tax Trap: Britain's Hidden 60% Tax Rate That's Punishing Middle-Class Professionals
@@ -277,7 +278,7 @@ export default function TaxTrap100k() {
 
             <h3 className="text-xl font-bold text-gray-900 mb-4 mt-6">Pension Contributions: The Nuclear Option</h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              This is the big one. Pension contributions reduce your "adjusted net income"—the figure HMRC uses to calculate whether you're over the £100k threshold.
+              This is the big one. <Link href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">Pension contributions</Link> reduce your "adjusted net income"—the figure HMRC uses to calculate whether you're over the £100k threshold.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
               Say you earn £110,000 and want to get back below the line. You'd need to contribute £10,000 to your pension. Here's why this works:
@@ -305,7 +306,7 @@ export default function TaxTrap100k() {
 
             <h3 className="text-xl font-bold text-gray-900 mb-4 mt-8">Salary Sacrifice Schemes</h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Many employers offer salary sacrifice, where you give up part of your salary in exchange for non-cash benefits. Common options include:
+              Many employers offer <Link href="/blog/salary-sacrifice-complete-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">salary sacrifice</Link>, where you give up part of your salary in exchange for non-cash benefits. Common options include:
             </p>
             <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
               <ul className="text-gray-700 space-y-2 text-sm">

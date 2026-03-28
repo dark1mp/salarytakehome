@@ -42,6 +42,7 @@ export default function StudentLoanGuide() {
             </time>
             <span className="text-gray-500 text-sm">10 min read</span>
           </div>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Student Loan Repayment Calculator Guide: Plans 1, 2 & 5 Explained
@@ -56,7 +57,7 @@ export default function StudentLoanGuide() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Quick Overview</h2>
             <p className="text-lg text-gray-700 mb-4">
-              Student loans in the UK work differently from other debts. You only repay when you earn above a certain threshold, and the debt is written off after a set period.
+              Student loans in the UK work differently from other debts. You only repay when you earn above a certain threshold, and the debt is written off after a set period. Not sure which plan you&apos;re on? See our <Link href="/blog/plan-1-vs-plan-2-student-loan" className="text-blue-600 hover:text-blue-800 underline font-semibold">Plan 1 vs Plan 2 comparison</Link>.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
@@ -284,6 +285,12 @@ export default function StudentLoanGuide() {
                     </ul>
                   </div>
                 </div>
+              </div>
+
+              <div className="bg-amber-50 rounded-xl p-6 border border-amber-200 mb-4">
+                <p className="text-amber-700 text-sm">
+                  <strong>Already overpaid?</strong> If you&apos;ve continued making repayments after your loan was cleared, you may be owed a refund. Check our <Link href="/blog/student-loan-refund" className="text-blue-600 hover:text-blue-800 underline font-semibold">student loan refund guide</Link> to find out how to claim back what you&apos;re owed.
+                </p>
               </div>
 
               <div className="bg-green-50 rounded-xl p-6 border border-green-200">
