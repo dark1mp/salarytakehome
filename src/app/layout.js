@@ -134,27 +134,6 @@ export default function RootLayout({ children }) {
                 "@type": "Organization",
                 "name": "SalaryTakeHome.co.uk",
                 "url": "https://www.salarytakehome.co.uk"
-              },
-              "mainEntity": {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "How do I calculate my UK take-home pay?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Use our free UK tax calculator to input your salary, tax code, pension contributions, and other details to get your accurate take-home pay calculation."
-                    }
-                  },
-                  {
-                    "@type": "Question", 
-                    "name": "What tax rates apply in the UK for 2025/26?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "UK tax rates for 2025/26: 0% on first £12,570 (Personal Allowance), 20% on £12,571-£50,270, 40% on £50,271-£125,140, and 45% above £125,140."
-                    }
-                  }
-                ]
               }
             })
           }}
