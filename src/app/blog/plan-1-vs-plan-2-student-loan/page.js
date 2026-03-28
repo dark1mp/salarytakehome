@@ -338,6 +338,8 @@ export default function Plan1VsPlan2StudentLoan() {
             </p>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Dual Plans */}
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">What If I Have Both Plan 1 and Plan 2?</h2>

@@ -444,6 +444,8 @@ export default function PayRiseNegotiationGuide() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Key Takeaways */}
           <div className="glass-medium rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Takeaways</h2>

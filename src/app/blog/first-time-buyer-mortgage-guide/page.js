@@ -421,6 +421,8 @@ export default function FirstTimeBuyerMortgageGuide() {
               </p>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* CTA */}
             <div className="bg-gradient-to-r from-emerald-600 to-green-600 rounded-2xl p-8 mb-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-3">Calculate Your Mortgage Repayments</h2>

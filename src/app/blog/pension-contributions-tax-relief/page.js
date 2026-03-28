@@ -350,6 +350,8 @@ export default function PensionContributionsGuide() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           <div className="glass-medium rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Calculate Your Pension Tax Relief</h2>
             <p className="text-gray-600 mb-6">

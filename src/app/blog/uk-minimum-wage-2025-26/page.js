@@ -384,6 +384,8 @@ export default function UKMinimumWage202526() {
               </p>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* Your Rights as a Minimum Wage Worker */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Your Rights as a Minimum Wage Worker</h2>

@@ -275,6 +275,8 @@ export default function SalarySacrificeVsPersonalPension() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Which Should You Choose? */}
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Which Should You Choose?</h2>

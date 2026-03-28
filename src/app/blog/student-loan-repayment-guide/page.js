@@ -312,6 +312,8 @@ export default function StudentLoanGuide() {
             </div>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">How to Check Your Student Loan Balance</h2>
             

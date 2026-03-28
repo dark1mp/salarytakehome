@@ -512,6 +512,8 @@ export default function PAYEVsSelfEmployed() {
               </div>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* CTA Box */}
             <div className="glass-medium rounded-2xl p-8 text-center mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Calculate Your Take-Home Pay</h2>

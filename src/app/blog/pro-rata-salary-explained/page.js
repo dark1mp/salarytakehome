@@ -346,6 +346,8 @@ export default function ProRataSalaryExplained() {
             </p>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* Term-Time Only Contracts */}
           <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Term-Time Only Contracts</h2>

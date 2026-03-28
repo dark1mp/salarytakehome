@@ -390,6 +390,8 @@ export default function HowToPayOffDebtFaster() {
               </div>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* CTA */}
             <div className="bg-gradient-to-r from-red-600 to-rose-600 rounded-2xl p-8 text-center text-white">
               <h2 className="text-2xl font-bold text-white mb-4">Calculate Your Debt Repayment Plan</h2>

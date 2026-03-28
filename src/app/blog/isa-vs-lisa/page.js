@@ -430,6 +430,8 @@ export default function ISAvsLISA() {
               </div>
             </div>
 
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
             {/* CTA Box */}
             <div className="glass-light rounded-2xl p-8 mb-8 bg-gradient-to-br from-blue-50 to-indigo-50">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">See How Much You Could Save</h2>

@@ -437,6 +437,8 @@ export default function HowToCompareJobOffers() {
             </p>
           </div>
 
+          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
           {/* CTA */}
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 mb-8 text-white text-center shadow-lg">
             <h2 className="text-2xl font-bold mb-3">Compare Your Salary Offers</h2>
