@@ -55,6 +55,7 @@ src/app/
 ├── maternity-sick-pay/
 ├── mortgages/
 ├── debts/
+├── tax-code/                    # Tax code decoder/checker (not a calculator — no tax data)
 ├── blog/                        # Blog listing + individual posts
 │   ├── posts.js                 # Shared blog post data (single source of truth)
 │   ├── page.js                  # Blog index (imports from posts.js)
@@ -79,9 +80,9 @@ public/
 └── opengraph-image.png
 ```
 
-## Calculators (10 total)
+## Calculators & Tools (11 total)
 
-| Calculator | Route | Description |
+| Calculator/Tool | Route | Description |
 |---|---|---|
 | Take Home Pay | `/take-home-pay-calculator` | Main calculator — highest traffic page |
 | Pay Rise | `/pay-rise` | Before/after pay rise comparison |
@@ -93,6 +94,7 @@ public/
 | Maternity Pay | `/maternity-sick-pay` | Statutory Maternity Pay (SMP) |
 | Mortgages | `/mortgages` | Mortgage repayment calculator |
 | Debts | `/debts` | Debt repayment calculator |
+| Tax Code Checker | `/tax-code` | Decode UK tax codes — shows allowance, region, letter meaning, warnings |
 
 All calculators support:
 - Multiple tax years (2025/26, 2024/25, 2023/24, 2022/23, 2021/22)
@@ -149,7 +151,7 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 ## SEO Checklist
 
 - Every page needs: title, description, canonical URL, Open Graph tags, Twitter card
-- Structured data: WebApplication (all 10 calculators), Article (blog posts), FAQPage (all 10 calculators — 7 questions each)
+- Structured data: WebApplication (all 10 calculators + tax code checker), Article (blog posts), FAQPage (all 10 calculators + tax code checker — 7 questions each)
 - Sitemap: dynamic at `/sitemap.js` — must be updated when adding/removing pages
 - Robots.txt: blocks `/api/`, `/_next/`, `/admin/`
 - IndexNow: auto-submits all sitemap URLs post-build to Bing, Yandex, Seznam, Naver. Can also be triggered manually: `node scripts/submit-indexnow.mjs`
@@ -222,6 +224,8 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - **RSS feed** — Available at `/feed.xml` via a Next.js route handler. Auto-discovers via `<link rel="alternate" type="application/rss+xml">` in the root layout. The feed imports from `posts.js` so it stays in sync automatically.
 - **"Last updated" badge on blog posts** — All blog posts show a green badge below the category/date/readtime row: "Last updated: March 2026 · Reflects 2025/26 tax year". Update the text when tax data changes. Badge uses `text-green-700 bg-green-50 border-green-200 rounded-full`.
 - **Blog post cross-links** — Blog posts link to each other within body text (not just via RelatedArticles at the bottom). This builds topical authority. When adding new posts, add 2-3 inline links to related existing posts, and update existing posts to link back.
+- **Tax Code Checker is a tool, not a calculator** — `/tax-code` decodes tax codes into plain English but does not perform tax calculations. It has no tax data constants (TAX_BANDS, NI_BANDS, etc.) and no calculation logic. It uses the same page layout as calculators (fullWidth LayoutWrapper, sidebar ads, educational cards, FAQ schema) but is listed separately in the calculators table as a "Tool". It has an in-content ad (`<AdUnit showScrollHint />`) after the input card, same as pay-rise.
+- **Tax Code Checker has no dedicated blog post yet** — A supporting blog post (e.g. "UK Tax Codes Explained") would complete the topic cluster pattern. The Related Reading section currently links to existing posts (understanding-uk-tax-code, scottish-tax-vs-english-tax, maximize-take-home-pay).
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
@@ -231,3 +235,4 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
 - `/pay-rise` and `/take-home-pay-calculator` have two ad units (top + in-content) — other calculators only have the top ad unit and could benefit from an in-content one too
 - Educational content depth varies — `/pay-rise` has ~3,500 words of educational content; other calculators now have ~2,500-3,000 words after adding cards in March 2026, but could still be expanded further to match pay-rise's depth
+- `/tax-code` has no dedicated supporting blog post yet — needs a "UK Tax Codes Explained" post to complete the topic cluster
