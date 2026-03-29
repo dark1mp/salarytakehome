@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, HelpCircle, ExternalLink, Menu, X, Shield, HeartPulse, TrendingUp, Mail } from 'lucide-react';
+import { Home, Clock, Heart, Briefcase, Calculator, Scale, FileText, DollarSign, HelpCircle, ExternalLink, Menu, X, Shield, HeartPulse, TrendingUp, Mail, Search } from 'lucide-react';
 
 const menuItems = [
   { href: '/take-home-pay-calculator', label: 'TAKE HOME PAY', icon: Home },
@@ -16,6 +16,7 @@ const menuItems = [
   { href: '/compare-salaries', label: 'COMPARE TWO SALARIES', icon: Scale },
   { href: '/mortgages', label: 'MORTGAGES', icon: DollarSign },
   { href: '/debts', label: 'DEBT REPAYMENT', icon: FileText },
+  { href: '/tax-code', label: 'TAX CODE CHECKER', icon: Search },
   { href: '/blog', label: 'BLOG', icon: FileText },
   { href: '/about', label: 'ABOUT', icon: HelpCircle },
   { href: '/contact', label: 'CONTACT', icon: Mail },

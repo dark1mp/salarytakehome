@@ -74,6 +74,11 @@ URL: https://www.salarytakehome.co.uk/debts
 
 Plan debt repayment using avalanche (highest interest first) or snowball (smallest balance first) methods. See total interest paid and time to become debt-free.
 
+### Tax Code Checker
+URL: https://www.salarytakehome.co.uk/tax-code
+
+Enter your UK tax code to decode what it means. Covers all tax code types: standard numeric codes (1257L), Scottish (S prefix), Welsh (C prefix), special codes (BR, D0, D1, NT, 0T), K codes (negative allowance), and emergency codes (W1/M1/X suffix). Shows your Personal Allowance, applicable tax bands, and common reasons for your code.
+
 ---
 
 ## UK Tax Rates 2025/26 (England, Wales, Northern Ireland)

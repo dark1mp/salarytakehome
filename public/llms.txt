@@ -18,6 +18,7 @@ SalaryTakeHome.co.uk provides accurate, up-to-date UK tax calculators for employ
 - [Maternity Pay Calculator](https://www.salarytakehome.co.uk/maternity-sick-pay): Calculate Statutory Maternity Pay (SMP) week by week.
 - [Mortgage Calculator](https://www.salarytakehome.co.uk/mortgages): Calculate monthly mortgage repayments with interest rate comparisons.
 - [Debt Repayment Calculator](https://www.salarytakehome.co.uk/debts): Plan debt repayment with avalanche and snowball method comparisons.
+- [Tax Code Checker](https://www.salarytakehome.co.uk/tax-code): Enter your UK tax code to find out what it means, your Personal Allowance, which tax rates apply, and whether it's correct.
 
 ## UK Tax Reference (2025/26)
 
