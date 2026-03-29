@@ -784,6 +784,10 @@ export default function PayRiseCalculator() {
 
             {/* Results Section */}
             {results ? (
+              <div className="relative">
+                <div className="hidden xl:block absolute right-[-184px] top-0 w-[160px]">
+                  <AdUnit slot="1315738286" hideOnMobile />
+                </div>
               <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6 md:p-8 mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Pay Rise Breakdown</h3>
 
@@ -958,6 +962,7 @@ export default function PayRiseCalculator() {
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
             ) : (
               /* Empty State */
