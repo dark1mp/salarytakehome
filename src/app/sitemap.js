@@ -94,6 +94,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/salary-per-second`,
+      lastModified: new Date('2026-03-29'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',

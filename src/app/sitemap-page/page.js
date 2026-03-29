@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import LayoutWrapper from '../components/LayoutWrapper';
-import { Calculator, Clock, TrendingUp, GitCompare, Users, Heart, Baby, Home, CreditCard, FileText, HelpCircle, ExternalLink, Shield, BookOpen, Search } from 'lucide-react';
+import { Calculator, Clock, TrendingUp, GitCompare, Users, Heart, Baby, Home, CreditCard, FileText, HelpCircle, ExternalLink, Shield, BookOpen, Search, Timer } from 'lucide-react';
 
 export default function SitemapPage() {
   const sections = [
@@ -16,6 +16,7 @@ export default function SitemapPage() {
         { href: "/two-jobs", label: "Two Jobs Calculator", icon: Users },
         { href: "/pro-rata-furlough", label: "Pro-Rata Calculator", icon: Calculator },
         { href: "/tax-code", label: "Tax Code Checker", icon: Search },
+        { href: "/salary-per-second", label: "Salary Per Second", icon: Timer },
       ]
     },
     {

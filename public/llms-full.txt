@@ -79,6 +79,11 @@ URL: https://www.salarytakehome.co.uk/tax-code
 
 Enter your UK tax code to decode what it means. Covers all tax code types: standard numeric codes (1257L), Scottish (S prefix), Welsh (C prefix), special codes (BR, D0, D1, NT, 0T), K codes (negative allowance), and emergency codes (W1/M1/X suffix). Shows your Personal Allowance, applicable tax bands, and common reasons for your code.
 
+### Salary Per Second
+URL: https://www.salarytakehome.co.uk/salary-per-second
+
+Convert any annual salary into per year, month, week, day, hour, minute, and second breakdowns. Features a live earnings counter that ticks up in real-time, fun comparisons (per toilet break, while you sleep, per Netflix episode), and quick-select buttons for famous salaries (footballers, UK PM, average UK salary). No tax calculations — purely a salary converter for entertainment and comparison.
+
 ---
 
 ## UK Tax Rates 2025/26 (England, Wales, Northern Ireland)
