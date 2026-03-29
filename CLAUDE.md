@@ -56,6 +56,7 @@ src/app/
 ├── mortgages/
 ├── debts/
 ├── tax-code/                    # Tax code decoder/checker (not a calculator — no tax data)
+├── salary-per-second/           # Fun salary converter — no tax, just time-period breakdowns + live counter
 ├── blog/                        # Blog listing + individual posts
 │   ├── posts.js                 # Shared blog post data (single source of truth)
 │   ├── page.js                  # Blog index (imports from posts.js)
@@ -80,7 +81,7 @@ public/
 └── opengraph-image.png
 ```
 
-## Calculators & Tools (11 total)
+## Calculators & Tools (12 total)
 
 | Calculator/Tool | Route | Description |
 |---|---|---|
@@ -95,6 +96,7 @@ public/
 | Mortgages | `/mortgages` | Mortgage repayment calculator |
 | Debts | `/debts` | Debt repayment calculator |
 | Tax Code Checker | `/tax-code` | Decode UK tax codes — shows allowance, region, letter meaning, warnings |
+| Salary Per Second | `/salary-per-second` | Fun salary converter — yearly to per-second with live counter, no tax |
 
 All calculators support:
 - Multiple tax years (2025/26, 2024/25, 2023/24, 2022/23, 2021/22)
@@ -151,7 +153,7 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 ## SEO Checklist
 
 - Every page needs: title, description, canonical URL, Open Graph tags, Twitter card
-- Structured data: WebApplication (all 10 calculators + tax code checker), Article (blog posts), FAQPage (all 10 calculators + tax code checker — 7 questions each)
+- Structured data: WebApplication (all 10 calculators + tax code checker + salary per second), Article (blog posts), FAQPage (all 10 calculators + tax code checker + salary per second — 7 questions each)
 - Sitemap: dynamic at `/sitemap.js` — must be updated when adding/removing pages
 - Robots.txt: blocks `/api/`, `/_next/`, `/admin/`
 - IndexNow: auto-submits all sitemap URLs post-build to Bing, Yandex, Seznam, Naver. Can also be triggered manually: `node scripts/submit-indexnow.mjs`
@@ -226,6 +228,8 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - **Blog post cross-links** — Blog posts link to each other within body text (not just via RelatedArticles at the bottom). This builds topical authority. When adding new posts, add 2-3 inline links to related existing posts, and update existing posts to link back.
 - **Tax Code Checker is a tool, not a calculator** — `/tax-code` decodes tax codes into plain English but does not perform tax calculations. It has no tax data constants (TAX_BANDS, NI_BANDS, etc.) and no calculation logic. It uses the same page layout as calculators (fullWidth LayoutWrapper, sidebar ads, educational cards, FAQ schema) but is listed separately in the calculators table as a "Tool". It has an in-content ad (`<AdUnit showScrollHint />`) after the input card, same as pay-rise.
 - **Tax Code Checker has no dedicated blog post yet** — A supporting blog post (e.g. "UK Tax Codes Explained") would complete the topic cluster pattern. The Related Reading section currently links to existing posts (understanding-uk-tax-code, scottish-tax-vs-english-tax, maximize-take-home-pay).
+- **Salary Per Second is entertainment, not a calculator** — `/salary-per-second` has no tax data or calculation logic. It divides an annual salary by time periods and shows a live counter using `requestAnimationFrame`. Working assumptions: 52 weeks, 260 working days, 1,950 working hours (37.5hr week). The live counter uses calendar seconds (31,557,600/year) since salaried earnings accrue continuously. Uses the same fullWidth LayoutWrapper pattern as calculators.
+- **Salary Per Second has preset buttons** — 8 quick-select buttons for famous salaries (UK Average, Median, PM, Haaland, Salah, NHS Nurse, Teacher, Min Wage). Results update instantly as user types (no submit button, uses `useMemo`). Footballer salary figures are approximate — update if reported wages change.
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
@@ -236,3 +240,5 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - `/pay-rise` and `/take-home-pay-calculator` have two ad units (top + in-content) — other calculators only have the top ad unit and could benefit from an in-content one too
 - Educational content depth varies — `/pay-rise` has ~3,500 words of educational content; other calculators now have ~2,500-3,000 words after adding cards in March 2026, but could still be expanded further to match pay-rise's depth
 - `/tax-code` has no dedicated supporting blog post yet — needs a "UK Tax Codes Explained" post to complete the topic cluster
+- `/salary-per-second` has no social share buttons yet — results are highly shareable (especially footballer salaries). Could add X/Facebook/Copy Link buttons and a `?salary=X` query param for shared links
+- `/salary-per-second` has no dedicated supporting blog post yet
