@@ -17,6 +17,7 @@ export default function SitemapPage() {
         { href: "/pro-rata-furlough", label: "Pro-Rata Calculator", icon: Calculator },
         { href: "/tax-code", label: "Tax Code Checker", icon: Search },
         { href: "/salary-per-second", label: "Salary Per Second", icon: Timer },
+        { href: "/dividend-tax", label: "Dividend Tax Calculator", icon: Calculator },
       ]
     },
     {

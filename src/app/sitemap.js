@@ -100,6 +100,12 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/dividend-tax`,
+      lastModified: new Date('2026-03-30'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',

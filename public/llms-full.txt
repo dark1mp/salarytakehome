@@ -84,6 +84,18 @@ URL: https://www.salarytakehome.co.uk/salary-per-second
 
 Convert any annual salary into per year, month, week, day, hour, minute, and second breakdowns. Features a live earnings counter that ticks up in real-time, fun comparisons (per toilet break, while you sleep, per Netflix episode), and quick-select buttons for famous salaries (footballers, UK PM, average UK salary). No tax calculations — purely a salary converter for entertainment and comparison.
 
+### Dividend Tax Calculator
+URL: https://www.salarytakehome.co.uk/dividend-tax
+
+Calculate how much tax you'll pay on dividend income. Enter your annual salary and expected dividends to see a full breakdown by tax band. The calculator accounts for:
+- Dividend allowance (£500 for 2025/26, reduced from £2,000 in 2022/23)
+- Dividend tax rates: 8.75% (basic), 33.75% (higher), 39.35% (additional)
+- Personal Allowance tapering above £100,000
+- Top-slice rule (dividends sit above salary in the band stack)
+- Unused Personal Allowance sheltering dividend income
+
+Supports tax years 2021/22 through 2025/26. Scottish taxpayers pay the same UK-wide dividend rates (not Scottish rates). Commonly used by Ltd company directors who take a low salary plus dividends.
+
 ---
 
 ## UK Tax Rates 2025/26 (England, Wales, Northern Ireland)

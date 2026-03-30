@@ -15,6 +15,7 @@ export default function Footer() {
               <li><Link href="/compare-salaries" className="hover:text-white transition-colors">Compare Salaries</Link></li>
               <li><Link href="/two-jobs" className="hover:text-white transition-colors">Two Jobs</Link></li>
               <li><Link href="/pro-rata-furlough" className="hover:text-white transition-colors">Pro-Rata</Link></li>
+              <li><Link href="/dividend-tax" className="hover:text-white transition-colors">Dividend Tax</Link></li>
             </ul>
           </div>
 
