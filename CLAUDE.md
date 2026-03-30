@@ -57,6 +57,7 @@ src/app/
 ├── debts/
 ├── tax-code/                    # Tax code decoder/checker (not a calculator — no tax data)
 ├── salary-per-second/           # Fun salary converter — no tax, just time-period breakdowns + live counter
+├── dividend-tax/                # Dividend tax calculator — salary + dividends, tax by band, PA tapering
 ├── blog/                        # Blog listing + individual posts
 │   ├── posts.js                 # Shared blog post data (single source of truth)
 │   ├── page.js                  # Blog index (imports from posts.js)
@@ -81,7 +82,7 @@ public/
 └── opengraph-image.png
 ```
 
-## Calculators & Tools (12 total)
+## Calculators & Tools (13 total)
 
 | Calculator/Tool | Route | Description |
 |---|---|---|
@@ -97,6 +98,7 @@ public/
 | Debts | `/debts` | Debt repayment calculator |
 | Tax Code Checker | `/tax-code` | Decode UK tax codes — shows allowance, region, letter meaning, warnings |
 | Salary Per Second | `/salary-per-second` | Fun salary converter — yearly to per-second with live counter, no tax |
+| Dividend Tax | `/dividend-tax` | Dividend tax calculator — salary + dividends with band breakdown |
 
 All calculators support:
 - Multiple tax years (2025/26, 2024/25, 2023/24, 2022/23, 2021/22)
@@ -205,7 +207,7 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - **AdUnit is self-collapsing** — the `<AdUnit />` component uses a MutationObserver watching `data-ad-status` (set by AdSense to `"filled"` or `"unfilled"`). If no ad renders, it collapses to zero height with no margin/gap. Don't add `min-h` or fixed height to it. Don't use `offsetHeight` to detect ad fill — it gives false positives.
 - **AdUnit mobile scroll hint** — when an ad fills on mobile (`lg:hidden`), a "↓ Scroll down to see results" message appears above the ad so users know results are below.
 - **`hideOnMobile` breakpoint is `md` (768px)** — `hideOnMobile` applies `hidden md:block`, so ads show on iPad portrait (768px) and above. This was changed from `lg` (1024px) in March 2026 to capture iPad impressions. Sidebar ads are unaffected because their parent container uses `hidden xl:block`.
-- **Manual ad placements** — All 10 calculator pages have: (1) a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1 (visible on iPad+), and (2) two stacked sticky right sidebar ads (`<AdUnit slot="4603525459" hideOnMobile />` + `<AdUnit slot="9534353704" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise` and `/take-home-pay-calculator` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after Advanced Options. `/pay-rise` also has a third sidebar ad (`<AdUnit slot="1315738286" hideOnMobile />`) positioned absolutely at the same level as the "Your Pay Rise Breakdown" results card (non-sticky, inside a `relative` wrapper around the results section, using `right-[-184px] top-0`). All blog pages (index + 31 posts) have a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1. All 31 blog posts also have in-article ads (`<AdUnit slot="3520564956" layout="in-article" format="fluid" />`) placed between content sections — 3 ads on long posts (10+ min), 2 ads on short posts (under 10 min), with at least 2 content sections between ads.
+- **Manual ad placements** — All 10 calculator pages have: (1) a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1 (visible on iPad+), and (2) two stacked sticky right sidebar ads (`<AdUnit slot="4603525459" hideOnMobile />` + `<AdUnit slot="9534353704" hideOnMobile />`) visible at xl+ (1280px+). `/pay-rise`, `/take-home-pay-calculator`, and `/dividend-tax` also have an in-content ad (`<AdUnit />`, default slot `7756198179`) after the input card. `/pay-rise` and `/dividend-tax` also have a third sidebar ad (`<AdUnit slot="1315738286" hideOnMobile />`) positioned absolutely at the same level as the results card (non-sticky, inside a `relative` wrapper around the results section, using `right-[-184px] top-0`). All blog pages (index + 31 posts) have a top ad (`<AdUnit slot="1586479879" hideOnMobile />`) above the h1. All 31 blog posts also have in-article ads (`<AdUnit slot="3520564956" layout="in-article" format="fluid" />`) placed between content sections — 3 ads on long posts (10+ min), 2 ads on short posts (under 10 min), with at least 2 content sections between ads.
 - **Sidebar ads stay at xl+ (1280px)** — We deliberately chose not to show sidebar ads on iPad landscape (1024px) because with the 230px nav sidebar + 192px ad column, only ~602px remains for content. Auto ads handle iPad instead.
 - **Sidebar ad positioning** — The sidebar ad uses `absolute right-8 top-8 w-[160px]` with `sticky top-8` inside. The content div uses `xl:pr-[192px]` to reserve space so cards don't overlap. The outer container uses `relative` (not `flex`). Card scaling (`lg:scale-[0.92]`) extends to `2xl` to fit on 13" MacBook screens (1440px).
 - **Calculator pages use `fullWidth`** — Calculator pages pass `fullWidth` to LayoutWrapper, which removes the `2xl:max-w` constraint since they have their own manual sidebar ad. They also don't use `max-w-[1400px]` or `max-w-6xl` on inner containers.
@@ -230,6 +232,8 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - **Tax Code Checker has no dedicated blog post yet** — A supporting blog post (e.g. "UK Tax Codes Explained") would complete the topic cluster pattern. The Related Reading section currently links to existing posts (understanding-uk-tax-code, scottish-tax-vs-english-tax, maximize-take-home-pay).
 - **Salary Per Second is entertainment, not a calculator** — `/salary-per-second` has no tax data or calculation logic. It divides an annual salary by time periods and shows a live counter using `requestAnimationFrame`. Working assumptions: 52 weeks, 260 working days, 1,950 working hours (37.5hr week). The live counter uses calendar seconds (31,557,600/year) since salaried earnings accrue continuously. Uses the same fullWidth LayoutWrapper pattern as calculators.
 - **Salary Per Second has preset buttons** — 8 quick-select buttons for famous salaries (UK Average, Median, PM, Haaland, Salah, NHS Nurse, Teacher, Min Wage). Results update instantly as user types (no submit button, uses `useMemo`). Footballer salary figures are approximate — update if reported wages change.
+- **Dividend Tax Calculator calculates dividend tax only** — `/dividend-tax` takes salary and dividend inputs and calculates tax on dividends using UK-wide rates (8.75%/33.75%/39.35% for 2025/26). It does NOT calculate income tax or NI on the salary — that's what the take-home pay calculator is for. Key rules implemented: dividends are the "top slice" (sit above salary in bands), dividend allowance (£500 for 2025/26, was £2,000 in 2022/23), Personal Allowance tapering above £100k, unused PA can shelter dividends. Scottish taxpayers pay UK-wide dividend rates (not Scottish rates). Historical rates differ: 2021/22 used 7.5%/32.5%/38.1% before the 1.25pp Health & Social Care Levy increase. Uses the same fullWidth LayoutWrapper pattern with results-aligned sidebar ad.
+- **Dividend Tax Calculator has preset buttons** — 4 quick-select scenario buttons (Ltd Director Low Salary, Ltd Director High, Employed + Shares, High Earner + Dividends). Results update instantly via `useMemo` (no submit button). Uses emerald/teal colour theme to differentiate from other calculators.
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
@@ -242,3 +246,5 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - `/tax-code` has no dedicated supporting blog post yet — needs a "UK Tax Codes Explained" post to complete the topic cluster
 - `/salary-per-second` has no social share buttons yet — results are highly shareable (especially footballer salaries). Could add X/Facebook/Copy Link buttons and a `?salary=X` query param for shared links
 - `/salary-per-second` has no dedicated supporting blog post yet
+- `/dividend-tax` has no dedicated supporting blog post yet — needs a "UK Dividend Tax Explained" post to complete the topic cluster
+- `/dividend-tax` does not calculate income tax or NI on the salary portion — it only calculates dividend tax. A future enhancement could show the combined tax picture.
