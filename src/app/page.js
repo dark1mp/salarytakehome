@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {
   Calculator, Clock, GitCompare, Users, Heart, Baby,
   Home as HomeIcon, CreditCard, TrendingUp, BookOpen,
-  ArrowRight
+  ArrowRight, Search, Timer, PieChart
 } from 'lucide-react';
 import LayoutWrapper from './components/LayoutWrapper';
 
@@ -54,6 +54,27 @@ const calculators = [
         href: "/pro-rata-furlough",
         icon: TrendingUp,
         gradient: "from-indigo-500 to-indigo-600"
+      },
+      {
+        name: "Dividend Tax Calculator",
+        description: "Calculate tax on dividends based on your salary and income tax band. For Ltd directors and shareholders.",
+        href: "/dividend-tax",
+        icon: PieChart,
+        gradient: "from-emerald-500 to-teal-600"
+      },
+      {
+        name: "Tax Code Checker",
+        description: "Enter your tax code to find out what it means, your Personal Allowance, and whether it's correct.",
+        href: "/tax-code",
+        icon: Search,
+        gradient: "from-indigo-500 to-purple-600"
+      },
+      {
+        name: "Salary Per Second",
+        description: "Convert any salary into per second, minute, hour, day, week, and month — with a live earnings counter.",
+        href: "/salary-per-second",
+        icon: Timer,
+        gradient: "from-amber-500 to-orange-600"
       }
     ]
   },
