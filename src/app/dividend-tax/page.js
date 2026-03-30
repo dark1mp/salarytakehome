@@ -390,7 +390,11 @@ export default function DividendTaxCalculator() {
 
             {/* Results Section */}
             {result && (
-              <div className="space-y-6 mb-10">
+              <div className="relative">
+                <div className="hidden xl:block absolute right-[-184px] top-0 w-[160px]">
+                  <AdUnit slot="1315738286" hideOnMobile />
+                </div>
+                <div className="space-y-6 mb-10">
                 {/* Hero Result Card */}
                 <div className="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-3xl shadow-xl p-6 md:p-8 text-white">
                   <div className="flex items-center gap-3 mb-4">
@@ -527,6 +531,7 @@ export default function DividendTaxCalculator() {
                     <ChevronRight className="w-6 h-6 text-white/80 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </a>
+                </div>
               </div>
             )}
 
