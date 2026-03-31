@@ -119,7 +119,7 @@ Tax bands, NI thresholds, and student loan thresholds are defined inline in each
 
 ## Blog
 
-31 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes 6 "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension, ISA vs LISA, PAYE vs self-employed, full-time vs part-time tax) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay). Every calculator now has at least one dedicated blog post linking back to it.
+32 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes 6 "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension, ISA vs LISA, PAYE vs self-employed, full-time vs part-time tax) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay, uk-dividend-tax-explained supports /dividend-tax). Every calculator now has at least one dedicated blog post linking back to it.
 
 ### Topic Cluster Blog Posts (March 2026)
 
@@ -135,6 +135,7 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 | Maternity Pay Guide | `/blog/maternity-pay-guide` | /maternity-sick-pay |
 | First-Time Buyer Mortgage Guide | `/blog/first-time-buyer-mortgage-guide` | /mortgages |
 | How to Pay Off Debt Faster | `/blog/how-to-pay-off-debt-faster` | /debts |
+| UK Dividend Tax Explained | `/blog/uk-dividend-tax-explained` | /dividend-tax |
 
 ### Adding a New Blog Post
 
@@ -234,6 +235,8 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - **Salary Per Second has preset buttons** — 8 quick-select buttons for famous salaries (UK Average, Median, PM, Haaland, Salah, NHS Nurse, Teacher, Min Wage). Results update instantly as user types (no submit button, uses `useMemo`). Footballer salary figures are approximate — update if reported wages change.
 - **Dividend Tax Calculator calculates dividend tax only** — `/dividend-tax` takes salary and dividend inputs and calculates tax on dividends using UK-wide rates (8.75%/33.75%/39.35% for 2025/26). It does NOT calculate income tax or NI on the salary — that's what the take-home pay calculator is for. Key rules implemented: dividends are the "top slice" (sit above salary in bands), dividend allowance (£500 for 2025/26, was £2,000 in 2022/23), Personal Allowance tapering above £100k, unused PA can shelter dividends. Scottish taxpayers pay UK-wide dividend rates (not Scottish rates). Historical rates differ: 2021/22 used 7.5%/32.5%/38.1% before the 1.25pp Health & Social Care Levy increase. Uses the same fullWidth LayoutWrapper pattern with results-aligned sidebar ad.
 - **Dividend Tax Calculator has preset buttons** — 4 quick-select scenario buttons (Ltd Director Low Salary, Ltd Director High, Employed + Shares, High Earner + Dividends). Results update instantly via `useMemo` (no submit button). Uses emerald/teal colour theme to differentiate from other calculators.
+- **Dividend Tax Calculator has shareable URLs** — supports `?salary=X&dividends=Y&year=Z` query params. A "Share these results" button copies the link to clipboard. The page uses `useSearchParams()` wrapped in a `<Suspense>` boundary (required by Next.js for static generation). The inner component is `DividendTaxCalculatorInner` and the default export wraps it in Suspense.
+- **Dividend Tax Calculator has 9 educational cards** — How Dividend Tax Works, Dividend Tax Rates, Dividend Allowance History, Ltd Company Director Strategy, Scottish Taxpayers & Dividends, £100k Trap & Dividends, Reporting Dividends to HMRC, Dividend Tax vs Capital Gains Tax, and Tips to Reduce Your Dividend Tax Bill (full-width with 4-card grid).
 
 ## Known Gaps / TODO
 - Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
@@ -246,5 +249,4 @@ These 8 posts were added to give every calculator a dedicated supporting blog po
 - `/tax-code` has no dedicated supporting blog post yet — needs a "UK Tax Codes Explained" post to complete the topic cluster
 - `/salary-per-second` has no social share buttons yet — results are highly shareable (especially footballer salaries). Could add X/Facebook/Copy Link buttons and a `?salary=X` query param for shared links
 - `/salary-per-second` has no dedicated supporting blog post yet
-- `/dividend-tax` has no dedicated supporting blog post yet — needs a "UK Dividend Tax Explained" post to complete the topic cluster
 - `/dividend-tax` does not calculate income tax or NI on the salary portion — it only calculates dividend tax. A future enhancement could show the combined tax picture.

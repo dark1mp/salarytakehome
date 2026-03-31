@@ -271,7 +271,7 @@ export default function TaxTrap100k() {
               </p>
             </div>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              This catches people out constantly. A small amount of rental income. Some modest investment returns. Even a one-off capital gain. Suddenly you're over the threshold and losing allowances you didn't even realise were at risk.
+              This catches people out constantly. A small amount of rental income. Some modest investment returns. Even a one-off capital gain. Suddenly you&apos;re over the threshold and losing allowances you didn&apos;t even realise were at risk. Use our <a href="/dividend-tax" className="text-blue-600 hover:underline font-medium">dividend tax calculator</a> to see exactly how the £100k trap affects your dividend income.
             </p>
           </div>
 

@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import {
   PieChart,
   PoundSterling,
@@ -15,7 +16,10 @@ import {
   CheckCircle2,
   BarChart3,
   Briefcase,
-  Shield
+  Shield,
+  FileText,
+  Scale,
+  Share2
 } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
 import AdUnit from '../components/AdUnit';
@@ -167,13 +171,40 @@ function calculateDividendTax(salary, dividends, taxYear) {
   };
 }
 
-export default function DividendTaxCalculator() {
+function DividendTaxCalculatorInner() {
+  const searchParams = useSearchParams();
   const [salaryInput, setSalaryInput] = useState('');
   const [dividendInput, setDividendInput] = useState('');
   const [taxYear, setTaxYear] = useState('2025/26');
+  const [copied, setCopied] = useState(false);
+
+  // Read URL query params on mount
+  useEffect(() => {
+    const s = searchParams.get('salary');
+    const d = searchParams.get('dividends');
+    const y = searchParams.get('year');
+    if (s) setSalaryInput(formatNumberInput(s));
+    if (d) setDividendInput(formatNumberInput(d));
+    if (y && TAX_YEARS.includes(y)) setTaxYear(y);
+  }, [searchParams]);
 
   const salary = parseNumberInput(salaryInput);
   const dividends = parseNumberInput(dividendInput);
+
+  const shareUrl = typeof window !== 'undefined' && salary + dividends > 0
+    ? `${window.location.origin}/dividend-tax?salary=${salary}&dividends=${dividends}&year=${encodeURIComponent(taxYear)}`
+    : '';
+
+  const handleShare = async () => {
+    if (!shareUrl) return;
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback for older browsers
+    }
+  };
 
   const result = useMemo(() => {
     if (dividends <= 0) return null;
@@ -518,6 +549,17 @@ export default function DividendTaxCalculator() {
                   </div>
                 </div>
 
+                {/* Share Button */}
+                {shareUrl && (
+                  <button
+                    onClick={handleShare}
+                    className="flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 shadow-sm"
+                  >
+                    <Share2 className="w-4 h-4" />
+                    {copied ? 'Link copied!' : 'Share these results'}
+                  </button>
+                )}
+
                 {/* CTA to Take Home Pay Calculator */}
                 <a
                   href="/take-home-pay-calculator"
@@ -794,6 +836,143 @@ export default function DividendTaxCalculator() {
                     <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GOV.UK — Income Tax rates</a>.
                   </p>
                 </div>
+
+                {/* Reporting Dividends to HMRC */}
+                <div className="bg-white rounded-2xl border border-indigo-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <FileText className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">Reporting Dividends to HMRC</h3>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4">
+                    How you report and pay dividend tax depends on how much you receive:
+                  </p>
+                  <div className="overflow-x-auto mb-4">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-gray-200">
+                          <th className="text-left py-2 pr-4 font-semibold text-gray-700">Dividend Amount</th>
+                          <th className="text-left py-2 font-semibold text-gray-700">What You Need to Do</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-2.5 pr-4 text-gray-900 font-medium">Up to £500</td>
+                          <td className="py-2.5 text-gray-700">No tax to pay — covered by dividend allowance</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-2.5 pr-4 text-gray-900 font-medium">£500 – £10,000</td>
+                          <td className="py-2.5 text-gray-700">Contact HMRC to have it collected through your tax code, or file Self Assessment</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-2.5 pr-4 text-gray-900 font-medium">Over £10,000</td>
+                          <td className="py-2.5 text-gray-700">You must file a Self Assessment tax return</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-2">
+                    Self Assessment deadlines: register by 5 October following the tax year, file paper returns by 31 October, online returns by 31 January. Pay any tax owed by 31 January.
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    Learn more at{' '}
+                    <a href="https://www.gov.uk/self-assessment-tax-returns" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GOV.UK — Self Assessment tax returns</a> and{' '}
+                    <a href="https://www.gov.uk/tax-on-dividends" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GOV.UK — Tax on dividends</a>.
+                    For a complete walkthrough, read our{' '}
+                    <a href="/blog/uk-dividend-tax-explained" className="text-blue-600 hover:underline">UK Dividend Tax Explained</a> guide.
+                  </p>
+                </div>
+
+                {/* Dividend Tax vs Capital Gains Tax */}
+                <div className="bg-white rounded-2xl border border-cyan-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Scale className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">Dividend Tax vs Capital Gains Tax</h3>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4">
+                    Selling shares and receiving dividends are taxed differently. Here&apos;s how they compare for 2025/26:
+                  </p>
+                  <div className="overflow-x-auto mb-4">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-gray-200">
+                          <th className="text-left py-2 pr-4 font-semibold text-gray-700">Feature</th>
+                          <th className="text-left py-2 pr-4 font-semibold text-gray-700">Dividend Tax</th>
+                          <th className="text-left py-2 font-semibold text-gray-700">Capital Gains Tax</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-2.5 pr-4 text-gray-900 font-medium">Annual exemption</td>
+                          <td className="py-2.5 pr-4 text-gray-700">£500</td>
+                          <td className="py-2.5 text-gray-700">£3,000</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-2.5 pr-4 text-gray-900 font-medium">Basic rate</td>
+                          <td className="py-2.5 pr-4 text-gray-700">8.75%</td>
+                          <td className="py-2.5 text-gray-700">18%</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-2.5 pr-4 text-gray-900 font-medium">Higher rate</td>
+                          <td className="py-2.5 pr-4 text-gray-700">33.75%</td>
+                          <td className="py-2.5 text-gray-700">24%</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-2.5 pr-4 text-gray-900 font-medium">ISA-sheltered?</td>
+                          <td className="py-2.5 pr-4 text-green-600 font-semibold">Tax-free</td>
+                          <td className="py-2.5 text-green-600 font-semibold">Tax-free</td>
+                        </tr>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-2.5 pr-4 text-gray-900 font-medium">NI payable?</td>
+                          <td className="py-2.5 pr-4 text-green-600 font-semibold">No</td>
+                          <td className="py-2.5 text-green-600 font-semibold">No</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-gray-600 text-sm">
+                    Both dividends and capital gains from shares held inside an ISA are completely tax-free. See{' '}
+                    <a href="https://www.gov.uk/capital-gains-tax" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GOV.UK — Capital Gains Tax</a> for more details on CGT rates.
+                  </p>
+                </div>
+
+                {/* Tips to Reduce Dividend Tax */}
+                <div className="lg:col-span-2 bg-white rounded-2xl border border-green-100 shadow-medium p-6 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                      <Lightbulb className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xl">Tips to Reduce Your Dividend Tax Bill</h3>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-4 mb-4">
+                    <div className="bg-green-50/50 rounded-xl p-4 border border-green-100">
+                      <h4 className="font-semibold text-gray-900 text-sm mb-2">Use Your ISA Allowance</h4>
+                      <p className="text-gray-700 text-xs">Dividends from shares held in a Stocks &amp; Shares ISA are completely tax-free. The 2025/26 ISA allowance is £20,000 — use it to shelter dividend-paying investments.</p>
+                    </div>
+                    <div className="bg-green-50/50 rounded-xl p-4 border border-green-100">
+                      <h4 className="font-semibold text-gray-900 text-sm mb-2">Pension Contributions</h4>
+                      <p className="text-gray-700 text-xs">Making pension contributions reduces your adjusted net income, which can keep you below the £100k PA tapering threshold or the higher rate band. See our{' '}
+                        <a href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:underline">pension tax relief guide</a>.</p>
+                    </div>
+                    <div className="bg-green-50/50 rounded-xl p-4 border border-green-100">
+                      <h4 className="font-semibold text-gray-900 text-sm mb-2">Dividend Splitting With Spouse</h4>
+                      <p className="text-gray-700 text-xs">If your spouse is a basic rate taxpayer, transferring shares to them means their dividends are taxed at 8.75% instead of 33.75%. Both spouses get their own £500 allowance too.</p>
+                    </div>
+                    <div className="bg-green-50/50 rounded-xl p-4 border border-green-100">
+                      <h4 className="font-semibold text-gray-900 text-sm mb-2">Timing Your Dividends</h4>
+                      <p className="text-gray-700 text-xs">As a Ltd company director, you can choose when to declare dividends. Spreading them across two tax years uses two lots of the £500 allowance and may keep you in a lower band.</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-sm">
+                    For more strategies, read our{' '}
+                    <a href="/blog/salary-sacrifice-vs-personal-pension" className="text-blue-600 hover:underline">Salary Sacrifice vs Personal Pension</a> comparison and{' '}
+                    <a href="/blog/uk-dividend-tax-explained" className="text-blue-600 hover:underline">UK Dividend Tax Explained</a> guide. Also see{' '}
+                    <a href="https://www.gov.uk/individual-savings-accounts" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GOV.UK — Individual Savings Accounts</a>.
+                  </p>
+                </div>
               </div>
 
               {/* FAQ Section */}
@@ -875,7 +1054,11 @@ export default function DividendTaxCalculator() {
         <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px]">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
-            <div className="grid md:grid-cols-3 gap-3">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+              <a href="/blog/uk-dividend-tax-explained" className="p-4 bg-white rounded-xl border border-emerald-200 hover:border-emerald-400 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-emerald-600">Tax Planning</span>
+                <p className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors text-sm mt-1">UK Dividend Tax Explained</p>
+              </a>
               <a href="/blog/100k-tax-trap" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Tax Planning</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">The £100k Tax Trap Explained</p>
@@ -893,5 +1076,13 @@ export default function DividendTaxCalculator() {
         </div>
       </div>
     </LayoutWrapper>
+  );
+}
+
+export default function DividendTaxCalculator() {
+  return (
+    <Suspense>
+      <DividendTaxCalculatorInner />
+    </Suspense>
   );
 }

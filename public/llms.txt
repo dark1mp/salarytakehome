@@ -64,3 +64,4 @@ SalaryTakeHome.co.uk provides accurate, up-to-date UK tax calculators for employ
 - [Cash ISA vs Lifetime ISA](https://www.salarytakehome.co.uk/blog/isa-vs-lisa): Compare Cash ISAs and LISAs — bonus, penalties, and which suits your goals.
 - [PAYE vs Self-Employed Tax](https://www.salarytakehome.co.uk/blog/paye-vs-self-employed): Key differences between employed and self-employed tax in the UK.
 - [Full-Time vs Part-Time Tax](https://www.salarytakehome.co.uk/blog/full-time-vs-part-time-tax): How working hours affect your tax bands, NI, and take-home pay.
+- [UK Dividend Tax Explained](https://www.salarytakehome.co.uk/blog/uk-dividend-tax-explained): Complete guide to UK dividend tax rates, allowances, worked examples, and strategies to reduce your bill.

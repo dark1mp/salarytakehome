@@ -4,6 +4,16 @@
 
 export const blogPosts = [
   {
+    slug: "uk-dividend-tax-explained",
+    title: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate (2025/26)",
+    description: "Complete guide to UK dividend tax for 2025/26. Learn about dividend tax rates (8.75%, 33.75%, 39.35%), the £500 allowance, how to calculate your bill, and strategies to reduce it.",
+    date: "2026-03-31",
+    readTime: "12 min read",
+    category: "Tax Planning",
+    featured: true,
+    priority: 0.7,
+  },
+  {
     slug: "isa-vs-lisa",
     title: "Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2025/26?",
     description: "Compare Cash ISAs and Lifetime ISAs side by side. See the 25% government bonus, withdrawal penalties, contribution limits, and which account suits your savings goals.",

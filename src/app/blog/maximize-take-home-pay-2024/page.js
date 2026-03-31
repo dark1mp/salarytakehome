@@ -334,7 +334,7 @@ export default function MaximizeTakeHomePay() {
                   <h4 className="font-semibold text-gray-900 mb-2">Stocks & Shares ISA:</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>• £20,000 annual allowance</li>
-                    <li>• Tax-free dividends</li>
+                    <li>• Tax-free dividends (see our <a href="/dividend-tax" className="text-blue-600 hover:underline">dividend tax calculator</a>)</li>
                     <li>• Tax-free capital gains</li>
                   </ul>
                 </div>

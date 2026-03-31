@@ -183,6 +183,7 @@ Employer NI: 15% on earnings above £5,000 (secondary threshold).
 - Cash ISA limit changes and contribution strategies
 
 ### Calculator Support Guides (Topic Cluster Posts)
+- UK Dividend Tax Explained: rates, allowances, worked examples, and strategies to reduce your dividend tax bill
 - UK Minimum Wage 2025/26: hourly rates, take-home pay and rights at every age band
 - How to Compare Job Offers: salary, benefits and total compensation in the UK
 - Two Jobs Tax Explained: how PAYE works with multiple employers
