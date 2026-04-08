@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Statutory Sick Pay Calculator 2025/26 - Calculate UK SSP Entitlement | SalaryTakeHome.co.uk",
-  description: "Free UK Statutory Sick Pay calculator. Calculate your SSP entitlement for 2025/26 and preview the new rules from April 2026. Know your rights when off sick.",
-  keywords: "statutory sick pay calculator, SSP calculator UK, sick pay entitlement, SSP 2025, SSP 2026, sick leave pay, UK sick pay rules",
+  title: "Statutory Sick Pay Calculator 2026/27 - Calculate UK SSP Entitlement | SalaryTakeHome.co.uk",
+  description: "Free UK Statutory Sick Pay calculator under the new 2026/27 rules. £123.25/week, day-1 payment, no Lower Earnings Limit. Know your rights when off sick.",
+  keywords: "statutory sick pay calculator, SSP calculator UK, sick pay entitlement, SSP 2026/27, SSP 2026 rules, sick leave pay, UK sick pay rules, day one SSP",
   openGraph: {
-    title: "Statutory Sick Pay Calculator - Calculate UK SSP Entitlement",
-    description: "Free UK Statutory Sick Pay calculator. Calculate your SSP entitlement and preview the new rules from April 2026.",
+    title: "Statutory Sick Pay Calculator 2026/27 - Calculate UK SSP Entitlement",
+    description: "Free UK Statutory Sick Pay calculator. Calculate your SSP entitlement under the new 2026/27 rules in force from 6 April 2026.",
     url: "https://www.salarytakehome.co.uk/sick-pay",
     siteName: "SalaryTakeHome",
     images: [{
@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Statutory Sick Pay Calculator - Calculate UK SSP Entitlement",
-    description: "Free UK Statutory Sick Pay calculator. Calculate your SSP entitlement and preview April 2026 rule changes.",
+    description: "Free UK SSP calculator. Calculate your entitlement under the new 2026/27 rules — £123.25/wk, day-1 payment, no LEL.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

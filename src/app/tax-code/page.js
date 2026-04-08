@@ -103,7 +103,7 @@ const SCOTTISH_BANDS = [
   { name: "Top rate", range: "Over £125,140", rate: "48%" }
 ];
 
-const WELSH_BANDS = ENGLISH_BANDS; // Wales uses same rates as England for 2025/26
+const WELSH_BANDS = ENGLISH_BANDS; // Wales uses same rates as England for 2026/27
 
 // Validate tax code format
 const validateTaxCode = (code) => {
@@ -197,7 +197,7 @@ const parseTaxCode = (code) => {
 
     let description = `Your tax-free Personal Allowance is £${allowance.toLocaleString()}. `;
     if (allowance === 12570) {
-      description += "This is the standard Personal Allowance for 2025/26 — the most common amount.";
+      description += "This is the standard Personal Allowance for 2026/27 — the most common amount.";
     } else if (allowance > 12570) {
       description += "This is higher than the standard £12,570, which may be due to Marriage Allowance transfer, blind person's allowance, or other adjustments.";
     } else if (allowance < 12570 && allowance > 0) {
@@ -293,7 +293,7 @@ export default function TaxCodeChecker() {
             "name": "What is the most common UK tax code?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The most common tax code for 2025/26 is 1257L. This means you have the standard Personal Allowance of £12,570 and are entitled to the standard tax-free amount. If you're in Scotland, the equivalent is S1257L."
+              "text": "The most common tax code for 2026/27 is 1257L — unchanged from 2025/26 because the Personal Allowance remains frozen at £12,570. If you're in Scotland, the equivalent is S1257L."
             }
           },
           {
@@ -333,7 +333,7 @@ export default function TaxCodeChecker() {
             "name": "What is a Scottish tax code?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Scottish tax codes start with an S prefix (e.g. S1257L). This means you pay Scottish income tax rates, which have different bands from the rest of the UK. Scotland has six tax bands: Starter (19%), Basic (20%), Intermediate (21%), Higher (42%), Advanced (45%), and Top (48%) for 2025/26."
+              "text": "Scottish tax codes start with an S prefix (e.g. S1257L). This means you pay Scottish income tax rates, which have different bands from the rest of the UK. Scotland has six tax bands: Starter (19%), Basic (20%), Intermediate (21%), Higher (42%), Advanced (45%), and Top (48%) for 2026/27. The Starter and Basic band limits were extended for 2026/27 (Scottish Budget 2026), slightly reducing tax for most Scottish taxpayers."
             }
           }
         ]
@@ -385,7 +385,7 @@ export default function TaxCodeChecker() {
               </p>
               <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                Last updated: March 2026 · Reflects 2025/26 tax year
+                Last updated: April 2026 · Reflects 2026/27 tax year
               </p>
             </div>
 
@@ -469,7 +469,7 @@ export default function TaxCodeChecker() {
                     {result.type === 'standard' && result.personalAllowance === 12570 && (
                       <p className="text-sm text-green-600 flex items-center gap-1">
                         <CheckCircle2 className="w-4 h-4" />
-                        Standard Personal Allowance for 2025/26
+                        Standard Personal Allowance for 2026/27
                       </p>
                     )}
                     {result.type === 'standard' && result.personalAllowance !== 12570 && result.personalAllowance > 0 && (
@@ -558,7 +558,7 @@ export default function TaxCodeChecker() {
 
                 {/* Tax Bands Table */}
                 <div className="bg-white rounded-2xl border border-gray-200 shadow-medium p-6">
-                  <h3 className="font-bold text-gray-900 text-lg mb-4">{regionLabel} Income Tax Bands 2025/26</h3>
+                  <h3 className="font-bold text-gray-900 text-lg mb-4">{regionLabel} Income Tax Bands 2026/27</h3>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm">
                       <thead>
@@ -634,7 +634,7 @@ export default function TaxCodeChecker() {
                     <h3 className="font-bold text-gray-900 text-xl">How HMRC Calculates Your Tax Code</h3>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
-                    HMRC starts with the standard Personal Allowance (£12,570 for 2025/26) and adjusts it based on your circumstances:
+                    HMRC starts with the standard Personal Allowance (£12,570 for 2026/27, frozen until April 2031) and adjusts it based on your circumstances:
                   </p>
                   <div className="overflow-x-auto mb-4">
                     <table className="w-full text-sm">
@@ -935,7 +935,7 @@ export default function TaxCodeChecker() {
                   <div className="pb-5 border-b border-gray-200">
                     <h4 className="font-bold text-gray-900 text-base mb-2">What is the most common tax code?</h4>
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      The most common tax code for 2025/26 is <strong>1257L</strong>. It means you have the standard Personal Allowance of £12,570. If you live in Scotland, the equivalent is <strong>S1257L</strong>, and in Wales it&apos;s <strong>C1257L</strong>.
+                      The most common tax code for 2026/27 is <strong>1257L</strong>. It means you have the standard Personal Allowance of £12,570 (unchanged since 2021 and frozen until April 2031). If you live in Scotland, the equivalent is <strong>S1257L</strong>, and in Wales it&apos;s <strong>C1257L</strong>.
                     </p>
                   </div>
                   <div className="pb-5 border-b border-gray-200">
@@ -966,7 +966,7 @@ export default function TaxCodeChecker() {
                   <div>
                     <h4 className="font-bold text-gray-900 text-base mb-2">What is a Scottish tax code?</h4>
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      Scottish tax codes start with an S prefix (e.g. S1257L). This means you pay Scottish income tax rates, which have six bands from 19% to 48% for 2025/26. Your tax code is based on where you live, not where you work.
+                      Scottish tax codes start with an S prefix (e.g. S1257L). This means you pay Scottish income tax rates, which have six bands from 19% to 48% for 2026/27. Your tax code is based on where you live, not where you work.
                     </p>
                   </div>
                 </div>
@@ -981,7 +981,7 @@ export default function TaxCodeChecker() {
                   <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h3>
                 </div>
                 <p className="text-gray-600 text-sm">
-                  This tool decodes UK tax codes based on standard HMRC rules for the 2025/26 tax year.
+                  This tool decodes UK tax codes based on standard HMRC rules for the 2026/27 tax year. The Personal Allowance remains £12,570 (frozen until April 2031), so the standard tax code for most employees is unchanged at 1257L.
                   Individual circumstances may vary and HMRC may have specific reasons for your tax code that aren&apos;t captured here.
                   For complex tax situations, please consult a qualified accountant or contact HMRC directly.
                   This tool is for informational purposes only and should not be considered tax advice.

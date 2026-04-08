@@ -9,8 +9,9 @@ export default function MaternitySickPay() {
     averageWeeklyEarnings: '',
   });
 
-  // UK Statutory Rates 2024/25
-  // Statutory Maternity Pay: 90% of average weekly earnings for first 6 weeks, then £187.18/week or 90% of earnings (whichever is lower) for up to 33 weeks
+  // UK Statutory Rates 2026/27 (from 6 April 2026)
+  // Statutory Maternity Pay: 90% of average weekly earnings for first 6 weeks, then £194.32/week or 90% of earnings (whichever is lower) for up to 33 weeks
+  // Qualifying lower earnings limit: £129/week (was £125/week in 2025/26)
   
   const formatNumber = (value) => {
     const num = value.replace(/[^\d]/g, '');
@@ -22,9 +23,9 @@ export default function MaternitySickPay() {
     if (avgWeeklyEarnings <= 0) return null;
 
     // First 6 weeks: 90% of average weekly earnings (no cap)
-    // Next 33 weeks: £187.18 or 90% of average weekly earnings, whichever is lower
+    // Next 33 weeks: £194.32 or 90% of average weekly earnings, whichever is lower (2026/27 rate)
     const weeklyRate90Percent = avgWeeklyEarnings * 0.9;
-    const statutoryRate = 187.18;
+    const statutoryRate = 194.32;
     const firstSixWeeks = weeklyRate90Percent * 6;
     const remaining33WeeksRate = Math.min(statutoryRate, weeklyRate90Percent);
     const remainingWeeks = remaining33WeeksRate * 33;
@@ -38,7 +39,7 @@ export default function MaternitySickPay() {
       remainingWeeks: remainingWeeks,
       totalPay,
       weeklyAverage,
-      rate: remaining33WeeksRate === statutoryRate ? '£187.18/week' : '90% of earnings'
+      rate: remaining33WeeksRate === statutoryRate ? '£194.32/week' : '90% of earnings'
     };
   };
 
@@ -64,8 +65,8 @@ export default function MaternitySickPay() {
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "How much is Statutory Maternity Pay (SMP) in 2025/26?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "Statutory Maternity Pay is paid for 39 weeks. The first 6 weeks are paid at 90% of your average weekly earnings with no cap. The remaining 33 weeks are paid at £184.03 per week or 90% of average earnings, whichever is lower. You must earn at least £123 per week to qualify." }
+                  "name": "How much is Statutory Maternity Pay (SMP) in 2026/27?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "From 6 April 2026, Statutory Maternity Pay is paid for 39 weeks. The first 6 weeks are paid at 90% of your average weekly earnings with no cap. The remaining 33 weeks are paid at £194.32 per week or 90% of average earnings, whichever is lower. You must earn at least £129 per week on average to qualify (up from £125 in 2025/26)." }
                 },
                 {
                   "@type": "Question",
@@ -75,12 +76,12 @@ export default function MaternitySickPay() {
                 {
                   "@type": "Question",
                   "name": "Do I pay tax on maternity pay?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "Yes, Statutory Maternity Pay is taxable income subject to income tax and National Insurance. The first 6 weeks at 90% of earnings may push you into a higher tax band for that period. The remaining 33 weeks at £184.03 per week (£9,572.76 annually equivalent) typically falls within the personal allowance." }
+                  "acceptedAnswer": { "@type": "Answer", "text": "Yes, Statutory Maternity Pay is taxable income subject to income tax and National Insurance. The first 6 weeks at 90% of earnings may push you into a higher tax band for that period. The remaining 33 weeks at £194.32 per week (£10,104.64 annually equivalent) typically falls within the personal allowance." }
                 },
                 {
                   "@type": "Question",
                   "name": "What are the eligibility requirements for SMP?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "To qualify for SMP you must have worked for your employer continuously for at least 26 weeks by the 15th week before your due date, earn at least £123 per week on average, and give your employer at least 28 days notice. If you don't qualify, you may be eligible for Maternity Allowance from the government instead." }
+                  "acceptedAnswer": { "@type": "Answer", "text": "To qualify for SMP you must have worked for your employer continuously for at least 26 weeks by the 15th week before your due date, earn at least £129 per week on average (2026/27 threshold — up from £125 in 2025/26), and give your employer at least 28 days notice. If you don't qualify, you may be eligible for Maternity Allowance from the government instead." }
                 },
                 {
                   "@type": "Question",
@@ -92,7 +93,7 @@ export default function MaternitySickPay() {
                   "name": "Can I share my maternity leave with my partner?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, through Shared Parental Leave (SPL) you can share up to 50 weeks of leave and 37 weeks of pay with your partner. You must give at least 8 weeks notice and both employers must be notified. SPL pay is £184.03 per week or 90% of your average earnings, whichever is lower."
+                    "text": "Yes, through Shared Parental Leave (SPL) you can share up to 50 weeks of leave and 37 weeks of pay with your partner. You must give at least 8 weeks notice and both employers must be notified. SPL pay is £194.32 per week (2026/27 rate) or 90% of your average earnings, whichever is lower."
                   }
                 },
                 {
@@ -139,7 +140,7 @@ export default function MaternitySickPay() {
               <p className="text-xl text-gray-600">Calculate your statutory maternity pay entitlement</p>
               <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                Last updated: January 2026 · Reflects 2025/26 tax year
+                Last updated: April 2026 · Reflects 2026/27 tax year
               </p>
             </div>
 
@@ -165,7 +166,7 @@ export default function MaternitySickPay() {
                 <div className="flex items-start gap-3">
                   <AlertCircle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" />
                   <div className="text-sm text-gray-800">
-                    <strong className="font-bold text-yellow-900">Eligibility Note:</strong> Statutory Maternity Pay requires 26 weeks continuous employment and average weekly earnings of at least £125/week. Check gov.uk for full eligibility criteria.
+                    <strong className="font-bold text-yellow-900">Eligibility Note:</strong> Statutory Maternity Pay requires 26 weeks continuous employment and average weekly earnings of at least £129/week (2026/27). Check gov.uk for full eligibility criteria.
                   </div>
                 </div>
               </div>
@@ -244,17 +245,17 @@ export default function MaternitySickPay() {
                   Statutory Maternity Pay (SMP) is paid for up to 39 weeks. The amount you get depends on your average weekly earnings in the qualifying period.
                 </p>
 
-                <h4 className="font-bold text-gray-900 text-lg mb-4">How SMP is Calculated (2024/25)</h4>
+                <h4 className="font-bold text-gray-900 text-lg mb-4">How SMP is Calculated (2026/27)</h4>
                 <ul className="list-disc list-outside ml-6 space-y-2 mb-6 text-gray-700 text-base leading-relaxed">
                   <li className="pl-2"><strong>First 6 weeks:</strong> You receive 90% of your average weekly earnings (before tax)</li>
-                  <li className="pl-2"><strong>Remaining 33 weeks:</strong> You receive £187.18 per week or 90% of your average weekly earnings, whichever is lower</li>
+                  <li className="pl-2"><strong>Remaining 33 weeks:</strong> You receive £194.32 per week or 90% of your average weekly earnings, whichever is lower</li>
                   <li className="pl-2"><strong>Total duration:</strong> 39 weeks (approximately 9 months)</li>
                 </ul>
 
                 <h4 className="font-bold text-gray-900 text-lg mb-4">Eligibility Requirements</h4>
                 <ul className="list-disc list-outside ml-6 space-y-2 mb-6 text-gray-700 text-base leading-relaxed">
                   <li className="pl-2">You must have worked for your employer continuously for at least 26 weeks by the end of the 15th week before your due date</li>
-                  <li className="pl-2">You must earn at least £125 per week (gross) on average</li>
+                  <li className="pl-2">You must earn at least £129 per week (gross) on average (2026/27 qualifying threshold)</li>
                   <li className="pl-2">You must give your employer correct notice and proof of pregnancy</li>
                 </ul>
 
@@ -318,7 +319,7 @@ export default function MaternitySickPay() {
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
-                  The total SMP you receive depends on your salary. The first 6 weeks are paid at 90% of your average weekly earnings, while the remaining 33 weeks are at the flat rate of &pound;184.03/week (or 90% if lower).
+                  The total SMP you receive depends on your salary. The first 6 weeks are paid at 90% of your average weekly earnings, while the remaining 33 weeks are at the flat rate of &pound;194.32/week (2026/27) or 90% if lower.
                 </p>
 
                 <div className="overflow-x-auto mb-6">
@@ -337,36 +338,36 @@ export default function MaternitySickPay() {
                         <td className="p-3 text-gray-700">&pound;20,000</td>
                         <td className="p-3 text-right text-gray-700">&pound;384.62</td>
                         <td className="p-3 text-right text-gray-700">&pound;346.15</td>
-                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
-                        <td className="p-3 text-right font-semibold text-gray-900">&pound;8,149.89</td>
+                        <td className="p-3 text-right text-gray-700">&pound;194.32</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;8,489.46</td>
                       </tr>
                       <tr className="border-b border-gray-100">
                         <td className="p-3 text-gray-700">&pound;25,000</td>
                         <td className="p-3 text-right text-gray-700">&pound;480.77</td>
                         <td className="p-3 text-right text-gray-700">&pound;432.69</td>
-                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
-                        <td className="p-3 text-right font-semibold text-gray-900">&pound;8,669.13</td>
+                        <td className="p-3 text-right text-gray-700">&pound;194.32</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;9,008.70</td>
                       </tr>
                       <tr className="border-b border-gray-100">
                         <td className="p-3 text-gray-700">&pound;30,000</td>
                         <td className="p-3 text-right text-gray-700">&pound;576.92</td>
                         <td className="p-3 text-right text-gray-700">&pound;519.23</td>
-                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
-                        <td className="p-3 text-right font-semibold text-gray-900">&pound;9,188.37</td>
+                        <td className="p-3 text-right text-gray-700">&pound;194.32</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;9,527.94</td>
                       </tr>
                       <tr className="border-b border-gray-100">
                         <td className="p-3 text-gray-700">&pound;40,000</td>
                         <td className="p-3 text-right text-gray-700">&pound;769.23</td>
                         <td className="p-3 text-right text-gray-700">&pound;692.31</td>
-                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
-                        <td className="p-3 text-right font-semibold text-gray-900">&pound;10,226.85</td>
+                        <td className="p-3 text-right text-gray-700">&pound;194.32</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;10,566.42</td>
                       </tr>
                       <tr className="border-b border-gray-100">
                         <td className="p-3 text-gray-700">&pound;50,000</td>
                         <td className="p-3 text-right text-gray-700">&pound;961.54</td>
                         <td className="p-3 text-right text-gray-700">&pound;865.38</td>
-                        <td className="p-3 text-right text-gray-700">&pound;184.03</td>
-                        <td className="p-3 text-right font-semibold text-gray-900">&pound;11,265.27</td>
+                        <td className="p-3 text-right text-gray-700">&pound;194.32</td>
+                        <td className="p-3 text-right font-semibold text-gray-900">&pound;11,604.84</td>
                       </tr>
                     </tbody>
                   </table>
@@ -416,11 +417,11 @@ export default function MaternitySickPay() {
                       <tr className="border-b border-gray-100">
                         <td className="p-3 font-medium text-gray-900">First 6 weeks</td>
                         <td className="p-3 text-gray-700">90% of earnings</td>
-                        <td className="p-3 text-gray-700">&pound;184.03/wk or 90% (lower)</td>
+                        <td className="p-3 text-gray-700">&pound;194.32/wk or 90% (lower)</td>
                       </tr>
                       <tr className="border-b border-gray-100">
                         <td className="p-3 font-medium text-gray-900">Weeks 7-39</td>
-                        <td className="p-3 text-gray-700">&pound;184.03/wk or 90% (lower)</td>
+                        <td className="p-3 text-gray-700">&pound;194.32/wk or 90% (lower)</td>
                         <td className="p-3 text-gray-700">Same rate throughout</td>
                       </tr>
                       <tr className="border-b border-gray-100">
@@ -468,7 +469,7 @@ export default function MaternitySickPay() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">How much is Statutory Maternity Pay?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      For the first 6 weeks, you receive 90% of your average weekly earnings. For the remaining 33 weeks, you get £187.18 per week or 90% of your average weekly earnings, whichever is lower.
+                      For the first 6 weeks, you receive 90% of your average weekly earnings. For the remaining 33 weeks, you get £194.32 per week (2026/27 rate) or 90% of your average weekly earnings, whichever is lower.
                     </p>
                   </div>
 
@@ -496,7 +497,7 @@ export default function MaternitySickPay() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">What if I don't qualify for SMP?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      If you don't qualify for SMP (for example, if you're self-employed or your earnings are too low), you may be eligible for <a href="https://www.gov.uk/maternity-allowance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Maternity Allowance</a> instead. This is paid by the government at up to £184.03 per week for up to 39 weeks.
+                      If you don't qualify for SMP (for example, if you're self-employed or your earnings are too low), you may be eligible for <a href="https://www.gov.uk/maternity-allowance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Maternity Allowance</a> instead. This is paid by the government at up to £194.32 per week (2026/27) for up to 39 weeks.
                     </p>
                   </div>
 
@@ -546,9 +547,9 @@ export default function MaternitySickPay() {
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid md:grid-cols-3 gap-3">
-              <a href="/blog/uk-tax-changes-2025-26" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+              <a href="/blog/uk-tax-changes-2026-27" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Tax Planning</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2025/26</p>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2026/27</p>
               </a>
               <a href="/blog/salary-sacrifice-complete-guide" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>

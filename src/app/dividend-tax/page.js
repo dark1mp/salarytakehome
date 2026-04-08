@@ -25,7 +25,7 @@ import LayoutWrapper from '../components/LayoutWrapper';
 import AdUnit from '../components/AdUnit';
 
 // Tax data per year
-const TAX_YEARS = ["2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
+const TAX_YEARS = ["2026/27", "2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
 
 const TAX_DATA = {
   "2021/22": {
@@ -66,6 +66,15 @@ const TAX_DATA = {
     higherRateLimit: 125140,
     dividendAllowance: 500,
     dividendRates: { basic: 0.0875, higher: 0.3375, additional: 0.3935 },
+    paReductionThreshold: 100000,
+  },
+  "2026/27": {
+    personalAllowance: 12570,
+    basicRateLimit: 50270,
+    higherRateLimit: 125140,
+    dividendAllowance: 500,
+    // Autumn Budget 2025: basic and higher dividend rates increased by 2pp from April 2026. Additional rate unchanged.
+    dividendRates: { basic: 0.1075, higher: 0.3575, additional: 0.3935 },
     paReductionThreshold: 100000,
   },
 };
@@ -175,7 +184,7 @@ function DividendTaxCalculatorInner() {
   const searchParams = useSearchParams();
   const [salaryInput, setSalaryInput] = useState('');
   const [dividendInput, setDividendInput] = useState('');
-  const [taxYear, setTaxYear] = useState('2025/26');
+  const [taxYear, setTaxYear] = useState('2026/27');
   const [copied, setCopied] = useState(false);
 
   // Read URL query params on mount
@@ -225,15 +234,15 @@ function DividendTaxCalculatorInner() {
             "name": "How much tax do I pay on dividends in the UK?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "For 2025/26, you get a £500 tax-free dividend allowance. After that, dividend tax rates depend on your income tax band: 8.75% (basic rate), 33.75% (higher rate), or 39.35% (additional rate). Dividends are treated as the top slice of your income, sitting above your salary."
+              "text": "For 2026/27, you get a £500 tax-free dividend allowance. After that, dividend tax rates depend on your income tax band: 10.75% (basic rate), 35.75% (higher rate), or 39.35% (additional rate). The basic and higher rates increased by 2 percentage points from 6 April 2026 (announced at Autumn Budget 2025). Dividends are treated as the top slice of your income, sitting above your salary."
             }
           },
           {
             "@type": "Question",
-            "name": "What is the dividend allowance for 2025/26?",
+            "name": "What is the dividend allowance for 2026/27?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The dividend allowance for 2025/26 is £500. This means the first £500 of dividend income is tax-free. The allowance was reduced from £1,000 in 2023/24 and £2,000 in 2022/23."
+              "text": "The dividend allowance for 2026/27 is £500 — unchanged from 2025/26. This means the first £500 of dividend income is tax-free. The allowance was reduced from £1,000 in 2023/24 and £2,000 in 2022/23."
             }
           },
           {
@@ -324,7 +333,7 @@ function DividendTaxCalculatorInner() {
               </p>
               <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                Last updated: March 2026 · Reflects 2025/26 tax year
+                Last updated: April 2026 · Reflects 2026/27 tax year
               </p>
             </div>
 
@@ -893,7 +902,7 @@ function DividendTaxCalculatorInner() {
                     <h3 className="font-bold text-gray-900 text-xl">Dividend Tax vs Capital Gains Tax</h3>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
-                    Selling shares and receiving dividends are taxed differently. Here&apos;s how they compare for 2025/26:
+                    Selling shares and receiving dividends are taxed differently. Here&apos;s how they compare for 2026/27:
                   </p>
                   <div className="overflow-x-auto mb-4">
                     <table className="w-full text-sm">
@@ -950,7 +959,7 @@ function DividendTaxCalculatorInner() {
                   <div className="grid md:grid-cols-2 gap-4 mb-4">
                     <div className="bg-green-50/50 rounded-xl p-4 border border-green-100">
                       <h4 className="font-semibold text-gray-900 text-sm mb-2">Use Your ISA Allowance</h4>
-                      <p className="text-gray-700 text-xs">Dividends from shares held in a Stocks &amp; Shares ISA are completely tax-free. The 2025/26 ISA allowance is £20,000 — use it to shelter dividend-paying investments.</p>
+                      <p className="text-gray-700 text-xs">Dividends from shares held in a Stocks &amp; Shares ISA are completely tax-free. The 2026/27 ISA allowance is £20,000 — use it to shelter dividend-paying investments.</p>
                     </div>
                     <div className="bg-green-50/50 rounded-xl p-4 border border-green-100">
                       <h4 className="font-semibold text-gray-900 text-sm mb-2">Pension Contributions</h4>
@@ -987,13 +996,13 @@ function DividendTaxCalculatorInner() {
                   <div className="pb-5 border-b border-gray-200">
                     <h4 className="font-bold text-gray-900 text-base mb-2">How much tax do I pay on dividends?</h4>
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      For 2025/26, the first £500 of dividends is tax-free (the dividend allowance). After that, the rate depends on your income tax band: 8.75% for basic rate taxpayers, 33.75% for higher rate, and 39.35% for additional rate. Dividends are treated as the top slice of your income — they sit above your salary.
+                      For 2026/27, the first £500 of dividends is tax-free (the dividend allowance). After that, the rate depends on your income tax band: 10.75% for basic rate taxpayers, 35.75% for higher rate, and 39.35% for additional rate. The basic and higher rates increased by 2 percentage points from 6 April 2026. Dividends are treated as the top slice of your income — they sit above your salary.
                     </p>
                   </div>
                   <div className="pb-5 border-b border-gray-200">
-                    <h4 className="font-bold text-gray-900 text-base mb-2">What is the dividend allowance for 2025/26?</h4>
+                    <h4 className="font-bold text-gray-900 text-base mb-2">What is the dividend allowance for 2026/27?</h4>
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      The dividend allowance for 2025/26 is £500. This was reduced from £1,000 in 2023/24 and £2,000 in 2022/23. It means the first £500 of your dividend income above your Personal Allowance is taxed at 0%, but it still counts towards your tax bands.
+                      The dividend allowance for 2026/27 is £500 — unchanged from 2025/26. It was reduced from £1,000 in 2023/24 and £2,000 in 2022/23. It means the first £500 of your dividend income above your Personal Allowance is taxed at 0%, but it still counts towards your tax bands.
                     </p>
                   </div>
                   <div className="pb-5 border-b border-gray-200">
@@ -1011,7 +1020,7 @@ function DividendTaxCalculatorInner() {
                   <div className="pb-5 border-b border-gray-200">
                     <h4 className="font-bold text-gray-900 text-base mb-2">Do Scottish taxpayers pay different dividend tax rates?</h4>
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      No. Dividend tax rates are set by the UK Parliament and apply equally across England, Scotland, Wales, and Northern Ireland. Scottish income tax rates only affect non-savings, non-dividend income. All UK residents pay 8.75%, 33.75%, or 39.35% on dividends for 2025/26.
+                      No. Dividend tax rates are set by the UK Parliament and apply equally across England, Scotland, Wales, and Northern Ireland. Scottish income tax rates only affect non-savings, non-dividend income. All UK residents pay 10.75%, 35.75%, or 39.35% on dividends for 2026/27.
                     </p>
                   </div>
                   <div className="pb-5 border-b border-gray-200">

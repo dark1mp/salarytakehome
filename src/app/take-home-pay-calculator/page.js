@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import ErrorBoundary from '../ErrorBoundary';
 import AdUnit from '../components/AdUnit';
 
-const TAX_YEARS = ["2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
+const TAX_YEARS = ["2026/27", "2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
 
 const TAX_BANDS = {
   "2021/22": {
@@ -90,6 +90,26 @@ const TAX_BANDS = {
       { threshold: 125140, rate: 0.45 },
       { threshold: Infinity, rate: 0.48 }
     ]
+  },
+  "2026/27": {
+    personalAllowance: 12570,
+    personalAllowanceReductionThreshold: 100000,
+    personalAllowanceReductionRate: 0.5,
+    bands: [
+      // rUK income tax thresholds frozen until April 2031 (Autumn Budget 2025)
+      { threshold: 50270, rate: 0.2 },
+      { threshold: 125140, rate: 0.4 },
+      { threshold: Infinity, rate: 0.45 }
+    ],
+    scottishBands: [
+      // Scottish Budget 2026/27: Starter and Basic band limits extended; Intermediate+ frozen
+      { threshold: 16537, rate: 0.19 }, // £12,570 + £3,967 (was £15,397)
+      { threshold: 29526, rate: 0.20 }, // £12,570 + £16,956 (was £27,491)
+      { threshold: 43662, rate: 0.21 },
+      { threshold: 75000, rate: 0.42 },
+      { threshold: 125140, rate: 0.45 },
+      { threshold: Infinity, rate: 0.48 }
+    ]
   }
 };
 
@@ -98,15 +118,16 @@ const NI_BANDS = {
   "2022/23": { primaryThreshold: 9880, upperEarnings: 50270, rate: 0.1325, upperRate: 0.0325 },
   "2023/24": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
   "2024/25": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
-  "2025/26": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 }
+  "2025/26": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 },
+  "2026/27": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 }
 };
 
 const STUDENT_LOAN = {
-  plan1: { threshold: 26065, rate: 0.09 }, // Pre-2012 (England, Wales, Northern Ireland) - 2024/25 threshold
-  plan2: { threshold: 28470, rate: 0.09 }, // Post-2012 (England, Wales) - 2024/25 threshold
-  plan4: { threshold: 32745, rate: 0.09 }, // Scotland - 2024/25 threshold
-  plan5: { threshold: 25000, rate: 0.09 }, // Post-2023 (England, Wales, Northern Ireland) - from Aug 2023, repayments start Apr 2026
-  postgrad: { threshold: 21000, rate: 0.06 } // Postgraduate loan - 2024/25 threshold
+  plan1: { threshold: 26900, rate: 0.09 }, // Pre-2012 (England, Wales, Northern Ireland) - 2026/27 threshold
+  plan2: { threshold: 29385, rate: 0.09 }, // Post-2012 (England, Wales) - 2026/27 threshold
+  plan4: { threshold: 33795, rate: 0.09 }, // Scotland - 2026/27 threshold
+  plan5: { threshold: 25000, rate: 0.09 }, // Post-2023 (England, Wales, Northern Ireland) - repayments commenced April 2026
+  postgrad: { threshold: 21000, rate: 0.06 } // Postgraduate loan - 2026/27 threshold (unchanged)
 };
 
 // Optimized CountUp component with memoization
@@ -314,7 +335,7 @@ function TaxCalculatorContent() {
   const [formData, setFormData] = useState({
     income: '',
     period: 'yearly',
-    taxYear: '2025/26',
+    taxYear: '2026/27',
     scottish: false,
     studentLoan: '',
     pension: { type: 'percentage', value: '' },
@@ -636,7 +657,7 @@ function TaxCalculatorContent() {
               </p>
               <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                Last updated: January 2026 · Reflects 2025/26 tax year
+                Last updated: April 2026 · Reflects 2026/27 tax year
               </p>
             </div>
             <div className="grid lg:grid-cols-3 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top 2xl:scale-100">
@@ -1160,7 +1181,7 @@ function TaxCalculatorContent() {
                     <h3 className="font-bold text-gray-900 text-xl">Income Tax</h3>
                   </div>
                   <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                    UK income tax is charged on earnings above your Personal Allowance (£12,570 for 2025/26). Tax rates range from 20% (basic rate) to 45% (additional rate). Scottish taxpayers have different rates and bands.
+                    UK income tax is charged on earnings above your Personal Allowance (£12,570 for 2026/27, frozen until April 2031). Tax rates range from 20% (basic rate) to 45% (additional rate). Scottish taxpayers have different rates and bands.
                   </p>
                   <div className="space-y-2">
                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>
@@ -1168,8 +1189,8 @@ function TaxCalculatorContent() {
                       <a href="/blog/100k-tax-trap" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
                         <ChevronRight className="w-4 h-4" />£100k Tax Trap
                       </a>
-                      <a href="/blog/uk-tax-changes-2025-26" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
-                        <ChevronRight className="w-4 h-4" />2025/26 Tax Changes
+                      <a href="/blog/uk-tax-changes-2026-27" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />2026/27 Tax Changes
                       </a>
                     </div>
                     <div className="pt-2 border-t border-gray-100 mt-3">
@@ -1192,7 +1213,7 @@ function TaxCalculatorContent() {
                     <h3 className="font-bold text-gray-900 text-xl">National Insurance</h3>
                   </div>
                   <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                    National Insurance contributions fund state benefits including the State Pension and NHS. For 2025/26, employees pay 8% on earnings between £12,570 and £50,270, then 2% above that threshold.
+                    National Insurance contributions fund state benefits including the State Pension and NHS. For 2026/27, employees pay 8% on earnings between £12,570 and £50,270, then 2% above that threshold.
                   </p>
                   <div className="space-y-2">
                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>
@@ -1408,9 +1429,9 @@ function TaxCalculatorContent() {
                 <span className="text-xs font-semibold text-red-600">Tax Planning</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">The £100k Tax Trap Explained</p>
               </a>
-              <a href="/blog/uk-tax-changes-2025-26" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+              <a href="/blog/uk-tax-changes-2026-27" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Tax Planning</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2025/26</p>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2026/27</p>
               </a>
             </div>
           </div>
@@ -1439,15 +1460,15 @@ export default function TaxCalculator() {
                   "name": "How much tax do I pay on a £30,000 salary in the UK?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "On a £30,000 salary in 2025/26, you pay £3,486 in income tax (20% on earnings above the £12,570 personal allowance) and £1,394.40 in National Insurance (8% on earnings between £12,570 and £50,270). Your total take-home pay is approximately £25,119.60 per year or £2,093.30 per month."
+                    "text": "On a £30,000 salary in 2026/27, you pay £3,486 in income tax (20% on earnings above the £12,570 personal allowance) and £1,394.40 in National Insurance (8% on earnings between £12,570 and £50,270). Your total take-home pay is approximately £25,119.60 per year or £2,093.30 per month."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "What is the personal allowance for the 2025/26 tax year?",
+                  "name": "What is the personal allowance for the 2026/27 tax year?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "The personal allowance for 2025/26 is £12,570. This is the amount you can earn before paying any income tax. If you earn over £100,000, your personal allowance is reduced by £1 for every £2 earned above £100,000, meaning it reaches zero at £125,140."
+                    "text": "The personal allowance for 2026/27 is £12,570 — unchanged since April 2021 and frozen until April 2031 (Autumn Budget 2025). This is the amount you can earn before paying any income tax. If you earn over £100,000, your personal allowance is reduced by £1 for every £2 earned above £100,000, meaning it reaches zero at £125,140."
                   }
                 },
                 {
@@ -1455,7 +1476,7 @@ export default function TaxCalculator() {
                   "name": "How does National Insurance affect my take-home pay?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "In 2025/26, you pay 8% National Insurance on earnings between £12,570 and £50,270, and 2% on earnings above £50,270. For example, on a £40,000 salary, you pay £2,194.40 in NI contributions, reducing your monthly take-home pay by about £182.87."
+                    "text": "In 2026/27, you pay 8% National Insurance on earnings between £12,570 and £50,270, and 2% on earnings above £50,270. For example, on a £40,000 salary, you pay £2,194.40 in NI contributions, reducing your monthly take-home pay by about £182.87."
                   }
                 },
                 {
@@ -1484,10 +1505,10 @@ export default function TaxCalculator() {
                 },
                 {
                   "@type": "Question",
-                  "name": "How much National Insurance was cut in 2025/26?",
+                  "name": "What changed for the 2026/27 tax year?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "The employee National Insurance rate dropped from 10% to 8% in the 2025/26 tax year. On a £35,000 salary, this saves approximately £449.40 per year compared to 2024/25 rates. The NI threshold remains at £12,570, aligning with the personal allowance for income tax."
+                    "text": "For 2026/27, the Personal Allowance (£12,570), higher-rate threshold (£50,270) and additional-rate threshold (£125,140) remain frozen — the Autumn Budget 2025 extended the freeze until April 2031. Employee National Insurance stays at 8% (main rate) and 2% (above the upper earnings limit). In Scotland, the Starter and Basic rate band limits were extended (to £16,537 and £29,526), slightly reducing tax for most Scottish taxpayers."
                   }
                 }
               ]
@@ -1503,7 +1524,7 @@ export default function TaxCalculator() {
                 "price": "0",
                 "priceCurrency": "GBP"
               },
-              "description": "Free UK take home pay calculator. Calculate your net salary after income tax, National Insurance, student loans, and pension contributions for 2025/26."
+              "description": "Free UK take home pay calculator. Calculate your net salary after income tax, National Insurance, student loans, and pension contributions for 2026/27."
             }]
           }) }}
         />

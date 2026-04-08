@@ -63,10 +63,10 @@ export default function HourlyWage() {
               },
               {
                 "@type": "Question",
-                "name": "What is the National Living Wage in 2025/26?",
+                "name": "What is the National Living Wage in 2026/27?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The National Living Wage for workers aged 21 and over is £12.21 per hour from April 2025. This equates to approximately £23,809.50 per year for a full-time worker on a 37.5-hour week."
+                  "text": "From 1 April 2026, the National Living Wage for workers aged 21 and over rose by 4.1% to £12.71 per hour (up from £12.21). This equates to approximately £24,784.50 per year for a full-time worker on a 37.5-hour week. 18-20 year olds get £10.85/hour, and 16-17 year olds and apprentices get £8.00/hour."
                 }
               },
               {
@@ -98,7 +98,7 @@ export default function HourlyWage() {
                 "name": "What is the Real Living Wage vs the National Living Wage?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The National Living Wage (£12.21/hour from April 2025 for ages 21+) is the legal minimum set by the UK government. The Real Living Wage (£12.60 nationwide, £13.85 in London) is a voluntary higher rate set by the Living Wage Foundation based on actual living costs. Over 14,000 UK employers choose to pay the Real Living Wage."
+                  "text": "The National Living Wage (£12.71/hour from April 2026 for ages 21+) is the legal minimum set by the UK government. The Real Living Wage is a voluntary higher rate set by the Living Wage Foundation based on actual living costs. Over 14,000 UK employers choose to pay the Real Living Wage."
                 }
               },
               {
@@ -151,7 +151,7 @@ export default function HourlyWage() {
               </p>
               <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                Last updated: January 2026 · Reflects 2025/26 tax year
+                Last updated: April 2026 · Reflects 2026/27 tax year
               </p>
             </div>
 
@@ -499,7 +499,7 @@ export default function HourlyWage() {
                   <div className="pb-6 border-b border-gray-200 last:border-b-0 last:pb-0">
                     <h4 className="font-bold text-gray-900 text-lg mb-2">Does this hourly wage calculator include tax?</h4>
                     <p className="text-gray-700 text-base leading-relaxed">
-                      No. This calculator shows gross hourly pay before tax and National Insurance. For net pay, use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a>. You can also read our <a href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK tax changes guide for 2025/26</a> to understand the latest rates.
+                      No. This calculator shows gross hourly pay before tax and National Insurance. For net pay, use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a>. You can also read our <a href="/blog/uk-tax-changes-2026-27" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK tax changes guide for 2026/27</a> to understand the latest rates.
                     </p>
                   </div>
 

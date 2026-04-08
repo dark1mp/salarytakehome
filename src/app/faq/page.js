@@ -4,11 +4,11 @@ import LayoutWrapper from "../components/LayoutWrapper";
 
 export const metadata = {
   title: "FAQ – UK Tax Calculator | SalaryTakeHome.co.uk",
-  description: "Comprehensive FAQ about UK tax, National Insurance, student loans, pension contributions, and take-home pay calculations for 2025/26.",
+  description: "Comprehensive FAQ about UK tax, National Insurance, student loans, pension contributions, and take-home pay calculations for 2026/27.",
   keywords: "UK tax FAQ, income tax questions, National Insurance FAQ, student loan repayment, pension contributions",
   openGraph: {
     title: "FAQ – UK Tax Calculator | SalaryTakeHome.co.uk",
-    description: "Comprehensive FAQ about UK tax, National Insurance, student loans, pension contributions, and take-home pay calculations for 2025/26.",
+    description: "Comprehensive FAQ about UK tax, National Insurance, student loans, pension contributions, and take-home pay calculations for 2026/27.",
     url: "https://www.salarytakehome.co.uk/faq",
     siteName: "SalaryTakeHome",
     images: [{
@@ -23,7 +23,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "FAQ – UK Tax Calculator | SalaryTakeHome.co.uk",
-    description: "Comprehensive FAQ about UK tax, National Insurance, student loans, and take-home pay calculations for 2025/26.",
+    description: "Comprehensive FAQ about UK tax, National Insurance, student loans, and take-home pay calculations for 2026/27.",
     images: ["/opengraph-image.png"],
   },
   alternates: {
@@ -36,12 +36,12 @@ const faqCategories = [
     category: "General Tax Questions",
     faqs: [
       {
-        q: "How is UK income tax calculated for 2025/26?",
+        q: "How is UK income tax calculated for 2026/27?",
         a: "UK income tax is calculated using progressive tax bands: 0% on income up to £12,570 (personal allowance), 20% on income from £12,571 to £50,270 (basic rate), 40% on income from £50,271 to £125,140 (higher rate), and 45% on income above £125,140 (additional rate). Scotland has different rates and bands."
       },
       {
         q: "What is National Insurance and how much do I pay?",
-        a: "National Insurance (NI) funds state benefits like the NHS and state pension. For 2025/26: you pay 8% on earnings between £12,570-£50,270, and 2% on earnings above £50,270. Self-employed pay Class 2 (£3.45/week if profits >£6,515) and Class 4 (6% on profits £12,570-£50,270, 2% above)."
+        a: "National Insurance (NI) funds state benefits like the NHS and state pension. For 2026/27: you pay 8% on earnings between £12,570-£50,270, and 2% on earnings above £50,270. Self-employed pay Class 2 (£3.45/week if profits >£6,515) and Class 4 (6% on profits £12,570-£50,270, 2% above)."
       },
       {
         q: "When does my personal allowance reduce?",
@@ -54,7 +54,7 @@ const faqCategories = [
     faqs: [
       {
         q: "How are student loan repayments calculated?",
-        a: "Repayments depend on your loan plan: Plan 1 (pre-2012): 9% on income above £22,015. Plan 2 (2012-2023): 9% on income above £27,295. Plan 5 (post-2023): 9% on income above £25,000. Postgraduate loans: 6% on income above £21,000. Multiple plans can apply simultaneously."
+        a: "Repayments depend on your loan plan (2026/27 thresholds): Plan 1 (pre-2012): 9% on income above £26,900. Plan 2 (post-2012, England/Wales): 9% above £29,385. Plan 4 (Scotland): 9% above £33,795. Plan 5 (post-2023): 9% above £25,000 (repayments started April 2026). Postgraduate loans: 6% above £21,000. Multiple plans can apply simultaneously."
       },
       {
         q: "Can I pay off my student loan early?",
@@ -67,7 +67,7 @@ const faqCategories = [
     faqs: [
       {
         q: "How do pension contributions affect my tax?",
-        a: "Pension contributions receive tax relief: 20% for basic rate taxpayers, 40% for higher rate, 45% for additional rate. The annual allowance is £60,000 (2025/26), but tapers for high earners. Salary sacrifice schemes can also save National Insurance."
+        a: "Pension contributions receive tax relief: 20% for basic rate taxpayers, 40% for higher rate, 45% for additional rate. The annual allowance is £60,000 (2026/27), but tapers for high earners. Salary sacrifice schemes can also save National Insurance."
       },
       {
         q: "What are the benefits of salary sacrifice?",
@@ -93,7 +93,7 @@ const faqCategories = [
     faqs: [
       {
         q: "How accurate is this tax calculator?",
-        a: "Our calculator uses the latest HMRC rates and is updated for 2025/26. It covers most common scenarios but may not account for complex situations like split-year treatment, non-dom status, or specific reliefs. Always consult a qualified advisor for major financial decisions."
+        a: "Our calculator uses the latest HMRC rates and is updated for 2026/27. It covers most common scenarios but may not account for complex situations like split-year treatment, non-dom status, or specific reliefs. Always consult a qualified advisor for major financial decisions."
       },
       {
         q: "Is my data stored or shared?",

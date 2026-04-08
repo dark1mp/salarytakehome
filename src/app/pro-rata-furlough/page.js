@@ -139,7 +139,7 @@ export default function ProRata() {
             </p>
               <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                Last updated: January 2026 · Reflects 2025/26 tax year
+                Last updated: April 2026 · Reflects 2026/27 tax year
               </p>
           </div>
 
@@ -329,7 +329,7 @@ export default function ProRata() {
                   </div>
                 </div>
                   <p className="text-gray-700 text-base leading-relaxed mt-6">
-                    To understand how your pro-rata salary translates to take-home pay, use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a>. You might also want to read about <a href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">pension contributions and tax relief</a> to maximise the value of your part-time salary, or check the <a href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">latest UK tax changes for 2025/26</a>.
+                    To understand how your pro-rata salary translates to take-home pay, use our <a href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</a>. You might also want to read about <a href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">pension contributions and tax relief</a> to maximise the value of your part-time salary, or check the <a href="/blog/uk-tax-changes-2026-27" className="text-blue-600 hover:text-blue-800 underline font-semibold">latest UK tax changes for 2026/27</a>.
                   </p>
               </div>
             </div>
@@ -575,9 +575,9 @@ export default function ProRata() {
                 <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Pro-Rata Salary Explained: Pay, Holiday & Pension</p>
               </a>
-              <a href="/blog/uk-tax-changes-2025-26" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+              <a href="/blog/uk-tax-changes-2026-27" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Tax Updates</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2025/26</p>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2026/27</p>
               </a>
             </div>
           </div>

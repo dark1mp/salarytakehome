@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "UK Take Home Pay Calculator 2025/26 | Income Tax & NI Calculator",
-  description: "Free UK take-home pay calculator for 2025/26. Calculate income tax, National Insurance, student loans, and pension deductions. Get your exact take-home salary instantly.",
+  title: "UK Take Home Pay Calculator 2026/27 | Income Tax & NI Calculator",
+  description: "Free UK take-home pay calculator for 2026/27. Calculate income tax, National Insurance, student loans, and pension deductions. Get your exact take-home salary instantly.",
   keywords: "take home pay calculator, UK tax calculator, income tax calculator, National Insurance calculator, net salary calculator, PAYE calculator",
   openGraph: {
-    title: "UK Take Home Pay Calculator 2025/26 | Income Tax & NI Calculator",
-    description: "Free UK take-home pay calculator for 2025/26. Calculate income tax, National Insurance, student loans, and pension deductions.",
+    title: "UK Take Home Pay Calculator 2026/27 | Income Tax & NI Calculator",
+    description: "Free UK take-home pay calculator for 2026/27. Calculate income tax, National Insurance, student loans, and pension deductions.",
     url: "https://www.salarytakehome.co.uk/take-home-pay-calculator",
     siteName: "SalaryTakeHome",
     images: [{
@@ -18,7 +18,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UK Take Home Pay Calculator 2025/26",
+    title: "UK Take Home Pay Calculator 2026/27",
     description: "Free UK take-home pay calculator. Calculate your net salary after tax, NI, and deductions.",
     images: ["/opengraph-image.png"],
   },

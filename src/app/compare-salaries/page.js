@@ -205,7 +205,7 @@ export default function CompareSalaries() {
             <p className="text-xl text-gray-600">Compare two salary offers to see which gives you more take-home pay after tax, National Insurance, and student loan deductions</p>
               <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                Last updated: January 2026 · Reflects 2025/26 tax year
+                Last updated: April 2026 · Reflects 2026/27 tax year
               </p>
           </div>
 
@@ -364,7 +364,7 @@ export default function CompareSalaries() {
                 <div className="flex items-start gap-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                   <div className="text-sm text-gray-700">
-                    <strong>Note:</strong> Calculations are estimates based on standard 2025/26 tax rates. Actual amounts may vary based on your tax code and other deductions.
+                    <strong>Note:</strong> Calculations are estimates based on standard 2026/27 tax rates. Actual amounts may vary based on your tax code and other deductions.
                   </div>
                 </div>
               </div>
@@ -469,7 +469,7 @@ export default function CompareSalaries() {
                     <h3 className="font-bold text-gray-900 text-2xl">UK Tax Brackets &amp; Your Salary Comparison</h3>
                   </div>
                   <p className="text-gray-700 text-base leading-relaxed mb-6">
-                    Understanding which tax bracket each salary falls into is essential for comparing offers. Here is what you keep from every extra pound earned in each band for 2025/26:
+                    Understanding which tax bracket each salary falls into is essential for comparing offers. Here is what you keep from every extra pound earned in each band for 2026/27:
                   </p>
                   <div className="overflow-x-auto mb-4">
                     <table className="w-full text-sm">
@@ -608,7 +608,7 @@ export default function CompareSalaries() {
 
                     <div className="pb-5 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50/50 -mx-2 px-2 py-2 rounded-lg transition-colors">
                       <h4 className="font-bold text-gray-900 text-lg mb-2">How accurate is this comparison?</h4>
-                      <p className="text-gray-700 text-base leading-relaxed">This calculator uses standard 2025/26 UK tax rates and provides accurate estimates for most employees. Actual deductions may vary based on your specific tax code, pension scheme, and other personal circumstances.</p>
+                      <p className="text-gray-700 text-base leading-relaxed">This calculator uses standard 2026/27 UK tax rates and provides accurate estimates for most employees. Actual deductions may vary based on your specific tax code, pension scheme, and other personal circumstances.</p>
                     </div>
 
                     <div className="pb-5 border-b border-gray-200 last:border-b-0 last:pb-0 hover:bg-gray-50/50 -mx-2 px-2 py-2 rounded-lg transition-colors">
@@ -629,7 +629,7 @@ export default function CompareSalaries() {
                     <h3 className="font-bold text-gray-900 text-2xl">Disclaimer</h3>
                   </div>
                   <p className="text-gray-700 text-base leading-relaxed">
-                    This salary comparison tool provides estimates for informational purposes only. Calculations are based on standard UK tax rates and assumptions for the 2025/26 tax year. Actual take-home pay may vary depending on your specific tax code, pension contributions, benefits-in-kind, and other personal circumstances. This tool should not be used as a substitute for professional financial advice. Always verify salary details with your employer and consult HMRC or a qualified tax advisor for personalized guidance.
+                    This salary comparison tool provides estimates for informational purposes only. Calculations are based on standard UK tax rates and assumptions for the 2026/27 tax year. Actual take-home pay may vary depending on your specific tax code, pension contributions, benefits-in-kind, and other personal circumstances. This tool should not be used as a substitute for professional financial advice. Always verify salary details with your employer and consult HMRC or a qualified tax advisor for personalized guidance.
                   </p>
                 </div>
               </div>

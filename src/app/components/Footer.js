@@ -63,7 +63,7 @@ export default function Footer() {
               © {new Date().getFullYear()} SalaryTakeHome.co.uk. All rights reserved.
             </p>
             <p className="text-xs text-gray-500">
-              UK tax rates for 2025/26 tax year
+              UK tax rates for 2026/27 tax year
             </p>
           </div>
         </div>

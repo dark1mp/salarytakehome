@@ -4,6 +4,26 @@
 
 export const blogPosts = [
   {
+    slug: "uk-tax-changes-2026-27",
+    title: "UK Tax Changes 2026/27: What You Need to Know",
+    description: "Complete guide to UK tax changes for 2026/27: frozen thresholds extended to 2031, Scottish band changes, +2pp dividend tax rise, SSP reform, new student loan thresholds and the £12.71 National Living Wage.",
+    date: "2026-04-06",
+    readTime: "11 min read",
+    category: "Tax Updates",
+    featured: true,
+    priority: 0.8,
+  },
+  {
+    slug: "uk-minimum-wage-2026-27",
+    title: "UK Minimum Wage 2026/27: £12.71 NLW, Rates & Take-Home Pay",
+    description: "Complete guide to UK minimum wage and National Living Wage rates from 1 April 2026. See the new £12.71 NLW, rates by age band, and exact take-home pay after tax.",
+    date: "2026-04-06",
+    readTime: "9 min read",
+    category: "Salary Guide",
+    featured: true,
+    priority: 0.7,
+  },
+  {
     slug: "uk-dividend-tax-explained",
     title: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate (2025/26)",
     description: "Complete guide to UK dividend tax for 2025/26. Learn about dividend tax rates (8.75%, 33.75%, 39.35%), the £500 allowance, how to calculate your bill, and strategies to reduce it.",

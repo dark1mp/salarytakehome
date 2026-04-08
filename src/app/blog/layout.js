@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Blog - UK Tax Tips & Salary Advice | SalaryTakeHome.co.uk",
-  description: "Expert guides on UK tax, salary optimization, pension contributions, student loans, and maximizing your take-home pay. Updated for 2025/26 tax year.",
+  description: "Expert guides on UK tax, salary optimization, pension contributions, student loans, and maximizing your take-home pay. Updated for 2026/27 tax year.",
   keywords: "UK tax blog, salary advice, tax tips UK, take home pay tips, salary optimization",
   openGraph: {
     title: "Blog - UK Tax Tips & Salary Advice",

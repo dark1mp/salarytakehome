@@ -1,6 +1,6 @@
 # SalaryTakeHome.co.uk — Complete Reference
 
-> Free UK tax and salary calculators using official HMRC 2025/26 tax rates. All calculations run client-side — no data is stored or transmitted.
+> Free UK tax and salary calculators using official HMRC 2026/27 tax rates. All calculations run client-side — no data is stored or transmitted.
 
 ## About
 
@@ -23,7 +23,7 @@ The primary calculator. Enter your gross annual salary and get a full breakdown 
 - Custom tax codes
 - Monthly, weekly, daily, and hourly net pay
 
-Supports tax years: 2025/26, 2024/25, 2023/24, 2022/23, 2021/22.
+Supports tax years: 2026/27, 2025/26, 2024/25, 2023/24, 2022/23, 2021/22.
 
 ### Pay Rise Calculator
 URL: https://www.salarytakehome.co.uk/pay-rise
@@ -57,12 +57,12 @@ Calculate part-time salary from a full-time equivalent. Enter the FTE salary and
 ### Sick Pay Calculator
 URL: https://www.salarytakehome.co.uk/sick-pay
 
-Calculate Statutory Sick Pay (SSP) entitlement. SSP for 2025/26 is £116.75 per week, payable for up to 28 weeks after 3 waiting days.
+Calculate Statutory Sick Pay (SSP) entitlement. From 6 April 2026, SSP is £123.25/week or 80% of average weekly earnings (whichever is lower), payable for up to 28 weeks from day 1 of sickness. The Lower Earnings Limit and 3-day waiting period were abolished for 2026/27. The calculator also supports the old 2025/26 rules (£118.75/week flat, 3 waiting days, £125/week LEL) via a toggle.
 
 ### Maternity Pay Calculator
 URL: https://www.salarytakehome.co.uk/maternity-sick-pay
 
-Calculate Statutory Maternity Pay (SMP) week by week. First 6 weeks at 90% of average weekly earnings, then up to 33 weeks at £184.03 per week (2025/26 rate) or 90% of AWE if lower.
+Calculate Statutory Maternity Pay (SMP) week by week. First 6 weeks at 90% of average weekly earnings, then up to 33 weeks at £194.32 per week (2026/27 rate) or 90% of AWE if lower. Qualifying threshold is £129/week (up from £125/week in 2025/26).
 
 ### Mortgage Calculator
 URL: https://www.salarytakehome.co.uk/mortgages
@@ -88,17 +88,17 @@ Convert any annual salary into per year, month, week, day, hour, minute, and sec
 URL: https://www.salarytakehome.co.uk/dividend-tax
 
 Calculate how much tax you'll pay on dividend income. Enter your annual salary and expected dividends to see a full breakdown by tax band. The calculator accounts for:
-- Dividend allowance (£500 for 2025/26, reduced from £2,000 in 2022/23)
-- Dividend tax rates: 8.75% (basic), 33.75% (higher), 39.35% (additional)
+- Dividend allowance (£500 for 2026/27, unchanged from 2025/26, reduced from £2,000 in 2022/23)
+- Dividend tax rates (2026/27): 10.75% (basic), 35.75% (higher), 39.35% (additional). Basic and higher rates increased by 2pp from 6 April 2026 (Autumn Budget 2025). 2025/26 rates were 8.75% / 33.75% / 39.35%.
 - Personal Allowance tapering above £100,000
 - Top-slice rule (dividends sit above salary in the band stack)
 - Unused Personal Allowance sheltering dividend income
 
-Supports tax years 2021/22 through 2025/26. Scottish taxpayers pay the same UK-wide dividend rates (not Scottish rates). Commonly used by Ltd company directors who take a low salary plus dividends.
+Supports tax years 2021/22 through 2026/27. Scottish taxpayers pay the same UK-wide dividend rates (not Scottish rates). Commonly used by Ltd company directors who take a low salary plus dividends.
 
 ---
 
-## UK Tax Rates 2025/26 (England, Wales, Northern Ireland)
+## UK Tax Rates 2026/27 (England, Wales, Northern Ireland)
 
 | Band | Taxable income | Rate |
 |------|---------------|------|
@@ -107,21 +107,23 @@ Supports tax years 2021/22 through 2025/26. Scottish taxpayers pay the same UK-w
 | Higher rate | £50,271 – £125,140 | 40% |
 | Additional rate | Over £125,140 | 45% |
 
-The Personal Allowance reduces by £1 for every £2 earned above £100,000, reaching zero at £125,140. This creates an effective 60% marginal tax rate between £100,000 and £125,140.
+Personal Allowance and higher/additional rate thresholds are frozen until April 2031 (Autumn Budget 2025). The Personal Allowance reduces by £1 for every £2 earned above £100,000, reaching zero at £125,140. This creates an effective 60% marginal tax rate between £100,000 and £125,140.
 
-## Scottish Tax Rates 2025/26
+## Scottish Tax Rates 2026/27
 
 | Band | Taxable income | Rate |
 |------|---------------|------|
 | Personal Allowance | Up to £12,570 | 0% |
-| Starter rate | £12,571 – £14,876 | 19% |
-| Basic rate | £14,877 – £26,561 | 20% |
-| Intermediate rate | £26,562 – £43,662 | 21% |
+| Starter rate | £12,571 – £16,537 | 19% |
+| Basic rate | £16,538 – £29,526 | 20% |
+| Intermediate rate | £29,527 – £43,662 | 21% |
 | Higher rate | £43,663 – £75,000 | 42% |
 | Advanced rate | £75,001 – £125,140 | 45% |
-| Top rate | Over £125,140 | 46% |
+| Top rate | Over £125,140 | 48% |
 
-## National Insurance 2025/26
+Scottish Budget 2026/27 extended the Starter and Basic band limits (from £15,397 and £27,491). Higher, Advanced and Top thresholds remain frozen.
+
+## National Insurance 2026/27
 
 | Earnings | Employee rate |
 |----------|-------------|
@@ -129,21 +131,38 @@ The Personal Allowance reduces by £1 for every £2 earned above £100,000, reac
 | £12,570 – £50,270 | 8% |
 | Over £50,270 | 2% |
 
-Employer NI: 15% on earnings above £5,000 (secondary threshold).
+Employer NI: 15% on earnings above £5,000 (secondary threshold). Rates unchanged from 2025/26 and frozen until 2030/31.
 
-## Student Loan Thresholds 2025/26
+## Student Loan Thresholds 2026/27
 
 | Plan | Annual threshold | Rate |
 |------|-----------------|------|
-| Plan 1 (pre-2012 England/Wales, all NI/Scotland pre-2024) | £24,990 | 9% |
-| Plan 2 (post-2012 England/Wales) | £27,295 | 9% |
-| Plan 4 (Scotland post-1998) | £31,395 | 9% |
-| Plan 5 (England/Wales from 2023) | £25,000 | 9% |
+| Plan 1 (pre-2012 England/Wales/NI) | £26,900 | 9% |
+| Plan 2 (post-2012 England/Wales) | £29,385 | 9% |
+| Plan 4 (Scotland) | £33,795 | 9% |
+| Plan 5 (England/Wales from Aug 2023) | £25,000 | 9% (repayments commenced April 2026) |
 | Postgraduate Loan | £21,000 | 6% |
+
+## Dividend Tax 2026/27
+
+| Band | Rate |
+|------|------|
+| Dividend allowance (first £500) | 0% |
+| Basic rate | 10.75% |
+| Higher rate | 35.75% |
+| Additional rate | 39.35% |
+
+Basic and higher rates were increased by 2 percentage points from 6 April 2026 (Autumn Budget 2025). 2025/26 rates were 8.75% / 33.75% / 39.35%. Dividends are treated as the top slice of income and Scottish taxpayers pay UK-wide dividend rates.
+
+## Statutory Payments 2026/27
+
+- **SSP (from 6 April 2026):** £123.25/week or 80% of AWE if lower, payable from day 1 of sickness, no Lower Earnings Limit. Up to 28 weeks.
+- **SMP (from 6 April 2026):** 90% of AWE for first 6 weeks, then £194.32/week or 90% of AWE (whichever is lower) for up to 33 more weeks. Qualifying AWE threshold: £129/week.
+- **National Living Wage (21+):** £12.71/hour from 1 April 2026 (up 4.1% from £12.21).
 
 ---
 
-## Example Take-Home Pay Calculations (2025/26, England/Wales, no student loan, no pension)
+## Example Take-Home Pay Calculations (2026/27, England/Wales, no student loan, no pension)
 
 **£25,000 salary:** ~£21,434 take-home (£1,786/month)
 **£30,000 salary:** ~£24,434 take-home (£2,036/month)
@@ -164,7 +183,7 @@ Employer NI: 15% on earnings above £5,000 (secondary threshold).
 
 ### Tax Planning
 - The £100K tax trap: how the Personal Allowance taper creates a 60% effective rate
-- UK tax changes for 2025/26 and 2024/25
+- UK tax changes for 2026/27, 2025/26 and 2024/25 (each tax year covered in its own dated post)
 - Salary sacrifice vs personal pension contributions
 - Complete guide to salary sacrifice and pension tax relief
 
@@ -184,7 +203,8 @@ Employer NI: 15% on earnings above £5,000 (secondary threshold).
 
 ### Calculator Support Guides (Topic Cluster Posts)
 - UK Dividend Tax Explained: rates, allowances, worked examples, and strategies to reduce your dividend tax bill
-- UK Minimum Wage 2025/26: hourly rates, take-home pay and rights at every age band
+- UK Minimum Wage 2026/27: £12.71 NLW from April 2026, rates by age, take-home pay and worker rights
+- UK Minimum Wage 2025/26: historical hourly rates and take-home pay at every age band
 - How to Compare Job Offers: salary, benefits and total compensation in the UK
 - Two Jobs Tax Explained: how PAYE works with multiple employers
 - Pro-Rata Salary Explained: part-time pay, holiday and pension calculations
