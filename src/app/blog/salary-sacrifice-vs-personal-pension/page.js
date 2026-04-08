@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2025/26?",
+  title: "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2026/27?",
   description: "Compare salary sacrifice and personal pension contributions. Salary sacrifice saves income tax AND National Insurance, while personal pensions save income tax only. See exactly how much more you could save.",
   keywords: "salary sacrifice vs personal pension, pension tax relief, NI savings, salary sacrifice pension, personal pension contributions, tax efficiency",
   openGraph: {
-    title: "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2025/26?",
+    title: "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2026/27?",
     description: "Both get you tax relief on pension contributions — but salary sacrifice saves you National Insurance too. Here's exactly how much more you could save.",
     type: "article",
     publishedTime: "2026-03-19T00:00:00.000Z",
@@ -47,10 +47,10 @@ export default function SalarySacrificeVsPersonalPension() {
             </time>
             <span className="text-gray-500 text-sm">12 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2025/26?
+            Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2026/27?
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             Both get you tax relief on pension contributions &mdash; but salary sacrifice saves you National Insurance too. Here&apos;s exactly how much more you could save, and the trade-offs to consider.
@@ -189,7 +189,7 @@ export default function SalarySacrificeVsPersonalPension() {
             </div>
             <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
               <p className="text-sm text-gray-600">
-                <strong>Note:</strong> At &pound;50,000, more of the contribution falls in the higher rate band so the income tax saving is higher. However, the NI saving is smaller because employee NI drops from 8% to 2% on earnings above the Upper Earnings Limit (&pound;50,270 in 2025/26).
+                <strong>Note:</strong> At &pound;50,000, more of the contribution falls in the higher rate band so the income tax saving is higher. However, the NI saving is smaller because employee NI drops from 8% to 2% on earnings above the Upper Earnings Limit (&pound;50,270 in 2026/27).
               </p>
             </div>
           </div>
@@ -331,7 +331,7 @@ export default function SalarySacrificeVsPersonalPension() {
           {/* Disclaimer */}
           <div className="glass-light rounded-2xl p-8 bg-gray-50">
             <p className="text-sm text-gray-500">
-              <strong>Disclaimer:</strong> This guide is for informational purposes only and should not be considered financial advice. Tax rates and thresholds are for the 2025/26 tax year. Always consult with a qualified financial adviser for personalised guidance on pension planning. For free, impartial pension guidance, visit <a href="https://www.moneyhelper.org.uk/en/pensions-and-retirement/pension-wise" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Pension Wise</a>.
+              <strong>Disclaimer:</strong> This guide is for informational purposes only and should not be considered financial advice. Tax rates and thresholds are for the 2026/27 tax year. Always consult with a qualified financial adviser for personalised guidance on pension planning. For free, impartial pension guidance, visit <a href="https://www.moneyhelper.org.uk/en/pensions-and-retirement/pension-wise" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Pension Wise</a>.
             </p>
           </div>
 
@@ -344,7 +344,7 @@ export default function SalarySacrificeVsPersonalPension() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2025/26?",
+                "headline": "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2026/27?",
                 "description": "Compare salary sacrifice and personal pension contributions. Salary sacrifice saves income tax AND National Insurance, while personal pensions save income tax only.",
                 "datePublished": "2026-03-19T00:00:00.000Z",
                 "dateModified": "2026-03-19T00:00:00.000Z",

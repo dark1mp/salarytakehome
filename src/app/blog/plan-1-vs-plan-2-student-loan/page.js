@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2025/26",
+  title: "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2026/27",
   description: "Compare Plan 1 and Plan 2 student loans side by side. See repayment thresholds, interest rates, monthly repayments at different salaries, and when each loan is written off.",
   keywords: "plan 1 vs plan 2 student loan, student loan plan 1, student loan plan 2, student loan repayment threshold, student loan interest rate, student loan comparison, student loan write off",
   openGraph: {
-    title: "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2025/26",
+    title: "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2026/27",
     description: "Compare Plan 1 and Plan 2 student loans side by side — thresholds, interest rates, monthly repayments, and write-off periods.",
     type: "article",
     publishedTime: "2026-03-19T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2025/26",
+    title: "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2026/27",
     description: "Compare Plan 1 and Plan 2 student loans — thresholds, interest rates, monthly repayments, and write-off periods.",
   },
   alternates: {
@@ -47,10 +47,10 @@ export default function Plan1VsPlan2StudentLoan() {
             </time>
             <span className="text-gray-500 text-sm">10 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2025/26
+            Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2026/27
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             Not sure which plan you&apos;re on or how they compare? Here&apos;s everything you need to know about repayment thresholds, interest rates, and how much you&apos;ll actually repay.
@@ -63,12 +63,12 @@ export default function Plan1VsPlan2StudentLoan() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
             <div className="bg-white/20 rounded-xl p-4 backdrop-blur">
               <p className="text-purple-100 text-sm mb-1">Plan 1 Threshold</p>
-              <p className="text-2xl lg:text-3xl font-bold">&pound;26,065</p>
+              <p className="text-2xl lg:text-3xl font-bold">&pound;26,900</p>
               <p className="text-purple-100 text-sm">~25 year write-off</p>
             </div>
             <div className="bg-white/20 rounded-xl p-4 backdrop-blur">
               <p className="text-purple-100 text-sm mb-1">Plan 2 Threshold</p>
-              <p className="text-2xl lg:text-3xl font-bold">&pound;28,470</p>
+              <p className="text-2xl lg:text-3xl font-bold">&pound;29,385</p>
               <p className="text-purple-100 text-sm">30 year write-off</p>
             </div>
             <div className="bg-white/20 rounded-xl p-4 backdrop-blur">
@@ -112,9 +112,9 @@ export default function Plan1VsPlan2StudentLoan() {
                     <td className="py-3 text-gray-700 text-right">Started Sept 2012 &ndash; July 2023 (England/Wales)</td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 text-gray-900 font-medium">Threshold 2025/26</td>
-                    <td className="py-3 text-gray-700 text-right">&pound;26,065/year (&pound;2,172/month)</td>
-                    <td className="py-3 text-gray-700 text-right">&pound;28,470/year (&pound;2,372/month)</td>
+                    <td className="py-3 text-gray-900 font-medium">Threshold 2026/27</td>
+                    <td className="py-3 text-gray-700 text-right">&pound;26,900/year (&pound;2,242/month)</td>
+                    <td className="py-3 text-gray-700 text-right">&pound;29,385/year (&pound;2,449/month)</td>
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="py-3 text-gray-900 font-medium">Repayment rate</td>
@@ -134,7 +134,7 @@ export default function Plan1VsPlan2StudentLoan() {
                   <tr className="border-b border-gray-100">
                     <td className="py-3 text-gray-900 font-medium">Threshold changes</td>
                     <td className="py-3 text-gray-700 text-right">Rises with RPI each April</td>
-                    <td className="py-3 text-gray-700 text-right">Frozen at &pound;29,385 from April 2026 until 2030</td>
+                    <td className="py-3 text-gray-700 text-right">Rises with RPI in 2026/27, then frozen at &pound;29,385 from April 2027 for 3 years</td>
                   </tr>
                 </tbody>
               </table>
@@ -142,7 +142,7 @@ export default function Plan1VsPlan2StudentLoan() {
 
             <div className="bg-purple-50 rounded-xl p-4 mt-6 border border-purple-200">
               <p className="text-purple-700 text-sm">
-                <strong>Note:</strong> The Plan 2 threshold freeze means that as wages rise, more of your income will be above the threshold each year &mdash; so your monthly repayments will gradually increase even if your salary stays the same in real terms.
+                <strong>Note:</strong> From April 2027, the Plan 2 threshold will be frozen at £29,385 for three years. This freeze means that as wages rise, more of your income will be above the threshold each year &mdash; so your monthly repayments will gradually increase even if your salary stays the same in real terms.
               </p>
             </div>
           </div>
@@ -161,43 +161,43 @@ export default function Plan1VsPlan2StudentLoan() {
                 <p className="text-purple-600 text-sm mb-1">&pound;30,000 Salary</p>
                 <div className="mb-3">
                   <p className="text-purple-800 text-xs font-semibold">Plan 1</p>
-                  <p className="text-purple-900 text-xl font-bold">&pound;29.53/month</p>
+                  <p className="text-purple-900 text-xl font-bold">&pound;23.25/month</p>
                 </div>
                 <div>
                   <p className="text-purple-800 text-xs font-semibold">Plan 2</p>
-                  <p className="text-purple-900 text-xl font-bold">&pound;11.48/month</p>
+                  <p className="text-purple-900 text-xl font-bold">&pound;4.61/month</p>
                 </div>
-                <p className="text-purple-600 text-xs mt-2">Plan 2 saves &pound;18.05/month</p>
+                <p className="text-purple-600 text-xs mt-2">Plan 2 saves &pound;18.64/month</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-5 border border-purple-200">
                 <p className="text-purple-600 text-sm mb-1">&pound;40,000 Salary</p>
                 <div className="mb-3">
                   <p className="text-purple-800 text-xs font-semibold">Plan 1</p>
-                  <p className="text-purple-900 text-xl font-bold">&pound;104.53/month</p>
+                  <p className="text-purple-900 text-xl font-bold">&pound;98.25/month</p>
                 </div>
                 <div>
                   <p className="text-purple-800 text-xs font-semibold">Plan 2</p>
-                  <p className="text-purple-900 text-xl font-bold">&pound;86.48/month</p>
+                  <p className="text-purple-900 text-xl font-bold">&pound;79.61/month</p>
                 </div>
-                <p className="text-purple-600 text-xs mt-2">Plan 2 saves &pound;18.05/month</p>
+                <p className="text-purple-600 text-xs mt-2">Plan 2 saves &pound;18.64/month</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-5 border border-purple-200">
                 <p className="text-purple-600 text-sm mb-1">&pound;50,000 Salary</p>
                 <div className="mb-3">
                   <p className="text-purple-800 text-xs font-semibold">Plan 1</p>
-                  <p className="text-purple-900 text-xl font-bold">&pound;179.53/month</p>
+                  <p className="text-purple-900 text-xl font-bold">&pound;173.25/month</p>
                 </div>
                 <div>
                   <p className="text-purple-800 text-xs font-semibold">Plan 2</p>
-                  <p className="text-purple-900 text-xl font-bold">&pound;161.48/month</p>
+                  <p className="text-purple-900 text-xl font-bold">&pound;154.61/month</p>
                 </div>
-                <p className="text-purple-600 text-xs mt-2">Plan 2 saves &pound;18.05/month</p>
+                <p className="text-purple-600 text-xs mt-2">Plan 2 saves &pound;18.64/month</p>
               </div>
             </div>
 
             <div className="bg-blue-50 rounded-xl p-4 mt-6 border border-blue-200">
               <p className="text-blue-700 text-sm leading-relaxed">
-                <strong>How it&apos;s calculated:</strong> Take your annual salary, subtract the threshold, multiply by 9%, then divide by 12. For example, on &pound;40,000 with Plan 1: (&pound;40,000 &minus; &pound;26,065) &times; 9% &divide; 12 = &pound;104.53/month.
+                <strong>How it&apos;s calculated:</strong> Take your annual salary, subtract the threshold, multiply by 9%, then divide by 12. For example, on &pound;40,000 with Plan 1: (&pound;40,000 &minus; &pound;26,900) &times; 9% &divide; 12 = &pound;98.25/month.
               </p>
             </div>
           </div>
@@ -316,7 +316,7 @@ export default function Plan1VsPlan2StudentLoan() {
               <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
                 <h3 className="font-semibold text-gray-800 mb-3">Plan 4 (Scotland)</h3>
                 <ul className="text-gray-700 text-sm space-y-2">
-                  <li>&bull; <strong>Threshold:</strong> &pound;32,745/year (2025/26)</li>
+                  <li>&bull; <strong>Threshold:</strong> &pound;33,795/year (2026/27)</li>
                   <li>&bull; <strong>Repayment rate:</strong> 9% above threshold</li>
                   <li>&bull; <strong>Write-off:</strong> 30 years or age 65</li>
                   <li>&bull; Higher threshold means lower monthly repayments</li>
@@ -325,7 +325,7 @@ export default function Plan1VsPlan2StudentLoan() {
               <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
                 <h3 className="font-semibold text-gray-800 mb-3">Plan 5 (Post-2023)</h3>
                 <ul className="text-gray-700 text-sm space-y-2">
-                  <li>&bull; <strong>Threshold:</strong> &pound;25,000/year (2025/26)</li>
+                  <li>&bull; <strong>Threshold:</strong> &pound;25,000/year (2026/27)</li>
                   <li>&bull; <strong>Repayment rate:</strong> 9% above threshold</li>
                   <li>&bull; <strong>Write-off:</strong> 40 years after first eligible to repay</li>
                   <li>&bull; Lower threshold and longer write-off than Plan 2</li>
@@ -373,7 +373,7 @@ export default function Plan1VsPlan2StudentLoan() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2025/26",
+                "headline": "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2026/27",
                 "description": "Compare Plan 1 and Plan 2 student loans side by side. See repayment thresholds, interest rates, monthly repayments at different salaries, and when each loan is written off.",
                 "datePublished": "2026-03-19T00:00:00.000Z",
                 "dateModified": "2026-03-19T00:00:00.000Z",
@@ -399,7 +399,7 @@ export default function Plan1VsPlan2StudentLoan() {
                     "name": "What is the difference between Plan 1 and Plan 2 student loans?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Plan 1 is for students who started university before September 2012 in England or Wales. It has a lower repayment threshold (\u00a326,065 in 2025/26), lower interest rates (capped at RPI or base rate + 1%), and a 25-year write-off period. Plan 2 is for students who started between September 2012 and July 2023. It has a higher threshold (\u00a328,470), higher interest rates (up to RPI + 3%), and a 30-year write-off period."
+                      "text": "Plan 1 is for students who started university before September 2012 in England or Wales. It has a lower repayment threshold (£26,900 in 2026/27), lower interest rates (capped at RPI or base rate + 1%), and a 25-year write-off period. Plan 2 is for students who started between September 2012 and July 2023. It has a higher threshold (£29,385 in 2026/27, frozen from April 2027), higher interest rates (up to RPI + 3%), and a 30-year write-off period."
                     }
                   },
                   {
@@ -427,7 +427,7 @@ export default function Plan1VsPlan2StudentLoan() {
           { href: "/blog/student-loan-repayment-guide", title: "Student Loan Repayment Guide", category: "Student Loans", description: "Complete guide to UK student loan repayment plans, thresholds, and interest rates." },
           { href: "/blog/student-loan-refund", title: "Student Loan Refund Guide", category: "Student Loans", description: "Check if you've overpaid your student loan and how to claim a refund." },
           { href: "/blog/30k-salary-take-home", title: "\u00a330k Salary Take Home Pay", category: "Salary Guide", description: "Full breakdown of take-home pay on a \u00a330,000 salary." },
-          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Planning", description: "Latest tax rates, thresholds, and changes affecting your pay." },
+          { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "Latest tax rates, thresholds, and changes affecting your pay." },
         ]} />
       </article>
     </div>

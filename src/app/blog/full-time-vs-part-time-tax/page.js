@@ -5,9 +5,9 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay in 2025/26",
-  description: "Do part-time workers pay less tax? See exactly how UK income tax, National Insurance, and benefits differ between full-time and part-time workers in 2025/26.",
-  keywords: "full time vs part time tax, part time tax UK, do part time workers pay less tax, part time national insurance, part time take home pay, working hours tax 2025/26",
+  title: "Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay in 2026/27",
+  description: "Do part-time workers pay less tax? See exactly how UK income tax, National Insurance, and benefits differ between full-time and part-time workers in 2026/27.",
+  keywords: "full time vs part time tax, part time tax UK, do part time workers pay less tax, part time national insurance, part time take home pay, working hours tax 2026/27",
   openGraph: {
     title: "Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay",
     description: "UK tax rates are the same for everyone, but working fewer hours usually means lower earnings and lower tax bands. Here's how it works.",
@@ -37,8 +37,8 @@ export default function FullTimeVsPartTimeTax() {
     "@graph": [
       {
         "@type": "Article",
-        "headline": "Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay in 2025/26",
-        "description": "Do part-time workers pay less tax? See exactly how UK income tax, National Insurance, and benefits differ between full-time and part-time workers in 2025/26.",
+        "headline": "Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay in 2026/27",
+        "description": "Do part-time workers pay less tax? See exactly how UK income tax, National Insurance, and benefits differ between full-time and part-time workers in 2026/27.",
         "datePublished": "2026-03-28T00:00:00.000Z",
         "dateModified": "2026-03-28T00:00:00.000Z",
         "author": {
@@ -122,10 +122,10 @@ export default function FullTimeVsPartTimeTax() {
               </time>
               <span className="text-gray-500 text-sm">10 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay in 2025/26
+              Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay in 2026/27
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Thinking about going part-time? UK tax rates are the same whether you work 40 hours a week or 16 &mdash; but working fewer hours usually means lower total earnings and a smaller tax bill. Here&apos;s exactly how it works.
@@ -284,7 +284,7 @@ export default function FullTimeVsPartTimeTax() {
                 Every UK worker gets the same &pound;12,570 personal allowance, regardless of whether they work 40 hours a week or 10. This is the single biggest reason why part-time workers often have a lower effective tax rate.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                If you earn less than &pound;12,570 per year, you pay <strong>zero income tax</strong>. At the 2025/26 National Living Wage of &pound;12.21/hour, you could work up to approximately <strong>19.8 hours per week</strong> before paying any income tax at all.
+                If you earn less than &pound;12,570 per year, you pay <strong>zero income tax</strong>. At the 2026/27 National Living Wage of &pound;12.21/hour, you could work up to approximately <strong>19.8 hours per week</strong> before paying any income tax at all.
               </p>
               <div className="grid lg:grid-cols-2 gap-4">
                 <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
@@ -531,7 +531,7 @@ export default function FullTimeVsPartTimeTax() {
             <div className="glass-light rounded-2xl p-8 bg-gray-50">
               <p className="text-sm text-gray-500">
                 <strong>Disclaimer:</strong> This guide is for informational purposes only and should not be considered financial advice.
-                Always consult with a qualified tax professional for personalised guidance. Tax rates and thresholds are for the 2025/26 tax year and are subject to change. Information accurate as of March 2026.
+                Always consult with a qualified tax professional for personalised guidance. Tax rates and thresholds are for the 2026/27 tax year and are subject to change. Information accurate as of March 2026.
               </p>
             </div>
 
@@ -540,7 +540,7 @@ export default function FullTimeVsPartTimeTax() {
           <RelatedArticles articles={[
             { href: "/blog/pro-rata-salary-explained", title: "Pro-Rata Salary Explained", category: "Salary Guide", description: "Complete guide to how pro-rata pay, holiday, and pension work in the UK." },
             { href: "/blog/two-jobs-tax-explained", title: "Two Jobs Tax Explained", category: "Tax Planning", description: "How tax and NI work when you have multiple employments." },
-            { href: "/blog/uk-minimum-wage-2025-26", title: "UK Minimum Wage 2025/26", category: "Salary Guide", description: "Current minimum and living wage rates for all age groups." },
+            { href: "/blog/uk-minimum-wage-2025-26", title: "UK Minimum Wage 2026/27", category: "Salary Guide", description: "Current minimum and living wage rates for all age groups." },
             { href: "/blog/how-to-compare-job-offers", title: "How to Compare Job Offers", category: "Salary Guide", description: "Look beyond the headline salary to compare total compensation." },
           ]} />
         </article>

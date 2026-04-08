@@ -109,7 +109,7 @@ export default function ProRataSalaryExplained() {
               </time>
               <span className="text-gray-500 text-sm">10 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Pro-Rata Salary Explained: Part-Time Pay, Holiday & Pension in the UK
@@ -297,7 +297,7 @@ export default function ProRataSalaryExplained() {
               </table>
             </div>
             <p className="text-gray-700 mt-4 leading-relaxed">
-              Compare these to the full-time rates: someone earning £60,000 full-time would enter the 40% higher rate band, but working 3 days keeps the pro-rata salary of £36,000 entirely within the basic rate band. Read more about how this affects your pay in our <Link href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK tax changes 2025/26</Link> guide.
+              Compare these to the full-time rates: someone earning £60,000 full-time would enter the 40% higher rate band, but working 3 days keeps the pro-rata salary of £36,000 entirely within the basic rate band. Read more about how this affects your pay in our <Link href="/blog/uk-tax-changes-2026-27" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK tax changes 2026/27</Link> guide.
             </p>
           </div>
 
@@ -383,8 +383,8 @@ export default function ProRataSalaryExplained() {
                 category: "Salary Guide",
               },
               {
-                href: "/blog/uk-tax-changes-2025-26",
-                title: "UK Tax Changes 2025/26",
+                href: "/blog/uk-tax-changes-2026-27",
+                title: "UK Tax Changes 2026/27",
                 description: "Complete guide to the latest tax rates and thresholds.",
                 category: "Tax Updates",
               },

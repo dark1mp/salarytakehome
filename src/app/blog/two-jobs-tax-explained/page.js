@@ -47,7 +47,7 @@ export default function TwoJobsTaxExplained() {
               </time>
               <span className="text-gray-500 text-sm">12 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Two Jobs Tax Explained: How PAYE Works With Multiple Employers in the UK
@@ -92,7 +92,7 @@ export default function TwoJobsTaxExplained() {
                 During the year, PAYE deductions on each payslip are estimates. Your primary employer uses tax code 1257L (which includes your personal allowance), while your second employer typically uses a BR code (basic rate, 20% on everything). This means you may temporarily overpay or underpay tax month to month, but HMRC corrects the total after the tax year ends.
               </p>
               <p className="text-gray-700">
-                See the current income tax rates on <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK</a>, or read our <Link href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK tax changes 2025/26 guide</Link> for a full summary of this year&apos;s rates and thresholds.
+                See the current income tax rates on <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK</a>, or read our <Link href="/blog/uk-tax-changes-2026-27" className="text-blue-600 hover:text-blue-800 underline font-semibold">UK tax changes 2026/27 guide</Link> for a full summary of this year&apos;s rates and thresholds.
               </p>
             </div>
 
@@ -151,7 +151,7 @@ export default function TwoJobsTaxExplained() {
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Why National Insurance Is Different</h2>
               <p className="text-gray-700 mb-4">
-                Unlike income tax, National Insurance is calculated <strong>separately for each job</strong>. Each employer treats your earnings independently. This means the NI threshold (&pound;12,570 in 2025/26) applies separately to each employment.
+                Unlike income tax, National Insurance is calculated <strong>separately for each job</strong>. Each employer treats your earnings independently. This means the NI threshold (&pound;12,570 in 2026/27) applies separately to each employment.
               </p>
               <p className="text-gray-700 mb-6">
                 This can actually work in your favour if your earnings are split in certain ways, because each job gets its own NI-free threshold. Here is a comparison:
@@ -194,7 +194,7 @@ export default function TwoJobsTaxExplained() {
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Worked Example: Two Jobs vs One Job</h2>
               <p className="text-gray-700 mb-6">
-                Let&apos;s compare someone earning &pound;50,000 from one job versus &pound;30,000 + &pound;20,000 from two jobs in the 2025/26 tax year:
+                Let&apos;s compare someone earning &pound;50,000 from one job versus &pound;30,000 + &pound;20,000 from two jobs in the 2026/27 tax year:
               </p>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
@@ -297,7 +297,7 @@ export default function TwoJobsTaxExplained() {
             <div className="bg-white/90 rounded-2xl p-8 bg-gray-50 border border-gray-100 shadow-sm">
               <p className="text-sm text-gray-500">
                 <strong>Disclaimer:</strong> This guide is for informational purposes only and should not be considered financial advice.
-                Always consult with a qualified tax professional for personalised guidance. Tax rates and thresholds are for the 2025/26 tax year and are subject to change. Information accurate as of March 2026.
+                Always consult with a qualified tax professional for personalised guidance. Tax rates and thresholds are for the 2026/27 tax year and are subject to change. Information accurate as of March 2026.
               </p>
             </div>
 
@@ -372,7 +372,7 @@ export default function TwoJobsTaxExplained() {
           <RelatedArticles articles={[
             { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Practical strategies to keep more of your earnings." },
             { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "How salary sacrifice works and how much you could save." },
-            { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Planning", description: "Complete guide to rates and thresholds this tax year." },
+            { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "Complete guide to rates and thresholds this tax year." },
             { href: "/blog/40k-salary-take-home", title: "\u00a340k Salary Take Home Pay", category: "Salary Guide", description: "Detailed breakdown of a \u00a340,000 salary after tax." },
           ]} />
         </article>

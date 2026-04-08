@@ -42,7 +42,7 @@ export default function MaternityPayGuide() {
               </time>
               <span className="text-gray-500 text-sm">12 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Maternity Pay Guide: SMP, Maternity Allowance &amp; Shared Parental Leave UK
@@ -54,7 +54,7 @@ export default function MaternityPayGuide() {
 
           {/* Quick Summary */}
           <div className="bg-gradient-to-r from-pink-500 to-rose-600 rounded-2xl p-8 mb-8 text-white">
-            <h2 className="text-2xl font-bold mb-6">Key Maternity Pay Facts (2025/26)</h2>
+            <h2 className="text-2xl font-bold mb-6">Key Maternity Pay Facts (2026/27)</h2>
             <div className="grid lg:grid-cols-3 gap-6">
               <div className="bg-white/15 rounded-xl p-4 text-center">
                 <p className="text-3xl font-bold">39 weeks</p>
@@ -65,7 +65,7 @@ export default function MaternityPayGuide() {
                 <p className="text-pink-100 text-sm mt-1">Of your pay for the first 6 weeks</p>
               </div>
               <div className="bg-white/15 rounded-xl p-4 text-center">
-                <p className="text-3xl font-bold">&pound;184.03/wk</p>
+                <p className="text-3xl font-bold">&pound;194.32/wk</p>
                 <p className="text-pink-100 text-sm mt-1">Flat rate for remaining 33 weeks</p>
               </div>
             </div>
@@ -83,11 +83,11 @@ export default function MaternityPayGuide() {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Eligibility Requirements</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                To qualify for SMP in 2025/26, you must meet all of the following conditions:
+                To qualify for SMP in 2026/27, you must meet all of the following conditions:
               </p>
               <ul className="list-disc list-outside ml-6 space-y-2 mb-6 text-gray-700 leading-relaxed">
                 <li><strong>26 weeks continuous employment</strong> &mdash; you must have worked for your employer continuously for at least 26 weeks by the 15th week before your expected due date (known as the &ldquo;qualifying week&rdquo;)</li>
-                <li><strong>Minimum earnings of &pound;123 per week</strong> &mdash; your average weekly earnings in the 8 weeks before the qualifying week must be at least &pound;123 (the Lower Earnings Limit for 2025/26)</li>
+                <li><strong>Minimum earnings of &pound;123 per week</strong> &mdash; your average weekly earnings in the 8 weeks before the qualifying week must be at least &pound;123 (the Lower Earnings Limit for 2026/27)</li>
                 <li><strong>Proper notice</strong> &mdash; you must give your employer at least 28 days&apos; notice before you want your SMP to start</li>
                 <li><strong>Proof of pregnancy</strong> &mdash; usually a MATB1 certificate from your midwife or doctor, issued after 20 weeks of pregnancy</li>
               </ul>
@@ -123,8 +123,8 @@ export default function MaternityPayGuide() {
                     <tr className="border-b border-gray-100">
                       <td className="p-3 text-gray-700">Weeks 7&ndash;39</td>
                       <td className="p-3 text-gray-700">33 weeks</td>
-                      <td className="p-3 text-gray-700">&pound;184.03/wk or 90% (lower)</td>
-                      <td className="p-3 text-right font-semibold text-gray-900">&pound;184.03/wk</td>
+                      <td className="p-3 text-gray-700">&pound;194.32/wk or 90% (lower)</td>
+                      <td className="p-3 text-right font-semibold text-gray-900">&pound;194.32/wk</td>
                     </tr>
                     <tr className="bg-green-50">
                       <td className="p-3 font-semibold text-gray-900">Total</td>
@@ -204,7 +204,7 @@ export default function MaternityPayGuide() {
               </div>
 
               <p className="text-gray-700 leading-relaxed">
-                Notice how the &ldquo;Remaining 33 Weeks&rdquo; column is the same for all salaries above around &pound;10,600. That&apos;s because once your 90% rate exceeds &pound;184.03 per week, you receive the flat statutory rate instead. The real difference in total SMP comes entirely from the first 6 weeks.
+                Notice how the &ldquo;Remaining 33 Weeks&rdquo; column is the same for all salaries above around &pound;11,200. That&apos;s because once your 90% rate exceeds &pound;194.32 per week, you receive the flat statutory rate instead. The real difference in total SMP comes entirely from the first 6 weeks.
               </p>
             </div>
 
@@ -233,11 +233,11 @@ export default function MaternityPayGuide() {
                     <tr className="border-b border-gray-100">
                       <td className="p-3 font-medium text-gray-900">First 6 weeks</td>
                       <td className="p-3 text-gray-700">90% of average earnings</td>
-                      <td className="p-3 text-gray-700">&pound;184.03/wk or 90% (lower)</td>
+                      <td className="p-3 text-gray-700">&pound;194.32/wk or 90% (lower)</td>
                     </tr>
                     <tr className="border-b border-gray-100">
                       <td className="p-3 font-medium text-gray-900">Weeks 7&ndash;39</td>
-                      <td className="p-3 text-gray-700">&pound;184.03/wk or 90% (lower)</td>
+                      <td className="p-3 text-gray-700">&pound;194.32/wk or 90% (lower)</td>
                       <td className="p-3 text-gray-700">Same rate throughout</td>
                     </tr>
                     <tr className="border-b border-gray-100">
@@ -278,7 +278,7 @@ export default function MaternityPayGuide() {
                 <li>The mother must end her maternity leave early (she must take at least 2 weeks after birth as compulsory maternity leave)</li>
                 <li>The remaining weeks are converted into a shared pool that either parent can take</li>
                 <li>Parents can take leave at the same time, in turns, or in blocks</li>
-                <li>Shared Parental Pay (ShPP) is &pound;184.03 per week or 90% of average earnings, whichever is lower</li>
+                <li>Shared Parental Pay (ShPP) is &pound;194.32 per week or 90% of average earnings, whichever is lower</li>
                 <li>Both parents must give their employers at least 8 weeks&apos; notice</li>
               </ul>
 
@@ -343,7 +343,7 @@ export default function MaternityPayGuide() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Build a buffer before leave</h3>
-                    <p className="text-gray-600 text-sm">If possible, save 2&ndash;3 months&apos; worth of essential expenses before your maternity leave starts. This cushion helps cover the gap between your normal salary and SMP, especially during the &pound;184.03/week period.</p>
+                    <p className="text-gray-600 text-sm">If possible, save 2&ndash;3 months&apos; worth of essential expenses before your maternity leave starts. This cushion helps cover the gap between your normal salary and SMP, especially during the &pound;194.32/week period.</p>
                   </div>
                 </div>
               </div>
@@ -427,10 +427,10 @@ export default function MaternityPayGuide() {
                   "mainEntity": [
                     {
                       "@type": "Question",
-                      "name": "How much is Statutory Maternity Pay in 2025/26?",
+                      "name": "How much is Statutory Maternity Pay in 2026/27?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "SMP is paid for 39 weeks. The first 6 weeks are at 90% of your average weekly earnings (no cap). The remaining 33 weeks are at £184.03 per week or 90% of your earnings, whichever is lower. You must earn at least £123 per week to qualify."
+                        "text": "SMP is paid for 39 weeks. The first 6 weeks are at 90% of your average weekly earnings (no cap). The remaining 33 weeks are at £194.32 per week (2026/27 rate) or 90% of your earnings, whichever is lower. You must earn at least £129 per week on average to qualify (up from £125 in 2025/26)."
                       }
                     },
                     {
@@ -438,7 +438,7 @@ export default function MaternityPayGuide() {
                       "name": "What is the difference between SMP and Maternity Allowance?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "SMP is paid by your employer and requires 26 weeks of continuous employment, while Maternity Allowance is paid by the DWP for those who don't qualify for SMP. SMP pays 90% of earnings for the first 6 weeks then £184.03/week, whereas MA pays the flat rate throughout. SMP is taxable but MA is not."
+                        "text": "SMP is paid by your employer and requires 26 weeks of continuous employment, while Maternity Allowance is paid by the DWP for those who don't qualify for SMP. SMP pays 90% of earnings for the first 6 weeks then £194.32/week, whereas MA pays the flat rate throughout. SMP is taxable but MA is not."
                       }
                     },
                     {
@@ -465,7 +465,7 @@ export default function MaternityPayGuide() {
 
           <RelatedArticles articles={[
             { href: "/blog/maximize-take-home-pay-2024", title: "10 Ways to Maximize Your Take-Home Pay", category: "Money Tips", description: "Proven strategies to keep more of your hard-earned money." },
-            { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Planning", description: "Everything changing in the new tax year and how it affects you." },
+            { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "Everything changing in the new tax year and how it affects you." },
             { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "How pension contributions reduce your tax bill." },
             { href: "/blog/40k-salary-take-home", title: "£40k Salary Take Home Pay", category: "Salary Guide", description: "Complete breakdown of a £40,000 salary after tax." },
           ]} />

@@ -47,7 +47,7 @@ export default function TaxTrap100k() {
             </time>
             <span className="text-gray-500 text-sm">20 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             The £100k Tax Trap: Britain's Hidden 60% Tax Rate That's Punishing Middle-Class Professionals
@@ -494,7 +494,7 @@ export default function TaxTrap100k() {
           { href: "/blog/60k-salary-take-home", title: "£60k Salary Take Home Pay", category: "Salary Guide", description: "How much you take home on a £60k salary." },
           { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Reduce your taxable income through salary sacrifice." },
           { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "How pension contributions can help you avoid the tax trap." },
-          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Latest tax rates and thresholds for this year." },
+          { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "Latest tax rates and thresholds for this year." },
         ]} />
       </article>
     </div>

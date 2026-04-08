@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "£60,000 Salary Take-Home Pay 2025/26 | After Tax Calculator",
-  description: "Find out exactly how much you take home from a £60,000 salary in 2025/26. Full breakdown of income tax at basic and higher rates, National Insurance, and monthly take-home pay.",
+  title: "£60,000 Salary Take-Home Pay 2026/27 | After Tax Calculator",
+  description: "Find out exactly how much you take home from a £60,000 salary in 2026/27. Full breakdown of income tax at basic and higher rates, National Insurance, and monthly take-home pay.",
   keywords: "60000 salary, 60k salary, take home pay 60000, 60k after tax, salary calculator 60000, higher rate tax",
   openGraph: {
-    title: "£60,000 Salary Take-Home Pay 2025/26",
+    title: "£60,000 Salary Take-Home Pay 2026/27",
     description: "Complete breakdown of take-home pay on a £60k salary including basic and higher rate tax deductions.",
     type: "article",
     publishedTime: "2026-01-27T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "£60,000 Salary Take-Home Pay 2025/26",
+    title: "£60,000 Salary Take-Home Pay 2026/27",
     description: "How much do you take home from a £60k salary? Full breakdown including higher rate tax.",
   },
   alternates: {
@@ -33,7 +33,7 @@ export const metadata = {
 
 export default function Salary60k() {
   return (
-    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "£60,000 Salary Take-Home Pay in 2025/26" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "£60,000 Salary Take-Home Pay in 2026/27" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}
@@ -47,10 +47,10 @@ export default function Salary60k() {
             </time>
             <span className="text-gray-500 text-sm">6 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            £60,000 Salary Take-Home Pay in 2025/26
+            £60,000 Salary Take-Home Pay in 2026/27
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             Complete breakdown of what you&apos;ll actually receive from a £60k salary, including higher rate tax calculations
@@ -170,7 +170,7 @@ export default function Salary60k() {
               <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
                 <h3 className="font-semibold text-blue-800 mb-3">Step 1: Personal Allowance</h3>
                 <p className="text-blue-700 text-sm leading-relaxed">
-                  The first £12,570 of your income is tax-free. This is your Personal Allowance for 2025/26.
+                  The first £12,570 of your income is tax-free. This is your Personal Allowance for 2026/27.
                 </p>
               </div>
 
@@ -386,7 +386,7 @@ export default function Salary60k() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "£60,000 Salary Take-Home Pay in 2025/26",
+                "headline": "£60,000 Salary Take-Home Pay in 2026/27",
                 "description": "Complete breakdown of what you'll actually receive from a £60k salary after income tax and National Insurance, including higher rate tax calculations.",
                 "datePublished": "2026-01-27T00:00:00.000Z",
                 "dateModified": "2026-01-27T00:00:00.000Z",
@@ -412,7 +412,7 @@ export default function Salary60k() {
                     "name": "How much is £60,000 after tax in the UK?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "On a £60,000 salary in 2025/26, you'll take home approximately £45,358 per year or £3,780 per month after income tax and National Insurance deductions."
+                      "text": "On a £60,000 salary in 2026/27, you'll take home approximately £45,358 per year or £3,780 per month after income tax and National Insurance deductions."
                     }
                   },
                   {

@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2025/26?",
+  title: "Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2026/27?",
   description: "Cash ISAs and Lifetime ISAs both offer tax-free savings, but they work very differently. Compare contribution limits, bonuses, penalties, and find out which is right for your situation.",
-  keywords: "cash ISA vs LISA, lifetime ISA, cash ISA, LISA bonus, ISA comparison, first-time buyer ISA, LISA penalty, tax-free savings 2025/26",
+  keywords: "cash ISA vs LISA, lifetime ISA, cash ISA, LISA bonus, ISA comparison, first-time buyer ISA, LISA penalty, tax-free savings 2026/27",
   openGraph: {
-    title: "Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2025/26?",
+    title: "Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2026/27?",
     description: "Cash ISAs and Lifetime ISAs both offer tax-free savings, but they work very differently. Compare limits, bonuses, penalties, and find the right one for you.",
     type: "article",
     publishedTime: "2026-03-28T00:00:00.000Z",
@@ -47,10 +47,10 @@ export default function ISAvsLISA() {
               </time>
               <span className="text-gray-500 text-sm">10 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2025/26?
+              Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2026/27?
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Both Cash ISAs and Lifetime ISAs let you save tax-free, but they serve very different purposes. Here&apos;s how they compare and which one makes sense for your goals.
@@ -458,7 +458,7 @@ export default function ISAvsLISA() {
             <div className="glass-light rounded-2xl p-8 bg-gray-50">
               <p className="text-sm text-gray-500">
                 <strong>Disclaimer:</strong> This guide is for informational purposes only and should not be considered financial advice.
-                Always consult with a qualified financial adviser for personalised guidance. ISA rules and limits are for the 2025/26 tax year and are subject to change. The Cash ISA limit reduction to &pound;12,000 for under-65s takes effect from April 2027. Information accurate as of March 2026.
+                Always consult with a qualified financial adviser for personalised guidance. ISA rules and limits are for the 2026/27 tax year and are subject to change. The Cash ISA limit reduction to &pound;12,000 for under-65s takes effect from April 2027. Information accurate as of March 2026.
               </p>
             </div>
 
@@ -471,7 +471,7 @@ export default function ISAvsLISA() {
               "@graph": [
                 {
                   "@type": "Article",
-                  "headline": "Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2025/26?",
+                  "headline": "Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2026/27?",
                   "description": "Cash ISAs and Lifetime ISAs both offer tax-free savings, but they work very differently. Compare contribution limits, bonuses, penalties, and find out which is right for your situation.",
                   "datePublished": "2026-03-28T00:00:00.000Z",
                   "dateModified": "2026-03-28T00:00:00.000Z",

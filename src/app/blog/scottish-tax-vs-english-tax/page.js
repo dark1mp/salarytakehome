@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?",
+  title: "Scottish Tax vs English Tax 2026/27: Who Pays More and By How Much?",
   description: "Scotland has 6 income tax bands compared to England's 3. See exactly how much more or less you'd pay depending on your salary, and at what point Scottish taxpayers start paying more.",
-  keywords: "Scottish tax rates 2025/26, Scotland vs England tax, Scottish income tax, Scottish tax bands, rest of UK tax comparison, Scottish taxpayer, S tax code",
+  keywords: "Scottish tax rates 2026/27, Scotland vs England tax, Scottish income tax, Scottish tax bands, rest of UK tax comparison, Scottish taxpayer, S tax code",
   openGraph: {
-    title: "Scottish Tax vs English Tax 2025/26: Who Pays More?",
+    title: "Scottish Tax vs English Tax 2026/27: Who Pays More?",
     description: "Scotland has 6 tax bands compared to England's 3. Here's exactly how much more (or less) you'd pay depending on your salary.",
     type: "article",
     publishedTime: "2026-03-19T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scottish Tax vs English Tax 2025/26: Who Pays More?",
+    title: "Scottish Tax vs English Tax 2026/27: Who Pays More?",
     description: "Scotland has 6 tax bands compared to England's 3. See exactly how much more or less you'd pay.",
   },
   alternates: {
@@ -33,7 +33,7 @@ export const metadata = {
 
 export default function ScottishTaxVsEnglishTax() {
   return (
-    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Scottish Tax vs English Tax 2025/26" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Scottish Tax vs English Tax 2026/27" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         <article className="max-w-4xl mx-auto px-4 py-12">
           {/* Header */}
@@ -47,10 +47,10 @@ export default function ScottishTaxVsEnglishTax() {
               </time>
               <span className="text-gray-500 text-sm">12 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?
+              Scottish Tax vs English Tax 2026/27: Who Pays More and By How Much?
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Scotland has 6 tax bands compared to England&apos;s 3. Here&apos;s exactly how much more (or less) you&apos;d pay depending on your salary &mdash; and at what point Scottish taxpayers start paying more.
@@ -76,7 +76,7 @@ export default function ScottishTaxVsEnglishTax() {
 
             {/* Side-by-Side Comparison Table */}
             <div className="glass-light rounded-2xl p-8 mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Side-by-Side: Scottish vs Rest of UK Tax Bands 2025/26</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Side-by-Side: Scottish vs Rest of UK Tax Bands 2026/27</h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
                   <thead>
@@ -328,7 +328,7 @@ export default function ScottishTaxVsEnglishTax() {
             <div className="glass-light rounded-2xl p-8 bg-gray-50">
               <p className="text-sm text-gray-500">
                 <strong>Disclaimer:</strong> This guide is for informational purposes only and should not be considered financial advice.
-                Always consult with a qualified tax professional for personalised guidance. Tax rates and thresholds are for the 2025/26 tax year and are subject to change. Information accurate as of March 2026.
+                Always consult with a qualified tax professional for personalised guidance. Tax rates and thresholds are for the 2026/27 tax year and are subject to change. Information accurate as of April 2026.
               </p>
             </div>
 
@@ -341,7 +341,7 @@ export default function ScottishTaxVsEnglishTax() {
               "@graph": [
                 {
                   "@type": "Article",
-                  "headline": "Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?",
+                  "headline": "Scottish Tax vs English Tax 2026/27: Who Pays More and By How Much?",
                   "description": "Scotland has 6 income tax bands compared to England's 3. See exactly how much more or less you'd pay depending on your salary, and at what point Scottish taxpayers start paying more.",
                   "datePublished": "2026-03-19T00:00:00.000Z",
                   "dateModified": "2026-03-19T00:00:00.000Z",
@@ -393,7 +393,7 @@ export default function ScottishTaxVsEnglishTax() {
           }} />
 
           <RelatedArticles articles={[
-            { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Planning", description: "Complete guide to rates and thresholds this tax year." },
+            { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "Complete guide to rates and thresholds for the new tax year." },
             { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "How the personal allowance taper creates a 60% rate." },
             { href: "/blog/50k-salary-take-home", title: "£50k Salary Take Home Pay", category: "Salary Guide", description: "Detailed breakdown of a £50,000 salary." },
             { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Practical strategies to keep more of your earnings." },

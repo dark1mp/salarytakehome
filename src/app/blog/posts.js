@@ -25,8 +25,8 @@ export const blogPosts = [
   },
   {
     slug: "uk-dividend-tax-explained",
-    title: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate (2025/26)",
-    description: "Complete guide to UK dividend tax for 2025/26. Learn about dividend tax rates (8.75%, 33.75%, 39.35%), the £500 allowance, how to calculate your bill, and strategies to reduce it.",
+    title: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate (2026/27)",
+    description: "Complete guide to UK dividend tax for 2026/27. Learn about dividend tax rates (8.75%, 33.75%, 39.35%), the £500 allowance, how to calculate your bill, and strategies to reduce it.",
     date: "2026-03-31",
     readTime: "12 min read",
     category: "Tax Planning",
@@ -35,7 +35,7 @@ export const blogPosts = [
   },
   {
     slug: "isa-vs-lisa",
-    title: "Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2025/26?",
+    title: "Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2026/27?",
     description: "Compare Cash ISAs and Lifetime ISAs side by side. See the 25% government bonus, withdrawal penalties, contribution limits, and which account suits your savings goals.",
     date: "2026-03-28",
     readTime: "10 min read",
@@ -45,7 +45,7 @@ export const blogPosts = [
   },
   {
     slug: "paye-vs-self-employed",
-    title: "PAYE vs Self-Employed Tax: Key Differences Explained for 2025/26",
+    title: "PAYE vs Self-Employed Tax: Key Differences Explained for 2026/27",
     description: "Compare how tax works for employees and self-employed workers. See the NI savings, expenses rules, payment dates, and worked examples at different income levels.",
     date: "2026-03-28",
     readTime: "12 min read",
@@ -55,7 +55,7 @@ export const blogPosts = [
   },
   {
     slug: "full-time-vs-part-time-tax",
-    title: "Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay in 2025/26",
+    title: "Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay in 2026/27",
     description: "Do part-time workers pay less tax? Understand how UK tax bands, NI thresholds, and pro-rata benefits work when you reduce your hours.",
     date: "2026-03-28",
     readTime: "10 min read",
@@ -106,7 +106,7 @@ export const blogPosts = [
   {
     slug: "uk-minimum-wage-2025-26",
     title: "UK Minimum Wage 2025/26: Hourly Rates, Take-Home Pay & Your Rights",
-    description: "Complete guide to UK minimum wage and National Living Wage rates for 2025/26. See what you'll actually take home after tax at every age band.",
+    description: "Historical reference: UK minimum wage and National Living Wage rates for 2025/26 (in force from April 2025 to April 2026). See what you'd have taken home after tax at every age band.",
     date: "2026-03-27",
     readTime: "9 min read",
     category: "Salary Guide",
@@ -145,7 +145,7 @@ export const blogPosts = [
   },
   {
     slug: "scottish-tax-vs-english-tax",
-    title: "Scottish Tax vs English Tax 2025/26: Who Pays More and By How Much?",
+    title: "Scottish Tax vs English Tax 2026/27: Who Pays More and By How Much?",
     description: "Scotland has 6 tax bands compared to England's 3. Here's exactly how much more (or less) you'd pay depending on your salary.",
     date: "2026-03-19",
     readTime: "12 min read",
@@ -155,7 +155,7 @@ export const blogPosts = [
   },
   {
     slug: "plan-1-vs-plan-2-student-loan",
-    title: "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2025/26",
+    title: "Plan 1 vs Plan 2 Student Loan: Key Differences Explained for 2026/27",
     description: "Not sure which plan you're on or how they compare? Here's everything about repayment thresholds, interest rates, and how much you'll actually repay.",
     date: "2026-03-19",
     readTime: "10 min read",
@@ -165,7 +165,7 @@ export const blogPosts = [
   },
   {
     slug: "salary-sacrifice-vs-personal-pension",
-    title: "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2025/26?",
+    title: "Salary Sacrifice vs Personal Pension: Which Saves You More Tax in 2026/27?",
     description: "Both get you tax relief on pension contributions — but salary sacrifice saves you National Insurance too. Here's exactly how much more you could save.",
     date: "2026-03-19",
     readTime: "12 min read",
@@ -195,7 +195,7 @@ export const blogPosts = [
   },
   {
     slug: "30k-salary-take-home",
-    title: "\u00a330,000 Salary Take-Home Pay in 2025/26",
+    title: "\u00a330,000 Salary Take-Home Pay in 2026/27",
     description: "Complete breakdown of what you'll actually receive from a \u00a330k salary after income tax and National Insurance.",
     date: "2026-01-27",
     readTime: "5 min read",
@@ -205,7 +205,7 @@ export const blogPosts = [
   },
   {
     slug: "40k-salary-take-home",
-    title: "\u00a340,000 Salary Take-Home Pay in 2025/26",
+    title: "\u00a340,000 Salary Take-Home Pay in 2026/27",
     description: "See exactly how much you'll take home from a \u00a340k salary, including tax, NI, and student loan deductions.",
     date: "2026-01-27",
     readTime: "5 min read",
@@ -215,7 +215,7 @@ export const blogPosts = [
   },
   {
     slug: "50k-salary-take-home",
-    title: "\u00a350,000 Salary Take-Home Pay in 2025/26",
+    title: "\u00a350,000 Salary Take-Home Pay in 2026/27",
     description: "Detailed breakdown of a \u00a350k salary after tax - and why you're closer to the higher rate threshold than you think.",
     date: "2026-01-27",
     readTime: "5 min read",
@@ -225,7 +225,7 @@ export const blogPosts = [
   },
   {
     slug: "60k-salary-take-home",
-    title: "\u00a360,000 Salary Take-Home Pay in 2025/26",
+    title: "\u00a360,000 Salary Take-Home Pay in 2026/27",
     description: "What you'll actually take home from a \u00a360k salary, including the impact of the 40% higher rate tax band.",
     date: "2026-01-27",
     readTime: "5 min read",

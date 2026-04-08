@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "PAYE vs Self-Employed Tax: Key Differences Explained for 2025/26",
-  description: "Compare PAYE and self-employed tax in the UK for 2025/26. See the differences in income tax, National Insurance, expenses, and take-home pay with worked examples at £40,000.",
+  title: "PAYE vs Self-Employed Tax: Key Differences Explained for 2026/27",
+  description: "Compare PAYE and self-employed tax in the UK for 2026/27. See the differences in income tax, National Insurance, expenses, and take-home pay with worked examples at £40,000.",
   keywords: "PAYE vs self-employed, self-employed tax, PAYE tax, National Insurance self-employed, Class 4 NI, Class 2 NI, self assessment, allowable expenses, sole trader tax",
   openGraph: {
-    title: "PAYE vs Self-Employed Tax: Key Differences Explained for 2025/26",
+    title: "PAYE vs Self-Employed Tax: Key Differences Explained for 2026/27",
     description: "PAYE employees and self-employed workers pay different rates of National Insurance. See exactly how much you'd take home under each system with worked examples.",
     type: "article",
     publishedTime: "2026-03-28T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PAYE vs Self-Employed Tax: Key Differences Explained for 2025/26",
+    title: "PAYE vs Self-Employed Tax: Key Differences Explained for 2026/27",
     description: "PAYE employees pay 8% NI while self-employed pay just 6%. See the full breakdown of tax differences with worked examples.",
   },
   alternates: {
@@ -47,13 +47,13 @@ export default function PAYEVsSelfEmployed() {
               </time>
               <span className="text-gray-500 text-sm">12 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              PAYE vs Self-Employed Tax: Key Differences Explained for 2025/26
+              PAYE vs Self-Employed Tax: Key Differences Explained for 2026/27
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Thinking about going freelance, or wondering how your tax bill compares to someone on PAYE? Here&apos;s a complete breakdown of the differences in income tax, National Insurance, expenses, and take-home pay for the 2025/26 tax year.
+              Thinking about going freelance, or wondering how your tax bill compares to someone on PAYE? Here&apos;s a complete breakdown of the differences in income tax, National Insurance, expenses, and take-home pay for the 2026/27 tax year.
             </p>
           </div>
 
@@ -540,7 +540,7 @@ export default function PAYEVsSelfEmployed() {
             <div className="glass-light rounded-2xl p-8 bg-gray-50">
               <p className="text-sm text-gray-500">
                 <strong>Disclaimer:</strong> This guide is for informational purposes only and should not be considered financial or tax advice.
-                Tax rates and thresholds are for the 2025/26 tax year and are subject to change. Self-employed tax calculations depend on your individual circumstances, including allowable expenses and other income. Always consult with a qualified accountant or tax adviser for personalised guidance. For official information, visit <a href="https://www.gov.uk/self-assessment-tax-returns" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Self Assessment</a>.
+                Tax rates and thresholds are for the 2026/27 tax year and are subject to change. Self-employed tax calculations depend on your individual circumstances, including allowable expenses and other income. Always consult with a qualified accountant or tax adviser for personalised guidance. For official information, visit <a href="https://www.gov.uk/self-assessment-tax-returns" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Self Assessment</a>.
               </p>
             </div>
 
@@ -553,8 +553,8 @@ export default function PAYEVsSelfEmployed() {
               "@graph": [
                 {
                   "@type": "Article",
-                  "headline": "PAYE vs Self-Employed Tax: Key Differences Explained for 2025/26",
-                  "description": "Compare PAYE and self-employed tax in the UK for 2025/26. See the differences in income tax, National Insurance, expenses, and take-home pay with worked examples.",
+                  "headline": "PAYE vs Self-Employed Tax: Key Differences Explained for 2026/27",
+                  "description": "Compare PAYE and self-employed tax in the UK for 2026/27. See the differences in income tax, National Insurance, expenses, and take-home pay with worked examples.",
                   "datePublished": "2026-03-28T00:00:00.000Z",
                   "dateModified": "2026-03-28T00:00:00.000Z",
                   "author": {
@@ -584,7 +584,7 @@ export default function PAYEVsSelfEmployed() {
                     },
                     {
                       "@type": "Question",
-                      "name": "What National Insurance do self-employed workers pay in 2025/26?",
+                      "name": "What National Insurance do self-employed workers pay in 2026/27?",
                       "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Self-employed workers pay two types of NI: Class 2 at £3.45 per week (if profits exceed £12,570), and Class 4 at 6% on profits between £12,570 and £50,270, then 2% on profits above £50,270. This compares to 8% and 2% for PAYE employees on the same thresholds."
@@ -624,7 +624,7 @@ export default function PAYEVsSelfEmployed() {
             { href: "/blog/self-employed-tax-calculator-guide", title: "Self-Employed Tax Calculator Guide", category: "Tax Planning", description: "How to estimate your income tax and NI as a sole trader." },
             { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap Explained", category: "Tax Planning", description: "How the personal allowance taper creates a 60% effective rate." },
             { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "How salary sacrifice can reduce your tax bill as a PAYE employee." },
-            { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "All the key tax rates and thresholds for the current tax year." },
+            { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "All the key tax rates and thresholds for the current tax year." },
           ]} />
         </article>
       </div>

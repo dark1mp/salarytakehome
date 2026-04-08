@@ -41,7 +41,7 @@ export default function SelfEmployedTaxGuide() {
             </time>
             <span className="text-gray-500 text-sm">9 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Self-Employed Tax Calculator: How to Estimate Your Tax Bill
@@ -55,7 +55,7 @@ export default function SelfEmployedTaxGuide() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💼 Self-Employed Tax Overview</h2>
             <p className="text-lg text-gray-700 mb-4">
-              As a self-employed person, you pay tax on your profits (income minus expenses) rather than your total income. The same <Link href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:text-blue-800 underline font-semibold">2025/26 income tax rates</Link> apply to the self-employed as to employees. This guide explains how to calculate your tax liability.
+              As a self-employed person, you pay tax on your profits (income minus expenses) rather than your total income. The same <Link href="/blog/uk-tax-changes-2026-27" className="text-blue-600 hover:text-blue-800 underline font-semibold">2026/27 income tax rates</Link> apply to the self-employed as to employees. This guide explains how to calculate your tax liability.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
@@ -366,7 +366,7 @@ export default function SelfEmployedTaxGuide() {
           })
         }} />
         <RelatedArticles articles={[
-          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Latest tax rates affecting the self-employed." },
+          { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "Latest tax rates affecting the self-employed." },
           { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "Tax relief on pension contributions." },
           { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
           { href: "/blog/student-loan-repayment-guide", title: "Student Loan Repayment Guide", category: "Student Loans", description: "How student loans work for the self-employed." },

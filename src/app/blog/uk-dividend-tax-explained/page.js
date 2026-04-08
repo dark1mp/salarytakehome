@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate (2025/26)",
-  description: "Complete guide to UK dividend tax for 2025/26. Learn about dividend tax rates (8.75%, 33.75%, 39.35%), the £500 allowance, how to calculate your bill, and strategies to reduce it.",
-  keywords: "dividend tax uk, dividend tax rates 2025/26, dividend allowance, how to calculate dividend tax, dividend tax explained, Ltd company dividends, dividend tax calculator",
+  title: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate (2026/27)",
+  description: "Complete guide to UK dividend tax for 2026/27. Learn about the new dividend tax rates (10.75%, 35.75%, 39.35%) that took effect from 6 April 2026, the £500 allowance, how to calculate your bill, and strategies to reduce it.",
+  keywords: "dividend tax uk, dividend tax rates 2026/27, dividend allowance, how to calculate dividend tax, dividend tax explained, Ltd company dividends, dividend tax calculator",
   openGraph: {
-    title: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate (2025/26)",
+    title: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate (2026/27)",
     description: "Complete guide to UK dividend tax. Rates, allowances, worked examples, and strategies to reduce your bill.",
     type: "article",
     publishedTime: "2026-03-31T00:00:00.000Z",
@@ -18,7 +18,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UK Dividend Tax Explained: Complete UK Guide 2025/26",
+    title: "UK Dividend Tax Explained: Complete UK Guide 2026/27",
     description: "Dividend tax rates, allowances, worked examples, and strategies to pay less.",
   },
   alternates: {
@@ -28,7 +28,7 @@ export const metadata = {
 
 export default function UkDividendTaxExplained() {
   return (
-    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate Your Bill (2025/26)" }]}>
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate Your Bill (2026/27)" }]}>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}
@@ -42,10 +42,10 @@ export default function UkDividendTaxExplained() {
             </time>
             <span className="text-gray-500 text-sm">12 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            UK Dividend Tax Explained: Rates, Allowances &amp; How to Calculate Your Bill (2025/26)
+            UK Dividend Tax Explained: Rates, Allowances &amp; How to Calculate Your Bill (2026/27)
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             Everything you need to know about how dividends are taxed in the UK, including current rates, worked examples, and practical strategies to reduce your bill.
@@ -61,10 +61,10 @@ export default function UkDividendTaxExplained() {
             <div className="grid lg:grid-cols-3 gap-6">
               <div className="bg-white rounded-xl p-5 border border-emerald-200 text-center">
                 <p className="text-emerald-700 text-3xl font-bold mb-1">&pound;500</p>
-                <p className="text-gray-600 text-sm">Tax-free dividend allowance for 2025/26</p>
+                <p className="text-gray-600 text-sm">Tax-free dividend allowance for 2026/27</p>
               </div>
               <div className="bg-white rounded-xl p-5 border border-emerald-200 text-center">
-                <p className="text-emerald-700 text-3xl font-bold mb-1">8.75%&ndash;39.35%</p>
+                <p className="text-emerald-700 text-3xl font-bold mb-1">10.75%&ndash;39.35%</p>
                 <p className="text-gray-600 text-sm">Dividend tax rates depending on your income band</p>
               </div>
               <div className="bg-white rounded-xl p-5 border border-emerald-200 text-center">
@@ -93,9 +93,9 @@ export default function UkDividendTaxExplained() {
             </div>
           </div>
 
-          {/* Dividend Tax Rates for 2025/26 */}
+          {/* Dividend Tax Rates for 2026/27 */}
           <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Dividend Tax Rates for 2025/26</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Dividend Tax Rates for 2026/27</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
               Dividend tax rates in the UK are set at the national level. Even if you&apos;re a{" "}
               <Link href="/blog/scottish-tax-vs-english-tax" className="text-blue-600 hover:text-blue-800 underline">Scottish taxpayer</Link>,
@@ -119,12 +119,12 @@ export default function UkDividendTaxExplained() {
                   <tr className="bg-gray-50">
                     <td className="p-3 border border-gray-200 text-gray-700">Basic rate</td>
                     <td className="p-3 border border-gray-200 text-gray-700">&pound;12,571 &ndash; &pound;50,270</td>
-                    <td className="p-3 border border-gray-200 text-right font-semibold text-emerald-700">8.75%</td>
+                    <td className="p-3 border border-gray-200 text-right font-semibold text-emerald-700">10.75%</td>
                   </tr>
                   <tr>
                     <td className="p-3 border border-gray-200 text-gray-700">Higher rate</td>
                     <td className="p-3 border border-gray-200 text-gray-700">&pound;50,271 &ndash; &pound;125,140</td>
-                    <td className="p-3 border border-gray-200 text-right font-semibold text-amber-700">33.75%</td>
+                    <td className="p-3 border border-gray-200 text-right font-semibold text-amber-700">35.75%</td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="p-3 border border-gray-200 text-gray-700">Additional rate</td>
@@ -135,7 +135,7 @@ export default function UkDividendTaxExplained() {
               </table>
             </div>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              These rates apply to dividends received in the 2025/26 tax year (6 April 2025 to 5 April 2026). For the latest official rates, see the{" "}
+              These rates apply to dividends received in the 2026/27 tax year (6 April 2026 to 5 April 2027). The basic and higher rates increased by 2 percentage points from 6 April 2026 (announced at Autumn Budget 2025); the additional rate is unchanged. For the latest official rates, see the{" "}
               <a href="https://www.gov.uk/tax-on-dividends" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">GOV.UK dividend tax guidance</a>.
             </p>
           </div>
@@ -146,7 +146,7 @@ export default function UkDividendTaxExplained() {
           <div className="glass-light rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">The Dividend Allowance</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Every UK taxpayer gets a tax-free dividend allowance each year. For 2025/26, this is <strong>&pound;500</strong>. The first &pound;500 of dividend income you receive is taxed at 0%, regardless of which tax band you&apos;re in.
+              Every UK taxpayer gets a tax-free dividend allowance each year. For 2026/27, this is <strong>&pound;500</strong>. The first &pound;500 of dividend income you receive is taxed at 0%, regardless of which tax band you&apos;re in.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
               It&apos;s important to understand that the dividend allowance is a <strong>0% rate band, not an exemption</strong>. Your dividends still count towards your total taxable income when determining which band you fall into &mdash; they&apos;re just taxed at 0% up to &pound;500.
@@ -180,7 +180,7 @@ export default function UkDividendTaxExplained() {
                     <td className="p-3 border border-gray-200 text-right font-semibold text-gray-900">&pound;500</td>
                   </tr>
                   <tr className="bg-emerald-50">
-                    <td className="p-3 border border-gray-200 text-emerald-700 font-semibold">2025/26</td>
+                    <td className="p-3 border border-gray-200 text-emerald-700 font-semibold">2026/27</td>
                     <td className="p-3 border border-gray-200 text-right font-semibold text-emerald-700">&pound;500</td>
                   </tr>
                 </tbody>
@@ -188,7 +188,7 @@ export default function UkDividendTaxExplained() {
             </div>
             <div className="bg-amber-50 rounded-xl p-6 border border-amber-200">
               <p className="text-amber-800 text-sm leading-relaxed">
-                <strong>Impact:</strong> The allowance has been slashed by 90% since 2016/17. A basic-rate taxpayer who received &pound;5,000 in dividends would have paid &pound;0 tax in 2016/17, but now pays &pound;393.75 on the same amount in 2025/26.
+                <strong>Impact:</strong> The allowance has been slashed by 90% since 2016/17, and the basic rate has risen too. A basic-rate taxpayer who received &pound;5,000 in dividends would have paid &pound;0 tax in 2016/17, but now pays &pound;483.75 on the same amount in 2026/27 (the £4,500 above the allowance × 10.75%).
               </p>
             </div>
           </div>
@@ -232,7 +232,7 @@ export default function UkDividendTaxExplained() {
                   <span className="bg-emerald-100 text-emerald-700 font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm flex-shrink-0">4</span>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Remaining dividends taxed at the applicable rate</h3>
-                    <p className="text-gray-600 text-sm">Dividends above the &pound;500 allowance are taxed at 8.75%, 33.75%, or 39.35% depending on which tax band they fall into.</p>
+                    <p className="text-gray-600 text-sm">Dividends above the &pound;500 allowance are taxed at 10.75%, 35.75%, or 39.35% depending on which tax band they fall into (2026/27 rates).</p>
                   </div>
                 </div>
               </div>
@@ -289,17 +289,17 @@ export default function UkDividendTaxExplained() {
                       <td className="p-3 border border-gray-200 text-right text-green-700">&minus;&pound;500</td>
                     </tr>
                     <tr>
-                      <td className="p-3 border border-gray-200 text-gray-700">Dividends taxed at 8.75% (basic rate)</td>
+                      <td className="p-3 border border-gray-200 text-gray-700">Dividends taxed at 10.75% (basic rate)</td>
                       <td className="p-3 border border-gray-200 text-right text-gray-900">&pound;29,500</td>
                     </tr>
                     <tr className="bg-emerald-50">
                       <td className="p-3 border border-gray-200 text-emerald-700 font-semibold">Total dividend tax</td>
-                      <td className="p-3 border border-gray-200 text-right text-emerald-700 font-semibold">&pound;2,581.25</td>
+                      <td className="p-3 border border-gray-200 text-right text-emerald-700 font-semibold">&pound;3,171.25</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p className="text-gray-600 text-sm">All &pound;30,000 of dividends falls within the basic rate band (salary uses &pound;12,570 of the &pound;50,270 threshold, leaving &pound;37,700 for dividends).</p>
+              <p className="text-gray-600 text-sm">All &pound;30,000 of dividends falls within the basic rate band (salary uses &pound;12,570 of the &pound;50,270 threshold, leaving &pound;37,700 for dividends). Compared with 2025/26 (£2,581.25 at 8.75%), this director now pays £590 more under the 2026/27 rates.</p>
             </div>
 
             {/* Example 2 */}
@@ -334,16 +334,16 @@ export default function UkDividendTaxExplained() {
                       <td className="p-3 border border-gray-200 text-right text-green-700">&minus;&pound;500</td>
                     </tr>
                     <tr>
-                      <td className="p-3 border border-gray-200 text-gray-700">Dividends at 8.75% (basic rate)</td>
-                      <td className="p-3 border border-gray-200 text-right text-gray-900">&pound;4,770 &rarr; &pound;417.38</td>
+                      <td className="p-3 border border-gray-200 text-gray-700">Dividends at 10.75% (basic rate)</td>
+                      <td className="p-3 border border-gray-200 text-right text-gray-900">&pound;4,770 &rarr; &pound;512.78</td>
                     </tr>
                     <tr className="bg-gray-50">
-                      <td className="p-3 border border-gray-200 text-gray-700">Dividends at 33.75% (higher rate)</td>
-                      <td className="p-3 border border-gray-200 text-right text-gray-900">&pound;4,730 &rarr; &pound;1,596.38</td>
+                      <td className="p-3 border border-gray-200 text-gray-700">Dividends at 35.75% (higher rate)</td>
+                      <td className="p-3 border border-gray-200 text-right text-gray-900">&pound;4,730 &rarr; &pound;1,690.98</td>
                     </tr>
                     <tr className="bg-emerald-50">
                       <td className="p-3 border border-gray-200 text-emerald-700 font-semibold">Total dividend tax</td>
-                      <td className="p-3 border border-gray-200 text-right text-emerald-700 font-semibold">&pound;2,013.76</td>
+                      <td className="p-3 border border-gray-200 text-right text-emerald-700 font-semibold">&pound;2,203.76</td>
                     </tr>
                   </tbody>
                 </table>
@@ -385,8 +385,8 @@ export default function UkDividendTaxExplained() {
                       <td className="p-3 border border-gray-200 text-right text-green-700">&minus;&pound;500</td>
                     </tr>
                     <tr>
-                      <td className="p-3 border border-gray-200 text-gray-700">Dividends at 33.75% (higher rate, up to &pound;125,140)</td>
-                      <td className="p-3 border border-gray-200 text-right text-gray-900">&pound;34,640 &rarr; &pound;11,691.00</td>
+                      <td className="p-3 border border-gray-200 text-gray-700">Dividends at 35.75% (higher rate, up to &pound;125,140)</td>
+                      <td className="p-3 border border-gray-200 text-right text-gray-900">&pound;34,640 &rarr; &pound;12,383.80</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="p-3 border border-gray-200 text-gray-700">Dividends at 39.35% (additional rate, above &pound;125,140)</td>
@@ -394,7 +394,7 @@ export default function UkDividendTaxExplained() {
                     </tr>
                     <tr className="bg-emerald-50">
                       <td className="p-3 border border-gray-200 text-emerald-700 font-semibold">Total dividend tax</td>
-                      <td className="p-3 border border-gray-200 text-right text-emerald-700 font-semibold">&pound;13,603.41</td>
+                      <td className="p-3 border border-gray-200 text-right text-emerald-700 font-semibold">&pound;14,296.21</td>
                     </tr>
                   </tbody>
                 </table>
@@ -480,7 +480,7 @@ export default function UkDividendTaxExplained() {
             </div>
             <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
               <p className="text-blue-800 text-sm leading-relaxed">
-                <strong>Note:</strong> The employer NI secondary threshold is &pound;5,000 for 2025/26, and employer NI is 15%. A salary of &pound;12,570 triggers &pound;1,044 in employer NI ((&pound;12,570 &minus; &pound;5,000) &times; 13.8%). This is a company cost, not a personal one, but it reduces the profits available for dividends.
+                <strong>Note:</strong> The employer NI secondary threshold is &pound;5,000 for 2026/27, and employer NI is 15%. A salary of &pound;12,570 triggers &pound;1,044 in employer NI ((&pound;12,570 &minus; &pound;5,000) &times; 13.8%). This is a company cost, not a personal one, but it reduces the profits available for dividends.
               </p>
             </div>
           </div>
@@ -513,10 +513,10 @@ export default function UkDividendTaxExplained() {
               If you live in Scotland, you pay Scottish income tax rates on your salary &mdash; which currently has five bands ranging from 19% to 48%. However, <strong>dividend tax rates are the same across the whole UK</strong>.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Whether you live in Edinburgh or London, you pay 8.75%, 33.75%, or 39.35% on your dividends. Dividend tax is a reserved matter, meaning it&apos;s controlled by Westminster, not Holyrood.
+              Whether you live in Edinburgh or London, you pay 10.75%, 35.75%, or 39.35% on your dividends (2026/27 rates). Dividend tax is a reserved matter, meaning it&apos;s controlled by Westminster, not Holyrood.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              This can actually benefit Scottish higher-rate taxpayers. While they pay 42% income tax on salary (compared to 40% in England), their dividend tax rate in the higher band is the same 33.75%. Learn more about the differences in our{" "}
+              This can actually benefit Scottish higher-rate taxpayers. While they pay 42% income tax on salary (compared to 40% in England), their dividend tax rate in the higher band is the same UK-wide 35.75%. Learn more about the differences in our{" "}
               <Link href="/blog/scottish-tax-vs-english-tax" className="text-blue-600 hover:text-blue-800 underline">Scottish tax vs English tax comparison</Link>.
             </p>
           </div>
@@ -534,7 +534,7 @@ export default function UkDividendTaxExplained() {
               </div>
               <div className="bg-white rounded-xl p-5 border border-gray-200">
                 <h3 className="font-semibold text-gray-900 mb-1">Over &pound;10,000 in dividends</h3>
-                <p className="text-gray-600 text-sm">You must register for Self Assessment and file a tax return. The deadline is 31 January following the end of the tax year (e.g., 31 January 2027 for 2025/26).</p>
+                <p className="text-gray-600 text-sm">You must register for Self Assessment and file a tax return. The deadline is 31 January following the end of the tax year (e.g., 31 January 2027 for 2026/27).</p>
               </div>
               <div className="bg-white rounded-xl p-5 border border-gray-200">
                 <h3 className="font-semibold text-gray-900 mb-1">Payment on Account</h3>
@@ -564,7 +564,7 @@ export default function UkDividendTaxExplained() {
               </div>
               <div className="bg-blue-50 rounded-xl p-5 border border-blue-200">
                 <h3 className="font-semibold text-blue-800 mb-2">ISA Dividends Are Tax-Free</h3>
-                <p className="text-blue-700 text-sm">Dividends received on shares held within a Stocks &amp; Shares ISA are completely tax-free. The annual ISA allowance is &pound;20,000 for 2025/26. Over time, building an ISA portfolio can shelter significant dividend income.</p>
+                <p className="text-blue-700 text-sm">Dividends received on shares held within a Stocks &amp; Shares ISA are completely tax-free. The annual ISA allowance is &pound;20,000 for 2026/27. Over time, building an ISA portfolio can shelter significant dividend income.</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-5 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Spouse Dividend Allocation</h3>
@@ -582,11 +582,11 @@ export default function UkDividendTaxExplained() {
             </p>
           </div>
 
-          {/* Upcoming Changes */}
+          {/* What changed in 2026/27 */}
           <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Upcoming Changes: April 2026</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">What changed for 2026/27: the 2pp rate rise</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              The Autumn Budget 2024 announced increases to dividend tax rates from April 2026 (the 2026/27 tax year). The basic rate will increase by 1.25 percentage points, and the higher and additional rates will also rise:
+              The Autumn Budget 2025 announced an increase of 2 percentage points to the basic and higher rates of dividend tax, in force from 6 April 2026. The additional rate is unchanged. The £500 dividend allowance is also unchanged.
             </p>
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm border-collapse">
@@ -595,34 +595,35 @@ export default function UkDividendTaxExplained() {
                     <th className="text-left p-3 border border-red-200 font-semibold text-red-800">Band</th>
                     <th className="text-right p-3 border border-red-200 font-semibold text-red-800">2025/26 Rate</th>
                     <th className="text-right p-3 border border-red-200 font-semibold text-red-800">2026/27 Rate</th>
-                    <th className="text-right p-3 border border-red-200 font-semibold text-red-800">Increase</th>
+                    <th className="text-right p-3 border border-red-200 font-semibold text-red-800">Change</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td className="p-3 border border-gray-200 text-gray-700">Basic</td>
                     <td className="p-3 border border-gray-200 text-right text-gray-900">8.75%</td>
-                    <td className="p-3 border border-gray-200 text-right text-red-700">10.00%</td>
-                    <td className="p-3 border border-gray-200 text-right text-red-700">+1.25pp</td>
+                    <td className="p-3 border border-gray-200 text-right text-red-700 font-semibold">10.75%</td>
+                    <td className="p-3 border border-gray-200 text-right text-red-700">+2pp</td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="p-3 border border-gray-200 text-gray-700">Higher</td>
                     <td className="p-3 border border-gray-200 text-right text-gray-900">33.75%</td>
-                    <td className="p-3 border border-gray-200 text-right text-red-700">35.00%</td>
-                    <td className="p-3 border border-gray-200 text-right text-red-700">+1.25pp</td>
+                    <td className="p-3 border border-gray-200 text-right text-red-700 font-semibold">35.75%</td>
+                    <td className="p-3 border border-gray-200 text-right text-red-700">+2pp</td>
                   </tr>
                   <tr>
                     <td className="p-3 border border-gray-200 text-gray-700">Additional</td>
                     <td className="p-3 border border-gray-200 text-right text-gray-900">39.35%</td>
-                    <td className="p-3 border border-gray-200 text-right text-red-700">40.60%</td>
-                    <td className="p-3 border border-gray-200 text-right text-red-700">+1.25pp</td>
+                    <td className="p-3 border border-gray-200 text-right text-gray-900">39.35%</td>
+                    <td className="p-3 border border-gray-200 text-right text-gray-700">No change</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              If you have flexibility over when to declare dividends, you may want to consider timing larger distributions before April 2026 to benefit from the current lower rates. For the latest announcements, check the{" "}
-              <a href="https://www.gov.uk/government/publications/income-tax-dividend-allowance/income-tax-dividend-allowance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">GOV.UK income tax dividend allowance page</a>.
+              The change was primarily aimed at owner-managed companies where directors take a low salary plus dividends. A higher-rate taxpayer receiving £10,000 of dividends now pays an extra £190 in tax compared with 2025/26 (£9,500 taxable × 2pp). A Ltd company director taking £40,000 of dividends on top of a £12,570 salary pays around £790 more. For the official rates and announcements, see the{" "}
+              <a href="https://www.gov.uk/tax-on-dividends" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">GOV.UK tax on dividends page</a> and our{" "}
+              <Link href="/blog/uk-tax-changes-2026-27" className="text-blue-600 hover:text-blue-800 underline">UK Tax Changes 2026/27 guide</Link>.
             </p>
           </div>
 
@@ -653,7 +654,7 @@ export default function UkDividendTaxExplained() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">What&apos;s the difference between dividend tax and Corporation Tax?</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Corporation Tax is paid by the company on its profits before any dividends are distributed. Dividend tax is then paid by the individual shareholder who receives the dividends. They are two separate taxes &mdash; the company pays Corporation Tax (19%&ndash;25%), and the individual pays dividend tax (8.75%&ndash;39.35%) on what they receive. The lower dividend tax rates partly reflect the fact that Corporation Tax has already been paid.
+                  Corporation Tax is paid by the company on its profits before any dividends are distributed. Dividend tax is then paid by the individual shareholder who receives the dividends. They are two separate taxes &mdash; the company pays Corporation Tax (19%&ndash;25%), and the individual pays dividend tax (10.75%&ndash;39.35% in 2026/27) on what they receive. The lower dividend tax rates partly reflect the fact that Corporation Tax has already been paid.
                 </p>
               </div>
               <div>
@@ -671,7 +672,7 @@ export default function UkDividendTaxExplained() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">Will dividend tax rates change in 2026/27?</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Yes. The government has announced that dividend tax rates will increase by 1.25 percentage points from April 2026. The basic rate will rise from 8.75% to 10%, the higher rate from 33.75% to 35%, and the additional rate from 39.35% to 40.60%. The dividend allowance is expected to remain at &pound;500.
+                  Yes &mdash; from 6 April 2026, the basic and higher dividend rates each rose by 2 percentage points. The basic rate is now 10.75% (up from 8.75%), the higher rate is 35.75% (up from 33.75%), and the additional rate remains 39.35%. The £500 dividend allowance is unchanged. This was announced at Autumn Budget 2025 and is in force for the 2026/27 tax year.
                 </p>
               </div>
             </div>
@@ -680,7 +681,7 @@ export default function UkDividendTaxExplained() {
           {/* Disclaimer */}
           <div className="glass-light rounded-2xl p-8 bg-gray-50">
             <p className="text-sm text-gray-500">
-              <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute financial or tax advice. Tax rules can change and individual circumstances vary. Always consult a qualified accountant or tax adviser before making financial decisions based on this information. Data reflects the 2025/26 tax year unless stated otherwise.
+              <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute financial or tax advice. Tax rules can change and individual circumstances vary. Always consult a qualified accountant or tax adviser before making financial decisions based on this information. Data reflects the 2026/27 tax year unless stated otherwise.
             </p>
           </div>
 
@@ -693,8 +694,8 @@ export default function UkDividendTaxExplained() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "UK Dividend Tax Explained: Rates, Allowances & How to Calculate Your Bill (2025/26)",
-                "description": "Complete guide to UK dividend tax for 2025/26. Learn about dividend tax rates, the £500 allowance, how to calculate your bill, and strategies to reduce it.",
+                "headline": "UK Dividend Tax Explained: Rates, Allowances & How to Calculate Your Bill (2026/27)",
+                "description": "Complete guide to UK dividend tax for 2026/27. Learn about dividend tax rates, the £500 allowance, how to calculate your bill, and strategies to reduce it.",
                 "datePublished": "2026-03-31T00:00:00.000Z",
                 "dateModified": "2026-03-31T00:00:00.000Z",
                 "author": {
@@ -727,7 +728,7 @@ export default function UkDividendTaxExplained() {
                     "name": "What's the difference between dividend tax and Corporation Tax?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Corporation Tax is paid by the company on its profits before any dividends are distributed. Dividend tax is then paid by the individual shareholder who receives the dividends. They are two separate taxes — the company pays Corporation Tax (19%–25%), and the individual pays dividend tax (8.75%–39.35%) on what they receive."
+                      "text": "Corporation Tax is paid by the company on its profits before any dividends are distributed. Dividend tax is then paid by the individual shareholder who receives the dividends. They are two separate taxes — the company pays Corporation Tax (19%–25%), and the individual pays dividend tax (10.75%–39.35% in 2026/27) on what they receive."
                     }
                   },
                   {
@@ -751,7 +752,7 @@ export default function UkDividendTaxExplained() {
                     "name": "Will dividend tax rates change in 2026/27?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes. The government has announced that dividend tax rates will increase by 1.25 percentage points from April 2026. The basic rate will rise from 8.75% to 10%, the higher rate from 33.75% to 35%, and the additional rate from 39.35% to 40.60%. The dividend allowance is expected to remain at £500."
+                      "text": "Yes — from 6 April 2026, the basic and higher dividend rates each rose by 2 percentage points. The basic rate is now 10.75% (up from 8.75%), the higher rate is 35.75% (up from 33.75%), and the additional rate remains 39.35%. The £500 dividend allowance is unchanged. This was announced at Autumn Budget 2025 and is in force for the 2026/27 tax year."
                     }
                   }
                 ]

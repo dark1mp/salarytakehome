@@ -47,7 +47,7 @@ export default function StudentLoanRefund() {
             </time>
             <span className="text-gray-500 text-sm">16 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Are You Owed Money? The Student Loan Refund Thousands of UK Graduates Are Missing
@@ -139,8 +139,8 @@ export default function StudentLoanRefund() {
             <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
               <h3 className="font-semibold text-gray-900 mb-3">The thresholds for 2025-26 are:</h3>
               <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• <strong>Plan 1:</strong> £26,065 per year (£2,172/month)</li>
-                <li>• <strong>Plan 2:</strong> £28,470 per year (£2,372/month)</li>
+                <li>• <strong>Plan 1:</strong> £26,900 per year (£2,242/month)</li>
+                <li>• <strong>Plan 2:</strong> £29,385 per year (£2,449/month)</li>
                 <li>• <strong>Plan 4 (Scotland):</strong> £31,905 per year (£2,659/month)</li>
                 <li>• <strong>Plan 5:</strong> £25,000 per year (£2,083/month)</li>
                 <li>• <strong>Postgraduate Loan:</strong> £21,000 per year (£1,750/month)</li>
@@ -542,7 +542,7 @@ export default function StudentLoanRefund() {
           { href: "/blog/student-loan-repayment-guide", title: "Student Loan Repayment Guide", category: "Student Loans", description: "Everything you need to know about student loan repayments." },
           { href: "/blog/30k-salary-take-home", title: "£30k Salary Take Home Pay", category: "Salary Guide", description: "See how student loans affect a £30k salary." },
           { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
-          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Latest tax rates and thresholds for this year." },
+          { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "Latest tax rates and thresholds for this year." },
         ]} />
       </article>
     </div>
