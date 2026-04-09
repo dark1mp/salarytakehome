@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, Suspense } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import LayoutWrapper from '../components/LayoutWrapper';
 import AdUnit from '../components/AdUnit';
@@ -8,8 +9,33 @@ import { blogPosts as posts, blogCategories as categories } from './posts';
 // Map description -> excerpt for display compatibility
 const blogPosts = posts.map(p => ({ ...p, excerpt: p.description }));
 
-export default function Blog() {
+// Count posts per category
+const categoryCounts = categories.reduce((acc, cat) => {
+  acc[cat] = cat === "All" ? blogPosts.length : blogPosts.filter(p => p.category === cat).length;
+  return acc;
+}, {});
+
+function BlogInner() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const categoryParam = searchParams.get('category');
   const [selectedCategory, setSelectedCategory] = useState("All");
+
+  // Sync category from URL on mount
+  useEffect(() => {
+    if (categoryParam && categories.includes(categoryParam)) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [categoryParam]);
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    if (category === "All") {
+      router.replace('/blog', { scroll: false });
+    } else {
+      router.replace(`/blog?category=${encodeURIComponent(category)}`, { scroll: false });
+    }
+  };
 
   // Filter posts based on selected category
   const filteredPosts = useMemo(() => {
@@ -46,8 +72,8 @@ export default function Blog() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full backdrop-blur-sm border transition-all duration-200 font-medium ${
+              onClick={() => handleCategoryChange(category)}
+              className={`px-4 py-2 rounded-full backdrop-blur-sm border transition-all duration-200 font-medium flex items-center gap-2 ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-blue-500 shadow-lg'
                   : 'bg-white/60 border-white/20 hover:bg-white/80 text-gray-700 hover:text-blue-600'
@@ -56,6 +82,13 @@ export default function Blog() {
               aria-pressed={selectedCategory === category}
             >
               {category}
+              <span className={`text-xs px-1.5 py-0.5 rounded-full ${
+                selectedCategory === category
+                  ? 'bg-white/20 text-white'
+                  : 'bg-gray-100 text-gray-500'
+              }`}>
+                {categoryCounts[category]}
+              </span>
             </button>
           ))}
         </div>
@@ -158,4 +191,12 @@ export default function Blog() {
       </div>
     </LayoutWrapper>
   );
-} 
+}
+
+export default function Blog() {
+  return (
+    <Suspense fallback={null}>
+      <BlogInner />
+    </Suspense>
+  );
+}

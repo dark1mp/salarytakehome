@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "£40,000 Salary Take-Home Pay 2026/27 | After Tax Calculator",
+  title: "£40,000 After Tax UK 2026/27 — Take-Home Pay on a £40k Salary",
   description: "Find out exactly how much you take home from a £40,000 salary in 2026/27. Full breakdown of income tax, National Insurance, and monthly take-home pay.",
   keywords: "40000 salary, 40k salary, take home pay 40000, 40k after tax, salary calculator 40000",
   openGraph: {
-    title: "£40,000 Salary Take-Home Pay 2026/27",
+    title: "£40,000 After Tax UK 2026/27 — £40k Take-Home Pay",
     description: "Complete breakdown of take-home pay on a £40k salary including tax and NI deductions.",
     type: "article",
     publishedTime: "2026-01-27T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "£40,000 Salary Take-Home Pay 2026/27",
+    title: "£40,000 After Tax UK 2026/27 — £40k Take-Home Pay",
     description: "How much do you take home from a £40k salary? Full breakdown inside.",
   },
   alternates: {
@@ -83,8 +83,11 @@ export default function Salary40k() {
             <p className="text-gray-700 mb-4 text-lg leading-relaxed">
               A £40,000 salary puts you comfortably above the UK average. It&apos;s a milestone that many professionals reach after several years in their career. But how much actually lands in your bank account each month?
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed mb-4">
               After income tax and National Insurance, you&apos;ll take home approximately <strong>£32,320 per year</strong>, or <strong>£2,693 per month</strong>. That means you&apos;re keeping about 80.8% of your gross salary.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              For a detailed comparison, see what you&apos;d take home on a <Link href="/blog/35k-salary-take-home" className="text-blue-600 hover:underline">£35,000 salary</Link> or a <Link href="/blog/45k-salary-take-home" className="text-blue-600 hover:underline">£45,000 salary</Link>.
             </p>
           </div>
 
@@ -197,21 +200,21 @@ export default function Salary40k() {
             <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 1 (Pre-2012)</h3>
-                <p className="text-purple-700 text-sm">Threshold: £26,065</p>
-                <p className="text-purple-700 text-sm">Annual repayment: £1,254</p>
-                <p className="text-purple-900 font-semibold">Take-home: £31,066/year</p>
+                <p className="text-purple-700 text-sm">Threshold: £26,900</p>
+                <p className="text-purple-700 text-sm">Annual repayment: £1,179</p>
+                <p className="text-purple-900 font-semibold">Take-home: £31,141/year</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 2 (Post-2012)</h3>
-                <p className="text-purple-700 text-sm">Threshold: £28,470</p>
-                <p className="text-purple-700 text-sm">Annual repayment: £1,038</p>
-                <p className="text-purple-900 font-semibold">Take-home: £31,282/year</p>
+                <p className="text-purple-700 text-sm">Threshold: £29,385</p>
+                <p className="text-purple-700 text-sm">Annual repayment: £955</p>
+                <p className="text-purple-900 font-semibold">Take-home: £31,365/year</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 4 (Scotland)</h3>
-                <p className="text-purple-700 text-sm">Threshold: £31,395</p>
-                <p className="text-purple-700 text-sm">Annual repayment: £774</p>
-                <p className="text-purple-900 font-semibold">Take-home: £31,546/year</p>
+                <p className="text-purple-700 text-sm">Threshold: £33,795</p>
+                <p className="text-purple-700 text-sm">Annual repayment: £558</p>
+                <p className="text-purple-900 font-semibold">Take-home: £31,762/year</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 5 (Post-2023)</h3>
@@ -239,14 +242,15 @@ export default function Salary40k() {
               <h3 className="font-semibold text-blue-800 mb-2">Salary Comparisons</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="text-blue-600">£35,000 take-home:</p>
+                  <p className="text-blue-600"><Link href="/blog/35k-salary-take-home" className="text-blue-600 hover:underline">£35,000</Link> take-home:</p>
                   <p className="text-blue-800 font-semibold">£28,910/year</p>
                 </div>
                 <div>
-                  <p className="text-blue-600">£45,000 take-home:</p>
+                  <p className="text-blue-600"><Link href="/blog/45k-salary-take-home" className="text-blue-600 hover:underline">£45,000</Link> take-home:</p>
                   <p className="text-blue-800 font-semibold">£35,720/year</p>
                 </div>
               </div>
+              <p className="text-blue-700 text-sm mt-3">See all salary breakdowns from <Link href="/salary-breakdown" className="text-blue-600 hover:underline">£20k to £100k</Link>.</p>
             </div>
           </div>
 
@@ -325,7 +329,7 @@ export default function Salary40k() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "£40,000 Salary Take-Home Pay in 2026/27",
+                "headline": "£40,000 After Tax UK 2026/27 — Take-Home Pay on a £40k Salary",
                 "description": "Complete breakdown of what you'll actually receive from a £40k salary after income tax and National Insurance.",
                 "datePublished": "2026-01-27T00:00:00.000Z",
                 "dateModified": "2026-01-27T00:00:00.000Z",
@@ -376,10 +380,10 @@ export default function Salary40k() {
           })
         }} />
         <RelatedArticles articles={[
+          { href: "/blog/35k-salary-take-home", title: "£35k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £35,000 salary." },
+          { href: "/blog/45k-salary-take-home", title: "£45k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £45,000 salary." },
           { href: "/blog/30k-salary-take-home", title: "£30k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £30,000 salary." },
           { href: "/blog/50k-salary-take-home", title: "£50k Salary Take Home Pay", category: "Salary Guide", description: "Breakdown of a £50k salary after tax and NI." },
-          { href: "/blog/pay-rise-negotiation-guide", title: "How to Negotiate a Pay Rise", category: "Money Tips", description: "Expert tips to negotiate a higher salary in 2026." },
-          { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "How pension contributions reduce your tax bill." },
         ]} />
       </article>
     </div>

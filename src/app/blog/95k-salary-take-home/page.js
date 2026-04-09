@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "£95,000 Salary Take-Home Pay 2026/27 | After Tax Calculator",
+  title: "£95,000 After Tax UK 2026/27 — Take-Home Pay on a £95k Salary",
   description: "Find out exactly how much you take home from a £95,000 salary in 2026/27. Full breakdown of income tax at basic and higher rates, National Insurance, and monthly take-home pay.",
   keywords: "95000 salary, 95k salary, take home pay 95000, 95k after tax, salary calculator 95000, higher rate tax, 100k tax trap",
   openGraph: {
-    title: "£95,000 Salary Take-Home Pay 2026/27",
+    title: "£95,000 After Tax UK 2026/27 — £95k Take-Home Pay",
     description: "Complete breakdown of take-home pay on a £95k salary including basic and higher rate tax deductions.",
     type: "article",
     publishedTime: "2026-04-09T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "£95,000 Salary Take-Home Pay 2026/27",
+    title: "£95,000 After Tax UK 2026/27 — £95k Take-Home Pay",
     description: "How much do you take home from a £95k salary? Full breakdown including higher rate tax.",
   },
   alternates: {
@@ -359,7 +359,7 @@ export default function Salary95k() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "£95,000 Salary Take-Home Pay in 2026/27",
+                "headline": "£95,000 After Tax UK 2026/27 — Take-Home Pay on a £95k Salary",
                 "description": "Complete breakdown of what you'll actually receive from a £95k salary after income tax and National Insurance, including higher rate tax calculations.",
                 "datePublished": "2026-04-09T00:00:00.000Z",
                 "dateModified": "2026-04-09T00:00:00.000Z",

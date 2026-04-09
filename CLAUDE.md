@@ -58,6 +58,7 @@ src/app/
 ├── tax-code/                    # Tax code decoder/checker (not a calculator — no tax data)
 ├── salary-per-second/           # Fun salary converter — no tax, just time-period breakdowns + live counter
 ├── dividend-tax/                # Dividend tax calculator — salary + dividends, tax by band, PA tapering
+├── salary-breakdown/            # Salary hub page — links to all 17 salary breakdown posts (£20k-£100k)
 ├── blog/                        # Blog listing + individual posts
 │   ├── posts.js                 # Shared blog post data (single source of truth)
 │   ├── page.js                  # Blog index (imports from posts.js)
@@ -134,7 +135,7 @@ Historical posts (`uk-tax-changes-2025-26`, `uk-minimum-wage-2025-26`, etc.) are
 
 ## Blog
 
-35+ blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes 6 "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension, ISA vs LISA, PAYE vs self-employed, full-time vs part-time tax) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay, uk-dividend-tax-explained supports /dividend-tax). Every calculator has at least one dedicated blog post linking back to it. Two dated posts are refreshed each tax year (`uk-tax-changes-YYYY-YY`, `uk-minimum-wage-YYYY-YY`) with the old versions kept as historical reference — see the "Dated vs evergreen posts" note in Key Decisions.
+48 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes 6 "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension, ISA vs LISA, PAYE vs self-employed, full-time vs part-time tax) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay, uk-dividend-tax-explained supports /dividend-tax). Every calculator has at least one dedicated blog post linking back to it. Two dated posts are refreshed each tax year (`uk-tax-changes-YYYY-YY`, `uk-minimum-wage-YYYY-YY`) with the old versions kept as historical reference — see the "Dated vs evergreen posts" note in Key Decisions.
 
 ### Topic Cluster Blog Posts
 
@@ -152,6 +153,7 @@ Every calculator has at least one dedicated supporting blog post:
 | First-Time Buyer Mortgage Guide | `/blog/first-time-buyer-mortgage-guide` | /mortgages |
 | How to Pay Off Debt Faster | `/blog/how-to-pay-off-debt-faster` | /debts |
 | UK Dividend Tax Explained | `/blog/uk-dividend-tax-explained` | /dividend-tax |
+| UK Tax Codes Explained | `/blog/understanding-uk-tax-code` | /tax-code |
 | UK Tax Changes 2026/27 | `/blog/uk-tax-changes-2026-27` | /take-home-pay-calculator (current year hub) |
 | UK Tax Changes 2025/26 | `/blog/uk-tax-changes-2025-26` | historical reference |
 
@@ -253,20 +255,21 @@ Every calculator has at least one dedicated supporting blog post:
 - **Tax Code Checker has no dedicated blog post yet** — A supporting blog post (e.g. "UK Tax Codes Explained") would complete the topic cluster pattern. The Related Reading section currently links to existing posts (understanding-uk-tax-code, scottish-tax-vs-english-tax, maximize-take-home-pay).
 - **Salary Per Second is entertainment, not a calculator** — `/salary-per-second` has no tax data or calculation logic. It divides an annual salary by time periods and shows a live counter using `requestAnimationFrame`. Working assumptions: 52 weeks, 260 working days, 1,950 working hours (37.5hr week). The live counter uses calendar seconds (31,557,600/year) since salaried earnings accrue continuously. Uses the same fullWidth LayoutWrapper pattern as calculators.
 - **Salary Per Second has preset buttons** — 8 quick-select buttons for famous salaries (UK Average, Median, PM, Haaland, Salah, NHS Nurse, Teacher, Min Wage). Results update instantly as user types (no submit button, uses `useMemo`). Footballer salary figures are approximate — update if reported wages change.
+- **Salary Per Second has shareable URLs** — supports `?salary=X` query param. A "Share these results" button copies the link to clipboard. The page uses `useSearchParams()` wrapped in a `<Suspense>` boundary (same pattern as dividend-tax). The inner component is `SalaryPerSecondInner` and the default export wraps it in Suspense.
+- **Hreflang tags** — Root layout has `<link rel="alternate" hreflang="en-gb">` and `<link rel="alternate" hreflang="x-default">` pointing to the site root. `<html lang="en-GB">` is set for consistency.
+- **Salary breakdown blog posts cover £20k-£100k** — 17 posts in £5k increments (20k, 25k, 30k, 35k, 40k, 45k, 50k, 55k, 60k, 65k, 70k, 75k, 80k, 85k, 90k, 95k, 100k). Each has full tax breakdown, student loan comparisons, Article + FAQPage schema, and cross-links to adjacent salary posts. The £100k post includes a prominent PA taper trap warning. Posts £55k+ show split basic/higher rate tax rows. Title tag format: "£X After Tax UK 2026/27 — Take-Home Pay on a £Xk Salary" (targets "X after tax" search queries).
+- **Salary hub page** — `/salary-breakdown` is a pillar page with 17 color-coded salary cards (green=basic rate, amber=higher rate, red=£100k trap) linking to each breakdown post. Includes `ItemList` JSON-LD schema for carousel eligibility and FAQPage schema (7 questions). Uses LayoutWrapper with `narrow` prop.
+- **Blog category filtering is shareable** — The blog index at `/blog` supports `?category=Salary+Guide` (etc.) URL params for shareable filtered views. Category buttons show post count badges. Uses `useSearchParams()` wrapped in Suspense (same pattern as dividend-tax and salary-per-second).
 - **Dividend Tax Calculator calculates dividend tax only** — `/dividend-tax` takes salary and dividend inputs and calculates tax on dividends using UK-wide rates (10.75%/35.75%/39.35% from 2026/27; 8.75%/33.75%/39.35% in 2025/26 and earlier). It does NOT calculate income tax or NI on the salary — that's what the take-home pay calculator is for. Key rules implemented: dividends are the "top slice" (sit above salary in bands), dividend allowance (£500 from 2024/25 onwards, was £1,000 in 2023/24 and £2,000 before that), Personal Allowance tapering above £100k, unused PA can shelter dividends. Scottish taxpayers pay UK-wide dividend rates (not Scottish rates). Historical rates differ: 2021/22 used 7.5%/32.5%/38.1% before the 1.25pp Health & Social Care Levy increase, and Autumn Budget 2025 added another 2pp to the basic and higher rates from April 2026. Uses the same fullWidth LayoutWrapper pattern with results-aligned sidebar ad.
 - **Dividend Tax Calculator has preset buttons** — 4 quick-select scenario buttons (Ltd Director Low Salary, Ltd Director High, Employed + Shares, High Earner + Dividends). Results update instantly via `useMemo` (no submit button). Uses emerald/teal colour theme to differentiate from other calculators.
 - **Dividend Tax Calculator has shareable URLs** — supports `?salary=X&dividends=Y&year=Z` query params. A "Share these results" button copies the link to clipboard. The page uses `useSearchParams()` wrapped in a `<Suspense>` boundary (required by Next.js for static generation). The inner component is `DividendTaxCalculatorInner` and the default export wraps it in Suspense.
 - **Dividend Tax Calculator has 9 educational cards** — How Dividend Tax Works, Dividend Tax Rates, Dividend Allowance History, Ltd Company Director Strategy, Scottish Taxpayers & Dividends, £100k Trap & Dividends, Reporting Dividends to HMRC, Dividend Tax vs Capital Gains Tax, and Tips to Reduce Your Dividend Tax Bill (full-width with 4-card grid).
 
 ## Known Gaps / TODO
-- Salary breakdown pages only cover £30k-£60k (could expand £20k-£100k)
 - Tax data is duplicated across calculator files (could be centralised)
-- No hreflang tags (should add `en-gb`)
 - No table of contents on long blog posts
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
 - `/pay-rise` and `/take-home-pay-calculator` have two ad units (top + in-content) — other calculators only have the top ad unit and could benefit from an in-content one too
 - Educational content depth varies — `/pay-rise` has ~3,500 words of educational content; other calculators now have ~2,500-3,000 words after adding cards in March 2026, but could still be expanded further to match pay-rise's depth
-- `/tax-code` has no dedicated supporting blog post yet — needs a "UK Tax Codes Explained" post to complete the topic cluster
-- `/salary-per-second` has no social share buttons yet — results are highly shareable (especially footballer salaries). Could add X/Facebook/Copy Link buttons and a `?salary=X` query param for shared links
 - `/salary-per-second` has no dedicated supporting blog post yet
 - `/dividend-tax` does not calculate income tax or NI on the salary portion — it only calculates dividend tax. A future enhancement could show the combined tax picture.

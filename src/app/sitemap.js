@@ -106,6 +106,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/salary-breakdown`,
+      lastModified: new Date('2026-04-09'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: new Date('2026-04-09'),
       changeFrequency: 'yearly',

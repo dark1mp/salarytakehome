@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "£30,000 Salary Take-Home Pay 2026/27 | After Tax Calculator",
+  title: "£30,000 After Tax UK 2026/27 — Take-Home Pay on a £30k Salary",
   description: "Find out exactly how much you take home from a £30,000 salary in 2026/27. Full breakdown of income tax, National Insurance, and monthly take-home pay.",
   keywords: "30000 salary, 30k salary, take home pay 30000, 30k after tax, salary calculator 30000",
   openGraph: {
-    title: "£30,000 Salary Take-Home Pay 2026/27",
+    title: "£30,000 After Tax UK 2026/27 — £30k Take-Home Pay",
     description: "Complete breakdown of take-home pay on a £30k salary including tax and NI deductions.",
     type: "article",
     publishedTime: "2026-01-27T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "£30,000 Salary Take-Home Pay 2026/27",
+    title: "£30,000 After Tax UK 2026/27 — £30k Take-Home Pay",
     description: "How much do you take home from a £30k salary? Full breakdown inside.",
   },
   alternates: {
@@ -83,8 +83,11 @@ export default function Salary30k() {
             <p className="text-gray-700 mb-4 text-lg leading-relaxed">
               If you&apos;re earning £30,000 a year in the UK, you&apos;re earning slightly above the national median salary. But how much of that actually ends up in your bank account?
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed mb-4">
               After income tax and National Insurance, you&apos;ll take home approximately <strong>£25,120 per year</strong>, or <strong>£2,093 per month</strong>. That means you&apos;re keeping about 83.7% of your gross salary.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              For a detailed comparison, see what you&apos;d take home on a <Link href="/blog/25k-salary-take-home" className="text-blue-600 hover:underline">£25,000 salary</Link> or a <Link href="/blog/35k-salary-take-home" className="text-blue-600 hover:underline">£35,000 salary</Link>.
             </p>
           </div>
 
@@ -197,20 +200,20 @@ export default function Salary30k() {
             <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 1 (Pre-2012)</h3>
-                <p className="text-purple-700 text-sm">Threshold: £26,065</p>
-                <p className="text-purple-700 text-sm">Annual repayment: £354</p>
-                <p className="text-purple-900 font-semibold">Take-home: £24,766/year</p>
+                <p className="text-purple-700 text-sm">Threshold: £26,900</p>
+                <p className="text-purple-700 text-sm">Annual repayment: £279</p>
+                <p className="text-purple-900 font-semibold">Take-home: £24,841/year</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 2 (Post-2012)</h3>
-                <p className="text-purple-700 text-sm">Threshold: £28,470</p>
-                <p className="text-purple-700 text-sm">Annual repayment: £138</p>
-                <p className="text-purple-900 font-semibold">Take-home: £24,982/year</p>
+                <p className="text-purple-700 text-sm">Threshold: £29,385</p>
+                <p className="text-purple-700 text-sm">Annual repayment: £55</p>
+                <p className="text-purple-900 font-semibold">Take-home: £25,065/year</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 4 (Scotland)</h3>
-                <p className="text-purple-700 text-sm">Threshold: £31,395</p>
-                <p className="text-purple-700 text-sm">Annual repayment: £0</p>
+                <p className="text-purple-700 text-sm">Threshold: £33,795</p>
+                <p className="text-purple-700 text-sm">Annual repayment: £0 (below threshold)</p>
                 <p className="text-purple-900 font-semibold">Take-home: £25,120/year</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
@@ -239,14 +242,15 @@ export default function Salary30k() {
               <h3 className="font-semibold text-blue-800 mb-2">Salary Comparisons</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="text-blue-600">£25,000 take-home:</p>
+                  <p className="text-blue-600"><Link href="/blog/25k-salary-take-home" className="text-blue-600 hover:underline">£25,000</Link> take-home:</p>
                   <p className="text-blue-800 font-semibold">£21,330/year</p>
                 </div>
                 <div>
-                  <p className="text-blue-600">£35,000 take-home:</p>
+                  <p className="text-blue-600"><Link href="/blog/35k-salary-take-home" className="text-blue-600 hover:underline">£35,000</Link> take-home:</p>
                   <p className="text-blue-800 font-semibold">£28,910/year</p>
                 </div>
               </div>
+              <p className="text-blue-700 text-sm mt-3">See all salary breakdowns from <Link href="/salary-breakdown" className="text-blue-600 hover:underline">£20k to £100k</Link>.</p>
             </div>
           </div>
 
@@ -307,7 +311,7 @@ export default function Salary30k() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "£30,000 Salary Take-Home Pay in 2026/27",
+                "headline": "£30,000 After Tax UK 2026/27 — Take-Home Pay on a £30k Salary",
                 "description": "Complete breakdown of what you'll actually receive from a £30k salary after income tax and National Insurance.",
                 "datePublished": "2026-01-27T00:00:00.000Z",
                 "dateModified": "2026-01-27T00:00:00.000Z",
@@ -358,10 +362,10 @@ export default function Salary30k() {
           })
         }} />
         <RelatedArticles articles={[
+          { href: "/blog/25k-salary-take-home", title: "£25k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £25,000 salary." },
+          { href: "/blog/35k-salary-take-home", title: "£35k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £35,000 salary." },
           { href: "/blog/40k-salary-take-home", title: "£40k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £40,000 salary." },
-          { href: "/blog/50k-salary-take-home", title: "£50k Salary Take Home Pay", category: "Salary Guide", description: "Breakdown of a £50k salary after tax and NI." },
           { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Practical strategies to keep more of your earnings." },
-          { href: "/blog/student-loan-repayment-guide", title: "Student Loan Repayment Guide", category: "Student Loans", description: "Understand how student loan repayments affect your pay." },
         ]} />
       </article>
     </div>

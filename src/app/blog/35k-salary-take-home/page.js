@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "£35,000 Salary Take-Home Pay 2026/27 | After Tax Calculator",
+  title: "£35,000 After Tax UK 2026/27 — Take-Home Pay on a £35k Salary",
   description: "Find out exactly how much you take home from a £35,000 salary in 2026/27. Full breakdown of income tax, National Insurance, and monthly take-home pay.",
   keywords: "35000 salary, 35k salary, take home pay 35000, 35k after tax, salary calculator 35000",
   openGraph: {
-    title: "£35,000 Salary Take-Home Pay 2026/27",
+    title: "£35,000 After Tax UK 2026/27 — £35k Take-Home Pay",
     description: "Complete breakdown of take-home pay on a £35k salary including tax and NI deductions.",
     type: "article",
     publishedTime: "2026-04-09T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "£35,000 Salary Take-Home Pay 2026/27",
+    title: "£35,000 After Tax UK 2026/27 — £35k Take-Home Pay",
     description: "How much do you take home from a £35k salary? Full breakdown inside.",
   },
   alternates: {
@@ -307,7 +307,7 @@ export default function Salary35k() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "£35,000 Salary Take-Home Pay in 2026/27",
+                "headline": "£35,000 After Tax UK 2026/27 — Take-Home Pay on a £35k Salary",
                 "description": "Complete breakdown of what you'll actually receive from a £35k salary after income tax and National Insurance.",
                 "datePublished": "2026-04-09T00:00:00.000Z",
                 "dateModified": "2026-04-09T00:00:00.000Z",

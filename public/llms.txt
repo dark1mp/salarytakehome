@@ -21,6 +21,7 @@ SalaryTakeHome.co.uk provides accurate, up-to-date UK tax calculators for employ
 - [Tax Code Checker](https://www.salarytakehome.co.uk/tax-code): Enter your UK tax code to find out what it means, your Personal Allowance, which tax rates apply, and whether it's correct.
 - [Salary Per Second](https://www.salarytakehome.co.uk/salary-per-second): Convert any salary into per year, month, week, day, hour, minute, and second. Includes a live earnings counter and fun comparisons.
 - [Dividend Tax Calculator](https://www.salarytakehome.co.uk/dividend-tax): Calculate dividend tax based on your salary and dividend income. Shows tax at basic (10.75% from April 2026, previously 8.75%), higher (35.75% from April 2026, previously 33.75%), and additional (39.35%) rates, with dividend allowance and Personal Allowance tapering. Supports tax years 2021/22 to 2026/27.
+- [Salary Breakdown Hub](https://www.salarytakehome.co.uk/salary-breakdown): Quick-reference hub showing take-home pay for every UK salary from £20,000 to £100,000 in £5k steps, with links to detailed breakdowns.
 
 ## UK Tax Reference (2026/27)
 

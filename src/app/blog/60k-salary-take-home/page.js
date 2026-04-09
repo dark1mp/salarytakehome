@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "£60,000 Salary Take-Home Pay 2026/27 | After Tax Calculator",
+  title: "£60,000 After Tax UK 2026/27 — Take-Home Pay on a £60k Salary",
   description: "Find out exactly how much you take home from a £60,000 salary in 2026/27. Full breakdown of income tax at basic and higher rates, National Insurance, and monthly take-home pay.",
   keywords: "60000 salary, 60k salary, take home pay 60000, 60k after tax, salary calculator 60000, higher rate tax",
   openGraph: {
-    title: "£60,000 Salary Take-Home Pay 2026/27",
+    title: "£60,000 After Tax UK 2026/27 — £60k Take-Home Pay",
     description: "Complete breakdown of take-home pay on a £60k salary including basic and higher rate tax deductions.",
     type: "article",
     publishedTime: "2026-01-27T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "£60,000 Salary Take-Home Pay 2026/27",
+    title: "£60,000 After Tax UK 2026/27 — £60k Take-Home Pay",
     description: "How much do you take home from a £60k salary? Full breakdown including higher rate tax.",
   },
   alternates: {
@@ -96,8 +96,11 @@ export default function Salary60k() {
             <p className="text-gray-700 mb-4 text-lg leading-relaxed">
               Congratulations—at £60,000 you&apos;re in the top 15% of UK earners. But crossing the higher rate threshold means part of your income faces 40% tax. Let&apos;s break down exactly what you&apos;ll take home.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed mb-4">
               After income tax and National Insurance, you&apos;ll take home approximately <strong>£45,358 per year</strong>, or <strong>£3,780 per month</strong>. That means you&apos;re keeping about 75.6% of your gross salary.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              For a detailed comparison, see what you&apos;d take home on a <Link href="/blog/55k-salary-take-home" className="text-blue-600 hover:underline">£55,000 salary</Link> or a <Link href="/blog/65k-salary-take-home" className="text-blue-600 hover:underline">£65,000 salary</Link>.
             </p>
           </div>
 
@@ -267,21 +270,21 @@ export default function Salary60k() {
             <div className="grid lg:grid-cols-2 gap-4">
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 1 (Pre-2012)</h3>
-                <p className="text-purple-700 text-sm">Threshold: £26,065</p>
-                <p className="text-purple-700 text-sm">Annual repayment: £3,054</p>
-                <p className="text-purple-900 font-semibold">Take-home: £42,304/year</p>
+                <p className="text-purple-700 text-sm">Threshold: £26,900</p>
+                <p className="text-purple-700 text-sm">Annual repayment: £2,979</p>
+                <p className="text-purple-900 font-semibold">Take-home: £42,379/year</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 2 (Post-2012)</h3>
-                <p className="text-purple-700 text-sm">Threshold: £28,470</p>
-                <p className="text-purple-700 text-sm">Annual repayment: £2,838</p>
-                <p className="text-purple-900 font-semibold">Take-home: £42,520/year</p>
+                <p className="text-purple-700 text-sm">Threshold: £29,385</p>
+                <p className="text-purple-700 text-sm">Annual repayment: £2,755</p>
+                <p className="text-purple-900 font-semibold">Take-home: £42,603/year</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 4 (Scotland)</h3>
-                <p className="text-purple-700 text-sm">Threshold: £31,395</p>
-                <p className="text-purple-700 text-sm">Annual repayment: £2,574</p>
-                <p className="text-purple-900 font-semibold">Take-home: £42,784/year</p>
+                <p className="text-purple-700 text-sm">Threshold: £33,795</p>
+                <p className="text-purple-700 text-sm">Annual repayment: £2,358</p>
+                <p className="text-purple-900 font-semibold">Take-home: £43,000/year</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 5 (Post-2023)</h3>
@@ -309,14 +312,15 @@ export default function Salary60k() {
               <h3 className="font-semibold text-blue-800 mb-2">Salary Comparisons</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="text-blue-600">£55,000 take-home:</p>
+                  <p className="text-blue-600"><Link href="/blog/55k-salary-take-home" className="text-blue-600 hover:underline">£55,000</Link> take-home:</p>
                   <p className="text-blue-800 font-semibold">£42,420/year</p>
                 </div>
                 <div>
-                  <p className="text-blue-600">£70,000 take-home:</p>
-                  <p className="text-blue-800 font-semibold">£51,128/year</p>
+                  <p className="text-blue-600"><Link href="/blog/65k-salary-take-home" className="text-blue-600 hover:underline">£65,000</Link> take-home:</p>
+                  <p className="text-blue-800 font-semibold">£48,257/year</p>
                 </div>
               </div>
+              <p className="text-blue-700 text-sm mt-3">See all salary breakdowns from <Link href="/salary-breakdown" className="text-blue-600 hover:underline">£20k to £100k</Link>.</p>
             </div>
           </div>
 
@@ -386,7 +390,7 @@ export default function Salary60k() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "£60,000 Salary Take-Home Pay in 2026/27",
+                "headline": "£60,000 After Tax UK 2026/27 — Take-Home Pay on a £60k Salary",
                 "description": "Complete breakdown of what you'll actually receive from a £60k salary after income tax and National Insurance, including higher rate tax calculations.",
                 "datePublished": "2026-01-27T00:00:00.000Z",
                 "dateModified": "2026-01-27T00:00:00.000Z",
@@ -437,10 +441,10 @@ export default function Salary60k() {
           })
         }} />
         <RelatedArticles articles={[
+          { href: "/blog/55k-salary-take-home", title: "£55k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £55,000 salary." },
+          { href: "/blog/65k-salary-take-home", title: "£65k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £65,000 salary." },
           { href: "/blog/50k-salary-take-home", title: "£50k Salary Take Home Pay", category: "Salary Guide", description: "See how much you'd take home on a £50,000 salary." },
           { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "How higher earners face a hidden 60% effective tax rate." },
-          { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "How pension contributions reduce your tax bill." },
-          { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Save tax and NI through salary sacrifice arrangements." },
         ]} />
       </article>
     </div>

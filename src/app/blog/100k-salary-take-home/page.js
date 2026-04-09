@@ -5,11 +5,11 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "£100,000 Salary Take-Home Pay 2026/27 | After Tax Calculator",
+  title: "£100,000 After Tax UK 2026/27 — Take-Home Pay on a £100k Salary",
   description: "Find out exactly how much you take home from a £100,000 salary in 2026/27. Full breakdown of income tax at basic and higher rates, National Insurance, and the £100k tax trap explained.",
   keywords: "100000 salary, 100k salary, take home pay 100000, 100k after tax, salary calculator 100000, 100k tax trap, personal allowance taper",
   openGraph: {
-    title: "£100,000 Salary Take-Home Pay 2026/27",
+    title: "£100,000 After Tax UK 2026/27 — £100k Take-Home Pay",
     description: "Complete breakdown of take-home pay on a £100k salary including the Personal Allowance taper trap.",
     type: "article",
     publishedTime: "2026-04-09T00:00:00.000Z",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "£100,000 Salary Take-Home Pay 2026/27",
+    title: "£100,000 After Tax UK 2026/27 — £100k Take-Home Pay",
     description: "How much do you take home from a £100k salary? Full breakdown including the £100k tax trap.",
   },
   alternates: {
@@ -380,7 +380,7 @@ export default function Salary100k() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "£100,000 Salary Take-Home Pay in 2026/27",
+                "headline": "£100,000 After Tax UK 2026/27 — Take-Home Pay on a £100k Salary",
                 "description": "Complete breakdown of what you'll actually receive from a £100k salary after income tax and National Insurance, including the £100k tax trap explained.",
                 "datePublished": "2026-04-09T00:00:00.000Z",
                 "dateModified": "2026-04-09T00:00:00.000Z",
