@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Pro-Rata Salary Calculator - Part-Time Salary Calculator | SalaryTakeHome.co.uk",
-  description: "Calculate your pro-rata salary for part-time work. Convert full-time salaries to part-time equivalents based on your working hours.",
-  keywords: "pro rata calculator, part time salary calculator, pro rata salary UK, part time pay calculator, FTE salary",
+  title: "Pro-Rata Salary Calculator 2026/27 - Part-Time Salary Calculator | SalaryTakeHome.co.uk",
+  description: "Calculate your pro-rata salary for part-time work in 2026/27. Convert full-time salaries to part-time equivalents based on your working hours, with tax and NI estimates.",
+  keywords: "pro rata calculator, part time salary calculator, pro rata salary UK, part time pay calculator, FTE salary, pro rata 2026/27",
   openGraph: {
-    title: "Pro-Rata Salary Calculator - Part-Time Salary Calculator",
-    description: "Calculate your pro-rata salary for part-time work. Convert full-time to part-time salary equivalents.",
+    title: "Pro-Rata Salary Calculator 2026/27 - Part-Time Salary Calculator",
+    description: "Calculate your pro-rata salary for part-time work in 2026/27. Convert full-time to part-time salary equivalents.",
     url: "https://www.salarytakehome.co.uk/pro-rata-furlough",
     siteName: "SalaryTakeHome",
     images: [{
@@ -18,8 +18,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pro-Rata Salary Calculator - Part-Time Salary Calculator",
-    description: "Calculate your pro-rata salary for part-time work.",
+    title: "Pro-Rata Salary Calculator 2026/27 - Part-Time Salary Calculator",
+    description: "Calculate your pro-rata salary for part-time work in 2026/27.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Hourly Wage Calculator - Convert Annual Salary to Hourly Rate | SalaryTakeHome.co.uk",
-  description: "Free hourly wage calculator. Convert your annual salary to hourly, daily, weekly, or monthly rates. Calculate your true hourly earnings after tax and deductions.",
-  keywords: "hourly wage calculator, annual salary to hourly, hourly rate, wage conversion, salary breakdown",
+  title: "Hourly Wage Calculator 2026/27 - Convert Annual Salary to Hourly Rate | SalaryTakeHome.co.uk",
+  description: "Free hourly wage calculator for 2026/27. Convert your annual salary to hourly, daily, weekly, or monthly rates. Calculate your true hourly earnings after tax and deductions.",
+  keywords: "hourly wage calculator, annual salary to hourly, hourly rate, wage conversion, salary breakdown, hourly wage 2026/27",
   openGraph: {
-    title: "Hourly Wage Calculator - Convert Annual Salary to Hourly Rate",
-    description: "Free hourly wage calculator. Convert your annual salary to hourly, daily, weekly, or monthly rates.",
+    title: "Hourly Wage Calculator 2026/27 - Convert Annual Salary to Hourly Rate",
+    description: "Free hourly wage calculator for 2026/27. Convert your annual salary to hourly, daily, weekly, or monthly rates.",
     url: "https://www.salarytakehome.co.uk/hourly-wage",
     siteName: "SalaryTakeHome",
     images: [{
@@ -18,8 +18,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hourly Wage Calculator - Convert Annual Salary to Hourly Rate",
-    description: "Free hourly wage calculator. Convert your annual salary to hourly, daily, weekly, or monthly rates.",
+    title: "Hourly Wage Calculator 2026/27 - Convert Annual Salary to Hourly Rate",
+    description: "Free hourly wage calculator for 2026/27. Convert your annual salary to hourly, daily, weekly, or monthly rates.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

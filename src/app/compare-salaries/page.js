@@ -20,9 +20,9 @@ export default function CompareSalaries() {
     if (plan === 'none') return 0;
 
     const thresholds = {
-      'plan1': 24990,
-      'plan2': 27295,
-      'plan4': 31395,
+      'plan1': 26900,
+      'plan2': 29385,
+      'plan4': 33795,
       'plan5': 25000,
       'postgrad': 21000,
     };
@@ -249,9 +249,9 @@ export default function CompareSalaries() {
                 className="w-full px-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 font-semibold bg-white/80 transition-all duration-200"
               >
                 <option value="none">No Student Loan</option>
-                <option value="plan1">Plan 1 (£24,990 threshold)</option>
-                <option value="plan2">Plan 2 (£27,295 threshold)</option>
-                <option value="plan4">Plan 4 - Scotland (£31,395 threshold)</option>
+                <option value="plan1">Plan 1 (£26,900 threshold)</option>
+                <option value="plan2">Plan 2 (£29,385 threshold)</option>
+                <option value="plan4">Plan 4 - Scotland (£33,795 threshold)</option>
                 <option value="plan5">Plan 5 - Post-2023 (£25,000 threshold)</option>
                 <option value="postgrad">Postgraduate Loan (£21,000 threshold)</option>
               </select>
