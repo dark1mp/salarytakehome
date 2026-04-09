@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import {
   Timer,
   Clock,
@@ -19,7 +20,8 @@ import {
   ChevronRight,
   BarChart3,
   Users,
-  Briefcase
+  Briefcase,
+  Share2
 } from 'lucide-react';
 import LayoutWrapper from '../components/LayoutWrapper';
 import AdUnit from '../components/AdUnit';
@@ -133,8 +135,16 @@ function LiveCounter({ perSecond }) {
   );
 }
 
-export default function SalaryPerSecond() {
+function SalaryPerSecondInner() {
+  const searchParams = useSearchParams();
   const [salaryInput, setSalaryInput] = useState('');
+  const [copied, setCopied] = useState(false);
+
+  // Read salary from URL params on mount
+  useEffect(() => {
+    const s = searchParams.get('salary');
+    if (s) setSalaryInput(formatNumberInput(s));
+  }, [searchParams]);
 
   const salary = useMemo(() => {
     return parseFloat(salaryInput.replace(/,/g, '')) || 0;
@@ -164,6 +174,29 @@ export default function SalaryPerSecond() {
       { label: "Per annual holiday", duration: "25 days", amount: breakdown.daily * 25, icon: Palmtree },
     ];
   }, [breakdown]);
+
+  const shareUrl = typeof window !== 'undefined' && salary > 0
+    ? `${window.location.origin}/salary-per-second?salary=${salary}`
+    : '';
+
+  const handleShare = async () => {
+    if (!shareUrl) return;
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = shareUrl;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
   const handleInput = useCallback((value) => {
     setSalaryInput(formatNumberInput(value));
@@ -351,6 +384,19 @@ export default function SalaryPerSecond() {
               <div className="space-y-6 mb-10">
                 {/* Live Counter */}
                 <LiveCounter perSecond={breakdown.perSecond} />
+
+                {/* Share Button */}
+                {shareUrl && (
+                  <div className="flex justify-end">
+                    <button
+                      onClick={handleShare}
+                      className="flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 shadow-sm"
+                    >
+                      <Share2 className="w-4 h-4" />
+                      {copied ? 'Link copied!' : 'Share these results'}
+                    </button>
+                  </div>
+                )}
 
                 {/* Time Breakdown Grid */}
                 <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
@@ -730,5 +776,13 @@ export default function SalaryPerSecond() {
         </div>
       </div>
     </LayoutWrapper>
+  );
+}
+
+export default function SalaryPerSecond() {
+  return (
+    <Suspense fallback={null}>
+      <SalaryPerSecondInner />
+    </Suspense>
   );
 }

@@ -178,10 +178,11 @@ Basic and higher rates were increased by 2 percentage points from 6 April 2026 (
 ## Blog Topics
 
 ### Salary Guides
-- Take-home pay breakdowns for £30K, £40K, £50K, and £60K salaries
+- Take-home pay breakdowns for £20K through £100K salaries (in £5K increments: £20K, £25K, £30K, £35K, £40K, £45K, £50K, £55K, £60K, £65K, £70K, £75K, £80K, £85K, £90K, £95K, £100K)
 - Each guide includes monthly, weekly, and daily net pay plus impact of student loans and pensions
 
 ### Tax Planning
+- UK tax codes explained: what each letter and number means, common codes (1257L, BR, D0, K), Scottish S prefix, emergency codes, and how to check yours
 - The £100K tax trap: how the Personal Allowance taper creates a 60% effective rate
 - UK tax changes for 2026/27, 2025/26 and 2024/25 (each tax year covered in its own dated post)
 - Salary sacrifice vs personal pension contributions

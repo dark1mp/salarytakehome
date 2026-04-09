@@ -53,10 +53,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" style={{ colorScheme: 'light only' }}>
+    <html lang="en-GB" style={{ colorScheme: 'light only' }}>
       <head>
         {/* Force light mode — prevents Safari dark mode from hiding sidebar text */}
         <meta name="color-scheme" content="light only" />
+
+        {/* Hreflang — signal UK English targeting to search engines */}
+        <link rel="alternate" hrefLang="en-gb" href="https://www.salarytakehome.co.uk" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.salarytakehome.co.uk" />
 
         {/* Preconnect to third-party origins for faster loading */}
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
