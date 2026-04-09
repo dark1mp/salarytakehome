@@ -321,6 +321,9 @@ export default function Salary100k() {
                 </div>
               </div>
             </div>
+            <p className="text-gray-700 mt-4 leading-relaxed">
+              See all salary breakdowns from <Link href="/salary-breakdown" className="text-blue-600 hover:underline">&pound;20k to &pound;100k</Link>.
+            </p>
           </div>
 
           {/* Tips */}
