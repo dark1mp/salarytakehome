@@ -37,7 +37,7 @@ src/app/
 ├── sitemap.js                   # Dynamic XML sitemap (add new pages here!)
 ├── not-found.js                 # Custom 404 page
 ├── components/
-│   ├── AdUnit.js                # Reusable AdSense ad component. Accepts `slot`, `hideOnMobile`, `layout`, and `format` props. Slots: 7756198179 (in-content), 1586479879 (top-of-page), 4603525459 (sidebar vertical 1), 9534353704 (sidebar vertical 2), 3520564956 (in-article blog ads), 1315738286 (sidebar vertical 3 — pay-rise results-aligned). For in-article ads use: `layout="in-article" format="fluid"`.
+│   ├── AdUnit.js                # Reusable AdSense ad component. Accepts `slot`, `hideOnMobile`, `layout`, and `format` props. Slots: 7756198179 (in-content), 1586479879 (top-of-page), 4603525459 (sidebar vertical 1), 9534353704 (sidebar vertical 2), 3520564956 (in-article blog ads), 1315738286 (sidebar vertical 3 — pay-rise results-aligned), 3284808016 (blog side-rail vertical — auto-rendered by LayoutWrapper when `narrow={true}`, visible at 2xl+). For in-article ads use: `layout="in-article" format="fluid"`.
 │   ├── Breadcrumbs.js           # Reusable breadcrumbs + BreadcrumbList JSON-LD schema
 │   ├── CookieConsent.js
 │   ├── Footer.js                # 4-column footer with all nav links
