@@ -241,7 +241,11 @@ export default function TaxTrap100k() {
               The couple also run several Airbnb properties, generating between £80,000 and £100,000 in profitable years. Despite ranking among the nation's top 4% of earners, they told The Telegraph they don't consider themselves wealthy—not with a 67% marginal tax rate and no access to child benefit.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              When their second child arrived, childcare costs doubled to nearly £40,000 annually. Then the 2022 mortgage rate surge hit, pushing their monthly repayments from £2,000 to £3,200. They were losing ground financially despite substantial earnings.
+              When their second child arrived, childcare costs doubled to nearly £40,000 annually. Then the 2022{' '}
+              <Link href="/mortgages" className="text-blue-600 hover:text-blue-800 underline">mortgage rate surge</Link>{' '}
+              hit, pushing their monthly repayments from £2,000 to £3,200. They were losing ground financially despite substantial earnings — a reminder that high-interest{' '}
+              <Link href="/debts" className="text-blue-600 hover:text-blue-800 underline">debt repayments</Link>{' '}
+              can eat into net income even before the 60% trap bites.
             </p>
             <div className="bg-green-50 rounded-xl p-6 border border-green-200 mb-6">
               <p className="text-green-800 text-sm leading-relaxed">
@@ -438,6 +442,7 @@ export default function TaxTrap100k() {
                 <li>• Make Gift Aid donations</li>
                 <li>• Time bonuses across tax years</li>
                 <li>• Speak to a financial adviser or accountant</li>
+                <li>• Model the real impact on affordability with our <Link href="/mortgages" className="text-blue-600 hover:text-blue-800 underline">mortgage calculator</Link> and <Link href="/debts" className="text-blue-600 hover:text-blue-800 underline">debt repayment calculator</Link></li>
               </ul>
             </div>
 

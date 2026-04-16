@@ -374,7 +374,8 @@ export default function DividendTaxCalculator() {
                   </div>
                   <p className="text-gray-600 text-sm">
                     Pension contributions can bring your income below £100,000 and restore your allowance. Read more in our{' '}
-                    <a href="/blog/100k-tax-trap" className="text-blue-600 hover:underline">£100k Tax Trap Explained</a> guide, or check out{' '}
+                    <a href="/blog/100k-tax-trap" className="text-blue-600 hover:underline">£100k Tax Trap Explained</a> guide, see a full{' '}
+                    <a href="/blog/100k-salary-take-home" className="text-blue-600 hover:underline">£100k salary take-home breakdown</a>, or check out{' '}
                     <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GOV.UK — Income Tax rates</a>.
                   </p>
                 </div>

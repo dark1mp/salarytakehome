@@ -157,6 +157,12 @@ export default function TaxCalculator() {
                           <a href="/blog/uk-tax-changes-2026-27" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
                             <ChevronRight className="w-4 h-4" />2026/27 Tax Changes
                           </a>
+                          <a href="/blog/75k-salary-take-home" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
+                            <ChevronRight className="w-4 h-4" />£75k Salary Breakdown
+                          </a>
+                          <a href="/blog/100k-salary-take-home" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
+                            <ChevronRight className="w-4 h-4" />£100k Salary Breakdown
+                          </a>
                         </div>
                         <div className="pt-2 border-t border-gray-100 mt-3">
                           <a href="https://www.gov.uk/income-tax-rates" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700">
@@ -381,7 +387,7 @@ export default function TaxCalculator() {
           <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px]">
             <div className="max-w-6xl">
               <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
-              <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-3">
+              <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-3">
                 <a href="/blog/30k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                   <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
                   <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£30k Salary Take Home Pay Breakdown</p>
@@ -397,6 +403,14 @@ export default function TaxCalculator() {
                 <a href="/blog/uk-tax-changes-2026-27" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                   <span className="text-xs font-semibold text-blue-600">Tax Planning</span>
                   <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2026/27</p>
+                </a>
+                <a href="/mortgages" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                  <span className="text-xs font-semibold text-emerald-600">Calculator</span>
+                  <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Mortgage Repayment Calculator</p>
+                </a>
+                <a href="/tax-code" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                  <span className="text-xs font-semibold text-emerald-600">Tool</span>
+                  <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Check Your UK Tax Code</p>
                 </a>
               </div>
             </div>

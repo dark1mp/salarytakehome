@@ -5,12 +5,12 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "Pro-Rata Salary Explained: Part-Time Pay, Holiday & Pension in the UK",
-  description: "Understand how pro-rata salary works for part-time workers in the UK. Learn to calculate your pay, holiday entitlement, pension, and tax implications.",
-  keywords: "pro rata salary meaning, pro rata calculation uk, part time salary calculator, pro rata holiday entitlement, part time worker rights, pro rata pension",
+  title: "Pro Rata Meaning: What Is Pro Rata Pay & How to Calculate It",
+  description: "Pro rata means pay calculated proportionally to hours worked. Learn what pro rata pay means in the UK, how to calculate pro rata salary, and see worked examples.",
+  keywords: "pro rata meaning, what is pro rata pay, pro rata salary, pro rata calculation uk, how to calculate pro rata, part month salary uk, pro rata holiday entitlement",
   openGraph: {
-    title: "Pro-Rata Salary Explained: Part-Time Pay, Holiday & Pension",
-    description: "Complete guide to pro-rata salary calculations for UK part-time workers.",
+    title: "Pro Rata Meaning: What Is Pro Rata Pay & How to Calculate It",
+    description: "Pro rata means pay calculated proportionally to hours worked. UK guide with worked examples and calculators.",
     type: "article",
     publishedTime: "2026-03-27T00:00:00.000Z",
     authors: ["SalaryTakeHome"],
@@ -18,8 +18,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pro-Rata Salary Explained: UK Guide",
-    description: "How part-time pay, holiday, and pension work on a pro-rata basis.",
+    title: "Pro Rata Meaning: UK Pay Guide",
+    description: "What pro rata pay means, how to calculate it, and worked examples.",
   },
   alternates: {
     canonical: "https://www.salarytakehome.co.uk/blog/pro-rata-salary-explained",
@@ -31,11 +31,21 @@ export default function ProRataSalaryExplained() {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "DefinedTerm",
+        "name": "Pro Rata",
+        "description": "A Latin phrase meaning 'in proportion'. In UK employment, pro rata describes pay, holiday, or benefits calculated proportionally to the hours worked compared to a full-time role.",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "name": "UK Employment Terms"
+        },
+        "url": "https://www.salarytakehome.co.uk/blog/pro-rata-salary-explained"
+      },
+      {
         "@type": "Article",
-        "headline": "Pro-Rata Salary Explained: Part-Time Pay, Holiday & Pension in the UK",
-        "description": "Understand how pro-rata salary works for part-time workers in the UK. Learn to calculate your pay, holiday entitlement, pension, and tax implications.",
+        "headline": "Pro Rata Meaning: What Is Pro Rata Pay & How to Calculate It",
+        "description": "Pro rata means pay calculated proportionally to hours worked. Learn what pro rata pay means in the UK, how to calculate pro rata salary, and see worked examples.",
         "datePublished": "2026-03-27T00:00:00.000Z",
-        "dateModified": "2026-03-27T00:00:00.000Z",
+        "dateModified": "2026-04-16T00:00:00.000Z",
         "author": {
           "@type": "Organization",
           "name": "SalaryTakeHome"
@@ -112,10 +122,21 @@ export default function ProRataSalaryExplained() {
             <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Pro-Rata Salary Explained: Part-Time Pay, Holiday & Pension in the UK
+              Pro Rata Meaning: What Is Pro Rata Pay & How to Calculate It
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Everything you need to know about how pro-rata works for part-time employees in the UK, from calculating your salary to understanding your holiday entitlement and pension rights.
+              <strong>Pro rata</strong> is a Latin phrase meaning &ldquo;in proportion&rdquo;. In UK employment, a <strong>pro rata salary</strong> is pay calculated as a fraction of a full-time equivalent — work 3 days a week for a role that pays £40,000 full-time, and your pro rata salary is £24,000.
+            </p>
+          </div>
+
+          {/* Definition box — targets "what does pro rata mean" */}
+          <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-6 mb-8">
+            <h2 className="text-xl font-bold text-gray-900 mb-3">What does &ldquo;pro rata&rdquo; mean?</h2>
+            <p className="text-gray-700 leading-relaxed mb-3">
+              &ldquo;Pro rata&rdquo; means something is calculated <strong>proportionally</strong>. In UK workplaces, it most often describes pay, holiday entitlement, or benefits that are scaled to the hours you actually work compared to a full-time role.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Your hourly rate stays the same as a full-timer&apos;s — only the total hours (and therefore the total pay) differ. This is protected by the Part-Time Workers (Prevention of Less Favourable Treatment) Regulations 2000.
             </p>
           </div>
 
@@ -136,6 +157,20 @@ export default function ProRataSalaryExplained() {
                 <div className="text-white/90 text-sm">Holiday entitlement is also pro-rata</div>
               </div>
             </div>
+          </div>
+
+          {/* What is pro rata pay? */}
+          <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">What is pro rata pay?</h2>
+            <p className="text-gray-700 mb-4 leading-relaxed">
+              <strong>Pro rata pay</strong> is salary calculated as a proportion of a full-time equivalent (FTE) figure. It applies whenever you work fewer hours than the standard full-time week — including part-time roles, term-time contracts, job-shares, and mid-month joiners paid for only part of the payroll period.
+            </p>
+            <p className="text-gray-700 mb-4 leading-relaxed">
+              Employers advertise salaries &ldquo;pro rata&rdquo; so candidates can compare against the FTE rate. A listing that says <em>&ldquo;£40,000 pro rata, 3 days per week&rdquo;</em> pays £24,000 actual salary but signals the role pays £40,000 on a full-time basis.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Pro rata pay is different from an hourly wage: it&apos;s an annual salary that has been scaled down, with tax, National Insurance, and pension deductions all applied to the reduced figure. See our <Link href="/hourly-wage" className="text-blue-600 hover:text-blue-800 underline font-semibold">hourly wage calculator</Link> if you&apos;d prefer to work in hourly terms.
+            </p>
           </div>
 
           {/* How to Calculate Pro-Rata Salary */}
@@ -198,6 +233,33 @@ export default function ProRataSalaryExplained() {
             </div>
             <p className="text-gray-700 mt-4 leading-relaxed">
               Use our <Link href="/pro-rata-furlough" className="text-blue-600 hover:text-blue-800 underline font-semibold">pro-rata salary calculator</Link> to work out your exact figure based on any combination of hours and salary.
+            </p>
+          </div>
+
+          {/* How to calculate a part-month salary (UK) */}
+          <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
+            <h2 id="how-to-calculate-a-part-month-salary-uk" className="text-2xl font-bold text-gray-900 mb-4">How to calculate a part-month salary (UK)</h2>
+            <p className="text-gray-700 mb-4 leading-relaxed">
+              If you start or leave a job partway through the month, most UK employers calculate a pro rata amount based on <strong>working days</strong>. The standard formula is:
+            </p>
+            <div className="bg-green-50 rounded-xl p-4 border border-green-200 mb-4">
+              <p className="font-mono text-center text-base text-gray-900">
+                (Annual salary &divide; 260) &times; Working days in the period = <strong>Part-month pay</strong>
+              </p>
+              <p className="text-center text-sm text-gray-600 mt-2">260 = typical UK working days per year (52 weeks &times; 5 days)</p>
+            </div>
+            <p className="text-gray-700 mb-2 leading-relaxed">
+              <strong>Worked example:</strong> You start on the 16th of a month that has 22 working days in total, on a £36,000 annual salary. You&apos;ll work 15 of those days.
+            </p>
+            <ul className="space-y-1 text-gray-700 mb-4 ml-4">
+              <li>• Daily rate: £36,000 &divide; 260 = <strong>£138.46</strong></li>
+              <li>• Part-month pay: £138.46 &times; 15 = <strong>£2,076.92</strong> (gross)</li>
+            </ul>
+            <p className="text-gray-700 mb-4 leading-relaxed">
+              Some employers use <strong>calendar days</strong> (365 or 366) instead of working days (260), which produces a slightly different figure. Others use the employee&apos;s <strong>contracted hours</strong> for the month. Check your contract or payslip for the exact method — all three are legal.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              For a quick take-home estimate on a one-off part-month payment, enter the gross figure into our <Link href="/take-home-pay-calculator" className="text-blue-600 hover:text-blue-800 underline font-semibold">take-home pay calculator</Link>, or use our <Link href="/pro-rata-furlough" className="text-blue-600 hover:text-blue-800 underline font-semibold">pro-rata calculator</Link> for ongoing part-time arrangements.
             </p>
           </div>
 

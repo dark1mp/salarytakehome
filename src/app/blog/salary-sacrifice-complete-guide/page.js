@@ -233,7 +233,8 @@ export default function SalarySacrificeGuide() {
               <div className="bg-amber-50 rounded-xl p-6 border border-amber-200">
                 <h3 className="text-lg font-semibold text-amber-800 mb-3">⚠️ Potential Drawbacks</h3>
                 <ul className="text-amber-700 space-y-2">
-                  <li>• Reduced salary affects mortgage applications</li>
+                  <li>• Reduced salary affects <Link href="/mortgages" className="text-blue-600 hover:text-blue-800 underline">mortgage applications</Link> — lenders typically assess borrowing on post-sacrifice salary</li>
+                  <li>• Can reduce disposable income available for <Link href="/debts" className="text-blue-600 hover:text-blue-800 underline">debt repayments</Link>, so model it against any outstanding balances</li>
                   <li>• May impact other benefits based on salary</li>
                   <li>• Some schemes have minimum contract periods</li>
                   <li>• Not all employers offer these schemes</li>

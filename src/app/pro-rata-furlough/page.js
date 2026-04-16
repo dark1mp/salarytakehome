@@ -104,7 +104,7 @@ export default function ProRata() {
               ]
             }, {
               "@type": "WebApplication",
-              "name": "Pro-Rata Salary Calculator UK",
+              "name": "Pro Rata Salary Calculator UK",
               "url": "https://www.salarytakehome.co.uk/pro-rata-furlough",
               "applicationCategory": "FinanceApplication",
               "operatingSystem": "Any",
@@ -113,7 +113,38 @@ export default function ProRata() {
                 "price": "0",
                 "priceCurrency": "GBP"
               },
-              "description": "Free UK pro-rata salary calculator. Calculate your part-time salary based on full-time equivalent and working hours."
+              "description": "Free UK pro rata salary calculator. Work out your part-time salary based on full-time equivalent and working hours."
+            }, {
+              "@type": "HowTo",
+              "name": "How to calculate a pro rata salary",
+              "description": "Work out your pro rata salary from a full-time equivalent (FTE) salary and the hours you work per week.",
+              "totalTime": "PT1M",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Find the full-time equivalent (FTE) salary",
+                  "text": "Identify the full-time salary for the role — this is usually stated on the job advert as 'pro rata' followed by an FTE figure (e.g. '£40,000 pro rata')."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Divide your hours by the full-time hours",
+                  "text": "Take your weekly hours and divide by the standard full-time hours (typically 37.5 in the UK). For example, 22.5 ÷ 37.5 = 0.6 (60%)."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Multiply by the FTE salary",
+                  "text": "Multiply the ratio from step 2 by the FTE salary. For £40,000 at 0.6 FTE: 0.6 × £40,000 = £24,000 pro rata salary."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 4,
+                  "name": "Apply tax, NI, and pension for take-home",
+                  "text": "Apply UK income tax, National Insurance, and any pension contributions to the pro rata salary to get your take-home pay. Part-time workers keep the full £12,570 personal allowance."
+                }
+              ]
             }]
           }) }}
         />
@@ -132,10 +163,10 @@ export default function ProRata() {
                 <div className="w-12 h-12 bg-gradient-to-br from-[#1566a0] to-[#1e90c6] rounded-xl flex items-center justify-center">
                   <Calculator className="w-6 h-6 text-white" />
                 </div>
-                Pro-Rata Salary Calculator
+                Pro Rata Salary Calculator
             </h1>
             <p className="text-base text-gray-700">
-              Calculate your pro-rata salary when working part-time hours. Enter the full-time equivalent salary and your working hours to see your actual annual salary.
+              Work out your pro rata salary in seconds. Enter the full-time equivalent (FTE) salary and your working hours to calculate your annual pay, pro rata percentage, and estimated take-home — updated for 2026/27.
             </p>
               <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
@@ -249,7 +280,7 @@ export default function ProRata() {
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Info className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Understanding Pro-Rata Salary</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">What is pro rata pay?</h2>
                 </div>
                 <div className="space-y-4 text-gray-700">
                   <p>
@@ -264,9 +295,60 @@ export default function ProRata() {
                     </p>
                   </div>
                   <p>
-                    Pro-rata calculations are commonly used for part-time workers, job sharers, and those transitioning between full-time and part-time roles. Understanding your pro-rata salary helps you compare job offers accurately and understand your true earning potential. For official guidance on part-time workers' rights, visit <a href="https://www.gov.uk/part-time-worker-rights" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Part-Time Worker Rights</a>.
+                    Pro-rata calculations are commonly used for part-time workers, job sharers, and those transitioning between full-time and part-time roles. Understanding your pro-rata salary helps you compare job offers accurately and understand your true earning potential. For a deeper look at the meaning and legal context, read our <a href="/blog/pro-rata-salary-explained" className="text-blue-600 hover:text-blue-800 underline font-semibold">pro rata salary guide</a>, or visit <a href="https://www.gov.uk/part-time-worker-rights" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">GOV.UK Part-Time Worker Rights</a>.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* How to work out pro rata salary — step-by-step */}
+        <div className="flex gap-6 mx-auto px-8 mt-4">
+          <div className="flex-1 xl:pr-[192px]">
+            <div className="relative group overflow-hidden bg-white rounded-2xl border border-emerald-100 shadow-medium p-8 hover:shadow-lg transition-all duration-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
+                    <Calculator className="w-7 h-7 text-white" />
+                  </div>
+                  <h2 className="font-bold text-gray-900 text-2xl">How to work out pro rata salary (4 steps)</h2>
+                </div>
+                <ol className="space-y-4 text-gray-700">
+                  <li className="flex gap-3">
+                    <span className="flex-shrink-0 w-7 h-7 bg-emerald-100 text-emerald-700 rounded-full font-bold text-sm flex items-center justify-center">1</span>
+                    <div>
+                      <strong className="text-gray-900">Find the full-time equivalent (FTE) salary.</strong> This is the salary shown on the job advert, usually labelled &ldquo;pro rata&rdquo; — e.g. <em>&ldquo;£40,000 pro rata&rdquo;</em>.
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="flex-shrink-0 w-7 h-7 bg-emerald-100 text-emerald-700 rounded-full font-bold text-sm flex items-center justify-center">2</span>
+                    <div>
+                      <strong className="text-gray-900">Divide your hours by full-time hours.</strong> UK full-time is typically 37.5 hours per week. For 22.5 hours: 22.5 &divide; 37.5 = <strong>0.6</strong> (60%).
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="flex-shrink-0 w-7 h-7 bg-emerald-100 text-emerald-700 rounded-full font-bold text-sm flex items-center justify-center">3</span>
+                    <div>
+                      <strong className="text-gray-900">Multiply by the FTE salary.</strong> 0.6 &times; £40,000 = <strong>£24,000</strong> pro rata salary.
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="flex-shrink-0 w-7 h-7 bg-emerald-100 text-emerald-700 rounded-full font-bold text-sm flex items-center justify-center">4</span>
+                    <div>
+                      <strong className="text-gray-900">Apply tax, NI and pension for take-home.</strong> Part-time workers keep the full £12,570 personal allowance, so take-home is often proportionally higher than a simple scale would suggest. The calculator above does this for you automatically.
+                    </div>
+                  </li>
+                </ol>
+                <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-200 mt-6">
+                  <p className="font-mono text-center text-base text-gray-900">
+                    (Your hours &divide; Full-time hours) &times; FTE salary = <strong>Pro rata salary</strong>
+                  </p>
+                </div>
+                <p className="text-gray-700 mt-4">
+                  Starting or leaving a job partway through a month? The formula changes slightly — see the <a href="/blog/pro-rata-salary-explained#how-to-calculate-a-part-month-salary-uk" className="text-blue-600 hover:text-blue-800 underline font-semibold">part-month salary calculation</a> in our pro rata guide.
+                </p>
               </div>
             </div>
           </div>
@@ -282,7 +364,7 @@ export default function ProRata() {
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Lightbulb className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Why Knowing Your Pro-Rata Salary Matters</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Why knowing your pro rata salary matters</h2>
                 </div>
                 <div className="grid lg:grid-cols-2 gap-6">
                   <div>
@@ -346,7 +428,7 @@ export default function ProRata() {
                   <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Calculator className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Pro-Rata Tax Advantages</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Pro rata tax advantages</h2>
                 </div>
                 <div className="space-y-4 text-gray-700">
                   <p>
@@ -426,7 +508,7 @@ export default function ProRata() {
                   <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Lightbulb className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Pro-Rata Holiday & Benefits Entitlement</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Pro rata holiday &amp; benefits entitlement</h2>
                 </div>
                 <div className="space-y-4 text-gray-700">
                   <p>
@@ -497,7 +579,7 @@ export default function ProRata() {
                   <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Pro-Rata Salary FAQs</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Pro rata salary FAQs</h2>
                 </div>
 
                 <div className="space-y-6">

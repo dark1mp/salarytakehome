@@ -1124,9 +1124,17 @@ export default function PayRiseCalculator() {
                   </p>
                   <div className="space-y-2">
                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>
-                    <a href="/blog/100k-tax-trap" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
-                      <ChevronRight className="w-4 h-4" />How to Avoid the £100k Tax Trap
-                    </a>
+                    <div className="flex flex-wrap gap-2">
+                      <a href="/blog/100k-tax-trap" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />How to Avoid the £100k Tax Trap
+                      </a>
+                      <a href="/blog/100k-salary-take-home" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />£100k Salary Take-Home
+                      </a>
+                      <a href="/blog/90k-salary-take-home" className="inline-flex items-center gap-1 text-sm text-red-600 hover:text-red-700 font-medium">
+                        <ChevronRight className="w-4 h-4" />£90k Salary Take-Home
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -1306,7 +1314,7 @@ export default function PayRiseCalculator() {
         <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px]">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
-            <div className="grid md:grid-cols-3 gap-3">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
               <a href="/blog/pay-rise-negotiation-guide" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How to Negotiate a Pay Rise in 2026</p>
@@ -1318,6 +1326,18 @@ export default function PayRiseCalculator() {
               <a href="/blog/50k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£50k Salary Take Home Pay Breakdown</p>
+              </a>
+              <a href="/blog/80k-salary-take-home" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">£80k Salary Take Home Pay Breakdown</p>
+              </a>
+              <a href="/mortgages" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-emerald-600">Calculator</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Mortgage Affordability Calculator</p>
+              </a>
+              <a href="/tax-code" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-emerald-600">Tool</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Check Your Tax Code After a Pay Rise</p>
               </a>
             </div>
           </div>
