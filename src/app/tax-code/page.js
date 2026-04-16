@@ -631,7 +631,7 @@ export default function TaxCodeChecker() {
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Calculator className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">How HMRC Calculates Your Tax Code</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">How HMRC Calculates Your Tax Code</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     HMRC starts with the standard Personal Allowance (£12,570 for 2026/27, frozen until April 2031) and adjusts it based on your circumstances:
@@ -684,7 +684,7 @@ export default function TaxCodeChecker() {
                     <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <AlertTriangle className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Common Tax Code Mistakes</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Common Tax Code Mistakes</h2>
                   </div>
                   <ul className="space-y-3 text-gray-700 text-sm">
                     <li className="flex items-start gap-2">
@@ -720,7 +720,7 @@ export default function TaxCodeChecker() {
                     <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Lightbulb className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Emergency Tax Codes Explained</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Emergency Tax Codes Explained</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     Emergency tax codes have a <strong>W1</strong>, <strong>M1</strong>, or <strong>X</strong> suffix. They mean your tax is calculated on a <em>non-cumulative</em> basis — each pay period is treated independently instead of spreading your allowance over the year.
@@ -768,7 +768,7 @@ export default function TaxCodeChecker() {
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Scottish &amp; Welsh Tax Codes</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Scottish &amp; Welsh Tax Codes</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     If you live in Scotland, your tax code starts with <strong>S</strong> (e.g. S1257L). If you live in Wales, it starts with <strong>C</strong> (e.g. C1257L). Your employer uses the prefix to apply the correct tax rates.
@@ -822,7 +822,7 @@ export default function TaxCodeChecker() {
                     <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Info className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">How This Tool Works</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">How This Tool Works</h2>
                   </div>
                   <ol className="list-decimal list-outside ml-6 space-y-2 text-gray-700 text-sm">
                     <li>Parses your tax code to identify the prefix (S for Scotland, C for Wales), number, and letter suffix</li>
@@ -840,7 +840,7 @@ export default function TaxCodeChecker() {
                     <div className="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <BookOpen className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Full Tax Code Reference</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Full Tax Code Reference</h2>
                   </div>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm">
@@ -923,7 +923,7 @@ export default function TaxCodeChecker() {
                   <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Tax Code FAQs</h3>
+                  <h2 className="font-bold text-gray-900 text-xl md:text-2xl">Tax Code FAQs</h2>
                 </div>
                 <div className="space-y-5">
                   <div className="pb-5 border-b border-gray-200">
@@ -978,7 +978,7 @@ export default function TaxCodeChecker() {
                   <div className="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Building className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h3>
+                  <h2 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h2>
                 </div>
                 <p className="text-gray-600 text-sm">
                   This tool decodes UK tax codes based on standard HMRC rules for the 2026/27 tax year. The Personal Allowance remains £12,570 (frozen until April 2031), so the standard tax code for most employees is unchanged at 1257L.

@@ -273,7 +273,7 @@ export default function Debts() {
                     <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Calculator className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">How This Debt Repayment Calculator Works</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">How This Debt Repayment Calculator Works</h2>
                   </div>
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>
@@ -305,7 +305,7 @@ export default function Debts() {
                     <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Lightbulb className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Why Understanding Your Debt Matters</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Why Understanding Your Debt Matters</h2>
                   </div>
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>
@@ -340,7 +340,7 @@ export default function Debts() {
                     <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <AlertCircle className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Interest Rates by Debt Type</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Interest Rates by Debt Type</h2>
                   </div>
                   <p className="text-gray-700 mb-4 leading-relaxed">
                     Not all debt is created equal. The interest rate you&apos;re paying has a huge impact on how quickly your debt grows and how much it really costs you. Here&apos;s what typical APRs look like across common UK debt types:
@@ -406,7 +406,7 @@ export default function Debts() {
                     <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Calculator className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Snowball vs Avalanche: Worked Example</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Snowball vs Avalanche: Worked Example</h2>
                   </div>
                   <p className="text-gray-700 mb-4 leading-relaxed">
                     Imagine you have 3 debts and a total budget of £300 per month to put toward repayment:
@@ -478,7 +478,7 @@ export default function Debts() {
                     <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <HelpCircle className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Debt Repayment FAQs</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Debt Repayment FAQs</h2>
                   </div>
                   <div className="space-y-6">
                     <div className="pb-6 border-b border-gray-200">
@@ -558,7 +558,7 @@ export default function Debts() {
                     <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Shield className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Disclaimer</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Disclaimer</h2>
                   </div>
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>

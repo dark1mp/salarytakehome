@@ -277,7 +277,7 @@ export default function TaxCalculator() {
                     <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Calculator className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">How This UK Salary Calculator Works</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">How This UK Salary Calculator Works</h2>
                   </div>
                   <p className="text-gray-700 text-base leading-relaxed mb-6">
                     This calculator estimates your take home pay by applying current UK tax rules to your gross salary. It uses the following steps:
@@ -302,7 +302,7 @@ export default function TaxCalculator() {
                     <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <HelpCircle className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Take Home Pay FAQs</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Take Home Pay FAQs</h2>
                   </div>
 
                   <div className="space-y-5">
@@ -336,7 +336,7 @@ export default function TaxCalculator() {
                     <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <AlertTriangle className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Disclaimer</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Disclaimer</h2>
                   </div>
                   <p className="text-gray-700 text-base leading-relaxed">
                     This calculator provides an estimated tax breakdown based on standard assumptions and is intended for general information purposes only. Results may vary depending on individual circumstances and tax codes, and should not be relied upon as financial advice. For accurate and official information, please refer to your tax code or contact HMRC directly.

@@ -390,7 +390,7 @@ export default function CompareSalaries() {
                     <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Scale className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">How This Salary Comparison Works</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">How This Salary Comparison Works</h2>
                   </div>
                   <p className="text-gray-700 text-base leading-relaxed mb-6">
                     This calculator helps you compare two salary offers by calculating the actual take-home pay for each, accounting for all deductions:
@@ -415,7 +415,7 @@ export default function CompareSalaries() {
                     <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <TrendingUp className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Why Comparing Salaries Matters</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Why Comparing Salaries Matters</h2>
                   </div>
                   <div className="grid lg:grid-cols-2 gap-6">
                     <div>
@@ -466,7 +466,7 @@ export default function CompareSalaries() {
                     <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Scale className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">UK Tax Brackets &amp; Your Salary Comparison</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">UK Tax Brackets &amp; Your Salary Comparison</h2>
                   </div>
                   <p className="text-gray-700 text-base leading-relaxed mb-6">
                     Understanding which tax bracket each salary falls into is essential for comparing offers. Here is what you keep from every extra pound earned in each band for 2026/27:
@@ -531,7 +531,7 @@ export default function CompareSalaries() {
                     <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <TrendingUp className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">The Hidden Value of Benefits</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">The Hidden Value of Benefits</h2>
                   </div>
                   <p className="text-gray-700 text-base leading-relaxed mb-6">
                     Salary is only part of the picture. Benefits can add 10-30% to the total value of a compensation package. Here is what common workplace benefits are typically worth:
@@ -587,7 +587,7 @@ export default function CompareSalaries() {
                     <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Info className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Salary Comparison FAQs</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Salary Comparison FAQs</h2>
                   </div>
 
                   <div className="space-y-5">
@@ -626,7 +626,7 @@ export default function CompareSalaries() {
                     <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Info className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Disclaimer</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Disclaimer</h2>
                   </div>
                   <p className="text-gray-700 text-base leading-relaxed">
                     This salary comparison tool provides estimates for informational purposes only. Calculations are based on standard UK tax rates and assumptions for the 2026/27 tax year. Actual take-home pay may vary depending on your specific tax code, pension contributions, benefits-in-kind, and other personal circumstances. This tool should not be used as a substitute for professional financial advice. Always verify salary details with your employer and consult HMRC or a qualified tax advisor for personalized guidance.
