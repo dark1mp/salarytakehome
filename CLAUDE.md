@@ -135,7 +135,7 @@ Historical posts (`uk-tax-changes-2025-26`, `uk-minimum-wage-2025-26`, etc.) are
 
 ## Blog
 
-48 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes 6 "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension, ISA vs LISA, PAYE vs self-employed, full-time vs part-time tax) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay, uk-dividend-tax-explained supports /dividend-tax). Every calculator has at least one dedicated blog post linking back to it. Two dated posts are refreshed each tax year (`uk-tax-changes-YYYY-YY`, `uk-minimum-wage-YYYY-YY`) with the old versions kept as historical reference — see the "Dated vs evergreen posts" note in Key Decisions.
+49 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes 6 "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension, ISA vs LISA, PAYE vs self-employed, full-time vs part-time tax) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay, uk-dividend-tax-explained supports /dividend-tax). Every calculator has at least one dedicated blog post linking back to it. Two dated posts are refreshed each tax year (`uk-tax-changes-YYYY-YY`, `uk-minimum-wage-YYYY-YY`) with the old versions kept as historical reference — see the "Dated vs evergreen posts" note in Key Decisions.
 
 ### Topic Cluster Blog Posts
 
@@ -148,7 +148,8 @@ Every calculator has at least one dedicated supporting blog post:
 | How to Compare Job Offers | `/blog/how-to-compare-job-offers` | /compare-salaries |
 | Two Jobs Tax Explained | `/blog/two-jobs-tax-explained` | /two-jobs |
 | Pro-Rata Salary Explained | `/blog/pro-rata-salary-explained` | /pro-rata-furlough |
-| SSP Changes 2026 | `/blog/ssp-changes-2026` | /sick-pay |
+| How Much Is SSP? | `/blog/how-much-is-ssp` | /sick-pay (primary — rates, daily breakdowns, earnings examples) |
+| SSP Changes 2026 | `/blog/ssp-changes-2026` | /sick-pay (rule changes focus) |
 | Maternity Pay Guide | `/blog/maternity-pay-guide` | /maternity-sick-pay |
 | First-Time Buyer Mortgage Guide | `/blog/first-time-buyer-mortgage-guide` | /mortgages |
 | How to Pay Off Debt Faster | `/blog/how-to-pay-off-debt-faster` | /debts |
@@ -179,7 +180,7 @@ Every calculator has at least one dedicated supporting blog post:
 - Structured data: WebApplication (all 10 calculators + tax code checker + salary per second), Article (blog posts), FAQPage (all 10 calculators + tax code checker + salary per second — 7 questions each)
 - Sitemap: dynamic at `/sitemap.js` — must be updated when adding/removing pages
 - Robots.txt: blocks `/api/`, `/_next/`, `/admin/`
-- IndexNow: auto-submits all sitemap URLs post-build to Bing, Yandex, Seznam, Naver. Can also be triggered manually: `node scripts/submit-indexnow.mjs`
+- IndexNow: auto-submits all sitemap URLs post-build to Bing, Yandex, Seznam, Naver. Can also be triggered manually: `node scripts/submit-indexnow.mjs`. **Note:** the script fetches from the live production sitemap (`https://www.salarytakehome.co.uk/sitemap.xml`), not the local build, so URL counts will lag until the new build is deployed.
 - Google: does NOT support IndexNow. Google sitemap ping endpoint is deprecated (returns 404). Use Google Search Console for manual URL submission, or rely on Google crawling the sitemap `<lastmod>` dates.
 - Breadcrumbs: every page has visual breadcrumbs + BreadcrumbList JSON-LD schema via the Breadcrumbs component
 - **Last Updated badge:** all 10 calculator pages show "Last updated: April 2026 · Reflects 2026/27 tax year" below the h1 description. Update this during the annual tax year refresh.

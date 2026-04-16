@@ -4,6 +4,16 @@
 
 export const blogPosts = [
   {
+    slug: "how-much-is-ssp",
+    title: "How Much Is SSP? UK Statutory Sick Pay Rates Per Week (2026/27)",
+    description: "How much is SSP? £123.25 per week in 2026/27 (or 80% of earnings if lower). See SSP rates by tax year, daily rates, worked examples at every income level, and who qualifies.",
+    date: "2026-04-16",
+    readTime: "8 min read",
+    category: "Salary Guide",
+    featured: true,
+    priority: 0.7,
+  },
+  {
     slug: "understanding-uk-tax-code",
     title: "UK Tax Codes Explained: What Your Tax Code Means & How to Check It (2026/27)",
     description: "Complete guide to UK tax codes. Learn what each letter and number means, common codes like 1257L, BR, D0, K codes, Scottish S prefix, emergency tax codes, and what to do if yours is wrong.",

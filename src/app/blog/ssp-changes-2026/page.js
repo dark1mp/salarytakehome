@@ -91,7 +91,7 @@ export default function SSPChanges2026() {
                   <tbody>
                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                       <td className="py-3 px-4 text-gray-700">Weekly rate</td>
-                      <td className="py-3 px-4 text-gray-900 font-semibold">&pound;116.75</td>
+                      <td className="py-3 px-4 text-gray-900 font-semibold">&pound;118.75</td>
                     </tr>
                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                       <td className="py-3 px-4 text-gray-700">Minimum earnings</td>
@@ -150,7 +150,7 @@ export default function SSPChanges2026() {
                     </tr>
                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                       <td className="py-3 px-4 text-gray-700">Rate</td>
-                      <td className="py-3 px-4 text-gray-900 font-semibold">Flat &pound;116.75/wk</td>
+                      <td className="py-3 px-4 text-gray-900 font-semibold">Flat &pound;118.75/wk</td>
                       <td className="py-3 px-4 text-green-600 font-semibold">80% of earnings or &pound;123.25 (lower)</td>
                     </tr>
                     <tr className="border-b border-gray-100 hover:bg-gray-50">
@@ -240,7 +240,7 @@ export default function SSPChanges2026() {
                 </table>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed">
-                The cap at &pound;123.25 means that anyone earning more than approximately &pound;154/week will receive the maximum rate. For most full-time workers, the weekly SSP amount will be higher than the current flat rate of &pound;116.75.
+                The cap at &pound;123.25 means that anyone earning more than approximately &pound;154/week will receive the maximum rate. For most full-time workers, the weekly SSP amount will be higher than the current flat rate of &pound;118.75.
               </p>
             </div>
 
@@ -319,10 +319,10 @@ export default function SSPChanges2026() {
 
           {/* Related Articles */}
           <RelatedArticles articles={[
-            { href: "/blog/uk-tax-changes-2025-26", category: "Tax Updates", title: "UK Tax Changes 2025/26: What You Need to Know", description: "Complete guide to the latest tax rates, thresholds, and changes." },
+            { href: "/blog/how-much-is-ssp", category: "Salary Guide", title: "How Much Is SSP Per Week?", description: "SSP rates by tax year, daily breakdowns, and worked examples at every income level." },
+            { href: "/blog/uk-tax-changes-2026-27", category: "Tax Updates", title: "UK Tax Changes 2026/27", description: "Complete guide to the latest tax rates, thresholds, and changes." },
+            { href: "/blog/maternity-pay-guide", category: "Salary Guide", title: "Maternity Pay Guide 2026", description: "SMP rates, eligibility, and how to plan your finances." },
             { href: "/blog/maximize-take-home-pay-2024", category: "Money Tips", title: "How to Maximise Your Take-Home Pay", description: "Practical strategies to keep more of your salary." },
-            { href: "/blog/30k-salary-take-home", category: "Salary Guide", title: "£30k Salary: Take-Home Pay Breakdown", description: "What you actually receive on a £30,000 salary." },
-            { href: "/blog/pay-rise-negotiation-guide", category: "Career", title: "Pay Rise Negotiation Guide", description: "How to ask for a raise and understand the tax impact." },
           ]} />
 
         </article>
@@ -356,7 +356,7 @@ export default function SSPChanges2026() {
                 {
                   "@type": "Question",
                   "name": "Will I get more SSP under the new 2026 rules?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "Most employees will benefit. If you earn above approximately £154/week, you'll receive £123.25/week (up from £116.75). If you earn below £125/week, you'll now qualify for SSP for the first time. Everyone benefits from SSP starting on day 1 instead of day 4." }
+                  "acceptedAnswer": { "@type": "Answer", "text": "Most employees will benefit. If you earn above approximately £154/week, you'll receive £123.25/week (up from £118.75). If you earn below £125/week, you'll now qualify for SSP for the first time. Everyone benefits from SSP starting on day 1 instead of day 4." }
                 },
                 {
                   "@type": "Question",

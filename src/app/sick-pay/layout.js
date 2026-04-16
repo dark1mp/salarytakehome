@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Statutory Sick Pay Calculator 2026/27 - Calculate UK SSP Entitlement | SalaryTakeHome.co.uk",
-  description: "Free UK Statutory Sick Pay calculator under the new 2026/27 rules. £123.25/week, day-1 payment, no Lower Earnings Limit. Know your rights when off sick.",
-  keywords: "statutory sick pay calculator, SSP calculator UK, sick pay entitlement, SSP 2026/27, SSP 2026 rules, sick leave pay, UK sick pay rules, day one SSP",
+  title: "SSP Calculator 2026/27 — How Much Is SSP Per Week? | SalaryTakeHome.co.uk",
+  description: "How much is SSP per week? £123.25 in 2026/27 (or 80% of earnings if lower). Free UK Statutory Sick Pay calculator with day-1 payment and no earnings limit.",
+  keywords: "ssp calculator, how much is ssp, ssp per week, ssp rate 2026/27, statutory sick pay calculator, sick pay calculator, calculate ssp, how much is ssp per week, SSP calculator UK, ssp rate",
   openGraph: {
-    title: "Statutory Sick Pay Calculator 2026/27 - Calculate UK SSP Entitlement",
-    description: "Free UK Statutory Sick Pay calculator. Calculate your SSP entitlement under the new 2026/27 rules in force from 6 April 2026.",
+    title: "SSP Calculator 2026/27 — How Much Is SSP Per Week?",
+    description: "How much is SSP per week? £123.25 in 2026/27. Free UK Statutory Sick Pay calculator under the new rules from 6 April 2026.",
     url: "https://www.salarytakehome.co.uk/sick-pay",
     siteName: "SalaryTakeHome",
     images: [{
@@ -18,8 +18,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Statutory Sick Pay Calculator - Calculate UK SSP Entitlement",
-    description: "Free UK SSP calculator. Calculate your entitlement under the new 2026/27 rules — £123.25/wk, day-1 payment, no LEL.",
+    title: "SSP Calculator 2026/27 — How Much Is SSP Per Week?",
+    description: "How much is SSP? £123.25/week in 2026/27. Free UK SSP calculator — day-1 payment, no earnings limit.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

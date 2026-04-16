@@ -128,8 +128,8 @@ export default function SickPay() {
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "How much is Statutory Sick Pay (SSP) in 2026/27?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "From 6 April 2026, Statutory Sick Pay is £123.25 per week, or 80% of your average weekly earnings if that is lower. SSP is paid by your employer for up to 28 weeks. From April 2026 the Lower Earnings Limit is abolished, so all employees qualify regardless of income, and SSP is payable from the first day of sickness (the 3 waiting days have been removed). The 2025/26 rate was £118.75 per week." }
+                  "name": "How much is SSP per week in 2026/27?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "SSP is £123.25 per week in 2026/27, or 80% of your average weekly earnings if that is lower. This works out to a daily rate of £24.65 based on a 5-day working week. In the previous tax year (2025/26), SSP was a flat £118.75 per week. SSP is paid by your employer for up to 28 weeks." }
                 },
                 {
                   "@type": "Question",
@@ -684,7 +684,15 @@ export default function SickPay() {
         <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px]">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
-            <div className="grid md:grid-cols-3 gap-3">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+              <a href="/blog/how-much-is-ssp" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Salary Guide</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How Much Is SSP Per Week?</p>
+              </a>
+              <a href="/blog/ssp-changes-2026" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Tax Updates</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">SSP Changes 2026: New Sick Pay Rules</p>
+              </a>
               <a href="/blog/uk-tax-changes-2026-27" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Tax Planning</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">UK Tax Changes 2026/27</p>
@@ -692,10 +700,6 @@ export default function SickPay() {
               <a href="/blog/salary-sacrifice-complete-guide" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Salary Sacrifice: Complete Guide</p>
-              </a>
-              <a href="/blog/ssp-changes-2026" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
-                <span className="text-xs font-semibold text-blue-600">Tax Updates</span>
-                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">SSP Changes 2026: New Sick Pay Rules</p>
               </a>
             </div>
           </div>
