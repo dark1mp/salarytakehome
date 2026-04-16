@@ -141,7 +141,7 @@ export default function SalaryPerSecond() {
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Info className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">How We Calculate This</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">How We Calculate This</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     We use standard UK working assumptions to convert your annual salary:
@@ -193,7 +193,7 @@ export default function SalaryPerSecond() {
                     <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Users className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Average UK Salaries by Sector</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Average UK Salaries by Sector</h2>
                   </div>
                   <div className="overflow-x-auto mb-4">
                     <table className="w-full text-sm">
@@ -250,7 +250,7 @@ export default function SalaryPerSecond() {
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <TrendingUp className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Highest-Paid in the UK</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Highest-Paid in the UK</h2>
                   </div>
                   <div className="overflow-x-auto mb-4">
                     <table className="w-full text-sm">
@@ -306,7 +306,7 @@ export default function SalaryPerSecond() {
                     <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Briefcase className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Fun Salary Facts</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Fun Salary Facts</h2>
                   </div>
                   <ul className="space-y-3 text-gray-700 text-sm">
                     <li className="flex items-start gap-2">
@@ -343,7 +343,7 @@ export default function SalaryPerSecond() {
                   <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Salary Per Second FAQs</h3>
+                  <h2 className="font-bold text-gray-900 text-xl md:text-2xl">Salary Per Second FAQs</h2>
                 </div>
                 <div className="space-y-5">
                   <div className="pb-5 border-b border-gray-200">
@@ -397,7 +397,7 @@ export default function SalaryPerSecond() {
                   <div className="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Building className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h3>
+                  <h2 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h2>
                 </div>
                 <p className="text-gray-600 text-sm">
                   This tool provides simple salary conversions for entertainment and informational purposes.

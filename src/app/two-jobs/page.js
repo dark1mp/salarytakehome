@@ -566,7 +566,7 @@ export default function TwoJobs() {
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <FileText className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">How Tax Codes Work With Two Jobs</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">How Tax Codes Work With Two Jobs</h2>
                 </div>
 
                 <p className="text-gray-700 mb-4">Your tax code tells each employer how much tax-free pay to give you. With two jobs, HMRC assigns different codes to ensure your personal allowance is only used once.</p>
@@ -627,7 +627,7 @@ export default function TwoJobs() {
                   <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Calculator className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">NI Differences: One Job vs Two Jobs</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">NI Differences: One Job vs Two Jobs</h2>
                 </div>
 
                 <p className="text-gray-700 mb-4">National Insurance is calculated separately per job. This means the NI threshold applies independently to each employment, which can change your total take-home pay.</p>
@@ -688,7 +688,7 @@ export default function TwoJobs() {
                   <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <ClipboardList className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Declaring a Second Job to HMRC</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Declaring a Second Job to HMRC</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
@@ -755,7 +755,7 @@ export default function TwoJobs() {
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <AlertTriangle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">When Two Jobs Cost You More Tax</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">When Two Jobs Cost You More Tax</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
@@ -828,7 +828,7 @@ export default function TwoJobs() {
                   <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Two Jobs Tax FAQs</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Two Jobs Tax FAQs</h2>
                 </div>
 
                 <div className="space-y-6">

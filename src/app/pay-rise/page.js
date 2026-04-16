@@ -1246,7 +1246,7 @@ export default function PayRiseCalculator() {
                   <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Pay Rise FAQs</h3>
+                  <h2 className="font-bold text-gray-900 text-xl md:text-2xl">Pay Rise FAQs</h2>
                 </div>
                 <div className="space-y-5">
                   <div className="pb-5 border-b border-gray-200">
@@ -1288,7 +1288,7 @@ export default function PayRiseCalculator() {
                   <div className="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Building className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h3>
+                  <h2 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h2>
                 </div>
                 <p className="text-gray-600 text-sm">
                   This calculator provides estimates based on standard UK tax rules for the selected tax year.

@@ -381,7 +381,7 @@ export default function MortgageCalculator() {
                     <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Calculator className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">How This Mortgage Calculator Works</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">How This Mortgage Calculator Works</h2>
                   </div>
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>
@@ -414,7 +414,7 @@ export default function MortgageCalculator() {
                     <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Lightbulb className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Why Understanding Your Mortgage Matters</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Why Understanding Your Mortgage Matters</h2>
                   </div>
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>
@@ -446,7 +446,7 @@ export default function MortgageCalculator() {
                     <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <TrendingUp className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">UK Mortgage Rates by LTV</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">UK Mortgage Rates by LTV</h2>
                   </div>
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>
@@ -510,7 +510,7 @@ export default function MortgageCalculator() {
                     <div className="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Home className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">First-Time Buyer Schemes</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">First-Time Buyer Schemes</h2>
                   </div>
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>
@@ -563,7 +563,7 @@ export default function MortgageCalculator() {
                     <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <HelpCircle className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Mortgage Calculator FAQs</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Mortgage Calculator FAQs</h2>
                   </div>
                   <div className="space-y-6">
                     <div className="pb-6 border-b border-gray-200">
@@ -641,7 +641,7 @@ export default function MortgageCalculator() {
                     <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Shield className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-2xl">Disclaimer</h3>
+                    <h2 className="font-bold text-gray-900 text-2xl">Disclaimer</h2>
                   </div>
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p>

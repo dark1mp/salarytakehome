@@ -238,7 +238,7 @@ export default function MaternitySickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Info className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Understanding Statutory Maternity Pay</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Understanding Statutory Maternity Pay</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
@@ -284,7 +284,7 @@ export default function MaternitySickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Lightbulb className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Why Planning for Maternity Pay Matters</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Why Planning for Maternity Pay Matters</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-4">Understanding your maternity pay entitlement helps you:</p>
@@ -315,7 +315,7 @@ export default function MaternitySickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Heart className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">SMP at Different Salary Levels</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">SMP at Different Salary Levels</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
@@ -392,7 +392,7 @@ export default function MaternitySickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Info className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">SMP vs Maternity Allowance</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">SMP vs Maternity Allowance</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
@@ -462,7 +462,7 @@ export default function MaternitySickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Maternity Pay FAQs</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Maternity Pay FAQs</h2>
                 </div>
 
                 <div className="space-y-6">

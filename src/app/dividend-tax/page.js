@@ -142,7 +142,7 @@ export default function DividendTaxCalculator() {
                     <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <BookOpen className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">How Dividend Tax Works in the UK</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">How Dividend Tax Works in the UK</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     Dividends are taxed differently from salary. They don&apos;t attract National Insurance, which is why many Ltd company directors pay themselves via dividends. Here&apos;s how it works:
@@ -165,7 +165,7 @@ export default function DividendTaxCalculator() {
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <BarChart3 className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Dividend Tax Rates 2026/27</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Dividend Tax Rates 2026/27</h2>
                   </div>
                   <div className="overflow-x-auto mb-4">
                     <table className="w-full text-sm">
@@ -211,7 +211,7 @@ export default function DividendTaxCalculator() {
                     <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <TrendingUp className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Dividend Allowance History</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Dividend Allowance History</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     The dividend allowance has been cut significantly since its introduction. Here&apos;s how it has changed:
@@ -267,7 +267,7 @@ export default function DividendTaxCalculator() {
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Briefcase className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Ltd Company Director Strategy</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Ltd Company Director Strategy</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     Most Ltd company directors pay themselves a combination of salary and dividends to minimise their overall tax and National Insurance bill:
@@ -308,7 +308,7 @@ export default function DividendTaxCalculator() {
                     <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Shield className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Scottish Taxpayers &amp; Dividends</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Scottish Taxpayers &amp; Dividends</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     A common misconception is that Scottish taxpayers pay different dividend tax. <strong>They don&apos;t.</strong> Dividend tax is reserved to the UK Parliament and is the same across the whole UK:
@@ -339,7 +339,7 @@ export default function DividendTaxCalculator() {
                     <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <AlertTriangle className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">The £100k Trap &amp; Dividends</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">The £100k Trap &amp; Dividends</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     If your total income (salary + dividends) exceeds £100,000, your Personal Allowance is tapered away at a rate of £1 for every £2 over the threshold. This creates an effective 60%+ marginal tax rate on income between £100,000 and £125,140.
@@ -385,7 +385,7 @@ export default function DividendTaxCalculator() {
                     <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <FileText className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Reporting Dividends to HMRC</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Reporting Dividends to HMRC</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     How you report and pay dividend tax depends on how much you receive:
@@ -432,7 +432,7 @@ export default function DividendTaxCalculator() {
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Scale className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Dividend Tax vs Capital Gains Tax</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Dividend Tax vs Capital Gains Tax</h2>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     Selling shares and receiving dividends are taxed differently. Here&apos;s how they compare for 2026/27:
@@ -487,7 +487,7 @@ export default function DividendTaxCalculator() {
                     <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                       <Lightbulb className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-xl">Tips to Reduce Your Dividend Tax Bill</h3>
+                    <h2 className="font-bold text-gray-900 text-xl">Tips to Reduce Your Dividend Tax Bill</h2>
                   </div>
                   <div className="grid md:grid-cols-2 gap-4 mb-4">
                     <div className="bg-green-50/50 rounded-xl p-4 border border-green-100">
@@ -523,7 +523,7 @@ export default function DividendTaxCalculator() {
                   <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Dividend Tax FAQs</h3>
+                  <h2 className="font-bold text-gray-900 text-xl md:text-2xl">Dividend Tax FAQs</h2>
                 </div>
                 <div className="space-y-5">
                   <div className="pb-5 border-b border-gray-200">
@@ -577,7 +577,7 @@ export default function DividendTaxCalculator() {
                   <div className="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Building className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h3>
+                  <h2 className="font-bold text-gray-900 text-xl md:text-2xl">Disclaimer</h2>
                 </div>
                 <p className="text-gray-600 text-sm">
                   This calculator provides estimates based on HMRC dividend tax rules for the 2026/27 tax year.

@@ -276,7 +276,7 @@ export default function HourlyWage() {
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Info className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">UK Minimum Wage Information</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">UK Minimum Wage Information</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
@@ -352,7 +352,7 @@ export default function HourlyWage() {
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Lightbulb className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Why knowing your hourly wage matters</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Why knowing your hourly wage matters</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-4">Knowing your hourly pay can help you:</p>
@@ -383,7 +383,7 @@ export default function HourlyWage() {
                   <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <TrendingUp className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Understanding Your Tax on Hourly Pay</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Understanding Your Tax on Hourly Pay</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
@@ -452,7 +452,7 @@ export default function HourlyWage() {
                   <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Clock className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Overtime &amp; Your Effective Hourly Rate</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Overtime &amp; Your Effective Hourly Rate</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-4">
@@ -485,7 +485,7 @@ export default function HourlyWage() {
                   <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Hourly wage FAQs</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Hourly wage FAQs</h2>
                 </div>
 
                 <div className="space-y-6">

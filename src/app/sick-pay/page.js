@@ -397,7 +397,7 @@ export default function SickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Info className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Understanding Statutory Sick Pay</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Understanding Statutory Sick Pay</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
@@ -449,7 +449,7 @@ export default function SickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <Lightbulb className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Why Knowing Your SSP Rights Matters</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Why Knowing Your SSP Rights Matters</h2>
                 </div>
 
                 <p className="text-gray-700 text-base leading-relaxed mb-4">Understanding your Statutory Sick Pay entitlement is important because it helps you:</p>
@@ -480,7 +480,7 @@ export default function SickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HeartPulse className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">SSP vs Employer Sick Pay</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">SSP vs Employer Sick Pay</h2>
                 </div>
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
                   Many employers offer sick pay schemes that are more generous than SSP. Here&apos;s how statutory and typical employer schemes compare:
@@ -540,7 +540,7 @@ export default function SickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <AlertCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">SSP 2026/27: What's Changed</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">SSP 2026/27: What's Changed</h2>
                 </div>
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
                   From 6 April 2026, Statutory Sick Pay received a major overhaul. Here&apos;s a side-by-side comparison of the old and new rules:
@@ -600,7 +600,7 @@ export default function SickPay() {
                   <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-medium flex-shrink-0">
                     <HelpCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-2xl">Statutory Sick Pay FAQs</h3>
+                  <h2 className="font-bold text-gray-900 text-2xl">Statutory Sick Pay FAQs</h2>
                 </div>
 
                 <div className="space-y-6">
