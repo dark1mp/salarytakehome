@@ -180,7 +180,7 @@ Every calculator has at least one dedicated supporting blog post:
 - Structured data: WebApplication (all 10 calculators + tax code checker + salary per second), Article (blog posts), FAQPage (all 10 calculators + tax code checker + salary per second — 7 questions each)
 - Sitemap: dynamic at `/sitemap.js` — must be updated when adding/removing pages
 - Robots.txt: blocks `/api/`, `/_next/`, `/admin/`
-- IndexNow: auto-submits all sitemap URLs post-build to Bing, Yandex, Seznam, Naver. Can also be triggered manually: `node scripts/submit-indexnow.mjs`. **Note:** the script fetches from the live production sitemap (`https://www.salarytakehome.co.uk/sitemap.xml`), not the local build, so URL counts will lag until the new build is deployed.
+- IndexNow: auto-submits recently-modified sitemap URLs post-build to Bing, Yandex, Seznam, Naver (streaming mode — only URLs with `lastmod` in the last 7 days). Use `node scripts/submit-indexnow.mjs --all` for a full batch resubmission, or `--days=N` to change the recency window. **Note:** the script fetches from the live production sitemap, not the local build, so new URLs won't appear until deployed.
 - Google: does NOT support IndexNow. Google sitemap ping endpoint is deprecated (returns 404). Use Google Search Console for manual URL submission, or rely on Google crawling the sitemap `<lastmod>` dates.
 - Breadcrumbs: every page has visual breadcrumbs + BreadcrumbList JSON-LD schema via the Breadcrumbs component
 - **Last Updated badge:** all 10 calculator pages show "Last updated: April 2026 · Reflects 2026/27 tax year" below the h1 description. Update this during the annual tax year refresh.
