@@ -10,7 +10,7 @@ export default function LayoutWrapper({ children, breadcrumbs, narrow = false, f
       <Sidebar />
       <div className="ml-0 md:ml-[230px] relative">
         {narrow && (
-          <div className="hidden xl:block absolute right-8 top-8 w-[160px]">
+          <div className="hidden xl:block absolute right-8 inset-y-8 w-[160px]">
             <div className="sticky top-8">
               <AdUnit slot="3284080016" hideOnMobile />
             </div>
