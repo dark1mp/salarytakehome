@@ -12,7 +12,7 @@ export default function LayoutWrapper({ children, breadcrumbs, narrow = false, f
         {narrow && (
           <div className="hidden xl:block absolute right-8 top-8 w-[160px]">
             <div className="sticky top-8">
-              <AdUnit slot="3284808016" hideOnMobile />
+              <AdUnit slot="3284080016" hideOnMobile />
             </div>
           </div>
         )}
