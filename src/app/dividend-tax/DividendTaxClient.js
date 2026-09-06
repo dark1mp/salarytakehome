@@ -304,9 +304,6 @@ function DividendTaxCalculatorContent() {
       {/* Results Section */}
       {result && (
         <div className="relative">
-          <div className="hidden xl:block absolute right-[-184px] top-0 w-[160px]">
-            <AdUnit slot="1315738286" hideOnMobile />
-          </div>
           <div className="space-y-6 mb-10">
           {/* Hero Result Card */}
           <div className="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-3xl shadow-xl p-6 md:p-8 text-white">

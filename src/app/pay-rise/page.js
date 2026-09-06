@@ -532,13 +532,14 @@ export default function PayRiseCalculator() {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         {/* Main Content */}
         <div className="relative mx-auto px-4 md:px-8 py-10">
-          <div className="hidden xl:block absolute right-8 top-8 w-[160px]">
+          <div className="hidden xl:block absolute right-8 inset-y-8 w-[160px] 2xl:w-[300px]">
+            <AdUnit slot="4603525459" hideOnMobile />
+            <AdUnit slot="9534353704" hideOnMobile />
             <div className="sticky top-8">
-              <AdUnit slot="4603525459" hideOnMobile />
-              <AdUnit slot="9534353704" hideOnMobile />
+              <AdUnit slot="1315738286" hideOnMobile />
             </div>
           </div>
-          <div className="flex-1 xl:pr-[192px]">
+          <div className="flex-1 xl:pr-[192px] 2xl:pr-[332px]">
 
             <AdUnit slot="1586479879" hideOnMobile />
             {/* Page Header */}
@@ -806,9 +807,6 @@ export default function PayRiseCalculator() {
             {/* Results Section */}
             {results ? (
               <div className="relative">
-                <div className="hidden xl:block absolute right-[-184px] top-0 w-[160px]">
-                  <AdUnit slot="1315738286" hideOnMobile />
-                </div>
               <div className="bg-white/90 backdrop-blur-medium rounded-3xl shadow-large border border-white/20 p-6 md:p-8 mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Pay Rise Breakdown</h3>
 
@@ -1311,7 +1309,7 @@ export default function PayRiseCalculator() {
         </div>
 
         {/* Related Reading */}
-        <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px]">
+        <div className="mx-auto px-8 mt-6 mb-8 xl:pr-[192px] 2xl:pr-[332px]">
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">

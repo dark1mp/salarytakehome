@@ -90,7 +90,13 @@ export default function TaxCalculator() {
           }) }}
         />
 
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+        <div className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+          <div className="hidden xl:block absolute right-8 inset-y-8 w-[160px]">
+            <AdUnit slot="4603525459" hideOnMobile />
+            <div className="sticky top-8">
+              <AdUnit slot="9534353704" hideOnMobile />
+            </div>
+          </div>
           {/* Skip to main content link for accessibility */}
           <a
             href="#main-content"
@@ -101,12 +107,6 @@ export default function TaxCalculator() {
 
           <main id="main-content">
             <div className="relative mx-auto px-4 md:px-8 py-8">
-              <div className="hidden xl:block absolute right-8 top-8 w-[160px]">
-                <div className="sticky top-8">
-                  <AdUnit slot="4603525459" hideOnMobile />
-                  <AdUnit slot="9534353704" hideOnMobile />
-                </div>
-              </div>
               <div className="flex-1 xl:pr-[192px]">
                 <AdUnit slot="1586479879" hideOnMobile />
                 <div className="mb-8">
