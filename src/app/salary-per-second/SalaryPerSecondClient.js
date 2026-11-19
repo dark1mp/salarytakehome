@@ -34,7 +34,7 @@ const PRESETS = [
   { label: "Salah", salary: 20800000, note: "~£400k/week" },
   { label: "NHS Nurse", salary: 29970, note: "Band 5" },
   { label: "UK Teacher", salary: 31650, note: "Main scale" },
-  { label: "Min Wage (21+)", salary: 24064, note: "£12.21/hr" },
+  { label: "Min Wage (21+)", salary: 24785, note: "£12.71/hr" },
 ];
 
 // Format number input with commas

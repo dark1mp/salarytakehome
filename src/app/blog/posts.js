@@ -66,7 +66,7 @@ export const blogPosts = [
   {
     slug: "uk-dividend-tax-explained",
     title: "UK Dividend Tax Explained: Rates, Allowances & How to Calculate (2026/27)",
-    description: "Complete guide to UK dividend tax for 2026/27. Learn about dividend tax rates (8.75%, 33.75%, 39.35%), the £500 allowance, how to calculate your bill, and strategies to reduce it.",
+    description: "Complete guide to UK dividend tax for 2026/27. Learn about dividend tax rates (10.75%, 35.75%, 39.35%), the £500 allowance, how to calculate your bill, and strategies to reduce it.",
     date: "2026-03-31",
     lastModified: "2026-11-19",
     readTime: "12 min read",

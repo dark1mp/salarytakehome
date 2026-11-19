@@ -47,7 +47,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/compare-salaries`,
-      lastModified: new Date('2026-04-09'),
+      lastModified: new Date('2026-11-19'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
@@ -95,7 +95,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/salary-per-second`,
-      lastModified: new Date('2026-03-29'),
+      lastModified: new Date('2026-11-19'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },

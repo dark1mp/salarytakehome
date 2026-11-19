@@ -141,7 +141,7 @@ export default function CompareSalaries() {
                 "name": "How do student loan repayments affect my salary?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Student loan repayments are 9% of earnings above the threshold (Plan 1: £26,065, Plan 2: £28,470, Plan 4: £32,745, Plan 5: £25,000). Postgraduate loans are 6% above £21,000. On a £35,000 salary with Plan 2, you repay £588 per year, reducing monthly take-home pay by about £49."
+                  "text": "Student loan repayments are 9% of earnings above the threshold (Plan 1: £26,900, Plan 2: £29,385, Plan 4: £33,795, Plan 5: £25,000). Postgraduate loans are 6% above £21,000. On a £35,000 salary with Plan 2, you repay £505 per year, reducing monthly take-home pay by about £42."
                 }
               },
               {

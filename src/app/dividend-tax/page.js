@@ -247,18 +247,29 @@ export default function DividendTaxCalculator() {
                           <td className="py-2 pr-4 text-right font-semibold text-red-600">£500</td>
                           <td className="py-2 text-right text-gray-600">8.75%</td>
                         </tr>
-                        <tr className="border-b border-gray-100 bg-emerald-50/50">
-                          <td className="py-2 pr-4 text-gray-900 font-semibold">2025/26</td>
+                        <tr className="border-b border-gray-100">
+                          <td className="py-2 pr-4 text-gray-900">2025/26</td>
                           <td className="py-2 pr-4 text-right font-semibold text-red-600">£500</td>
                           <td className="py-2 text-right text-gray-600">8.75%</td>
+                        </tr>
+                        <tr className="border-b border-gray-100 bg-emerald-50/50">
+                          <td className="py-2 pr-4 text-gray-900 font-semibold">2026/27</td>
+                          <td className="py-2 pr-4 text-right font-semibold text-red-600">£500</td>
+                          <td className="py-2 text-right text-gray-600">10.75%</td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 pr-4 text-gray-900">2027/28</td>
+                          <td className="py-2 pr-4 text-right font-semibold text-red-600">£500</td>
+                          <td className="py-2 text-right text-gray-600">10.75%</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                   <p className="text-gray-600 text-sm">
-                    The allowance was originally £5,000 when introduced in 2016/17. From April 2026, the basic and higher dividend rates are set to rise by 2 percentage points (to 10.75% and 35.75%).
-                    Read more about upcoming changes in our{' '}
-                    <a href="/blog/uk-tax-changes-2025-26" className="text-blue-600 hover:underline">UK Tax Changes 2025/26</a> blog post.
+                    The allowance was originally £5,000 when introduced in 2016/17. The basic and higher dividend rates rose by 2 percentage points on 6 April 2026 (to 10.75% and 35.75%), and the Autumn Budget 2026 left both the rates and the £500 allowance unchanged for 2027/28.
+                    Read more in our{' '}
+                    <a href="/blog/uk-tax-changes-2026-27" className="text-blue-600 hover:underline">UK Tax Changes 2026/27</a> and{' '}
+                    <a href="/blog/autumn-budget-2026-what-it-means-for-your-pay" className="text-blue-600 hover:underline">Autumn Budget 2026</a> posts.
                   </p>
                 </div>
 
@@ -321,7 +332,7 @@ export default function DividendTaxCalculator() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
-                      <span><strong>UK dividend rates</strong> (8.75%/33.75%/39.35%) apply to all UK residents including Scotland</span>
+                      <span><strong>UK dividend rates</strong> (10.75%/35.75%/39.35%) apply to all UK residents including Scotland</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
@@ -456,12 +467,12 @@ export default function DividendTaxCalculator() {
                         </tr>
                         <tr className="border-b border-gray-100">
                           <td className="py-2.5 pr-4 text-gray-900 font-medium">Basic rate</td>
-                          <td className="py-2.5 pr-4 text-gray-700">8.75%</td>
+                          <td className="py-2.5 pr-4 text-gray-700">10.75%</td>
                           <td className="py-2.5 text-gray-700">18%</td>
                         </tr>
                         <tr className="border-b border-gray-100">
                           <td className="py-2.5 pr-4 text-gray-900 font-medium">Higher rate</td>
-                          <td className="py-2.5 pr-4 text-gray-700">33.75%</td>
+                          <td className="py-2.5 pr-4 text-gray-700">35.75%</td>
                           <td className="py-2.5 text-gray-700">24%</td>
                         </tr>
                         <tr className="border-b border-gray-100">
