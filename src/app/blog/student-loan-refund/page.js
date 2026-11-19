@@ -88,7 +88,7 @@ export default function StudentLoanRefund() {
               The problem is that your loan repayments are calculated based on your <em>annual</em> income, but they're collected based on your <em>monthly</em> earnings.
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Say you're on Plan 2 (the most common plan for people who started uni between 2012 and 2023). You shouldn't start repaying until you earn over £27,295 a year. That works out to £2,274 a month.
+              Say you're on Plan 2 (the most common plan for people who started uni between 2012 and 2023). You shouldn't start repaying until you earn over £29,385 a year. That works out to £2,448 a month.
             </p>
             <div className="bg-amber-50 rounded-xl p-6 border border-amber-200 mb-6">
               <h3 className="font-semibold text-amber-800 mb-3">Example Scenario:</h3>
@@ -99,7 +99,7 @@ export default function StudentLoanRefund() {
                 Your payroll system sees £3,500 and thinks "that's over the £2,274 threshold, time to deduct 9%." So it takes £110 from your pay that month (9% of the £1,226 over the threshold).
               </p>
               <p className="text-amber-700 text-sm leading-relaxed">
-                But here's the issue: your total annual income is only £23,500 (11 × £2,000 + £3,500). That's well below the £27,295 threshold. You shouldn't have paid anything.
+                But here's the issue: your total annual income is only £23,500 (11 × £2,000 + £3,500). That's well below the £29,385 threshold. You shouldn't have paid anything.
               </p>
             </div>
             <p className="text-gray-700 mb-4 leading-relaxed">
@@ -522,7 +522,7 @@ export default function StudentLoanRefund() {
             "headline": "Are You Owed Money? The Student Loan Refund Thousands of UK Graduates Are Missing",
             "description": "Over 1 million student loan overpayments happened last year. Here's how to check if you're one of them—and get your money back.",
             "datePublished": "2026-01-25T00:00:00.000Z",
-            "dateModified": "2026-01-25T00:00:00.000Z",
+            "dateModified": "2026-11-19T00:00:00.000Z",
             "author": {
               "@type": "Organization",
               "name": "SalaryTakeHome"

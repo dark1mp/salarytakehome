@@ -61,7 +61,7 @@ export default function SalarySacrificeGuide() {
               <h3 className="font-semibold text-green-800 mb-3">Key Benefits:</h3>
               <ul className="text-green-700 space-y-2">
                 <li>• Save income tax (20%, 40%, or 45%)</li>
-                <li>• Save National Insurance (12% or 2%)</li>
+                <li>• Save National Insurance (8% or 2%)</li>
                 <li>• Often save employer NI too (15%)</li>
                 <li>• Access to benefits you might not otherwise afford</li>
               </ul>

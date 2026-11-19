@@ -44,7 +44,7 @@ export default function UKTaxChanges202627() {
               "headline": "UK Tax Changes 2026/27: Complete Guide to New Rates & Thresholds",
               "description": "Comprehensive guide to UK tax changes for 2026/27: frozen thresholds extended to 2031, Scottish band changes, dividend tax rise, SSP reform, and new student loan thresholds.",
               "datePublished": "2026-04-06T00:00:00.000Z",
-              "dateModified": "2026-04-08T00:00:00.000Z",
+              "dateModified": "2026-11-19T00:00:00.000Z",
               "author": { "@type": "Organization", "name": "SalaryTakeHome", "url": "https://www.salarytakehome.co.uk" },
               "publisher": { "@type": "Organization", "name": "SalaryTakeHome", "url": "https://www.salarytakehome.co.uk" },
               "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.salarytakehome.co.uk/blog/uk-tax-changes-2026-27" },
@@ -290,6 +290,7 @@ export default function UKTaxChanges202627() {
                 The Autumn Budget 2025 announced an increase to the basic and higher rates of dividend tax from 6 April 2026. The additional rate and the £500 dividend allowance are unchanged. This change was primarily aimed at owner-managed companies where directors take a low salary plus dividends.
               </p>
               <div className="overflow-x-auto">
+                {/* tax-check-ignore-start: 2025/26 vs 2026/27 comparison — the old column is deliberate */}
                 <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
                   <thead>
                     <tr className="bg-gray-50">
@@ -321,6 +322,7 @@ export default function UKTaxChanges202627() {
                     </tr>
                   </tbody>
                 </table>
+                {/* tax-check-ignore-end */}
               </div>
               <div className="mt-6 p-4 bg-red-50 rounded-xl border border-red-200">
                 <p className="text-sm text-red-900">
@@ -382,6 +384,7 @@ export default function UKTaxChanges202627() {
                 Repayment thresholds for most plans rose in line with RPI, but the Plan 2 threshold is due to be frozen at its new level for three years from April 2027.
               </p>
               <div className="overflow-x-auto">
+                {/* tax-check-ignore-start: 2025/26 vs 2026/27 student loan comparison */}
                 <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
                   <thead>
                     <tr className="bg-gray-50">
@@ -424,6 +427,7 @@ export default function UKTaxChanges202627() {
                     </tr>
                   </tbody>
                 </table>
+                {/* tax-check-ignore-end */}
               </div>
               <div className="mt-6 p-4 bg-amber-50 rounded-xl border border-amber-200">
                 <p className="text-sm text-amber-900">

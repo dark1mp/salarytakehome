@@ -1,0 +1,143 @@
+{
+  "$comment": [
+    "Source of truth for figures that appear in PROSE, tables and JSON-LD across the site.",
+    "",
+    "Why this file exists: in November 2026 an audit found the blog and several calculator",
+    "pages quoting rates that were one or two tax years out of date, including a page that",
+    "computed at 10.75% while its own educational cards said 8.75%. The interactive parts get",
+    "updated during the annual refresh; the words around them do not.",
+    "",
+    "How it works: each fact carries the CURRENT value, optional `verify` pointers into the",
+    "real calculator constants (so this file cannot drift from the code without failing), and",
+    "`stale` regexes that match the superseded value being presented as current.",
+    "",
+    "Run: node scripts/check-tax-facts.mjs",
+    "",
+    "To let a deliberate historical mention through, either add the file to historicalPages",
+    "or put the comment  tax-check-ignore  on the same line."
+  ],
+
+  "currentTaxYear": "2026/27",
+  "forwardTaxYear": "2027/28",
+
+  "contextExclude": "up from|was (?:\u00a3|&pound;)|were (?:\u00a3|&pound;)|previously|rose from|increased from|risen from|compared (?:to|with)|old rate|former|until (?:5|6) April|in 20\\d\\d/\\d\\d was|20(?:2[1-5])/2[2-6]",
+
+  "historicalPages": [
+    "src/app/blog/uk-tax-changes-2024-25/",
+    "src/app/blog/uk-tax-changes-2025-26/",
+    "src/app/blog/uk-minimum-wage-2025-26/"
+  ],
+
+  "sources": {
+    "takehome": "src/app/take-home-pay-calculator/TaxCalculatorClient.js",
+    "payrise": "src/app/pay-rise/page.js",
+    "twojobs": "src/app/two-jobs/page.js",
+    "dividend": "src/app/dividend-tax/DividendTaxClient.js"
+  },
+
+  "facts": [
+    {
+      "id": "employee-ni-main-rate",
+      "label": "Employee NI main rate",
+      "current": "8%",
+      "note": "12% until 5 Jan 2024, 10% to 5 Apr 2024, 8% since. Frozen at 8% to 2030/31.",
+      "verify": [
+        { "source": "takehome", "const": "NI_BANDS", "path": ["2026/27", "rate"], "expect": 0.08 },
+        { "source": "payrise", "const": "NI_BANDS", "path": ["2026/27", "rate"], "expect": 0.08 },
+        { "source": "takehome", "const": "NI_BANDS", "path": ["2024/25", "rate"], "expect": 0.08 }
+      ],
+      "stale": [
+        "1[02]%\\s*(?:NI\\b|National Insurance)",
+        "(?:employee NI|National Insurance)[^.<]{0,30}\\b1[02]%"
+      ]
+    },
+    {
+      "id": "employer-ni-rate",
+      "label": "Employer NI (secondary) rate",
+      "current": "15%",
+      "note": "13.8% until 5 Apr 2025, 15% since. Frozen to 2030/31.",
+      "stale": ["13\\.8\\s*%"]
+    },
+    {
+      "id": "dividend-basic-rate",
+      "label": "Dividend basic rate",
+      "current": "10.75%",
+      "note": "7.5% to 2021/22, 8.75% 2022/23-2025/26, 10.75% from 2026/27.",
+      "verify": [
+        { "source": "dividend", "const": "TAX_DATA", "path": ["2026/27", "dividendRates", "basic"], "expect": 0.1075 }
+      ],
+      "stale": ["8\\.75%\\s*/\\s*33\\.75%", "\\(8\\.75%,\\s*33\\.75%"]
+    },
+    {
+      "id": "dividend-higher-rate",
+      "label": "Dividend higher rate",
+      "current": "35.75%",
+      "verify": [
+        { "source": "dividend", "const": "TAX_DATA", "path": ["2026/27", "dividendRates", "higher"], "expect": 0.3575 }
+      ],
+      "stale": ["33\\.75%\\s*/\\s*39\\.35%"]
+    },
+    {
+      "id": "salary-sacrifice-basic-saving",
+      "label": "Salary sacrifice saving, basic rate",
+      "current": "28% (20% tax + 8% NI)",
+      "note": "Was 32% when employee NI was 12%.",
+      "stale": ["32%\\s*\\(20%\\s*tax\\s*\\+\\s*12%"]
+    },
+    {
+      "id": "student-loan-plan1",
+      "label": "Student loan Plan 1 threshold",
+      "current": "£26,900",
+      "verify": [
+        { "source": "takehome", "const": "STUDENT_LOAN", "path": ["plan1", "threshold"], "expect": 26900 }
+      ],
+      "stale": ["(?:£|&pound;)(?:19,895|20,195|22,015|24,990|26,065)\\b"]
+    },
+    {
+      "id": "student-loan-plan2",
+      "label": "Student loan Plan 2 threshold",
+      "current": "£29,385",
+      "note": "Frozen at 2026/27 level until April 2030.",
+      "verify": [
+        { "source": "takehome", "const": "STUDENT_LOAN", "path": ["plan2", "threshold"], "expect": 29385 }
+      ],
+      "stale": ["(?:£|&pound;)(?:27,295|28,470)\\b"]
+    },
+    {
+      "id": "student-loan-plan4",
+      "label": "Student loan Plan 4 threshold",
+      "current": "£33,795",
+      "verify": [
+        { "source": "takehome", "const": "STUDENT_LOAN", "path": ["plan4", "threshold"], "expect": 33795 }
+      ],
+      "stale": ["(?:£|&pound;)(?:25,375|27,660|31,395|32,745)\\b"]
+    },
+    {
+      "id": "national-living-wage",
+      "label": "National Living Wage (21+)",
+      "current": "£12.71/hr",
+      "note": "£11.44 in 2024/25, £12.21 in 2025/26, £12.71 from 1 Apr 2026.",
+      "stale": ["(?:£|&pound;)1[012]\\.(?:21|44|42|18)\\s*(?:per hour|/hr|an hour)"]
+    },
+    {
+      "id": "ssp-weekly-rate",
+      "label": "SSP weekly rate",
+      "current": "£123.25",
+      "note": "£116.75 in 2024/25, £118.75 in 2025/26, £123.25 (or 80% of AWE) from 6 Apr 2026.",
+      "stale": ["(?:£|&pound;)1(?:18\\.75|16\\.75)\\s*(?:per week|a week|/week)"]
+    },
+    {
+      "id": "smp-weekly-rate",
+      "label": "SMP / family statutory pay weekly rate",
+      "current": "£194.32",
+      "note": "£184.03 in 2024/25, £187.18 in 2025/26, £194.32 in 2026/27.",
+      "stale": ["(?:£|&pound;)18[47]\\.(?:03|18)\\s*(?:per week|a week|/week)"]
+    }
+  ],
+
+  "futureTense": {
+    "$comment": "Changes that have already happened but are still written as upcoming.",
+    "verbs": "will rise|will be|will increase|will change|will fall|is changing|are changing|is set to|are set to|is getting|upcoming changes",
+    "pastDates": ["April 2024", "April 2025", "January 2026", "March 2026", "April 2026", "October 2026"]
+  }
+}

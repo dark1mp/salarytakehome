@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "check:tax": "node scripts/check-tax-facts.mjs",
     "postbuild": "node scripts/submit-indexnow.mjs",
     "start": "next start",
     "lint": "next lint"

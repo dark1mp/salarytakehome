@@ -156,7 +156,7 @@ const NI_BANDS = {
   "2021/22": { primaryThreshold: 9568, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
   "2022/23": { primaryThreshold: 9880, upperEarnings: 50270, rate: 0.1325, upperRate: 0.0325 },
   "2023/24": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
-  "2024/25": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
+  "2024/25": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 },
   "2025/26": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 },
   "2027/28": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 },
   "2026/27": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 }
@@ -1249,12 +1249,12 @@ export default function PayRiseCalculator() {
                       <tbody className="text-gray-700">
                         <tr className="border-t border-gray-200">
                           <td className="py-2 font-medium">Plan 1</td>
-                          <td>£26,065</td>
+                          <td>£26,900</td>
                           <td className="font-semibold">9%</td>
                         </tr>
                         <tr className="border-t border-gray-200">
                           <td className="py-2 font-medium">Plan 2</td>
-                          <td>£28,470</td>
+                          <td>£29,385</td>
                           <td className="font-semibold">9%</td>
                         </tr>
                         <tr className="border-t border-gray-200">

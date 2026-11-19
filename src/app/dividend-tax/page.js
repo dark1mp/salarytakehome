@@ -578,7 +578,7 @@ export default function DividendTaxCalculator() {
                   <div>
                     <h4 className="font-bold text-gray-900 text-base mb-2">How did dividend tax rates change recently?</h4>
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      In April 2022, rates rose by 1.25 percentage points (basic: 7.5% → 8.75%, higher: 32.5% → 33.75%, additional: 38.1% → 39.35%). The dividend allowance was halved from £2,000 to £1,000 in April 2023, then to £500 in April 2024. From April 2026, basic and higher rates will increase by another 2 percentage points.
+                      In April 2022, rates rose by 1.25 percentage points (basic: 7.5% → 8.75%, higher: 32.5% → 33.75%, additional: 38.1% → 39.35%). The dividend allowance was halved from £2,000 to £1,000 in April 2023, then to £500 in April 2024. Basic and higher rates rose by another 2 percentage points on 6 April 2026, to 10.75% and 35.75%.
                     </p>
                   </div>
                 </div>

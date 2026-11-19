@@ -245,7 +245,7 @@ export default function TaxCalculator() {
                         <h3 className="font-bold text-gray-900 text-xl">Student Loans</h3>
                       </div>
                       <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                        Student loan repayments are deducted at 9% of earnings above your plan threshold. Plan 1 threshold is £26,065, Plan 2 is £28,470, and Plan 5 (post-2023) is £25,000. Postgraduate loans are repaid at 6% above £21,000.
+                        Student loan repayments are deducted at 9% of earnings above your plan threshold. Plan 1 threshold is £26,900, Plan 2 is £29,385, and Plan 5 (post-2023) is £25,000. Postgraduate loans are repaid at 6% above £21,000.
                       </p>
                       <div className="space-y-2">
                         <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Learn More</p>

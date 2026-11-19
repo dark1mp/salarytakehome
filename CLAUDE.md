@@ -25,6 +25,7 @@ npm run dev          # Dev server with Turbopack
 npm run build        # Production build (auto-runs postbuild IndexNow submission)
 npm run start        # Start production server
 npm run lint         # BROKEN — see note below; use `npm run build` as the gate
+npm run check:tax    # Tax-fact consistency check (see below) — the one working gate
 ```
 
 **`npm run lint` does not work.** `next lint` was removed in Next.js 16, so the script resolves "lint" as a directory path and fails. Invoking `eslint` directly also fails with `TypeError: Converting circular structure to JSON` inside `@eslint/eslintrc` config validation. This is pre-existing, not something a recent change introduced. **`npm run build` is the only working gate** — run it before every push, since pushing to `main` deploys to Vercel.
@@ -145,9 +146,35 @@ From the **Autumn Budget 2026 (28 October 2026)**, affecting 2027/28:
 
 When a Budget lands, the authoritative source is **HMRC's OOTLAR and its Annex A**, not press coverage — secondary sources contradicted each other on both the savings rates and the ISA position in November 2026.
 
+## Tax-Fact Consistency Check
+
+`npm run check:tax` (`scripts/check-tax-facts.mjs`) answers one question: **does the site's prose still agree with its calculators?** It exists because the November 2026 audit found the blog and several calculator pages quoting rates one or two tax years out of date — including `/dividend-tax` computing at 10.75% while its own educational cards said 8.75%, and `/compare-salaries` serving 2025/26 student loan thresholds in its FAQPage schema. The interactive parts get updated at the annual refresh; the words around them do not.
+
+`scripts/tax-facts.json` is the input. Each fact carries the current value, `verify` pointers into the real calculator constants, and `stale` regexes matching the superseded value. **The facts file is itself checked against the code**, so it cannot drift silently either — that is the point of `verify`.
+
+Six checks. `drift`, `contradiction`, `badge` and `signal` are **errors**; `superseded` and `future` are **warnings** (`--strict` fails on those too):
+
+| Check | Catches |
+|---|---|
+| `drift` | The facts file no longer matches the calculator constants |
+| `contradiction` | A page quoting a figure that disagrees with the constants it defines itself |
+| `superseded` | A previous year's figure presented as current |
+| `badge` | A "Last updated" badge naming the wrong tax year |
+| `signal` | A post whose schema `dateModified` is after its `date` but has no `lastModified` in `posts.js`, so its sitemap `lastmod` never moves and the correction is never re-crawled |
+| `future` | A change that already happened, still written as upcoming ("From April 2026 ... will rise") |
+
+**Suppressing a legitimate historical mention** — comparison tables and "old rules" sections will trip `superseded`. Three escapes, in order of preference:
+- Wrap the block: `{/* tax-check-ignore-start: reason */}` … `{/* tax-check-ignore-end */}`. Used on the 2025/26-vs-2026/27 tables in `uk-tax-changes-2026-27` and the "Previous SSP Rules" list in `/sick-pay`.
+- One line: put `tax-check-ignore` in a comment on it.
+- A whole archival page: add it to `historicalPages` in `tax-facts.json`.
+
+Same-line comparisons ("up from £26,065", "was £118.75") are skipped automatically via `contextExclude` — no pragma needed.
+
+It is **not** wired into `prebuild`, so it never blocks a deploy. Add `"prebuild": "npm run check:tax"` to `package.json` if you want it to. Run it before every push, and as step 0 of the annual refresh — with `npm run lint` broken, this and `npm run build` are the only gates that work.
+
 ## Annual Tax Year Refresh (April)
 
-When a new UK tax year starts, update these in order:
+When a new UK tax year starts, update these in order. **Run `npm run check:tax` first** — it tells you which pages still quote last year's figures, which is most of the work — and again at the end, when it should come back clean.
 
 1. **Calculator tax data** — Add the new year to `TAX_YEARS`, `TAX_BANDS`, `NI_BANDS` and (if thresholds moved) `STUDENT_LOAN_BY_YEAR`, then set it as the default in `useState`. Affects: `take-home-pay-calculator/TaxCalculatorClient.js`, `pay-rise/page.js`, `two-jobs/page.js`, `dividend-tax/DividendTaxClient.js` — note two of the four are client components, not `page.js`. Keep historical years in place.
 2. **Statutory rate calculators** — `sick-pay/page.js` (flip `useNewRules` default and update constants), `maternity-sick-pay/page.js` (SMP rate + qualifying threshold).
@@ -313,7 +340,7 @@ Every calculator has at least one dedicated supporting blog post:
 ## Known Gaps / TODO
 
 - **Dated action: remove `scottishProvisional`** after the Scottish Budget (due 3 December 2026) and replace the carried-forward 2027/28 Scottish bands with the real ones.
-- **Rate claims drift across the whole site and nothing catches it.** The November 2026 audit started from nine stale badges and turned up wrong *figures* everywhere: the student loan guide quoted Plan 1 £22,015 and Plan 2 £27,295 (two threshold updates behind), employee NI appeared as 12% in two posts, employer NI as 13.8% in five, `/dividend-tax` stated the old 8.75%/33.75% dividend rates in its educational cards, `/compare-salaries` had 2025/26 student loan thresholds in its FAQPage schema, `/salary-per-second` still had the £12.21 NLW, and `ssp-changes-2026` called the superseded pre-April-2026 rules "current". All fixed, but there is **no automated check** that prose agrees with the calculator constants. A script that greps for rate/threshold patterns and diffs them against the constants would pay for itself every April.
+- **Rate claims drift across the whole site.** The November 2026 audit started from nine stale badges and found wrong *figures* everywhere: student loan thresholds two updates behind, employee NI as 12% in three places, employer NI as 13.8% in six, `/dividend-tax` stating the old 8.75%/33.75% rates, `/compare-salaries` serving 2025/26 thresholds in its FAQPage schema, `/salary-per-second` on the old NLW, and `NI_BANDS["2024/25"].rate` set to 0.12 when the rate was cut to 8% on 6 April 2024 — a live calculation error, not just prose. **`npm run check:tax` now guards all of this** (see "Tax-Fact Consistency Check"), but it is not in `prebuild`, so it only helps if someone runs it.
 - **Static content can contradict the calculator on the same page.** `/dividend-tax` computed at 10.75% while its own cards said 8.75%, and `/compare-salaries` had correct thresholds in its `<select>` and stale ones in its FAQPage schema. The interactive part gets updated during the tax year refresh; the prose, tables, FAQ answers and JSON-LD around it do not. **The schema is the public-facing copy** — it is what Google reads for rich results — so a stale FAQPage answer is worse than stale body text. When changing any rate, grep the page for the old figure rather than only editing the constants.
 - **Watch for past changes still written in the future tense.** Several pages described the April 2026 SSP reform, the April 2026 NLW rise and the April 2026 dividend rate rise as upcoming, months after they took effect ("From April 2026 ... are set to rise"). Grep for "from April", "will rise", "is changing" and "set to" alongside a date that has passed.
 - **`npm run lint` is broken** (`next lint` removed in Next.js 16; direct eslint hits a circular-structure error in `@eslint/eslintrc`). No working lint gate exists — only `npm run build`.

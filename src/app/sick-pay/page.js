@@ -367,7 +367,7 @@ export default function SickPay() {
                             <div className="flex items-start gap-3">
                               <Info className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                               <div className="text-sm text-gray-700">
-                                <strong className="text-green-700">Good News:</strong> From April 2026, the earnings limit will be removed. Toggle to "2026/27 (New Rules)" above to see what you would receive under the new system.
+                                <strong className="text-green-700">Good News:</strong> Since 6 April 2026 there is no earnings limit. Toggle to "2026/27 (New Rules)" above to see what you would receive under the new system.
                               </div>
                             </div>
                           </div>
@@ -414,12 +414,14 @@ export default function SickPay() {
                 </ul>
 
                 <h4 className="font-bold text-gray-900 text-lg mb-4">Previous SSP Rules (2025/26 — up to 5 April 2026)</h4>
-                <ul className="list-disc list-outside ml-6 space-y-2 mb-6 text-gray-700 text-base leading-relaxed">
+                {/* tax-check-ignore-start: pre-April-2026 rules, shown for comparison */}
+              <ul className="list-disc list-outside ml-6 space-y-2 mb-6 text-gray-700 text-base leading-relaxed">
                   <li className="pl-2"><strong>Weekly Rate:</strong> £118.75 per week flat rate</li>
                   <li className="pl-2"><strong>Minimum Earnings:</strong> You had to earn at least £125/week on average to qualify</li>
                   <li className="pl-2"><strong>Waiting Period:</strong> First 3 days were "waiting days" (unpaid)</li>
                   <li className="pl-2"><strong>Duration:</strong> Up to 28 weeks maximum</li>
                 </ul>
+              {/* tax-check-ignore-end */}
 
                 <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
                   <p className="text-gray-700 text-sm leading-relaxed">

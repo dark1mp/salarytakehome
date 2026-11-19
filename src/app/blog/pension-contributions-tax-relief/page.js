@@ -272,7 +272,7 @@ export default function PensionContributionsGuide() {
                 <div className="bg-green-50 rounded-lg p-4 border border-green-200">
                   <h4 className="font-semibold text-green-800 mb-2">Advantages:</h4>
                   <ul className="text-green-700 text-sm space-y-1">
-                    <li>• Saves National Insurance (12% or 2%)</li>
+                    <li>• Saves National Insurance (8% or 2%)</li>
                     <li>• Often employer adds their NI savings</li>
                     <li>• Automatic tax relief</li>
                     <li>• No need to claim relief</li>

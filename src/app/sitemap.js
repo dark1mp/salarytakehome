@@ -77,7 +77,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/sick-pay`,
-      lastModified: new Date('2026-04-09'),
+      lastModified: new Date('2026-11-19'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },

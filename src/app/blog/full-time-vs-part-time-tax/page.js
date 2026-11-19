@@ -40,7 +40,7 @@ export default function FullTimeVsPartTimeTax() {
         "headline": "Full-Time vs Part-Time Tax: How Working Hours Affect Your Take-Home Pay in 2026/27",
         "description": "Do part-time workers pay less tax? See exactly how UK income tax, National Insurance, and benefits differ between full-time and part-time workers in 2026/27.",
         "datePublished": "2026-03-28T00:00:00.000Z",
-        "dateModified": "2026-03-28T00:00:00.000Z",
+        "dateModified": "2026-11-19T00:00:00.000Z",
         "author": {
           "@type": "Organization",
           "name": "SalaryTakeHome"
@@ -405,7 +405,7 @@ export default function FullTimeVsPartTimeTax() {
                   <p className="text-gray-600 text-sm mb-2">
                     You must earn at least <strong>&pound;10,000 per year</strong> to be automatically enrolled in a workplace pension. Below this, you can still opt in.
                   </p>
-                  <p className="text-gray-600 text-sm">At &pound;12.21/hr, that&apos;s roughly 15.7 hours/week to qualify.</p>
+                  <p className="text-gray-600 text-sm">At &pound;12.71/hr, that&apos;s roughly 15.1 hours/week to qualify.</p>
                 </div>
                 <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
                   <h3 className="font-semibold text-gray-800 mb-2">Statutory Sick Pay (SSP)</h3>
