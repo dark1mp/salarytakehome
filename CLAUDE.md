@@ -144,13 +144,23 @@ From the **Autumn Budget 2026 (28 October 2026)**, affecting 2027/28:
 - **Scotland is not settled.** Scottish rates and bands for 2027/28 are set by the Scottish Parliament and were not announced at Budget time (Scottish Budget was due 3 December 2026). See the `scottishProvisional` entry in Key Decisions.
 - The planned cut of the cash ISA allowance to £12,000 was **cancelled**. The ISA subscription limit stays £20,000 for both 2026/27 and 2027/28. Source: HMRC OOTLAR Annex A, "Tax free savings accounts".
 
+**Split tax years are modelled with the pre-change values, which overstates NI.** Three years had mid-year NI changes, and a single-rate table cannot express them:
+
+| Year | What actually happened | What `NI_BANDS` holds |
+|---|---|---|
+| 2022/23 | Rate 13.25% to 5 Nov 2022, then 12%. Primary threshold £9,880 to 5 Jul 2022, then £12,570. HMRC's annual equivalents (published for directors) are £11,908 and 12.73%. | £9,880 and 13.25% — the pre-change values for **both**, so NI at £50,270 reads £5,352 against an annual-equivalent £4,883. **Overstated by ~£468.** |
+| 2023/24 | 12% to 5 Jan 2024, then 10%. Threshold flat £12,570. | Flat 12%, so £4,524 against a pro-rata ~11.5% giving £4,336. **Overstated by ~£189.** |
+| 2024/25 | 8% from day one (cut landed 6 Apr 2024). | **Was 0.12 until November 2026** — a real bug, overstating by up to £1,508/yr. Now 0.08. |
+
+2021/22 and 2025/26 onwards had no mid-year change and are correct as modelled. If you fix the two split years, HMRC's published **blended directors' rates** are the right reference — they exist precisely because an annual earnings period needs one figure for a split year. Changing them alters output for those years, so it is an editorial call, not a typo fix.
+
 When a Budget lands, the authoritative source is **HMRC's OOTLAR and its Annex A**, not press coverage — secondary sources contradicted each other on both the savings rates and the ISA position in November 2026.
 
 ## Tax-Fact Consistency Check
 
 `npm run check:tax` (`scripts/check-tax-facts.mjs`) answers one question: **does the site's prose still agree with its calculators?** It exists because the November 2026 audit found the blog and several calculator pages quoting rates one or two tax years out of date — including `/dividend-tax` computing at 10.75% while its own educational cards said 8.75%, and `/compare-salaries` serving 2025/26 student loan thresholds in its FAQPage schema. The interactive parts get updated at the annual refresh; the words around them do not.
 
-`scripts/tax-facts.json` is the input. Each fact carries the current value, `verify` pointers into the real calculator constants, and `stale` regexes matching the superseded value. **The facts file is itself checked against the code**, so it cannot drift silently either — that is the point of `verify`.
+`scripts/tax-facts.json` is the input, and doubles as **the quickest reference for current prose-facing figures** — student loan thresholds, NLW, SSP, SMP, dividend and NI rates are all in one place there, which this doc deliberately does not duplicate. Each fact carries the current value, `verify` pointers into the real calculator constants, and `stale` regexes matching the superseded value. **The facts file is itself checked against the code**, so it cannot drift silently either — that is the point of `verify`, and it is what caught the 2024/25 NI bug.
 
 Six checks. `drift`, `contradiction`, `badge` and `signal` are **errors**; `superseded` and `future` are **warnings** (`--strict` fails on those too):
 
@@ -173,6 +183,19 @@ Same-line comparisons ("up from £26,065", "was £118.75") are skipped automatic
 **Known blind spot:** a page in `historicalPages` is skipped entirely, so nothing checks that a historical post is right about its *own* year. `uk-tax-changes-2024-25` claimed 12% employee NI for 2024/25 when the rate was 8% from day one of that year — found by hand, not by the checker. When you add a page to `historicalPages`, read its figures once first.
 
 It is **not** wired into `prebuild`, so it never blocks a deploy. Add `"prebuild": "npm run check:tax"` to `package.json` if you want it to. Run it before every push, and as step 0 of the annual refresh — with `npm run lint` broken, this and `npm run build` are the only gates that work.
+
+## Verifying Changes
+
+There is no lint, so the gates are `npm run build` and `npm run check:tax`. Neither one proves a calculator still returns the right number — for that you have to drive the page.
+
+Notes from doing it, which cost time to rediscover:
+- **`form_input`-style value setting does not reach React.** These are controlled inputs; assigning `.value` leaves state untouched, and the figure silently fails to register (or concatenates with what was there). Use the native setter plus a bubbling `input` event:  `Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(el, v); el.dispatchEvent(new Event('input',{bubbles:true}))`.
+- **`/pay-rise` needs both fields before it renders anything.** Salary alone leaves the "See how much of your pay rise you'll actually keep" empty state up, which reads like a broken calculator. Set the salary *and* the rise.
+- **The cookie consent dialog intercepts clicks** on first load. Dismiss it first (decline non-essential).
+- **Don't verify a client-rendered figure with `curl`.** Preset notes and results are not in the server HTML, so grepping the response finds neither the old value nor the new one and looks like a failed deploy. Check the JS chunk, or drive the page.
+- **AdSense never fills on localhost**, so ad containers collapse to zero height and sticky side-rail bugs are invisible in dev. See the `inset-y-8` notes in Key Decisions.
+
+A worked check: 2024/25 at £50,270 should give income tax £7,540, NI £3,016 and take-home £39,714, on both `/take-home-pay-calculator` and `/pay-rise`. If NI reads £4,524 the 2024/25 rate has regressed to 12%.
 
 ## Annual Tax Year Refresh (April)
 
@@ -341,6 +364,7 @@ Every calculator has at least one dedicated supporting blog post:
 
 ## Known Gaps / TODO
 
+- **The historical tax year data has never been audited end to end.** 2024/25's NI rate was simply wrong (12% instead of 8%) and went unnoticed for over two years; checking the rest turned up 2022/23 and 2023/24 both modelled on pre-change values for split years. **Only the NI table was checked** — the income tax bands, Scottish bands and student loan thresholds for 2021/22–2024/25 have not been verified against HMRC for any year. Nothing guards them either: `check:tax` only verifies the facts the facts file pins, which is current-year figures.
 - **Dated action: remove `scottishProvisional`** after the Scottish Budget (due 3 December 2026) and replace the carried-forward 2027/28 Scottish bands with the real ones.
 - **Rate claims drift across the whole site.** The November 2026 audit started from nine stale badges and found wrong *figures* everywhere: student loan thresholds two updates behind, employee NI as 12% in three places, employer NI as 13.8% in six, `/dividend-tax` stating the old 8.75%/33.75% rates, `/compare-salaries` serving 2025/26 thresholds in its FAQPage schema, `/salary-per-second` on the old NLW, and `NI_BANDS["2024/25"].rate` set to 0.12 when the rate was cut to 8% on 6 April 2024 — a live calculation error, not just prose. **`npm run check:tax` now guards all of this** (see "Tax-Fact Consistency Check"), but it is not in `prebuild`, so it only helps if someone runs it.
 - **Static content can contradict the calculator on the same page.** `/dividend-tax` computed at 10.75% while its own cards said 8.75%, and `/compare-salaries` had correct thresholds in its `<select>` and stale ones in its FAQPage schema. The interactive part gets updated during the tax year refresh; the prose, tables, FAQ answers and JSON-LD around it do not. **The schema is the public-facing copy** — it is what Google reads for rich results — so a stale FAQPage answer is worse than stale body text. When changing any rate, grep the page for the old figure rather than only editing the constants.
