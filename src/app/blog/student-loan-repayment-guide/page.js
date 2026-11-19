@@ -42,7 +42,7 @@ export default function StudentLoanGuide() {
             </time>
             <span className="text-gray-500 text-sm">10 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; 2026/27 thresholds and interest rates from 1 September 2026</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Student Loan Repayment Calculator Guide: Plans 1, 2 & 5 Explained
@@ -63,12 +63,12 @@ export default function StudentLoanGuide() {
               <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
                 <h3 className="font-semibold text-blue-800 mb-2">Plan 1</h3>
                 <p className="text-blue-700 text-sm">Pre-2012 students</p>
-                <p className="text-blue-700 text-sm font-semibold">£22,015 threshold</p>
+                <p className="text-blue-700 text-sm font-semibold">£26,900 threshold</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Plan 2</h3>
                 <p className="text-purple-700 text-sm">2012-2023 students</p>
-                <p className="text-purple-700 text-sm font-semibold">£27,295 threshold</p>
+                <p className="text-purple-700 text-sm font-semibold">£29,385 threshold</p>
               </div>
               <div className="bg-green-50 rounded-xl p-4 border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-2">Plan 5</h3>
@@ -85,9 +85,9 @@ export default function StudentLoanGuide() {
               <h3 className="text-lg font-semibold text-gray-900 mb-3">The Basics</h3>
               <div className="space-y-3 text-gray-700">
                 <p>• You only repay when your income is above the threshold for your plan</p>
-                <p>• Repayments are 9% of income above the threshold</p>
+                <p>• Repayments are 9% of income above the threshold (6% for Postgraduate Loans)</p>
                 <p>• Repayments are taken automatically through PAYE or self-assessment</p>
-                <p>• The debt is written off after 25-30 years (depending on your plan)</p>
+                <p>• The debt is written off after 25-40 years, depending on your plan</p>
                 <p>• Interest is charged daily but doesn&apos;t affect monthly repayments</p>
               </div>
             </div>
@@ -95,17 +95,17 @@ export default function StudentLoanGuide() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
               <h3 className="text-lg font-semibold text-blue-900 mb-3">Example Calculation</h3>
               <p className="text-blue-800 mb-3">
-                If you earn £35,000 and have a Plan 2 loan (threshold £27,295):
+                If you earn £35,000 and have a Plan 2 loan (threshold £29,385):
               </p>
               <div className="bg-white rounded-lg p-4">
                 <p className="text-sm text-gray-700 mb-2">
-                  <strong>Income above threshold:</strong> £35,000 - £27,295 = £7,705
+                  <strong>Income above threshold:</strong> £35,000 - £29,385 = £5,615
                 </p>
                 <p className="text-sm text-gray-700 mb-2">
-                  <strong>Annual repayment:</strong> £7,705 × 9% = £693.45
+                  <strong>Annual repayment:</strong> £5,615 × 9% = £505.35
                 </p>
                 <p className="text-sm text-gray-700">
-                  <strong>Monthly repayment:</strong> £693.45 ÷ 12 = £57.79
+                  <strong>Monthly repayment:</strong> £505.35 ÷ 12 = £42.11
                 </p>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function StudentLoanGuide() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Details</h3>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li><strong>Repayment threshold:</strong> £22,015</li>
+                    <li><strong>Repayment threshold:</strong> £26,900</li>
                     <li><strong>Repayment rate:</strong> 9% of income above threshold</li>
                     <li><strong>Interest rate:</strong> RPI or Bank of England base rate + 1% (whichever is lower)</li>
                     <li><strong>Write-off period:</strong> 25 years</li>
@@ -129,12 +129,11 @@ export default function StudentLoanGuide() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Interest Rates 2024/25</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Interest Rate (from 1 Sept 2026)</h3>
                   <div className="bg-blue-50 rounded-lg p-3">
                     <p className="text-blue-800 text-sm">
-                      <strong>Current rate:</strong> 6.25% (RPI-based)<br/>
-                      <strong>Previous rate:</strong> 6.25%<br/>
-                      <strong>Rate cap:</strong> RPI or base rate + 1%
+                      <strong>Current rate:</strong> 4.1%<br/>
+                      <strong>How it&apos;s set:</strong> RPI (4.1%) or Bank of England base rate + 1%, whichever is lower
                     </p>
                   </div>
                 </div>
@@ -160,7 +159,7 @@ export default function StudentLoanGuide() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Details</h3>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li><strong>Repayment threshold:</strong> £27,295</li>
+                    <li><strong>Repayment threshold:</strong> £29,385 (frozen until April 2030)</li>
                     <li><strong>Repayment rate:</strong> 9% of income above threshold</li>
                     <li><strong>Interest rate:</strong> RPI + 3% while studying, then RPI + 0-3% based on income</li>
                     <li><strong>Write-off period:</strong> 30 years</li>
@@ -168,13 +167,11 @@ export default function StudentLoanGuide() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Interest Rates 2024/25</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Interest Rate (from 1 Sept 2026)</h3>
                   <div className="bg-purple-50 rounded-lg p-3">
                     <p className="text-purple-800 text-sm">
-                      <strong>While studying:</strong> 9.25%<br/>
-                      <strong>Income £27,295-£49,130:</strong> 7.25%<br/>
-                      <strong>Income £49,131-£69,000:</strong> 8.25%<br/>
-                      <strong>Income £69,000+:</strong> 9.25%
+                      <strong>Range:</strong> 4.1% to 7.1%<br/>
+                      <strong>How it&apos;s set:</strong> RPI (4.1%) if you earn at or below the threshold, rising on a sliding scale to RPI + 3% (7.1%) at higher incomes. A lower cap can apply if commercial rates fall below RPI.
                     </p>
                   </div>
                 </div>
@@ -185,7 +182,7 @@ export default function StudentLoanGuide() {
               <h3 className="text-lg font-semibold text-amber-800 mb-3">Plan 2 Considerations</h3>
               <ul className="text-amber-700 space-y-2">
                 <li>• Higher threshold means later repayments but larger amounts</li>
-                <li>• Higher interest rates (up to 9.25%)</li>
+                <li>• Higher interest rates at higher incomes (up to 7.1%)</li>
                 <li>• Longer write-off period (30 years)</li>
                 <li>• Most graduates won&apos;t fully repay before write-off</li>
               </ul>
@@ -208,13 +205,11 @@ export default function StudentLoanGuide() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Interest Rates 2024/25</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Interest Rate (from 1 Sept 2026)</h3>
                   <div className="bg-green-50 rounded-lg p-3">
                     <p className="text-green-800 text-sm">
-                      <strong>While studying:</strong> 9.25%<br/>
-                      <strong>Income £25,000-£49,130:</strong> 7.25%<br/>
-                      <strong>Income £49,131-£69,000:</strong> 8.25%<br/>
-                      <strong>Income £69,000+:</strong> 9.25%
+                      <strong>Current rate:</strong> 4.1% (RPI)<br/>
+                      <strong>Note:</strong> Plan 5 interest is set at RPI only — there is no income-linked uplift, so it is cheaper than Plan 2 for higher earners. A lower cap can apply if commercial rates fall below RPI.
                     </p>
                   </div>
                 </div>
@@ -224,7 +219,7 @@ export default function StudentLoanGuide() {
             <div className="bg-red-50 rounded-xl p-6 border border-red-200">
               <h3 className="text-lg font-semibold text-red-800 mb-3">Plan 5 Changes</h3>
               <ul className="text-red-700 space-y-2">
-                <li>• Lower threshold than Plan 2 (£25,000 vs £27,295)</li>
+                <li>• Lower threshold than Plan 2 (£25,000 vs £29,385)</li>
                 <li>• Longer write-off period (40 years vs 30 years)</li>
                 <li>• More graduates will repay in full</li>
                 <li>• Higher total repayments for most graduates</li>
@@ -244,9 +239,9 @@ export default function StudentLoanGuide() {
                   <ul className="text-sm text-gray-700 space-y-2">
                     <li><strong>Repayment threshold:</strong> £21,000</li>
                     <li><strong>Repayment rate:</strong> 6% of income above threshold</li>
-                    <li><strong>Interest rate:</strong> RPI + 3%</li>
+                    <li><strong>Interest rate:</strong> 7.1% (RPI + 3%) from 1 Sept 2026</li>
                     <li><strong>Write-off period:</strong> 30 years</li>
-                    <li><strong>Maximum loan:</strong> £12,167 (2024/25)</li>
+                    <li><strong>Repaid alongside:</strong> any undergraduate loan, not instead of it</li>
                   </ul>
                 </div>
                 <div>
@@ -273,7 +268,7 @@ export default function StudentLoanGuide() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Arguments FOR Early Repayment:</h4>
                     <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• High interest rates (up to 9.25%)</li>
+                      <li>• Interest of RPI + 3% (7.1%) regardless of income</li>
                       <li>• Psychological benefit of being debt-free</li>
                       <li>• Better mortgage applications</li>
                       <li>• No risk of policy changes</li>
@@ -367,7 +362,7 @@ export default function StudentLoanGuide() {
             "headline": "Student Loan Repayment Calculator Guide: Plans 1, 2 & 5 Explained",
             "description": "Everything you need to know about student loan repayments, interest rates, and when loans get written off.",
             "datePublished": "2024-03-01T00:00:00.000Z",
-            "dateModified": "2024-03-01T00:00:00.000Z",
+            "dateModified": "2026-11-19T00:00:00.000Z",
             "author": {
               "@type": "Organization",
               "name": "SalaryTakeHome"

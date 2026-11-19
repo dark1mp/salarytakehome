@@ -47,7 +47,7 @@ export default function UKTaxChanges2024() {
             </time>
             <span className="text-gray-500 text-sm">8 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-amber-800 bg-amber-50 border border-amber-200 rounded-full px-3 py-1 inline-block mb-4">Historical reference &middot; Covers the 2024/25 tax year &middot; See UK Tax Changes 2026/27 for current rates</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             UK Tax Changes 2024/25: What You Need to Know
@@ -241,7 +241,7 @@ export default function UKTaxChanges2024() {
             "headline": "UK Tax Changes 2024/25: What You Need to Know",
             "description": "Complete guide to the latest tax rates, thresholds, and changes affecting your take-home pay this tax year.",
             "datePublished": "2024-04-06T00:00:00.000Z",
-            "dateModified": "2024-04-06T00:00:00.000Z",
+            "dateModified": "2026-11-19T00:00:00.000Z",
             "author": {
               "@type": "Organization",
               "name": "SalaryTakeHome"
@@ -258,7 +258,7 @@ export default function UKTaxChanges2024() {
           })
         }} />
         <RelatedArticles articles={[
-          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "See what changed in the latest tax year." },
+          { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "The current tax year's rates and thresholds." },
           { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "How the frozen thresholds affect high earners." },
           { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
           { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Save on tax with salary sacrifice." },

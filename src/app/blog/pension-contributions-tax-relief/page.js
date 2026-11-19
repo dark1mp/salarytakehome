@@ -41,7 +41,7 @@ export default function PensionContributionsGuide() {
             </time>
             <span className="text-gray-500 text-sm">11 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Pension Contributions and Tax Relief: Maximize Your Retirement Savings
@@ -132,7 +132,7 @@ export default function PensionContributionsGuide() {
                 The annual allowance is the maximum amount you can contribute to your pension each year while still receiving tax relief.
               </p>
               <div className="bg-green-50 rounded-lg p-4 border border-green-200">
-                <h4 className="font-semibold text-green-800 mb-2">2024/25 Annual Allowance:</h4>
+                <h4 className="font-semibold text-green-800 mb-2">Annual Allowance (2026/27):</h4>
                 <p className="text-green-700 text-2xl font-bold">£60,000</p>
                 <p className="text-green-700 text-sm mt-2">
                   This includes both your contributions and any employer contributions.
@@ -184,10 +184,10 @@ export default function PensionContributionsGuide() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Example:</h3>
                   <div className="bg-blue-50 rounded-lg p-3">
                     <p className="text-blue-800 text-sm">
-                      <strong>2021/22:</strong> Used £40,000 (unused £20,000)<br/>
-                      <strong>2022/23:</strong> Used £30,000 (unused £30,000)<br/>
-                      <strong>2023/24:</strong> Used £50,000 (unused £10,000)<br/>
-                      <strong>2024/25:</strong> Can contribute up to £120,000<br/>
+                      <strong>2023/24:</strong> Used £40,000 (unused £20,000)<br/>
+                      <strong>2024/25:</strong> Used £30,000 (unused £30,000)<br/>
+                      <strong>2025/26:</strong> Used £50,000 (unused £10,000)<br/>
+                      <strong>2026/27:</strong> Can contribute up to £120,000<br/>
                       (£60,000 + £20,000 + £30,000 + £10,000)
                     </p>
                   </div>
@@ -374,7 +374,7 @@ export default function PensionContributionsGuide() {
             "headline": "Pension Contributions and Tax Relief: Maximize Your Retirement Savings",
             "description": "Understanding annual allowances, tax relief rates, and how pension contributions reduce your tax bill.",
             "datePublished": "2024-01-25T00:00:00.000Z",
-            "dateModified": "2024-01-25T00:00:00.000Z",
+            "dateModified": "2026-11-19T00:00:00.000Z",
             "author": {
               "@type": "Organization",
               "name": "SalaryTakeHome"

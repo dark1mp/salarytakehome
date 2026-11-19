@@ -6,11 +6,11 @@ import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
   title: "SSP Changes 2026: What the New Sick Pay Rules Mean for You",
-  description: "From April 2026, Statutory Sick Pay changes dramatically. SSP from day 1, no earnings limit, and a new percentage-based rate. Here's what it means for your pay.",
+  description: "Statutory Sick Pay was reformed on 6 April 2026: SSP from day 1, no earnings limit, and a percentage-based rate. Here's what the current rules mean for your pay.",
   keywords: "ssp changes 2026, statutory sick pay 2026, sick pay from day 1, ssp rate 2026, new sick pay rules, ssp uk changes, lower earnings limit removed",
   openGraph: {
     title: "SSP Changes 2026: What the New Sick Pay Rules Mean for You",
-    description: "Major SSP reforms from April 2026 — SSP from day 1, no earnings limit, new rates.",
+    description: "The April 2026 SSP reforms — SSP from day 1, no earnings limit, new rates.",
     type: "article",
     publishedTime: "2026-03-27T00:00:00.000Z",
     authors: ["SalaryTakeHome"],
@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SSP Changes 2026: New Sick Pay Rules",
-    description: "Everything changing about Statutory Sick Pay from April 2026.",
+    description: "What changed for Statutory Sick Pay on 6 April 2026, and what the rules are now.",
   },
   alternates: {
     canonical: "https://www.salarytakehome.co.uk/blog/ssp-changes-2026",
@@ -42,13 +42,13 @@ export default function SSPChanges2026() {
               </time>
               <span className="text-gray-500 text-sm">10 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; The April 2026 reforms are now in force</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               SSP Changes 2026: What the New Sick Pay Rules Mean for You
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              From April 2026, Statutory Sick Pay is getting a major overhaul. Here&apos;s everything you need to know about the new rules and how they affect your entitlement.
+              Statutory Sick Pay was overhauled on 6 April 2026. These rules are now in force — here&apos;s what they mean for your entitlement, and how they differ from the old system.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function SSPChanges2026() {
 
             {/* Quick Summary */}
             <div className="rounded-2xl p-8 mb-8 bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg">
-              <h2 className="text-2xl font-bold text-white mb-6">Quick Summary: What&apos;s Changing</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">Quick Summary: What Changed</h2>
               <div className="grid lg:grid-cols-3 gap-6">
                 <div className="bg-white/20 backdrop-blur-sm rounded-xl p-5 text-center">
                   <div className="text-3xl font-bold mb-2">Day 1</div>
@@ -76,16 +76,16 @@ export default function SSPChanges2026() {
 
             {/* Current SSP Rules */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Current SSP Rules (2025/26)</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">The Old SSP Rules (before 6 April 2026)</h2>
               <p className="text-gray-700 text-base leading-relaxed mb-6">
-                Before we look at what&apos;s changing, here&apos;s how Statutory Sick Pay works right now under the 2025/26 rules:
+                For context, here is how Statutory Sick Pay worked up to 5 April 2026, under the old 2025/26 rules:
               </p>
               <div className="overflow-x-auto mb-6">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b-2 border-gray-200">
                       <th className="text-left py-3 px-4 font-bold text-gray-900">Feature</th>
-                      <th className="text-left py-3 px-4 font-bold text-gray-900">Current Rules</th>
+                      <th className="text-left py-3 px-4 font-bold text-gray-900">Old Rules (to 5 Apr 2026)</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -124,7 +124,7 @@ export default function SSPChanges2026() {
 
             {/* What's Changing */}
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">What&apos;s Changing from April 2026</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">What Changed on 6 April 2026</h2>
               <p className="text-gray-700 text-base leading-relaxed mb-6">
                 The Employment Rights Bill introduces the most significant changes to SSP in decades. Here&apos;s a side-by-side comparison of the old and new rules:
               </p>
@@ -133,8 +133,8 @@ export default function SSPChanges2026() {
                   <thead>
                     <tr className="border-b-2 border-gray-200">
                       <th className="text-left py-3 px-4 font-bold text-gray-900">Feature</th>
-                      <th className="text-left py-3 px-4 font-bold text-gray-900">Current (2025/26)</th>
-                      <th className="text-left py-3 px-4 font-bold text-gray-900">New (2026/27)</th>
+                      <th className="text-left py-3 px-4 font-bold text-gray-900">Old (to 5 Apr 2026)</th>
+                      <th className="text-left py-3 px-4 font-bold text-gray-900">Now (since 6 Apr 2026)</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -177,13 +177,13 @@ export default function SSPChanges2026() {
                   <strong>Low earners (below &pound;125/wk):</strong> Previously excluded entirely from SSP, these workers will now qualify and receive 80% of their earnings from day one of sickness.
                 </li>
                 <li className="pl-2">
-                  <strong>Part-time workers:</strong> Many part-time employees fall below the current Lower Earnings Limit. The removal of this threshold brings them into the safety net.
+                  <strong>Part-time workers:</strong> Many part-time employees fell below the old Lower Earnings Limit. Removing that threshold brought them into the safety net.
                 </li>
                 <li className="pl-2">
                   <strong>Zero-hours contract workers:</strong> Workers on variable-hours contracts who sometimes dip below the earnings threshold will now always be covered.
                 </li>
                 <li className="pl-2">
-                  <strong>Those with short illnesses:</strong> Under current rules, the 3-day waiting period means a week off sick only yields 2 days of SSP. From April 2026, you&apos;ll be paid for all 5 qualifying days.
+                  <strong>Those with short illnesses:</strong> Under the old rules, the 3-day waiting period meant a week off sick only yielded 2 days of SSP. Since 6 April 2026 you are paid for all 5 qualifying days.
                 </li>
               </ul>
               <p className="text-gray-700 text-base leading-relaxed mt-4">
@@ -191,7 +191,7 @@ export default function SSPChanges2026() {
                 <Link href="/sick-pay" className="text-blue-600 hover:text-blue-800 underline font-semibold">
                   SSP calculator
                 </Link>{' '}
-                to toggle between the current and new rules and see exactly how the changes affect your entitlement.
+                to toggle between the old and current rules and see exactly how the changes affect your entitlement.
               </p>
             </div>
 
@@ -280,7 +280,7 @@ export default function SSPChanges2026() {
             <div className="bg-white/90 rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">What to Do If You&apos;re Off Sick</h2>
               <p className="text-gray-700 text-base leading-relaxed mb-4">
-                Whether under current or new rules, here are the steps to make sure you receive the SSP you&apos;re entitled to:
+                Under either set of rules, here are the steps to make sure you receive the SSP you&apos;re entitled to:
               </p>
               <ol className="list-decimal list-outside ml-6 space-y-3 text-gray-700 text-base leading-relaxed mb-4">
                 <li className="pl-2">
@@ -305,7 +305,7 @@ export default function SSPChanges2026() {
             <div className="rounded-2xl p-8 mb-8 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center shadow-lg">
               <h2 className="text-2xl font-bold text-white mb-3">Calculate Your SSP Entitlement</h2>
               <p className="text-white/90 mb-6 text-lg">
-                Use our free calculator to see exactly how much Statutory Sick Pay you&apos;re entitled to under current and new rules.
+                Use our free calculator to see exactly how much Statutory Sick Pay you&apos;re entitled to under the current and old rules.
               </p>
               <Link
                 href="/sick-pay"
@@ -337,9 +337,9 @@ export default function SSPChanges2026() {
             {
               "@type": "Article",
               "headline": "SSP Changes 2026: What the New Sick Pay Rules Mean for You",
-              "description": "From April 2026, Statutory Sick Pay changes dramatically. SSP from day 1, no earnings limit, and a new percentage-based rate.",
+              "description": "Statutory Sick Pay was reformed on 6 April 2026: SSP from day 1, no earnings limit, and a percentage-based rate.",
               "datePublished": "2026-03-27T00:00:00.000Z",
-              "dateModified": "2026-03-27T00:00:00.000Z",
+              "dateModified": "2026-11-19T00:00:00.000Z",
               "author": { "@type": "Organization", "name": "SalaryTakeHome", "url": "https://www.salarytakehome.co.uk" },
               "publisher": { "@type": "Organization", "name": "SalaryTakeHome", "url": "https://www.salarytakehome.co.uk" },
               "mainEntityOfPage": "https://www.salarytakehome.co.uk/blog/ssp-changes-2026",
@@ -351,7 +351,7 @@ export default function SSPChanges2026() {
                 {
                   "@type": "Question",
                   "name": "When do the new SSP rules come into effect?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "The new Statutory Sick Pay rules take effect from April 2026 as part of the Employment Rights Bill. The key changes include SSP from day 1 (no waiting days), removal of the Lower Earnings Limit, and a new percentage-based rate of 80% of earnings capped at £123.25 per week." }
+                  "acceptedAnswer": { "@type": "Answer", "text": "The new Statutory Sick Pay rules took effect on 6 April 2026 as part of the Employment Rights Bill. The key changes include SSP from day 1 (no waiting days), removal of the Lower Earnings Limit, and a new percentage-based rate of 80% of earnings capped at £123.25 per week." }
                 },
                 {
                   "@type": "Question",
@@ -360,13 +360,13 @@ export default function SSPChanges2026() {
                 },
                 {
                   "@type": "Question",
-                  "name": "Do I still need to earn a minimum amount to get SSP from April 2026?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "No. From April 2026, the Lower Earnings Limit (currently £125/week) is being removed entirely. All employees will qualify for SSP regardless of how much they earn, receiving 80% of their average weekly earnings up to the £123.25 weekly cap." }
+                  "name": "Do I still need to earn a minimum amount to get SSP?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "No. On 6 April 2026 the Lower Earnings Limit (previously £125/week) was removed entirely. All employees now qualify for SSP regardless of how much they earn, receiving 80% of their average weekly earnings up to the £123.25 weekly cap." }
                 },
                 {
                   "@type": "Question",
                   "name": "How is the new SSP rate calculated?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "From April 2026, SSP is calculated as 80% of your average weekly earnings, capped at £123.25 per week. You receive whichever is lower: 80% of your earnings or £123.25. For example, if you earn £150/week, 80% is £120, so you'd receive £120/week in SSP." }
+                  "acceptedAnswer": { "@type": "Answer", "text": "Since 6 April 2026, SSP is calculated as 80% of your average weekly earnings, capped at £123.25 per week. You receive whichever is lower: 80% of your earnings or £123.25. For example, if you earn £150/week, 80% is £120, so you'd receive £120/week in SSP." }
                 }
               ]
             }

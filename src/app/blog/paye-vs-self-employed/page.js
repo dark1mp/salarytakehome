@@ -139,7 +139,7 @@ export default function PAYEVsSelfEmployed() {
                     </tr>
                     <tr>
                       <td className="border border-gray-200 px-4 py-3 text-sm font-medium">Employer NI</td>
-                      <td className="border border-gray-200 px-4 py-3 text-sm">Employer pays 13.8% on top</td>
+                      <td className="border border-gray-200 px-4 py-3 text-sm">Employer pays 15% on top</td>
                       <td className="border border-gray-200 px-4 py-3 text-sm">No employer NI (you are the employer)</td>
                     </tr>
                   </tbody>

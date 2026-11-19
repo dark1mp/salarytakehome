@@ -62,7 +62,7 @@ export default function SalarySacrificeGuide() {
               <ul className="text-green-700 space-y-2">
                 <li>• Save income tax (20%, 40%, or 45%)</li>
                 <li>• Save National Insurance (12% or 2%)</li>
-                <li>• Often save employer NI too (13.8%)</li>
+                <li>• Often save employer NI too (15%)</li>
                 <li>• Access to benefits you might not otherwise afford</li>
               </ul>
             </div>
@@ -120,7 +120,7 @@ export default function SalarySacrificeGuide() {
                   <div className="bg-blue-50 rounded-lg p-3">
                     <h4 className="font-semibold text-blue-800 mb-1">Tax Savings:</h4>
                     <ul className="text-blue-700 text-sm space-y-1">
-                      <li>• Basic rate: 32% (20% tax + 12% NI)</li>
+                      <li>• Basic rate: 28% (20% tax + 8% NI)</li>
                       <li>• Higher rate: 42% (40% tax + 2% NI)</li>
                       <li>• Additional rate: 47% (45% tax + 2% NI)</li>
                     </ul>

@@ -53,7 +53,7 @@ export default function UKMinimumWage202526() {
                 }
               },
               "datePublished": "2026-03-27T00:00:00.000Z",
-              "dateModified": "2026-03-27T00:00:00.000Z",
+              "dateModified": "2026-11-19T00:00:00.000Z",
               "mainEntityOfPage": "https://www.salarytakehome.co.uk/blog/uk-minimum-wage-2025-26",
               "image": "https://www.salarytakehome.co.uk/opengraph-image.png"
             },
@@ -110,7 +110,7 @@ export default function UKMinimumWage202526() {
               </time>
               <span className="text-gray-500 text-sm">10 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+            <p className="text-sm text-amber-800 bg-amber-50 border border-amber-200 rounded-full px-3 py-1 inline-block mb-4">Historical reference &middot; Covers the 2025/26 tax year &middot; See UK Minimum Wage 2026/27 for current rates</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               UK Minimum Wage 2025/26: Hourly Rates, Take-Home Pay &amp; Your Rights

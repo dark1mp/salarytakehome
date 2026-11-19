@@ -83,7 +83,7 @@ export default function SalarySacrificeVsPersonalPension() {
                 <ul className="text-amber-700 space-y-2 text-sm">
                   <li>• Saves <strong>income tax + National Insurance</strong></li>
                   <li>• Up to <strong>28% saving</strong> at basic rate (20% tax + 8% NI)</li>
-                  <li>• Employer also saves 13.8% employer NI</li>
+                  <li>• Employer also saves 15% employer NI</li>
                   <li>• Some employers pass their NI saving to your pension</li>
                 </ul>
               </div>
@@ -117,7 +117,7 @@ export default function SalarySacrificeVsPersonalPension() {
                   <li><strong>2.</strong> Your employer pays the sacrificed amount directly into your pension</li>
                   <li><strong>3.</strong> Your income tax is calculated on the lower salary &mdash; so you pay less tax</li>
                   <li><strong>4.</strong> Your National Insurance is also calculated on the lower salary &mdash; so you pay less NI too</li>
-                  <li><strong>5.</strong> Your employer also saves on their 13.8% employer NI &mdash; some employers pass this saving into your pension as well</li>
+                  <li><strong>5.</strong> Your employer also saves on their 15% employer NI &mdash; some employers pass this saving into your pension as well</li>
                 </ol>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-200">
@@ -268,7 +268,7 @@ export default function SalarySacrificeVsPersonalPension() {
                 </div>
                 <div className="bg-green-50 rounded-lg p-4 border border-green-200">
                   <p className="text-green-700 text-sm">
-                    <strong>Employer NI savings bonus:</strong> If your employer passes on their 13.8% employer NI saving into your pension, salary sacrifice becomes even more beneficial. Always check whether your employer offers this.
+                    <strong>Employer NI savings bonus:</strong> If your employer passes on their 15% employer NI saving into your pension, salary sacrifice becomes even more beneficial. Always check whether your employer offers this.
                   </p>
                 </div>
               </div>

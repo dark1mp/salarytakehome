@@ -42,7 +42,7 @@ export default function MaximizeTakeHomePay() {
             </time>
             <span className="text-gray-500 text-sm">12 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             10 Legal Ways to Maximize Your Take-Home Pay in 2024
@@ -125,7 +125,7 @@ export default function MaximizeTakeHomePay() {
                 </p>
                 <div className="bg-blue-50 rounded-lg p-3">
                   <p className="text-blue-800 text-sm">
-                    <strong>Savings:</strong> Up to 32% (20% tax + 12% NI) for basic rate taxpayers, up to 42% (40% tax + 2% NI) for higher rate taxpayers.
+                    <strong>Savings:</strong> Up to 28% (20% tax + 8% NI) for basic rate taxpayers, up to 42% (40% tax + 2% NI) for higher rate taxpayers.
                   </p>
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function MaximizeTakeHomePay() {
                 </p>
                 <div className="bg-emerald-50 rounded-lg p-3">
                   <p className="text-emerald-800 text-sm">
-                    <strong>Benefit:</strong> 2% BiK rate until 2025, rising to 5% by 2028.
+                    <strong>Benefit:</strong> Electric car BiK is 4% in 2026/27, rising 1pp a year to 5% in 2027/28 and climbing further after that — still far below petrol and diesel rates.
                   </p>
                 </div>
               </div>
@@ -395,7 +395,7 @@ export default function MaximizeTakeHomePay() {
             "headline": "10 Legal Ways to Maximize Your Take-Home Pay in 2024",
             "description": "From salary sacrifice to pension contributions - discover proven strategies to keep more of your hard-earned money.",
             "datePublished": "2024-03-15T00:00:00.000Z",
-            "dateModified": "2024-03-15T00:00:00.000Z",
+            "dateModified": "2026-11-19T00:00:00.000Z",
             "author": {
               "@type": "Organization",
               "name": "SalaryTakeHome"

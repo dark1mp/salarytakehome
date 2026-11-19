@@ -47,7 +47,7 @@ export default function UKTaxChanges2025() {
             </time>
             <span className="text-gray-500 text-sm">8 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-amber-800 bg-amber-50 border border-amber-200 rounded-full px-3 py-1 inline-block mb-4">Historical reference &middot; Covers the 2025/26 tax year &middot; See UK Tax Changes 2026/27 for current rates</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             UK Tax Changes 2025/26: What You Need to Know
@@ -426,7 +426,7 @@ export default function UKTaxChanges2025() {
             "headline": "UK Tax Changes 2025/26: Complete Guide to New Rates & Thresholds",
             "description": "Comprehensive guide to UK tax changes for 2025/26 including income tax rates, National Insurance updates, and how they affect your take-home pay.",
             "datePublished": "2025-04-06T00:00:00.000Z",
-            "dateModified": "2025-04-06T00:00:00.000Z",
+            "dateModified": "2026-11-19T00:00:00.000Z",
             "author": {
               "@type": "Organization",
               "name": "SalaryTakeHome"

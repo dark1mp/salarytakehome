@@ -47,7 +47,7 @@ export default function SalarySacrificeChanges2029() {
             </time>
             <span className="text-gray-500 text-sm">7 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; Reflects 2026/27 tax year</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Salary Sacrifice Pension Changes from April 2029: What You Need to Know
@@ -142,7 +142,7 @@ export default function SalarySacrificeChanges2029() {
                     <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Annual Salary Sacrifice</th>
                     <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Amount Subject to NICs</th>
                     <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Extra Employee NIC (8%)</th>
-                    <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Extra Employer NIC (13.8%)</th>
+                    <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Extra Employer NIC (15%)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -156,25 +156,25 @@ export default function SalarySacrificeChanges2029() {
                     <td className="border border-gray-200 px-4 py-3">£5,000</td>
                     <td className="border border-gray-200 px-4 py-3">£3,000</td>
                     <td className="border border-gray-200 px-4 py-3 text-red-600">£240</td>
-                    <td className="border border-gray-200 px-4 py-3 text-red-600">£414</td>
+                    <td className="border border-gray-200 px-4 py-3 text-red-600">£450</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-200 px-4 py-3">£10,000</td>
                     <td className="border border-gray-200 px-4 py-3">£8,000</td>
                     <td className="border border-gray-200 px-4 py-3 text-red-600">£640</td>
-                    <td className="border border-gray-200 px-4 py-3 text-red-600">£1,104</td>
+                    <td className="border border-gray-200 px-4 py-3 text-red-600">£1,200</td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="border border-gray-200 px-4 py-3">£20,000</td>
                     <td className="border border-gray-200 px-4 py-3">£18,000</td>
                     <td className="border border-gray-200 px-4 py-3 text-red-600">£1,440</td>
-                    <td className="border border-gray-200 px-4 py-3 text-red-600">£2,484</td>
+                    <td className="border border-gray-200 px-4 py-3 text-red-600">£2,700</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-200 px-4 py-3">£60,000</td>
                     <td className="border border-gray-200 px-4 py-3">£58,000</td>
                     <td className="border border-gray-200 px-4 py-3 text-red-600">£4,640</td>
-                    <td className="border border-gray-200 px-4 py-3 text-red-600">£8,004</td>
+                    <td className="border border-gray-200 px-4 py-3 text-red-600">£8,700</td>
                   </tr>
                 </tbody>
               </table>
@@ -182,7 +182,7 @@ export default function SalarySacrificeChanges2029() {
 
             <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
               <p className="text-sm text-gray-600">
-                <strong>Note:</strong> These calculations assume the standard employee NIC rate of 8% and employer NIC rate of 13.8%. Actual rates may vary. Income Tax relief on pension contributions is not affected - you still receive tax relief at your marginal rate.
+                <strong>Note:</strong> These calculations assume the standard employee NIC rate of 8% and employer NIC rate of 15%. Actual rates may vary. Income Tax relief on pension contributions is not affected - you still receive tax relief at your marginal rate.
               </p>
             </div>
           </div>
@@ -380,7 +380,7 @@ export default function SalarySacrificeChanges2029() {
             "headline": "Salary Sacrifice Pension Changes from April 2029: What You Need to Know",
             "description": "From April 2029, salary sacrifice for pensions will change. Only the first £2,000 of employee pension contributions through salary sacrifice will be exempt from National Insurance.",
             "datePublished": "2025-11-26T00:00:00.000Z",
-            "dateModified": "2025-11-26T00:00:00.000Z",
+            "dateModified": "2026-11-19T00:00:00.000Z",
             "author": {
               "@type": "Organization",
               "name": "SalaryTakeHome"
@@ -399,7 +399,7 @@ export default function SalarySacrificeChanges2029() {
         <RelatedArticles articles={[
           { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Full guide to current salary sacrifice rules." },
           { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "How pension contributions reduce your tax." },
-          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Current year tax rates and thresholds." },
+          { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "Current year tax rates and thresholds." },
           { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
         ]} />
         </article>

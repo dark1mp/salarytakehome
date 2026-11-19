@@ -480,7 +480,7 @@ export default function UkDividendTaxExplained() {
             </div>
             <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
               <p className="text-blue-800 text-sm leading-relaxed">
-                <strong>Note:</strong> The employer NI secondary threshold is &pound;5,000 for 2026/27, and employer NI is 15%. A salary of &pound;12,570 triggers &pound;1,044 in employer NI ((&pound;12,570 &minus; &pound;5,000) &times; 13.8%). This is a company cost, not a personal one, but it reduces the profits available for dividends.
+                <strong>Note:</strong> The employer NI secondary threshold is &pound;5,000 for 2026/27, and employer NI is 15%. A salary of &pound;12,570 triggers &pound;1,136 in employer NI ((&pound;12,570 &minus; &pound;5,000) &times; 15%). This is a company cost, not a personal one, but it reduces the profits available for dividends.
               </p>
             </div>
           </div>

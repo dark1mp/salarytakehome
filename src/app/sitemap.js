@@ -13,7 +13,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(blogPosts[0].date), // Most recent blog post date
+      lastModified: new Date(Math.max(...blogPosts.map(p => new Date(p.lastModified || p.date)))), // Most recent publish or update
       changeFrequency: 'weekly',
       priority: 0.8,
     },
@@ -152,7 +152,7 @@ export default function sitemap() {
   // Blog posts — generated from shared posts.js data
   const blogPostEntries = blogPosts.map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.lastModified || post.date),
     changeFrequency: 'monthly',
     priority: post.priority || 0.6,
   }))
