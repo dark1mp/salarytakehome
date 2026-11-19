@@ -59,6 +59,30 @@
       "stale": ["13\\.8\\s*%"]
     },
     {
+      "id": "class-4-ni-main-rate",
+      "label": "Class 4 NI main rate (self-employed)",
+      "current": "6%",
+      "note": "9% until 5 Apr 2024, 6% since, on profits \u00a312,570-\u00a350,270 (2% above). Unchanged for 2026/27 and 2027/28. No calculator models self-employment, so this figure only ever appears in prose, tables and JSON-LD.",
+      "stale": [
+        "(?<![\\d.])9\\s*%[^.<]{0,40}\\bprofits\\b",
+        "Class 4[^.<]{0,60}(?<![\\d.])9\\s*%"
+      ]
+    },
+    {
+      "id": "class-2-ni-status",
+      "label": "Class 2 NI (self-employed) weekly charge",
+      "current": "not payable \u2014 voluntary only, at \u00a33.65/week",
+      "note": "Class 2 stopped being a compulsory charge on 6 Apr 2024. Profits at or above the small profits threshold are treated as having paid it, so the NI record builds with no payment; below it, voluntary Class 2 is \u00a33.65/week for 2026/27. Superseded compulsory rates: \u00a33.05 (2021/22), \u00a33.15 (2022/23), \u00a33.45 (2023/24).",
+      "stale": ["(?:\u00a3|&pound;)3\\.(?:45|15|05)\\b"]
+    },
+    {
+      "id": "class-2-small-profits-threshold",
+      "label": "Class 2 small profits threshold",
+      "current": "\u00a37,105",
+      "note": "\u00a36,515 (2021/22), \u00a36,725 (2022/23-2023/24), \u00a36,845 (2024/25-2025/26), \u00a37,105 (2026/27). At or above this, Class 2 is treated as paid.",
+      "stale": ["(?:\u00a3|&pound;)6,(?:515|725|845)\\b"]
+    },
+    {
       "id": "dividend-basic-rate",
       "label": "Dividend basic rate",
       "current": "10.75%",
