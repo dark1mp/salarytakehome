@@ -24,8 +24,10 @@ UK tax and salary calculator website. Helps users calculate take-home pay, compa
 npm run dev          # Dev server with Turbopack
 npm run build        # Production build (auto-runs postbuild IndexNow submission)
 npm run start        # Start production server
-npm run lint         # ESLint
+npm run lint         # BROKEN — see note below; use `npm run build` as the gate
 ```
+
+**`npm run lint` does not work.** `next lint` was removed in Next.js 16, so the script resolves "lint" as a directory path and fails. Invoking `eslint` directly also fails with `TypeError: Converting circular structure to JSON` inside `@eslint/eslintrc` config validation. This is pre-existing, not something a recent change introduced. **`npm run build` is the only working gate** — run it before every push, since pushing to `main` deploys to Vercel.
 
 ## Project Structure
 
@@ -102,7 +104,7 @@ public/
 | Dividend Tax | `/dividend-tax` | Dividend tax calculator — salary + dividends with band breakdown |
 
 All calculators support:
-- Multiple tax years (2026/27, 2025/26, 2024/25, 2023/24, 2022/23, 2021/22)
+- Multiple tax years (2027/28, 2026/27, 2025/26, 2024/25, 2023/24, 2022/23, 2021/22) — but **not every calculator offers every year**; see "Tax year selector coverage" below
 - Scottish tax rates (separate bands)
 - Student loan plans (1, 2, 4, 5, Postgraduate)
 - Pension contributions
@@ -110,7 +112,19 @@ All calculators support:
 
 ## Tax Data
 
-Tax bands, NI thresholds, and student loan thresholds are defined inline in each calculator's `page.js` (no shared constants file). The current default is 2026/27; historical years back to 2021/22 are supported via the tax year selector. For the exact current-year figures, always read the source file (e.g. `src/app/take-home-pay-calculator/page.js`) rather than trusting this doc — values here go stale fast.
+Tax bands, NI thresholds, and student loan thresholds are defined inline in each calculator (no shared constants file). **Watch where:** on the two split pages the data lives in the client component, not `page.js` — `take-home-pay-calculator/TaxCalculatorClient.js` and `dividend-tax/DividendTaxClient.js`. The other calculators keep it in their own `page.js`.
+
+The default is **2026/27** and should stay there until April 2027 — don't flip it early just because a newer year exists in the table. **2027/28 is selectable as a forward year**; historical years go back to 2021/22. For exact figures, always read the source file rather than trusting this doc — values here go stale fast.
+
+### Tax year selector coverage
+
+| Calculator | Years offered | Notes |
+|---|---|---|
+| `/take-home-pay-calculator` | 2027/28 back to 2021/22 | Full table, in `TaxCalculatorClient.js` |
+| `/pay-rise` | 2027/28 back to 2021/22 | Full table |
+| `/dividend-tax` | 2027/28 back to 2021/22 | Different shape — one `TAX_DATA` object, not separate `TAX_BANDS`/`NI_BANDS` |
+| `/two-jobs` | 2027/28 and 2026/27 only | Had **no** selector at all before November 2026; `TAX_YEARS` was added then |
+| everything else | no selector | Statutory-rate and non-tax tools |
 
 Things to remember about the UK tax system when editing:
 - rUK income tax thresholds (Personal Allowance, higher-rate, additional-rate) are frozen until April 2031 (Autumn Budget 2025 extended the existing freeze by 3 years). Don't update them year-on-year.
@@ -120,11 +134,22 @@ Things to remember about the UK tax system when editing:
 - SMP and other family statutory payments use £194.32/week for 2026/27 with a £129/week qualifying threshold.
 - Employee NI stays at 8% / 2% on the same thresholds as 2025/26. Employer NI is 15% above a £5,000 secondary threshold and is frozen until 2030/31.
 
+From the **Autumn Budget 2026 (28 October 2026)**, affecting 2027/28:
+- rUK income tax rates and thresholds are **unchanged again** and now maintained at these levels to 2030/31. Personal Allowance £12,570, higher rate £50,270, additional rate £125,140.
+- Employee and employer NI are **unchanged** for 2027/28.
+- Dividend rates and the £500 dividend allowance are **unchanged** for 2027/28 (the 2pp rise already landed in 2026/27).
+- **The real change is savings and property income**: from 6 April 2027 those rates rise to **24% / 44% / 49%** (basic / higher / additional). No calculator on the site handles savings or rental income, so nothing needed recalculating — but blog claims about savings interest need checking against these rates.
+- Benefits in kind move onto payroll reporting.
+- **Scotland is not settled.** Scottish rates and bands for 2027/28 are set by the Scottish Parliament and were not announced at Budget time (Scottish Budget was due 3 December 2026). See the `scottishProvisional` entry in Key Decisions.
+- The planned cut of the cash ISA allowance to £12,000 was **cancelled**. The ISA subscription limit stays £20,000 for both 2026/27 and 2027/28. Source: HMRC OOTLAR Annex A, "Tax free savings accounts".
+
+When a Budget lands, the authoritative source is **HMRC's OOTLAR and its Annex A**, not press coverage — secondary sources contradicted each other on both the savings rates and the ISA position in November 2026.
+
 ## Annual Tax Year Refresh (April)
 
 When a new UK tax year starts, update these in order:
 
-1. **Calculator tax data** — Add the new year to `TAX_YEARS`, `TAX_BANDS`, `NI_BANDS`, and `STUDENT_LOAN` in each calculator's `page.js`, and set it as the default in `useState`. Affects: `take-home-pay-calculator`, `pay-rise`, `two-jobs`, `dividend-tax`. Keep historical years in place.
+1. **Calculator tax data** — Add the new year to `TAX_YEARS`, `TAX_BANDS`, `NI_BANDS` and (if thresholds moved) `STUDENT_LOAN_BY_YEAR`, then set it as the default in `useState`. Affects: `take-home-pay-calculator/TaxCalculatorClient.js`, `pay-rise/page.js`, `two-jobs/page.js`, `dividend-tax/DividendTaxClient.js` — note two of the four are client components, not `page.js`. Keep historical years in place.
 2. **Statutory rate calculators** — `sick-pay/page.js` (flip `useNewRules` default and update constants), `maternity-sick-pay/page.js` (SMP rate + qualifying threshold).
 3. **SEO surface** — every calculator `layout.js` (title/description/OG/Twitter), root `layout.js`, `blog/layout.js`, `faq/page.js`, homepage `<h1>` in `page.js`, `components/Footer.js` tagline, "Last updated" badges on every calculator and blog page, FAQPage JSON-LD answers that mention specific figures.
 4. **llms.txt files** — `public/llms.txt` and `public/llms-full.txt` (AI crawlers).
@@ -135,7 +160,7 @@ Historical posts (`uk-tax-changes-2025-26`, `uk-minimum-wage-2025-26`, etc.) are
 
 ## Blog
 
-49 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes 6 "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension, ISA vs LISA, PAYE vs self-employed, full-time vs part-time tax) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay, uk-dividend-tax-explained supports /dividend-tax). Every calculator has at least one dedicated blog post linking back to it. Two dated posts are refreshed each tax year (`uk-tax-changes-YYYY-YY`, `uk-minimum-wage-YYYY-YY`) with the old versions kept as historical reference — see the "Dated vs evergreen posts" note in Key Decisions.
+50 blog posts across categories: Salary Guide, Tax Planning, Tax Updates, Money Tips, Pensions, Student Loans, Savings & ISAs. Includes 6 "vs" comparison posts (Scottish tax vs English tax, Plan 1 vs Plan 2, salary sacrifice vs personal pension, ISA vs LISA, PAYE vs self-employed, full-time vs part-time tax) which target high-intent search queries, plus dedicated topic cluster posts for each calculator (e.g. two-jobs-tax-explained supports /two-jobs, maternity-pay-guide supports /maternity-sick-pay, uk-dividend-tax-explained supports /dividend-tax). Every calculator has at least one dedicated blog post linking back to it. Two dated posts are refreshed each tax year (`uk-tax-changes-YYYY-YY`, `uk-minimum-wage-YYYY-YY`) with the old versions kept as historical reference — see the "Dated vs evergreen posts" note in Key Decisions.
 
 ### Topic Cluster Blog Posts
 
@@ -156,6 +181,7 @@ Every calculator has at least one dedicated supporting blog post:
 | UK Dividend Tax Explained | `/blog/uk-dividend-tax-explained` | /dividend-tax |
 | UK Tax Codes Explained | `/blog/understanding-uk-tax-code` | /tax-code |
 | UK Tax Changes 2026/27 | `/blog/uk-tax-changes-2026-27` | /take-home-pay-calculator (current year hub) |
+| Autumn Budget 2026 | `/blog/autumn-budget-2026-what-it-means-for-your-pay` | /take-home-pay-calculator, /pay-rise, /two-jobs, /dividend-tax (Budget + 2027/28 hub) |
 | UK Tax Changes 2025/26 | `/blog/uk-tax-changes-2025-26` | historical reference |
 
 ### Adding a New Blog Post
@@ -164,7 +190,7 @@ Every calculator has at least one dedicated supporting blog post:
 2. Wrap content in `<LayoutWrapper breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "Post Title" }]} narrow>` — this provides sidebar, footer, breadcrumbs, and narrow layout for side rail ads
 3. Add `import AdUnit from "../../components/AdUnit";` and place `<AdUnit slot="1586479879" hideOnMobile />` above the h1
 4. Add in-article ads between content sections: `<AdUnit slot="3520564956" layout="in-article" format="fluid" />`. Long posts (10+ min): 3 ads (after 2nd, 4th/5th, and 6th/7th section). Short posts (under 10 min): 2 ads (after 2nd and 4th section). Always keep at least 2 content sections between ads. Place before the CTA/disclaimer, never after.
-5. Add the "Last updated" badge below the category/date/readtime row: `<p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>` (update the text when tax data changes)
+5. Add the "Last updated" badge below the category/date/readtime row: `<p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; Reflects 2026/27 tax year</p>`. Blog posts use the `&middot;` entity here; **calculator pages use a literal `·` character instead**, so a find-and-replace across both needs two passes. Update the text whenever the post's facts change, not only at the annual refresh.
 6. **Add the post to `src/app/blog/posts.js`** — this is the single source of truth. The blog index, RSS feed (`/feed.xml`), and sitemap (`/sitemap.js`) all import from this file automatically. Fields: slug, title, description, date, readTime, category, featured, priority.
 7. **Update `public/llms.txt` and `public/llms-full.txt`** — these are the only manual files that still need separate updates (they use markdown format for AI crawlers).
 8. Cross-link to relevant calculators (hourly-wage, take-home-pay-calculator, pay-rise)
@@ -181,9 +207,11 @@ Every calculator has at least one dedicated supporting blog post:
 - Sitemap: dynamic at `/sitemap.js` — must be updated when adding/removing pages
 - Robots.txt: blocks `/api/`, `/_next/`, `/admin/`
 - IndexNow: auto-submits recently-modified sitemap URLs post-build to Bing, Yandex, Seznam, Naver (streaming mode — only URLs with `lastmod` in the last 7 days). Use `node scripts/submit-indexnow.mjs --all` for a full batch resubmission, or `--days=N` to change the recency window. **Note:** the script fetches from the live production sitemap, not the local build, so new URLs won't appear until deployed.
+- **IndexNow landmine — it fails silently.** Because the default streaming mode only submits URLs with a `lastmod` inside a 7-day window, a site that stops publishing stops submitting. Between April and November 2026 every postbuild printed `0 URLs modified in the last 7 days`, submitted nothing, and **still exited 0** — so nothing in the build log looked wrong while seven months of indexing quietly stopped. If you haven't shipped content in a week, the build is telling search engines nothing. Read the postbuild output, and run `--all` after any gap.
+- **Deploy before submitting.** The script (and Google) read `https://www.salarytakehome.co.uk/sitemap.xml`, so running IndexNow against undeployed local changes resubmits the *old* URL set. Order is: `npm run build` → commit → push/deploy → `node scripts/submit-indexnow.mjs --all`.
 - Google: does NOT support IndexNow. Google sitemap ping endpoint is deprecated (returns 404). Use Google Search Console for manual URL submission, or rely on Google crawling the sitemap `<lastmod>` dates.
 - Breadcrumbs: every page has visual breadcrumbs + BreadcrumbList JSON-LD schema via the Breadcrumbs component
-- **Last Updated badge:** all 10 calculator pages show "Last updated: April 2026 · Reflects 2026/27 tax year" below the h1 description. Update this during the annual tax year refresh.
+- **Last Updated badge:** every calculator page shows one below the h1 description. **As of November 2026 these are inconsistent** — `/take-home-pay-calculator`, `/pay-rise`, `/two-jobs` and `/dividend-tax` say "November 2026 · Covers 2026/27 and 2027/28"; the other nine still say "April 2026 · Reflects 2026/27 tax year", and `/salary-per-second` says only "Last updated: April 2026". Nine blog posts are worse — they still claim "March 2026 · Reflects 2025/26 tax year", naming a tax year now two years stale. See Known Gaps.
 - **Related Reading:** all calculator pages have a Related Reading section at the bottom linking to relevant blog posts. When adding new blog posts, consider updating these links.
 - **Internal linking:** calculators link to blog posts (Related Reading sections), blog posts link back to calculators (inline CTAs). Both directions matter for SEO.
 - **Internal link targets:** every calculator should have ≥3 inbound contextual links from blog posts (not counting RelatedArticles carousels or site chrome — Sidebar/Footer/LayoutWrapper/Breadcrumbs). Every blog post should have ≥2 inbound links from other pages. When adding a new calculator or blog post, add contextual anchors in at least 3 relevant existing pages — don't rely solely on Related Reading tiles. Related Reading tiles can mix blog posts with other calculators/tools (e.g. `/mortgages`, `/tax-code`) where topically relevant.
@@ -256,7 +284,7 @@ Every calculator has at least one dedicated supporting blog post:
 - **Tailwind v4 oklab browser fallbacks** — `globals.css` contains `@supports not` blocks that fix Tailwind CSS v4's use of `oklab` color space. Tailwind v4 outputs `--tw-gradient-position: to <dir> in oklab` and `oklab()` color functions which older browsers can't parse, causing gradients to disappear entirely (invisible sidebar, blank card icons, missing calculator elements). The fallbacks override `--tw-gradient-position` for all 8 directions to strip `in oklab`, and force white text in the sidebar for very old browsers. Affected browsers: Safari < 16.2, Firefox < 127, Chrome/Edge < 111. Don't remove these fallbacks — they're critical for cross-browser compatibility.
 - **Blog post data is centralised in `src/app/blog/posts.js`** — This is the single source of truth for all blog post metadata (slug, title, description, date, readTime, category, featured, priority). The blog index (`page.js`), RSS feed (`feed.xml/route.js`), and sitemap (`sitemap.js`) all import from this file. When adding a new post, add it to `posts.js` and it will automatically appear in all three. The only files that still need manual updates are `public/llms.txt` and `public/llms-full.txt` (different markdown format for AI crawlers).
 - **RSS feed** — Available at `/feed.xml` via a Next.js route handler. Auto-discovers via `<link rel="alternate" type="application/rss+xml">` in the root layout. The feed imports from `posts.js` so it stays in sync automatically.
-- **"Last updated" badge on blog posts** — All blog posts show a green badge below the category/date/readtime row: "Last updated: April 2026 · Reflects 2026/27 tax year". Update the text during the annual tax year refresh. Badge uses `text-green-700 bg-green-50 border-green-200 rounded-full`.
+- **"Last updated" badge on blog posts** — Blog posts show a green badge below the category/date/readtime row. The text is **not uniform** and shouldn't be assumed: most say "Last updated: April 2026 · Reflects 2026/27 tax year", nine still say "March 2026 · Reflects 2025/26 tax year", and the posts touched in November 2026 carry their own wording (e.g. "Rewritten after the 28 October 2026 Budget cancelled the cut"). Badge uses `text-green-700 bg-green-50 border-green-200 rounded-full`. Grep before replacing.
 - **Blog post cross-links** — Blog posts link to each other within body text (not just via RelatedArticles at the bottom). This builds topical authority. When adding new posts, add 2-3 inline links to related existing posts, and update existing posts to link back.
 - **Dated vs evergreen blog posts** — Two posts get year-tagged slugs and are replaced annually: `uk-tax-changes-YYYY-YY` and `uk-minimum-wage-YYYY-YY`. For these, create a **new** post each tax year and leave the old one live as historical reference — it stays in the sitemap and keeps its URL. All other posts are evergreen and are updated in place during the annual refresh (don't change the slug, URL, or publish date). This avoids SEO cannibalisation and preserves link equity. Rationale: tax-year-specific content benefits from dated URLs for search intent, but evergreen guides (£100k tax trap, ISA vs LISA, etc.) are the same topic year-on-year and shouldn't be duplicated.
 - **`posts.js` landmine — don't blanket-replace year labels** — When doing the annual refresh with a `replace_all` on `2025/26 → 2026/27` in `src/app/blog/posts.js`, the historical dated post titles (`uk-tax-changes-2025-26`, `uk-minimum-wage-2025-26`) will also get clobbered incorrectly. Those titles need to stay labelled with their original year. After any `replace_all` on `posts.js`, grep for `slug: "uk-(tax-changes|minimum-wage)-20` entries and verify the adjacent titles match their slug's year. Same caveat applies to the historical `page.js` files under `src/app/blog/uk-*-20XX-YY/` — leave them untouched during the refresh.
@@ -274,8 +302,19 @@ Every calculator has at least one dedicated supporting blog post:
 - **Dividend Tax Calculator has shareable URLs** — supports `?salary=X&dividends=Y&year=Z` query params. A "Share these results" button copies the link to clipboard. Uses `useSearchParams()` in the client component (`DividendTaxClient.js`).
 - **Dividend Tax Calculator has 9 educational cards** — How Dividend Tax Works, Dividend Tax Rates, Dividend Allowance History, Ltd Company Director Strategy, Scottish Taxpayers & Dividends, £100k Trap & Dividends, Reporting Dividends to HMRC, Dividend Tax vs Capital Gains Tax, and Tips to Reduce Your Dividend Tax Bill (full-width with 4-card grid).
 
+- **Student loan thresholds are layered, not flat** — `take-home-pay-calculator/TaxCalculatorClient.js` and `pay-rise/page.js` keep the original flat `STUDENT_LOAN` table **plus** a year-keyed `STUDENT_LOAN_BY_YEAR` override, read through `getStudentLoanPlan(taxYear, plan)`. Anything not listed in the override falls back to the flat table. This exists because only Plan 1 (£28,005) and Plan 2 (£29,385, frozen to 2029/30) were confirmed for 2027/28 — Plan 4, Plan 5 and postgraduate were unannounced and carry forward. When editing thresholds, check **both** structures; changing only the flat table will silently not affect 2027/28.
+- **`scottishProvisional` flag — has a removal deadline** — the 2027/28 `TAX_BANDS` entries in `TaxCalculatorClient.js` and `pay-rise/page.js` carry `scottishProvisional: true`, because Scottish rates for 2027/28 weren't set at Budget time (Scottish Budget due 3 December 2026). The `scottishBands` there are **2026/27 figures carried forward** so the calculator still returns a number, and an amber in-page caveat renders when the user has both Scotland and 2027/28 selected. **After the Scottish Rate Resolution: update the bands, delete the flag, and delete the conditional notice.** Grep `scottishProvisional` to find all sites.
+- **`/two-jobs` gained a tax year selector in November 2026** — it previously had none; `taxYear: '2026/27'` was effectively hardcoded in state with no UI to change it. It now has a `TAX_YEARS` constant and a selector card above the job forms grid. It deliberately offers **only 2027/28 and 2026/27**, not the full historical range, because the historical band data was never added to this file.
+- **`cash-isa-limit-2027` says the opposite of what its slug suggests** — the post originally explained a cut of the cash ISA allowance to £12,000 from April 2027. That policy was **cancelled at the Autumn Budget 2026**; the limit stays £20,000. The post was rewritten to correct the record and **the slug was deliberately kept** so its existing rankings and backlinks land readers on the right answer rather than a 404. Don't "fix" the slug to match the new title. The same £12,000 claim had spread to `isa-vs-lisa` (including an actively wrong LISA planning rule) and `uk-tax-changes-2026-27`; both corrected. **Lesson: when a tax policy is cancelled, grep the whole site for the figure — it is never in only one post.**
+- **Don't fake sitemap freshness** — during the November 2026 refresh, `lastModified` in `sitemap.js` was bumped **only** for pages whose content genuinely changed. Bumping every page's date to look fresh is discounted by Google and costs the signal real value on the pages that did change.
+
 ## Known Gaps / TODO
-- Tax data is duplicated across calculator files (could be centralised)
+
+- **Dated action: remove `scottishProvisional`** after the Scottish Budget (due 3 December 2026) and replace the carried-forward 2027/28 Scottish bands with the real ones.
+- **Stale "Last updated" badges.** Nine calculator pages still say "April 2026" and `/salary-per-second` just "April 2026"; nine blog posts still say "March 2026 · Reflects 2025/26 tax year" — a tax year now two years out of date, on pages Google can see. Worth a sweep.
+- **`npm run lint` is broken** (`next lint` removed in Next.js 16; direct eslint hits a circular-structure error in `@eslint/eslintrc`). No working lint gate exists — only `npm run build`.
+- **Savings and property income are not modelled anywhere**, even though the 2027/28 rate rise to 24/44/49 is the headline change from the Autumn Budget 2026. A savings-interest tax calculator is the most obvious gap in the tool set and has a live news hook.
+- Tax data is duplicated across calculator files (could be centralised) — now across six year-blocks per file, so the duplication costs more than it used to.
 - No table of contents on long blog posts
 - When adding new blog posts, update Related Reading sections on relevant calculator pages
 - `/pay-rise` and `/take-home-pay-calculator` have two ad units (top + in-content) — other calculators only have the top ad unit and could benefit from an in-content one too
