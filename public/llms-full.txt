@@ -250,6 +250,10 @@ Basic and higher rates were increased by 2 percentage points from 6 April 2026 (
 ### Savings
 - Cash ISA limit 2027: the planned £12,000 under-65 limit was cancelled at the Autumn Budget 2026; £20,000 stays for all savers over 18
 
+### Self-Employment
+- Do You Pay Tax on Twitch & YouTube Income?: UK content creator and streamer tax — hobby vs trade, the £1,000 trading allowance for 2026/27 (rising to £3,000 from 6 April 2027), what counts as income (subs, bits, tips, AdSense, sponsorships, affiliate codes, gifted games and hardware), income tax and Class 4 NI at 6%/2%, Class 2 no longer compulsory, worked examples for a side channel and a full-time creator, allowable expenses, Self Assessment deadlines, payments on account, Making Tax Digital thresholds and digital platform reporting
+- Self-Employed Tax Calculator Guide: estimating income tax, National Insurance and take-home profit as a sole trader or freelancer
+
 ### Calculator Support Guides (Topic Cluster Posts)
 - UK Dividend Tax Explained: rates, allowances, worked examples, and strategies to reduce your dividend tax bill
 - UK Minimum Wage 2026/27: £12.71 NLW from April 2026, rates by age, take-home pay and worker rights

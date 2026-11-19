@@ -41,7 +41,7 @@ const faqCategories = [
       },
       {
         q: "What is National Insurance and how much do I pay?",
-        a: "National Insurance (NI) funds state benefits like the NHS and state pension. For 2026/27: you pay 8% on earnings between £12,570-£50,270, and 2% on earnings above £50,270. Self-employed pay Class 2 (£3.45/week if profits >£6,515) and Class 4 (6% on profits £12,570-£50,270, 2% above)."
+        a: "National Insurance (NI) funds state benefits like the NHS and state pension. For 2026/27: you pay 8% on earnings between £12,570-£50,270, and 2% on earnings above £50,270. Self-employed pay Class 4 NI (6% on profits £12,570-£50,270, 2% above); Class 2 is no longer a compulsory charge, and profits of £7,105 or more protect your NI record without a weekly payment."
       },
       {
         q: "When does my personal allowance reduce?",
@@ -80,7 +80,7 @@ const faqCategories = [
     faqs: [
       {
         q: "How is self-employed tax calculated?",
-        a: "Self-employed pay income tax on profits (same rates as employed), Class 2 NI (£3.45/week if profits >£6,515), and Class 4 NI (9% on profits £12,570-£50,270, 2% above). You can deduct business expenses and claim allowances like home office costs."
+        a: "Self-employed pay income tax on profits (same rates as employed) and Class 4 NI (6% on profits £12,570-£50,270, 2% above, with Class 2 no longer a compulsory charge). You can deduct business expenses and claim allowances like home office costs."
       },
       {
         q: "What expenses can I claim as self-employed?",

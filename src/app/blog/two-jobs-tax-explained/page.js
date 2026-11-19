@@ -86,7 +86,7 @@ export default function TwoJobsTaxExplained() {
                 The most important thing to understand is that your total income tax bill is based on your <strong>combined earnings</strong> from all jobs. Having two jobs does not mean you pay more income tax overall.
               </p>
               <p className="text-gray-700 mb-4">
-                Your personal allowance of &pound;12,570 applies once across all your employment. It is not doubled or split automatically. In most cases, HMRC assigns your full personal allowance to your primary job (the one earning the most) and your second job is taxed from the first pound.
+                Your personal allowance of &pound;12,570 applies once across all your employment. It is not doubled or split automatically. In most cases, HMRC assigns your full personal allowance to your primary job (the one earning the most) and your second job is taxed from the first pound. The same thing happens if your second income is self-employed rather than a job &mdash; see <Link href="/blog/streamer-content-creator-tax-uk" className="text-blue-600 hover:text-blue-800 underline font-semibold">how tax works on Twitch, YouTube and other content income</Link> if you earn from a channel alongside employment.
               </p>
               <p className="text-gray-700 mb-4">
                 During the year, PAYE deductions on each payslip are estimates. Your primary employer uses tax code 1257L (which includes your personal allowance), while your second employer typically uses a BR code (basic rate, 20% on everything). This means you may temporarily overpay or underpay tax month to month, but HMRC corrects the total after the tax year ends.

@@ -41,7 +41,7 @@ export default function SelfEmployedTaxGuide() {
             </time>
             <span className="text-gray-500 text-sm">9 min read</span>
           </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
+          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; Class 4 NI corrected to 6% and Class 2 no longer compulsory (2026/27)</p>
           <AdUnit slot="1586479879" hideOnMobile />
           <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Self-Employed Tax Calculator: How to Estimate Your Tax Bill
@@ -65,13 +65,13 @@ export default function SelfEmployedTaxGuide() {
               </div>
               <div className="bg-green-50 rounded-xl p-4 border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-2">Class 2 NI</h3>
-                <p className="text-green-700 text-sm">Fixed weekly amount</p>
-                <p className="text-green-700 text-sm font-semibold">£3.45/week</p>
+                <p className="text-green-700 text-sm">No longer compulsory</p>
+                <p className="text-green-700 text-sm font-semibold">£0 (voluntary £3.65/week)</p>
               </div>
               <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
                 <h3 className="font-semibold text-purple-800 mb-2">Class 4 NI</h3>
                 <p className="text-purple-700 text-sm">Percentage of profits</p>
-                <p className="text-purple-700 text-sm font-semibold">9% + 2%</p>
+                <p className="text-purple-700 text-sm font-semibold">6% + 2%</p>
               </div>
             </div>
           </div>
@@ -130,15 +130,16 @@ export default function SelfEmployedTaxGuide() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Class 2 National Insurance</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
-                    <li>• £3.45 per week (£179.40 per year)</li>
-                    <li>• Only if profits exceed £6,515</li>
-                    <li>• Can be paid voluntarily if below threshold</li>
+                    <li>• No longer a compulsory charge (removed from April 2024)</li>
+                    <li>• Profits of £7,105+ are treated as having paid it</li>
+                    <li>• Your NI record is protected without paying anything</li>
+                    <li>• Below £7,105 you can pay voluntary Class 2 at £3.65/week</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Class 4 National Insurance</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
-                    <li>• 9% on profits £12,570 - £50,270</li>
+                    <li>• 6% on profits £12,570 - £50,270</li>
                     <li>• 2% on profits above £50,270</li>
                     <li>• No NI on first £12,570 of profits</li>
                   </ul>
@@ -168,9 +169,9 @@ export default function SelfEmployedTaxGuide() {
                 <div className="bg-green-50 rounded-lg p-4 border border-green-200">
                   <h4 className="font-semibold text-green-800 mb-2">National Insurance:</h4>
                   <div className="text-sm text-green-700 space-y-1">
-                    <p>• Class 2: £179.40 per year</p>
-                    <p>• Class 4: £27,430 × 9% = £2,468.70</p>
-                    <p>• <strong>Total NI: £2,648.10</strong></p>
+                    <p>• Class 2: £0 (not payable above £7,105)</p>
+                    <p>• Class 4: £27,430 × 6% = £1,645.80</p>
+                    <p>• <strong>Total NI: £1,645.80</strong></p>
                   </div>
                 </div>
                 
@@ -179,8 +180,8 @@ export default function SelfEmployedTaxGuide() {
                   <div className="text-sm text-purple-700 space-y-1">
                     <p>• Gross Profits: £40,000</p>
                     <p>• Income Tax: £5,486</p>
-                    <p>• National Insurance: £2,648</p>
-                    <p>• <strong>Take-home: £31,866</strong></p>
+                    <p>• National Insurance: £1,646</p>
+                    <p>• <strong>Take-home: £32,868</strong></p>
                   </div>
                 </div>
               </div>
@@ -320,7 +321,7 @@ export default function SelfEmployedTaxGuide() {
                   <li>• Set aside 25-30% of profits for tax</li>
                   <li>• Use a separate business bank account</li>
                   <li>• Plan for payments on account</li>
-                  <li>• Consider making voluntary Class 2 NI payments</li>
+                  <li>• Consider voluntary Class 2 NI only if profits are under £7,105</li>
                   <li>• Use tax-efficient savings accounts</li>
                 </ul>
               </div>
@@ -349,7 +350,7 @@ export default function SelfEmployedTaxGuide() {
             "headline": "Self-Employed Tax Calculator: How to Estimate Your Tax Bill",
             "description": "Calculate your income tax, National Insurance, and take-home profit as a sole trader or freelancer.",
             "datePublished": "2024-02-05T00:00:00.000Z",
-            "dateModified": "2024-02-05T00:00:00.000Z",
+            "dateModified": "2026-11-19T00:00:00.000Z",
             "author": {
               "@type": "Organization",
               "name": "SalaryTakeHome"
@@ -369,7 +370,7 @@ export default function SelfEmployedTaxGuide() {
           { href: "/blog/uk-tax-changes-2026-27", title: "UK Tax Changes 2026/27", category: "Tax Updates", description: "Latest tax rates affecting the self-employed." },
           { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "Tax relief on pension contributions." },
           { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
-          { href: "/blog/student-loan-repayment-guide", title: "Student Loan Repayment Guide", category: "Student Loans", description: "How student loans work for the self-employed." },
+          { href: "/blog/streamer-content-creator-tax-uk", title: "Twitch & YouTube Income Tax", category: "Self-Employment", description: "Creator tax, the trading allowance and what you owe." },
         ]} />
         </article>
       </div>

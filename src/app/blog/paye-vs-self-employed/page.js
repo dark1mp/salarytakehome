@@ -47,7 +47,7 @@ export default function PAYEVsSelfEmployed() {
               </time>
               <span className="text-gray-500 text-sm">12 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; Class 2 NI corrected &mdash; no longer a compulsory charge (2026/27)</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               PAYE vs Self-Employed Tax: Key Differences Explained for 2026/27
@@ -105,7 +105,7 @@ export default function PAYEVsSelfEmployed() {
                     <tr className="bg-gray-50">
                       <td className="border border-gray-200 px-4 py-3 text-sm font-medium">National Insurance</td>
                       <td className="border border-gray-200 px-4 py-3 text-sm">Class 1: 8% / 2%</td>
-                      <td className="border border-gray-200 px-4 py-3 text-sm">Class 2 + Class 4: 6% / 2%</td>
+                      <td className="border border-gray-200 px-4 py-3 text-sm">Class 4: 6% / 2% (Class 2 not payable)</td>
                     </tr>
                     <tr>
                       <td className="border border-gray-200 px-4 py-3 text-sm font-medium">Income tax bands</td>
@@ -233,11 +233,11 @@ export default function PAYEVsSelfEmployed() {
                 </div>
 
                 <div className="bg-white rounded-xl p-6 border border-gray-200">
-                  <h3 className="text-lg font-semibold text-indigo-800 mb-4">Self-Employed: Class 2 + Class 4 NI</h3>
+                  <h3 className="text-lg font-semibold text-indigo-800 mb-4">Self-Employed: Class 4 NI</h3>
                   <div className="space-y-3">
                     <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                      <span className="text-sm text-gray-600">Class 2 (if profits over &pound;12,570)</span>
-                      <span className="text-sm font-semibold text-indigo-700">&pound;3.45/week</span>
+                      <span className="text-sm text-gray-600">Class 2 (profits over &pound;7,105)</span>
+                      <span className="text-sm font-semibold text-indigo-700">&pound;0 &mdash; not payable</span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b border-gray-100">
                       <span className="text-sm text-gray-600">Class 4: &pound;12,570 &ndash; &pound;50,270</span>
@@ -249,7 +249,7 @@ export default function PAYEVsSelfEmployed() {
                     </div>
                   </div>
                   <div className="mt-4 bg-indigo-50 rounded-lg p-3">
-                    <p className="text-xs text-indigo-700">Paid through your Self Assessment tax return. Class 2 builds your State Pension entitlement.</p>
+                    <p className="text-xs text-indigo-700">Paid through your Self Assessment tax return. Class 2 stopped being a compulsory charge in April 2024 &mdash; profits of &pound;7,105 or more are treated as having paid it, so your State Pension entitlement still builds up without a weekly payment.</p>
                   </div>
                 </div>
               </div>
@@ -257,7 +257,7 @@ export default function PAYEVsSelfEmployed() {
               <div className="bg-green-50 rounded-xl p-6 border border-green-200">
                 <h3 className="font-semibold text-green-800 mb-2">The NI Advantage for Self-Employed</h3>
                 <p className="text-green-700 text-sm">
-                  On the main earnings band (&pound;12,570 &ndash; &pound;50,270), self-employed workers pay <strong>6% Class 4 NI</strong> compared to <strong>8% Class 1 NI</strong> for PAYE employees. That&apos;s a <strong>2% saving</strong>, worth up to <strong>&pound;754 per year</strong> on the full band. The self-employed also pay &pound;3.45/week Class 2 NI (&pound;179.40/year), but even including this, the total NI bill is still lower.
+                  On the main earnings band (&pound;12,570 &ndash; &pound;50,270), self-employed workers pay <strong>6% Class 4 NI</strong> compared to <strong>8% Class 1 NI</strong> for PAYE employees. That&apos;s a <strong>2% saving</strong>, worth up to <strong>&pound;754 per year</strong> on the full band. Class 2 NI is no longer a compulsory charge, so there is nothing to add on top. If your self-employment is a side income alongside a job &mdash; streaming, freelancing or selling online &mdash; see <Link href="/blog/streamer-content-creator-tax-uk" className="text-blue-600 hover:text-blue-800 underline font-semibold">how creator and side-hustle income is taxed</Link>, where the &pound;1,000 trading allowance does most of the work.
                 </p>
               </div>
             </div>
@@ -302,7 +302,7 @@ export default function PAYEVsSelfEmployed() {
                     <tr>
                       <td className="border border-gray-200 px-4 py-3 text-sm font-medium">National Insurance</td>
                       <td className="border border-gray-200 px-4 py-3 text-sm text-right text-red-600">&pound;2,194.40</td>
-                      <td className="border border-gray-200 px-4 py-3 text-sm text-right text-red-600">&pound;1,825.20</td>
+                      <td className="border border-gray-200 px-4 py-3 text-sm text-right text-red-600">&pound;1,645.80</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 pl-8">Class 1 / Class 4</td>
@@ -312,26 +312,26 @@ export default function PAYEVsSelfEmployed() {
                     <tr>
                       <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 pl-8">Class 2</td>
                       <td className="border border-gray-200 px-4 py-3 text-sm text-right text-gray-400">&mdash;</td>
-                      <td className="border border-gray-200 px-4 py-3 text-sm text-right text-gray-500">&pound;3.45 &times; 52 = &pound;179.40</td>
+                      <td className="border border-gray-200 px-4 py-3 text-sm text-right text-gray-500">&pound;0 &mdash; not payable</td>
                     </tr>
                     <tr className="bg-green-50 font-semibold">
                       <td className="border border-gray-200 px-4 py-3 text-sm">Total Tax + NI</td>
                       <td className="border border-gray-200 px-4 py-3 text-sm text-right text-red-700">&pound;7,680.40</td>
-                      <td className="border border-gray-200 px-4 py-3 text-sm text-right text-red-700">&pound;7,311.20</td>
+                      <td className="border border-gray-200 px-4 py-3 text-sm text-right text-red-700">&pound;7,131.80</td>
                     </tr>
                     <tr className="bg-green-100 font-bold">
                       <td className="border border-gray-200 px-4 py-3 text-sm">Take-Home Pay</td>
                       <td className="border border-gray-200 px-4 py-3 text-sm text-right text-green-700">&pound;32,319.60</td>
-                      <td className="border border-gray-200 px-4 py-3 text-sm text-right text-green-700">&pound;32,688.80</td>
+                      <td className="border border-gray-200 px-4 py-3 text-sm text-right text-green-700">&pound;32,868.20</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
               <div className="bg-amber-50 rounded-xl p-6 border border-amber-200">
-                <h3 className="font-semibold text-amber-800 mb-2">The Difference: &pound;369.20 per year</h3>
+                <h3 className="font-semibold text-amber-800 mb-2">The Difference: &pound;548.60 per year</h3>
                 <p className="text-amber-700 text-sm mb-2">
-                  On &pound;40,000, the self-employed person takes home <strong>&pound;369.20 more per year</strong> (&pound;30.77/month) purely due to the lower NI rate. The income tax is identical.
+                  On &pound;40,000, the self-employed person takes home <strong>&pound;548.60 more per year</strong> (&pound;45.72/month) &mdash; the lower 6% Class 4 rate, plus the fact that Class 2 is no longer a compulsory charge. The income tax is identical.
                 </p>
                 <p className="text-amber-700 text-sm">
                   However, PAYE employees also benefit from employer contributions to a workplace pension (minimum 3% under auto-enrolment), paid holidays, sick pay, and other employment rights that the self-employed must fund themselves.
@@ -587,7 +587,7 @@ export default function PAYEVsSelfEmployed() {
                       "name": "What National Insurance do self-employed workers pay in 2026/27?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Self-employed workers pay two types of NI: Class 2 at £3.45 per week (if profits exceed £12,570), and Class 4 at 6% on profits between £12,570 and £50,270, then 2% on profits above £50,270. This compares to 8% and 2% for PAYE employees on the same thresholds."
+                        "text": "Self-employed workers pay Class 4 NI at 6% on profits between £12,570 and £50,270, then 2% on profits above £50,270. This compares to 8% and 2% for PAYE employees on the same thresholds. Class 2 NI stopped being a compulsory charge in April 2024: profits of £7,105 or more are treated as having paid it, which protects your National Insurance record, and below that figure you can pay voluntary Class 2 at £3.65 a week."
                       }
                     },
                     {
@@ -611,7 +611,7 @@ export default function PAYEVsSelfEmployed() {
                       "name": "How much more does a self-employed person take home on £40,000?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "On £40,000 with no expenses, a self-employed person takes home approximately £369 more per year than a PAYE employee, due to the lower Class 4 NI rate (6% vs 8%). If the self-employed person also claims £5,000 in business expenses, reducing taxable profit to £35,000, the saving increases to around £1,669 per year compared to the PAYE employee."
+                        "text": "On £40,000 with no expenses, a self-employed person takes home approximately £549 more per year than a PAYE employee, because Class 4 NI is 6% against 8% for Class 1 and Class 2 is no longer a compulsory charge. If the self-employed person also claims £5,000 in business expenses, reducing taxable profit to £35,000, the saving increases to around £1,849 per year compared to the PAYE employee."
                       }
                     }
                   ]

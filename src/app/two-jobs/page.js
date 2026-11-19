@@ -984,6 +984,10 @@ export default function TwoJobs() {
                 <span className="text-xs font-semibold text-blue-600">Tax Planning</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Two Jobs Tax Explained: PAYE With Multiple Employers</p>
               </a>
+              <a href="/blog/streamer-content-creator-tax-uk" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Self-Employment</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Do You Pay Tax on Twitch &amp; YouTube Income?</p>
+              </a>
             </div>
           </div>
         </div>

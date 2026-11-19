@@ -44,6 +44,7 @@ SalaryTakeHome.co.uk provides accurate, up-to-date UK tax calculators for employ
 
 ## Blog
 
+- [Do You Pay Tax on Twitch & YouTube Income?](https://www.salarytakehome.co.uk/blog/streamer-content-creator-tax-uk): UK content creator tax — the £1,000 trading allowance (rising to £3,000 from April 2027), what counts as income from subs, bits, AdSense, sponsorships and gifted products, Class 4 NI, Self Assessment deadlines and Making Tax Digital.
 - [UK Tax Codes Explained](https://www.salarytakehome.co.uk/blog/understanding-uk-tax-code): Complete guide to UK tax codes — what each letter and number means, common codes (1257L, BR, D0, K), Scottish S prefix, emergency codes, and how to check yours.
 - [Scottish Tax vs English Tax](https://www.salarytakehome.co.uk/blog/scottish-tax-vs-english-tax): Detailed comparison of Scottish and English/Welsh tax bands and rates.
 - [Plan 1 vs Plan 2 Student Loan](https://www.salarytakehome.co.uk/blog/plan-1-vs-plan-2-student-loan): Differences between student loan repayment plans explained.

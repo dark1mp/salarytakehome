@@ -4,10 +4,21 @@
 
 export const blogPosts = [
   {
+    slug: "streamer-content-creator-tax-uk",
+    title: "Do You Pay Tax on Twitch & YouTube Income? UK Creator Tax Explained",
+    description: "GTA 6 is out and thousands of people are about to earn their first money from content. What counts as taxable income, how the \u00a31,000 trading allowance works (and the \u00a33,000 coming in April 2027), what you owe on subs, bits, AdSense and sponsorships, and when you must tell HMRC.",
+    date: "2026-11-19",
+    readTime: "12 min read",
+    category: "Self-Employment",
+    featured: true,
+    priority: 0.8,
+  },
+  {
     slug: "autumn-budget-2026-what-it-means-for-your-pay",
     title: "Autumn Budget 2026: What It Means for Your Take-Home Pay",
     description: "The Autumn Budget was delivered on 28 October 2026. Income tax and National Insurance are unchanged for 2027/28, but savings and rental income rates rise to 24%, 44% and 49%. What actually changes on your payslip.",
     date: "2026-11-19",
+    lastModified: "2026-11-19",
     readTime: "11 min read",
     category: "Tax Updates",
     featured: true,
@@ -165,6 +176,7 @@ export const blogPosts = [
     title: "Two Jobs Tax Explained: How PAYE Works With Multiple Employers in the UK",
     description: "Understand how tax works when you have two jobs in the UK. Learn about tax codes, NI on multiple jobs, HMRC reconciliation, and how to avoid overpaying tax.",
     date: "2026-03-27",
+    lastModified: "2026-11-19",
     readTime: "12 min read",
     category: "Tax Planning",
     featured: true,
@@ -505,6 +517,7 @@ export const blogPosts = [
     title: "Self-Employed Tax Calculator: How to Estimate Your Tax Bill",
     description: "Calculate your income tax, National Insurance, and take-home profit as a sole trader or freelancer.",
     date: "2024-02-05",
+    lastModified: "2026-11-19",
     readTime: "9 min read",
     category: "Self-Employment",
     featured: false,

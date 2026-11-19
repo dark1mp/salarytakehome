@@ -142,12 +142,13 @@ export default function AutumnBudget2026() {
                     <li>• NI Lower Earnings Limit £129 → £133/week</li>
                     <li>• Benefits in kind must be payrolled</li>
                     <li>• Company car percentages rise for most bands</li>
+                    <li>• Trading allowance £1,000 → £3,000</li>
                   </ul>
                 </div>
               </div>
               <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
                 <p className="text-sm text-blue-800">
-                  <strong>The short version for employees:</strong> if your salary does not change, your take-home pay in 2027/28 will be identical to 2026/27. Every rate and threshold that touches a normal payslip was left alone. The tax rises in this Budget land on savings interest and rental profit, not on wages.
+                  <strong>The short version for employees:</strong> if your salary does not change, your take-home pay in 2027/28 will be identical to 2026/27. Every rate and threshold that touches a normal payslip was left alone. The tax rises in this Budget land on savings interest and rental profit, not on wages. One genuinely good piece of news for anyone with a side income: the trading allowance trebles from &pound;1,000 to &pound;3,000, and the Self Assessment reporting threshold for trading income rises to match. It takes effect on 6 April 2027, so the &pound;1,000 figure still applies for the whole of 2026/27 &mdash; <Link href="/blog/streamer-content-creator-tax-uk" className="text-blue-600 hover:text-blue-800 underline font-semibold">what that means if you earn from content or a side hustle</Link>.
                 </p>
               </div>
             </div>
