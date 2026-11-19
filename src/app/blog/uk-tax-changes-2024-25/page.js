@@ -137,14 +137,14 @@ export default function UKTaxChanges2024() {
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">2024/25 Rates</h4>
                     <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• 12% on earnings £12,570 - £50,270</li>
+                      <li>• 8% on earnings £12,570 - £50,270</li>
                       <li>• 2% on earnings above £50,270</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Previous Year</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">Previous Year (2023/24)</h4>
                     <ul className="text-sm text-gray-500 space-y-1">
-                      <li>• 12% on earnings £12,570 - £50,270</li>
+                      <li>• 12%, cut to 10% from 6 January 2024</li>
                       <li>• 2% on earnings above £50,270</li>
                     </ul>
                   </div>

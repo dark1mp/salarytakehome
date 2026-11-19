@@ -170,6 +170,8 @@ Six checks. `drift`, `contradiction`, `badge` and `signal` are **errors**; `supe
 
 Same-line comparisons ("up from £26,065", "was £118.75") are skipped automatically via `contextExclude` — no pragma needed.
 
+**Known blind spot:** a page in `historicalPages` is skipped entirely, so nothing checks that a historical post is right about its *own* year. `uk-tax-changes-2024-25` claimed 12% employee NI for 2024/25 when the rate was 8% from day one of that year — found by hand, not by the checker. When you add a page to `historicalPages`, read its figures once first.
+
 It is **not** wired into `prebuild`, so it never blocks a deploy. Add `"prebuild": "npm run check:tax"` to `package.json` if you want it to. Run it before every push, and as step 0 of the annual refresh — with `npm run lint` broken, this and `npm run build` are the only gates that work.
 
 ## Annual Tax Year Refresh (April)
