@@ -29,13 +29,13 @@ export default function sitemap() {
   const calculatorPages = [
     {
       url: `${baseUrl}/take-home-pay-calculator`,
-      lastModified: new Date('2026-01-26'),
+      lastModified: new Date('2026-11-19'),
       changeFrequency: 'monthly',
       priority: 1.0, // Highest priority calculator
     },
     {
       url: `${baseUrl}/pay-rise`,
-      lastModified: new Date('2026-01-26'),
+      lastModified: new Date('2026-11-19'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
@@ -53,7 +53,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/two-jobs`,
-      lastModified: new Date('2026-04-09'),
+      lastModified: new Date('2026-11-19'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
@@ -101,7 +101,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/dividend-tax`,
-      lastModified: new Date('2026-03-30'),
+      lastModified: new Date('2026-11-19'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },

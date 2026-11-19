@@ -13,7 +13,7 @@ import {
 import AdUnit from '../components/AdUnit';
 
 // Tax data per year
-const TAX_YEARS = ["2026/27", "2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
+const TAX_YEARS = ["2027/28", "2026/27", "2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
 
 const TAX_DATA = {
   "2021/22": {
@@ -54,6 +54,16 @@ const TAX_DATA = {
     higherRateLimit: 125140,
     dividendAllowance: 500,
     dividendRates: { basic: 0.0875, higher: 0.3375, additional: 0.3935 },
+    paReductionThreshold: 100000,
+  },
+  "2027/28": {
+    personalAllowance: 12570,
+    basicRateLimit: 50270,
+    higherRateLimit: 125140,
+    dividendAllowance: 500,
+    // Budget 2026 (28 Oct 2026): dividend rates and the GBP 500 allowance are unchanged
+    // from 2026/27. Source: HMRC OOTLAR Annex A, "Dividend Rates" / "Dividend Allowance".
+    dividendRates: { basic: 0.1075, higher: 0.3575, additional: 0.3935 },
     paReductionThreshold: 100000,
   },
   "2026/27": {

@@ -94,7 +94,55 @@ Calculate how much tax you'll pay on dividend income. Enter your annual salary a
 - Top-slice rule (dividends sit above salary in the band stack)
 - Unused Personal Allowance sheltering dividend income
 
-Supports tax years 2021/22 through 2026/27. Scottish taxpayers pay the same UK-wide dividend rates (not Scottish rates). Commonly used by Ltd company directors who take a low salary plus dividends.
+Supports tax years 2021/22 through 2027/28. Scottish taxpayers pay the same UK-wide dividend rates (not Scottish rates). Commonly used by Ltd company directors who take a low salary plus dividends.
+
+---
+
+## UK Tax Rates 2027/28 (England, Wales, Northern Ireland)
+
+Announced at the Autumn Budget on 28 October 2026. Effective 6 April 2027.
+
+| Band | Taxable income | Rate on earnings | Rate on savings & property |
+|------|---------------|------------------|----------------------------|
+| Personal Allowance | Up to £12,570 | 0% | 0% |
+| Basic rate | £12,571 – £50,270 | 20% | 24% |
+| Higher rate | £50,271 – £125,140 | 40% | 44% |
+| Additional rate | Over £125,140 | 45% | 49% |
+
+Rates on earned income (salary, wages, pensions) are unchanged from 2026/27. From 6 April 2027 savings income and property income are taxed at separate rates, four percentage points higher. Savings rates apply UK-wide including Scotland; property rates apply in England, Wales and Northern Ireland, with Scotland and Wales gaining power to set their own. Thresholds are maintained at these levels through to the end of 2030/31.
+
+Scottish rates and bands on earned income for 2027/28 are set by the Scottish Parliament and were not announced as of 19 November 2026. The Scottish Budget is due 3 December 2026.
+
+## National Insurance 2027/28
+
+| Threshold | 2026/27 | 2027/28 |
+|-----------|---------|---------|
+| Lower Earnings Limit | £129/week | £133/week |
+| Primary Threshold | £242/week | £242/week |
+| Upper Earnings Limit | £967/week | £967/week |
+| Employee rate | 8% / 2% | 8% / 2% |
+
+Employee National Insurance rates and the thresholds that determine what you pay are unchanged. The Lower Earnings Limit determines whether a year counts towards the State Pension record; it does not affect how much NI is paid. Employer NI: 15% above £96/week secondary threshold.
+
+## Dividend Tax 2027/28
+
+Unchanged from 2026/27: ordinary 10.75%, upper 35.75%, additional 39.35%. Dividend allowance remains £500.
+
+## Student Loan Thresholds 2027/28
+
+| Plan | Annual threshold | Rate |
+|------|-----------------|------|
+| Plan 1 | £28,005 (up from £26,900) | 9% |
+| Plan 2 | £29,385 (frozen through 2029/30) | 9% |
+| Plan 4 / Plan 5 / Postgraduate | Not confirmed as of 19 November 2026 | 9% / 9% / 6% |
+
+## Other changes from 6 April 2027
+
+- Mandatory payrolling of benefits in kind begins: company cars and vans, car and van fuel, and medical benefits. Remaining benefits follow from April 2028.
+- Company car appropriate percentages rise for most CO2 bands (zero-emission cars move from 4% to 5%).
+- The planned £12,000 cash ISA limit for under-65s was cancelled at the Autumn Budget 2026. The cash ISA limit is retained at £20,000 for all savers over 18 from April 2027, implemented by secondary legislation laid in November 2026.
+- Lifetime ISA withdrawal charge for properties above the £450,000 price cap reduced from 25% to 20%. The £450,000 cap is unchanged.
+- A First Time Buyer ISA will replace the Lifetime ISA for new savers from April 2029: £4,000/year contributions, 25% government bonus, no upper age limit. Existing Lifetime ISA holders continue under current rules.
 
 ---
 
@@ -200,7 +248,7 @@ Basic and higher rates were increased by 2 percentage points from 6 April 2026 (
 - Cash ISA vs Lifetime ISA: 25% bonus, withdrawal penalties, eligibility, and which to choose
 
 ### Savings
-- Cash ISA limit changes and contribution strategies
+- Cash ISA limit 2027: the planned £12,000 under-65 limit was cancelled at the Autumn Budget 2026; £20,000 stays for all savers over 18
 
 ### Calculator Support Guides (Topic Cluster Posts)
 - UK Dividend Tax Explained: rates, allowances, worked examples, and strategies to reduce your dividend tax bill

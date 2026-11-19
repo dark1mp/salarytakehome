@@ -47,7 +47,7 @@ export default function ISAvsLISA() {
               </time>
               <span className="text-gray-500 text-sm">10 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; Reflects 2026/27, updated after the Autumn Budget 2026</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Cash ISA vs Lifetime ISA (LISA): Which Is Right for You in 2026/27?
@@ -81,7 +81,7 @@ export default function ISAvsLISA() {
                 <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
                   <h3 className="font-semibold text-emerald-700 mb-2">Cash ISA</h3>
                   <ul className="text-gray-600 text-sm space-y-2">
-                    <li>&bull; Up to &pound;20,000/year (dropping to &pound;12,000 for under-65s from April 2027)</li>
+                    <li>&bull; Up to &pound;20,000/year, all of which can be held in cash</li>
                     <li>&bull; Tax-free interest, no government bonus</li>
                     <li>&bull; Withdraw any time, no penalties</li>
                     <li>&bull; Must be 18+ to open</li>
@@ -118,7 +118,7 @@ export default function ISAvsLISA() {
                   <tbody>
                     <tr>
                       <td className="border border-gray-200 px-4 py-3 font-medium">Annual contribution limit</td>
-                      <td className="border border-gray-200 px-4 py-3">&pound;20,000 (dropping to &pound;12,000 from April 2027 for under-65s)</td>
+                      <td className="border border-gray-200 px-4 py-3">&pound;20,000 (unchanged for 2027/28)</td>
                       <td className="border border-gray-200 px-4 py-3">&pound;4,000</td>
                     </tr>
                     <tr className="bg-gray-50">
@@ -419,13 +419,13 @@ export default function ISAvsLISA() {
                   <span className="flex-shrink-0 w-8 h-8 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold text-sm">3</span>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Put remaining savings into a Cash ISA or S&amp;S ISA</h3>
-                    <p className="text-gray-600 text-sm">After LISA and emergency fund, use your remaining allowance for medium-term goals. From April 2027, under-65s will be limited to &pound;12,000 in cash ISAs total, so consider stocks and shares ISAs for longer-term savings.</p>
+                    <p className="text-gray-600 text-sm">After LISA and emergency fund, use your remaining allowance for medium-term goals. The full &pound;20,000 can sit in cash if that suits your time horizon, but stocks and shares ISAs remain worth considering for longer-term savings.</p>
                   </div>
                 </div>
               </div>
               <div className="mt-6 p-4 bg-amber-50 rounded-xl border border-amber-200">
                 <p className="text-sm text-amber-800">
-                  <strong>2027 planning:</strong> From April 2027, the Cash ISA limit for under-65s drops to &pound;12,000. If you put &pound;4,000 in a LISA, you&apos;ll only have &pound;8,000 left for Cash ISAs. Read more about the upcoming changes in our <Link href="/blog/cash-isa-limit-2027" className="text-amber-700 hover:text-amber-900 underline font-semibold">Cash ISA Limit 2027 guide</Link>.
+                  <strong>2027 update:</strong> The cut to a &pound;12,000 cash ISA limit for under-65s was cancelled at the Autumn Budget 2026 — the full &pound;20,000 stays. What did change is the tax on savings held outside an ISA, which rises to 24%, 44% and 49% from April 2027. Full detail in our <Link href="/blog/cash-isa-limit-2027" className="text-amber-700 hover:text-amber-900 underline font-semibold">cash ISA limit guide</Link>.
                 </p>
               </div>
             </div>
@@ -458,7 +458,7 @@ export default function ISAvsLISA() {
             <div className="glass-light rounded-2xl p-8 bg-gray-50">
               <p className="text-sm text-gray-500">
                 <strong>Disclaimer:</strong> This guide is for informational purposes only and should not be considered financial advice.
-                Always consult with a qualified financial adviser for personalised guidance. ISA rules and limits are for the 2026/27 tax year and are subject to change. The Cash ISA limit reduction to &pound;12,000 for under-65s takes effect from April 2027. Information accurate as of March 2026.
+                Always consult with a qualified financial adviser for personalised guidance. ISA rules and limits are for the 2026/27 tax year and are subject to change. The cash ISA limit stays at &pound;20,000 for 2027/28; the previously announced reduction to &pound;12,000 was cancelled at the Autumn Budget 2026. Information accurate as of 19 November 2026.
               </p>
             </div>
 
@@ -539,7 +539,7 @@ export default function ISAvsLISA() {
           }} />
 
           <RelatedArticles articles={[
-            { href: "/blog/cash-isa-limit-2027", title: "The £12,000 Cash ISA Limit 2027", category: "Savings & ISAs", description: "What the new limit means for your savings strategy." },
+            { href: "/blog/cash-isa-limit-2027", title: "The £12,000 Cash ISA Limit Was Scrapped", category: "Savings & ISAs", description: "The cut was cancelled — but savings tax is rising." },
             { href: "/blog/salary-sacrifice-vs-personal-pension", title: "Salary Sacrifice vs Personal Pension", category: "Pensions", description: "Which pension route saves you the most tax?" },
             { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "How pension tax relief works and how to claim it." },
             { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Practical strategies to keep more of your earnings." },

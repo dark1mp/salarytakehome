@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 
 import AdUnit from '../components/AdUnit';
 
-const TAX_YEARS = ["2026/27", "2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
+const TAX_YEARS = ["2027/28", "2026/27", "2025/26", "2024/25", "2023/24", "2022/23", "2021/22"];
 
 const TAX_BANDS = {
   "2021/22": {
@@ -89,6 +89,31 @@ const TAX_BANDS = {
       { threshold: Infinity, rate: 0.48 }
     ]
   },
+  "2027/28": {
+    personalAllowance: 12570,
+    personalAllowanceReductionThreshold: 100000,
+    personalAllowanceReductionRate: 0.5,
+    bands: [
+      // Budget 2026 (28 Oct 2026): rUK thresholds and 20/40/45 rates unchanged from
+      // 2026/27 and maintained at these levels until 2030/31. Source: HMRC OOTLAR Annex A.
+      { threshold: 50270, rate: 0.2 },
+      { threshold: 125140, rate: 0.4 },
+      { threshold: Infinity, rate: 0.45 }
+    ],
+    // PROVISIONAL: Scottish rates and bands for 2027/28 are set by the Scottish Parliament
+    // and were not announced at the time of writing (Scottish Budget due 3 December 2026).
+    // These carry 2026/27 forward so the calculator still returns a figure; update after
+    // the Scottish Rate Resolution and remove scottishProvisional.
+    scottishBands: [
+      { threshold: 16537, rate: 0.19 },
+      { threshold: 29526, rate: 0.20 },
+      { threshold: 43662, rate: 0.21 },
+      { threshold: 75000, rate: 0.42 },
+      { threshold: 125140, rate: 0.45 },
+      { threshold: Infinity, rate: 0.48 }
+    ],
+    scottishProvisional: true
+  },
   "2026/27": {
     personalAllowance: 12570,
     personalAllowanceReductionThreshold: 100000,
@@ -117,6 +142,7 @@ const NI_BANDS = {
   "2023/24": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
   "2024/25": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.12, upperRate: 0.02 },
   "2025/26": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 },
+  "2027/28": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 },
   "2026/27": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 }
 };
 
@@ -127,6 +153,21 @@ const STUDENT_LOAN = {
   plan5: { threshold: 25000, rate: 0.09 }, // Post-2023 (England, Wales, Northern Ireland) - repayments commenced April 2026
   postgrad: { threshold: 21000, rate: 0.06 } // Postgraduate loan - 2026/27 threshold (unchanged)
 };
+
+// Year-specific student loan overrides. Anything not listed for a year falls back to the
+// base table above, which holds the 2026/27 figures.
+// 2027/28: Plan 1 rises to GBP 28,005 (DfE/SLC, announced August 2026). Plan 2 stays frozen
+// at GBP 29,385 through 2029/30. Plans 4, 5 and postgraduate had no confirmed 2027/28 figure
+// at the time of writing and are carried forward unchanged.
+const STUDENT_LOAN_BY_YEAR = {
+  "2027/28": {
+    plan1: { threshold: 28005, rate: 0.09 },
+    plan2: { threshold: 29385, rate: 0.09 }
+  }
+};
+
+const getStudentLoanPlan = (taxYear, plan) =>
+  (STUDENT_LOAN_BY_YEAR[taxYear] && STUDENT_LOAN_BY_YEAR[taxYear][plan]) || STUDENT_LOAN[plan];
 
 // Optimized CountUp component with memoization
 const CountUp = React.memo(({ end, duration = 800, prefix = "£" }) => {
@@ -532,8 +573,10 @@ function TaxCalculatorContent() {
 
     // Student Loan
     let sl = 0;
-    if (formData.studentLoan && STUDENT_LOAN[formData.studentLoan]) {
-      let slPlan = STUDENT_LOAN[formData.studentLoan];
+    const slPlan = formData.studentLoan
+      ? getStudentLoanPlan(formData.taxYear, formData.studentLoan)
+      : null;
+    if (slPlan) {
       let slIncome = Math.max(0, gross - slPlan.threshold);
       sl = slIncome * slPlan.rate;
     }
@@ -684,6 +727,17 @@ function TaxCalculatorContent() {
                       </span>
                     </label>
                   </div>
+                  {formData.scottish && formData.taxYear === "2027/28" && (
+<div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3">
+                      <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <p className="text-xs text-amber-900">
+                        <strong className="font-bold">Provisional:</strong> Scottish rates and bands for
+                        2027/28 are set by the Scottish Parliament and had not been announced when this
+                        page was last updated. The Scottish Budget is due on 3 December 2026 — until then
+                        these figures carry 2026/27 rates forward. Figures for the rest of the UK are confirmed.
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

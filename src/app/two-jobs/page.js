@@ -4,7 +4,34 @@ import { Briefcase, TrendingUp, Info, HelpCircle, FileText, Calculator, Clipboar
 import LayoutWrapper from '../components/LayoutWrapper';
 import AdUnit from '../components/AdUnit';
 
+const TAX_YEARS = ["2027/28", "2026/27"];
+
 const TAX_BANDS = {
+  "2027/28": {
+    personalAllowance: 12570,
+    personalAllowanceReductionThreshold: 100000,
+    personalAllowanceReductionRate: 0.5,
+    bands: [
+      // Budget 2026 (28 Oct 2026): rUK thresholds and 20/40/45 rates unchanged from
+      // 2026/27 and maintained at these levels until 2030/31. Source: HMRC OOTLAR Annex A.
+      { threshold: 50270, rate: 0.2 },
+      { threshold: 125140, rate: 0.4 },
+      { threshold: Infinity, rate: 0.45 }
+    ],
+    // PROVISIONAL: Scottish rates and bands for 2027/28 are set by the Scottish Parliament
+    // and were not announced at the time of writing (Scottish Budget due 3 December 2026).
+    // These carry 2026/27 forward so the calculator still returns a figure; update after
+    // the Scottish Rate Resolution and remove scottishProvisional.
+    scottishBands: [
+      { threshold: 16537, rate: 0.19 },
+      { threshold: 29526, rate: 0.20 },
+      { threshold: 43662, rate: 0.21 },
+      { threshold: 75000, rate: 0.42 },
+      { threshold: 125140, rate: 0.45 },
+      { threshold: Infinity, rate: 0.48 }
+    ],
+    scottishProvisional: true
+  },
   "2026/27": {
     personalAllowance: 12570,
     personalAllowanceReductionThreshold: 100000,
@@ -26,6 +53,7 @@ const TAX_BANDS = {
 };
 
 const NI_BANDS = {
+  "2027/28": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 },
   "2026/27": { primaryThreshold: 12570, upperEarnings: 50270, rate: 0.08, upperRate: 0.02 }
 };
 
@@ -420,13 +448,34 @@ export default function TwoJobs() {
               <p className="text-xl text-gray-600">Calculate your tax and take-home pay when working two jobs</p>
               <p className="text-sm text-gray-400 mt-3 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                Last updated: April 2026 · Reflects 2026/27 tax year
+                Last updated: November 2026 · Covers 2026/27 and 2027/28
               </p>
             </div>
 
           <div className="grid xl:grid-cols-3 gap-4 lg:gap-3 lg:scale-[0.92] lg:origin-top 2xl:scale-100">
             {/* Left Column - Job 1 and Job 2 Forms */}
             <div className="xl:col-span-2 space-y-6">
+              {/* Tax Year Selector */}
+              <div className="bg-white/90 backdrop-blur-light rounded-3xl shadow-medium border border-white/30 p-6 lg:p-4 xl:p-6">
+                <label htmlFor="two-jobs-tax-year" className="block text-sm font-bold text-gray-700 mb-3">Tax Year</label>
+                <select
+                  id="two-jobs-tax-year"
+                  value={formData.taxYear}
+                  onChange={(e) => setFormData({ ...formData, taxYear: e.target.value })}
+                  className="w-full px-4 py-4 border-2 border-gray-200/50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-400 text-lg font-semibold bg-white/80 transition-all duration-200"
+                >
+                  {TAX_YEARS.map(year => (
+                    <option key={year} value={year}>{year}</option>
+                  ))}
+                </select>
+                {formData.taxYear === "2027/28" && (
+                  <p className="mt-3 text-sm text-gray-600">
+                    Income tax thresholds and National Insurance are unchanged for 2027/28, so a
+                    salary that does not change will take home the same amount.
+                  </p>
+                )}
+              </div>
+
               {/* Job Forms Grid */}
               <div className="grid lg:grid-cols-2 gap-4 lg:gap-3">
                 {/* Job 1 Form */}
@@ -919,6 +968,10 @@ export default function TwoJobs() {
           <div className="max-w-6xl">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Related Reading</h3>
             <div className="grid md:grid-cols-3 gap-3">
+              <a href="/blog/autumn-budget-2026-what-it-means-for-your-pay" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                <span className="text-xs font-semibold text-blue-600">Tax Updates</span>
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">Autumn Budget 2026: What It Means for Your Pay</p>
+              </a>
               <a href="/blog/maximize-take-home-pay-2024" className="p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                 <span className="text-xs font-semibold text-blue-600">Money Tips</span>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm mt-1">How to Maximise Your Take Home Pay</p>

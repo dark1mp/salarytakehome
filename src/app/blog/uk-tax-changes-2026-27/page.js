@@ -106,7 +106,7 @@ export default function UKTaxChanges202627() {
               </time>
               <span className="text-gray-500 text-sm">11 min read</span>
             </div>
-            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: April 2026 &middot; Reflects 2026/27 tax year</p>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; Reflects 2026/27, updated after the Autumn Budget 2026</p>
             <AdUnit slot="1586479879" hideOnMobile />
             <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
               UK Tax Changes 2026/27: What You Need to Know
@@ -518,7 +518,7 @@ export default function UKTaxChanges202627() {
                   <div>
                     <h3 className="font-semibold text-gray-800">Use your £20,000 ISA allowance</h3>
                     <p className="text-gray-600 text-sm">
-                      The total ISA allowance is unchanged at £20,000. Note the <Link href="/blog/cash-isa-limit-2027" className="text-blue-600 hover:text-blue-800 underline font-semibold">£12,000 cash ISA limit</Link> takes effect from April 2027, so this is the last full tax year to put the entire £20,000 into a cash ISA if you're under 65.
+                      The total ISA allowance is unchanged at £20,000, and all of it can go into cash. The <Link href="/blog/cash-isa-limit-2027" className="text-blue-600 hover:text-blue-800 underline font-semibold">£12,000 cash ISA limit that had been planned for April 2027</Link> was cancelled at the Autumn Budget 2026. Savings interest outside an ISA will be taxed at 24%, 44% or 49% from April 2027, so the allowance is worth more than before.
                     </p>
                   </div>
                 </div>
@@ -590,7 +590,7 @@ export default function UKTaxChanges202627() {
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-2">Are there still changes coming later?</h3>
                   <p className="text-gray-600">
-                    Yes. The <Link href="/blog/cash-isa-limit-2027" className="text-blue-600 hover:text-blue-800 underline font-semibold">£12,000 cash ISA limit</Link> kicks in from April 2027 for under-65s. The <Link href="/blog/salary-sacrifice-changes-2029" className="text-blue-600 hover:text-blue-800 underline font-semibold">£2,000 salary sacrifice NI cap</Link> starts from April 2029.
+                    Yes. The <Link href="/blog/autumn-budget-2026-what-it-means-for-your-pay" className="text-blue-600 hover:text-blue-800 underline font-semibold">Autumn Budget 2026</Link> confirmed that savings and rental income move to separate rates of 24%, 44% and 49% from April 2027, while rates and thresholds on earned income stay put. The planned <Link href="/blog/cash-isa-limit-2027" className="text-blue-600 hover:text-blue-800 underline font-semibold">£12,000 cash ISA limit</Link> for under-65s was dropped at that Budget, so the £20,000 allowance remains. The <Link href="/blog/salary-sacrifice-changes-2029" className="text-blue-600 hover:text-blue-800 underline font-semibold">£2,000 salary sacrifice NI cap</Link> still starts from April 2029.
                   </p>
                 </div>
               </div>
@@ -608,6 +608,7 @@ export default function UKTaxChanges202627() {
           </div>
 
           <RelatedArticles articles={[
+            { href: "/blog/autumn-budget-2026-what-it-means-for-your-pay", title: "Autumn Budget 2026", category: "Tax Updates", description: "What the 28 October Budget changes from April 2027." },
             { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Last year's tax rates for comparison." },
             { href: "/blog/uk-minimum-wage-2026-27", title: "UK Minimum Wage 2026/27", category: "Salary Guide", description: "New NLW rates and take-home pay at every age band." },
             { href: "/blog/100k-tax-trap", title: "The £100k Tax Trap", category: "Tax Planning", description: "How frozen thresholds create a 60% marginal rate." },

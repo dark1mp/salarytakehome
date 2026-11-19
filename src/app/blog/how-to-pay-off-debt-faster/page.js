@@ -460,7 +460,7 @@ export default function HowToPayOffDebtFaster() {
 
           <RelatedArticles articles={[
             { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
-            { href: "/blog/cash-isa-limit-2027", title: "The £12,000 Cash ISA Limit", category: "Savings & ISAs", description: "What the new ISA limits mean for your money." },
+            { href: "/blog/cash-isa-limit-2027", title: "The £12,000 Cash ISA Limit Was Scrapped", category: "Savings & ISAs", description: "The cut was cancelled — but savings tax is rising." },
             { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Save on tax and NI through salary sacrifice." },
             { href: "/blog/30k-salary-take-home", title: "£30k Salary Take Home Pay", category: "Salary Guide", description: "Full breakdown of a £30,000 salary after tax." },
           ]} />

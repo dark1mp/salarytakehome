@@ -66,6 +66,7 @@ SalaryTakeHome.co.uk provides accurate, up-to-date UK tax calculators for employ
 - [Take-Home Pay on £90K](https://www.salarytakehome.co.uk/blog/90k-salary-take-home): Full breakdown of take-home pay on a £90,000 salary.
 - [Take-Home Pay on £95K](https://www.salarytakehome.co.uk/blog/95k-salary-take-home): Full breakdown of take-home pay on a £95,000 salary.
 - [Take-Home Pay on £100K](https://www.salarytakehome.co.uk/blog/100k-salary-take-home): Full breakdown of take-home pay on a £100,000 salary, plus the £100k tax trap explained.
+- [Autumn Budget 2026: What It Means for Your Take-Home Pay](https://www.salarytakehome.co.uk/blog/autumn-budget-2026-what-it-means-for-your-pay): The 28 October 2026 Budget explained — income tax and NI unchanged for 2027/28, savings and rental income rates rise to 24%/44%/49%, thresholds frozen to 2031, benefits in kind payrolled from April 2027.
 - [UK Tax Changes 2026/27](https://www.salarytakehome.co.uk/blog/uk-tax-changes-2026-27): Complete guide to every UK tax change from 6 April 2026 — frozen thresholds extended to 2031, Scottish band changes, +2pp dividend tax rise, SSP reform, new student loan thresholds.
 - [UK Tax Changes 2025/26](https://www.salarytakehome.co.uk/blog/uk-tax-changes-2025-26): Historical reference — all tax changes for the 2025/26 tax year.
 - [Student Loan Repayment Guide](https://www.salarytakehome.co.uk/blog/student-loan-repayment-guide): Complete guide to UK student loan repayment thresholds and rates.
@@ -73,7 +74,7 @@ SalaryTakeHome.co.uk provides accurate, up-to-date UK tax calculators for employ
 - [Pension Contributions & Tax Relief](https://www.salarytakehome.co.uk/blog/pension-contributions-tax-relief): Guide to pension tax relief and contribution limits.
 - [Pay Rise Negotiation Guide](https://www.salarytakehome.co.uk/blog/pay-rise-negotiation-guide): How to negotiate a pay rise and understand its tax impact.
 - [Student Loan Refund Guide](https://www.salarytakehome.co.uk/blog/student-loan-refund): How to claim back student loan overpayments.
-- [Cash ISA Limit Changes](https://www.salarytakehome.co.uk/blog/cash-isa-limit-2027): Upcoming changes to ISA contribution limits.
+- [The £12,000 Cash ISA Limit Was Scrapped](https://www.salarytakehome.co.uk/blog/cash-isa-limit-2027): The planned £12,000 cash ISA limit for under-65s was cancelled at the Autumn Budget 2026. The full £20,000 allowance stays for everyone over 18, while savings tax outside an ISA rises to 24%/44%/49% from April 2027.
 - [UK Minimum Wage 2026/27](https://www.salarytakehome.co.uk/blog/uk-minimum-wage-2026-27): Complete guide to UK minimum wage rates from 1 April 2026 — £12.71 NLW, rates by age band, take-home pay.
 - [UK Minimum Wage 2025/26](https://www.salarytakehome.co.uk/blog/uk-minimum-wage-2025-26): Historical reference — minimum wage rates in force from April 2025.
 - [How to Compare Job Offers](https://www.salarytakehome.co.uk/blog/how-to-compare-job-offers): Learn how to compare job offers beyond just salary.

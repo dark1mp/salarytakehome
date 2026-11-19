@@ -5,14 +5,15 @@ import LayoutWrapper from "../../components/LayoutWrapper";
 import AdUnit from "../../components/AdUnit";
 
 export const metadata = {
-  title: "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027",
-  description: "Your tax-free savings allowance is about to change. From April 2027, under-65s can only deposit £12,000 per year into cash ISAs. Here's what it means for your money and how to prepare.",
-  keywords: "cash ISA limit 2027, ISA allowance, £12000 ISA limit, cash ISA changes, savings tax, ISA rules 2027, tax-free savings",
+  title: "The £12,000 Cash ISA Limit Was Scrapped: What Happens from April 2027",
+  description: "The planned £12,000 cash ISA limit for under-65s was cancelled at the Autumn Budget on 28 October 2026. The full £20,000 allowance stays for everyone over 18. Here is what is actually changing from April 2027 — including a savings tax rise that makes ISAs more valuable, not less.",
+  keywords: "cash ISA limit 2027, £12,000 cash ISA limit scrapped, cash ISA U-turn, ISA allowance 2027/28, savings tax 24%, First Time Buyer ISA, Lifetime ISA replacement, Autumn Budget 2026 ISA",
   openGraph: {
-    title: "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027",
-    description: "Your tax-free savings allowance is about to change. Here's what it means for your money.",
+    title: "The £12,000 Cash ISA Limit Was Scrapped: What Happens from April 2027",
+    description: "The cash ISA cut was cancelled at the Autumn Budget 2026. The £20,000 allowance stays — but savings tax is going up, which changes the maths.",
     type: "article",
     publishedTime: "2026-01-25T00:00:00.000Z",
+    modifiedTime: "2026-11-19T00:00:00.000Z",
     authors: ["SalaryTakeHome"],
     images: [{
       url: "/opengraph-image.png",
@@ -23,517 +24,324 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The £12,000 Cash ISA Limit: What You Need to Know",
-    description: "Your tax-free savings allowance is about to change. Here's what it means for your money.",
+    title: "The £12,000 Cash ISA Limit Was Scrapped",
+    description: "Cancelled at the Autumn Budget 2026. The £20,000 allowance stays for everyone over 18 — but savings tax is rising.",
   },
   alternates: {
     canonical: "https://www.salarytakehome.co.uk/blog/cash-isa-limit-2027",
   },
 };
 
-export default function CashISALimit2027() {
+export default function CashIsaLimit2027() {
   return (
-    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027" }]}>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium rounded-full">
-              Savings & ISAs
-            </span>
-            <time className="text-gray-500 text-sm" dateTime="2026-01-25">
-              January 25, 2026
-            </time>
-            <span className="text-gray-500 text-sm">18 min read</span>
-          </div>
-          <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: March 2026 &middot; Reflects 2025/26 tax year</p>
-          <AdUnit slot="1586479879" hideOnMobile />
-          <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            The £12,000 Cash ISA Limit: What You Need to Know Before April 2027
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Your tax-free savings allowance is about to change. Here's what it means for your money.
-          </p>
-        </div>
-
-        {/* Content */}
-        <div className="prose prose-lg max-w-none">
-          {/* Introduction */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <p className="text-gray-700 mb-4 text-lg leading-relaxed">
-              If you're under 65 and like keeping your savings in cash ISAs, you've got until April 2027 to make the most of your current allowance. After that, there's a cap coming—and it's going to force millions of savers to make some big decisions about where to put their money.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              The government announced in the Autumn 2025 Budget that from 6 April 2027, anyone under 65 will only be able to deposit £12,000 per year into cash ISAs. That's a £8,000 cut from the current £20,000 limit. The overall ISA allowance stays at £20,000, but if you want to use the full amount, you'll need to put at least £8,000 into stocks and shares, innovative finance ISAs, or a Lifetime ISA instead.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              It's not quite as simple as it sounds, either. The government's already planning rules to stop people gaming the system—limits on transferring between ISA types, possible charges on cash held in investment accounts, and tests to determine whether an investment is "cash-like."
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Let's break down what's actually happening, who it affects, and what you should be thinking about right now.
-            </p>
-          </div>
-
-          {/* What's Actually Changing */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">What's Actually Changing (and When)</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Here's the timeline:
-            </p>
-            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200 mb-6">
-              <h3 className="font-semibold text-blue-800 mb-3">Right now (2025-26 tax year):</h3>
-              <p className="text-blue-700 text-sm leading-relaxed">
-                You can put up to £20,000 into cash ISAs if you want. Or split it across different ISA types—your choice. If you're 18 or older, you have complete flexibility.
-              </p>
-            </div>
-            <div className="bg-amber-50 rounded-xl p-6 border border-amber-200 mb-6">
-              <h3 className="font-semibold text-amber-800 mb-3">From 6 April 2027 onwards:</h3>
-              <p className="text-amber-700 text-sm leading-relaxed mb-3">The rules split depending on your age:</p>
-              <ul className="text-amber-700 space-y-2 text-sm">
-                <li>• <strong>Under 65:</strong> Maximum £12,000 per year into cash ISAs</li>
-                <li>• <strong>65 and over:</strong> Full £20,000 allowance still available for cash ISAs</li>
-              </ul>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              The overall £20,000 ISA allowance doesn't change. What changes is how much of it you can shelter in cash.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              And here's the kicker: the government is also increasing the tax you pay on savings interest outside ISAs. From April 2027, the rates jump to:
-            </p>
-            <div className="bg-red-50 rounded-xl p-6 border border-red-200 mb-6">
-              <h3 className="font-semibold text-red-800 mb-3">New Savings Tax Rates (from April 2027):</h3>
-              <ul className="text-red-700 space-y-2 text-sm">
-                <li>• <strong>22%</strong> for basic-rate taxpayers (up from 20%)</li>
-                <li>• <strong>42%</strong> for higher-rate taxpayers (up from 40%)</li>
-                <li>• <strong>47%</strong> for additional-rate taxpayers (up from 45%)</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 mt-6">
-              <p className="text-gray-800 text-sm leading-relaxed">
-                So at exactly the same time they're reducing how much you can protect in cash ISAs, they're increasing the tax bill on savings held outside ISAs. Convenient timing, isn't it?
-              </p>
-            </div>
-          </div>
-
-          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
-
-          {/* Why Is This Happening? */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Is This Happening?</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              The official line is that this is about encouraging investment. The government wants people putting more money into stocks and shares—boosting the UK economy, supporting British businesses, all that.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              The less official line? It's a revenue raiser dressed up as an investment incentive.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Think about it. For years, interest rates were so low that most people's savings didn't generate enough interest to even hit their personal savings allowance. The personal savings allowance (PSA) is the amount of interest you can earn tax-free outside ISAs:
-            </p>
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-3">Personal Savings Allowance:</h3>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• <strong>Basic-rate taxpayers:</strong> £1,000</li>
-                <li>• <strong>Higher-rate taxpayers:</strong> £500</li>
-                <li>• <strong>Additional-rate taxpayers:</strong> £0</li>
-              </ul>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              But interest rates have climbed. As of January 2026, some of the best cash ISAs are paying over 4.3%. Suddenly, if you've got £25,000 sitting in savings earning 4%, you're generating £1,000 in interest—right at your PSA limit if you're a basic-rate taxpayer.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              More people are now paying tax on their savings interest than at any point since the PSA was introduced in 2016. The government knows this. By capping cash ISAs and simultaneously increasing savings tax rates, they're creating a double whammy that will pull millions more into the tax net.
-            </p>
-            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200 mt-6">
-              <p className="text-blue-800 text-sm leading-relaxed">
-                <strong>Jason Hollands, managing director at Bestinvest by Evelyn Partners,</strong> called it what it is: "yet another stealth tax."
-              </p>
-            </div>
-          </div>
-
-          {/* Who Actually Gets Hit By This? */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Who Actually Gets Hit By This?</h2>
-            
-            <h3 className="text-xl font-bold text-gray-900 mb-4">The obvious losers: Conservative savers under 65</h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              If you're someone who prefers the safety and certainty of cash—maybe you're approaching retirement, saving for a house deposit, or just risk-averse by nature—you're being pushed toward investment products you might not want.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Say you've been maxing out your cash ISA each year at £20,000. From 2027, you'll face a choice:
-            </p>
-            <div className="bg-red-50 rounded-xl p-6 border border-red-200 mb-6">
-              <ul className="text-red-700 space-y-2 text-sm">
-                <li>• Only shelter £12,000 and pay tax on the interest from your remaining savings</li>
-                <li>• Put £8,000 into stocks and shares, accepting the risk that comes with it</li>
-                <li>• Leave £8,000 in taxable savings accounts and pay the new higher tax rates</li>
-              </ul>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              None of these options are what you signed up for.
-            </p>
-
-            <h3 className="text-xl font-bold text-gray-900 mb-4 mt-6">Emergency fund savers</h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Financial advisers typically recommend keeping 3-6 months of expenses in easily accessible cash. For many households, that's £15,000-£30,000. If you're building this fund inside a cash ISA, you'll hit the new limit before you've even got adequate emergency coverage.
-            </p>
-
-            <h3 className="text-xl font-bold text-gray-900 mb-4 mt-6">People who've already built up large cash ISA balances</h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Here's something important: the £12,000 limit only applies to new contributions. Money you've already got in cash ISAs stays exactly where it is, continues earning tax-free interest, and doesn't count against the new limit.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              So if you currently have £50,000 in cash ISAs from previous years, that's all protected. But you can only add £12,000 more per year going forward.
-            </p>
-            <div className="bg-amber-50 rounded-xl p-6 border border-amber-200 mt-6">
-              <p className="text-amber-800 text-sm leading-relaxed">
-                This creates a bizarre situation where people who've been saving consistently for years maintain an advantage over younger savers who are just starting out.
-              </p>
-            </div>
-
-            <h3 className="text-xl font-bold text-gray-900 mb-4 mt-6">The winners: Over-65s and people already comfortable with investing</h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              If you're 65 or over, none of this affects you. You keep the full £20,000 cash ISA allowance.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              And if you're already happy putting money into stocks and shares ISAs anyway? This barely touches you. You were probably splitting your allowance already, so the forced allocation might not even change your behaviour.
-            </p>
-          </div>
-
-          {/* The Loopholes They're Already Closing */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">The Loopholes They're Already Closing</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              When the cash ISA limit was first announced, financial advisers immediately spotted some potential workarounds:
-            </p>
-            
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-2">"What if I open a stocks and shares ISA but just leave the money sitting in cash within it?"</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                Nice try. The government anticipated this. They're introducing charges on interest paid on cash held in stocks and shares or innovative finance ISAs. The details aren't finalised yet, but it's clear they want to discourage this kind of cash parking.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-2">"Can't I just transfer money from a stocks and shares ISA back to a cash ISA if I need to?"</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                Not after April 2027. The rules will explicitly ban transfers from stocks and shares ISAs or innovative finance ISAs back to cash ISAs. It's a one-way street.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-2">"What about money market funds? They're basically cash, right?"</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                The government's bringing in tests "to determine whether an investment is eligible to be held in a stocks and shares ISA or is 'cash like.'" Exactly what those tests look like hasn't been revealed, but it's clear they're trying to prevent people from treating quasi-cash investments as genuine stock and share holdings.
-              </p>
-            </div>
-
-            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200 mt-6">
-              <p className="text-blue-800 text-sm leading-relaxed">
-                <strong>Jason Hollands</strong> raised concerns that this could "throw doubt about access to money market funds within stocks and shares ISAs and could even bring short-dated bonds into question."
-              </p>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed mt-4">
-              The message is clear: if you want tax-free treatment under the new rules, they want you actually investing, not just finding creative ways to park cash with a different label on it.
-            </p>
-          </div>
-
-          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
-
-          {/* What About the Current Tax Year? */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">What About the Current Tax Year? (2025-26 and 2026-27)</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              You've still got time. The £20,000 cash ISA limit remains in place for:
-            </p>
-            <div className="bg-green-50 rounded-xl p-6 border border-green-200 mb-6">
-              <ul className="text-green-700 space-y-2 text-sm">
-                <li>• The current 2025-26 tax year (ending 5 April 2026)</li>
-                <li>• The entire 2026-27 tax year (6 April 2026 to 5 April 2027)</li>
-              </ul>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              That's two full years where you can still shelter £20,000 in cash if you want to.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              If you've got a substantial amount sitting in taxable savings accounts earning interest, now would be a sensible time to move it into cash ISAs while you still can. Once it's in there, it's protected forever—there's no retrospective clawback.
-            </p>
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-3">Current rates (as of January 2026):</h3>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• <strong>Best easy access cash ISAs:</strong> up to 4.35%</li>
-                <li>• <strong>Best 1-year fixed cash ISAs:</strong> up to 4.12%</li>
-                <li>• <strong>Best 2-year fixed cash ISAs:</strong> up to 4.16%</li>
-                <li>• <strong>Best 3-year fixed cash ISAs:</strong> up to 4.17%</li>
-              </ul>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Those rates have been falling throughout 2025 as the Bank of England cut interest rates multiple times (from 4.75% to 3.75%). They'll probably continue drifting lower through 2026, but they're still significantly better than the sub-2% rates we saw for most of the 2010s.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              If you can lock in a decent fixed rate now, you're protecting not just your principal but also a guaranteed return that beats the new higher tax rates coming in 2027.
-            </p>
-          </div>
-
-          {/* What Should You Actually Do? */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">What Should You Actually Do?</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              The answer depends entirely on your circumstances, but here are some scenarios:
-            </p>
-
-            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200 mb-6">
-              <h3 className="font-semibold text-blue-800 mb-3">If you're under 65 with substantial cash savings (£50,000+):</h3>
-              <p className="text-blue-700 text-sm font-semibold mb-2">Action plan:</p>
-              <ul className="text-blue-700 space-y-2 text-sm">
-                <li>• <strong>Maximise cash ISAs now:</strong> Use your full £20,000 cash ISA allowance in 2025-26 and again in 2026-27. That's £40,000 you'll have sheltered before the new limits kick in.</li>
-                <li>• <strong>Calculate your tax exposure:</strong> Work out how much interest you'd earn on savings held outside ISAs. If it's more than your personal savings allowance (£1,000 for basic-rate taxpayers, £500 for higher-rate), you'll be paying the new increased tax rates from 2027.</li>
-                <li>• <strong>Consider fixed-rate ISAs:</strong> Locking money away for 1-3 years might not sound appealing, but you're guaranteed a rate and protected from the new rules coming in 2027.</li>
-                <li>• <strong>Reassess after 2027:</strong> Once the new rules are in place, you'll need to decide whether to genuinely move some money into stocks and shares, or accept paying tax on interest from your non-ISA savings.</li>
-              </ul>
-            </div>
-
-            <div className="bg-amber-50 rounded-xl p-6 border border-amber-200 mb-6">
-              <h3 className="font-semibold text-amber-800 mb-3">If you're in your 50s or early 60s:</h3>
-              <p className="text-amber-700 text-sm font-semibold mb-2">Action plan:</p>
-              <ul className="text-amber-700 space-y-2 text-sm">
-                <li>• <strong>Front-load your cash ISAs now:</strong> You've only got a couple of years of the £20,000 limit left. Make the most of it.</li>
-                <li>• <strong>Think about your 65th birthday:</strong> If you'll hit 65 before April 2029, you might only face one or two years of the restricted allowance before the full £20,000 cash ISA limit returns.</li>
-                <li>• <strong>Don't panic-invest:</strong> Just because they're pushing you toward stocks and shares doesn't mean you have to do it. If you're genuinely uncomfortable with investment risk—particularly if you're close to needing the money—it's fine to pay some tax rather than risk capital loss.</li>
-              </ul>
-            </div>
-
-            <div className="bg-green-50 rounded-xl p-6 border border-green-200 mb-6">
-              <h3 className="font-semibold text-green-800 mb-3">If you're already comfortable with investing:</h3>
-              <p className="text-green-700 text-sm font-semibold mb-2">Action plan:</p>
-              <ul className="text-green-700 space-y-2 text-sm">
-                <li>• <strong>Not much changes for you:</strong> You were probably already using a mix of cash and stocks and shares ISAs anyway.</li>
-                <li>• <strong>Review your asset allocation:</strong> The new rules might actually give you a useful framework. £12,000 in cash for security/emergency funds, £8,000 in stocks and shares for growth. That's not a terrible balance for many people.</li>
-                <li>• <strong>Watch the transfer rules:</strong> If you currently move money between ISA types depending on market conditions, that flexibility is about to disappear.</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-800 mb-3">If you're 65 or over:</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                Lucky you. Carry on as normal. You keep the full £20,000 cash ISA allowance. No changes needed.
-              </p>
-            </div>
-          </div>
-
-          {/* The Bigger Picture */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">The Bigger Picture: What This Says About UK Savings Policy</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              There's something quite revealing about these changes.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              For decades, governments have encouraged people to save. ISAs were introduced specifically to make saving attractive. The personal savings allowance was brought in to ensure that people with modest savings wouldn't face tax bills.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              But now, at a time when millions of Britons are finally able to earn decent interest on their savings after years of near-zero rates, the government is simultaneously:
-            </p>
-            <div className="bg-red-50 rounded-xl p-6 border border-red-200 mb-6">
-              <ul className="text-red-700 space-y-2 text-sm">
-                <li>• Cutting how much you can protect in cash ISAs (from £20,000 to £12,000)</li>
-                <li>• Increasing tax on savings interest outside ISAs (22%, 42%, 47%)</li>
-                <li>• Making it harder to shield money in investment accounts without genuinely investing</li>
-                <li>• Freezing the personal savings allowance (it hasn't increased since 2016)</li>
-              </ul>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              The result? More people paying more tax on their savings.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Some will argue this is fair—that ISAs were meant to encourage investment, not just tax-free cash hoarding. And there's some logic to that. But timing matters. These changes are hitting just as savers are finally getting decent returns after 15+ years of rock-bottom interest rates. It feels punitive.
-            </p>
-            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200 mt-6">
-              <p className="text-blue-800 text-sm leading-relaxed">
-                <strong>Kate Underwood, a financial advisor,</strong> made a similar point when discussing childcare costs, but the principle applies here too: "This isn't a perk, it's the minimum support people need."
-              </p>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed mt-4">
-              ISAs aren't a luxury. For many people, they're the only way to save without seeing a chunk of their returns disappear to tax. Cutting the allowance while simultaneously increasing savings tax rates is a one-two punch that will hurt careful savers far more than it'll encourage risk-taking investment.
-            </p>
-          </div>
-
-          <AdUnit slot="3520564956" layout="in-article" format="fluid" />
-
-          {/* The Lifetime ISA Question */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">The Lifetime ISA Question</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              One other thing worth mentioning: the government's also announced they'll be consulting on replacing the Lifetime ISA with a "simpler" product for first-time buyers.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Lifetime ISAs currently let you save up to £4,000 per year with a 25% government bonus, but you face harsh penalties if you withdraw for anything other than your first home or retirement after 60.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              The replacement product is promised to have "more flexibility" and remove "the need for a withdrawal charge." Details are coming in early 2026.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              This matters because the Lifetime ISA sits within your overall £20,000 ISA allowance. If you use £4,000 of your allowance on a Lifetime ISA, you've got £16,000 left for other ISA types. Under the new rules from 2027, that could mean:
-            </p>
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• £4,000 in a Lifetime ISA</li>
-                <li>• £12,000 in cash ISAs</li>
-                <li>• £4,000 in stocks and shares ISAs</li>
-              </ul>
-              <p className="text-gray-600 text-sm mt-3">Or any other combination you want, as long as cash doesn't exceed £12,000 and the total doesn't exceed £20,000.</p>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              The new first-time buyer product could change these calculations significantly. Worth watching.
-            </p>
-          </div>
-
-          {/* What Happens If You Don't Do Anything? */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">What Happens If You Don't Do Anything?</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Let's be clear: you're not required to use your full ISA allowance. Millions of people don't.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              If you don't take action, here's what happens:
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Your existing cash ISA balances remain protected. Money you've already saved in previous years stays right where it is, earning tax-free interest forever.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              From April 2027, you can only add £12,000 per year to cash ISAs (if you're under 65). Any additional savings will either need to go into:
-            </p>
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• Stocks and shares ISAs (investment risk)</li>
-                <li>• Innovative finance ISAs (peer-to-peer lending, higher risk)</li>
-                <li>• Regular taxable savings accounts (interest taxed at 22%, 42%, or 47% above your personal savings allowance)</li>
-                <li>• <Link href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">Pension contributions</Link> (tax relief at your marginal rate, but locked until age 57+)</li>
-              </ul>
-            </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              For most people, the path of least resistance will be option three: just accepting the tax bill. That's probably what the Treasury is banking on (literally).
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              If you've got £30,000 earning 4% in a regular savings account, that's £1,200 in interest. As a basic-rate taxpayer with a £1,000 personal savings allowance, you'd pay 22% tax on the remaining £200—a £44 tax bill.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Not life-changing, but multiply that across millions of savers, and you can see why the government's doing this.
-            </p>
-          </div>
-
-          {/* Final Thoughts */}
-          <div className="glass-light rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Final Thoughts</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              The £12,000 cash ISA limit is one of those changes that sounds reasonable on paper—"we're just encouraging investment!"—but feels quite different when you're actually trying to manage your money safely.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Not everyone wants to be an investor. Some people are genuinely risk-averse. Others are saving for specific short-term goals where capital protection matters more than growth. And plenty of people are in their 50s or early 60s, where they've got enough to invest and need to keep substantial sums in accessible cash.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              For all those people, these changes are a pain. You're being told to either accept more risk than you're comfortable with, or pay significantly more tax on your careful savings.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              There are two years left before this kicks in. If you're affected, the best thing you can do is maximise your cash ISA contributions in 2025-26 and 2026-27. Get as much sheltered as possible while you still can. Once it's in there, it's protected for life.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              After April 2027? Well, we'll all be working out how to make the new rules work for us. Some will genuinely move into investing. Others will pay the tax. And a few will find creative (legal) ways around the new limits that the Treasury hasn't thought of yet.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              That's how these things always go.
-            </p>
-          </div>
-
-          {/* Key Takeaways */}
-          <div className="glass-medium rounded-2xl p-8 mb-8 bg-gradient-to-br from-blue-50 to-indigo-50">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Takeaways</h2>
-            
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-4">The change:</h3>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• From 6 April 2027, under-65s can only deposit £12,000/year into cash ISAs (down from £20,000)</li>
-                <li>• Over-65s keep the full £20,000 cash ISA allowance</li>
-                <li>• Overall ISA allowance stays at £20,000—but you'll need to use stocks and shares ISAs to access the full amount</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-4">Why it matters:</h3>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• Tax on savings interest outside ISAs is increasing to 22%/42%/47% from April 2027</li>
-                <li>• You can no longer transfer from stocks and shares back to cash ISAs after 2027</li>
-                <li>• Government is closing loopholes like holding cash in investment ISAs</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-4">What to do now:</h3>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• Maximise cash ISA contributions in 2025-26 and 2026-27 (two full years left at £20,000)</li>
-                <li>• Existing cash ISA balances are fully protected forever</li>
-                <li>• Consider locking in current rates with fixed-term cash ISAs before they fall further</li>
-                <li>• Don't panic-invest just because the government's pushing you toward stocks and shares</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-4">Who's most affected:</h3>
-              <ul className="text-gray-700 space-y-2 text-sm">
-                <li>• Conservative savers who prefer cash to investment risk</li>
-                <li>• People building large emergency funds</li>
-                <li>• Those in their 50s and early 60s (before the age-65 exemption kicks in)</li>
-                <li>• Anyone with substantial savings generating interest above the personal savings allowance</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="glass-medium rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Calculate Your Take-Home Pay</h2>
-            <p className="text-gray-600 mb-6">
-              Want to see exactly how much tax you'll pay on your take-home salary and what that means for your savings strategy? Understanding your actual monthly income after tax helps you plan how much you can realistically put into ISAs each year.
-            </p>
-            <Link 
-              href="/take-home-pay-calculator"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
-            >
-              Try Take Home Pay Calculator →
-            </Link>
-          </div>
-        </div>
-
-        {/* Schema Markup */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "The £12,000 Cash ISA Limit: What You Need to Know Before April 2027",
-            "description": "Your tax-free savings allowance is about to change. From April 2027, under-65s can only deposit £12,000 per year into cash ISAs. Here's what it means for your money.",
-            "datePublished": "2026-01-25T00:00:00.000Z",
-            "dateModified": "2026-01-25T00:00:00.000Z",
-            "author": {
-              "@type": "Organization",
-              "name": "SalaryTakeHome"
+    <LayoutWrapper narrow breadcrumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: "The £12,000 Cash ISA Limit Was Scrapped" }]}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "headline": "The £12,000 Cash ISA Limit Was Scrapped: What Happens from April 2027",
+              "description": "The planned £12,000 cash ISA limit for under-65s was cancelled at the Autumn Budget on 28 October 2026. The full £20,000 allowance stays for everyone over 18.",
+              "datePublished": "2026-01-25T00:00:00.000Z",
+              "dateModified": "2026-11-19T00:00:00.000Z",
+              "author": { "@type": "Organization", "name": "SalaryTakeHome", "url": "https://www.salarytakehome.co.uk" },
+              "publisher": { "@type": "Organization", "name": "SalaryTakeHome", "url": "https://www.salarytakehome.co.uk" },
+              "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.salarytakehome.co.uk/blog/cash-isa-limit-2027" },
+              "image": "https://www.salarytakehome.co.uk/opengraph-image.png"
             },
-            "publisher": {
-              "@type": "Organization",
-              "name": "SalaryTakeHome",
-              "url": "https://www.salarytakehome.co.uk"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://www.salarytakehome.co.uk/blog/cash-isa-limit-2027"
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Is the £12,000 cash ISA limit still happening?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "No. The planned £12,000 cash ISA subscription limit for under-65s was cancelled at the Autumn Budget on 28 October 2026. The government confirmed it will retain the cash ISA limit at £20,000 for all savers over 18 from April 2027. HMRC's Budget 2026 rates annex lists the ISA subscription limit as £20,000 for both 2026/27 and 2027/28." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much can I put in a cash ISA in 2027/28?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Up to £20,000, the full annual ISA allowance, if you are over 18. You can put all of it in cash, all of it in stocks and shares, or split it across cash, stocks and shares and innovative finance ISAs in any combination." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Why was the cash ISA cut reversed?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "The original aim was to push savers towards investing by restricting how much could sit in cash. The policy attracted sustained criticism from consumer campaigners, banks and building societies, who argued it would not change investing behaviour and would penalise cautious savers. The government dropped it at the Autumn Budget 2026 and said it would instead explore an incentive for first-time stocks and shares investors." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does this mean nothing is changing for savers?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "No — the opposite. From 6 April 2027 the tax rates on savings interest rise to 24% for basic-rate taxpayers, 44% for higher-rate and 49% for additional-rate, four percentage points above the equivalent rates on earned income. The ISA allowance survived, but tax on savings held outside an ISA went up, which makes using the allowance more valuable than before." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the First Time Buyer ISA?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "A new product announced at the Autumn Budget 2026, due to launch in April 2029, which will replace the Lifetime ISA for new savers. The announced design keeps contributions of up to £4,000 a year with a 25% government bonus and removes the Lifetime ISA's upper age restriction. Existing Lifetime ISA holders will be able to keep contributing under current rules." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Did the Lifetime ISA withdrawal charge change?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Yes. The withdrawal charge that applied when buying a property above the £450,000 Lifetime ISA price cap was reduced from 25% to 20%. A 25% charge clawed back more than the government bonus, so savers lost some of their own money; a 20% charge removes only the bonus. The £450,000 property price cap itself is unchanged." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the ISA allowance for 2027/28?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "£20,000 for adult ISAs and £9,000 for Junior ISAs, both unchanged from 2026/27 according to HMRC's Budget 2026 rates annex." }
+                }
+              ]
             }
-          })
-        }} />
-        <RelatedArticles articles={[
-          { href: "/blog/maximize-take-home-pay-2024", title: "How to Maximise Your Take Home Pay", category: "Money Tips", description: "Strategies to keep more of your earnings." },
-          { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "Another tax-efficient way to save." },
-          { href: "/blog/uk-tax-changes-2025-26", title: "UK Tax Changes 2025/26", category: "Tax Updates", description: "Latest tax rates and thresholds." },
-          { href: "/blog/salary-sacrifice-complete-guide", title: "Salary Sacrifice Complete Guide", category: "Pensions", description: "Save on tax and NI through salary sacrifice." },
-        ]} />
-      </article>
-    </div>
+          ]
+        }) }}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <article className="max-w-4xl mx-auto px-4 py-12">
+          {/* Header */}
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium rounded-full">
+                Savings &amp; ISAs
+              </span>
+              <time className="text-gray-500 text-sm" dateTime="2026-11-19">
+                Updated November 19, 2026
+              </time>
+              <span className="text-gray-500 text-sm">10 min read</span>
+            </div>
+            <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 inline-block mb-4">Last updated: November 2026 &middot; Rewritten after the 28 October 2026 Budget cancelled the cut</p>
+            <AdUnit slot="1586479879" hideOnMobile />
+            <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+              The £12,000 Cash ISA Limit Was Scrapped: What Happens from April 2027
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              The cut is not happening. The full £20,000 allowance stays — but the tax on savings held outside an ISA is going up, which changes the maths more than the cap ever would have.
+            </p>
+          </div>
+
+          {/* Content */}
+          <div className="prose prose-lg max-w-none">
+            <div className="glass-light rounded-2xl p-8 mb-8 border-l-4 border-green-500">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">The Short Answer</h2>
+              <p className="text-gray-700 mb-4 text-lg leading-relaxed">
+                If you landed here because you remember reading that your cash ISA allowance was about to be cut to £12,000: <strong>that policy was cancelled.</strong> At the Autumn Budget on 28 October 2026, the government confirmed it will retain the cash ISA limit at £20,000 for all savers over 18 from April 2027.
+              </p>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                HMRC&apos;s Budget 2026 rates annex now lists the ISA subscription limit as £20,000 for both 2026/27 and 2027/28. There is no reduced limit, and no age distinction. You can still put the entire £20,000 into cash if that is what suits you.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                This page originally covered the planned cut, which was announced at the Autumn Budget 2025. It has been rewritten to reflect what actually happened. The rest of this guide covers what <em>is</em> changing for savers from April 2027 — because quite a lot is, and some of it matters more than the cap would have.
+              </p>
+            </div>
+
+            <div className="glass-light rounded-2xl p-8 mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">ISA Allowances for 2027/28</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                  <thead>
+                    <tr className="bg-gray-50">
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Account</th>
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">2026/27</th>
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">2027/28</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-4 py-3">Adult ISA subscription limit</td>
+                      <td className="border border-gray-200 px-4 py-3">£20,000</td>
+                      <td className="border border-gray-200 px-4 py-3 text-green-600 font-semibold">£20,000</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-4 py-3">Of which can be held in cash</td>
+                      <td className="border border-gray-200 px-4 py-3">All £20,000</td>
+                      <td className="border border-gray-200 px-4 py-3 text-green-600 font-semibold">All £20,000</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-4 py-3">Junior ISA</td>
+                      <td className="border border-gray-200 px-4 py-3">£9,000</td>
+                      <td className="border border-gray-200 px-4 py-3">£9,000</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-4 py-3">Lifetime ISA (within the £20,000)</td>
+                      <td className="border border-gray-200 px-4 py-3">£4,000</td>
+                      <td className="border border-gray-200 px-4 py-3">£4,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-gray-700 mt-6">
+                The £20,000 is a single pot. Split it across cash, stocks and shares, and innovative finance ISAs however you like, in any proportion, including all of it in one type.
+              </p>
+            </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
+            <div className="glass-light rounded-2xl p-8 mb-8 border-l-4 border-amber-500">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">The Sting in the Tail: Savings Tax Is Going Up</h2>
+              <p className="text-gray-700 mb-4">
+                The allowance survived. The tax on savings held <em>outside</em> it did not. From 6 April 2027, savings income gets its own set of rates, four percentage points above the equivalent rates on earned income.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                  <thead>
+                    <tr className="bg-gray-50">
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Band</th>
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Savings rate now</th>
+                      <th className="border border-gray-200 px-4 py-3 text-left font-semibold">From April 2027</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-4 py-3">Basic rate</td>
+                      <td className="border border-gray-200 px-4 py-3">20%</td>
+                      <td className="border border-gray-200 px-4 py-3 text-orange-600 font-semibold">24%</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-4 py-3">Higher rate</td>
+                      <td className="border border-gray-200 px-4 py-3">40%</td>
+                      <td className="border border-gray-200 px-4 py-3 text-orange-600 font-semibold">44%</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-4 py-3">Additional rate</td>
+                      <td className="border border-gray-200 px-4 py-3">45%</td>
+                      <td className="border border-gray-200 px-4 py-3 text-red-600 font-semibold">49%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-gray-700 mt-6">
+                These rates apply across the whole UK, Scotland included — savings income has never been devolved. The 0% starting rate for savings survives, with its £5,000 limit unchanged, and your Personal Savings Allowance still applies before any tax is charged.
+              </p>
+              <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
+                <p className="text-sm text-blue-800">
+                  <strong>Read the two changes together.</strong> The government kept your ability to shelter £20,000 a year from tax, and simultaneously raised the tax you pay on savings you do not shelter. The practical effect is that the ISA allowance is worth more in 2027/28 than it is today. A higher-rate taxpayer with £5,000 of taxable interest outside an ISA pays £2,200 instead of £2,000 — and nothing inside an ISA.
+                </p>
+              </div>
+              <p className="text-gray-700 mt-4">
+                The full picture of what the Budget changed is in our <Link href="/blog/autumn-budget-2026-what-it-means-for-your-pay" className="text-blue-600 hover:text-blue-800 underline font-semibold">Autumn Budget 2026 guide</Link>.
+              </p>
+            </div>
+
+            <div className="glass-light rounded-2xl p-8 mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">How the Policy Rose and Fell</h2>
+              <ul className="space-y-3 text-gray-700">
+                <li><strong>Autumn Budget 2025.</strong> The government announced that from 6 April 2027 the cash ISA subscription limit would fall to £12,000 for savers under 65, inside an unchanged £20,000 overall allowance. The stated aim was to nudge money out of cash and into shares.</li>
+                <li><strong>Through 2026.</strong> The policy drew sustained criticism from consumer campaigners, banks and building societies. The central objection was that restricting cash would not turn cautious savers into investors — it would simply leave them with less tax-free shelter.</li>
+                <li><strong>Autumn Budget, 28 October 2026.</strong> The cut was dropped. The government confirmed it will retain the £20,000 limit for all savers over 18 from April 2027, and said it would instead explore an incentive for people investing in a stocks and shares ISA for the first time.</li>
+              </ul>
+              <div className="mt-6 p-4 bg-gray-50 rounded-xl border border-gray-200">
+                <p className="text-sm text-gray-700">
+                  <strong>One procedural note.</strong> The reversal is to be given effect by secondary legislation laid before Parliament in November 2026. The policy position is settled, but if you are making a decision that turns on the fine detail, check the current position on <a href="https://www.gov.uk/individual-savings-accounts" target="_blank" rel="noopener noreferrer" className="text-gray-700 underline">GOV.UK</a> before you act.
+                </p>
+              </div>
+            </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
+            <div className="glass-light rounded-2xl p-8 mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">What Is Actually Changing: The First Time Buyer ISA</h2>
+              <p className="text-gray-700 mb-4">
+                The real ISA reform in this Budget is at the other end of the product range. The Lifetime ISA is being replaced for new savers by a <strong>First Time Buyer ISA</strong>, due to launch in <strong>April 2029</strong>.
+              </p>
+              <p className="text-gray-700 mb-4">
+                On the design announced so far, it keeps the generosity of the Lifetime ISA — contributions of up to £4,000 a year with a 25% government bonus — and removes the Lifetime ISA&apos;s upper age restriction, which currently blocks anyone over 40 from opening one. Existing Lifetime ISA holders will be able to carry on contributing to and using their accounts under current rules.
+              </p>
+              <p className="text-gray-700 mb-4">
+                Legislation is not expected until closer to launch, so treat the detail as provisional. Three years is a long time in savings policy, as this page demonstrates.
+              </p>
+              <div className="p-4 bg-amber-50 rounded-xl border border-amber-200">
+                <p className="text-sm text-amber-900">
+                  <strong>A fix that applies now.</strong> The Lifetime ISA withdrawal charge for buying a property above the £450,000 price cap was cut from 25% to 20%. The distinction matters: a 25% charge on a grown pot clawed back more than the government had put in, so savers lost some of their own money for buying a slightly-too-expensive house. A 20% charge removes only the bonus. The £450,000 cap itself is unchanged. Our <Link href="/blog/isa-vs-lisa" className="text-blue-600 hover:text-blue-800 underline font-semibold">ISA vs LISA comparison</Link> covers how the two products stack up, and the <Link href="/blog/first-time-buyer-mortgage-guide" className="text-blue-600 hover:text-blue-800 underline font-semibold">first-time buyer mortgage guide</Link> covers the deposit side.
+                </p>
+              </div>
+            </div>
+
+            <div className="glass-light rounded-2xl p-8 mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">What You Should Actually Do</h2>
+              <p className="text-gray-700 mb-4">
+                If you restructured your savings in anticipation of the cut, nothing you did was wasted — but the urgency is gone and the reasoning has changed.
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li><strong>Stop front-loading cash ISA deposits.</strong> There is no deadline to beat. The £20,000 will still be there in April 2027, and in the years after.</li>
+                <li><strong>Do still use the allowance.</strong> With savings rates heading to 24/44/49, interest earned outside an ISA is taxed more heavily from April 2027 than it is today. The case for sheltering has strengthened, not weakened.</li>
+                <li><strong>Check whether you actually pay tax on savings now.</strong> The Personal Savings Allowance gives basic-rate taxpayers £1,000 of tax-free interest and higher-rate taxpayers £500. Additional-rate taxpayers get nothing. If you are nowhere near your allowance, the rate rise may not touch you at all.</li>
+                <li><strong>Do not move money into shares just because a policy told you to.</strong> That nudge has been withdrawn. Cash versus investments should turn on your time horizon and your tolerance for loss — see <Link href="/blog/isa-vs-lisa" className="text-blue-600 hover:text-blue-800 underline font-semibold">ISA vs LISA</Link> for how to think about it.</li>
+                <li><strong>If you are over 40 and want a Lifetime ISA, the window still closes.</strong> The age restriction only lifts with the First Time Buyer ISA in 2029, and you cannot open a Lifetime ISA after your 40th birthday today.</li>
+                <li><strong>Remember pensions.</strong> For money you will not need before retirement, pension tax relief usually beats an ISA for higher-rate taxpayers — see <Link href="/blog/pension-contributions-tax-relief" className="text-blue-600 hover:text-blue-800 underline font-semibold">pension contributions and tax relief</Link>.</li>
+              </ul>
+            </div>
+
+            <AdUnit slot="3520564956" layout="in-article" format="fluid" />
+
+            <div className="glass-light rounded-2xl p-8 mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-2">Is the £12,000 cash ISA limit still happening?</h3>
+                  <p className="text-gray-600">
+                    No. It was cancelled at the Autumn Budget on 28 October 2026. The government confirmed it will retain the cash ISA limit at £20,000 for all savers over 18 from April 2027, and HMRC&apos;s Budget 2026 rates annex lists £20,000 for both 2026/27 and 2027/28.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-2">How much can I put in a cash ISA in 2027/28?</h3>
+                  <p className="text-gray-600">
+                    Up to £20,000 — the full annual allowance — if you are over 18. All of it can be cash.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-2">Does the age-65 distinction still exist?</h3>
+                  <p className="text-gray-600">
+                    No. The under-65 / over-65 split only ever existed as part of the cancelled policy. The limit now applies equally to everyone over 18.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-2">So nothing is changing for savers?</h3>
+                  <p className="text-gray-600">
+                    Something significant is. Savings interest above your Personal Savings Allowance will be taxed at 24%, 44% or 49% from 6 April 2027 instead of 20%, 40% or 45%. The allowance was kept and the tax on unsheltered savings was raised.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-2">I moved money out of cash ISAs to prepare. Did I make a mistake?</h3>
+                  <p className="text-gray-600">
+                    Not necessarily, and nothing has been lost through the ISA wrapper itself — money inside an ISA stays tax-free regardless of which type it sits in. Whether the switch suited you depends on your time horizon, not on the policy.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-2">Will the cut come back in a future Budget?</h3>
+                  <p className="text-gray-600">
+                    No one can rule that out, and this page is evidence that announced policies can be reversed. But the government has now actively abandoned it and signalled a different approach — an incentive for first-time investors rather than a restriction on cash savers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="glass-light rounded-2xl p-8 mb-8 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+              <h2 className="text-2xl font-bold mb-4 text-white">Work Out What You Have Left to Save</h2>
+              <p className="mb-6 text-blue-50">
+                How much you can realistically put into an ISA starts with what actually reaches your bank account. Our calculator covers 2027/28 alongside every year back to 2021/22.
+              </p>
+              <Link href="/take-home-pay-calculator" className="inline-block bg-white text-blue-700 font-semibold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors duration-200">
+                Calculate Your Take-Home Pay
+              </Link>
+            </div>
+
+            <div className="glass-light rounded-2xl p-8 bg-gray-50">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Sources</h2>
+              <p className="text-gray-700 mb-4">
+                ISA and savings figures are taken from HMRC&apos;s <a href="https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Budget 2026 Overview of Tax Legislation and Rates</a> and its Annex A rates tables. See also <a href="https://www.gov.uk/individual-savings-accounts" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">Individual Savings Accounts</a> and <a href="https://www.gov.uk/apply-tax-free-interest-on-savings" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-semibold">tax on savings interest</a> on GOV.UK.
+              </p>
+              <p className="text-sm text-gray-500">
+                <strong>Disclaimer:</strong> This guide is for general information only and is not financial or tax advice. The reversal of the cash ISA cut takes effect through secondary legislation laid in November 2026, and First Time Buyer ISA detail remains subject to legislation. Always check GOV.UK or speak to a qualified adviser for decisions that depend on accuracy. Information accurate as of 19 November 2026.
+              </p>
+            </div>
+          </div>
+
+          <RelatedArticles articles={[
+            { href: "/blog/autumn-budget-2026-what-it-means-for-your-pay", title: "Autumn Budget 2026", category: "Tax Updates", description: "Everything the 28 October Budget changed, and when." },
+            { href: "/blog/isa-vs-lisa", title: "ISA vs LISA", category: "Savings & ISAs", description: "Which wrapper suits which goal." },
+            { href: "/blog/pension-contributions-tax-relief", title: "Pension Contributions & Tax Relief", category: "Pensions", description: "Often a better home for long-term money." },
+            { href: "/blog/first-time-buyer-mortgage-guide", title: "First-Time Buyer Mortgage Guide", category: "Money Tips", description: "Turning a deposit into a purchase." },
+          ]} />
+        </article>
+      </div>
     </LayoutWrapper>
   );
 }

@@ -442,7 +442,7 @@ export default function FirstTimeBuyerMortgageGuide() {
           <RelatedArticles articles={[
             { href: "/blog/maximize-take-home-pay-2024", category: "Money Tips", title: "10 Legal Ways to Maximise Your Take-Home Pay", description: "Proven strategies to keep more of your hard-earned money through tax-efficient benefits." },
             { href: "/blog/50k-salary-take-home", category: "Salary Guide", title: "£50k Salary Take Home Pay Breakdown", description: "See exactly how much you keep from a £50,000 salary after tax, NI, and pension." },
-            { href: "/blog/cash-isa-limit-2027", category: "Savings & ISAs", title: "The £12,000 Cash ISA Limit: What You Need to Know", description: "Your tax-free savings allowance is about to change. Here's what it means." },
+            { href: "/blog/cash-isa-limit-2027", category: "Savings & ISAs", title: "The £12,000 Cash ISA Limit Was Scrapped", description: "The cut was cancelled — but savings tax is rising." },
             { href: "/blog/salary-sacrifice-complete-guide", category: "Tax Planning", title: "Salary Sacrifice: The Complete Guide", description: "How salary sacrifice works and whether it could save you thousands each year." },
           ]} />
         </article>

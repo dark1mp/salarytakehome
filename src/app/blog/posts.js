@@ -4,6 +4,26 @@
 
 export const blogPosts = [
   {
+    slug: "autumn-budget-2026-what-it-means-for-your-pay",
+    title: "Autumn Budget 2026: What It Means for Your Take-Home Pay",
+    description: "The Autumn Budget was delivered on 28 October 2026. Income tax and National Insurance are unchanged for 2027/28, but savings and rental income rates rise to 24%, 44% and 49%. What actually changes on your payslip.",
+    date: "2026-11-19",
+    readTime: "11 min read",
+    category: "Tax Updates",
+    featured: true,
+    priority: 0.9,
+  },
+  {
+    slug: "cash-isa-limit-2027",
+    title: "The \u00a312,000 Cash ISA Limit Was Scrapped: What Happens from April 2027",
+    description: "The planned \u00a312,000 cash ISA limit for under-65s was cancelled at the Autumn Budget on 28 October 2026. The full \u00a320,000 allowance stays for everyone over 18 \u2014 but savings tax is rising to 24%, 44% and 49%.",
+    date: "2026-11-19",
+    readTime: "10 min read",
+    category: "Savings & ISAs",
+    featured: true,
+    priority: 0.8,
+  },
+  {
     slug: "how-much-is-ssp",
     title: "How Much Is SSP? UK Statutory Sick Pay Rates Per Week (2026/27)",
     description: "How much is SSP? £123.25 per week in 2026/27 (or 80% of earnings if lower). See SSP rates by tax year, daily rates, worked examples at every income level, and who qualifies.",
@@ -390,16 +410,6 @@ export const blogPosts = [
     date: "2026-01-25",
     readTime: "16 min read",
     category: "Student Loans",
-    featured: true,
-    priority: 0.6,
-  },
-  {
-    slug: "cash-isa-limit-2027",
-    title: "The \u00a312,000 Cash ISA Limit: What You Need to Know Before April 2027",
-    description: "Your tax-free savings allowance is about to change. From April 2027, under-65s can only deposit \u00a312,000 per year into cash ISAs. Here's what it means for your money.",
-    date: "2026-01-25",
-    readTime: "18 min read",
-    category: "Savings & ISAs",
     featured: true,
     priority: 0.6,
   },
