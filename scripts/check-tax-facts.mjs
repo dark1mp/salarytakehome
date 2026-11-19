@@ -202,7 +202,15 @@ for (const abs of files) {
     const ft = facts.futureTense
     if (ft) {
       const verbs = new RegExp(`\\b(?:${ft.verbs})\\b`, 'i')
-      if (verbs.test(text)) {
+      // "The Budget in October 2026 announced that X will rise in April 2027" is correct
+      // prose: the future verb belongs to the future date, not the past one.
+      const alsoFuture = (ft.futureDates || []).some((d) => text.includes(d))
+      // "the government announced that X will rise" reports a future change; the future
+      // verb is correct there, however old the date it is attached to.
+      const reported = ft.reportingVerbs
+        ? new RegExp(`\\b(?:${ft.reportingVerbs})\\b`, 'i').test(text)
+        : false
+      if (verbs.test(text) && !alsoFuture && !reported) {
         const stale = (ft.pastDates || []).find((d) => text.includes(d))
         if (stale && !historical) {
           add('warn', 'future', rel, lineNo,
